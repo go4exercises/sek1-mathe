@@ -1,5 +1,11 @@
 # HOWTO — Leitprogramme
 
+> **Sek1-Mathe (seit 09.10.2026):** Es gibt keine Themenseiten. Wo diese Anleitung von RLP, Themenseite,
+> Erkundungsauftrag mit Link auf die Themenseite oder den fünf Eintragestellen (§13) spricht, gilt hier: Das
+> Leitprogramm ist selbst die fachliche Quelle (Notation nach STYLEGUIDE), Erkundungen sind immer eingebettet,
+> «Mehr dazu» zeigt als Vertiefung auf Mathe begreifbar, eingetragen wird an drei Stellen (`nav.js`, Karte in
+> `index.html`, `scripts/build-seo.py`). Siehe CLAUDE.md.
+
 **Gilt seit 02.10.2026.** Was in ein Leitprogramm gehört, in welcher Reihenfolge, und wie es
 technisch ins Repo kommt — für die Art «nach Thema». Die Art «Übungsprüfung» hat ihre eigene
 Anleitung (`HOWTO-uebungspruefung.md`); Layout, Gerüst und Eintragen (§6, §11–§13) gelten für

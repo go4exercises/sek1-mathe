@@ -16,11 +16,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sek1-mathe.begreifbar.ch/leitprogramme.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://sek1-mathe.begreifbar.ch/formelsammlung.html</loc>
     <lastmod>2026-10-09</lastmod>
     <priority>0.5</priority>
@@ -36,57 +31,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t1-1-zahlenmengen-zahlenarten.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t1-2-rechnen-in-z-potenzen.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t1-3-uebergang-z-q.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t1-4-rechnen-in-q.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t2-1-lineare-gleichungen.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t2-2-textaufgaben-lineare-gleichungen.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t3-1-geometrische-grundbegriffe.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t3-2-flaechen-geradlinig-begrenzter-figuren.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t3-3-pythagoras.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t3-4-kreis-kreisteile.html</loc>
-    <lastmod>2026-10-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sek1-mathe.begreifbar.ch/themen/t3-5-quader-prisma-zylinder.html</loc>
+    <loc>https://sek1-mathe.begreifbar.ch/leitprogramme/bruchrechnen.html</loc>
     <lastmod>2026-10-09</lastmod>
     <priority>0.8</priority>
   </url>

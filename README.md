@@ -1,6 +1,9 @@
 # Sek1-Mathe begreifbar
 
-Interaktives Mathematik-Lehrmittel für die Sekundarstufe I — https://sek1-mathe.begreifbar.ch/
+Leitprogramme Mathematik für die Sekundarstufe I — https://sek1-mathe.begreifbar.ch/
+
+Keine Themenseiten: Die Leitprogramme (`leitprogramme/`, gebaut aus `scripts/lp/<name>/`) stehen im Zentrum;
+vertieft wird auf den Themenseiten von Mathe begreifbar.
 
 Statische Website (HTML/CSS/JS, GitHub Pages). Aufbau und Werkzeug aus
 [Mathe begreifbar](https://mathe.begreifbar.ch/), Bereichsfarbe Petrol.

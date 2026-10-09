@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Pre-Flight-Check für Sek1-Mathe-Themenseiten (themen/).
+Pre-Flight-Check für Sek1-Mathe (Leitprogramme in leitprogramme/ und Wurzelseiten).
+Seit 09.10.2026 gibt es keine Themenseiten mehr; der Zweig für themen/ (verify_js_runtime) bleibt
+für den Abgleich mit TALS Mathe stehen und greift hier nicht.
 
 Zwei Stufen:
 1. Schnelle, abhängigkeitsfreie Eigen-Checks (Tag-Bilanz, ß, Dezimalkomma in Math,
@@ -18,7 +20,7 @@ Zwei Stufen:
 
 MUSS vom Repo-Wurzelverzeichnis aufgerufen werden (wegen scripts/ und node_modules/).
 
-Aufruf:  python3 .claude/skills/preflight/preflight.py themen/*.html
+Aufruf:  python3 .claude/skills/preflight/preflight.py leitprogramme/*.html index.html
 
 Exit 0  -> alle Checks bestanden.   Exit 1 -> mindestens ein [FEHLER]. Nicht committen.
 """
@@ -395,7 +397,7 @@ def check_todo_schwester(wurzel, rep):
 def main(argv):
     args = argv[1:]
     if not args:
-        print("Aufruf: python3 .claude/skills/preflight/preflight.py themen/*.html")
+        print("Aufruf: python3 .claude/skills/preflight/preflight.py leitprogramme/*.html index.html")
         return 2
     paths = [Path(a) for a in args]
     missing = [str(p) for p in paths if not p.is_file()]

@@ -2,7 +2,8 @@
 
   python3 scripts/lp/bruchrechnen/seite.py
 
-Leitprogramm zur Themenseite 1.4 «Rechnen in ℚ» (Vorwissen aus 1.1–1.3). Alles kommt aus diesem
+Leitprogramm Bruchrechnen (Bereich Arithmetik/Algebra). Sek1-Mathe hat keine Themenseiten (Entscheid 09.10.2026);
+vertieft wird auf den Themenseiten von Mathe begreifbar (TALS). Alles kommt aus diesem
 Ordner: kopf.css (Grundgerüst der Leitprogramme, aus TALS Mathe übernommen und auf Petrol
 umgestellt), seite.css, basis.js (Thema, Fortschritt, Schiene), seite.js (Simulationen, Übungen).
 Nur der SEO-Block wird aus der bestehenden Seite übernommen — ihn schreibt scripts/build-seo.py.
@@ -25,10 +26,14 @@ if os.path.exists(ZIEL):
     if SEO_AUF in alt:
         seo = alt[alt.index(SEO_AUF):alt.index(SEO_ZU) + len(SEO_ZU)]
 
-TH = '../themen/t1-4-rechnen-in-q.html'
-T1 = '../themen/t1-1-zahlenmengen-zahlenarten.html'
-T2 = '../themen/t1-2-rechnen-in-z-potenzen.html'
-T3 = '../themen/t1-3-uebergang-z-q.html'
+# Vertiefung: Themenseiten von Mathe begreifbar (Berufsmaturität), in neuem Tab
+TALS = 'https://mathe.begreifbar.ch/grundlagen/'
+def tals(seite, text, anker=''):
+    return f'<a href="{TALS}{seite}{anker}" target="_blank" rel="noopener">{text} ↗</a>'
+V_ZAHLEN = tals('g1-2-zahlen-grundoperationen.html', 'Zahlen und Grundoperationen')
+V_TERME = tals('g1-3-algebraische-terme.html', 'Bruchterme', '#bruchterme')
+V_HIER = tals('g1-1-grundlagen.html', 'Hierarchie der Operationen', '#hierarchie')
+V_BAUM = tals('g1-1-grundlagen.html', 'Strukturbaum', '#strukturbaum')
 
 
 def uebung(typ, titel):
@@ -84,7 +89,7 @@ def kapitel(n, kid, titel, zeit, ziel, clip1, sim, clip2, festhalten, uebungen, 
     ue = '\n        '.join(uebungen)
     return f'''
     <section class="kap" id="k{n}">
-      <div class="kap-meta"><span class="marker">Kapitel {n}</span><span class="abz abz-th">1.4 · {komp}</span><span class="zeit">≈ {zeit} min</span></div>
+      <div class="kap-meta"><span class="marker">Kapitel {n}</span><span class="abz abz-th">{komp}</span><span class="zeit">≈ {zeit} min</span></div>
       <h2 id="{kid}">{titel}</h2>
       <p class="ziel">{ziel}</p>
 
@@ -107,7 +112,7 @@ def kapitel(n, kid, titel, zeit, ziel, clip1, sim, clip2, festhalten, uebungen, 
 
       <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
 {aufgaben}
-      <p class="ausf">Mehr dazu: {mehr}</p>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): {mehr}</p>
     </section>'''
 
 
@@ -165,7 +170,7 @@ k1 = kapitel(1, 'erweitern-kuerzen', 'Erweitern, Kürzen, Vergleichen', 40,
              r'Du erweiterst und kürzt Brüche, kürzt vollständig mit dem grössten gemeinsamen Teiler und vergleichst Brüche, indem du sie auf denselben Nenner bringst.',
              ('t1-4-lp-erweitern', 'Erweitern, Kürzen, Vergleichen'), sim1,
              ('t1-4-lp-kontrolle-erweitern', 'Kontrollfragen zum Erweitern und Kürzen'), fest1, [uebung('erweitern', 'Erweitern'), uebung('kuerzen', 'Vollständig kürzen')],
-             auf1, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K1')
+             auf1, V_ZAHLEN, komp='K1')
 
 # ------------------------------------------------------------------ Kapitel 2
 sim2 = f'''      <figure class="sim sim-gross" id="sim2" aria-label="Bruchstreifen: eine gemeinsame Unterteilung für zwei Brüche finden">
@@ -214,7 +219,7 @@ k2 = kapitel(2, 'addieren', 'Addieren und Subtrahieren', 45,
              r'Du addierst und subtrahierst Brüche, indem du sie mit dem Hauptnenner gleichnamig machst, und gibst das Ergebnis vollständig gekürzt an.',
              ('t1-4-lp-addieren', 'Addieren und Subtrahieren'), sim2,
              ('t1-4-lp-kontrolle-addieren', 'Kontrollfragen zum Addieren und Subtrahieren'), fest2, [uebung('hauptnenner', 'Hauptnenner finden'), uebung('addsub', 'Addieren und Subtrahieren')],
-             auf2, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K2')
+             auf2, V_ZAHLEN + ' · ' + V_TERME, komp='K2')
 
 # ------------------------------------------------------------------ Kapitel 3
 sim3 = f'''      <figure class="sim sim-gross" id="sim3" aria-label="Multiplizieren im Flächenmodell, Dividieren durch Messen">
@@ -272,7 +277,7 @@ k3 = kapitel(3, 'multiplizieren', 'Multiplizieren und Dividieren', 45,
              r'Du multiplizierst Brüche, dividierst mit dem Kehrwert, kürzt vor dem Ausrechnen und erklärst beides am Bild.',
              ('t1-4-lp-malnehmen', 'Multiplizieren und Dividieren'), sim3,
              ('t1-4-lp-kontrolle-malnehmen', 'Kontrollfragen zum Multiplizieren und Dividieren'), fest3, [uebung('mal', 'Multiplizieren'), uebung('durch', 'Dividieren')],
-             auf3, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K3')
+             auf3, V_ZAHLEN + ' · ' + V_TERME, komp='K3')
 
 # ------------------------------------------------------------------ Kapitel 4
 sim4 = '''      <figure class="sim schrittwaehler" id="sim4" aria-label="Schrittwähler: das Rechenzeichen wählen, das zuerst dran ist, und den Schritt ausrechnen">
@@ -325,12 +330,12 @@ k4 = kapitel(4, 'reihenfolge', 'Rechenreihenfolge und negative Brüche', 45,
              r'Du berechnest Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge — Klammern, Potenzen, Punkt vor Strich, von links nach rechts —, schreibst jeden Schritt auf und gibst das Ergebnis vollständig gekürzt an.',
              ('t1-4-lp-reihenfolge', 'Rechenreihenfolge und negative Brüche'), sim4,
              ('t1-4-lp-kontrolle-reihenfolge', 'Kontrollfragen zur Rechenreihenfolge'), fest4, [uebung('reihenfolge', 'Was kommt zuerst?'), uebung('vorzeichen', 'Negative Brüche')],
-             auf4, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K4')
+             auf4, V_HIER + ' · ' + V_BAUM, komp='K4')
 
 # ------------------------------------------------------------------ Vorwissen
 k0 = f'''
     <section class="kap" id="k0">
-      <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen · 1.1 · 1.2 · 1.3</span><span class="zeit">≈ 10 min</span></div>
+      <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen</span><span class="zeit">≈ 10 min</span></div>
       <h2 id="vorwissen">Vorwissen</h2>
       <p class="ziel">Teiler und Vielfache, Rechnen mit negativen Zahlen, Punkt vor Strich, Potenzen. Zuerst kurz wiederholen, dann der Vortest.</p>
 ''' + r'''      <details class="anleitung">
@@ -364,7 +369,7 @@ gt = f'''
     <section class="kap" id="gesamttest">
       <div class="gesamt">
         <div class="gesamt-kopf">
-          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">1.4 · Kapitel 1–4</span><span class="zeit">≈ 30 min · 25 Punkte</span></div>
+          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">Kapitel 1–4</span><span class="zeit">≈ 30 min · 25 Punkte</span></div>
           <h2 id="gesamttest-titel">Gesamttest</h2>
           <div class="pdf-weg">
             <div class="pdf-schritt"><span class="nr">1</span><div><b>Lösen</b> — auf Papier, mit Rechenweg, ohne Taschenrechner.<br>
@@ -408,16 +413,16 @@ vt = r'''
           </li>
         </ol>
       </div>
-      <p class="ausf weiter">Weiter: <a href="''' + TH + r'''">Themenseite 1.4, Rechnen in ℚ</a> — dort auch, was hier bewusst fehlt: Brüche und Dezimalzahlen umwandeln, periodische Dezimalzahlen, Doppelbrüche. Anschliessend: <a href="../themen/t2-1-lineare-gleichungen.html">2.1 Lineare Gleichungen</a>, wo Brüche als Koeffizienten wiederkommen.</p>
+      <p class="ausf weiter">Weiter: Was hier bewusst fehlt — Brüche und Dezimalzahlen umwandeln, periodische Dezimalzahlen — steht bei Mathe begreifbar unter ''' + V_ZAHLEN + r'''. Brüche mit Variablen: ''' + V_TERME + r'''.</p>
     </section>'''
 
 oben = '''<div id="nav-root"></div>
-<!-- Leitprogramm Bruchrechnen, Version 1.0 (Probe, 09.10.2026). Gebaut aus scripts/lp/bruchrechnen/seite.py —
+<!-- Leitprogramm Bruchrechnen, Version 1.0 (09.10.2026, freigeschaltet am selben Tag). Gebaut aus scripts/lp/bruchrechnen/seite.py —
      Änderungen dort, nicht in dieser Datei. Grundlagen: HOWTO-leitprogramme.md (Kapitelmuster) und
      ~/HOWTO-TODO-BM-Vorkurs-LP01-02.md, Abschnitt 4 (LP 01 Bruchrechnen), für die Sek I umgesetzt.
 
-     Themenseite: 1.4 «Rechnen in ℚ» (Vorwissen 1.1–1.3). Die Themenseiten sind am 09.10.2026 noch Gerüste;
-     Notation darum nach STYLEGUIDE.md und CLAUDE.md: Dezimalpunkt, ggT/kgV mit Strichpunkt, Kehrwert,
+     Sek1-Mathe hat keine Themenseiten (Entscheid 09.10.2026): Das Leitprogramm ist selbst die fachliche Quelle;
+     Vertiefungslinks zeigen auf Mathe begreifbar (TALS). Notation nach STYLEGUIDE.md und CLAUDE.md: Dezimalpunkt, ggT/kgV mit Strichpunkt, Kehrwert,
      Hauptnenner, «vollständig gekürzt», negative Brüche mit Minus vor dem Bruch, Ergebnisse als
      (unechter) Bruch statt gemischter Zahl.
 
@@ -467,7 +472,7 @@ oben = '''<div id="nav-root"></div>
     </div>
     <div class="kopf-rechts">
       <button class="themenschalter" type="button" id="themenschalter">Dunkel / Hell</button>
-      <span>Arithmetik/Algebra 1.4</span>
+      <span>Arithmetik/Algebra</span>
     </div>
   </div>
 </header>
@@ -523,7 +528,7 @@ oben = '''<div id="nav-root"></div>
           <li><b>K3</b> Brüche multiplizieren und dividieren, mit dem Kehrwert und Kürzen vor dem Ausrechnen — Kapitel 3</li>
           <li><b>K4</b> Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge berechnen, jeden Schritt begründen und Fehler in fremden Lösungen finden — Kapitel 4</li>
         </ul>
-        <p class="rlp-quelle">Nicht hier, sondern auf der <a href="''' + TH + '''">Themenseite 1.4</a>: Brüche und Dezimalzahlen umwandeln, periodische Dezimalzahlen, Doppelbrüche.</p>
+        <p class="rlp-quelle">Nicht in diesem Leitprogramm: Brüche und Dezimalzahlen umwandeln, periodische Dezimalzahlen, Doppelbrüche — zum Vertiefen bei Mathe begreifbar: ''' + V_ZAHLEN + '''.</p>
       </details>
     </div>
 '''
@@ -569,13 +574,13 @@ fuss = f'''
   <p>Leitprogramm · {NAME}</p>
   <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
   <p><a href="../feedback.html">Kontakt &amp; Feedback</a> · <a href="../rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
-  <p>Keine Cookies · Kein Tracking · Version 1.0 (Probe) · {STAND}</p>
+  <p>Keine Cookies · Kein Tracking · Version 1.0 · {STAND}</p>
 </footer>
 
 <script src="../mathlib.js"></script>
 <script src="../nav.js"></script>
 <script src="../suche.js"></script>
-<script>buildNav({{ id: 'leitprogramme' }});</script>
+<script>buildNav({{ bereich: 'lp', id: 'lp-bruchrechnen' }});</script>
 </body>
 </html>
 '''

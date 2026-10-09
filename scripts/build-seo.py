@@ -66,13 +66,13 @@ BEREICHE = {'1': 'Bereich 1 Arithmetik/Algebra',
 SEITEN = {
  'index.html': dict(
    typ='website',
-   titel='Sek1-Mathe begreifbar — interaktives Lehrmittel für die Sekundarstufe I',
-   beschreibung='Kostenloses interaktives Mathematik-Lehrmittel für die Sekundarstufe I: Zahlenmengen, Rechnen in ℤ und ℚ, lineare Gleichungen, Flächen, Pythagoras, Kreis und Körper.',
-   themen=['Mathematik', 'Sekundarstufe I', 'Lehrmittel', 'Arithmetik', 'Gleichungen', 'Geometrie']),
+   titel='Sek1-Mathe begreifbar — Leitprogramme Mathematik für die Sekundarstufe I',
+   beschreibung='Kostenlose Leitprogramme Mathematik für die Sekundarstufe I: selbstständig lernen mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest — zuerst Bruchrechnen.',
+   themen=['Mathematik', 'Sekundarstufe I', 'Leitprogramm', 'Bruchrechnen', 'Selbststudium']),
  'glossar.html': dict(
    typ='article', lrt='Glossar',
    titel='Glossar — mathematische Begriffe von A bis Z',
-   beschreibung='Mathematik-Glossar für die Sekundarstufe I: die zentralen Begriffe von A bis Z kurz erklärt, jeweils mit Formel und Verweis auf die passende Themenseite.',
+   beschreibung='Mathematik-Glossar für die Sekundarstufe I: die zentralen Begriffe von A bis Z kurz erklärt, jeweils mit Formel und Verweis auf das passende Leitprogramm.',
    themen=['Mathematik', 'Glossar', 'Fachbegriffe', 'Sekundarstufe I']),
  'clips.html': dict(
    typ='article', lrt='Erklärclip',
@@ -80,7 +80,7 @@ SEITEN = {
    beschreibung='Kurze Animationen zur Mathematik der Sekundarstufe I: Ein Clip baut einen Rechenweg Zeile für Zeile auf, mit Farbführung und Text zum Mitlesen.',
    themen=['Mathematik', 'Erklärclip', 'Animation', 'Sekundarstufe I', 'Rechenweg']),
  'leitprogramme.html': dict(
-   typ='article', lrt='Leitprogramm',
+   typ='article', lrt='Leitprogramm', noindex=True,       # seit 09.10.2026 Weiterleitung auf die Startseite
    titel='Leitprogramme — selbstständig durch ein Thema',
    beschreibung='Leitprogramme zur Mathematik der Sekundarstufe I: Ein Thema in Kapiteln zum selbstständigen Durcharbeiten, mit Vorwissenstest, Beispielen, Aufgaben und Gesamttest.',
    themen=['Mathematik', 'Leitprogramm', 'Selbststudium', 'Sekundarstufe I']),
@@ -101,48 +101,13 @@ SEITEN = {
    themen=['Kontakt', 'Feedback']),
 
  # ── Leitprogramme ─────────────────────────────────────────────────
- # Bruchrechnen: unverlinkt bis zur Prüfung nach HOWTO-leitprogramme §15 (noindex, keine Karte,
- # kein Suchindex-Eintrag, kein Kasten auf der Themenseite).
+ # Freigeschaltet am 09.10.2026 (Entscheid Auftraggeber; Hörprobe und KI-Test nach §15 folgen).
  'leitprogramme/bruchrechnen.html': dict(
-   typ='article', lrt='Leitprogramm', noindex=True,
+   typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Bruchrechnen — erweitern, kürzen, addieren, multiplizieren, dividieren',
    beschreibung='Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.',
    themen=['Mathematik', 'Bruchrechnen', 'Brüche', 'Kürzen', 'Hauptnenner', 'Kehrwert', 'Rechenreihenfolge', 'Leitprogramm', 'Sekundarstufe I']),
 
- # ── Themen ────────────────────────────────────────────────────────
- 'themen/t1-1-zahlenmengen-zahlenarten.html': dict(
-   beschreibung='Zahlenmengen und Zahlenarten — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t1-2-rechnen-in-z-potenzen.html': dict(
-   beschreibung='Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t1-3-uebergang-z-q.html': dict(
-   beschreibung='Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t1-4-rechnen-in-q.html': dict(
-   beschreibung='Rechnen in ℚ — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t2-1-lineare-gleichungen.html': dict(
-   beschreibung='Lineare Gleichungen — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t2-2-textaufgaben-lineare-gleichungen.html': dict(
-   beschreibung='Textaufgaben zu den linearen Gleichungen — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t3-1-geometrische-grundbegriffe.html': dict(
-   beschreibung='Geometrische Grundbegriffe — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t3-2-flaechen-geradlinig-begrenzter-figuren.html': dict(
-   beschreibung='Flächen geradlinig begrenzter Figuren — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t3-3-pythagoras.html': dict(
-   beschreibung='Pythagoras — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t3-4-kreis-kreisteile.html': dict(
-   beschreibung='Berechnungen am Kreis, Kreisteile — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
- 'themen/t3-5-quader-prisma-zylinder.html': dict(
-   beschreibung='Volumen und Oberflächen von Quader, Prisma und Zylinder — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',
-   themen=['Mathematik', 'Sekundarstufe I']),
 }
 
 MARKE_AUF = '<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
@@ -354,7 +319,7 @@ def sitemap():
             continue
         eintraege.append((BASIS + datei, git_datum(datei),
                           '1.0' if datei == 'index.html' else
-                          '0.8' if datei.startswith('themen/') else '0.5'))
+                          '0.8' if datei.startswith('leitprogramme/') else '0.5'))   # Leitprogramme sind die Inhaltsseiten
     z = ['<?xml version="1.0" encoding="UTF-8"?>',
          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url, datum, prio in eintraege:

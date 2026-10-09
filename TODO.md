@@ -28,18 +28,22 @@ Unverändert übernommen, passt erst, wenn es gebraucht wird:
 
 ## Inhalt
 
-- [ ] 11 Themenseiten in `themen/` sind Gerüste — je nach `TEMPLATE.html` ausbauen.
-      Die SEO-Beschreibungen in `scripts/build-seo.py` sind Platzhalter.
-- [ ] Glossar, Formelsammlung, Clips, Leitprogramme.
+- [x] Aufbau umgestellt (09.10.2026, Entscheid Auftraggeber): keine Themenseiten, Leitprogramme auf der Startseite;
+      `themen/`, `TEMPLATE.html`, `HOWTO-neue-themenseite.md` gelöscht, `leitprogramme.html` leitet weiter.
+- [ ] Weitere Leitprogramme (Bereiche Arithmetik/Algebra, Gleichungen, Geometrie) — Vorlage `scripts/lp/bruchrechnen/`.
+- [ ] Glossar, Formelsammlung, Clips (Nachschlag-Seiten, Gerüste). Das Glossar soll auf Leitprogramme verweisen.
+- [ ] Werkzeug aus TALS, das noch Themenseiten erwartet: `scripts/build-clips-einbau.py`, `scripts/clips_bibliothek.py`,
+      `verify_js_runtime.js` im Pre-Flight (Zweig für `themen/`), `HOWTO-externe-ressourcen.md` — erst anpassen, wenn
+      gebraucht (Clips der Leitprogramme sind `probe` und brauchen den Einbau nicht).
 - [ ] `feedback.html` sendet an dasselbe Google-Apps-Skript wie TALS Mathe — prüfen, ob
       die Rückmeldungen dort nach Site unterscheidbar sind.
 
-## Leitprogramm Bruchrechnen (09.10.2026, unverlinkt)
+## Leitprogramm Bruchrechnen (09.10.2026, freigeschaltet am selben Tag)
 
-`leitprogramme/bruchrechnen.html`, gebaut mit `scripts/lp/bruchrechnen/` (README dort). Steht mit
-`noindex`, ohne Karte, Suchindex und Themenseiten-Kasten (HOWTO-leitprogramme §13/§15).
+`leitprogramme/bruchrechnen.html`, gebaut mit `scripts/lp/bruchrechnen/` (README dort). Auf Wunsch des Auftraggebers
+freigeschaltet (Karte auf der Startseite, Menü, Suchindex, Sitemap), bevor Hörprobe und KI-Test erledigt sind.
 
-- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bruchrechnen.html`, Befunde hierher.
+- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bruchrechnen.html` (Abschnitt unten, alles behoben).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (PDFs am 09.10.2026
       angesehen, Rastertabellen auseinandergezogen).
 - [ ] 🔑 Hörprobe der acht Clips `t1-4-lp-*`, je eine Frage absichtlich falsch beantworten. Mit Whisper medium
@@ -47,9 +51,8 @@ Unverändert übernommen, passt erst, wenn es gebraucht wird:
       Szene «Hauptnenner» (sonst «kleinster gemeinsamer Nenner»), «Nenner» nach Pausen mit «und» verbunden.
       Besonders hinhören: «Fünftel» (Whisper verstand an einer Stelle «Fünfte»).
 - [ ] Bearbeitungszeit mit 2–3 Lernenden verschiedener Stärke messen (geschätzt 215 min mit Clips, BM-Vorlage §4.3).
-- [ ] Themenseite 1.4 ist ein Gerüst: Notation des Leitprogramms (ggT/kgV mit Strichpunkt, Hauptnenner,
-      Kehrwert, «vollständig gekürzt», keine gemischten Zahlen) dort übernehmen oder abweichend entscheiden.
-- [ ] Freischalten (alle fünf Stellen nach §13), erst nach Prüfung und Abnahme.
+- [x] Themenseiten entfallen; Vertiefungslinks auf Mathe begreifbar (g1-1, g1-2, g1-3) statt Themenseite 1.4.
+- [x] Freigeschaltet (nav.js, index.html, build-seo ohne noindex, Suchindex, Sitemap).
 
 ## Prüfung `bruchrechnen` (09.10.2026)
 
@@ -84,8 +87,7 @@ nachgezählt, Bewegungen, Leistenziele erreichbar und nicht im Start erfüllt, K
       Tabellen mit mehr Zeilenabstand, G5-Brüche gross, Gesamttest auf 3 Seiten, Selbsteinschätzung nach Anteil je Teil.
 
 **Noch offen**
-- [ ] «Mehr dazu» und die Kompetenzbox verweisen auf die Themenseite 1.4, die noch ein Gerüst ist — vor der Freischaltung
-      füllen (oder Verweise bis dahin entfernen).
+- [x] «Mehr dazu» und Kompetenzbox verweisen jetzt auf Mathe begreifbar statt auf eine eigene Themenseite.
 - [ ] Sim 4 kürzt jedes Teilergebnis selbst (ungekürzte Eingabe wird angenommen und gekürzt angezeigt) — bewusst so,
       «vollständig gekürzt» wird in den Übungen und Aufgaben geübt.
 

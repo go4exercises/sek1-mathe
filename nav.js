@@ -1,34 +1,27 @@
 // ─────────────────────────────────────────────────────────────
 //  Sek1-Mathe begreifbar — Shared Navigation (nav.js)
-//  Version 1.0 · 11 Themen in 3 Bereichen
+//  Version 2.0 · Leitprogramme im Zentrum (Entscheid Auftraggeber 09.10.2026)
 //
-//  Einbindung: <script src="../nav.js"></script> (von Themenseiten)
+//  Es gibt keine Themenseiten. Menü und Startseite zeigen nur fertige
+//  Leitprogramme; vertieft wird auf den Themenseiten von Mathe begreifbar (TALS).
+//
+//  Einbindung: <script src="../nav.js"></script> (von Leitprogrammen)
 //              <script src="nav.js"></script>    (von index.html)
-//  Aufruf:     buildNav({ bereich, id, kapitelNr, kapitelTitel, prev, next, homepage })
+//  Aufruf:     buildNav({ bereich, id, homepage })   — Leitprogramm: bereich 'lp'
 // ─────────────────────────────────────────────────────────────
 
+// Einzige Quelle der Leitprogramm-Liste (Menü, Suchindex, Clip-Zuordnung).
+// Neues Leitprogramm: Eintrag hier, Karte in index.html, Eintrag in scripts/build-seo.py.
 const SITE = {
-  themen: [
-    { id:'t1-1', nr:'1.1', titel:'Zahlenmengen und Zahlenarten', url:'themen/t1-1-zahlenmengen-zahlenarten.html' },
-    { id:'t1-2', nr:'1.2', titel:'Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten', url:'themen/t1-2-rechnen-in-z-potenzen.html' },
-    { id:'t1-3', nr:'1.3', titel:'Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ', url:'themen/t1-3-uebergang-z-q.html' },
-    { id:'t1-4', nr:'1.4', titel:'Rechnen in ℚ', url:'themen/t1-4-rechnen-in-q.html' },
-    { id:'t2-1', nr:'2.1', titel:'Lineare Gleichungen', url:'themen/t2-1-lineare-gleichungen.html' },
-    { id:'t2-2', nr:'2.2', titel:'Textaufgaben zu den linearen Gleichungen', url:'themen/t2-2-textaufgaben-lineare-gleichungen.html' },
-    { id:'t3-1', nr:'3.1', titel:'Geometrische Grundbegriffe', url:'themen/t3-1-geometrische-grundbegriffe.html' },
-    { id:'t3-2', nr:'3.2', titel:'Flächen geradlinig begrenzter Figuren', url:'themen/t3-2-flaechen-geradlinig-begrenzter-figuren.html' },
-    { id:'t3-3', nr:'3.3', titel:'Pythagoras', url:'themen/t3-3-pythagoras.html' },
-    { id:'t3-4', nr:'3.4', titel:'Berechnungen am Kreis, Kreisteile', url:'themen/t3-4-kreis-kreisteile.html' },
-    { id:'t3-5', nr:'3.5', titel:'Volumen und Oberflächen von Quader, Prisma und Zylinder', url:'themen/t3-5-quader-prisma-zylinder.html' },
+  leitprogramme: [
+    { id:'lp-bruchrechnen', nr:'1', titel:'Bruchrechnen', url:'leitprogramme/bruchrechnen.html' },
   ]
 };
 
-// Themenbereich-Gruppen für die Dropdown-Anzeige
+// Bereiche für die Gruppierung im Menü — nur Bereiche mit mindestens einem Leitprogramm.
 const GROUPS = {
-  themen: [
-    { nr:'1', titel:'Arithmetik/Algebra', ids:['t1-1', 't1-2', 't1-3', 't1-4'] },
-    { nr:'2', titel:'Gleichungen', ids:['t2-1', 't2-2'] },
-    { nr:'3', titel:'Geometrie', ids:['t3-1', 't3-2', 't3-3', 't3-4', 't3-5'] }
+  leitprogramme: [
+    { nr:'1', titel:'Arithmetik/Algebra', ids:['lp-bruchrechnen'] }
   ]
 };
 
@@ -40,7 +33,7 @@ function buildNav(cfg) {
 
   // Lookup: id → page-Objekt (für Dropdown-Highlight)
   const pageById = {};
-  SITE.themen.forEach(p => pageById[p.id] = p);
+  SITE.leitprogramme.forEach(p => pageById[p.id] = p);
 
   // Dropdown-HTML mit Lerngebiet-Gruppierung
   function renderDropdown(bereich, ddId) {
@@ -49,7 +42,7 @@ function buildNav(cfg) {
       const items = g.ids.map(id => {
         const p = pageById[id];
         return `<a href="${prefix}${p.url}" class="${p.id===cfg.id?'dd-aktiv':''}">
-          <span class="dd-nr">${p.nr}</span>
+          <span class="dd-nr">▤</span>
           <span class="dd-tit">${p.titel}</span>
         </a>`;
       }).join('');
@@ -67,7 +60,7 @@ function buildNav(cfg) {
     return groups.map(g => {
       const items = g.ids.map(id => {
         const p = pageById[id];
-        return `<a href="${prefix}${p.url}" class="${p.id===cfg.id?'mn-aktiv':''}">${p.nr} · ${p.titel}</a>`;
+        return `<a href="${prefix}${p.url}" class="${p.id===cfg.id?'mn-aktiv':''}">▤ · ${p.titel}</a>`;
       }).join('');
       return `<details class="mn-lg"${g.ids.indexOf(cfg.id) !== -1 ? ' open' : ''}>
         <summary>${g.nr} · ${g.titel}</summary>
@@ -80,9 +73,8 @@ function buildNav(cfg) {
   // Seite, auf Glossar/Formelsammlung «Nachschlagen». Beide Bereiche werden
   // gleich behandelt — auf der Startseite und den übrigen Seiten bleibt alles
   // zu und wird erst per Klick geöffnet.
-  const refAktiv = (cfg.id === 'glossar' || cfg.id === 'formeln' ||
-                    cfg.id === 'clips' || cfg.id === 'leitprogramme');
-  const thOffen  = (cfg.bereich === 'themen');
+  const refAktiv = (cfg.id === 'glossar' || cfg.id === 'formeln' || cfg.id === 'clips');
+  const thOffen  = (cfg.bereich === 'lp');
 
   // ── META-DROPDOWN-INHALTE (Autor, Ausblick, Lizenz) ──
   // Drei kleine Info-Panels rechts im Header, auf jeder Seite identisch.
@@ -104,13 +96,13 @@ function buildNav(cfg) {
     <div class="meta-titel">Ausblick</div>
     <div class="meta-sub">Erstellt</div>
     <ul>
-      <li>Gerüst mit 11 Themen in den Bereichen Arithmetik/Algebra, Gleichungen und Geometrie</li>
+      <li>Leitprogramm Bruchrechnen: vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
       <li>Schwesterprojekte: <a href="https://mathe.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Mathe begreifbar</a> (Berufsmaturität) und <a href="https://physik.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Physik begreifbar</a> — gleicher Aufbau</li>
     </ul>
     <div class="meta-sub">Im Aufbau</div>
     <ul>
-      <li>Je Thema: interaktive Animationen, Aufgaben, Zusammenfassung, Druckseiten und externe Ressourcen</li>
-      <li>Nachschlagen: Glossar, Formelsammlung, Clips und Leitprogramme</li>
+      <li>Weitere Leitprogramme zu Arithmetik/Algebra, Gleichungen und Geometrie</li>
+      <li>Nachschlagen: Glossar, Formelsammlung und Clips</li>
     </ul>`;
 
   const metaLizenzHTML = `
@@ -137,11 +129,11 @@ function buildNav(cfg) {
   </a>
   <nav class="site-nav">
     <div class="dropdown">
-      <button class="nav-btn${cfg.bereich==='themen' ? ' aktiv':''}" onclick="toggleDD('dd-th')">
-        Themen ▾
+      <button class="nav-btn${cfg.bereich==='lp' ? ' aktiv':''}" onclick="toggleDD('dd-lp')">
+        Leitprogramme ▾
       </button>
-      <div class="dd-menu dd-menu-gross" id="dd-th">
-        ${renderDropdown('themen','dd-th')}
+      <div class="dd-menu" id="dd-lp">
+        ${renderDropdown('leitprogramme','dd-lp')}
       </div>
     </div>
     <div class="dropdown">
@@ -159,9 +151,6 @@ function buildNav(cfg) {
           </a>
           <a href="${prefix}clips.html" class="${cfg.id==='clips'?'dd-aktiv':''}">
             <span class="dd-nr">▶</span><span class="dd-tit">Clips</span>
-          </a>
-          <a href="${prefix}leitprogramme.html" class="${cfg.id==='leitprogramme'?'dd-aktiv':''}">
-            <span class="dd-nr">▤</span><span class="dd-tit">Leitprogramme</span>
           </a>
         </div>
       </div>
@@ -200,8 +189,8 @@ function buildNav(cfg) {
 <div class="mobile-nav" id="mobile-nav">
   <a href="${indexHref}" class="mn-direkt">← Übersicht</a>
   <details class="mn-sektion"${thOffen ? ' open' : ''}>
-    <summary>Themen</summary>
-    <div class="mn-sektion-body">${renderMobileGroup('themen')}</div>
+    <summary>Leitprogramme</summary>
+    <div class="mn-sektion-body">${renderMobileGroup('leitprogramme')}</div>
   </details>
   <details class="mn-sektion"${refAktiv ? ' open' : ''}>
     <summary>Nachschlagen</summary>
@@ -209,7 +198,6 @@ function buildNav(cfg) {
       <a href="${prefix}glossar.html" class="${cfg.id==='glossar'?'mn-aktiv':''}">A–Z · Glossar</a>
       <a href="${prefix}formelsammlung.html" class="${cfg.id==='formeln'?'mn-aktiv':''}">∑ · Formelsammlung</a>
       <a href="${prefix}clips.html" class="${cfg.id==='clips'?'mn-aktiv':''}">▶ · Clips</a>
-      <a href="${prefix}leitprogramme.html" class="${cfg.id==='leitprogramme'?'mn-aktiv':''}">▤ · Leitprogramme</a>
     </div>
   </details>
   <a href="https://mathe.begreifbar.ch/" target="_blank" rel="noopener" class="mn-direkt">Mathe BM ↗</a>

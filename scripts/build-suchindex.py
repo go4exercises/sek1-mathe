@@ -334,8 +334,7 @@ ZUSATZSEITEN = [
     ('glossar.html', 'A–Z', 'Glossar', 'glossar'),
     ('formelsammlung.html', '∑', 'Formelsammlung', 'formeln'),
     ('clips.html', '▶', 'Clips', 'thema'),
-    ('leitprogramme.html', '▤', 'Leitprogramme', 'thema'),
-]
+]   # leitprogramme.html ist seit 09.10.2026 nur noch Weiterleitung; die Leitprogramme selbst kommen aus nav.js
 
 
 def clip_eintraege(root):

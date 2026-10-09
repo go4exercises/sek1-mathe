@@ -293,9 +293,9 @@ def clip(name, folge, titel_, kurz, schlag, szenen, fragen=None, art='Einfuehrun
             if spr is not None and spr != q['sprecher']:
                 print('  neu zu vertonen:', dname, 'Szene', k + 1, q['name'])
     d = {'titel': titel_, 'dateiname': dname, 'kurzbeschrieb': kurz,
-         'schlagworte': schlag, 'themenbereich': 'Arithmetik/Algebra · Rechnen in ℚ',
+         'schlagworte': schlag, 'themenbereich': 'Arithmetik/Algebra · Bruchrechnen',
          'fach': 'Sekundarstufe I', 'lerngebiet': '1 · Arithmetik/Algebra',
-         'lektion': ['t1-4'], 'stufe': ['Sek I'], 'datum': '2026-10-09',
+         'lektion': ['lp-bruchrechnen'], 'stufe': ['Sek I'], 'datum': '2026-10-09',
          'theme': 'begreifbar-schlicht', 'latex': True, 'reihe': 'Brüche sehen', 'folge': folge,
          'nachlauf': 2.6, 'probe': True,
          '_probe': '%s des Leitprogramms bruchrechnen; gehoert dorthin, nicht in die Clip-Bibliothek.' % art,

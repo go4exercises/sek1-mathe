@@ -1,17 +1,17 @@
 ---
 name: preflight
-description: Pflicht-Qualitätscheck für Sek1-Mathe-Themenseiten. IMMER ausführen, bevor Änderungen an einer Datei in themen/*.html committet werden. Zweistufig: schnelle Eigen-Checks (Tag-Bilanz, ß, Dezimalkomma in Math, doppelte IDs, Skelett, Phantom-Klassen, mathlib-Einbindung, Ressourcen-Marker) plus Aufruf der autoritativen Repo-Skripte verify_mathjax.js (echte Render-Prüfung), verify_js_runtime.js (JS-Laufzeit in jsdom) und check_identifier_collisions.py. Fehlen die npm-Module mathjax-full/jsdom, werden die Tiefen-Checks sauber übersprungen.
+description: Pflicht-Qualitätscheck für Sek1-Mathe (Leitprogramme und Wurzelseiten). IMMER ausführen, bevor Änderungen an leitprogramme/*.html oder index.html committet werden. Zweistufig: schnelle Eigen-Checks (Tag-Bilanz, ß, Dezimalkomma in Math, doppelte IDs, Skelett, Phantom-Klassen, mathlib-Einbindung, Ressourcen-Marker) plus Aufruf der autoritativen Repo-Skripte verify_mathjax.js (echte Render-Prüfung), verify_js_runtime.js (JS-Laufzeit in jsdom) und check_identifier_collisions.py. Fehlen die npm-Module mathjax-full/jsdom, werden die Tiefen-Checks sauber übersprungen.
 ---
 
-# Pre-Flight für Sek1-Mathe-Themenseiten
+# Pre-Flight für Sek1-Mathe
 
-Vor jedem Commit, der `themen/*.html` betrifft.
+Vor jedem Commit, der `leitprogramme/*.html` oder `index.html` betrifft. Themenseiten gibt es seit 09.10.2026 nicht mehr.
 **Vom Repo-Wurzelverzeichnis aufrufen** (wegen `scripts/` und `node_modules/`).
 
 ## Ausführen
 
 ```bash
-python3 .claude/skills/preflight/preflight.py themen/*.html
+python3 .claude/skills/preflight/preflight.py leitprogramme/*.html index.html
 ```
 
 ## Erwartetes Ergebnis
