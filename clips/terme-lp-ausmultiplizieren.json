@@ -39,7 +39,7 @@
      "x": 150,
      "y": 330,
      "groesse": 76,
-     "ein": 4.3
+     "ein": 4.08
     },
     {
      "typ": "graf",
@@ -117,7 +117,7 @@
      "achsen": false
     }
    ],
-   "dauer": 7.75
+   "dauer": 6.9
   },
   {
    "name": "Vier Teile",
@@ -139,7 +139,7 @@
      "x": 150,
      "y": 400,
      "groesse": 60,
-     "ein": 9.61
+     "ein": 9.68
     },
     {
      "typ": "graf",
@@ -200,7 +200,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 0.83,
+     "ein": 0.76,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -303,7 +303,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.25,
+     "ein": 4.1,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -366,7 +366,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.19,
+     "ein": 6.1,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -477,7 +477,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.51,
+     "ein": 7.58,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -564,7 +564,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.99,
+     "ein": 9.1,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -740,13 +740,13 @@
      "achsen": false
     }
    ],
-   "dauer": 14.31
+   "dauer": 12.21
   },
   {
    "name": "Zusammenfassen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Die beiden Streifen sind gleichartig: drei x plus zwei x gibt fünf x. Also ist x plus zwei mal x plus drei gleich x Quadrat plus fünf x plus sechs.",
+   "sprecher": "Die beiden Streifen sind gleichartig: drei x plus zwei x gibt fünf x. Also ist Klammer x plus zwei mal Klammer x plus drei gleich x Quadrat plus fünf x plus sechs.",
    "elemente": [
     {
      "typ": "formel",
@@ -762,7 +762,7 @@
      "x": 150,
      "y": 430,
      "groesse": 66,
-     "ein": 4.8
+     "ein": 4.75
     },
     {
      "typ": "graf",
@@ -1159,7 +1159,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.56,
+     "ein": 1.89,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1227,13 +1227,13 @@
      "achsen": false
     }
    ],
-   "dauer": 10.46
+   "dauer": 11.2
   },
   {
    "name": "Fehler",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Häufiger Fehler: nur vorne mal vorne und hinten mal hinten. Das gibt x Quadrat plus sechs. Im Bild fehlen dann die beiden Streifen. Probe mit x gleich eins: drei mal vier ist zwölf, aber eins plus sechs ist nur sieben.",
+   "sprecher": "Häufiger Fehler: nur vorne mal vorne und hinten mal hinten. Das gibt x Quadrat plus sechs. Im Bild fehlen dann die beiden Streifen. Probe mit x gleich zwei: vier mal fünf ist zwanzig, aber vier plus sechs ist nur zehn.",
    "elemente": [
     {
      "typ": "formel",
@@ -1241,15 +1241,15 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 4.04
+     "ein": 4.11
     },
     {
      "typ": "formel",
-     "text": "x = 1: \\quad 3 \\cdot 4 = 12, \\quad 1 + 6 = \\fd{7}",
+     "text": "x = 2: \\quad 4 \\cdot 5 = 20, \\quad 4 + 6 = \\fd{10}",
      "x": 150,
      "y": 440,
      "groesse": 50,
-     "ein": 8.34
+     "ein": 8.33
     },
     {
      "typ": "graf",
@@ -1526,7 +1526,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.04,
+     "ein": 7.49,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1618,7 +1618,7 @@
      "achsen": false
     }
    ],
-   "dauer": 14.08
+   "dauer": 13.99
   },
   {
    "name": "Rechteckschema",
@@ -1642,7 +1642,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.48,
+     "ein": 3.68,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1745,7 +1745,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.64,
+     "ein": 7.66,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1796,7 +1796,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 9.96,
+     "ein": 9.82,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2023,7 +2023,7 @@
      "achsen": false
     }
    ],
-   "dauer": 17.36
+   "dauer": 14.78
   },
   {
    "name": "Ergebnis",
@@ -2037,7 +2037,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 1.06
+     "ein": 0.92
     },
     {
      "typ": "formel",
@@ -2045,7 +2045,7 @@
      "x": 150,
      "y": 430,
      "groesse": 62,
-     "ein": 10.62
+     "ein": 10.46
     },
     {
      "typ": "notiz",
@@ -2054,7 +2054,7 @@
      "y": 560,
      "groesse": 42,
      "farbe": "orange",
-     "ein": 6.2
+     "ein": 5.74
     },
     {
      "typ": "graf",
@@ -2371,7 +2371,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.2,
+     "ein": 5.74,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2415,7 +2415,7 @@
      "achsen": false
     }
    ],
-   "dauer": 14.59
+   "dauer": 14.12
   },
   {
    "name": "Merke",
@@ -2440,7 +2440,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 10.29
+   "dauer": 9.8
   },
   {
    "name": "Jetzt du",
@@ -2465,7 +2465,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.24
+   "dauer": 6.06
   }
  ],
  "fragen": [
@@ -2483,12 +2483,12 @@
    "rueck": {
     "2": "Ja.",
     "0": "Jede Seite hat zwei Abschnitte. Zwei mal zwei Abschnitte geben mehr als zwei Felder.",
-    "1": "6 ist die Zahl der Einer unten rechts. Gefragt sind die grossen Teilflächen."
+    "1": "Zähle nur die grossen Teilflächen, die durch das Unterteilen der beiden Seiten entstehen."
    },
    "sprich": "In wie viele Teilflächen zerfällt das Rechteck, wenn du jede Seite bei x unterteilst?",
    "rueck_sprich": {
     "0": "Jede Seite hat zwei Abschnitte. Zwei mal zwei Abschnitte geben mehr als zwei Felder.",
-    "1": "Sechs ist die Zahl der Einer unten rechts. Gefragt sind die grossen Teilflächen."
+    "1": "Zähle nur die grossen Teilflächen, die durch das Unterteilen der beiden Seiten entstehen."
    }
   }
  ]

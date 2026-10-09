@@ -50,7 +50,7 @@
   function termLesen(s, v){
     s = String(s == null ? '' : s).trim();
     if (!s) return { leer: true };
-    s = s.replace(/[\u2212\u2013]/g, '-').replace(/[·×]/g, '*').replace(/²/g, '^2').replace(/³/g, '^3').replace(/\s+/g, '');
+    s = s.replace(/[\u2212\u2013]/g, '-').replace(/[·×\u22c5]/g, '*').split(v.toUpperCase()).join(v).replace(/²/g, '^2').replace(/³/g, '^3').replace(/\s+/g, '');
     if (/\d,\d/.test(s)) return { kaputt: true, grund: 'Dezimalzahlen braucht es hier nicht.' };
     if (new RegExp(v + '\\d').test(s)) return { kaputt: true, grund: 'Hochzahlen mit <code>^</code> schreiben: <code>' + v + '^2</code> (oder ' + v + '²).' };
     var fremd = s.replace(/[0-9+\-*^()]/g, '').replace(new RegExp(v, 'g'), '');
@@ -112,7 +112,11 @@
     function monom(m){
       if (m.t === 'n' || m.t === 'v') return true;
       if (m.t === '^') return m.x.t === 'v';
-      if (m.t === '*') return m.a.every(monom);
+      if (m.t === '*'){                       // 3x, 3x^2, x·3 — aber nicht 2·3x oder x·x (noch zusammenzufassen)
+        var zahlen = 0, var_ = 0;
+        return m.a.every(function(f){ if (f.t === 'n') zahlen++; else if (f.t === 'v' || (f.t === '^' && f.x.t === 'v')) var_++; else return false; return true; })
+               && zahlen <= 1 && var_ <= 1;
+      }
       return false;
     }
     function glied(g){
@@ -339,7 +343,7 @@
       { text: 'Stell \\((x + 4)(x - 1)\\) ein. Welches Vorzeichen bekommt die Zahl am Schluss?', ok: paar(4, -1) },
       { text: 'Stell \\((x - 2)(x - 5)\\) ein. Warum ist die Zahl am Schluss positiv?', ok: paar(-2, -5) },
       { text: 'Finde ein Produkt, bei dem das x-Glied ganz wegfällt (und keine Zahl 0 ist).', ok: function(z){ return z.a === -z.b && z.a !== 0; } },
-      { text: 'Finde \\(a\\) und \\(b\\) so, dass das Ergebnis \\(x^2 + x - 12\\) ist.', ok: paar(4, -3) }
+      { text: 'Finde die beiden Zahlen so, dass das Ergebnis \\(x^2 + 2x - 8\\) ist.', ok: paar(4, -2) }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
     zeichnen();
@@ -382,7 +386,7 @@
         formel.innerHTML = '(' + a + ' + ' + b + ')(' + a + ' − ' + b + ') = ' + (a + b) * (a - b) + ' = ' + a * a + ' − ' + b * b +
           ' <span class="grau">(unten: a² ohne das Eckquadrat b²; das orange Stück wandert nach rechts, so entsteht das Rechteck oben)</span>';
       }
-      svg.setAttribute('viewBox', '0 0 300 ' + (Z.m === 'produkt' ? 40 + (a - b + 1 + a) * E : 40 + (a + (Z.m === 'plus' ? b : 0)) * E));
+      svg.setAttribute('viewBox', '0 0 320 ' + (Z.m === 'produkt' ? 40 + (a - b + 1 + a) * E : 40 + (a + (Z.m === 'plus' ? b : 0)) * E));
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -414,7 +418,7 @@
       rechteckschema(tab, Z.m, Z.n);
       var p = pMul(lin(1, Z.m), lin(1, Z.n)), gl = pEq(p, Q);
       ziel.innerHTML = 'Ziel: ' + hx(Q) + ' <span class="grau">(Summe ' + mz(Q[1]) + '; Produkt ' + mz(Q[0]) + ')</span>';
-      formel.innerHTML = 'dein Produkt: ' + hx(p) + ' <span class="grau">(m + n = ' + mz(Z.m + Z.n) + '; m · n = ' + mz(Z.m * Z.n) + ')</span>' +
+      formel.innerHTML = 'dein Produkt: ' + hx(p) + ' <span class="grau">(Summe der Zahlen ' + mz(Z.m + Z.n) + '; Produkt ' + mz(Z.m * Z.n) + ')</span>' +
         (gl ? ' <span class="ok-text">✓ getroffen</span>' : '');
       if (pr) pr();
     }
@@ -437,10 +441,13 @@
     var ALLE = document.querySelectorAll('.uebung[data-typ]'); if (!ALLE.length) return;
     function nz(a, b){ var r; do { r = zufallG(a, b); } while (!r); return r; }
     function kopfTerm(p, v){ return pTxt(p, v); }
+    function kz(n){ return n < 0 ? '(' + n + ')' : String(n); }
     function vzTex(n){ return n < 0 ? '- ' + Math.abs(n) : '+ ' + n; }
 
     /* Feste Aufgaben (Erkundungen, Clips, Festhalten, Kapitelaufgaben, Vortest, Gesamttest): je Typ ein Schlüssel. */
     var SPERRE = [
+      'bl|p|1|3', 'bl|p|1|6', 'bi|d|1|3', 'fz|d|1|5', 'kl|-2|3|-4', 'zs|1,4,-2,1', 'am|1,5|1,1', 'am|1,-2|1,7', 'ko|-2|7', 'ko|-2|4', 'fz|t|-2|4',
+      'fz|k|3|b|1', 'fz|k|2|d|3', 'fz|k|5|d|2', 'fz|k|3|d|2', 'am|1,4|1,2',
       'zs|3,2,-1,4', 'zs|2,-5,4,1', 'zs|2,4,3,-1', 'zs|5,3,-2,7', 'zs|4,-7,2,3',
       'kl|3|1|2', 'kl|2|2|-1', 'kl|3|2|-4', 'kl|-2|1|-3', 'kl|4|3|-2', 'kl|-3|-1|2', 'kl|5|2|-3', 'km|7|2|-5', 'km|4|1|3', 'km|8|3|-5', 'km|1|-3|4', 'km|-1|3|-8',
       'am|1,2|1,3', 'am|3,-2|1,4', 'am|1,4|1,5', 'am|2,-3|1,6', 'am|1,-4|1,-7', 'am|1,5|1,-2', 'am|1,1|1,4', 'am|1,6|1,1', 'am|1,-3|1,5', 'am|2,1|1,-4', 'am|1,5|1,2', 'am|1,2|1,-1', 'am|2,5|1,-3',
@@ -451,7 +458,17 @@
       'fz|t|2|3', 'fz|t|2|4', 'fz|t|-3|-5', 'fz|t|5|-3', 'fz|t|-3|-3', 'fz|t|4|-4', 'fz|t|-3|-4', 'fz|t|2|7', 'fz|t|-5|2', 'fz|t|-6|4', 'fz|t|4|-3', 'fz|t|-9|9',
       'fz|b|-5', 'fz|b|7', 'fz|b|5', 'fz|b|3', 'fz|b|-3', 'fz|d|3|5', 'fz|d|2|1', 'fz|d|1|9', 'fz|d|1|3', 'fz|d|1|2', 'fz|d|1|4'
     ];
-    function gesperrt(T, A){ return T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    /* Schlüssel normieren: Zahlenpaare sortiert, Klammerpaare beim Ausmultiplizieren als Menge (Prüfung 10.10.2026:
+       unsortierte Einträge sperrten nichts). */
+    function norm(k){
+      var p = k.split('|'), z = function(u, w){ return u - w; };
+      if (p[0] === 'ko') return 'ko|' + [+p[1], +p[2]].sort(z).join('|');
+      if (p[0] === 'fz' && p[1] === 't') return 'fz|t|' + [+p[2], +p[3]].sort(z).join('|');
+      if (p[0] === 'am') return 'am|' + [p[1], p[2]].sort().join('|');
+      return k;
+    }
+    SPERRE = SPERRE.map(norm);
+    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(norm(T.schl(A))) >= 0; }
     function paarSchl(m, n){ return [m, n].sort(function(u, w){ return u - w; }).join('|'); }
 
     var TYPEN = {
@@ -493,7 +510,7 @@
             return { art: art, k: k, a: a, b: b, r: pMul([k], lin(a, b)), tex: k + kl(a, b),
               muster: '\\(' + k + kl(a, b) + ' = \\) {t}', text: 'Löse die Klammer auf.' };
           }
-          var m = nz(-6, 9); if (m === a) m += 2;
+          var m; do { m = nz(-6, 9); } while (m === a);
           return { art: art, m: m, a: a, b: b, r: pAdd([0, m], pNeg(lin(a, b))), tex: pTex([0, m]) + ' - ' + kl(a, b),
             muster: '\\(' + pTex([0, m]) + ' - ' + kl(a, b) + ' = \\) {t}', text: 'Löse die Klammer auf und fasse zusammen.' }; },
         falsche: function(A){
@@ -506,10 +523,10 @@
           for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0])){
             if (f[j][1] === 'jedem') return 'Die Zahl vor der Klammer wird mit <b>jedem</b> Glied in der Klammer multipliziert.';
             if (f[j][1] === 'Minus') return '<b>Minus</b> vor der Klammer dreht <b>jedes</b> Vorzeichen in der Klammer um, auch das zweite.';
-            return '<b>Vorzeichen:</b> Rechne \\(' + A.k + ' \\cdot (' + A.b + ')\\). Minus mal Minus gibt Plus, Minus mal Plus gibt Minus.';
+            return '<b>Vorzeichen:</b> Rechne \\(' + kz(A.k) + ' \\cdot ' + kz(A.b) + '\\). Minus mal Minus gibt Plus, Minus mal Plus gibt Minus.';
           }
-          return 'Klammer auflösen, dann gleichartige Glieder zusammenfassen. Rechne nochmals nach und mach die Probe mit \\(x = 1\\).'; },
-        tipps: function(A){ return A.art === 'k' ? ['Distributivgesetz: \\(k(a + b) = ka + kb\\).', 'Rechne \\(' + A.k + ' \\cdot ' + pTex([0, A.a]) + '\\) und \\(' + A.k + ' \\cdot (' + A.b + ')\\).']
+          return 'Klammer auflösen, dann gleichartige Glieder zusammenfassen. Rechne nochmals nach und mach die Probe mit \\(x = 2\\).'; },
+        tipps: function(A){ return A.art === 'k' ? ['Distributivgesetz: \\(k(a + b) = ka + kb\\).', 'Rechne \\(' + kz(A.k) + ' \\cdot ' + (A.a < 0 ? '(' + pTex([0, A.a]) + ')' : pTex([0, A.a])) + '\\) und \\(' + kz(A.k) + ' \\cdot ' + kz(A.b) + '\\).']
                                                  : ['Minus vor der Klammer: Klammer weglassen und jedes Vorzeichen darin umdrehen.', '\\(-' + kl(A.a, A.b) + ' = ' + pTex(lin(-A.a, -A.b)) + '\\), dann zusammenfassen.']; },
         loesung: function(A){ return A.art === 'k' ? A.tex + ' = ' + pTex(A.r) : A.tex + ' = ' + pTex([0, A.m]) + (A.a > 0 ? ' - ' : ' + ') + pTex([0, Math.abs(A.a)]) + (A.b > 0 ? ' - ' : ' + ') + Math.abs(A.b) + ' = ' + pTex(A.r); } },
 
@@ -530,7 +547,7 @@
           for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0]))
             return f[j][1] === 'jedes' ? 'Es fehlen die gemischten Glieder: <b>Jedes</b> Glied der ersten Klammer mal <b>jedes</b> der zweiten — vier Produkte.'
                                        : '<b>Vorzeichen</b> prüfen: Das Vorzeichen gehört zur Zahl dahinter. Schreib die vier Produkte einzeln auf.';
-          return 'Vier Produkte bilden (Rechteckschema), dann die beiden \\(x\\)-Glieder zusammenfassen. Probe mit \\(x = 1\\).'; },
+          return 'Vier Produkte bilden (Rechteckschema), dann die beiden \\(x\\)-Glieder zusammenfassen. Probe mit \\(x = 2\\).'; },
         tipps: function(A){ return ['Rechteckschema: jedes Glied der ersten Klammer mal jedes der zweiten.',
           'Die vier Produkte: \\(' + pTex([0, 0, A.a * A.c]) + '\\), \\(' + pTex([0, A.a * A.d]) + '\\), \\(' + pTex([0, A.b * A.c]) + '\\), \\(' + A.b * A.d + '\\).']; },
         loesung: function(A){ var g = function(c){ return (c < 0 ? ' - ' : ' + ') + pTex([0, Math.abs(c)]); };
@@ -544,14 +561,14 @@
             text: 'Fülle aus: \\(' + kl(1, m) + kl(1, n) + ' = x^2 + \\square\\, x + \\square\\)' }; },
         fehler: function(A){
           var f = [];
-          if (-A.q !== A.q) f.push([{ p: String(A.p), q: String(-A.q) }, 'Zahlglied']);
+          if (-A.q !== A.q) f.push([{ p: String(A.p), q: String(-A.q) }, 'Zahl am Schluss']);
           if (A.q !== A.p) f.push([{ p: String(A.q), q: String(A.p) }, 'vertauscht']);
           return f; },
         pruefen: function(A, e){
-          if (e.p === A.q && e.q === A.p && A.p !== A.q) return 'Die beiden Werte sind vertauscht: Das <b>x-Glied</b> ist die <b>Summe</b> \\(' + A.m + ' + (' + A.n + ')\\), die Zahl am Schluss das <b>Produkt</b>.';
-          if (e.p === A.p && e.q !== A.q) return 'Das x-Glied stimmt. Das <b>Zahlglied</b> ist \\(' + A.m + ' \\cdot (' + A.n + ')\\). Achte auf das Vorzeichen.';
-          if (e.q === A.q && e.p !== A.p) return 'Das Zahlglied stimmt. Das <b>x-Glied</b> ist die Summe der beiden Zahlen, mit Vorzeichen.';
-          return 'Das x-Glied ist die Summe der Zahlen in den Klammern, das Zahlglied ihr Produkt.'; },
+          if (e.p === A.q && e.q === A.p && A.p !== A.q) return 'Die beiden Werte sind vertauscht: Das <b>x-Glied</b> ist die <b>Summe</b> \\(' + kz(A.m) + ' + ' + kz(A.n) + '\\), die Zahl am Schluss das <b>Produkt</b>.';
+          if (e.p === A.p && e.q !== A.q) return 'Das x-Glied stimmt. Die <b>Zahl am Schluss</b> ist das Produkt \\(' + kz(A.m) + ' \\cdot ' + kz(A.n) + '\\). Achte auf das Vorzeichen.';
+          if (e.q === A.q && e.p !== A.p) return 'Die Zahl am Schluss stimmt. Das <b>x-Glied</b> ist die Summe der beiden Zahlen, mit Vorzeichen.';
+          return 'Das x-Glied ist die Summe der Zahlen in den Klammern, die Zahl am Schluss ihr Produkt.'; },
         tipps: function(A){ return ['\\((x + m)(x + n) = x^2 + (m + n)x + m \\cdot n\\).', 'Hier: \\(m = ' + A.m + '\\), \\(n = ' + A.n + '\\).']; },
         loesung: function(A){ return kl(1, A.m) + kl(1, A.n) + ' = ' + pTex([A.q, A.p, 1]); } },
 
@@ -569,19 +586,21 @@
           if (A.art !== 'd'){
             f.push([[A.b * A.b, 0, A.a * A.a], 'mittlere']);
             f.push([[A.b * A.b, s * A.a * A.b, A.a * A.a], '2ab']);
+            if (A.art === 'm'){ f.push([[-A.b * A.b, 0, A.a * A.a], 'mittlere']); f.push([[-A.b * A.b, -2 * A.a * A.b, A.a * A.a], 'Quadrat']); }
           } else f.push([[A.b * A.b, 0, -A.a * A.a], 'Vorzeichen']);
-          if (A.a > 1) f.push([[A.art === 'd' ? -A.b * A.b : A.b * A.b, A.art === 'd' ? 0 : 2 * s * A.a * A.b, A.a], 'Koeffizient']);
+          if (A.a > 1) f.push([[A.art === 'd' ? -A.b * A.b : A.b * A.b, A.art === 'd' ? 0 : 2 * s * A.a * A.b, A.a], 'Zahl vor']);
           return f.filter(function(p, i){ return p[1] && !pEq(p[0], A.r) && !f.slice(0, i).some(function(q){ return pEq(q[0], p[0]); }); }); },
         fehler: function(A){ return TYPEN.binom.falsche(A).map(function(p){ return [{ t: kopfTerm(p[0]) }, p[1] === '2ab' ? 'zwei Rechtecke' : p[1]]; }); },
         pruefen: function(A, e){
           var f = TYPEN.binom.falsche(A);
           for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0])){
-            if (f[j][1] === 'mittlere') return 'Das <b>mittlere</b> Glied fehlt: \\((a + b)^2\\) ist nicht \\(a^2 + b^2\\), sondern \\(a^2 + 2ab + b^2\\).';
-            if (f[j][1] === '2ab') return 'Das mittlere Glied ist <b>2</b>·a·b, nicht a·b — im Quadrat-Bild gibt es zwei Rechtecke.';
-            if (f[j][1] === 'Koeffizient') return 'Auch die Zahl vor \\(x\\) wird quadriert: \\((' + A.a + 'x)^2 = ' + A.a * A.a + 'x^2\\) (<b>Koeffizient</b> quadrieren).';
+            if (f[j][1] === 'mittlere') return 'Das <b>mittlere</b> Glied fehlt: ' + (A.art === 'm' ? '\\((a - b)^2 = a^2 - 2ab + b^2\\)' : '\\((a + b)^2 = a^2 + 2ab + b^2\\)') + ', nicht nur zwei Quadrate.';
+            if (f[j][1] === '2ab') return 'Das mittlere Glied ist \\(2ab\\), nicht \\(ab\\): Im Quadrat-Bild gibt es zwei Rechtecke.';
+            if (f[j][1] === 'Quadrat') return 'Am Schluss steht \\(b^2\\), und ein <b>Quadrat</b> ist nie negativ: \\((-' + A.b + ')^2 = +' + A.b * A.b + '\\).';
+            if (f[j][1] === 'Zahl vor') return 'Auch die <b>Zahl vor</b> dem \\(x\\) wird quadriert: \\((' + A.a + 'x)^2 = ' + A.a * A.a + 'x^2\\).';
             return '<b>Vorzeichen:</b> \\((a + b)(a - b) = a^2 - b^2\\).';
           }
-          return 'Setz \\(a\\) und \\(b\\) in die Formel ein und rechne jedes Glied einzeln. Probe mit \\(x = 1\\).'; },
+          return 'Setz \\(a\\) und \\(b\\) in die Formel ein und rechne jedes Glied einzeln. Probe mit \\(x = 2\\).'; },
         tipps: function(A){ var at = A.a === 1 ? 'x' : A.a + 'x';
           return [A.art === 'p' ? '\\((a + b)^2 = a^2 + 2ab + b^2\\)' : A.art === 'm' ? '\\((a - b)^2 = a^2 - 2ab + b^2\\)' : '\\((a + b)(a - b) = a^2 - b^2\\)',
                   'Hier ist \\(a = ' + at + '\\) und \\(b = ' + A.b + '\\).']; },
@@ -602,8 +621,8 @@
         pruefen: function(A, e){
           if (e.m === 2 * A.a * A.k || (A.a > 1 && e.m === A.a * A.k)) return 'Das <b>mittlere</b> Glied ist \\(2 \\cdot ' + A.ax + ' \\cdot \\square\\). Teile \\(' + 2 * A.a * A.k + 'x\\) durch \\(2 \\cdot ' + A.ax + '\\).';
           if (e.m === A.k && e.q !== A.q) return 'Die Zahl in der Klammer stimmt. Am Schluss steht ihr <b>Quadrat</b>.';
-          return 'Vergleiche mit \\((a + b)^2 = a^2 + 2ab + b^2\\): Hier ist \\(a = ' + A.ax + '\\), das mittlere Glied ist \\(2ab\\), am Schluss steht \\(b^2\\).'; },
-        tipps: function(A){ return ['\\((a + b)^2 = a^2 + 2ab + b^2\\) mit \\(a = ' + A.ax + '\\): Das mittlere Glied verrät \\(b\\).',
+          return 'Vergleiche mit ' + (A.s > 0 ? '\\((a + b)^2 = a^2 + 2ab + b^2\\)' : '\\((a - b)^2 = a^2 - 2ab + b^2\\)') + ': Hier ist \\(a = ' + A.ax + '\\), das mittlere Glied ist \\(2ab\\), am Schluss steht \\(b^2\\).'; },
+        tipps: function(A){ return [(A.s > 0 ? '\\((a + b)^2 = a^2 + 2ab + b^2\\)' : '\\((a - b)^2 = a^2 - 2ab + b^2\\)') + ' mit \\(a = ' + A.ax + '\\): Das mittlere Glied verrät \\(b\\).',
           '\\(2 \\cdot ' + A.ax + ' \\cdot b = ' + 2 * A.a * A.k + 'x\\), also \\(b = ' + A.k + '\\).']; },
         loesung: function(A){ return '(' + A.ax + (A.s > 0 ? ' + ' : ' - ') + A.k + ')^2 = ' + pTex([A.k * A.k, 2 * A.s * A.a * A.k, A.a * A.a]); } },
 
@@ -630,23 +649,29 @@
         loesung: function(A){ return pTex(A.r, A.v) + ' = ' + A.gT + kl(A.p, A.q, A.v); } },
 
       'faktorisieren': { felder: ['t'], produkt: true,
-        schl: function(A){ return 'fz|' + A.art + '|' + (A.art === 't' ? paarSchl(A.m, A.n) : A.art === 'b' ? A.k : A.a + '|' + A.b); },
+        schl: function(A){ return 'fz|' + A.art + '|' + (A.art === 't' ? paarSchl(A.m, A.n) : A.art === 'b' ? A.k : A.art === 'k' ? A.f + '|' + A.u + '|' + A.b : A.a + '|' + A.b); },
         eingabe: function(A){ return { t: A.loes }; },
         neu: function(){
-          var art = zufall(['t', 't', 'b', 'd']), m, n, r, loes, k, a, b;
+          var art = zufall(['t', 't', 'b', 'd', 'k']), m, n, r, loes, k, a, b;
+          if (art === 'k'){                    // erst ausklammern, dann binomische Formel (Prüfung 10.10.2026)
+            var f_ = zufallG(2, 5), u = zufall(['b', 'd']); b = u === 'b' ? nz(-6, 6) : zufallG(1, 6);
+            r = pMul([f_], u === 'b' ? pPow(lin(1, b), 2) : pMul(lin(1, -b), lin(1, b)));
+            loes = f_ + (u === 'b' ? '(' + pTxt(lin(1, b)) + ')^2' : '(' + pTxt(lin(1, -b)) + ')(' + pTxt(lin(1, b)) + ')');
+            return { art: art, f: f_, u: u, b: b, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere vollständig.' }; }
           if (art === 't'){ do { m = nz(-9, 9); n = nz(-9, 9); } while (m === n || m === -n || Math.abs(m * n) > 60);
             r = pMul(lin(1, m), lin(1, n)); loes = '(' + pTxt(lin(1, m)) + ')(' + pTxt(lin(1, n)) + ')';
-            return { art: art, m: m, n: n, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere (Zweiklammersatz).' }; }
+            return { art: art, m: m, n: n, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere vollständig.' }; }
           if (art === 'b'){ k = nz(-9, 9); r = pPow(lin(1, k), 2); loes = '(' + pTxt(lin(1, k)) + ')^2';
-            return { art: art, k: k, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere (binomische Formel).' }; }
+            return { art: art, k: k, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere vollständig.' }; }
           a = zufall([1, 1, 2, 3, 4, 5]); do { b = zufallG(1, 9); } while (ggT(a, b) !== 1);
           r = pMul(lin(a, b), lin(a, -b)); loes = '(' + pTxt(lin(a, b)) + ')(' + pTxt(lin(a, -b)) + ')';
-          return { art: art, a: a, b: b, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere (binomische Formel).' }; },
+          return { art: art, a: a, b: b, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere vollständig.' }; },
         falsche: function(A){
           var f = [];
           if (A.art === 't'){ f.push([lin(1, -A.m), lin(1, -A.n), 'Vorzeichen']); if (A.m * A.n < 0) f.push([lin(1, A.m), lin(1, -A.n), 'Vorzeichen']); }
-          if (A.art === 'b'){ f.push([lin(1, A.k), lin(1, -A.k), 'Binom']); f.push([lin(1, -A.k), lin(1, -A.k), 'Vorzeichen']); }
-          if (A.art === 'd'){ f.push([lin(A.a, -A.b), lin(A.a, -A.b), 'Binom']); }
+          if (A.art === 'b'){ f.push([lin(1, A.k), lin(1, -A.k), 'Formel']); f.push([lin(1, -A.k), lin(1, -A.k), 'Vorzeichen']); }
+          if (A.art === 'd'){ f.push([lin(A.a, -A.b), lin(A.a, -A.b), 'Formel']); }
+          if (A.art === 'k'){ f.push(A.u === 'b' ? [lin(A.f, A.f * A.b), lin(1, -A.b), 'Formel'] : [lin(A.f, -A.f * A.b), lin(1, -A.b), 'Formel']); }
           return f.filter(function(p){ return !pEq(pMul(p[0], p[1]), A.r); }); },
         fehler: function(A){
           var f = TYPEN.faktorisieren.falsche(A).map(function(p){ return [{ t: '(' + pTxt(p[0]) + ')(' + pTxt(p[1]) + ')' }, p[2]]; });
@@ -656,17 +681,19 @@
           var f = TYPEN.faktorisieren.falsche(A);
           for (var j = 0; j < f.length; j++) if (pEq(e.t.p, pMul(f[j][0], f[j][1]))){
             if (f[j][2] === 'Vorzeichen') return '<b>Vorzeichen</b> prüfen: Die beiden Zahlen müssen multipliziert \\(' + A.r[0] + '\\) und addiert \\(' + A.r[1] + '\\) ergeben.';
-            return A.art === 'b' ? 'Mit einem mittleren Glied ist es ein Quadrat \\((a + b)^2\\) oder \\((a - b)^2\\). Ein Produkt \\((a + b)(a - b)\\) hat kein mittleres Glied (<b>Binom</b> verwechselt).'
-                                 : 'Ohne mittleres Glied ist es \\(a^2 - b^2 = (a + b)(a - b)\\), also kein Quadrat (<b>Binom</b> verwechselt).';
+            var mitte = A.art === 'b' || (A.art === 'k' && A.u === 'b');
+            return mitte ? 'Mit einem mittleren Glied ist es ein Quadrat \\((a + b)^2\\) oder \\((a - b)^2\\). Ein Produkt \\((a + b)(a - b)\\) hat kein mittleres Glied (binomische <b>Formel</b> verwechselt).'
+                         : 'Ohne mittleres Glied ist es \\(a^2 - b^2 = (a + b)(a - b)\\), also kein Quadrat (binomische <b>Formel</b> verwechselt).';
           }
           return 'Multipliziere zur <b>Probe</b> aus: Es muss \\(' + pTex(A.r) + '\\) herauskommen.'; },
         tipps: function(A){
           if (A.art === 't') return ['Suche zwei Zahlen mit Produkt \\(' + A.r[0] + '\\) und Summe \\(' + A.r[1] + '\\).', 'Die Zahlenpaare mit Produkt \\(' + A.r[0] + '\\) aufschreiben, dann die Summe prüfen.'];
+          if (A.art === 'k') return ['Zuerst den gemeinsamen Faktor \\(' + A.f + '\\) ausklammern.', 'In der Klammer steht \\(' + pTex(pMul([1], A.u === 'b' ? pPow(lin(1, A.b), 2) : pMul(lin(1, -A.b), lin(1, A.b)))) + '\\): binomische Formel rückwärts.'];
           if (A.art === 'b') return ['Erstes und letztes Glied sind Quadrate: binomische Formel rückwärts.', '\\(' + A.k * A.k + ' = ' + Math.abs(A.k) + '^2\\); das mittlere Glied entscheidet über das Vorzeichen.'];
           return ['Zwei Quadrate mit Minus dazwischen: \\(a^2 - b^2 = (a + b)(a - b)\\).', '\\(' + pTex([0, 0, A.a * A.a]) + ' = (' + (A.a === 1 ? 'x' : A.a + 'x') + ')^2\\) und \\(' + A.b * A.b + ' = ' + A.b + '^2\\).']; },
-        loesung: function(A){ return pTex(A.r) + ' = ' + A.loes.replace(/\*/g, ''); } }
+        loesung: function(A){ return pTex(A.r) + ' = ' + (A.art === 'k' ? A.f + '(' + pTex(A.u === 'b' ? pPow(lin(1, A.b), 2) : pMul(lin(1, -A.b), lin(1, A.b))) + ') = ' : '') + A.loes.replace(/\*/g, ''); } }
     };
-    window.__TYPEN = TYPEN; window.__SPERRE = SPERRE;
+    window.__TYPEN = TYPEN; window.__SPERRE = SPERRE; window.__gesperrt = gesperrt;
     window.__term = { termLesen: termLesen, produktBefund: produktBefund, zusammengefasst: zusammengefasst, pEq: pEq };
 
     ALLE.forEach(function(box){

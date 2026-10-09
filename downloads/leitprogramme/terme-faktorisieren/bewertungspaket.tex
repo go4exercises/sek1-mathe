@@ -1,5 +1,6 @@
 % Bewertungspaket zum Gesamttest «Terme und Faktorisieren» — Quelle des PDFs (python3 scripts/build-lp-pdf.py terme-faktorisieren).
-% Ganze Punkte je Teilschritt; Werte und Fehlerwerte mit python3 nachgerechnet (scripts/lp/terme-faktorisieren/zahlen.py, 09.10.2026).
+% Ganze Punkte je Teilschritt; Werte und Fehlerwerte mit python3 nachgerechnet (scripts/lp/terme-faktorisieren/zahlen.py).
+% Nach der Prüfung vom 10.10.2026: G1, G3, G5, G8 neu; Verfahren, die verlangt sind, im Auftrag genannt; Restpunkte G9.
 % Gerüst aus dem Bewertungspaket Bruchrechnen (nach dessen Prüfung): Auftrag an die KI, Folgefehler, (E)-Zeilen, Restpunkte.
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
@@ -40,7 +41,7 @@ Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in de
 Geh so vor:\par
 1. Schreib zu jeder Aufgabe G1 bis G9 zuerst ab, was du in meiner Lösung liest — Rechenweg und Ergebnis. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Minuszeichen, Hochzahlen und Klammern.\par
 2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
-3. Andere richtige Lösungswege zählen voll, zum Beispiel Ausmultiplizieren statt binomischer Formel oder eine andere Reihenfolge der Glieder und der Faktoren. Gleichwertig: $(x + 3)^2$ und $(x + 3)(x + 3)$; $-x + 6$ und $6 - x$. Ein Ergebnis zählt nur \textbf{vollständig vereinfacht} (zusammengefasst, ohne Klammern) bzw. beim Faktorisieren \textbf{vollständig faktorisiert}: Ein gleichwertiger, aber nicht fertiger Term gibt in der (E)-Zeile 0 Punkte.\par
+3. Andere richtige Lösungswege zählen voll, zum Beispiel eine andere Reihenfolge der Glieder und der Faktoren oder Ausmultiplizieren statt binomischer Formel (G4) — \textbf{ausser} die Aufgabe verlangt ein Verfahren ausdrücklich: G1 die Probe, G3(a) das Flächenmodell, G5 die binomische Formel und die Skizze. Gleichwertig: $(x + 3)^2$ und $(x + 3)(x + 3)$; $-x + 6$ und $6 - x$. Ein Ergebnis zählt nur \textbf{vollständig vereinfacht} (zusammengefasst, ohne Klammern) bzw. beim Faktorisieren \textbf{vollständig faktorisiert}: Ein gleichwertiger, aber nicht fertiger Term gibt in der (E)-Zeile 0 Punkte.\par
 4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «Minus nur beim ersten Glied», «mittleres Glied fehlt», «nicht vollständig faktorisiert»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
 5. Gib zum Schluss eine Tabelle «Aufgabe | Punkte | Begründung», die Gesamtpunktzahl (von 25) und — nach der Selbsteinschätzung in Abschnitt 4 — welches Kapitel des Leitprogramms ich wiederholen soll. Keine Note.\par
 6. Fehlt ein Foto oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
@@ -57,15 +58,15 @@ ausser die Zeile nennt ausdrücklich eine Aufteilung.
 \textbf{Schreibweise:} Die Reihenfolge der Glieder und Faktoren ist frei ($-x + 6 = 6 - x$; $(x + 4)(x - 6) = (x - 6)(x + 4)$).
 Mal-Punkte dürfen fehlen. Beim Faktorisieren zählt nur ein \emph{Produkt}; eine gleichwertige Summe gibt den Ergebnispunkt nicht.
 
-\begin{lpaufgabe}{G1}{Klammern auflösen}{3 P}
+\begin{lpaufgabe}{G1}{Verschachtelte Klammern}{3 P}
 \begin{raster}
-Klammer mit Zahl & 1 & $-2(3x - 4) = -6x + 8$: beide Glieder multipliziert, Vorzeichen richtig.\\
-Zweite Klammer & 1 & $+(x - 1) = x - 1$, und die $x$-Glieder zusammengefasst: $5x - 6x + x = 0$.\\
-Ergebnis & 1\E & $5x - 6x + 8 + x - 1 = 7$. Auch $0x + 7$ zählt, wenn am Schluss $7$ steht.\\
+Innere Klammer & 1 & $3x - (x - 4) = 2x + 4$: Das Minus dreht beide Vorzeichen um. Dann $-2(2x + 4) = -4x - 8$.\\
+Ergebnis & 1\E & $5x - 4x - 8 = x - 8$\\
+Probe & 1 & \mbox{$x = 2$:} \mbox{$10 - 2\bigl(6 - (2 - 4)\bigr) = 10 - 16 = -6$} und \mbox{$2 - 8 = -6$}. Die Probe zählt auch als Folgepunkt: richtig eingesetzt und gerechnet, auch wenn sie einen eigenen Fehler aufdeckt (dann ungleiche Werte und ein Satz dazu).\\
 \end{raster}
-\fehler{$-2(3x - 4) = -6x - 8$ (Vorzeichen), Ergebnis $-9$: erste Zeile und Ergebniszeile 0 $\to$ 1 von 3\,P.
-$-2(3x - 4) = -6x - 4$ (nur das erste Glied multipliziert), Ergebnis $-5$: erste Zeile und Ergebniszeile 0 $\to$ 1 von 3\,P.
-Richtig bis $5x - 6x + 8 + x - 1$, dann verrechnet: Ergebniszeile 0 $\to$ 2 von 3\,P.}
+\fehler{Innen nur das erste Vorzeichen umgedreht ($3x - x - 4$, Ergebnis $x + 8$): erste Zeile und Ergebniszeile 0; Probe richtig gerechnet $\to$ 1 von 3\,P.
+$-2(2x + 4) = -4x + 8$ (Vorzeichen), Ergebnis $x + 8$: erste Zeile und Ergebniszeile 0 $\to$ 1 von 3\,P, falls die Probe richtig gerechnet ist.
+Probe fehlt: Probezeile 0 $\to$ höchstens 2 von 3\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G2}{Minus vor der Klammer}{2 P}
@@ -74,19 +75,20 @@ Klammer & 1 & $3a^2 - a^2 + 2a - 2a$: Das Minus dreht \emph{beide} Vorzeichen um
 Ergebnis & 1\E & $2a^2$\\
 \end{raster}
 \fehler{Minus nur beim ersten Glied ($3a^2 - a^2 - 2a - 2a = 2a^2 - 4a$): beide Zeilen 0 $\to$ 0 von 2\,P.
-Ungleichartiges zusammengefasst ($2a^2 + 2a - 2a = 2a^4$ o.\,ä.): Ergebniszeile 0 $\to$ 1 von 2\,P.}
+Klammer richtig, dann falsch zusammengefasst (z.\,B. $2a^2 + 4a$ oder $2a^4$): Ergebniszeile 0 $\to$ 1 von 2\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G3}{Klammer mal Klammer}{3 P}
 \begin{raster}
-Äussere Produkte & 1 & $2x \cdot x = 2x^2$ und $5 \cdot (-3) = -15$\\
-Gemischte Produkte & 1 & $2x \cdot (-3) = -6x$ und $5 \cdot x = 5x$\\
-Ergebnis & 1\E & $2x^2 - 6x + 5x - 15 = 2x^2 - x - 15$\\
+(a) & 1\E & Rechteck mit den Seiten $x + 5$ und $x + 1$: ein Quadrat $x^2$, sechs Streifen $x$ (fünf und einer), fünf Einer. $(x + 5)(x + 1) = x^2 + 6x + 5$. Skizze und Summe nötig; ungenau gezeichnet ist erlaubt, die Teile müssen stimmen.\\
+(b) Gemischte Produkte & 1 & $2x \cdot (-3) = -6x$ und $5 \cdot x = 5x$\\
+(b) Ergebnis & 1\E & \mbox{$2x^2 - 6x + 5x - 15 = 2x^2 - x - 15$}\\
 \end{raster}
-\fehler{Nur vorne mal vorne, hinten mal hinten ($2x^2 - 15$): Zeile «gemischte Produkte» und Ergebniszeile 0 $\to$ 1 von 3\,P.
-Vorzeichenfehler bei einem gemischten Produkt (z.\,B. $2x^2 + 11x - 15$): Zeile «gemischte Produkte» und Ergebniszeile 0 $\to$ 1 von 3\,P.
-$+15$ statt $-15$ am Schluss: Zeile «äussere Produkte» und Ergebniszeile 0 $\to$ 1 von 3\,P.
-Vier Produkte richtig, nicht zusammengefasst ($2x^2 - 6x + 5x - 15$ als Schluss): Ergebniszeile 0 $\to$ 2 von 3\,P.}
+\fehler{(a) Nur die Summe ohne Skizze, oder $x^2 + 5$: Zeile (a) 0.
+(b) Nur erstes mal erstes und letztes mal letztes Glied ($2x^2 - 15$): beide Zeilen (b) 0.
+(b) Vorzeichenfehler bei einem gemischten Produkt (z.\,B. $2x^2 + 11x - 15$): beide Zeilen (b) 0 $\to$ höchstens 1 von 3\,P.
+(b) $+15$ statt $-15$ am Schluss: Ergebniszeile (b) 0.
+(b) Vier Produkte richtig, nicht zusammengefasst: Ergebniszeile (b) 0.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G4}{Binomische Formel}{3 P}
@@ -97,16 +99,17 @@ Ergebnis & 1\E & $9y^2 - 24y + 16$. Ausmultipliziert als $(3y - 4)(3y - 4)$ zäh
 \end{raster}
 \fehler{Mittleres Glied vergessen ($9y^2 + 16$ oder $9y^2 - 16$): Zeile «mittleres Glied» und Ergebniszeile 0 $\to$ 1 von 3\,P.
 $3y^2$ statt $9y^2$ (Zahl vor $y$ nicht quadriert): Zeile «Quadrate» und Ergebniszeile 0 $\to$ 1 von 3\,P.
-$-12y$ statt $-24y$ (Faktor 2 vergessen) oder $+24y$ (Vorzeichen): Zeile «mittleres Glied» und Ergebniszeile 0 $\to$ 1 von 3\,P.}
+$-12y$ statt $-24y$ (Faktor 2 vergessen) oder $+24y$ (Vorzeichen): Zeile «mittleres Glied» und Ergebniszeile 0 $\to$ 1 von 3\,P.
+$-16$ statt $+16$ am Schluss: Zeile «Quadrate» und Ergebniszeile 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G5}{Kopfrechnen}{2 P}
+\begin{lpaufgabe}{G5}{Kopfrechnen am Quadrat}{2 P}
 \begin{raster}
-Formel & 1 & $31 \cdot 29 = (30 + 1)(30 - 1)$, dritte binomische Formel $(a + b)(a - b) = a^2 - b^2$\\
-Ergebnis & 1\E & $30^2 - 1^2 = 900 - 1 = 899$\\
+Rechnung & 1\E & $31^2 = (30 + 1)^2 = 900 + 2 \cdot 30 \cdot 1 + 1 = 900 + 60 + 1 = 961$. Schriftlich multipliziert ohne Formel: 0.\\
+Skizze & 1 & Quadrat mit Seite $30 + 1$: Teile $30^2 = 900$, zwei Rechtecke $30 \cdot 1 = 30$, Eckquadrat $1$; die zwei Rechtecke als Herkunft von $60$ bezeichnet.\\
 \end{raster}
-\fehler{Schriftlich multipliziert, ohne Formel: Formelzeile 0 $\to$ 1 von 2\,P.
-$900 + 1 = 901$ oder $(30 + 1)^2$ gerechnet: Ergebniszeile 0; die Zerlegung $(30 + 1)(30 - 1)$ gibt die Formelzeile.}
+\fehler{$900 + 1 = 901$ (mittleres Glied vergessen): Rechnungszeile 0; eine richtige Skizze gibt ihren Punkt $\to$ 1 von 2\,P.
+$900 + 30 + 1 = 931$ (nur ein Rechteck): Rechnungszeile 0; Skizzenzeile nur, wenn beide Rechtecke gezeichnet sind.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Ausklammern}{3 P}
@@ -127,29 +130,31 @@ Zahlen & 1 & $-6$ und $4$: $(-6) \cdot 4 = -24$, $-6 + 4 = -2$\\
 Ergebnis & 1\E & $(x - 6)(x + 4)$\\
 \end{raster}
 \fehler{Vorzeichen vertauscht ($(x + 6)(x - 4) = x^2 + 2x - 24$): Zahlen- und Ergebniszeile 0 $\to$ 1 von 3\,P.
-Summe statt Produkt verwechselt (z.\,B. $(x - 8)(x + 3) = x^2 - 5x - 24$): Zahlen- und Ergebniszeile 0 $\to$ 1 von 3\,P.
+Falsches Zahlenpaar mit richtigem Produkt (z.\,B. $(x - 8)(x + 3) = x^2 - 5x - 24$, Summe stimmt nicht): Zahlen- und Ergebniszeile 0 $\to$ 1 von 3\,P.
+Richtiges Produkt ohne Paarsuche, aber mit Probe durch Ausmultiplizieren: gleichwertig, volle Punkte.
 Gleichung gelöst statt faktorisiert («$x = 6$ oder $x = -4$»): Ergebniszeile 0; die Zahlen $-6$ und $4$ sind erkennbar $\to$ 2 von 3\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G8}{Vollständig faktorisieren}{3 P}
 \begin{raster}
-Ausklammern & 1 & $3x^2 - 12 = 3(x^2 - 4)$\\
-Dritte Formel & 1 & $x^2 - 4 = (x - 2)(x + 2)$\\
-Ergebnis & 1\E & $3(x - 2)(x + 2)$. Gleichwertig: $3(x + 2)(x - 2)$.\\
+Ausklammern & 1 & $3x^2 + 6x + 3 = 3(x^2 + 2x + 1)$\\
+Binomische Formel & 1 & $x^2 + 2x + 1 = (x + 1)^2$, denn $1 = 1^2$ und $2x = 2 \cdot x \cdot 1$\\
+Ergebnis & 1\E & $3(x + 1)^2$. Gleichwertig: $3(x + 1)(x + 1)$.\\
 \end{raster}
-\fehler{Nur $3(x^2 - 4)$: Formel- und Ergebniszeile 0 $\to$ 1 von 3\,P.
-$(3x - 6)(x + 2)$ oder $(x - 2)(3x + 6)$ (die $3$ nicht ausgeklammert, nicht vollständig): Ausklammerzeile und Ergebniszeile 0 $\to$ 1 von 3\,P.
-$3(x - 2)^2$ (Binom verwechselt): Formel- und Ergebniszeile 0 $\to$ 1 von 3\,P.}
+\fehler{Nur $3(x^2 + 2x + 1)$: Formel- und Ergebniszeile 0 $\to$ 1 von 3\,P.
+$(3x + 3)(x + 1)$ (die $3$ nicht ausgeklammert, nicht vollständig): Ausklammerzeile und Ergebniszeile 0 $\to$ 1 von 3\,P.
+$3(x + 1)(x - 1)$ (Formel verwechselt): Formel- und Ergebniszeile 0 $\to$ 1 von 3\,P.
+Gleichung gelöst («$x = -1$»): Ergebniszeile 0; Ausklammern und Formel nach dem Weg.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G9}{Fehler finden}{3 P}
 \begin{raster}
-Begründung & 1 & Zuletzt wird $+\,9$ gerechnet: Der ganze Term ist eine \emph{Summe}, kein Produkt. Nur «falsch» ohne Grund: 0.\\
+Begründung & 1 & Zuletzt wird $+\,9$ gerechnet: Der ganze Term ist eine \emph{Summe}, kein Produkt. Gleichwertig: «die $9$ steht ausserhalb, sie ist kein Faktor». Nur «falsch» ohne Grund: 0.\\
 Faktorisierung & 1\E & $x^2 + 6x + 9 = (x + 3)^2$, denn $9 = 3^2$ und $6x = 2 \cdot x \cdot 3$\\
 Probe & 1 & $(x + 3)^2 = x^2 + 6x + 9$ ausmultipliziert. Die Probe zählt auch als Folgepunkt, wenn sie einen eigenen falschen Vorschlag richtig ausmultipliziert und so den Fehler zeigt.\\
 \end{raster}
 \fehler{$(x + 3)(x - 3)$ (Binom verwechselt): Faktorisierungszeile 0; eine richtige Probe ($x^2 - 9$, also nicht gleich) gibt ihren Punkt $\to$ höchstens 2 von 3\,P.
-$(x + 9)(x + 1)$ o.\,ä.: Faktorisierungszeile 0.}
+$(x + 9)(x + 1)$ o.\,ä.: Faktorisierungszeile 0; Begründung und eine richtig ausgerechnete Probe ($x^2 + 10x + 9$, also nicht gleich) geben ihre Punkte $\to$ 2 von 3\,P.}
 \end{lpaufgabe}
 
 \needspace{12\baselineskip}

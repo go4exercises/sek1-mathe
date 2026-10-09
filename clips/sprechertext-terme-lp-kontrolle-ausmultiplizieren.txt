@@ -1,6 +1,6 @@
 0.40	Vier Produkte: x Quadrat, x, sechs x und sechs. Zusammen x Quadrat plus sieben x plus sechs.
-8.30	Die Zahl am Schluss ist das Produkt der beiden Zahlen: minus drei mal fünf gibt minus fünfzehn. Die Summe, zwei, gehört zum x-Glied: x Quadrat plus zwei x minus fünfzehn.
-19.71	Zwei a mal a ist zwei a Quadrat, zwei a mal minus vier ist minus acht a, eins mal a ist a, eins mal minus vier ist minus vier. Zusammen: zwei a Quadrat minus sieben a minus vier.
-31.28	Ein x Quadrat, sieben Streifen und zehn Einer: x Quadrat plus sieben x plus zehn. Die Seiten sind x plus fünf und x plus zwei.
-40.61	Links: drei plus zwei mal drei minus eins, also fünf mal zwei gleich zehn. Rechts: neun plus drei minus zwei, auch zehn. Die Probe stimmt.
-50.55	Zum Mitnehmen: Jedes Glied mal jedes Glied, dann zusammenfassen. Die Zahl am Schluss ist das Produkt, das x-Glied die Summe. Und die Probe mit einer Zahl zeigt Fehler sofort.
+8.22	Die Zahl am Schluss ist das Produkt der beiden Zahlen: minus zwei mal sieben gibt minus vierzehn. Die Summe, fünf, gehört zum x-Glied: x Quadrat plus fünf x minus vierzehn.
+19.52	Zwei a mal a ist zwei a Quadrat, zwei a mal minus vier ist minus acht a, eins mal a ist a, eins mal minus vier ist minus vier. Zusammen: zwei a Quadrat minus sieben a minus vier.
+30.46	Ein x Quadrat, sieben Streifen und zehn Einer: x Quadrat plus sieben x plus zehn. Die Seiten sind x plus fünf und x plus zwei.
+40.37	Links: Klammer drei plus zwei mal Klammer drei minus eins, also fünf mal zwei gleich zehn. Rechts: neun plus drei minus zwei, auch zehn. Die Probe stimmt.
+51.53	Zum Mitnehmen: Jedes Glied mal jedes Glied, dann zusammenfassen. Bei Klammer x plus m mal Klammer x plus n ist die Zahl am Schluss das Produkt, das x-Glied die Summe. Und die Probe mit einer Zahl wie zwei zeigt viele Fehler. Nimm dafür nicht null oder eins.

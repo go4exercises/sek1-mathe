@@ -330,7 +330,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.71
+   "dauer": 8.86
   },
   {
    "name": "Frage 2",
@@ -394,7 +394,7 @@
      "achsen": false
     }
    ],
-   "dauer": 9.86
+   "dauer": 9.49
   },
   {
    "name": "Frage 3",
@@ -458,7 +458,7 @@
      "achsen": false
     }
    ],
-   "dauer": 7.4
+   "dauer": 7.2
   },
   {
    "name": "Frage 4",
@@ -514,7 +514,7 @@
      "achsen": false
     }
    ],
-   "dauer": 9.01
+   "dauer": 8.87
   },
   {
    "name": "Frage 5",
@@ -578,13 +578,13 @@
      "achsen": false
     }
    ],
-   "dauer": 11.89
+   "dauer": 11.47
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Bei a plus b im Quadrat und a minus b im Quadrat nie das mittlere Glied vergessen. Bei a plus b mal a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.",
+   "sprecher": "Zum Mitnehmen: Bei Klammer a plus b im Quadrat und Klammer a minus b im Quadrat nie das mittlere Glied vergessen. Bei Klammer a plus b mal Klammer a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.",
    "elemente": [
     {
      "typ": "titel",
@@ -603,7 +603,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 12.91
+   "dauer": 13.7
   }
  ],
  "fragen": [
@@ -623,7 +623,7 @@
     "2": "Das mittlere Glied fehlt.",
     "0": "Das mittlere Glied ist 2ab, also zweimal 9x."
    },
-   "sprich": "Rechne: x plus neun im Quadrat.",
+   "sprich": "Rechne: Klammer x plus neun im Quadrat.",
    "rueck_sprich": {
     "2": "Das mittlere Glied fehlt.",
     "0": "Das mittlere Glied ist zwei a b, also zweimal neun x."
@@ -645,10 +645,10 @@
     "1": "Hier steht ein Quadrat einer Klammer. Es gibt ein mittleres Glied.",
     "2": "Bei (a − b)² ist das mittlere Glied negativ."
    },
-   "sprich": "Rechne: y minus sechs im Quadrat.",
+   "sprich": "Rechne: Klammer y minus sechs im Quadrat.",
    "rueck_sprich": {
     "1": "Hier steht ein Quadrat einer Klammer. Es gibt ein mittleres Glied.",
-    "2": "Bei a minus b im Quadrat ist das mittlere Glied negativ."
+    "2": "Bei Klammer a minus b im Quadrat ist das mittlere Glied negativ."
    }
   },
   {
@@ -667,7 +667,7 @@
     "2": "Auch die 2 wird quadriert: (2x)² = 4x².",
     "0": "Die gemischten Glieder +10x und −10x heben sich auf."
    },
-   "sprich": "Rechne: zwei x plus fünf mal zwei x minus fünf.",
+   "sprich": "Rechne: Klammer zwei x plus fünf mal Klammer zwei x minus fünf.",
    "rueck_sprich": {
     "2": "Auch die Zwei wird quadriert: zwei x im Quadrat ist vier x Quadrat.",
     "0": "Die gemischten Glieder plus zehn x und minus zehn x heben sich auf."

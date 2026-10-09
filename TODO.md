@@ -153,53 +153,69 @@ nachgezählt, Bewegungen, Leistenziele erreichbar und nicht im Start erfüllt, K
 
 </details>
 
+## Leitprogramm Terme und Faktorisieren (09./10.10.2026, freigeschaltet)
+
+`leitprogramme/terme-faktorisieren.html`, gebaut mit `scripts/lp/terme-faktorisieren/` (README dort).
+
+- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/terme-faktorisieren.html` (Abschnitt unten, behoben).
+- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben.
+- [ ] 🔑 Hörprobe der acht Clips `terme-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+      «Kacheln», «y», «Zweiklammersatz», «Rechteck-Schema».
+- [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 205 min).
+- [x] Freigeschaltet (nav.js, index.html, build-seo ohne noindex, Suchindex, Sitemap).
+
 ## Prüfung `terme-faktorisieren` (10.10.2026)
 
 Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO-leitprogramme §15, nur lesend; geprüft Stand `1ec3721`.
 HOCH-Befunde von Hand nachgeprüft und bestätigt (Sperrliste: `paarSchl` sortiert, Einträge unsortiert; Clipbilder B3/B4
 in eigenen Standbildern sichtbar). Legende wie oben; Neuvertonung nötig: 🔊.
 
+**Behoben am 10.10.2026** (alle Punkte ausser den zwei offenen unten): Sperrschlüssel normiert (`norm`, Testhaken `__gesperrt`),
+Gesamttest G1/G3/G5/G8 neu (jedes Kapitelziel geprüft), Raster nachgeführt, Probe mit x = 2, Regel (x + m)(x + n) im
+Festhalten, neue Übungsart «erst ausklammern», Begriffe der Seite in Rückmeldungen, 7 Clips neu vertont (Klammerprodukte
+eindeutig gesprochen), Bilder B3/B4/B5 korrigiert. HOWTO §15 um vier Fehlerklassen ergänzt (auch in TODO-schwesterprojekt).
+
 Rechenfehler: keine — alle Terme und Zahlen von Seite, Clips (60 Gleichungen) und PDFs samt Fehlerwerten nachgerechnet.
 Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Leistenziele erreichbar und eindeutig, Termeingabe
 (Schreibweisen, Summe/unvollständig), Punktesummen, Zuordnung Aufgabe → Kapitel, Datenschutz, Konventionen.
 
 ### HOCH
-- [ ] **Sperrliste wirkungslos** (seite.js `SPERRE`): Paare unsortiert eingetragen, `ausmult` reihenfolgeabhängig →
+- [x] **Sperrliste wirkungslos** (seite.js `SPERRE`): Paare unsortiert eingetragen, `ausmult` reihenfolgeabhängig →
       Festhalten-/Clipbeispiel x² − 7x + 12, Kontrollfragen und Erkundungsziele kommen in den Übungen (bis 4.5 %).
       Schlüssel normieren; fehlende Einträge (bl|p|1|3 = G9, bl|p|1|6, bi|d|1|3, fz|d|1|5, kl|-2|3|-4, zs 1a);
       pruef-schritte zählt über dieselbe Normierung.
-- [ ] **Lösung 4f «Eine Summe von zwei Quadraten zerfällt nicht»** zu allgemein (4x² + 16 = 4(x² + 4)).
-- [ ] **Aufgabe 3f** «(a + b)² grösser als a² + b²» gilt nur für positive a, b.
-- [ ] 🔊 **Kontrollclip Ausmultiplizieren, Merke**: «Zahl am Schluss Produkt, x-Glied Summe» ohne «bei (x + m)(x + n)»
+- [x] **Lösung 4f «Eine Summe von zwei Quadraten zerfällt nicht»** zu allgemein (4x² + 16 = 4(x² + 4)).
+- [x] **Aufgabe 3f** «(a + b)² grösser als a² + b²» gilt nur für positive a, b.
+- [x] 🔊 **Kontrollclip Ausmultiplizieren, Merke**: «Zahl am Schluss Produkt, x-Glied Summe» ohne «bei (x + m)(x + n)»
       (Frage 3 desselben Clips widerspricht).
-- [ ] 🔊 **Clip Vereinfachen, «Minus vor der Klammer»**: Minus-Rahmen bleibt nach dem Umdrehen stehen, «7x» bleibt.
-- [ ] 🔊 **Clip Binome, «Dritte Formel»**: blaue Fläche doppelt (oben Kopie, unten Original).
+- [x] 🔊 **Clip Vereinfachen, «Minus vor der Klammer»**: Minus-Rahmen bleibt nach dem Umdrehen stehen, «7x» bleibt.
+- [x] 🔊 **Clip Binome, «Dritte Formel»**: blaue Fläche doppelt (oben Kopie, unten Original).
 
 ### MITTEL
-- [ ] Probe mit x = 1 (Festhalten 2, 2b, Rückmeldungen) verdeckt Hochzahlfehler → x = 2, «nicht 0 oder 1»; 🔊 «zeigt Fehler sofort».
-- [ ] Regel (x + m)(x + n) = x² + (m + n)x + mn fehlt im Festhalten (Kap. 2 Übung, Kap. 4 Zweiklammersatz).
-- [ ] Gesamttest prüft nicht: verschachtelte Klammern, Probe, Flächenmodell, Quadrat-Begründung; G1 ergibt Konstante;
+- [x] Probe mit x = 1 (Festhalten 2, 2b, Rückmeldungen) verdeckt Hochzahlfehler → x = 2, «nicht 0 oder 1»; 🔊 «zeigt Fehler sofort».
+- [x] Regel (x + m)(x + n) = x² + (m + n)x + mn fehlt im Festhalten (Kap. 2 Übung, Kap. 4 Zweiklammersatz).
+- [x] Gesamttest prüft nicht: verschachtelte Klammern, Probe, Flächenmodell, Quadrat-Begründung; G1 ergibt Konstante;
       G8 wiederholt das Festhalten-Muster k(x² − c²).
-- [ ] Wiederholungen: 1f = Clip/Festhalten (3x + 2 vs 5x), Vortest = «Kurz wiederholt» (3 · (4 + 5), ggT(12; 18), 2x² bei x = 3),
+- [x] Wiederholungen: 1f = Clip/Festhalten (3x + 2 vs 5x), Vortest = «Kurz wiederholt» (3 · (4 + 5), ggT(12; 18), 2x² bei x = 3),
       Sim 2 A5 = Kontrollfrage K4F4, Sim 4 A3 ↔ K2F2.
-- [ ] Übung `binom`: (a − b)²-Fehler x² − b² nicht erkannt, Meldung zitiert Plus-Formel; `binomluecke` Tipps bei Minus.
-- [ ] Übung `faktorisieren` übt nie «erst ausklammern, dann binomisch».
-- [ ] Begriffe in Rückmeldungen nicht eingeführt: Zahlglied, Koeffizient, Binom.
-- [ ] 🔊 Clip Faktorisieren «Binomisch rückwärts»: Terme erst mit der Lösung im Bild; Bild-Ton-Versätze in «Zusammenfassen»
+- [x] Übung `binom`: (a − b)²-Fehler x² − b² nicht erkannt, Meldung zitiert Plus-Formel; `binomluecke` Tipps bei Minus.
+- [x] Übung `faktorisieren` übt nie «erst ausklammern, dann binomisch».
+- [x] Begriffe in Rückmeldungen nicht eingeführt: Zahlglied, Koeffizient, Binom.
+- [x] 🔊 Clip Faktorisieren «Binomisch rückwärts»: Terme erst mit der Lösung im Bild; Bild-Ton-Versätze in «Zusammenfassen»
       (Streifen) und «Fehler» (Anker traf «Fehler» statt «fehlen»); 7² = 49 gleichzeitig mit der Frage.
-- [ ] 🔊 Gesprochene Klammerprodukte mehrdeutig («x plus zwei mal x plus drei») → «Klammer … mal Klammer …».
-- [ ] Raster: G5 «andere Wege» unklar, G9 Restpunkte fehlen, andere Begründungen ungeregelt.
-- [ ] «Vollständig faktorisiert» ohne «mit ganzen Zahlen».
+- [x] 🔊 Gesprochene Klammerprodukte mehrdeutig («x plus zwei mal x plus drei») → «Klammer … mal Klammer …».
+- [x] Raster: G5 «andere Wege» unklar, G9 Restpunkte fehlen, andere Begründungen ungeregelt.
+- [x] «Vollständig faktorisiert» ohne «mit ganzen Zahlen».
 
 ### NIEDRIG
-- [ ] Übung `klammern` würfelt «0 − (…)»; Tipps «3 · −2x», «3 · (5)»; Gedankenstrich nach Formel in `binom`.
-- [ ] «zusammengefasst» nimmt `2*3x`, `x*x+5x+6` an; `⋅` und `X` abgelehnt.
-- [ ] Sim 3 bei a = 8, b = 4 rechts abgeschnitten; Sim 4 «m + n» ohne Erklärung.
-- [ ] Festhalten 1: Zahlen als gleichartige Glieder nicht genannt; «Kurz wiederholt» ohne Produkt wie 3x · 2x.
-- [ ] 🔊 Rückmeldungen: Text ≠ Ton (Binome «Ja, richtig», Faktorisieren «nicht −7», K4F2, K4F4); B7 «Einer unten rechts» noch nicht sichtbar;
+- [x] Übung `klammern` würfelt «0 − (…)»; Tipps «3 · −2x», «3 · (5)»; Gedankenstrich nach Formel in `binom`.
+- [x] «zusammengefasst» nimmt `2*3x`, `x*x+5x+6` an; `⋅` und `X` abgelehnt.
+- [x] Sim 3 bei a = 8, b = 4 rechts abgeschnitten; Sim 4 «m + n» ohne Erklärung.
+- [x] Festhalten 1: Zahlen als gleichartige Glieder nicht genannt; «Kurz wiederholt» ohne Produkt wie 3x · 2x.
+- [x] 🔊 Rückmeldungen: Text ≠ Ton (Binome «Ja, richtig», Faktorisieren «nicht −7», K4F2, K4F4); B7 «Einer unten rechts» noch nicht sichtbar;
       K1F4 «Streifen und Quadrate», «Hochzahlen addiert man …», «man».
-- [ ] Clip Binome «Minus»: warum + b² nicht gesprochen.
-- [ ] Raster-Kleinigkeiten: G2-Beispiel 2a⁴, G7 «Summe statt Produkt», G4 −16, G8 Gleichung gelöst, PDF-Umbrüche in Formeln, G9 Platz.
-- [ ] Farben: ab orange (Kap. 3) vs x-Streifen blau (Kap. 2) — bewusst (README), nicht ändern.
-- [ ] Aussprache (Hörprobe): «Kacheln» (Whisper: «Karren»), «y» (Whisper: «Epsilon»), «Zweiklammersatz».
+- [x] Clip Binome «Minus»: warum + b² nicht gesprochen.
+- [x] Raster-Kleinigkeiten: G2-Beispiel 2a⁴, G7 «Summe statt Produkt», G4 −16, G8 Gleichung gelöst, PDF-Umbrüche in Formeln, G9 Platz.
+- [ ] Farben: ab orange (Kap. 3) vs x-Streifen blau (Kap. 2) — bewusst (README), nicht geändert.
+- [ ] Aussprache (Hörprobe): «Kacheln» (Whisper: «Karren»; einzeln gesprochen richtig), «y» (Whisper: «Epsilon»), «Zweiklammersatz», «rückwärts».
 

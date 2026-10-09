@@ -140,7 +140,7 @@ sim1 = f'''      <figure class="sim sim-gross" id="sim1" aria-label="Termkacheln
 fest1 = r'''      <div class="festhalten">
         <div class="merk">
           <div class="titel">Terme vereinfachen</div>
-          <p><b>Zusammenfassen:</b> Nur <b>gleichartige</b> Glieder lassen sich addieren, also Glieder mit derselben Variable und derselben Hochzahl. \(3x + 5x = 8x\), aber \(3x + 5\) bleibt, wie es ist. Das Vorzeichen gehört zum Glied dahinter.</p>
+          <p><b>Zusammenfassen:</b> Nur <b>gleichartige</b> Glieder lassen sich addieren, also Glieder mit derselben Variable und derselben Hochzahl; auch Zahlen ohne Variable sind untereinander gleichartig. \(3x + 5x = 8x\), aber \(3x + 5\) bleibt, wie es ist. Das Vorzeichen gehört zum Glied dahinter.</p>
           <p><b>Zahl vor der Klammer:</b> Sie wird mit <b>jedem</b> Glied in der Klammer multipliziert (Distributivgesetz):</p>
           <p>\[ 3(2x - 4) = 6x - 12 \qquad -2(x - 3) = -2x + 6 \]</p>
           <p><b>Minus vor der Klammer:</b> Klammer weglassen und <b>jedes</b> Vorzeichen darin umdrehen:</p>
@@ -164,13 +164,13 @@ auf1 = test('t1', 'Aufgaben · Kapitel 1', 14, [
     ('1b', 2, r'Löse die Klammer auf: \(4(3x - 2)\) und \(-3(2 - x)\)',
      r'<p>\(4 \cdot 3x - 4 \cdot 2 = 12x - 8\). \(-3 \cdot 2 + (-3) \cdot (-x) = -6 + 3x\).</p>', ''),
     ('1c', 3, r'Vereinfache: \(6x - (4 - 2x) + 3(x - 1)\)',
-     r'<p>\(6x - 4 + 2x + 3x - 3 = 11x - 7\).</p><p class="komm">Probe mit \(x = 1\): \(6 - 2 + 0 = 4\) und \(11 - 7 = 4\).</p>', ''),
+     r'<p>\(6x - 4 + 2x + 3x - 3 = 11x - 7\).</p><p class="komm">Probe mit \(x = 2\): \(12 - 0 + 3 = 15\) und \(22 - 7 = 15\).</p>', ''),
     ('1d', 3, r'Vereinfache, von innen nach aussen: \(2x - (x - 2(3 - x))\)',
      r'<p>Innen: \(x - 2(3 - x) = x - 6 + 2x = 3x - 6\). Dann \(2x - (3x - 6) = 2x - 3x + 6 = -x + 6\).</p>', ''),
     ('1e', 2, r'Ben rechnet: \(8x - (3x - 5) = 5x - 5\). Prüfe mit \(x = 1\), finde den Fehler und rechne richtig.',
      r'<p>Mit \(x = 1\): links \(8 - (3 - 5) = 10\), Bens Ergebnis \(5 - 5 = 0\). Ben hat das Minus nur auf \(3x\) angewendet. Richtig: \(8x - 3x + 5 = 5x + 5\).</p>', ''),
-    ('1f', 2, r'Mit \(x = 1\) ist \(3x + 2 = 5\) und \(5x = 5\). Sind \(3x + 2\) und \(5x\) also gleichwertig? Begründe.',
-     r'<p>Nein. Gleichwertig heisst: gleich für <b>jede</b> Zahl. Mit \(x = 2\) ist \(3x + 2 = 8\), aber \(5x = 10\). Ein einziges Gegenbeispiel genügt. \(3x\) und \(2\) sind nicht gleichartig.</p>', ''),
+    ('1f', 2, r'Mit \(x = 1\) ist \(4x + 3 = 7\) und \(7x = 7\). Sind \(4x + 3\) und \(7x\) also gleichwertig? Begründe.',
+     r'<p>Nein. Gleichwertig heisst: gleich für <b>jede</b> Zahl. Mit \(x = 2\) ist \(4x + 3 = 11\), aber \(7x = 14\). Ein einziges Gegenbeispiel genügt. \(4x\) und \(3\) sind nicht gleichartig.</p>', ''),
 ])
 k1 = kapitel(1, 'vereinfachen', 'Terme vereinfachen', 40,
              r'Du fasst gleichartige Glieder zusammen, löst Klammern auf, auch mit Minus davor und verschachtelt, und prüfst dein Ergebnis durch Einsetzen.',
@@ -199,11 +199,13 @@ fest2 = r'''      <div class="festhalten">
           <p><b>Rechteckschema:</b> Es funktioniert auch mit Minus. Das Vorzeichen gehört zur Zahl dahinter.</p>
           <table class="schema"><tr><th>·</th><th>\(3x\)</th><th>\(-2\)</th></tr><tr><th>\(x\)</th><td class="t-q">\(3x^2\)</td><td class="t-x">\(-2x\)</td></tr><tr><th>\(+4\)</th><td class="t-x">\(12x\)</td><td class="t-z">\(-8\)</td></tr></table>
           <p>\[ (3x - 2)(x + 4) = 3x^2 + 12x - 2x - 8 = 3x^2 + 10x - 8 \]</p>
-          <p><b>Probe</b> mit \(x = 1\): \((1 + 2)(1 + 3) = 12\) und \(1 + 5 + 6 = 12\).</p>
+          <p><b>Wenn vorne in beiden Klammern nur \(x\) steht:</b> Das Glied mit \(x\) ist die <b>Summe</b> der beiden Zahlen, die Zahl am Schluss ihr <b>Produkt</b>:</p>
+          <p>\[ (x + m)(x + n) = x^2 + (m + n)x + m \cdot n \qquad (x + 2)(x + 3) = x^2 + 5x + 6 \]</p>
+          <p><b>Probe</b> mit \(x = 2\): \((2 + 2)(2 + 3) = 20\) und \(4 + 10 + 6 = 20\). Nimm für die Probe nicht \(0\) oder \(1\): Bei \(x = 1\) ist \(x^2 = x\), dann bleiben manche Fehler unsichtbar.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Nur «vorne mal vorne, hinten mal hinten»:</b> \((x + 2)(x + 3)\) ist nicht \(x^2 + 6\). Im Flächenmodell fehlen die beiden Streifen. Probe mit \(x = 1\): \(12\) gegen \(7\).</p>
+          <p><b>Nur «vorne mal vorne, hinten mal hinten»:</b> \((x + 2)(x + 3)\) ist nicht \(x^2 + 6\). Im Flächenmodell fehlen die beiden Streifen. Probe mit \(x = 2\): \(20\) gegen \(10\).</p>
           <p><b>Vorzeichen verloren:</b> Bei \((3x - 2)(x + 4)\) ist das letzte Produkt \((-2) \cdot 4 = -8\), nicht \(+8\).</p>
         </div>
       </div>'''
@@ -211,7 +213,7 @@ auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
     ('2a', 2, r'Multipliziere aus: \((x + 4)(x + 5)\)',
      r'<p>\(x^2 + 5x + 4x + 20 = x^2 + 9x + 20\).</p>', ''),
     ('2b', 3, r'Multipliziere aus: \((2x - 3)(x + 6)\)',
-     r'<p>\(2x^2 + 12x - 3x - 18 = 2x^2 + 9x - 18\).</p><p class="komm">Probe mit \(x = 1\): \((-1) \cdot 7 = -7\) und \(2 + 9 - 18 = -7\).</p>', ''),
+     r'<p>\(2x^2 + 12x - 3x - 18 = 2x^2 + 9x - 18\).</p><p class="komm">Probe mit \(x = 2\): \(1 \cdot 8 = 8\) und \(8 + 18 - 18 = 8\).</p>', ''),
     ('2c', 2, r'Multipliziere aus: \((a - 4)(a - 7)\)',
      r'<p>\(a^2 - 7a - 4a + 28 = a^2 - 11a + 28\). Minus mal Minus gibt \(+28\).</p>', ''),
     ('2d', 2, r'Lara rechnet: \((x + 5)(x - 2) = x^2 - 10\). Was hat sie vergessen? Rechne richtig.',
@@ -273,7 +275,7 @@ auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
      r'<p>Mit \(x = 1\): \((1 + 5)^2 = 36\), aber \(1 + 25 = 26\). Es fehlt das mittlere Glied: \((x + 5)^2 = x^2 + 10x + 25\).</p>', ''),
     ('3e', 3, r'Kopfrechnen mit den Formeln: \(21^2\) und \(19 \cdot 21\)',
      r'<p>\(21^2 = (20 + 1)^2 = 400 + 40 + 1 = 441\). \(19 \cdot 21 = (20 - 1)(20 + 1) = 400 - 1 = 399\).</p>', ''),
-    ('3f', 3, r'Das Quadrat hat die Seite \(a + b\). Benenne die vier Teilflächen und erkläre damit, warum \((a + b)^2\) grösser ist als \(a^2 + b^2\).',
+    ('3f', 3, r'Das Quadrat hat die Seite \(a + b\). Benenne die vier Teilflächen und erkläre damit, warum \((a + b)^2\) für positive \(a\) und \(b\) (Längen) grösser ist als \(a^2 + b^2\).',
      r'<p>Oben links \(a^2\), unten rechts \(b^2\), dazu zwei Rechtecke mit je \(ab\). Zusammen \(a^2 + 2ab + b^2\). In \(a^2 + b^2\) fehlen die beiden Rechtecke, also \(2ab\).</p>',
      '\n            <div class="mini-reihe"><svg class="mini-term" data-binom="1" aria-label="Quadrat mit Seite a plus b, in vier Teile geteilt"></svg></div>'),
 ])
@@ -302,14 +304,14 @@ fest4 = r'''      <div class="festhalten">
           <ol>
             <li><b>Ausklammern:</b> den grössten gemeinsamen Faktor vor die Klammer. \(6a^2 - 9a = 3a(2a - 3)\), denn \(\text{ggT}(6;\ 9) = 3\) und jedes Glied enthält \(a\).</li>
             <li><b>Binomische Formel rückwärts:</b> \(y^2 - 10y + 25 = (y - 5)^2\) und \(9y^2 - 25 = (3y - 5)(3y + 5)\).</li>
-            <li><b>Zweiklammersatz:</b> Bei \(x^2 + px + q\) zwei Zahlen suchen, deren <b>Produkt</b> \(q\) und deren <b>Summe</b> \(p\) ist.</li>
+            <li><b>Zweiklammersatz:</b> Bei \(x^2 + px + q\) zwei Zahlen \(m\) und \(n\) suchen, deren <b>Produkt</b> \(q\) und deren <b>Summe</b> \(p\) ist. Dann ist \(x^2 + px + q = (x + m)(x + n)\).</li>
           </ol>
           <ol class="weg">
             <li>\(x^2 - 7x + 12\) <span class="warum">Produkt \(12\), Summe \(-7\)</span></li>
             <li>Paare mit Produkt \(12\): \(1 \cdot 12\), \(2 \cdot 6\), \(3 \cdot 4\) und dieselben negativ <span class="warum">Summe \(-7\) hat nur \(-3\) und \(-4\)</span></li>
             <li>\(= (x - 3)(x - 4)\) <span class="warum">Probe: ausmultiplizieren</span></li>
           </ol>
-          <p><b>Vollständig</b> faktorisiert ist ein Term, wenn sich kein Faktor weiter zerlegen lässt: \(5x^2 - 20 = 5(x^2 - 4) = 5(x - 2)(x + 2)\).</p>
+          <p><b>Vollständig</b> faktorisiert ist ein Term, wenn sich kein Faktor mit ganzen Zahlen weiter zerlegen lässt: \(5x^2 - 20 = 5(x^2 - 4) = 5(x - 2)(x + 2)\).</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -331,7 +333,7 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 15, [
     ('4e', 3, r'Faktorisiere vollständig: \(2x^2 - 18\)',
      r'<p>Zuerst ausklammern: \(2(x^2 - 9)\). Dann die dritte binomische Formel: \(2(x - 3)(x + 3)\).</p>', ''),
     ('4f', 2, r'Warum lässt sich \(x^2 + 4\) nicht als \((x + m)(x + n)\) mit ganzen Zahlen schreiben?',
-     r'<p>Es bräuchte \(m + n = 0\) (kein Glied mit \(x\)) und \(m \cdot n = 4\). Aus \(m + n = 0\) folgt \(n = -m\), dann ist \(m \cdot n = -m^2\) nie positiv. Eine Summe von zwei Quadraten zerfällt nicht.</p>', ''),
+     r'<p>Es bräuchte \(m + n = 0\) (kein Glied mit \(x\)) und \(m \cdot n = 4\). Aus \(m + n = 0\) folgt \(n = -m\), dann ist \(m \cdot n = -m^2\) nie positiv. Also lässt sich \(x^2 + 4\) nicht als \((x + m)(x + n)\) mit ganzen Zahlen schreiben.</p>', ''),
 ])
 k4 = kapitel(4, 'faktorisieren', 'Faktorisieren', 45,
              r'Du schreibst Summen als Produkte: durch Ausklammern, mit den binomischen Formeln rückwärts und mit dem Zweiklammersatz. Du faktorisierst vollständig und prüfst durch Ausmultiplizieren.',
@@ -351,22 +353,22 @@ k0 = f'''
         <ul class="kurz">
           <li><b>Vorzeichen:</b> Minus mal Minus gibt Plus, verschiedene Vorzeichen geben Minus: \((-3) \cdot (-2) = 6\), \((-3) \cdot 2 = -6\).</li>
           <li><b>Distributivgesetz:</b> \(3 \cdot (4 + 5) = 3 \cdot 4 + 3 \cdot 5\). Die Zahl vor der Klammer wird mit jedem Summanden multipliziert.</li>
-          <li><b>Variable:</b> Ein Buchstabe steht für eine Zahl. \(3x\) heisst \(3 \cdot x\), \(x^2\) heisst \(x \cdot x\).</li>
-          <li><b>Einsetzen:</b> Für \(x = 3\) ist \(2x^2 = 2 \cdot 3^2 = 18\). Potenz vor Punkt.</li>
+          <li><b>Variable:</b> Ein Buchstabe steht für eine Zahl. \(3x\) heisst \(3 \cdot x\), \(x^2\) heisst \(x \cdot x\). Zahlen und Variablen multiplizierst du getrennt: \(2x \cdot 4x = 8x^2\).</li>
+          <li><b>Einsetzen:</b> Für \(x = 4\) ist \(3x^2 = 3 \cdot 4^2 = 48\). Potenz vor Punkt.</li>
           <li><b>ggT</b> (grösster gemeinsamer Teiler): die grösste Zahl, durch die beide teilbar sind, zum Beispiel \(\text{ggT}(12;\ 18) = 6\). Braucht es zum Ausklammern.</li>
         </ul>
       </details>
 ''' + test('t0', 'Vortest', 10, [
     ('0a', 2, r'Berechne: \((-3) \cdot (-4)\); \(\;-2 \cdot 5\); \(\;-7 + 3\); \(\;-4 - 6\)',
      r'<p>\(12\); \(-10\); \(-4\); \(-10\).</p>', ''),
-    ('0b', 2, r'Berechne \(3 \cdot (4 + 5)\) auf zwei Arten.',
-     r'<p>Klammer zuerst: \(3 \cdot 9 = 27\). Ausmultipliziert: \(12 + 15 = 27\).</p><p class="komm">Das zweite ist das Distributivgesetz, die Grundlage von Kapitel 1 und 2.</p>', ''),
+    ('0b', 2, r'Berechne \(4 \cdot (6 + 3)\) auf zwei Arten.',
+     r'<p>Klammer zuerst: \(4 \cdot 9 = 36\). Ausmultipliziert: \(24 + 12 = 36\).</p><p class="komm">Das zweite ist das Distributivgesetz, die Grundlage von Kapitel 1 und 2.</p>', ''),
     ('0c', 2, r'Schreib kürzer: \(x \cdot x\); \(\;3x \cdot 2x\); \(\;(-2x) \cdot 5\)',
      r'<p>\(x^2\); \(6x^2\); \(-10x\).</p>', ''),
     ('0d', 2, r'Setze \(x = 3\) ein: \(2x^2 - x\)',
      r'<p>\(2 \cdot 9 - 3 = 15\).</p><p class="komm">Einsetzen ist die Probe in allen Kapiteln.</p>', ''),
-    ('0e', 2, r'Bestimme \(\text{ggT}(12;\ 18)\) und \(\text{ggT}(8;\ 20)\).',
-     r'<p>\(6\) und \(4\).</p><p class="komm">Braucht es in Kapitel 4 zum Ausklammern.</p>', ''),
+    ('0e', 2, r'Bestimme \(\text{ggT}(15;\ 25)\) und \(\text{ggT}(8;\ 20)\).',
+     r'<p>\(5\) und \(4\).</p><p class="komm">Braucht es in Kapitel 4 zum Ausklammern.</p>', ''),
 ]) + '''
       <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen, die Lösungen des Vortests Schritt für Schritt nachrechnen, dann Kapitel 1.</p>
     </section>'''

@@ -403,7 +403,7 @@ clip('zusammenfassen', 1, 'Terme sehen: Terme vereinfachen',
             graf([KR((e1a[-1] + U / 2, 7.0 + U / 2), 0.42, 4, 0, 3, aus='@bleiben'),
                   KR((e1b[-1] + U / 2, 4.0 + U / 2), 0.42, 4, 0, 3, aus='@bleiben'),
                   S((e1a[-1] + U / 2, 6.6), (e1b[-1] + U / 2, 4.85), 4, True, 3, aus='@bleiben')], ein='@hebt'),
-            graf(r1c + [T(7.6, 1.6, '5x + 3', 3, g=36)], ein='@Ergebnis')),
+            graf(r1c[:5], ein='@ergeben'), graf(r1c[5:], ein='@bleiben'), graf([T(7.6, 1.6, '5x + 3', 3, g=36)], ein='@Ergebnis')),
          sz('Nicht gleichartig',
             'Streifen und kleine Quadrate lassen sich nicht zusammenzählen. Drei x plus zwei bleibt drei x plus zwei. '
             'Fünf x wäre falsch. Setz zur Probe x gleich zwei ein: Der Term ergibt acht, fünf x aber zehn.',
@@ -426,8 +426,8 @@ clip('zusammenfassen', 1, 'Terme sehen: Terme vereinfachen',
             f(r'7x - (2x - 5)', 300, 70, ein=0.05),
             f(r'= 7x \fd{- 2x} \fb{+ 5}', 430, 66, ein='@Aus'),
             f(r'= \fa{5x} + \fb{5}', 560, 66, ein='@bleibt'),
-            graf([mit(f_, aus='@bleibt') if i < 2 else f_ for i, f_ in enumerate(r_m1)] + [T(6.0, 7.8, '7x', 5, g=34)], ein=0.05),
-            graf([T(0.75, 4.6, '−', 4, g=64), RECHT(1.0, 3.55, 4.4, 2.5, 4, 0, dicke=3, gestrichelt=True)], ein=0.05),
+            graf([mit(f_, aus='@bleibt') if i < 2 else f_ for i, f_ in enumerate(r_m1)] + [T(6.0, 7.8, '7x', 5, g=34, aus='@bleibt')], ein=0.05),
+            graf([T(0.75, 4.6, '−', 4, g=64, aus='@umgedreht+0.3'), RECHT(1.0, 3.55, 4.4, 2.5, 4, 0, dicke=3, gestrichelt=True, aus='@umgedreht+0.3')], ein=0.05),
             graf(alle(r_m2, aus='@umgedreht+0.3'), ein=0.05),
             graf([mit(f_, aus='@bleibt') if i < 2 else f_ for i, f_ in enumerate(r_m3)], ein='@umgedreht+0.3'),
             graf([T(6.8, 1.6, '5x + 5', 3, g=40)], ein='@bleibt')),
@@ -490,7 +490,7 @@ clip('kontrolle-zusammenfassen', 2, 'Terme sehen: Kontrollfragen zum Vereinfache
             f(r'= \fc{10a - 15}', 430, 66, ein=1.0),
             graf([gross('5(2a − 3)')], ein=0.05)),
          sz('Frage 4',
-            'Nein. Zwei x und drei x Quadrat sind nicht gleichartig, man kann sie nicht zusammenfassen. Probe mit x gleich zwei: '
+            'Nein. Zwei x und drei x Quadrat sind nicht gleichartig, du kannst sie nicht zusammenfassen. Probe mit x gleich zwei: '
             'links vier plus zwölf, also sechzehn, rechts fünf mal acht, also vierzig.',
             f(r'x = 2: \quad 4 + 12 = 16', 300, 56, ein=1.0),
             f(r'5 \cdot 8 = 40 \quad \fd{16 \neq 40}', 420, 56, ein=1.0),
@@ -523,11 +523,11 @@ clip('kontrolle-zusammenfassen', 2, 'Terme sehen: Kontrollfragen zum Vereinfache
               rueck_sprich={1: 'Die Fünf gilt auch für minus drei.', 2: 'Die Fünf gilt auch für zwei a.'}),
          wahl('Frage 4', 'Ist 2x + 3x² dasselbe wie 5x³?',
               ['Nein, 2x und 3x² sind nicht gleichartig.', 'Ja, 2 + 3 = 5 und die Hochzahlen werden addiert.', 'Ja, weil beide Glieder x enthalten.'], 0,
-              {0: 'Ja.', 1: 'Hochzahlen addiert man beim Multiplizieren, nicht beim Addieren. Probe mit x = 2: 16 gegen 40.',
-               2: 'x und x² sind verschiedene Arten von Gliedern, wie Streifen und Quadrate.'},
+              {0: 'Ja.', 1: 'Beim Addieren bleibt die Hochzahl, und nur gleichartige Glieder lassen sich addieren. Probe mit x = 2: 16 gegen 40.',
+               2: 'x und x² sind verschiedene Arten von Gliedern: Sie lassen sich nicht zusammenfassen.'},
               sprich='Ist zwei x plus drei x Quadrat dasselbe wie fünf x hoch drei?',
-              rueck_sprich={1: 'Hochzahlen addiert man beim Multiplizieren, nicht beim Addieren. Probe mit x gleich zwei: sechzehn gegen vierzig.',
-                            2: 'x und x Quadrat sind verschiedene Arten von Gliedern, wie Streifen und Quadrate.'}),
+              rueck_sprich={1: 'Beim Addieren bleibt die Hochzahl, und nur gleichartige Glieder lassen sich addieren. Probe mit x gleich zwei: sechzehn gegen vierzig.',
+                            2: 'x und x Quadrat sind verschiedene Arten von Gliedern: Sie lassen sich nicht zusammenfassen.'}),
          wahl('Frage 5', 'Vereinfache: x − (4 − 3x)', ['4x − 4', '−2x − 4', '4x + 4'], 0,
               {0: 'Ja.', 1: 'Das Minus vor der Klammer dreht auch −3x um: Es wird +3x.', 2: 'Die 4 in der Klammer wird zu −4.'},
               sprich='Vereinfache: x minus Klammer vier minus drei x.',
@@ -561,7 +561,7 @@ clip('ausmultiplizieren', 3, 'Terme sehen: Klammer mal Klammer',
             graf(F23['xh'] + [T(*F23['mitte']['xh'], '2x', 1, g=36)], ein='@zwei'),
             graf(F23['ei'] + [T(F23['mitte']['ei'][0], F23['mitte']['ei'][1] - 0.15, '6', 2, g=36)], ein='@sechs')),
          sz('Zusammenfassen',
-            'Die beiden Streifen sind gleichartig: drei x plus zwei x gibt fünf x. Also ist x plus zwei mal x plus drei gleich '
+            'Die beiden Streifen sind gleichartig: drei x plus zwei x gibt fünf x. Also ist Klammer x plus zwei mal Klammer x plus drei gleich '
             'x Quadrat plus fünf x plus sechs.',
             f(r'= x^2 + \fa{3x + 2x} + 6', 300, 60, ein=0.3),
             f(r'= \fc{x^2 + 5x + 6}', 430, 66, ein='@Also'),
@@ -569,12 +569,12 @@ clip('ausmultiplizieren', 3, 'Terme sehen: Klammer mal Klammer',
             graf([RECHT(6.0, 4.7, 2.25, 4.5, 3, 0, dicke=5), RECHT(1.5, 3.2, 4.5, 1.5, 3, 0, dicke=5)], ein='@gleichartig')),
          sz('Fehler',
             'Häufiger Fehler: nur vorne mal vorne und hinten mal hinten. Das gibt x Quadrat plus sechs. Im Bild fehlen dann die '
-            'beiden Streifen. Probe mit x gleich eins: drei mal vier ist zwölf, aber eins plus sechs ist nur sieben.',
+            'beiden Streifen. Probe mit x gleich zwei: vier mal fünf ist zwanzig, aber vier plus sechs ist nur zehn.',
             f(r'(x + 2)(x + 3) \fd{\neq x^2 + 6}', 300, 58, ein='@Das'),
-            f(r'x = 1: \quad 3 \cdot 4 = 12, \quad 1 + 6 = \fd{7}', 440, 50, ein='@Probe'),
+            f(r'x = 2: \quad 4 \cdot 5 = 20, \quad 4 + 6 = \fd{10}', 440, 50, ein='@Probe'),
             graf(F23['q'] + F23['ei'] + F23['rahmen'] + F23['seiten'], ein=0.05),
             graf([RECHT(6.0, 4.7, 2.25, 4.5, 4, 0.12, dicke=3), RECHT(1.5, 3.2, 4.5, 1.5, 4, 0.12, dicke=3),
-                  T(7.125, 6.8, 'fehlt', 4, g=30), T(3.75, 3.8, 'fehlt', 4, g=30)], ein='@fehlen')),
+                  T(7.125, 6.8, 'fehlt', 4, g=30), T(3.75, 3.8, 'fehlt', 4, g=30)], ein='@Streifen')),
          sz('Rechteckschema',
             'Mit Minuszeichen gibt es kein Rechteck mehr. Das Rechteck-Schema funktioniert aber immer. Bei drei x minus zwei mal '
             'x plus vier schreibst du oben drei x und minus zwei, links x und plus vier. In jedes Feld kommt das Produkt.',
@@ -601,17 +601,17 @@ clip('ausmultiplizieren', 3, 'Terme sehen: Klammer mal Klammer',
          wahl('Vier Teile', 'In wie viele Teilflächen zerfällt das Rechteck, wenn du jede Seite bei x unterteilst?',
               ['4', '2', '6'], 0,
               {0: 'Ja.', 1: 'Jede Seite hat zwei Abschnitte. Zwei mal zwei Abschnitte geben mehr als zwei Felder.',
-               2: '6 ist die Zahl der Einer unten rechts. Gefragt sind die grossen Teilflächen.'},
+               2: 'Zähle nur die grossen Teilflächen, die durch das Unterteilen der beiden Seiten entstehen.'},
               sprich='In wie viele Teilflächen zerfällt das Rechteck, wenn du jede Seite bei x unterteilst?',
               rueck_sprich={1: 'Jede Seite hat zwei Abschnitte. Zwei mal zwei Abschnitte geben mehr als zwei Felder.',
-                            2: 'Sechs ist die Zahl der Einer unten rechts. Gefragt sind die grossen Teilflächen.'}),
+                            2: 'Zähle nur die grossen Teilflächen, die durch das Unterteilen der beiden Seiten entstehen.'}),
      ])
 
 # ════════════════════════════════════════════════ Kapitel 2 · Kontrolle
 F52 = flaeche(2, 5, X=4.0, E=0.75, x0=1.5, oben=9.0)
 F61 = flaeche(1, 6, X=4.0, E=0.75, x0=1.2, oben=9.0)
 clip('kontrolle-ausmultiplizieren', 4, 'Terme sehen: Kontrollfragen zum Ausmultiplizieren',
-     'Fünf Fragen: (x + 6)(x + 1), die Zahl am Schluss von (x − 3)(x + 5), (2a + 1)(a − 4), ein Flächenmodell lesen, '
+     'Fünf Fragen: (x + 6)(x + 1), die Zahl am Schluss von (x − 2)(x + 7), (2a + 1)(a − 4), ein Flächenmodell lesen, '
      'Probe mit x = 3.',
      ['ausmultiplizieren', 'Flächenmodell', 'Probe', 'Kontrollfragen'], [
          sz('Frage 1',
@@ -621,11 +621,11 @@ clip('kontrolle-ausmultiplizieren', 4, 'Terme sehen: Kontrollfragen zum Ausmulti
             graf(F61['rahmen'] + [T(1.2 + 4.0 / 2 + 2.25, 9.4, 'x + 6', 5, g=36), T(0.9, 5.9, 'x + 1', 5, g=36, anker='end')], ein=0.05),
             graf(F61['q'] + F61['xv'] + F61['xh'] + F61['ei'] + F61['rahmen'], ein=1.0)),
          sz('Frage 2',
-            'Die Zahl am Schluss ist das Produkt der beiden Zahlen: minus drei mal fünf gibt minus fünfzehn. Die Summe, zwei, '
-            'gehört zum x-Glied: x Quadrat plus zwei x minus fünfzehn.',
-            f(r'(-3) \cdot 5 = \fc{-15}', 300, 62, ein=1.0),
-            f(r'(x - 3)(x + 5) = x^2 + 2x - 15', 430, 54, ein=1.0),
-            graf([gross('(x − 3)(x + 5)')], ein=0.05)),
+            'Die Zahl am Schluss ist das Produkt der beiden Zahlen: minus zwei mal sieben gibt minus vierzehn. Die Summe, fünf, '
+            'gehört zum x-Glied: x Quadrat plus fünf x minus vierzehn.',
+            f(r'(-2) \cdot 7 = \fc{-14}', 300, 62, ein=1.0),
+            f(r'(x - 2)(x + 7) = x^2 + 5x - 14', 430, 54, ein=1.0),
+            graf([gross('(x − 2)(x + 7)')], ein=0.05)),
          sz('Frage 3',
             'Zwei a mal a ist zwei a Quadrat, zwei a mal minus vier ist minus acht a, eins mal a ist a, eins mal minus vier ist '
             'minus vier. Zusammen: zwei a Quadrat minus sieben a minus vier.',
@@ -639,28 +639,28 @@ clip('kontrolle-ausmultiplizieren', 4, 'Terme sehen: Kontrollfragen zum Ausmulti
             graf(F52['q'] + F52['xv'] + F52['xh'] + F52['ei'] + F52['rahmen'], ein=0.05),
             graf(F52['seiten'], ein=1.0)),
          sz('Frage 5',
-            'Links: drei plus zwei mal drei minus eins, also fünf mal zwei gleich zehn. Rechts: neun plus drei minus zwei, '
+            'Links: Klammer drei plus zwei mal Klammer drei minus eins, also fünf mal zwei gleich zehn. Rechts: neun plus drei minus zwei, '
             'auch zehn. Die Probe stimmt.',
             f(r'(3 + 2)(3 - 1) = 5 \cdot 2 = 10', 300, 56, ein=1.0),
             f(r'9 + 3 - 2 = 10 \quad \fc{\checkmark}', 420, 56, ein=1.0),
             graf([gross('(x + 2)(x − 1)  =  x² + x − 2', 6.0, g=40), gross('x = 3', 4.2, 2, g=44)], ein=0.05)),
          sz('Merke',
-            'Zum Mitnehmen: Jedes Glied mal jedes Glied, dann zusammenfassen. Die Zahl am Schluss ist das Produkt, das x-Glied die '
-            'Summe. Und die Probe mit einer Zahl zeigt Fehler sofort.',
+            'Zum Mitnehmen: Jedes Glied mal jedes Glied, dann zusammenfassen. Bei Klammer x plus m mal Klammer x plus n ist die Zahl am Schluss das Produkt, das x-Glied die '
+            'Summe. Und die Probe mit einer Zahl wie zwei zeigt viele Fehler. Nimm dafür nicht null oder eins.',
             titel('Zum Mitnehmen', 250, 76),
-            n('jedes Glied mal jedes Glied|Zahl am Schluss: Produkt; x-Glied: Summe|Probe mit einer Zahl', 400, 'blau', 44, ein=1.2)),
+            n('jedes Glied mal jedes Glied|bei @(x + m)(x + n)@: Zahl am Schluss Produkt, x-Glied Summe|Probe mit einer Zahl wie @2@, nicht @0@ oder @1@', 400, 'blau', 44, ein=1.2)),
      ], [
          wahl('Frage 1', 'Multipliziere aus: (x + 6)(x + 1)', ['x² + 7x + 6', 'x² + 6', 'x² + 6x + 7'], 0,
               {0: 'Ja.', 1: 'Es fehlen die gemischten Glieder x und 6x.', 2: 'Das x-Glied ist x + 6x, die Zahl am Schluss 6 · 1.'},
-              sprich='Multipliziere aus: x plus sechs mal x plus eins.',
+              sprich='Multipliziere aus: Klammer x plus sechs mal Klammer x plus eins.',
               rueck_sprich={1: 'Es fehlen die gemischten Glieder x und sechs x.', 2: 'Das x-Glied ist x plus sechs x, die Zahl am Schluss sechs mal eins.'}),
-         wahl('Frage 2', 'Welche Zahl steht am Schluss, wenn du (x − 3)(x + 5) ausmultiplizierst?', ['−15', '15', '2'], 0,
-              {0: 'Ja.', 1: 'Minus mal Plus gibt Minus.', 2: '−3 + 5 = 2 gehört zum x-Glied. Am Schluss steht das Produkt.'},
-              sprich='Welche Zahl steht am Schluss, wenn du x minus drei mal x plus fünf ausmultiplizierst?',
-              rueck_sprich={1: 'Minus mal Plus gibt Minus.', 2: 'Minus drei plus fünf gehört zum x-Glied. Am Schluss steht das Produkt.'}),
+         wahl('Frage 2', 'Welche Zahl steht am Schluss, wenn du (x − 2)(x + 7) ausmultiplizierst?', ['−14', '14', '5'], 0,
+              {0: 'Ja.', 1: 'Minus mal Plus gibt Minus.', 2: '−2 + 7 = 5 gehört zum x-Glied. Am Schluss steht das Produkt.'},
+              sprich='Welche Zahl steht am Schluss, wenn du Klammer x minus zwei mal Klammer x plus sieben ausmultiplizierst?',
+              rueck_sprich={1: 'Minus mal Plus gibt Minus.', 2: 'Minus zwei plus sieben gehört zum x-Glied. Am Schluss steht das Produkt.'}),
          wahl('Frage 3', 'Multipliziere aus: (2a + 1)(a − 4)', ['2a² − 7a − 4', '2a² − 4', '2a² + 9a − 4'], 0,
               {0: 'Ja.', 1: 'Es fehlen die gemischten Glieder −8a und a.', 2: 'Achte auf das Vorzeichen: 2a · (−4) = −8a.'},
-              sprich='Multipliziere aus: zwei a plus eins mal a minus vier.',
+              sprich='Multipliziere aus: Klammer zwei a plus eins mal Klammer a minus vier.',
               rueck_sprich={1: 'Es fehlen die gemischten Glieder minus acht a und a.', 2: 'Achte auf das Vorzeichen: zwei a mal minus vier ist minus acht a.'}),
          wahl('Frage 4', 'Welcher Term gehört zum Flächenmodell?', ['x² + 7x + 10', 'x² + 10', 'x² + 7x + 7'], 0,
               {0: 'Ja.', 1: 'Zähle auch die Streifen.', 2: 'Zähle die Einer unten rechts nochmals: Sie bilden ein Rechteck.'},
@@ -669,7 +669,7 @@ clip('kontrolle-ausmultiplizieren', 4, 'Terme sehen: Kontrollfragen zum Ausmulti
          wahl('Frage 5', 'Probe mit x = 3: Was ergeben die beiden Seiten?', ['10 und 10', '10 und 8', '5 und 10'], 0,
               {0: 'Ja.', 1: 'Rechne rechts nochmals: 9 + 3 − 2.', 2: 'Links: (3 + 2)(3 − 1) = 5 · 2.'},
               sprich='Probe mit x gleich drei: Was ergeben die beiden Seiten?',
-              rueck_sprich={1: 'Rechne rechts nochmals: neun plus drei minus zwei.', 2: 'Links: drei plus zwei mal drei minus eins, also fünf mal zwei.'}),
+              rueck_sprich={1: 'Rechne rechts nochmals: neun plus drei minus zwei.', 2: 'Links: Klammer drei plus zwei mal Klammer drei minus eins, also fünf mal zwei.'}),
      ], art='Kontrollclip')
 
 # ════════════════════════════════════════════════ Kapitel 3 · Einführung: Binomische Formeln
@@ -683,9 +683,9 @@ QM = [RECHT(1.5, 1.5, A7, A7, 5, 0, dicke=0), RECHT(1.5, 1.5 + B7, A7 - B7, A7 -
       T(1.5 + (A7 - B7) / 2, 1.5 + B7 + (A7 - B7) / 2 - 0.2, '(a − b)²', 1, g=36),
       T(1.5 + A7 - B7 / 2, 6.0, 'ab', 4, g=32), T(3.75, 1.5 + B7 / 2 - 0.2, 'ab', 4, g=32),
       T(1.5 + A7 - B7 / 2, 1.5 + B7 / 2 - 0.2, 'b²', 3, g=32),
-      T(1.5 + A7 / 2, 8.85, 'a', 5), T(1.05, 5.0, 'a', 5)]
+      T(1.5 + A7 / 2, 8.85, 'a', 5), T(1.05, 5.0, 'a', 5), T(1.5 + A7 - B7 / 2, 8.85, 'b', 2), T(1.05, 1.5 + B7 / 2 - 0.15, 'b', 2)]
 STUECK = [[1.0, 0.5], [4.0, 0.5], [4.0, 2.0], [1.0, 2.0]]
-ZIEL = [[5.5, 9.5], [5.5, 6.5], [7.0, 6.5], [7.0, 9.5]]
+ZIEL = [[5.5, 5.0], [5.5, 2.0], [7.0, 2.0], [7.0, 5.0]]
 
 clip('binome', 5, 'Terme sehen: Binomische Formeln',
      '(3 + 4)² = 49, aber 3² + 4² = 25: Es fehlen zwei Rechtecke. Das Quadrat (a + b)² = a² + 2ab + b²; mit x: '
@@ -696,7 +696,7 @@ clip('binome', 5, 'Terme sehen: Binomische Formeln',
             'Rechne nach: Sieben im Quadrat ist neunundvierzig. Drei Quadrat plus vier Quadrat ist neun plus sechzehn, also nur '
             'fünfundzwanzig. Es fehlen vierundzwanzig. Wo stecken sie?',
             f(r'(3 + 4)^2 \;\overset{?}{=}\; 3^2 + 4^2', 300, 60, ein=0.05),
-            f(r'7^2 = 49', 430, 58, ein='@Rechne'),
+            f(r'7^2 = 49', 430, 58, ein='@Sieben'),
             f(r'9 + 16 = 25', 540, 58, ein='@Drei'),
             f(r'\fd{49 - 25 = 24}', 650, 58, ein='@fehlen'),
             graf([Q34[1]] + Q34[2], ein='@Sieben'),
@@ -711,49 +711,51 @@ clip('binome', 5, 'Terme sehen: Binomische Formeln',
             graf([QAB[0]['bb'], QAB[3]['bb']], ein='@rechts'),
             graf([QAB[0]['ab1'], QAB[0]['ab2'], QAB[3]['ab1'], QAB[3]['ab2']], ein='@Rechtecke')),
          sz('Mit x',
-            'Für a und b darf auch x und eine Zahl stehen. x plus vier im Quadrat: x Quadrat, dann zwei mal x mal vier, also '
+            'Für a und b darf auch x und eine Zahl stehen. Klammer x plus vier im Quadrat: x Quadrat, dann zwei mal x mal vier, also '
             'acht x, und am Schluss vier Quadrat, also sechzehn.',
             f(r'(x + 4)^2', 280, 64, ein=0.3),
             f(r'= x^2 + 2 \cdot x \cdot 4 + 4^2', 400, 58, ein='@dann'),
             f(r'= \fc{x^2 + 8x + 16}', 520, 62, ein='@Schluss'),
             graf([QX4[1]] + QX4[2] + list(QX4[0].values()) + list(QX4[3].values()), ein=0.3)),
          sz('Minus',
-            'Mit Minus ändert sich nur das mittlere Glied: a minus b im Quadrat ist a Quadrat minus zwei a b plus b Quadrat. '
-            'Bei zwei y minus drei im Quadrat wird auch die Zwei quadriert: vier y Quadrat minus zwölf y plus neun.',
+            'Mit Minus ändert sich nur das mittlere Glied: Klammer a minus b im Quadrat ist a Quadrat minus zwei a b plus b Quadrat. '
+            'Im Bild nimmst du vom Quadrat a Quadrat zwei Streifen a b weg. Das Eckquadrat b Quadrat war dabei doppelt weg, darum '
+            'kommt es einmal dazu. Bei Klammer zwei y minus drei im Quadrat wird auch die Zwei quadriert: vier y Quadrat minus '
+            'zwölf y plus neun.',
             f(r'(a - b)^2 = a^2 \fd{- 2ab} + b^2', 280, 58, ein='@mittlere'),
             f(r'(2y - 3)^2 = \fb{4}y^2 - 12y + 9', 420, 58, ein='@quadriert'),
             n('@(2y)^2 = 4y^2@, nicht @2y^2@', 560, 'orange', 42, ein='@quadriert+0.8'),
-            graf(QM, ein='@mittlere')),
+            graf(QM, ein='@Bild')),
          sz('Dritte Formel',
-            'Die dritte Formel: a plus b mal a minus b ist a Quadrat minus b Quadrat. Die beiden gemischten Glieder heben sich '
-            'auf. Zum Beispiel ist fünf plus x mal fünf minus x gleich fünfundzwanzig minus x Quadrat. Im Bild fehlt beim '
-            'Quadrat a Quadrat die Ecke b Quadrat. Das orange Stück passt rechts an, und es entsteht ein Rechteck mit den '
+            'Die dritte Formel: Klammer a plus b mal Klammer a minus b ist a Quadrat minus b Quadrat. Die beiden gemischten Glieder heben sich '
+            'auf. Zum Beispiel ist Klammer fünf plus x mal Klammer fünf minus x gleich fünfundzwanzig minus x Quadrat. Im Bild fehlt beim '
+            'Quadrat a Quadrat die Ecke b Quadrat. Das orange Stück legst du rechts an, und es entsteht ein Rechteck mit den '
             'Seiten a plus b und a minus b.',
             f(r'(a + b)(a - b) = a^2 - b^2', 280, 58, ein='@dritte'),
             f(r'(5 + x)(5 - x) = 25 - x^2', 400, 56, ein='@Beispiel'),
-            graf([RECHT(1.0, 2.0, 4.5, 3.0, 1, 0.35, dicke=2), RECHT(1.0, 0.5, 4.5, 4.5, 5, 0, dicke=3),
-                  T(3.25, 5.3, 'a', 5), T(0.6, 2.6, 'a', 5)], ein='@Bild'),
+            graf([RECHT(1.0, 2.0, 4.5, 3.0, 1, 0.35, dicke=2), RECHT(1.0, 0.5, 4.5, 4.5, 5, 0, dicke=3, aus='@Rechteck'),
+                  T(3.25, 5.3, 'a', 5, aus='@Rechteck'), T(0.6, 2.6, 'a', 5, aus='@Rechteck')], ein='@Bild'),
             graf([RECHT(4.0, 0.5, 1.5, 1.5, 4, 0.12, dicke=3, gestrichelt=True), T(4.75, 1.0, 'b²', 4, g=30)], ein='@Ecke'),
-            graf([mit(V(STUECK, 2, 0.4, dicke=2), bewegung=[['@passt', {}], ['@passt+1.4', {'punkte': ZIEL}]])], ein='@Bild'),
-            graf([RECHT(1.0, 6.5, 4.5, 3.0, 1, 0.35, dicke=2), RECHT(1.0, 6.5, 6.0, 3.0, 5, 0, dicke=4),
-                  T(4.0, 9.8, 'a + b', 5, g=32), T(7.4, 7.9, 'a − b', 5, g=32, anker='start')], ein='@Rechteck')),
+            graf([mit(V(STUECK, 2, 0.4, dicke=2), bewegung=[['@legst', {}], ['@legst+1.4', {'punkte': ZIEL}]])], ein='@Bild'),
+            graf([RECHT(1.0, 2.0, 6.0, 3.0, 5, 0, dicke=4),
+                  T(4.0, 5.3, 'a + b', 5, g=32), T(7.3, 3.4, 'a − b', 5, g=32, anker='start')], ein='@Rechteck')),
          sz('Kopfrechnen',
-            'Die Formeln helfen auch beim Kopfrechnen. Einundfünfzig im Quadrat ist fünfzig plus eins im Quadrat: '
+            'Die Formeln helfen auch beim Kopfrechnen. Einundfünfzig im Quadrat ist Klammer fünfzig plus eins im Quadrat: '
             'zweitausend fünfhundert plus hundert plus eins, also zweitausend sechshundert eins. Und neunundvierzig mal '
             'einundfünfzig ist fünfzig Quadrat minus eins: zweitausend vierhundert neunundneunzig.',
             f(r'51^2 = (50 + 1)^2 = 2500 + 100 + 1 = \fc{2601}', 330, 52, ein='@Einundfünfzig'),
             f(r'49 \cdot 51 = (50 - 1)(50 + 1) = 2500 - 1 = \fc{2499}', 480, 52, ein='@neunundvierzig')),
          sz('Merke',
-            'Zum Mitnehmen: a plus b im Quadrat ist a Quadrat plus zwei a b plus b Quadrat, mit Minus wird nur das mittlere Glied '
-            'negativ. a plus b mal a minus b ist a Quadrat minus b Quadrat. Nie das mittlere Glied vergessen.',
+            'Zum Mitnehmen: Klammer a plus b im Quadrat ist a Quadrat plus zwei a b plus b Quadrat, mit Minus wird nur das mittlere Glied '
+            'negativ. Klammer a plus b mal Klammer a minus b ist a Quadrat minus b Quadrat. Nie das mittlere Glied vergessen.',
             titel('Zum Mitnehmen', 250, 76),
             f(r'(a + b)^2 = a^2 + 2ab + b^2', 400, 52, ein=1.2),
             f(r'(a - b)^2 = a^2 - 2ab + b^2', 500, 52, ein=1.6),
             f(r'(a + b)(a - b) = a^2 - b^2', 600, 52, ein=2.0)),
          jetzt_du(),
      ], [
-         wahl('Zahlen', 'Ist (3 + 4)² dasselbe wie 3² + 4²?', ['Nein', 'Ja', 'Ja, beides ist 49.'], 0,
-              {0: 'Ja, richtig: Es ist nicht dasselbe.', 1: 'Rechne nach: (3 + 4)² = 7² = 49, aber 3² + 4² = 9 + 16 = 25.',
+         wahl('Zahlen', 'Ist (3 + 4)² dasselbe wie 3² + 4²?', ['Nein', 'Ja, man darf jede Zahl einzeln quadrieren.', 'Ja, beides ist 49.'], 0,
+              {0: 'Richtig: Es ist nicht dasselbe.', 1: 'Rechne nach: (3 + 4)² = 7² = 49, aber 3² + 4² = 9 + 16 = 25.',
                2: '3² + 4² = 9 + 16 = 25, nicht 49.'},
               sprich='Ist drei plus vier im Quadrat dasselbe wie drei Quadrat plus vier Quadrat?',
               rueck_sprich={0: 'Richtig: Es ist nicht dasselbe.', 1: 'Rechne nach: Sieben im Quadrat ist neunundvierzig, aber neun plus sechzehn ist fünfundzwanzig.',
@@ -794,24 +796,24 @@ clip('kontrolle-binome', 6, 'Terme sehen: Kontrollfragen zu den binomischen Form
             f(r'= \fc{1681}', 420, 64, ein=1.0),
             graf([gross('41²')], ein=0.05)),
          sz('Merke',
-            'Zum Mitnehmen: Bei a plus b im Quadrat und a minus b im Quadrat nie das mittlere Glied vergessen. Bei a plus b mal '
-            'a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.',
+            'Zum Mitnehmen: Bei Klammer a plus b im Quadrat und Klammer a minus b im Quadrat nie das mittlere Glied vergessen. Bei Klammer a plus b mal '
+            'Klammer a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.',
             titel('Zum Mitnehmen', 250, 76),
             n('mittleres Glied @2ab@ nie vergessen|@(a + b)(a - b)@: kein mittleres Glied|Zahl vor der Variable mitquadrieren',
               400, 'blau', 44, ein=1.2)),
      ], [
          wahl('Frage 1', 'Rechne: (x + 9)²', ['x² + 18x + 81', 'x² + 81', 'x² + 9x + 81'], 0,
               {0: 'Ja.', 1: 'Das mittlere Glied fehlt.', 2: 'Das mittlere Glied ist 2ab, also zweimal 9x.'},
-              sprich='Rechne: x plus neun im Quadrat.',
+              sprich='Rechne: Klammer x plus neun im Quadrat.',
               rueck_sprich={1: 'Das mittlere Glied fehlt.', 2: 'Das mittlere Glied ist zwei a b, also zweimal neun x.'}),
          wahl('Frage 2', 'Rechne: (y − 6)²', ['y² − 12y + 36', 'y² − 36', 'y² + 12y + 36'], 0,
               {0: 'Ja.', 1: 'Hier steht ein Quadrat einer Klammer. Es gibt ein mittleres Glied.', 2: 'Bei (a − b)² ist das mittlere Glied negativ.'},
-              sprich='Rechne: y minus sechs im Quadrat.',
+              sprich='Rechne: Klammer y minus sechs im Quadrat.',
               rueck_sprich={1: 'Hier steht ein Quadrat einer Klammer. Es gibt ein mittleres Glied.',
-                            2: 'Bei a minus b im Quadrat ist das mittlere Glied negativ.'}),
+                            2: 'Bei Klammer a minus b im Quadrat ist das mittlere Glied negativ.'}),
          wahl('Frage 3', 'Rechne: (2x + 5)(2x − 5)', ['4x² − 25', '2x² − 25', '4x² − 20x − 25'], 0,
               {0: 'Ja.', 1: 'Auch die 2 wird quadriert: (2x)² = 4x².', 2: 'Die gemischten Glieder +10x und −10x heben sich auf.'},
-              sprich='Rechne: zwei x plus fünf mal zwei x minus fünf.',
+              sprich='Rechne: Klammer zwei x plus fünf mal Klammer zwei x minus fünf.',
               rueck_sprich={1: 'Auch die Zwei wird quadriert: zwei x im Quadrat ist vier x Quadrat.',
                             2: 'Die gemischten Glieder plus zehn x und minus zehn x heben sich auf.'}),
          wahl('Frage 4', 'Was ist (3y)²?', ['9y²', '3y²', '6y'], 0,
@@ -837,7 +839,7 @@ clip('faktorisieren', 7, 'Terme sehen: Faktorisieren',
      ['faktorisieren', 'ausklammern', 'binomische Formeln', 'Zweiklammersatz', 'vollständig'], [
          sz('Rückwärts',
             'Faktorisieren heisst: eine Summe als Produkt schreiben. Es ist das Ausmultiplizieren rückwärts. Aus x Quadrat plus '
-            'fünf x plus sechs wird wieder x plus zwei mal x plus drei.',
+            'fünf x plus sechs wird wieder Klammer x plus zwei mal Klammer x plus drei.',
             f(r'x^2 + 5x + 6', 300, 66, ein='@Summe'),
             f(r'= \fc{(x + 2)(x + 3)}', 430, 66, ein='@wieder'),
             n('Summe → Produkt', 570, 'blau', 44, ein='@Produkt'),
@@ -852,20 +854,22 @@ clip('faktorisieren', 7, 'Terme sehen: Faktorisieren',
             f(r'= \fc{\fb{3a}(2a - 3)}', 500, 62, ein='@Klammere'),
             f(r'\fd{a(6a - 9)}: \text{ nicht fertig}', 620, 52, ein='@reicht'),
             graf([T(5, 7.4, 'ggT(6; 9) = 3', 2, g=42)], ein='@steckt'),
-            graf([T(5, 5.6, 'a² = a · a  und  a', 1, g=40)], ein='@steckt+0.8'),
+            graf([T(5, 5.6, 'in beiden Gliedern: a', 1, g=40)], ein='@steckt+0.8'),
             graf([T(5, 3.8, 'gemeinsam: 3a', 2, g=46)], ein='@Klammere')),
          sz('Binomisch rückwärts',
             'Dann prüfst du, ob eine binomische Formel passt. Bei y Quadrat minus zehn y plus fünfundzwanzig ist fünfundzwanzig '
-            'gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also y minus fünf im Quadrat. Neun y Quadrat minus '
-            'fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: drei y minus fünf mal drei y plus fünf.',
-            f(r'y^2 - 10y + 25 = \fc{(y - 5)^2}', 300, 56, ein='@Also'),
-            n(r'@25 = 5^2@, @10y = 2 \cdot y \cdot 5@', 420, 'orange', 40, ein='@gleich'),
-            f(r'9y^2 - 25 = \fc{(3y - 5)(3y + 5)}', 540, 56, ein='@dazwischen'),
+            'gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also Klammer y minus fünf im Quadrat. Neun y Quadrat minus '
+            'fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: Klammer drei y minus fünf mal Klammer drei y plus fünf.',
+            f(r'y^2 - 10y + 25', 280, 56, ein='@Bei'),
+            n(r'@25 = 5^2@, @10y = 2 \cdot y \cdot 5@', 380, 'orange', 40, ein='@gleich'),
+            f(r'= \fc{(y - 5)^2}', 460, 56, ein='@Also'),
+            f(r'9y^2 - 25', 580, 56, ein='@Neun'),
+            f(r'= \fc{(3y - 5)(3y + 5)}', 680, 56, ein='@dazwischen'),
             graf([T(5, 7.4, 'a² − 2ab + b² = (a − b)²', 1, g=36)], ein='@binomische'),
             graf([T(5, 4.4, 'a² − b² = (a + b)(a − b)', 1, g=36)], ein='@Quadrate')),
          sz('Zweiklammersatz',
             'Schreib die Zahlenpaare mit dem Produkt zwölf auf: eins und zwölf, zwei und sechs, drei und vier, und dieselben '
-            'negativ. Die Summe minus sieben haben nur minus drei und minus vier. Also x minus drei mal x minus vier.',
+            'negativ. Die Summe minus sieben haben nur minus drei und minus vier. Also Klammer x minus drei mal Klammer x minus vier.',
             f(r'x^2 \fa{- 7}x \fb{+ 12}', 300, 66, ein=0.05),
             n('Produkt @12@, Summe @-7@', 430, 'orange', 44, ein=0.05),
             f(r'= \fc{(x - 3)(x - 4)}', 560, 66, ein='@Also'),
@@ -881,12 +885,12 @@ clip('faktorisieren', 7, 'Terme sehen: Faktorisieren',
             graf(SCH2[0] + SCH2[2][0] + SCH2[2][1] + SCH2[1][0] + SCH2[1][1], ein='@Prüfe')),
          sz('Kein Gleichungslösen',
             'Achtung: Faktorisieren ist kein Gleichungslösen. Bei der Aufgabe, x Quadrat minus fünfundzwanzig zu faktorisieren, '
-            'ist die Antwort ein Produkt: x minus fünf mal x plus fünf. Ein Ergebnis wie x gleich fünf beantwortet eine andere Frage.',
+            'ist die Antwort ein Produkt: Klammer x minus fünf mal Klammer x plus fünf. Ein Ergebnis wie x gleich fünf beantwortet eine andere Frage.',
             f(r'x^2 - 25 = \fc{(x - 5)(x + 5)}', 320, 60, ein='@Antwort'),
             f(r'\fd{x = 5}: \text{ eine andere Frage}', 460, 52, ein='@Ergebnis')),
          sz('Vollständig',
-            'Vollständig faktorisiert ist ein Term erst, wenn sich kein Faktor mehr zerlegen lässt. Fünf x Quadrat minus zwanzig: '
-            'zuerst fünf ausklammern, dann bleibt x Quadrat minus vier, und das ist x minus zwei mal x plus zwei.',
+            'Vollständig faktorisiert ist ein Term erst, wenn sich kein Faktor mehr mit ganzen Zahlen zerlegen lässt. Fünf x Quadrat minus zwanzig: '
+            'zuerst fünf ausklammern, dann bleibt x Quadrat minus vier, und das ist Klammer x minus zwei mal Klammer x plus zwei.',
             f(r'5x^2 - 20 = \fb{5}(x^2 - 4)', 300, 58, ein='@ausklammern'),
             f(r'= \fc{5(x - 2)(x + 2)}', 420, 62, ein='@bleibt')),
          sz('Merke',
@@ -899,9 +903,9 @@ clip('faktorisieren', 7, 'Terme sehen: Faktorisieren',
      ], [
          wahl('Zweiklammersatz', 'x² − 7x + 12: Welche zwei Zahlen haben das Produkt 12 und die Summe −7?',
               ['−3 und −4', '3 und 4', '−2 und −6'], 0,
-              {0: 'Ja.', 1: '3 · 4 = 12 stimmt, aber 3 + 4 = 7, nicht −7.', 2: '(−2) · (−6) = 12 stimmt, aber die Summe ist −8.'},
+              {0: 'Ja.', 1: '3 · 4 = 12 stimmt, aber 3 + 4 = +7, nicht −7.', 2: '(−2) · (−6) = 12 stimmt, aber die Summe ist −8.'},
               sprich='x Quadrat minus sieben x plus zwölf: Welche zwei Zahlen haben das Produkt zwölf und die Summe minus sieben?',
-              rueck_sprich={1: 'Drei mal vier ist zwölf, aber drei plus vier ist plus sieben.',
+              rueck_sprich={1: 'Drei mal vier ist zwölf, aber drei plus vier ist plus sieben, nicht minus sieben.',
                             2: 'Minus zwei mal minus sechs ist zwölf, aber die Summe ist minus acht.'}),
      ])
 
@@ -916,17 +920,17 @@ clip('kontrolle-faktorisieren', 8, 'Terme sehen: Kontrollfragen zum Faktorisiere
             f(r'14x - 21 = \fc{\fb{7}(2x - 3)}', 420, 60, ein=1.0),
             graf([gross('14x − 21')], ein=0.05)),
          sz('Frage 2',
-            'Zwei Quadrate mit Minus dazwischen: x Quadrat und neun Quadrat. Dritte Formel rückwärts: x minus neun mal x plus neun.',
+            'Zwei Quadrate mit Minus dazwischen: x Quadrat und neun Quadrat. Dritte Formel rückwärts: Klammer x minus neun mal Klammer x plus neun.',
             f(r'x^2 - 9^2 = \fc{(x - 9)(x + 9)}', 320, 60, ein=1.0),
             graf([gross('x² − 81')], ein=0.05)),
          sz('Frage 3',
-            'Fünfundzwanzig ist fünf Quadrat, und zehn x ist zwei mal x mal fünf. Erste Formel rückwärts: x plus fünf im Quadrat.',
+            'Fünfundzwanzig ist fünf Quadrat, und zehn x ist zwei mal x mal fünf. Erste Formel rückwärts: Klammer x plus fünf im Quadrat.',
             f(r'25 = 5^2, \quad 10x = 2 \cdot x \cdot 5', 300, 54, ein=1.0),
             f(r'x^2 + 10x + 25 = \fc{(x + 5)^2}', 420, 60, ein=1.0),
             graf([gross('x² + 10x + 25')], ein=0.05)),
          sz('Frage 4',
             'Gesucht: Produkt minus zwölf, Summe plus eins. Vier und minus drei: Vier mal minus drei ist minus zwölf, vier '
-            'minus drei ist eins. Also x plus vier mal x minus drei.',
+            'minus drei ist eins. Also Klammer x plus vier mal Klammer x minus drei.',
             f(r'4 \cdot (-3) = -12, \quad 4 + (-3) = 1', 300, 54, ein=1.0),
             f(r'x^2 + x - 12 = \fc{(x + 4)(x - 3)}', 420, 60, ein=1.0),
             graf([gross('x² + x − 12')], ein=0.05)),
@@ -938,7 +942,7 @@ clip('kontrolle-faktorisieren', 8, 'Terme sehen: Kontrollfragen zum Faktorisiere
             graf([gross('5a(a + 2) + 1')], ein=0.05)),
          sz('Merke',
             'Zum Mitnehmen: Zuerst ausklammern, dann binomische Formeln prüfen, dann Produkt und Summe suchen. Am Ende muss ein '
-            'Produkt stehen, und die Probe durch Ausmultiplizieren zeigt, ob es stimmt.',
+            'Produkt stehen. Ob es stimmt, zeigt die Probe: wieder ausmultiplizieren.',
             titel('Zum Mitnehmen', 250, 76),
             n('ausklammern, binomisch, Zweiklammersatz|am Ende ein Produkt|Probe durch Ausmultiplizieren', 400, 'blau', 44, ein=1.2)),
      ], [
@@ -950,17 +954,17 @@ clip('kontrolle-faktorisieren', 8, 'Terme sehen: Kontrollfragen zum Faktorisiere
          wahl('Frage 2', 'Faktorisiere: x² − 81', ['(x − 9)(x + 9)', '(x − 9)²', '(x − 81)(x + 1)'], 0,
               {0: 'Ja.', 1: '(x − 9)² hat ein mittleres Glied −18x. Hier fehlt es.', 2: 'Ausmultipliziert gibt das x² − 80x − 81.'},
               sprich='Faktorisiere: x Quadrat minus einundachtzig.',
-              rueck_sprich={1: 'x minus neun im Quadrat hat ein mittleres Glied. Hier fehlt es.',
+              rueck_sprich={1: 'Klammer x minus neun im Quadrat hat ein mittleres Glied, minus achtzehn x. Hier fehlt es.',
                             2: 'Ausmultipliziert gibt das x Quadrat minus achtzig x minus einundachtzig.'}),
          wahl('Frage 3', 'Faktorisiere: x² + 10x + 25', ['(x + 5)²', '(x + 5)(x − 5)', '(x + 10)(x + 25)'], 0,
               {0: 'Ja.', 1: '(x + 5)(x − 5) = x² − 25. Hier gibt es ein mittleres Glied.', 2: 'Ausmultipliziert gibt das x² + 35x + 250.'},
               sprich='Faktorisiere: x Quadrat plus zehn x plus fünfundzwanzig.',
-              rueck_sprich={1: 'x plus fünf mal x minus fünf ist x Quadrat minus fünfundzwanzig. Hier gibt es ein mittleres Glied.',
+              rueck_sprich={1: 'Klammer x plus fünf mal Klammer x minus fünf ist x Quadrat minus fünfundzwanzig. Hier gibt es ein mittleres Glied.',
                             2: 'Ausmultipliziert gibt das x Quadrat plus fünfunddreissig x plus zweihundertfünfzig.'}),
          wahl('Frage 4', 'Faktorisiere: x² + x − 12', ['(x + 4)(x − 3)', '(x − 4)(x + 3)', '(x + 6)(x − 2)'], 0,
               {0: 'Ja.', 1: 'Das Produkt stimmt, aber −4 + 3 = −1, nicht +1.', 2: '6 · (−2) = −12 stimmt, aber 6 + (−2) = 4.'},
               sprich='Faktorisiere: x Quadrat plus x minus zwölf.',
-              rueck_sprich={1: 'Das Produkt stimmt, aber minus vier plus drei ist minus eins.',
+              rueck_sprich={1: 'Das Produkt stimmt, aber minus vier plus drei ist minus eins, nicht plus eins.',
                             2: 'Sechs mal minus zwei ist minus zwölf, aber sechs minus zwei ist vier.'}),
          wahl('Frage 5', 'Ist 5a(a + 2) + 1 faktorisiert?', ['Nein, es ist eine Summe.', 'Ja, es kommen Klammern vor.', 'Ja, 5a ist ausgeklammert.'], 0,
               {0: 'Ja.', 1: 'Am Schluss steht + 1: Der ganze Term ist eine Summe, kein Produkt.',

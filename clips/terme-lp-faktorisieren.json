@@ -31,7 +31,7 @@
    "name": "Rückwärts",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Faktorisieren heisst: eine Summe als Produkt schreiben. Es ist das Ausmultiplizieren rückwärts. Aus x Quadrat plus fünf x plus sechs wird wieder x plus zwei mal x plus drei.",
+   "sprecher": "Faktorisieren heisst: eine Summe als Produkt schreiben. Es ist das Ausmultiplizieren rückwärts. Aus x Quadrat plus fünf x plus sechs wird wieder Klammer x plus zwei mal Klammer x plus drei.",
    "elemente": [
     {
      "typ": "formel",
@@ -39,7 +39,7 @@
      "x": 150,
      "y": 300,
      "groesse": 66,
-     "ein": 2.26
+     "ein": 2.02
     },
     {
      "typ": "formel",
@@ -47,7 +47,7 @@
      "x": 150,
      "y": 430,
      "groesse": 66,
-     "ein": 8.86
+     "ein": 8.54
     },
     {
      "typ": "notiz",
@@ -56,7 +56,7 @@
      "y": 570,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 2.72
+     "ein": 2.44
     },
     {
      "typ": "graf",
@@ -66,7 +66,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.52,
+     "ein": 4.18,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -405,7 +405,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.86,
+     "ein": 8.54,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -449,7 +449,7 @@
      "achsen": false
     }
    ],
-   "dauer": 12.25
+   "dauer": 12.16
   },
   {
    "name": "Ausklammern",
@@ -471,7 +471,7 @@
      "x": 150,
      "y": 392,
      "groesse": 58,
-     "ein": 5.35
+     "ein": 5.16
     },
     {
      "typ": "formel",
@@ -479,7 +479,7 @@
      "x": 150,
      "y": 500,
      "groesse": 62,
-     "ein": 6.87
+     "ein": 6.82
     },
     {
      "typ": "formel",
@@ -487,7 +487,7 @@
      "x": 150,
      "y": 620,
      "groesse": 52,
-     "ein": 11.71
+     "ein": 11.48
     },
     {
      "typ": "graf",
@@ -497,7 +497,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.35,
+     "ein": 5.16,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -536,7 +536,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.15,
+     "ein": 5.96,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -547,7 +547,7 @@
         5,
         5.6
        ],
-       "text": "a² = a · a  und  a",
+       "text": "in beiden Gliedern: a",
        "farbe": 1,
        "anker": "middle",
        "groesse": 40,
@@ -575,7 +575,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.87,
+     "ein": 6.82,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -607,38 +607,54 @@
      "achsen": false
     }
    ],
-   "dauer": 16.71
+   "dauer": 15.28
   },
   {
    "name": "Binomisch rückwärts",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Dann prüfst du, ob eine binomische Formel passt. Bei y Quadrat minus zehn y plus fünfundzwanzig ist fünfundzwanzig gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also y minus fünf im Quadrat. Neun y Quadrat minus fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: drei y minus fünf mal drei y plus fünf.",
+   "sprecher": "Dann prüfst du, ob eine binomische Formel passt. Bei y Quadrat minus zehn y plus fünfundzwanzig ist fünfundzwanzig gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also Klammer y minus fünf im Quadrat. Neun y Quadrat minus fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: Klammer drei y minus fünf mal Klammer drei y plus fünf.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "y^2 - 10y + 25 = \\fc{(y - 5)^2}",
+     "text": "y^2 - 10y + 25",
      "x": 150,
-     "y": 300,
+     "y": 280,
      "groesse": 56,
-     "ein": 11.3
+     "ein": 3.14
     },
     {
      "typ": "notiz",
      "text": "@25 = 5^2@, @10y = 2 \\cdot y \\cdot 5@",
      "x": 150,
-     "y": 420,
+     "y": 382,
      "groesse": 40,
      "farbe": "orange",
-     "ein": 6.88
+     "ein": 7.22
     },
     {
      "typ": "formel",
-     "text": "9y^2 - 25 = \\fc{(3y - 5)(3y + 5)}",
+     "text": "= \\fc{(y - 5)^2}",
      "x": 150,
-     "y": 540,
+     "y": 462,
      "groesse": 56,
-     "ein": 17.5
+     "ein": 11.8
+    },
+    {
+     "typ": "formel",
+     "text": "9y^2 - 25",
+     "x": 150,
+     "y": 580,
+     "groesse": 56,
+     "ein": 14.7
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{(3y - 5)(3y + 5)}",
+     "x": 150,
+     "y": 682,
+     "groesse": 56,
+     "ein": 18.22
     },
     {
      "typ": "graf",
@@ -648,7 +664,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.6,
+     "ein": 1.7,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -687,7 +703,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 16.88,
+     "ein": 17.0,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -719,13 +735,13 @@
      "achsen": false
     }
    ],
-   "dauer": 22.3
+   "dauer": 23.68
   },
   {
    "name": "Zweiklammersatz",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Schreib die Zahlenpaare mit dem Produkt zwölf auf: eins und zwölf, zwei und sechs, drei und vier, und dieselben negativ. Die Summe minus sieben haben nur minus drei und minus vier. Also x minus drei mal x minus vier.",
+   "sprecher": "Schreib die Zahlenpaare mit dem Produkt zwölf auf: eins und zwölf, zwei und sechs, drei und vier, und dieselben negativ. Die Summe minus sieben haben nur minus drei und minus vier. Also Klammer x minus drei mal Klammer x minus vier.",
    "elemente": [
     {
      "typ": "formel",
@@ -750,7 +766,7 @@
      "x": 150,
      "y": 560,
      "groesse": 66,
-     "ein": 11.32
+     "ein": 11.34
     },
     {
      "typ": "graf",
@@ -824,7 +840,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.06,
+     "ein": 3.18,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -875,7 +891,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.3,
+     "ein": 4.4,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -977,7 +993,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.14,
+     "ein": 7.12,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1076,7 +1092,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 9.12,
+     "ein": 9.28,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1120,7 +1136,7 @@
      "achsen": false
     }
    ],
-   "dauer": 16.07
+   "dauer": 15.79
   },
   {
    "name": "Probe",
@@ -1134,7 +1150,7 @@
      "x": 150,
      "y": 300,
      "groesse": 52,
-     "ein": 0.57
+     "ein": 0.49
     },
     {
      "typ": "formel",
@@ -1142,7 +1158,7 @@
      "x": 150,
      "y": 420,
      "groesse": 62,
-     "ein": 6.45
+     "ein": 6.39
     },
     {
      "typ": "graf",
@@ -1152,7 +1168,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 0.57,
+     "ein": 0.49,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1452,13 +1468,13 @@
      "achsen": false
     }
    ],
-   "dauer": 9.61
+   "dauer": 9.66
   },
   {
    "name": "Kein Gleichungslösen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Achtung: Faktorisieren ist kein Gleichungslösen. Bei der Aufgabe, x Quadrat minus fünfundzwanzig zu faktorisieren, ist die Antwort ein Produkt: x minus fünf mal x plus fünf. Ein Ergebnis wie x gleich fünf beantwortet eine andere Frage.",
+   "sprecher": "Achtung: Faktorisieren ist kein Gleichungslösen. Bei der Aufgabe, x Quadrat minus fünfundzwanzig zu faktorisieren, ist die Antwort ein Produkt: Klammer x minus fünf mal Klammer x plus fünf. Ein Ergebnis wie x gleich fünf beantwortet eine andere Frage.",
    "elemente": [
     {
      "typ": "formel",
@@ -1466,7 +1482,7 @@
      "x": 150,
      "y": 320,
      "groesse": 60,
-     "ein": 7.5
+     "ein": 7.39
     },
     {
      "typ": "formel",
@@ -1474,16 +1490,16 @@
      "x": 150,
      "y": 460,
      "groesse": 52,
-     "ein": 10.74
+     "ein": 11.57
     }
    ],
-   "dauer": 14.83
+   "dauer": 15.53
   },
   {
    "name": "Vollständig",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Vollständig faktorisiert ist ein Term erst, wenn sich kein Faktor mehr zerlegen lässt. Fünf x Quadrat minus zwanzig: zuerst fünf ausklammern, dann bleibt x Quadrat minus vier, und das ist x minus zwei mal x plus zwei.",
+   "sprecher": "Vollständig faktorisiert ist ein Term erst, wenn sich kein Faktor mehr mit ganzen Zahlen zerlegen lässt. Fünf x Quadrat minus zwanzig: zuerst fünf ausklammern, dann bleibt x Quadrat minus vier, und das ist Klammer x minus zwei mal Klammer x plus zwei.",
    "elemente": [
     {
      "typ": "formel",
@@ -1491,7 +1507,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 7.27
+     "ein": 8.12
     },
     {
      "typ": "formel",
@@ -1499,10 +1515,10 @@
      "x": 150,
      "y": 420,
      "groesse": 62,
-     "ein": 8.33
+     "ein": 9.14
     }
    ],
-   "dauer": 13.03
+   "dauer": 14.71
   },
   {
    "name": "Merke",
@@ -1552,7 +1568,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.27
+   "dauer": 6.09
   }
  ],
  "fragen": [
@@ -1569,12 +1585,12 @@
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
-    "0": "3 · 4 = 12 stimmt, aber 3 + 4 = 7, nicht −7.",
+    "0": "3 · 4 = 12 stimmt, aber 3 + 4 = +7, nicht −7.",
     "1": "(−2) · (−6) = 12 stimmt, aber die Summe ist −8."
    },
    "sprich": "x Quadrat minus sieben x plus zwölf: Welche zwei Zahlen haben das Produkt zwölf und die Summe minus sieben?",
    "rueck_sprich": {
-    "0": "Drei mal vier ist zwölf, aber drei plus vier ist plus sieben.",
+    "0": "Drei mal vier ist zwölf, aber drei plus vier ist plus sieben, nicht minus sieben.",
     "1": "Minus zwei mal minus sechs ist zwölf, aber die Summe ist minus acht."
    }
   }

@@ -788,7 +788,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.11,
+     "ein": 4.63,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -912,7 +912,34 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 2
-      },
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 10.09,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
       {
        "art": "vieleck",
        "punkte": [
@@ -984,7 +1011,34 @@
        "farbe": 2,
        "fuellung": 0.35,
        "dicke": 2
-      },
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 11.11,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
       {
        "art": "text",
        "bei": [
@@ -2256,7 +2310,8 @@
        "farbe": 5,
        "anker": "middle",
        "groesse": 34,
-       "kursiv": false
+       "kursiv": false,
+       "aus": 13.96
       }
      ],
      "pfeile": false,
@@ -2295,7 +2350,8 @@
        "farbe": 4,
        "anker": "middle",
        "groesse": 64,
-       "kursiv": false
+       "kursiv": false,
+       "aus": 6.56
       },
       {
        "art": "vieleck",
@@ -2320,7 +2376,8 @@
        "farbe": 4,
        "fuellung": 0,
        "dicke": 3,
-       "gestrichelt": true
+       "gestrichelt": true,
+       "aus": 6.56
       }
      ],
      "pfeile": false,

@@ -46,7 +46,7 @@
      "x": 150,
      "y": 430,
      "groesse": 58,
-     "ein": 0.3
+     "ein": 1.72
     },
     {
      "typ": "formel",
@@ -54,7 +54,7 @@
      "x": 150,
      "y": 540,
      "groesse": 58,
-     "ein": 3.56
+     "ein": 3.96
     },
     {
      "typ": "formel",
@@ -62,7 +62,7 @@
      "x": 150,
      "y": 650,
      "groesse": 58,
-     "ein": 8.32
+     "ein": 8.84
     },
     {
      "typ": "graf",
@@ -72,7 +72,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.58,
+     "ein": 1.72,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -171,7 +171,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.56,
+     "ein": 3.96,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -270,7 +270,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 9.76,
+     "ein": 10.46,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -362,7 +362,7 @@
      "achsen": false
     }
    ],
-   "dauer": 12.3
+   "dauer": 12.36
   },
   {
    "name": "Quadrat",
@@ -376,7 +376,7 @@
      "x": 150,
      "y": 330,
      "groesse": 62,
-     "ein": 10.1
+     "ein": 9.76
     },
     {
      "typ": "graf",
@@ -485,7 +485,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.0,
+     "ein": 4.64,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -548,7 +548,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.48,
+     "ein": 6.04,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -611,7 +611,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.24,
+     "ein": 7.96,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -703,13 +703,13 @@
      "achsen": false
     }
    ],
-   "dauer": 15.15
+   "dauer": 12.7
   },
   {
    "name": "Mit x",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Für a und b darf auch x und eine Zahl stehen. x plus vier im Quadrat: x Quadrat, dann zwei mal x mal vier, also acht x, und am Schluss vier Quadrat, also sechzehn.",
+   "sprecher": "Für a und b darf auch x und eine Zahl stehen. Klammer x plus vier im Quadrat: x Quadrat, dann zwei mal x mal vier, also acht x, und am Schluss vier Quadrat, also sechzehn.",
    "elemente": [
     {
      "typ": "formel",
@@ -725,7 +725,7 @@
      "x": 150,
      "y": 400,
      "groesse": 58,
-     "ein": 5.19
+     "ein": 6.64
     },
     {
      "typ": "formel",
@@ -733,7 +733,7 @@
      "x": 150,
      "y": 520,
      "groesse": 62,
-     "ein": 7.91
+     "ein": 9.52
     },
     {
      "typ": "graf",
@@ -979,13 +979,13 @@
      "achsen": false
     }
    ],
-   "dauer": 13.6
+   "dauer": 14.05
   },
   {
    "name": "Minus",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Mit Minus ändert sich nur das mittlere Glied: a minus b im Quadrat ist a Quadrat minus zwei a b plus b Quadrat. Bei zwei y minus drei im Quadrat wird auch die Zwei quadriert: vier y Quadrat minus zwölf y plus neun.",
+   "sprecher": "Mit Minus ändert sich nur das mittlere Glied: Klammer a minus b im Quadrat ist a Quadrat minus zwei a b plus b Quadrat. Im Bild nimmst du vom Quadrat a Quadrat zwei Streifen a b weg. Das Eckquadrat b Quadrat war dabei doppelt weg, darum kommt es einmal dazu. Bei Klammer zwei y minus drei im Quadrat wird auch die Zwei quadriert: vier y Quadrat minus zwölf y plus neun.",
    "elemente": [
     {
      "typ": "formel",
@@ -993,7 +993,7 @@
      "x": 150,
      "y": 280,
      "groesse": 58,
-     "ein": 1.97
+     "ein": 1.99
     },
     {
      "typ": "formel",
@@ -1001,7 +1001,7 @@
      "x": 150,
      "y": 420,
      "groesse": 58,
-     "ein": 10.45
+     "ein": 19.37
     },
     {
      "typ": "notiz",
@@ -1010,7 +1010,7 @@
      "y": 560,
      "groesse": 42,
      "farbe": "orange",
-     "ein": 11.25
+     "ein": 20.17
     },
     {
      "typ": "graf",
@@ -1020,7 +1020,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.97,
+     "ein": 7.71,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1242,6 +1242,30 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.25,
+        8.85
+       ],
+       "text": "b",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        2.6
+       ],
+       "text": "b",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
       }
      ],
      "pfeile": false,
@@ -1258,13 +1282,13 @@
      "achsen": false
     }
    ],
-   "dauer": 16.98
+   "dauer": 28.35
   },
   {
    "name": "Dritte Formel",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Die dritte Formel: a plus b mal a minus b ist a Quadrat minus b Quadrat. Die beiden gemischten Glieder heben sich auf. Zum Beispiel ist fünf plus x mal fünf minus x gleich fünfundzwanzig minus x Quadrat. Im Bild fehlt beim Quadrat a Quadrat die Ecke b Quadrat. Das orange Stück passt rechts an, und es entsteht ein Rechteck mit den Seiten a plus b und a minus b.",
+   "sprecher": "Die dritte Formel: Klammer a plus b mal Klammer a minus b ist a Quadrat minus b Quadrat. Die beiden gemischten Glieder heben sich auf. Zum Beispiel ist Klammer fünf plus x mal Klammer fünf minus x gleich fünfundzwanzig minus x Quadrat. Im Bild fehlt beim Quadrat a Quadrat die Ecke b Quadrat. Das orange Stück legst du rechts an, und es entsteht ein Rechteck mit den Seiten a plus b und a minus b.",
    "elemente": [
     {
      "typ": "formel",
@@ -1272,7 +1296,7 @@
      "x": 150,
      "y": 280,
      "groesse": 58,
-     "ein": 0.67
+     "ein": 0.7
     },
     {
      "typ": "formel",
@@ -1280,7 +1304,7 @@
      "x": 150,
      "y": 400,
      "groesse": 56,
-     "ein": 7.33
+     "ein": 8.12
     },
     {
      "typ": "graf",
@@ -1290,7 +1314,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 12.83,
+     "ein": 14.18,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1341,7 +1365,8 @@
        ],
        "farbe": 5,
        "fuellung": 0,
-       "dicke": 3
+       "dicke": 3,
+       "aus": 20.52
       },
       {
        "art": "text",
@@ -1353,7 +1378,8 @@
        "farbe": 5,
        "anker": "middle",
        "groesse": 32,
-       "kursiv": false
+       "kursiv": false,
+       "aus": 20.52
       },
       {
        "art": "text",
@@ -1365,7 +1391,8 @@
        "farbe": 5,
        "anker": "middle",
        "groesse": 32,
-       "kursiv": false
+       "kursiv": false,
+       "aus": 20.52
       }
      ],
      "pfeile": false,
@@ -1389,7 +1416,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 14.81,
+     "ein": 16.28,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1453,7 +1480,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 12.83,
+     "ein": 14.18,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1483,28 +1510,28 @@
        "dicke": 2,
        "bewegung": [
         [
-         16.95,
+         18.28,
          {}
         ],
         [
-         18.35,
+         19.68,
          {
           "punkte": [
            [
             5.5,
-            9.5
+            5.0
            ],
            [
             5.5,
-            6.5
+            2.0
            ],
            [
             7.0,
-            6.5
+            2.0
            ],
            [
             7.0,
-            9.5
+            5.0
            ]
           ]
          }
@@ -1533,7 +1560,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 19.03,
+     "ein": 20.52,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1543,43 +1570,19 @@
        "punkte": [
         [
          1.0,
-         6.5
-        ],
-        [
-         5.5,
-         6.5
-        ],
-        [
-         5.5,
-         9.5
-        ],
-        [
-         1.0,
-         9.5
-        ]
-       ],
-       "farbe": 1,
-       "fuellung": 0.35,
-       "dicke": 2
-      },
-      {
-       "art": "vieleck",
-       "punkte": [
-        [
-         1.0,
-         6.5
+         2.0
         ],
         [
          7.0,
-         6.5
+         2.0
         ],
         [
          7.0,
-         9.5
+         5.0
         ],
         [
          1.0,
-         9.5
+         5.0
         ]
        ],
        "farbe": 5,
@@ -1590,7 +1593,7 @@
        "art": "text",
        "bei": [
         4.0,
-        9.8
+        5.3
        ],
        "text": "a + b",
        "farbe": 5,
@@ -1601,8 +1604,8 @@
       {
        "art": "text",
        "bei": [
-        7.4,
-        7.9
+        7.3,
+        3.4
        ],
        "text": "a − b",
        "farbe": 5,
@@ -1625,13 +1628,13 @@
      "achsen": false
     }
    ],
-   "dauer": 27.36
+   "dauer": 29.45
   },
   {
    "name": "Kopfrechnen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Die Formeln helfen auch beim Kopfrechnen. Einundfünfzig im Quadrat ist fünfzig plus eins im Quadrat: zweitausend fünfhundert plus hundert plus eins, also zweitausend sechshundert eins. Und neunundvierzig mal einundfünfzig ist fünfzig Quadrat minus eins: zweitausend vierhundert neunundneunzig.",
+   "sprecher": "Die Formeln helfen auch beim Kopfrechnen. Einundfünfzig im Quadrat ist Klammer fünfzig plus eins im Quadrat: zweitausend fünfhundert plus hundert plus eins, also zweitausend sechshundert eins. Und neunundvierzig mal einundfünfzig ist fünfzig Quadrat minus eins: zweitausend vierhundert neunundneunzig.",
    "elemente": [
     {
      "typ": "formel",
@@ -1639,7 +1642,7 @@
      "x": 150,
      "y": 330,
      "groesse": 52,
-     "ein": 2.65
+     "ein": 3.05
     },
     {
      "typ": "formel",
@@ -1647,16 +1650,16 @@
      "x": 150,
      "y": 480,
      "groesse": 52,
-     "ein": 11.51
+     "ein": 11.67
     }
    ],
-   "dauer": 18.93
+   "dauer": 18.71
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: a plus b im Quadrat ist a Quadrat plus zwei a b plus b Quadrat, mit Minus wird nur das mittlere Glied negativ. a plus b mal a minus b ist a Quadrat minus b Quadrat. Nie das mittlere Glied vergessen.",
+   "sprecher": "Zum Mitnehmen: Klammer a plus b im Quadrat ist a Quadrat plus zwei a b plus b Quadrat, mit Minus wird nur das mittlere Glied negativ. Klammer a plus b mal Klammer a minus b ist a Quadrat minus b Quadrat. Nie das mittlere Glied vergessen.",
    "elemente": [
     {
      "typ": "titel",
@@ -1690,7 +1693,7 @@
      "ein": 2.0
     }
    ],
-   "dauer": 14.12
+   "dauer": 15.64
   },
   {
    "name": "Jetzt du",
@@ -1715,7 +1718,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.29
+   "dauer": 6.3
   }
  ],
  "fragen": [
@@ -1727,11 +1730,11 @@
    "optionen": [
     "Ja, beides ist 49.",
     "Nein",
-    "Ja"
+    "Ja, man darf jede Zahl einzeln quadrieren."
    ],
    "richtig": 1,
    "rueck": {
-    "1": "Ja, richtig: Es ist nicht dasselbe.",
+    "1": "Richtig: Es ist nicht dasselbe.",
     "2": "Rechne nach: (3 + 4)² = 7² = 49, aber 3² + 4² = 9 + 16 = 25.",
     "0": "3² + 4² = 9 + 16 = 25, nicht 49."
    },

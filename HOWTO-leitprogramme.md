@@ -782,6 +782,19 @@ gegen sie und darüber hinaus.
   eines Testbeispiels prüfen, ob die neue Zahl schon in Festhalten, Clip oder Simulation steht.
 - **Sperrliste gegen den Schlüssel prüfen, nicht gegen die Aufgabe.** Ein Schlüssel mit
   falschem Vorzeichen (`bg|1|-1|3` für \(|x - 1| = 3\)) sperrt nichts — der Clip-Fall kam weiter.
+- **Sperrschlüssel normieren, Prüfskript mit derselben Normierung** (Terme 10.10.2026): Ein Typ, der seine
+  Zahlenpaare sortiert (`ko|-3|4`), wird von unsortierten Einträgen (`ko|4|-3`) nie gesperrt, und ein Schlüssel,
+  der von der Reihenfolge der Faktoren abhängt (`am|1,3|1,2` gegen `am|1,2|1,3`), übersieht die vertauschte
+  Aufgabe — Festhalten-Beispiel und Kontrollfragen kamen in bis zu 4.5 % der Würfe. Die Seite normiert Einträge
+  und Würfe mit derselben Funktion und gibt sie als Testhaken frei (`window.__gesperrt`); das Prüfskript zählt
+  darüber, nicht über einen eigenen Stringvergleich.
+- **Probe nicht mit 0 oder 1** (Terme 10.10.2026): Bei \(x = 1\) ist \(x^2 = x\) — eine Probe mit 1 bestätigt
+  \(11x - 18\) statt \(2x^2 + 9x - 18\). In Festhalten, Lösungen und Rückmeldungen \(x = 2\) und den Grund nennen.
+- **Gesprochene Klammerprodukte eindeutig** (Terme 10.10.2026): «x plus zwei mal x plus drei» heisst gesprochen
+  \(x + 2x + 3\). Im Sprechertext «Klammer x plus zwei mal Klammer x plus drei», «Klammer y minus fünf im Quadrat».
+- **Eine Regel mit Bedingung nie ohne die Bedingung** (Terme 10.10.2026): «Zahl am Schluss Produkt, x-Glied Summe»
+  gilt nur für \((x + m)(x + n)\); «\((a + b)^2 > a^2 + b^2\)» nur für positive \(a, b\); «vollständig faktorisiert»
+  heisst «mit ganzen Zahlen»; «eine Summe zweier Quadrate zerfällt nicht» ist falsch (\(4x^2 + 16\)).
 - **Fragetexte eines Kontrollclips verschieden beginnen lassen**: `pruef-fragen` erkennt eine Frage
   an ihren ersten 20 Zeichen; zwei Fragen «Welche Nullstellen hat …» lassen den Durchlauf scheitern.
 - Live-Anzeigen runden nur mit «≈».

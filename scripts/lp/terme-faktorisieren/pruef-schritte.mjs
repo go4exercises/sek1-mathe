@@ -31,7 +31,7 @@ const melde = (ok, t) => { console.log((ok ? '[OK]     ' : '[FEHLER] ') + t); if
 // ---- 1. Leisten: Zielwerte (Regler-ID → Wert, in dieser Reihenfolge gesetzt)
 const ZIELE = {
   sim1: [[['s1-a', 2], ['s1-b', 6]], [['s1-a', 6], ['s1-b', -4]], [['s1-a', 3], ['s1-b', 6]], [['s1-a', 5], ['s1-b', -2]], [['s1-a', 3], ['s1-b', -3]]],
-  sim2: [[['s2-a', 3], ['s2-b', 1]], [['s2-a', 4], ['s2-b', -1]], [['s2-a', -2], ['s2-b', -5]], [['s2-a', 3], ['s2-b', -3]], [['s2-a', 4], ['s2-b', -3]]],
+  sim2: [[['s2-a', 3], ['s2-b', 1]], [['s2-a', 4], ['s2-b', -1]], [['s2-a', -2], ['s2-b', -5]], [['s2-a', 3], ['s2-b', -3]], [['s2-a', 4], ['s2-b', -2]]],
   sim3: [[['s3-a', 5], ['s3-b', 2]], [['s3-a', 5], ['s3-b', 3]], [['s3-a', 7], ['s3-b', 4]], [['s3-a', 5], ['s3-b', 1]]],
   sim4: [[['s4-m', 2], ['s4-n', 4]], [['s4-m', -3], ['s4-n', -5]], [['s4-m', 5], ['s4-n', -3]], [['s4-m', -3], ['s4-n', -3]], [['s4-m', 4], ['s4-n', -4]]],
 };
@@ -78,8 +78,9 @@ const V = await page.evaluate(() => {
   for (const [name, T] of Object.entries(window.__TYPEN)) {
     const schl = new Map(); let gesperrt = 0;
     for (let i = 0; i < 20000; i++) {
-      let A = T.neu(); for (let v = 0; v < 60 && window.__SPERRE.indexOf(T.schl(A)) >= 0; v++) A = T.neu();
-      const k = T.schl(A); if (window.__SPERRE.indexOf(k) >= 0) gesperrt++;
+      // dieselbe Normierung wie die Seite (window.__gesperrt): unsortierte Paare zählen als gesperrt (Prüfung 10.10.2026)
+      let A = T.neu(); for (let v = 0; v < 60 && window.__gesperrt(T, A); v++) A = T.neu();
+      const k = T.schl(A); if (window.__gesperrt(T, A)) gesperrt++;
       schl.set(k, (schl.get(k) || 0) + 1);
     }
     const haeufigst = Math.max(...schl.values());

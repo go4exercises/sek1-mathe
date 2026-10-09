@@ -480,7 +480,7 @@
      "achsen": false
     }
    ],
-   "dauer": 9.13
+   "dauer": 9.32
   },
   {
    "name": "Frage 2",
@@ -536,7 +536,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.19
+   "dauer": 7.89
   },
   {
    "name": "Frage 3",
@@ -600,13 +600,13 @@
      "achsen": false
     }
    ],
-   "dauer": 7.93
+   "dauer": 8.06
   },
   {
    "name": "Frage 4",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Nein. Zwei x und drei x Quadrat sind nicht gleichartig, man kann sie nicht zusammenfassen. Probe mit x gleich zwei: links vier plus zwölf, also sechzehn, rechts fünf mal acht, also vierzig.",
+   "sprecher": "Nein. Zwei x und drei x Quadrat sind nicht gleichartig, du kannst sie nicht zusammenfassen. Probe mit x gleich zwei: links vier plus zwölf, also sechzehn, rechts fünf mal acht, also vierzig.",
    "elemente": [
     {
      "typ": "formel",
@@ -664,7 +664,7 @@
      "achsen": false
     }
    ],
-   "dauer": 12.9
+   "dauer": 12.23
   },
   {
    "name": "Frage 5",
@@ -728,7 +728,7 @@
      "achsen": false
     }
    ],
-   "dauer": 7.63
+   "dauer": 7.4
   },
   {
    "name": "Merke",
@@ -753,7 +753,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 8.7
+   "dauer": 8.49
   }
  ],
  "fragen": [
@@ -836,13 +836,13 @@
    "richtig": 1,
    "rueck": {
     "1": "Ja.",
-    "2": "Hochzahlen addiert man beim Multiplizieren, nicht beim Addieren. Probe mit x = 2: 16 gegen 40.",
-    "0": "x und x² sind verschiedene Arten von Gliedern, wie Streifen und Quadrate."
+    "2": "Beim Addieren bleibt die Hochzahl, und nur gleichartige Glieder lassen sich addieren. Probe mit x = 2: 16 gegen 40.",
+    "0": "x und x² sind verschiedene Arten von Gliedern: Sie lassen sich nicht zusammenfassen."
    },
    "sprich": "Ist zwei x plus drei x Quadrat dasselbe wie fünf x hoch drei?",
    "rueck_sprich": {
-    "2": "Hochzahlen addiert man beim Multiplizieren, nicht beim Addieren. Probe mit x gleich zwei: sechzehn gegen vierzig.",
-    "0": "x und x Quadrat sind verschiedene Arten von Gliedern, wie Streifen und Quadrate."
+    "2": "Beim Addieren bleibt die Hochzahl, und nur gleichartige Glieder lassen sich addieren. Probe mit x gleich zwei: sechzehn gegen vierzig.",
+    "0": "x und x Quadrat sind verschiedene Arten von Gliedern: Sie lassen sich nicht zusammenfassen."
    }
   },
   {
