@@ -1,0 +1,27 @@
+{
+  "name": "Wandtafel",
+  "beschreibung": "Dunkelgrüne Tafel, Kreide, gelbe Kreide als Akzent.",
+  "papier": "#1E2E27",
+  "tinte": "#EAF0E8",
+  "blau": "#8FC7D8",
+  "rot": "#E8896B",
+  "gruen": "#8FD3A8",
+  "gold": "#E8C05A",
+  "karo": false,
+  "rand": false,
+  "karte": "rgba(255,255,255,.07)",
+  "box": "rgba(255,255,255,.06)",
+  "vignette": "rgba(0,0,0,.35)",
+  "farben": [
+    "#7FC4E8",
+    "#F0A868",
+    "#8FD3A8",
+    "#CBA0E4"
+  ],
+  "flaechen": [
+    "rgba(127,196,232,.16)",
+    "rgba(240,168,104,.16)",
+    "rgba(143,211,168,.16)",
+    "rgba(203,160,228,.16)"
+  ]
+}

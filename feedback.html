@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt &amp; Feedback — TALS</title>
+<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->
+<meta name="description" content="Fehler melden, Verbesserungen vorschlagen oder Rückmeldung geben zu Sek1-Mathe begreifbar — ohne Anmeldung, Name und E-Mail freiwillig.">
+<meta name="author" content="Raphael Arnold Kohler">
+<link rel="canonical" href="https://sek1-mathe.begreifbar.ch/feedback.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sek1-Mathe begreifbar">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Kontakt &amp; Feedback">
+<meta property="og:description" content="Fehler melden, Verbesserungen vorschlagen oder Rückmeldung geben zu Sek1-Mathe begreifbar — ohne Anmeldung, Name und E-Mail freiwillig.">
+<meta property="og:url" content="https://sek1-mathe.begreifbar.ch/feedback.html">
+<meta property="og:image" content="https://sek1-mathe.begreifbar.ch/og-bild.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://sek1-mathe.begreifbar.ch/feedback.html#inhalt",
+   "url": "https://sek1-mathe.begreifbar.ch/feedback.html",
+   "name": "Kontakt & Feedback",
+   "description": "Fehler melden, Verbesserungen vorschlagen oder Rückmeldung geben zu Sek1-Mathe begreifbar — ohne Anmeldung, Name und E-Mail freiwillig.",
+   "inLanguage": "de-CH",
+   "isAccessibleForFree": true,
+   "license": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
+   "creator": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "publisher": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "dateModified": "2026-10-09",
+   "isPartOf": {
+    "@id": "https://sek1-mathe.begreifbar.ch/#website"
+   },
+   "about": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Kontakt"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Feedback"
+    }
+   ],
+   "keywords": "Kontakt, Feedback"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sek1-mathe.begreifbar.ch/#website",
+   "url": "https://sek1-mathe.begreifbar.ch/",
+   "name": "Sek1-Mathe begreifbar"
+  }
+ ]
+}
+</script>
+<!-- SEO:ENDE -->
+<link rel="stylesheet" href="schriften.css">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   TALS Feedback — eigenständige Seite, funktioniert in
+   TALS-Mathe UND TALS-Physik (Projekt wird automatisch erkannt)
+   Tokens identisch mit style.css
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  --papier:#f8f6f1; --papier-2:#efeade; --weiss:#fff;
+  --tinte:#1c1a17; --tinte-2:#5a5040; --linie:#d8d0c4;
+  --blau:#1a4f8a; --blau-hell:#ddeaf8; --blau-rand:#5b8fc9;
+  --gruen:#1f6b3a; --gruen-hell:#d8f0e2; --gruen-rand:#52a872;
+  --orange:#b85c00; --orange-hell:#fdefd8; --orange-rand:#e08030;
+  --rot:#9b1c1c; --rot-hell:#fde8e8; --rot-rand:#d05050;
+  --lila:#5b2d8e; --lila-hell:#ede6f8; --lila-rand:#9b6bd4;
+  --serif:'Source Serif 4',Georgia,serif;
+  --sans:'Source Sans 3',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --s:0 2px 10px rgba(28,26,23,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--papier);color:var(--tinte);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+.wrap{max-width:720px;margin:0 auto;padding:36px 20px 90px}
+.kopf{text-align:center;margin-bottom:28px}
+.kopf-ew{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--blau);margin-bottom:10px}
+.kopf-ew::before,.kopf-ew::after{content:'';display:block;width:22px;height:1.5px;background:var(--blau-rand)}
+.kopf h1{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;line-height:1.2}
+.kopf p{font-size:.9rem;color:var(--tinte-2);font-weight:300;max-width:480px;margin:8px auto 0}
+.zurueck{display:inline-block;margin-top:10px;font-size:.8rem;color:var(--blau);text-decoration:none}
+.zurueck:hover{text-decoration:underline}
+
+.karte{background:var(--weiss);border:1px solid var(--linie);border-radius:10px;box-shadow:var(--s);padding:26px 24px}
+fieldset{border:none;margin-bottom:22px}
+legend,.lbl{display:block;font-weight:600;font-size:.88rem;margin-bottom:8px}
+.hinweis{font-size:.76rem;color:var(--tinte-2);font-weight:300;margin-top:-4px;margin-bottom:8px}
+
+/* Datenschutzhinweis unter dem Senden-Knopf — erscheint zusammen mit ihm */
+.datenschutz{font-size:.76rem;line-height:1.6;color:var(--tinte-2);background:var(--papier-2);border:1px solid var(--linie);border-radius:8px;padding:12px 14px;margin:16px 0 0}
+.datenschutz strong{color:var(--tinte)}
+.datenschutz a{color:var(--blau)}
+
+/* Kleiner Fuss unter dem Formular */
+.fuss{margin-top:28px;text-align:center;font-size:.72rem;line-height:1.9;color:var(--tinte-2);font-weight:300}
+.fuss a{color:var(--tinte-2);text-decoration:none}
+.fuss a:hover{color:var(--tinte);text-decoration:underline}
+
+/* Kategorien-Chips */
+.kats{display:flex;flex-wrap:wrap;gap:8px}
+.kat{position:relative}
+.kat input{position:absolute;opacity:0;width:100%;height:100%;cursor:pointer}
+.kat span{display:inline-block;font-family:var(--mono);font-size:.74rem;padding:6px 13px;border-radius:20px;border:1.5px solid var(--linie);background:var(--papier);color:var(--tinte-2);cursor:pointer;transition:all .15s;user-select:none}
+.kat input:focus-visible + span{outline:2px solid var(--blau);outline-offset:2px}
+.kat input:checked + span{font-weight:700}
+.kat[data-c="gruen"] input:checked + span{background:var(--gruen-hell);color:var(--gruen);border-color:var(--gruen-rand)}
+.kat[data-c="rot"]   input:checked + span{background:var(--rot-hell);color:var(--rot);border-color:var(--rot-rand)}
+.kat[data-c="lila"]  input:checked + span{background:var(--lila-hell);color:var(--lila);border-color:var(--lila-rand)}
+.kat[data-c="orange"]input:checked + span{background:var(--orange-hell);color:var(--orange);border-color:var(--orange-rand)}
+.kat[data-c="blau"]  input:checked + span{background:var(--blau-hell);color:var(--blau);border-color:var(--blau-rand)}
+
+/* Formularfelder */
+input[type=text],input[type=email],select,textarea{
+  width:100%;font-family:var(--sans);font-size:.9rem;color:var(--tinte);
+  background:var(--papier);border:1px solid var(--linie);border-radius:7px;
+  padding:9px 12px;transition:border-color .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blau-rand);background:var(--weiss)}
+textarea{min-height:110px;resize:vertical}
+input[type=file]{width:100%;font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);background:var(--weiss);border:1px dashed var(--linie);border-radius:7px;padding:9px 12px;cursor:pointer}
+input[type=file]::file-selector-button{font-family:var(--sans);font-weight:600;font-size:.8rem;color:var(--blau);background:var(--blau-hell);border:1px solid var(--blau-rand);border-radius:6px;padding:5px 12px;margin-right:12px;cursor:pointer}
+.feld{margin-bottom:16px}
+.zeile{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.zeile{grid-template-columns:1fr}}
+.pflicht::after{content:' *';color:var(--rot)}
+
+.detail{border-left:3px solid var(--blau-rand);background:var(--blau-hell);border-radius:0 8px 8px 0;padding:16px 16px 4px;margin-bottom:20px}
+.detail .feld input,.detail .feld select,.detail .feld textarea{background:var(--weiss)}
+.hidden{display:none !important}
+
+button[type=submit]{
+  font-family:var(--sans);font-weight:700;font-size:.95rem;color:#fff;
+  background:var(--blau);border:none;border-radius:8px;padding:12px 28px;
+  cursor:pointer;transition:background .15s}
+button[type=submit]:hover{background:#153f6f}
+button[type=submit]:disabled{background:var(--linie);color:var(--tinte-2);cursor:wait}
+button[type=submit]:focus-visible{outline:2px solid var(--tinte);outline-offset:2px}
+
+.status{margin-top:18px;padding:13px 16px;border-radius:8px;font-size:.88rem;display:none}
+.status.ok{display:block;background:var(--gruen-hell);color:var(--gruen);border:1px solid var(--gruen-rand)}
+.status.err{display:block;background:var(--rot-hell);color:var(--rot);border:1px solid var(--rot-rand)}
+
+@media(prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+<!-- Übernimmt die Design-Tokens der jeweiligen Website (Mathe/Physik).
+     Kommt bewusst NACH den eingebetteten Styles: Die Variablen der
+     Website gewinnen; fehlt style.css (z.B. Vorschau), greifen die
+     eingebetteten Fallback-Werte. -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="kopf">
+    <div class="kopf-ew">Kontakt &amp; Feedback</div>
+    <h1 id="titel">Rückmeldung zu den TALS Lernseiten</h1>
+    <p>Rückmeldungen sind ohne Anmeldung möglich. Name und E-Mail-Adresse sind freiwillig. Bei Fehlermeldungen helfen präzise Angaben, damit die Korrektur schnell umgesetzt werden kann.</p>
+    <a class="zurueck" id="zurueck" href="index.html">← zurück zur Übersicht</a>
+  </header>
+
+  <form id="fb" class="karte" novalidate>
+
+    <!-- Honeypot gegen Spam (wird im Apps Script ausgewertet) -->
+    <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+
+    <!-- ── 1) Kategorie ── -->
+    <fieldset>
+      <legend class="pflicht">Um was geht es?</legend>
+      <div class="kats">
+        <label class="kat" data-c="gruen"><input type="radio" name="kategorie" value="Lob/Tadel" required><span>Lob · Tadel</span></label>
+        <label class="kat" data-c="orange"><input type="radio" name="kategorie" value="Fehler/Unschönheit/Vorschlag"><span>Fehler · Unschönheit · Vorschlag</span></label>
+      </div>
+    </fieldset>
+
+    <!-- ── 2a) Einfacher Zweig: Lob / Tadel ── -->
+    <div id="zweig-einfach" class="hidden">
+      <div class="feld">
+        <label class="lbl pflicht" for="msg-einfach">Deine Nachricht</label>
+        <textarea id="msg-einfach" placeholder="Schreib einfach drauflos …"></textarea>
+      </div>
+    </div>
+
+    <!-- ── 2b) Strukturierter Zweig: Fehlermeldung / Unschönheit / Verbesserungsvorschlag ── -->
+    <div id="zweig-struktur" class="hidden">
+
+      <div class="feld">
+        <label class="lbl pflicht" for="betrifft">Betrifft</label>
+        <select id="betrifft">
+          <option value="" selected disabled>Bitte wählen …</option>
+          <option value="Themenseite">Themenseite (Webseite)</option>
+          <option value="Druckseite">Druckseite (PDF/Download)</option>
+          <option value="Externe Ressource">Externe Ressource (Link)</option>
+        </select>
+      </div>
+
+      <!-- Vertiefung: Themenseite -->
+      <div id="det-themenseite" class="detail hidden">
+        <div class="feld">
+          <label class="lbl pflicht" for="ts-seite">Welche Themenseite?</label>
+          <input type="text" id="ts-seite" placeholder="z.B. 4.2 Diagramme — oder Adresse aus der Browserzeile">
+          <p class="hinweis">Kürzel (g4-2, p4-5), Titel oder Link — Hauptsache, die Seite ist eindeutig.</p>
+        </div>
+        <div class="feld">
+          <label class="lbl pflicht" for="ts-ort">Wo genau auf der Seite?</label>
+          <input type="text" id="ts-ort" placeholder="z.B. Abschnitt 2, Animation «Boxplot», Aufgabe 3b, Merkkasten …">
+        </div>
+        <div class="feld">
+          <label class="lbl" for="ts-ist">Bei einem Fehler: Was steht dort aktuell? (Ist)</label>
+          <textarea id="ts-ist" style="min-height:70px" placeholder="Am besten wörtlich abschreiben oder beschreiben."></textarea>
+        </div>
+        <div class="feld">
+          <label class="lbl" for="ts-soll">Bei einem Fehler: Was wäre korrekt? (Soll)</label>
+          <textarea id="ts-soll" style="min-height:70px" placeholder="Falls bekannt — sonst leer lassen."></textarea>
+        </div>
+        <div class="feld">
+          <label class="lbl pflicht" for="ts-besch">Beschreibung</label>
+          <textarea id="ts-besch" placeholder="Was ist falsch, unschön oder wie liesse es sich verbessern?"></textarea>
+        </div>
+      </div>
+
+      <!-- Vertiefung: Druckseite -->
+      <div id="det-druckseite" class="detail hidden">
+        <div class="zeile">
+          <div class="feld">
+            <label class="lbl pflicht" for="ds-thema">Zu welcher Themenseite gehört sie?</label>
+            <input type="text" id="ds-thema" placeholder="z.B. 4.2 Diagramme / g4-2">
+          </div>
+          <div class="feld">
+            <label class="lbl pflicht" for="ds-typ">Welche Druckseite?</label>
+            <select id="ds-typ">
+              <option value="" selected disabled>Bitte wählen …</option>
+              <option>Handout</option>
+              <option>Formelauszug</option>
+              <option>Teste dich selbst</option>
+              <option>Aufgabenserie</option>
+              <option>Anki-Karten</option>
+              <option>Andere / weiss nicht</option>
+            </select>
+          </div>
+        </div>
+        <div class="feld">
+          <label class="lbl pflicht" for="ds-ort">Wo genau? (Aufgabe, Formel, Abschnitt)</label>
+          <input type="text" id="ds-ort" placeholder="z.B. Aufgabe 5, Lösung Teilaufgabe c / Formel P7 / Seite 2 unten">
+        </div>
+        <div class="feld">
+          <label class="lbl" for="ds-ist">Bei einem Fehler: Was steht dort aktuell? (Ist)</label>
+          <textarea id="ds-ist" style="min-height:70px" placeholder="Am besten wörtlich abschreiben."></textarea>
+        </div>
+        <div class="feld">
+          <label class="lbl" for="ds-soll">Bei einem Fehler: Was wäre korrekt? (Soll)</label>
+          <textarea id="ds-soll" style="min-height:70px" placeholder="Falls bekannt — sonst leer lassen."></textarea>
+        </div>
+        <div class="feld">
+          <label class="lbl pflicht" for="ds-besch">Beschreibung</label>
+          <textarea id="ds-besch" placeholder="Was ist falsch, unschön oder wie liesse es sich verbessern?"></textarea>
+        </div>
+      </div>
+
+      <!-- Vertiefung: Externe Ressource -->
+      <div id="det-extern" class="detail hidden">
+        <div class="feld">
+          <label class="lbl pflicht" for="ex-seite">Auf welcher Themenseite ist der Link?</label>
+          <input type="text" id="ex-seite" placeholder="z.B. 1.3 Algebraische Terme / g1-3">
+        </div>
+        <div class="feld">
+          <label class="lbl pflicht" for="ex-name">Welcher Link? (Name oder Adresse)</label>
+          <input type="text" id="ex-name" placeholder="z.B. «Serlo: Binomische Formeln» oder https://…">
+        </div>
+        <div class="feld">
+          <label class="lbl pflicht" for="ex-problem">Was ist das Problem?</label>
+          <select id="ex-problem">
+            <option value="" selected disabled>Bitte wählen …</option>
+            <option>Link funktioniert nicht (tot / Fehlerseite)</option>
+            <option>Link führt zum falschen Inhalt</option>
+            <option>Inhalt ist fachlich fragwürdig</option>
+            <option>Inhalt passt nicht zum Thema / Niveau</option>
+            <option>Bessere Alternative gefunden</option>
+            <option>Anderes</option>
+          </select>
+        </div>
+        <div class="feld">
+          <label class="lbl" for="ex-besch">Beschreibung / Alternative</label>
+          <textarea id="ex-besch" style="min-height:80px" placeholder="Details oder Link zur besseren Ressource."></textarea>
+        </div>
+      </div>
+
+      <!-- Screenshot (freiwillig) -->
+      <div class="feld">
+        <label class="lbl" for="shot">Bildschirmausschnitt (freiwillig)</label>
+        <input type="file" id="shot" accept="image/png,image/jpeg,image/webp">
+        <p class="hinweis">Ein Bild sagt oft mehr als die Beschreibung — PNG oder JPG, max. 8 MB.</p>
+      </div>
+
+    </div>
+
+    <!-- ── 3) Freiwillige Angaben zur Person ── -->
+    <div id="feld-email" class="hidden">
+      <div class="zeile">
+        <div class="feld">
+          <label class="lbl" for="name">Name (freiwillig)</label>
+          <input type="text" id="name" name="name" placeholder="freiwillig — kann leer bleiben">
+        </div>
+        <div class="feld">
+          <label class="lbl" for="email">E-Mail für Rückfragen (freiwillig)</label>
+          <input type="email" id="email" name="email" placeholder="freiwillig — nötig für eine Antwort">
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" id="senden" class="hidden" disabled>Feedback senden</button>
+
+    <div class="datenschutz hidden" id="ds-hinweis">
+      <strong>Datenschutz:</strong> Mit dem Absenden werden die Nachricht sowie freiwillig
+      angegebener Name, E-Mail-Adresse und ein hochgeladener Screenshot über Google Apps Script
+      an den Betreiber übermittelt. Die Angaben werden ausschliesslich zur Prüfung, Bearbeitung
+      und gegebenenfalls Beantwortung der Rückmeldung verwendet. Bitte keine sensiblen
+      Personendaten oder Bilder erkennbarer Personen übermitteln. Die Daten werden nach Abschluss
+      der Bearbeitung, spätestens nach 12 Monaten, gelöscht. Weitere Angaben:
+      <a href="rechtliches.html">Rechtliches &amp; Datenschutz</a>.
+      <br><br>
+      Kontakt für Auskunft, Berichtigung oder Löschung: über dieses Formular. Damit eine Antwort
+      möglich ist, bitte im freiwilligen Feld eine E-Mail-Adresse angeben.
+    </div>
+
+    <div class="status" id="status" role="status"></div>
+  </form>
+
+  <footer class="fuss">
+    <p>© 2026 Raphael Arnold Kohler · <span id="fuss-projekt">TALS</span> ·
+       <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+    <p><a href="rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
+    <p>Keine Cookies · Kein Tracking · Version 1.0 · Stand 1. August 2026</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ── KONFIGURATION ──────────────────────────────────────────
+     Eigenes Backend via Google Apps Script (siehe Code.gs).
+     Nach dem Bereitstellen als Web-App die URL hier eintragen —
+     sie endet auf /exec. Deine E-Mail-Adresse steht nur im
+     Skript selbst, nie hier im öffentlichen Quelltext.
+     Dieselbe URL funktioniert für beide Projekte.             */
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbziLFXA0wpX_kMDR7PTnHplzOctA0gJY7PM1zgJaHYVo2C315H5P3l03tqTzYMI1qs9/exec';
+
+  /* Projekt automatisch aus der URL erkennen (Repo-Name) */
+  const pfad = location.pathname.toLowerCase();
+  const PROJEKT = pfad.includes('physik') ? 'TALS-Physik'
+                : pfad.includes('mathe')  ? 'TALS-Mathe'
+                : 'TALS';
+  document.title = 'Kontakt & Feedback — ' + PROJEKT;
+
+  /* Fuss an das erkannte Projekt anpassen */
+  const fp = document.getElementById('fuss-projekt');
+  if (fp) fp.textContent = PROJEKT.replace('-', ' ');
+
+  /* ── Herkunftsseite ermitteln ─────────────────────────────────
+     1. Priorität: Link-Parameter  feedback.html?seite=g4-2
+     2. Fallback:  Referrer — die Themenseite, von der der Link
+        angeklickt wurde (gleiche Domain, automatisch, ohne dass
+        die Themenseiten angepasst werden müssen)               */
+  let herkunft = new URLSearchParams(location.search).get('seite') || '';
+  if (!herkunft && document.referrer){
+    try{
+      const r = new URL(document.referrer);
+      if (r.origin === location.origin && !r.pathname.endsWith('feedback.html')){
+        herkunft = decodeURIComponent(r.pathname);
+      }
+    }catch(_){ /* ungültiger Referrer → einfach leer lassen */ }
+  }
+
+  /* ── Elemente ── */
+  const form      = document.getElementById('fb');
+  const zEinfach  = document.getElementById('zweig-einfach');
+  const zStruktur = document.getElementById('zweig-struktur');
+  const betrifft  = document.getElementById('betrifft');
+  const details   = {
+    'Themenseite':      document.getElementById('det-themenseite'),
+    'Druckseite':       document.getElementById('det-druckseite'),
+    'Externe Ressource':document.getElementById('det-extern')
+  };
+  const feldEmail = document.getElementById('feld-email');
+  const btn       = document.getElementById('senden');
+  const dsHinweis = document.getElementById('ds-hinweis');
+  const status    = document.getElementById('status');
+
+  const EINFACH = ['Lob/Tadel'];
+  let kategorie = '';
+
+  function kategorieGewaehlt(k){
+    kategorie = k;
+    const einfach = EINFACH.includes(k);
+    zEinfach.classList.toggle('hidden', !einfach);
+    zStruktur.classList.toggle('hidden', einfach);
+    feldEmail.classList.remove('hidden');
+    btn.classList.remove('hidden');
+    dsHinweis.classList.remove('hidden');   /* Datenschutzhinweis zeigt sich mit dem Knopf */
+    btn.disabled = false;
+    /* Herkunftsseite in alle Seitenfelder vorbefüllen (überschreibbar) */
+    if (herkunft){
+      ['ts-seite','ds-thema','ex-seite'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && !el.value) el.value = herkunft;
+      });
+    }
+    status.className = 'status';
+  }
+  document.querySelectorAll('input[name=kategorie]').forEach(r =>
+    r.addEventListener('change', () => kategorieGewaehlt(r.value)));
+
+  betrifft.addEventListener('change', () => {
+    Object.entries(details).forEach(([k, el]) =>
+      el.classList.toggle('hidden', k !== betrifft.value));
+  });
+
+  /* Wert holen, leere Angaben weglassen */
+  const v = id => (document.getElementById(id)?.value || '').trim();
+
+  /* ── Mailtext im Claude-Code-fertigen Blockformat ── */
+  function baueNachricht(){
+    const z = [];
+    const add = (label, wert) => { if (wert) z.push(label.padEnd(11) + ': ' + wert); };
+    add('KATEGORIE', kategorie);
+    add('PROJEKT',   PROJEKT);
+    add('ABSENDER',  v('name'));
+
+    if (EINFACH.includes(kategorie)){
+      z.push('', 'NACHRICHT:', v('msg-einfach'));
+      return z.join('\n');
+    }
+
+    add('BETRIFFT', betrifft.value);
+    if (betrifft.value === 'Themenseite'){
+      add('SEITE', v('ts-seite'));
+      add('ORT',   v('ts-ort'));
+      add('IST',   v('ts-ist'));
+      add('SOLL',  v('ts-soll'));
+      z.push('', 'BESCHREIBUNG:', v('ts-besch'));
+    } else if (betrifft.value === 'Druckseite'){
+      add('SEITE',      v('ds-thema'));
+      add('DRUCKSEITE', v('ds-typ'));
+      add('ORT',        v('ds-ort'));
+      add('IST',        v('ds-ist'));
+      add('SOLL',       v('ds-soll'));
+      z.push('', 'BESCHREIBUNG:', v('ds-besch'));
+    } else {
+      add('SEITE',    v('ex-seite'));
+      add('LINK',     v('ex-name'));
+      add('PROBLEM',  v('ex-problem'));
+      z.push('', 'BESCHREIBUNG:', v('ex-besch'));
+    }
+    return z.join('\n');
+  }
+
+  /* ── Seitenkontext (für Betreff und Archiv) ── */
+  function baueKontext(){
+    if (EINFACH.includes(kategorie)) return '';
+    return betrifft.value === 'Themenseite'       ? v('ts-seite')
+         : betrifft.value === 'Druckseite'        ? (v('ds-thema') + ' ' + v('ds-typ')).trim()
+         : betrifft.value === 'Externe Ressource' ? v('ex-seite')
+         : '';
+  }
+
+  /* ── Betreff zum Sortieren: [Projekt] Kategorie — Kontext ── */
+  function baueBetreff(){
+    const kontext = baueKontext();
+    return '[' + PROJEKT + '] ' + kategorie + (kontext ? ' — ' + kontext : '');
+  }
+
+  /* ── Pflichtfelder je Zweig prüfen ── */
+  function pruefe(){
+    if (!kategorie) return 'Bitte eine Kategorie wählen.';
+    if (EINFACH.includes(kategorie))
+      return v('msg-einfach') ? '' : 'Bitte eine Nachricht schreiben.';
+    if (!betrifft.value) return 'Bitte wählen, was betroffen ist.';
+    const noetig = {
+      'Themenseite':       ['ts-seite','ts-ort','ts-besch'],
+      'Druckseite':        ['ds-thema','ds-typ','ds-ort','ds-besch'],
+      'Externe Ressource': ['ex-seite','ex-name','ex-problem']
+    }[betrifft.value];
+    return noetig.every(id => v(id)) ? '' : 'Bitte alle mit * markierten Felder ausfüllen.';
+  }
+
+  /* Datei als Base64 lesen (nur der Datenteil, ohne data:-Präfix) */
+  function lesen(datei){
+    return new Promise((res, rej) => {
+      const r = new FileReader();
+      r.onload  = () => res(String(r.result).split(',')[1]);
+      r.onerror = () => rej(new Error('Bild konnte nicht gelesen werden'));
+      r.readAsDataURL(datei);
+    });
+  }
+
+  /* ── Absenden an das eigene Apps-Script-Backend ── */
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const fehler = pruefe();
+    if (fehler){
+      status.textContent = fehler;
+      status.className = 'status err';
+      return;
+    }
+    /* Screenshot prüfen (nur strukturierter Zweig) */
+    const shot = document.getElementById('shot');
+    const datei = (!EINFACH.includes(kategorie) && shot.files.length) ? shot.files[0] : null;
+    if (datei && datei.size > 8 * 1024 * 1024){
+      status.textContent = 'Das Bild ist grösser als 8 MB — bitte einen kleineren Ausschnitt wählen.';
+      status.className = 'status err';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Wird gesendet …';
+
+    try{
+      const payload = {
+        betreff:   baueBetreff(),
+        nachricht: baueNachricht(),
+        honey:     form._honey.value,
+        meta: {                       /* Spaltenwerte fürs Archiv-Sheet */
+          projekt:   PROJEKT,
+          kategorie: kategorie,
+          betrifft:  EINFACH.includes(kategorie) ? '' : betrifft.value,
+          seite:     baueKontext(),
+          name:      v('name')
+        }
+      };
+      const mail = v('email');
+      if (mail)  payload.email = mail;            /* wird im Skript als Antwort-Adresse gesetzt */
+      if (datei) payload.datei = {
+        name:   datei.name,
+        typ:    datei.type,
+        base64: await lesen(datei)
+      };
+
+      /* Bewusst KEIN Content-Type-Header: Der Browser sendet
+         text/plain — das vermeidet den CORS-Preflight, den
+         Apps-Script-Web-Apps nicht beantworten können. */
+      const res  = await fetch(SCRIPT_URL, {
+        method:'POST',
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      if (res.ok && data.success === true){
+        status.textContent = 'Danke! Deine Rückmeldung ist angekommen.';
+        status.className = 'status ok';
+        form.reset();
+        zEinfach.classList.add('hidden');
+        zStruktur.classList.add('hidden');
+        feldEmail.classList.add('hidden');
+        Object.values(details).forEach(el => el.classList.add('hidden'));
+        kategorie = '';
+        btn.textContent = 'Feedback senden';
+        btn.disabled = true;
+        btn.classList.add('hidden');
+        dsHinweis.classList.add('hidden');
+        return;
+      }
+      throw new Error(data.message || 'Unbekannter Fehler');
+    }catch(err){
+      status.textContent = 'Senden fehlgeschlagen (' + err.message + '). Bitte später nochmals versuchen.';
+      status.className = 'status err';
+      btn.disabled = false;
+      btn.textContent = 'Feedback senden';
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+# .gitignore — TALS (Projektspezifisch geprueft, Juni 2026)
+# Es werden NUR transiente/erzeugte Dateien ignoriert.
+#
+# BEWUSST VERSIONIERT (NICHT ignorieren):
+#   downloads/**/*.apkg              -> auf den Seiten verlinkte Schueler-Downloads
+#   package.json, package-lock.json  -> dokumentieren mathjax-full/jsdom fuer den Pre-Flight
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Editor
+.idea/
+.vscode/
+*.code-workspace
+.*.swp
+
+# Python-Tooling (preflight.py + scripts/*.py erzeugen __pycache__)
+# Wegwerf-Pruefskripte. Das Repo ist zugleich die Website — was hier liegt,
+# wird ausgeliefert (uebernommen aus TALS Physik, 28.09.2026).
+__*.mjs
+__*.py
+.*.mjs
+.*.py
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node — Module der Verifikationsskripte (gross, via `npm install` reproduzierbar)
+node_modules/
+
+# Eigenstaendige Clip-Fassungen (rund 480 kB, aus dem Drehbuch reproduzierbar)
+clips/*-eigenstaendig.html
+clips/sprechertext-*-eigenstaendig.txt
+
+# Temporaere Render-Checks / Snapshots
+/tmp/
+check_*.png
+szene-*.png
+*.tmp
+
+# Lokale Claude-Code-Logs (settings.json + skills bleiben versioniert)
+.claude/logs/
+
+# Render-Kontrollbilder der Widgets (regenerierbar via `npm run shots`)
+widget-shots/
+
+# Interne Arbeitsberichte und Audits — bleiben lokal, gehen nicht online
+_intern/
+
+# Symlink auf die Module von tals-mathe (lokal), sonst `npm install`
+/node_modules

@@ -1,0 +1,1654 @@
+/* ═══════════════════════════════════════════════════════════════
+   Sek1-Mathe begreifbar — Gemeinsames Stylesheet (style.css)
+   Aus Mathe begreifbar uebernommen, mit Petrol als Bereichsfarbe.
+   Gilt für alle Kapitelseiten + Homepage
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── CUSTOM PROPERTIES ─────────────────────────────────────── */
+:root {
+  --papier:     #f8f6f1;
+  --papier-2:   #efeade;
+  --weiss:      #ffffff;
+  --tinte:      #1c1a17;
+  --tinte-2:    #5a5040;
+  --linie:      #d8d0c4;
+
+  /* Didaktische Farben — IMMER gleiche Bedeutung */
+  --blau:       #1a4f8a;   /* Definition / Begriff */
+  --blau-hell:  #ddeaf8;
+  --blau-rand:  #5b8fc9;
+  --gruen:      #1f6b3a;   /* Beispiel / Lösung */
+  --gruen-hell: #d8f0e2;
+  --gruen-rand: #52a872;
+  --orange:     #b85c00;   /* Aufgabe / Übung */
+  --orange-hell:#fdefd8;
+  --orange-rand:#e08030;
+  --rot:        #9b1c1c;   /* Fehler / Achtung */
+  --rot-hell:   #fde8e8;
+  --rot-rand:   #d05050;
+  --lila:       #5b2d8e;   /* Beweis / Herleitung */
+  --lila-hell:  #ede6f8;
+  --lila-rand:  #9b6bd4;
+
+  /* Bereichsfarbe Sek I: Petrol (abgegrenzt von Mathe-Blau/Violett
+     und Physik-Bernstein; die didaktischen Farben oben bleiben) */
+  --petrol:      #0f6b6b;
+  --petrol-hell: #dcefee;
+  --petrol-rand: #4fa3a0;
+
+  --serif:  'Source Serif 4', Georgia, serif;
+  --sans:   'Source Sans 3', system-ui, sans-serif;
+  --mono:   'JetBrains Mono', monospace;
+
+  --s:   0 2px 10px rgba(28,26,23,0.08);
+  --sl:  0 4px 22px rgba(28,26,23,0.13);
+}
+
+/* ── RESET ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); background: var(--papier); color: var(--tinte); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+a { color: var(--petrol); }
+a:hover { text-decoration: underline; }
+
+/* ── HEADER ─────────────────────────────────────────────────── */
+/* Der Header liegt in #nav-root (von nav.js befüllt). Ein klebendes Element
+   klebt nur innerhalb der Box seines Containers — darum muss #nav-root selbst
+   sticky sein, sonst scrollt der Header trotz `position: sticky` weg. */
+#nav-root { position: sticky; top: 0; z-index: 200; }
+.site-hdr {
+  background: var(--weiss);
+  border-bottom: 2.5px solid var(--petrol);
+  padding: 0 32px;
+  height: 54px;
+  display: flex; align-items: center; gap: 24px;
+  position: sticky; top: 0; z-index: 200;
+  box-shadow: var(--s);
+}
+.logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--serif); font-size: 1rem; font-weight: 700;
+  color: var(--tinte); text-decoration: none; white-space: nowrap;
+}
+.logo-pill {
+  background: var(--petrol); color: #fff;
+  font-family: var(--mono); font-size: 0.62rem;
+  padding: 2px 8px; border-radius: 4px; letter-spacing: 1px;
+}
+
+/* Site nav */
+.site-nav { display: flex; align-items: center; gap: 4px; flex: 1; }
+.site-nav > a {
+  font-size: 0.82rem; font-weight: 600; color: var(--tinte-2);
+  padding: 5px 10px; border-radius: 6px; text-decoration: none;
+  transition: background 0.15s, color 0.15s; white-space: nowrap;
+}
+.site-nav > a:hover { background: var(--petrol-hell); color: var(--petrol); text-decoration: none; }
+
+/* Dropdown */
+.dropdown { position: relative; }
+.nav-btn {
+  font-family: var(--sans); font-size: 0.82rem; font-weight: 600;
+  color: var(--tinte-2); background: none; border: none; cursor: pointer;
+  padding: 5px 10px; border-radius: 6px;
+  transition: background 0.15s, color 0.15s; white-space: nowrap;
+}
+.nav-btn:hover, .nav-btn.aktiv { background: var(--petrol-hell); color: var(--petrol); }
+.dd-menu {
+  display: none; position: absolute; top: calc(100% + 6px); left: 0;
+  background: var(--weiss); border: 1px solid var(--linie);
+  border-radius: 10px; box-shadow: var(--sl);
+  min-width: 300px; padding: 6px; z-index: 300;
+}
+.dd-menu.open { display: block; }
+.dd-menu-gross {
+  min-width: 380px; max-width: 460px;
+  max-height: 70vh; overflow-y: auto;
+}
+.dd-gruppe { padding: 6px 0; border-top: 1px solid var(--linie); }
+.dd-gruppe:first-child { border-top: none; }
+.dd-gruppe-titel {
+  font-family: var(--mono); font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--tinte-2); padding: 4px 12px 6px;
+}
+.dd-menu a {
+  display: flex; flex-direction: row; align-items: baseline; gap: 8px;
+  padding: 6px 12px; border-radius: 6px; text-decoration: none;
+  transition: background 0.12s;
+}
+.dd-menu a:hover { background: var(--papier); }
+.dd-menu a.dd-aktiv { background: var(--petrol-hell); }
+.dd-nr  { font-family: var(--mono); font-size: 0.62rem; color: var(--petrol); min-width: 26px; }
+.dd-tit { font-size: 0.82rem; color: var(--tinte); font-weight: 600; flex: 1; }
+
+/* Trenner zwischen Fach-Navigation und Meta-Punkten */
+.nav-sep {
+  width: 1px; height: 22px; background: var(--linie);
+  margin: 0 6px; flex-shrink: 0;
+}
+
+/* Meta-Buttons (Autor, Ausblick, Feedback, Lizenz) — etwas dezenter */
+.nav-btn.nav-meta {
+  font-weight: 500; color: var(--tinte-2); font-size: 0.78rem;
+}
+.nav-btn.nav-meta:hover { background: var(--papier); color: var(--tinte); }
+
+/* Dropdown-Panel für Meta-Inhalte (Fliesstext statt Link-Liste) */
+.dd-menu-meta {
+  min-width: 320px; max-width: 380px;
+  padding: 16px 18px 14px;
+  font-size: 0.82rem; color: var(--tinte); line-height: 1.55;
+  right: 0; left: auto;     /* rechtsbündig, damit es nicht aus dem Viewport ragt */
+}
+.dd-menu-meta .meta-titel {
+  font-family: var(--serif); font-size: 0.95rem; font-weight: 700;
+  color: var(--tinte); margin-bottom: 8px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--linie);
+}
+.dd-menu-meta .meta-sub {
+  font-family: var(--mono); font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--tinte-2); margin: 9px 0 3px;
+}
+.dd-menu-meta p { margin: 0 0 8px; }
+.dd-menu-meta p:last-child { margin-bottom: 0; }
+.dd-menu-meta ul { margin: 0 0 4px; padding-left: 18px; }
+.dd-menu-meta li { margin-bottom: 2px; }
+.dd-menu-meta strong { color: var(--tinte); font-weight: 700; }
+.dd-menu-meta em { font-style: italic; color: var(--tinte-2); }
+.dd-menu-meta .meta-link {
+  color: var(--petrol); font-weight: 600; text-decoration: none;
+}
+.dd-menu-meta .meta-link:hover { text-decoration: underline; }
+
+/* ── ÜBER-DROPDOWN MIT TABS ──────────────────────────────────
+   Ein Button im Header öffnet ein Dropdown mit links Tab-Liste,
+   rechts dem Inhalt des aktiven Tabs. Auf engen Breiten kollabiert
+   das Layout in eine einspaltige Akkordeon-ähnliche Variante. */
+.dd-menu-ueber {
+  display: none;                       /* Wird durch .open auf flex gesetzt */
+  min-width: 560px; max-width: 640px;
+  padding: 0;
+  right: 0; left: auto;                /* rechtsbündig öffnen */
+  overflow: hidden;
+}
+.dd-menu-ueber.open { display: flex; }
+.ueber-tabs {
+  flex: 0 0 160px;
+  display: flex; flex-direction: column;
+  background: var(--papier); border-right: 1px solid var(--linie);
+  padding: 8px 6px;
+}
+.ueber-tab {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+  color: var(--tinte-2); text-align: left;
+  padding: 8px 11px; border-radius: 6px;
+  transition: background 0.12s, color 0.12s;
+  margin-bottom: 2px;
+}
+.ueber-tab:hover { background: var(--weiss); color: var(--tinte); }
+.ueber-tab.aktiv {
+  background: var(--weiss); color: var(--petrol);
+  box-shadow: inset 3px 0 0 var(--petrol);
+}
+.ueber-panels {
+  flex: 1; padding: 16px 18px 14px;
+  font-size: 0.82rem; color: var(--tinte); line-height: 1.55;
+  max-height: 70vh; overflow-y: auto;
+}
+.ueber-panel { display: none; }
+.ueber-panel.aktiv { display: block; }
+/* Inhalts-Styles (wieder­verwendet aus .dd-menu-meta) */
+.ueber-panel .meta-titel {
+  font-family: var(--serif); font-size: 0.95rem; font-weight: 700;
+  color: var(--tinte); margin-bottom: 8px;
+  padding-bottom: 6px; border-bottom: 1px solid var(--linie);
+}
+.ueber-panel .meta-sub {
+  font-family: var(--mono); font-size: 0.6rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--tinte-2); margin: 9px 0 3px;
+}
+.ueber-panel p { margin: 0 0 8px; }
+.ueber-panel p:last-child { margin-bottom: 0; }
+.ueber-panel ul { margin: 0 0 4px; padding-left: 18px; }
+.ueber-panel li { margin-bottom: 2px; }
+.ueber-panel strong { color: var(--tinte); font-weight: 700; }
+.ueber-panel em { font-style: italic; color: var(--tinte-2); }
+.ueber-panel .meta-link { color: var(--petrol); font-weight: 600; text-decoration: none; }
+.ueber-panel .meta-link:hover { text-decoration: underline; }
+
+/* Autorenbild im Ueber-Panel: rund wie ein Benutzerbild, aber rund zehnmal so
+   viel Flaeche (112px Durchmesser gegen die ueblichen ~36px). Der Text laeuft
+   um das Bild herum; auf schmalen Menues faellt es auf 88px zurueck. */
+.meta-portrait {
+  float: left; width: 112px; height: 112px;
+  margin: 2px 14px 6px 0;
+  border-radius: 50%; object-fit: cover;
+  border: 1.5px solid var(--petrol-rand);
+  box-shadow: var(--s);
+}
+
+/* Schmaler Viewport: Tab-Spalte oben, Inhalt unten */
+@media (max-width: 720px) {
+  .dd-menu-ueber { min-width: 320px; max-width: 90vw; flex-direction: column; }
+  .meta-portrait { width: 88px; height: 88px; margin-right: 11px; }
+  .ueber-tabs {
+    flex: none; flex-direction: row; flex-wrap: wrap;
+    border-right: none; border-bottom: 1px solid var(--linie);
+    padding: 6px;
+  }
+  .ueber-tab { flex: 1 1 auto; text-align: center; font-size: 0.72rem; padding: 6px 8px; }
+  .ueber-tab.aktiv { box-shadow: inset 0 -2px 0 var(--petrol); }
+}
+
+/* Burger (mobile) */
+.burger {
+  display: none; background: none; border: none; cursor: pointer;
+  font-size: 1.3rem; color: var(--tinte); margin-left: auto; padding: 4px 8px;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: none; flex-direction: column;
+  background: var(--weiss); border-bottom: 1px solid var(--linie);
+  padding: 12px 16px; gap: 2px;
+  /* Mit dem klebenden #nav-root wird das offene Menü sonst höher als der
+     Schirm und die unteren Einträge sind unerreichbar. */
+  max-height: calc(100vh - 54px); overflow-y: auto;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 0.85rem; color: var(--tinte-2); text-decoration: none;
+  padding: 7px 10px; border-radius: 6px;
+}
+.mobile-nav a:hover, .mobile-nav a.mn-aktiv { background: var(--petrol-hell); color: var(--petrol); }
+/* Das Mobilmenü spiegelt die Kopfzeile: Übersicht · Grundlagenfach ·
+   Schwerpunktfach · Nachschlagen · Physik · Über · Kontakt. Die Sektionen
+   klappen, damit nicht wie früher 55 Zeilen gleichzeitig offen stehen.
+   Direktlinks tragen .mn-direkt und stehen optisch auf derselben Stufe
+   wie eine Sektions-Summary. */
+.mobile-nav .mn-direkt { font-size: 0.9rem; font-weight: 700; color: var(--tinte); padding: 10px; }
+.mobile-nav .mn-sektion { margin: 0 4px; border-top: 1px solid var(--linie); }
+.mobile-nav .mn-sektion > summary {
+  list-style: none; cursor: pointer;
+  font-size: 0.9rem; font-weight: 700; color: var(--tinte);
+  padding: 10px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.mobile-nav .mn-sektion > summary::-webkit-details-marker { display: none; }
+.mobile-nav .mn-sektion > summary::after {
+  content: '▾'; font-size: 0.7rem; color: var(--tinte-2);
+  transition: transform 0.2s;
+}
+.mobile-nav .mn-sektion[open] > summary::after { transform: rotate(180deg); }
+.mobile-nav .mn-sektion > summary:hover { background: var(--papier); }
+.mobile-nav .mn-sektion-body { display: flex; flex-direction: column; gap: 2px; padding: 0 0 8px 6px; }
+
+/* Zweite Ebene: die Lerngebiete innerhalb eines Bereichs. */
+.mobile-nav .mn-lg > summary {
+  list-style: none; cursor: pointer;
+  font-size: 0.78rem; font-weight: 700; color: var(--petrol);
+  padding: 8px 10px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.mobile-nav .mn-lg > summary::-webkit-details-marker { display: none; }
+.mobile-nav .mn-lg > summary::after {
+  content: '▾'; font-size: 0.65rem; color: var(--petrol);
+  transition: transform 0.2s;
+}
+.mobile-nav .mn-lg[open] > summary::after { transform: rotate(180deg); }
+.mobile-nav .mn-lg > summary:hover { background: var(--petrol-hell); }
+.mobile-nav .mn-lg-body { display: flex; flex-direction: column; gap: 1px; padding-left: 8px; }
+
+/* Mobile-Nav: Meta-Aufklapper (Autor, Ausblick, Feedback, Lizenz) */
+.mobile-nav .mn-meta { margin: 0 4px; border-top: 1px solid var(--linie); }
+.mobile-nav .mn-meta:first-of-type { border-top: none; }
+.mobile-nav .mn-meta > summary {
+  list-style: none; cursor: pointer;
+  font-size: 0.85rem; font-weight: 600; color: var(--tinte-2);
+  padding: 9px 10px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.mobile-nav .mn-meta > summary::-webkit-details-marker { display: none; }
+.mobile-nav .mn-meta > summary::after {
+  content: '▾'; font-size: 0.7rem; color: var(--tinte-2);
+  transition: transform 0.2s;
+}
+.mobile-nav .mn-meta[open] > summary::after { transform: rotate(180deg); }
+.mobile-nav .mn-meta > summary:hover { background: var(--papier); }
+.mobile-nav .mn-meta-body {
+  padding: 4px 12px 10px; font-size: 0.8rem; line-height: 1.55; color: var(--tinte);
+}
+.mobile-nav .mn-meta-body .meta-titel { display: none; }  /* Titel schon im summary */
+.mobile-nav .mn-meta-body .meta-sub {
+  font-family: var(--mono); font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--tinte-2); margin: 8px 0 2px;
+}
+.mobile-nav .mn-meta-body p { margin: 0 0 6px; }
+.mobile-nav .mn-meta-body ul { margin: 0 0 4px; padding-left: 18px; }
+.mobile-nav .mn-meta-body .meta-link { color: var(--petrol); font-weight: 600; text-decoration: none; }
+/* ── SEITEN-LAYOUT ──────────────────────────────────────────── */
+.page-wrap {
+  max-width: 1400px; margin: 0 auto;
+  padding: 36px 28px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  grid-template-areas: "content toc";
+  gap: 72px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .page-wrap { grid-template-columns: minmax(0, 1fr); grid-template-areas: "content"; }
+  .toc-wrap { display: none; }
+}
+
+/* ── SEITENTITEL ─────────────────────────────────────────────── */
+.page-titel {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--linie);
+}
+.pt-bereich {
+  font-family: var(--mono); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--petrol); margin-bottom: 6px;
+}
+.pt-h1 {
+  font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 700; line-height: 1.15; color: var(--tinte);
+  margin-bottom: 8px;
+}
+.pt-untertitel {
+  font-family: var(--sans); font-size: 0.95rem;
+  color: var(--tinte-2); margin-top: 4px;
+}
+.pt-rlp {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px;
+}
+.pt-chip {
+  font-family: var(--mono); font-size: 0.65rem;
+  padding: 2px 10px; border-radius: 12px; border: 1px solid;
+}
+.pt-chip.c-bl { background: var(--blau-hell); color: var(--blau); border-color: var(--blau-rand); }
+.pt-chip.c-gr { background: var(--papier-2); color: var(--tinte-2); border-color: var(--linie); }
+
+/* Stub-Banner: zeigt an, dass eine Themenseite noch in Vorbereitung ist.
+   Erscheint zwischen Titel und Inhalt, hat orange Akzentfarbe (Aufgabe/Übung), klar erkennbar. */
+.stub-banner {
+  background: var(--orange-hell);
+  border: 1px solid var(--orange-rand);
+  border-left: 4px solid var(--orange);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-family: var(--sans); font-size: 0.85rem;
+  color: var(--tinte); line-height: 1.45;
+}
+.stub-banner strong {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 4px;
+}
+
+/* ── CONTENT TYPOGRAFIE ─────────────────────────────────────── */
+.content h2 {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 700;
+  color: var(--tinte); margin: 36px 0 14px;
+  padding-bottom: 6px; border-bottom: 1.5px solid var(--linie);
+}
+.content h3 {
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 600;
+  color: var(--tinte); margin: 24px 0 10px;
+}
+.content p  { margin-bottom: 14px; }
+.content ul { margin: 0 0 14px 1.4em; }
+.content li { margin-bottom: 5px; }
+var, .var   { font-family: var(--mono); font-style: italic; font-size: 0.96em; }
+code, .code { font-family: var(--mono); background: var(--papier-2); border: 1px solid var(--linie); border-radius: 4px; padding: 1px 6px; font-size: 0.88em; }
+
+/* ── DIDAKTISCHE BLÖCKE ──────────────────────────────────────── */
+.block {
+  border-radius: 8px;
+  padding: 14px 18px 14px 17px;
+  border-left: 5px solid;
+  margin: 16px 0;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+.block-titel {
+  font-family: var(--sans); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 1.8px; text-transform: uppercase;
+  margin-bottom: 7px; display: flex; align-items: center; gap: 7px;
+}
+.block-def    { background: var(--blau-hell);   border-color: var(--blau);   }
+.block-bsp    { background: var(--gruen-hell);  border-color: var(--gruen);  }
+.block-aufg   { background: var(--orange-hell); border-color: var(--orange); }
+.block-fehler { background: var(--rot-hell);    border-color: var(--rot);    }
+.block-beweis { background: var(--lila-hell);   border-color: var(--lila);   }
+.block-tipp   { background: var(--gruen-hell);  border-color: var(--gruen);  }
+.block-merksatz { background: var(--blau-hell); border-color: var(--blau);   border-width: 1.5px; }
+.block-def    .block-titel { color: var(--blau);   }
+.block-bsp    .block-titel { color: var(--gruen);  }
+.block-aufg   .block-titel { color: var(--orange); }
+.block-fehler .block-titel { color: var(--rot);    }
+.block-beweis .block-titel { color: var(--lila);   }
+.block-tipp   .block-titel { color: var(--gruen);  }
+.block-merksatz .block-titel { color: var(--blau); }
+.block-def strong { color: var(--blau); }
+.block-merksatz strong { color: var(--blau); }
+
+/* Querverweis — kompakte Pille hinter Titeln (h3, Anim-Titel, Block-Titel).
+   Form: <a class="quer" href="g5-2a-dreiecke.html#pythagoras">↩ 5.2a</a>
+   Pfeil-Konvention: ↩ Voraussetzung (Konzept kam früher),
+                     ↗ Anwendung    (Konzept wird dort weiter genutzt).        */
+a.quer {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px 2px;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.4px;
+  color: var(--petrol);
+  background: var(--petrol-hell);
+  border: 1px solid var(--petrol-rand);
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: 0.12em;
+  transition: background 0.15s, color 0.15s;
+}
+a.quer:hover { background: var(--petrol); color: #fff; border-color: var(--petrol); }
+.block-def strong { color: var(--blau); }
+.block-merksatz strong { color: var(--blau); }
+
+/* Aufgaben-Vertiefungs-Pille — markiert A7 als optional/Brücke.
+   Form: <span class="aufg-vertiefung">Vertiefung</span>
+         <span class="aufg-vertiefung">Brücke zu 3.2</span>
+   Sitzt im block-titel hinter dem Aufgaben-Titel, in Orange-Familie. */
+.aufg-vertiefung {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px 2px;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: var(--orange-hell);
+  border: 1px solid var(--orange-rand);
+  border-radius: 999px;
+  white-space: nowrap;
+  vertical-align: 0.12em;
+}
+
+/* Formel-Kasten */
+.formel-box {
+  background: var(--papier-2); border: 1.5px solid var(--linie);
+  border-radius: 8px; padding: 14px 20px; text-align: center;
+  font-family: var(--mono); font-size: 1.05rem; font-style: italic;
+  box-shadow: var(--s); margin: 16px 0;
+}
+.formel-box .formel-label {
+  font-family: var(--sans); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--tinte-2); margin-bottom: 6px; font-style: normal;
+}
+.formel-gross { font-size: 1.4rem; }
+
+/* Merksatz */
+.merksatz {
+  background: var(--papier-2); border: 2px solid var(--tinte);
+  border-radius: 8px; padding: 14px 18px;
+  font-family: var(--serif); font-size: 0.97rem; font-weight: 600;
+  color: var(--tinte); margin: 16px 0; position: relative;
+}
+.merksatz::before {
+  content: '★';
+  position: absolute; top: -1px; left: 14px;
+  font-size: 0.7rem; background: var(--papier-2);
+  padding: 0 4px; transform: translateY(-50%);
+}
+
+/* Tabelle (FTB-Stil) */
+.ftb-tabelle {
+  width: 100%; border-collapse: collapse; font-size: 0.88rem;
+  background: var(--weiss); border: 1px solid var(--linie);
+  border-radius: 8px; overflow: hidden; box-shadow: var(--s); margin: 16px 0;
+}
+.ftb-tabelle thead { background: var(--tinte); color: var(--weiss); }
+.ftb-tabelle thead th { padding: 9px 14px; font-size: 0.75rem; font-weight: 600; text-align: center; }
+.ftb-tabelle tbody td { padding: 8px 14px; border-bottom: 1px solid var(--linie); font-family: var(--mono); font-size: 0.85rem; text-align: center; }
+.ftb-tabelle tbody tr:last-child td { border-bottom: none; }
+.ftb-tabelle tbody tr:nth-child(even) td { background: var(--papier); }
+.ftb-tabelle .td-x   { color: var(--petrol);   font-style: italic; }
+.ftb-tabelle .td-y   { color: var(--gruen);  font-style: italic; }
+.ftb-tabelle .td-calc{ color: var(--tinte-2); font-size: 0.78rem; }
+.ftb-tabelle .td-pt  { color: var(--orange); }
+
+/* Aufgaben-Nummern (Legacy — Kreis-Form, verwendet auf Druckseiten in downloads/).
+   Für Themenseiten siehe .aufg-nr-tag (Pillen-Form). */
+.aufg-nr {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--orange); color: #fff;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+  flex-shrink: 0; margin-right: 8px;
+}
+
+/* ── Aufgaben-Titel-Pille (Themenseiten) ─────────────────────────────────────
+   Form in jedem block-aufg .block-titel:
+     <div class="block-titel">🟠 <span class="aufg-nr-tag">A1</span><span class="aufg-titel-text">Hauptoperation erkennen</span></div>
+   Ersetzt das frühere Muster „🟠 A1 — Hauptoperation erkennen" mit Spiegelstrich. */
+.aufg-nr-tag {
+  font-family: var(--mono); font-weight: 700;
+  background: var(--orange); color: #fff;
+  padding: 2px 9px; border-radius: 5px;
+  letter-spacing: 1px; font-size: 0.72rem;
+}
+.aufg-titel-text { margin-left: 6px; }
+
+/* ── Aufgaben-Teil-Listen (Themenseiten) ─────────────────────────────────────
+   Form: <ol class="aufg-liste"><li>…</li>…</ol> innerhalb einer block-aufg-Karte.
+   Ersetzt das frühere Muster <ol style="margin:8px 0 0 22px"> mit Default-Marker.
+   Die Nummer steht als kleine orange Pille im linken padding-left:48px-Bereich
+   des <li>; zwischen Nummer und Inhalt liegt eine deutliche visuelle Lücke. */
+.aufg-liste {
+  list-style: none;
+  counter-reset: aufgliste;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.aufg-liste > li {
+  counter-increment: aufgliste;
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 8px;
+  min-height: 24px;
+}
+.aufg-liste > li::before {
+  content: counter(aufgliste) ".";
+  position: absolute;
+  left: 0; top: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 28px; padding: 1px 6px;
+  font-family: var(--mono); font-weight: 700; font-size: 0.82rem;
+  color: var(--orange);
+  background: var(--orange-hell);
+  border: 1px solid var(--orange-rand);
+  border-radius: 5px;
+}
+
+/* ── Klassifizier-Term-Nummern (kl-spiel-Widgets) ───────────────────────────
+   Form: <div class="kl-term"><span class="kl-nr">(1)</span>5+2·x</div>
+   Ersetzt frühere Inline-Form „(1) 5+2·x" mit Browser-Default-Lücke. */
+.kl-nr {
+  display: inline-block;
+  font-family: var(--mono); font-weight: 700;
+  color: var(--tinte-2); background: var(--papier-2);
+  padding: 2px 8px; border-radius: 5px;
+  font-size: 0.78rem;
+  margin-right: 18px;
+  vertical-align: 0.12em;
+}
+
+/* Lösung toggle */
+.loesung-toggle {
+  background: var(--papier-2); border: 1px solid var(--linie);
+  border-radius: 7px; padding: 8px 14px; cursor: pointer;
+  font-size: 0.82rem; font-weight: 600; color: var(--tinte-2);
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 10px; user-select: none;
+  transition: background 0.15s, color 0.15s;
+}
+.loesung-toggle:hover { background: var(--gruen-hell); color: var(--gruen); }
+.loesung-body { display: none; margin-top: 10px; }
+.loesung-body.sichtbar { display: block; }
+
+/* ── STICKY TOC ─────────────────────────────────────────────── */
+.toc-wrap {
+  grid-area: toc;
+  position: sticky; top: 70px;
+}
+#toc {
+  background: var(--weiss); border: 1px solid var(--linie);
+  border-radius: 10px; padding: 14px 16px; box-shadow: var(--s);
+  font-size: 0.8rem;
+}
+.toc-title {
+  display: flex; align-items: baseline; gap: 6px;
+  width: 100%; text-align: left;
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--tinte-2); margin-bottom: 10px;
+  padding: 2px 6px 8px; border: none; border-bottom: 1px solid var(--linie);
+  background: none; cursor: pointer; border-radius: 5px 5px 0 0;
+  transition: color 0.12s, background 0.12s;
+}
+.toc-title:hover, .toc-title:focus-visible {
+  color: var(--petrol); background: var(--petrol-hell); outline: none;
+}
+.toc-title .toc-title-pfeil {
+  margin-left: auto; font-weight: 700;
+  opacity: 0; transition: opacity 0.12s;
+}
+.toc-title:hover .toc-title-pfeil,
+.toc-title:focus-visible .toc-title-pfeil { opacity: 1; }
+.toc-kapnr { text-transform: none; }
+.toc-link {
+  display: block; padding: 4px 8px; border-radius: 5px;
+  color: var(--tinte-2); text-decoration: none;
+  transition: background 0.12s, color 0.12s; line-height: 1.4;
+  border-left: 2px solid transparent;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.toc-link:hover   { background: var(--papier); color: var(--tinte); }
+.toc-link.toc-aktiv {
+  background: var(--petrol-hell); color: var(--petrol);
+  border-left-color: var(--petrol); font-weight: 600;
+}
+.toc-nav {
+  display: flex; justify-content: center;
+  margin: 0 -4px;
+}
+.toc-nav-oben  { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--linie); }
+.toc-nav-unten { margin-top: 12px;    padding-top: 10px;    border-top:    1px solid var(--linie); }
+.toc-prev, .toc-next {
+  display: inline-block;
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--tinte-2); text-decoration: none;
+  padding: 4px 10px; border-radius: 5px;
+  transition: background 0.12s, color 0.12s;
+}
+.toc-prev:hover, .toc-next:hover {
+  background: var(--petrol-hell); color: var(--petrol);
+}
+
+/* ── CANVAS WRAPPER ─────────────────────────────────────────── */
+.canvas-wrap {
+  background: var(--weiss); border: 1px solid var(--linie);
+  border-radius: 10px; overflow: hidden; box-shadow: var(--s); margin: 16px 0;
+}
+canvas { display: block; width: 100%; }
+.canvas-ctrl {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px; border-top: 1px solid var(--linie);
+  background: var(--papier-2); flex-wrap: wrap;
+}
+.canvas-ctrl label { font-size: 0.82rem; color: var(--tinte-2); white-space: nowrap; }
+.canvas-ctrl input[type=range] {
+  flex: 1; min-width: 100px; accent-color: var(--petrol);
+  height: 4px; -webkit-appearance: none; background: var(--linie);
+  border-radius: 2px; outline: none;
+}
+.canvas-ctrl input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 17px; height: 17px;
+  background: var(--tinte); border-radius: 50%; cursor: pointer;
+  border: 3px solid var(--petrol-hell);
+}
+.canvas-ctrl .val {
+  font-family: var(--mono); font-weight: 700; font-size: 0.95rem;
+  color: var(--petrol); min-width: 24px; text-align: right;
+}
+.canvas-legend {
+  display: flex; gap: 16px; padding: 10px 16px;
+  border-top: 1px solid var(--linie); flex-wrap: wrap;
+}
+.cl-item { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--tinte-2); font-family: var(--mono); }
+.cl-dot  { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.cl-line { width: 22px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+
+/* ── KOMPETENZ-LISTE (RLP) ───────────────────────────────────── */
+.rlp-kompetenzen {
+  background: var(--papier-2); border: 1px solid var(--linie);
+  border-radius: 10px; padding: 16px 20px; margin: 0 0 28px; font-size: 0.85rem;
+}
+.rlp-kompetenzen .rlp-titel {
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--tinte-2);
+  margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+}
+.rlp-kompetenzen ul { margin-left: 1.2em; }
+.rlp-kompetenzen li { margin-bottom: 5px; line-height: 1.5; }
+.rlp-kompetenzen .ohm {
+  font-family: var(--mono); font-size: 0.65rem;
+  background: var(--petrol-hell); color: var(--petrol);
+  border: 1px solid var(--petrol-rand); border-radius: 10px;
+  padding: 1px 7px; margin-left: 5px; white-space: nowrap;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+.site-footer {
+  background: var(--tinte); color: rgba(255,255,255,0.45);
+  padding: 24px 40px; text-align: center;
+  font-size: 0.74rem; line-height: 1.8;
+}
+.site-footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.site-footer a:hover { color: #fff; }
+.site-footer strong { color: rgba(255,255,255,0.82); }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+/* Header-Nav: bei < 1024px → Burger-Menü (mit 9 Items zu eng für eine Zeile) */
+@media (max-width: 1024px) {
+  .site-nav { display: none; }
+  .burger   { display: block; }
+}
+@media (max-width: 640px) {
+  .site-hdr { padding: 0 14px; }
+  .page-wrap { padding: 20px 14px 60px; }
+}
+
+/* ── ZUSATZMATERIAL & EXTERNE RESSOURCEN ──────────────────────
+   Gilt für alle Themenseiten. Die zwei Sektionen am Seitenende
+   ("Zusatzmaterial" + "Externe Videos & Aufgabensammlungen")
+   nutzen diese Klassen. Themenseiten dürfen sie NICHT neu
+   definieren — Konsistenz ist Pflicht.
+   ───────────────────────────────────────────────────────────── */
+
+/* Download-Kacheln (Druckseiten, Anki-Deck) */
+.dl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.dl {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--weiss);
+  border: 1px solid var(--linie);
+  border-left: 4px solid var(--petrol);
+  border-radius: 9px;
+  padding: 11px 13px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--s);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.dl:hover {
+  border-color: var(--petrol-rand);
+  border-left-color: var(--petrol);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.dl .dl-ic { font-size: 1.5rem; flex-shrink: 0; }
+.dl .dl-t  { font-weight: 700; font-size: 0.83rem; color: var(--tinte); }
+.dl .dl-s  { font-size: 0.7rem; color: var(--tinte-2); margin-top: 1px; }
+.dl .dl-fmt {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--petrol);
+  margin-top: 2px;
+}
+
+/* Externe Links (Erklärvideos, Aufgabensammlungen) */
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+@media (max-width: 520px) {
+  .links-grid { grid-template-columns: 1fr; }
+}
+.lk {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--weiss);
+  border: 1px solid var(--linie);
+  border-radius: 9px;
+  padding: 11px 13px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--s);
+  transition: border-color 0.15s;
+}
+.lk:hover         { border-color: var(--rot-rand);    text-decoration: none; }
+.lk.aufg:hover    { border-color: var(--orange-rand); }
+.lk .lk-ic { font-size: 1.4rem; flex-shrink: 0; }
+.lk .lk-t  { font-weight: 700; font-size: 0.83rem; color: var(--tinte); }
+.lk .lk-s  { font-size: 0.7rem; color: var(--tinte-2); margin-top: 1px; }
+
+/* Subtitel innerhalb der Ressourcen-Sektion (z.B. "🎬 ERKLÄRVIDEOS") */
+.ressourcen-subtitel {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--tinte-2);
+  margin-bottom: 8px;
+}
+.ressourcen-subtitel + .links-grid { margin-top: 8px; }
+.links-grid + .ressourcen-subtitel { margin-top: 14px; }
+
+/* ── Clips ─────────────────────────────────────────────────────
+   Eigene Erklaerclips (clips/*.html). Der Clip wird NICHT beim
+   Seitenaufruf geladen: sichtbar ist zuerst nur der kleine Startknopf,
+   erst der Klick setzt das <iframe> ein (clipStart in mathlib.js),
+   «Clip schliessen» nimmt es wieder heraus (clipStop). So laeuft bei
+   mehreren Clips auf einer Seite keiner von selbst los, und die Seite
+   laedt nicht N zusaetzliche Dokumente mit. */
+.clip-grid { margin-top: 12px; }
+
+/* Eigene Ueberschrift je Clip — build-suchindex.py schneidet daran einen
+   eigenen Abschnitt, sonst heissen alle Treffer einer Seite «Clips». */
+.clip-h {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 20px 0 3px;
+}
+.clip-grid > .clip-h:first-child { margin-top: 4px; }
+.clip-text {
+  font-size: 0.78rem;
+  color: var(--tinte-2);
+  margin: 0 0 9px;
+  max-width: 62ch;
+}
+
+/* Startknopf: bewusst klein — der Titel steht schon in der Ueberschrift,
+   also bleibt nur ▶ und die Dauer. */
+.clip-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  cursor: pointer;
+  background: var(--weiss);
+  border: 1px solid var(--linie);
+  border-left: 3px solid var(--petrol);
+  border-radius: 7px;
+  padding: 5px 12px 5px 9px;
+  color: var(--petrol);
+  box-shadow: var(--s);
+  transition: background 0.15s, border-color 0.15s;
+}
+.clip-start[hidden] { display: none; }   /* schlaegt das display:inline-flex */
+.clip-start:hover { background: var(--petrol-hell); border-color: var(--petrol-rand); }
+.clip-start:focus-visible { outline: 2px solid var(--petrol); outline-offset: 2px; }
+.clip-play { font-size: 0.7rem; line-height: 1; }
+.clip-meta {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.clip-ansicht { margin-top: 10px; }
+.clip-zu {
+  display: block;
+  margin: 0 0 6px auto;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--tinte-2);
+  background: none;
+  border: 0;
+  padding: 3px 2px;
+  cursor: pointer;
+}
+.clip-zu:hover { color: var(--petrol); }
+.clip-zu:focus-visible { outline: 2px solid var(--petrol); outline-offset: 2px; }
+
+/* Buehne 16:9 plus 60 px Bedienleiste — die Hoehe der Leiste im Clip.
+   padding-bottom statt aspect-ratio, damit die Summe exakt aufgeht. */
+.clip-rahmen {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(56.25% + 60px);
+  border: 1px solid var(--linie);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: var(--s);
+  background: var(--papier);
+}
+.clip-rahmen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ── Clip-Bibliothek (clips.html) ──────────────────────────────
+   Auf viele Clips ausgelegt: Die Lerngebiete sind zugeklappt, ihre
+   Kopfzeile nennt Anzahl und Gesamtlaufzeit. Dasselbe Prinzip wie die
+   Kapitelbloecke der Startseite — sonst wird die Seite bei hundert
+   Clips eine Liste, durch die man scrollt. Je Zeile nur Titel und
+   Laufzeit; Kurzbeschrieb und Transkript stehen auf der Lektionsseite. */
+/* Die Lerngebiete stehen ueber die ganze Breite untereinander. Erst die
+   Clips darin sind zweispaltig — dort wird der Platz gebraucht. */
+.cl-liste {
+  margin: 10px 0 26px;
+  border: 1px solid var(--linie);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: var(--s);
+}
+.cl-kap + .cl-kap { border-top: 1px solid var(--linie); }
+
+.cl-hdr {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; padding: 10px 14px;
+  background: var(--weiss); border: 0; cursor: pointer;
+  font: inherit; text-align: left; color: inherit;
+}
+.cl-hdr:hover { background: var(--papier-2); }
+.cl-hdr:focus-visible { outline: 2px solid var(--petrol); outline-offset: -2px; }
+.cl-nr {
+  flex-shrink: 0; width: 22px; height: 22px;
+  display: grid; place-items: center; border-radius: 5px;
+  background: var(--petrol-hell); color: var(--petrol);
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+}
+.cl-name { font-family: var(--serif); font-size: 0.92rem; font-weight: 700; }
+.cl-anz {
+  margin-left: auto; flex-shrink: 0;
+  font-family: var(--mono); font-size: 0.6rem; color: var(--tinte-2); white-space: nowrap;
+}
+.cl-tog { flex-shrink: 0; font-size: 0.6rem; color: var(--tinte-2); }
+
+/* Die Clipauswahl zweispaltig, aber SPALTENWEISE gefuellt: erst die linke
+   Spalte von oben nach unten, dann die rechte. Zeilenweise gefuellt wuerde
+   eine nummerierte Reihe ueber beide Spalten zickzacken (1 links, 2 rechts,
+   3 wieder links). Die Zeilenzahl setzt der Generator je Gruppe als
+   Inline-Stil — sie haengt an der Anzahl Clips. */
+.clip-auswahl {
+  background: var(--papier); border-top: 1px solid var(--linie);
+  padding: 6px 8px;
+  display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column;
+  gap: 2px 10px;
+}
+/* Die Bibliothek unterteilt zusaetzlich nach Lektion und Reihe. Mit einem
+   Raster ginge das nicht: Eine Ueberschrift muesste dort ihre Spalte
+   kennen. Mehrspaltiger Satz laesst die Gruppen der Reihe nach in die
+   Spalten laufen und haelt jede zusammen. */
+.cl-body {
+  background: var(--papier); border-top: 1px solid var(--linie);
+  padding: 6px 8px 10px;
+  display: block; columns: 2; column-gap: 22px;
+}
+.cl-gruppe { break-inside: avoid; margin-bottom: 10px; }
+/* Zwei Klassen, damit die Regel `.content h3` nicht gewinnt. */
+.cl-body .cl-gt {
+  display: flex; align-items: baseline; gap: 8px;
+  margin: 6px 0 3px; padding: 0 4px;
+  font-family: var(--sans); font-size: .78rem; font-weight: 600;
+  letter-spacing: .03em; text-transform: uppercase;
+  color: var(--petrol); border: 0;
+}
+.cl-sp .cl-gt { color: var(--lila); }
+.cl-gnr {
+  font-variant-numeric: tabular-nums; letter-spacing: 0;
+  text-transform: none; opacity: .62;
+}
+/* Muss sein: das display oben schlaegt sonst das hidden-Attribut, und
+   alle Gruppen stuenden offen. Dieselbe Falle wie bei .clip-start. */
+.cl-body[hidden] { display: none; }
+/* Auf der Lektionsseite steht die Auswahl frei, ohne Aufklapper darum. */
+.clip-auswahl { border: 1px solid var(--linie); border-radius: 9px;
+  border-top: 1px solid var(--linie); margin-top: 12px; box-shadow: var(--s); }
+@media (max-width: 720px) {
+  .clip-auswahl { grid-template-columns: 1fr; grid-auto-flow: row; grid-template-rows: none !important; }
+  /* einspaltig: Zeilenvorgabe des Generators zuruecknehmen, sonst
+     quetscht das Raster alle Clips in die halbe Anzahl Zeilen. */
+  .cl-body { columns: 1; }
+}
+.cl-clip {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 6px 14px 6px 22px;
+  background: none; border: 0; cursor: pointer;
+  font: inherit; text-align: left; color: inherit;
+}
+.cl-clip:hover { background: var(--petrol-hell); }
+.cl-clip[hidden] { display: none; }
+.cl-clip:focus-visible { outline: 2px solid var(--petrol); outline-offset: -2px; }
+/* Platz des Clips in seiner Reihe. Sagt, in welcher Reihenfolge die Clips
+   einer Reihe gedacht sind — Ergaenzungen ohne Nummer stehen dahinter. */
+.cl-folge {
+  flex-shrink: 0; width: 19px; height: 19px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--petrol); color: #fff;
+  font-family: var(--mono); font-size: 0.58rem; font-weight: 700;
+}
+.cl-folge.cl-ohne { background: none; color: var(--tinte-2); font-size: 0.7rem; }
+
+/* Farbnuancen je Reihe: Jede Reihe bekommt eine eigene, bei der naechsten
+   wird weitergeschaltet. Die Farbe sitzt an der Zeile — Plakette UND linke
+   Kante —, weil ein 19-px-Kreis allein zu schwach gruppiert; aufeinander
+   folgende Clips einer Reihe bilden so einen durchgehenden Balken.
+   Bewusst nur Nuancen der Bereichsfarbe: Die didaktischen Farben aus
+   STYLEGUIDE 5.1 bedeuten etwas (blau Definition, gruen Beispiel, orange
+   Aufgabe, rot Fehler, lila Beweis) — sie hier fuer eine Gruppierung zu
+   verwenden hiesse, sie umzudeuten. Alle Nuancen tragen weisse Schrift mit
+   mindestens 4.6 Kontrast, und ihre Helligkeiten sind gespreizt, damit sie
+   sich auch in klein unterscheiden.
+   Eine Ausnahme: .cl-tr. Die Taschenrechner-Clips zeigen nicht den Stoff,
+   sondern ein Werkzeug dazu, und stehen darum am Schluss ihrer Themenseite.
+   Sie tragen als einzige Orange — nicht als didaktische Farbe, sondern als
+   Absetzung von der ganzen Nuancenfamilie ihres Bereichs. Damit die Zeile
+   nicht wie eine Aufgabe aussieht, bleibt der Rest der Zeile unveraendert:
+   gefaerbt sind nur Plakette und linke Kante, wie bei jeder Reihe. */
+.cl-clip { border-left: 3px solid transparent; }
+.cl-r1 .cl-folge { background: #0f3a5c; }  .cl-r1 .cl-clip { border-left-color: #0f3a5c; }
+.cl-r2 .cl-folge { background: #26709b; }  .cl-r2 .cl-clip { border-left-color: #26709b; }
+.cl-r3 .cl-folge { background: #0f5f6e; }  .cl-r3 .cl-clip { border-left-color: #0f5f6e; }
+.cl-r4 .cl-folge { background: #42759c; }  .cl-r4 .cl-clip { border-left-color: #42759c; }
+.cl-r5 .cl-folge { background: #1a4f8a; }  .cl-r5 .cl-clip { border-left-color: #1a4f8a; }
+.cl-r6 .cl-folge { background: #3d6b90; }  .cl-r6 .cl-clip { border-left-color: #3d6b90; }
+.cl-r7 .cl-folge { background: #14496e; }  .cl-r7 .cl-clip { border-left-color: #14496e; }
+.cl-r8 .cl-folge { background: #3a5aa0; }  .cl-r8 .cl-clip { border-left-color: #3a5aa0; }
+
+.cl-sp .cl-r1 .cl-folge { background: #3c1c63; }  .cl-sp .cl-r1 .cl-clip { border-left-color: #3c1c63; }
+.cl-sp .cl-r2 .cl-folge { background: #7d5a9e; }  .cl-sp .cl-r2 .cl-clip { border-left-color: #7d5a9e; }
+.cl-sp .cl-r3 .cl-folge { background: #5b2d8e; }  .cl-sp .cl-r3 .cl-clip { border-left-color: #5b2d8e; }
+.cl-sp .cl-r4 .cl-folge { background: #8a4a8a; }  .cl-sp .cl-r4 .cl-clip { border-left-color: #8a4a8a; }
+.cl-sp .cl-r5 .cl-folge { background: #6d4fa8; }  .cl-sp .cl-r5 .cl-clip { border-left-color: #6d4fa8; }
+.cl-sp .cl-r6 .cl-folge { background: #46256e; }  .cl-sp .cl-r6 .cl-clip { border-left-color: #46256e; }
+.cl-sp .cl-r7 .cl-folge { background: #7a3f9e; }  .cl-sp .cl-r7 .cl-clip { border-left-color: #7a3f9e; }
+.cl-sp .cl-r8 .cl-folge { background: #5a4bb0; }  .cl-sp .cl-r8 .cl-clip { border-left-color: #5a4bb0; }
+
+/* Clips zu einer einzelnen Animation (Drehbuch-Feld `animation`, uebernommen
+   aus TALS Physik 27.09.2026): in beiden Bereichen die Farbe der Animations-
+   Hinweise (.ah-titel), getoente Zeile und vorn der Link «Anim» zur Animation.
+   Auf der Lektionsseite stehen sie zudem in eigener Gruppe. Stand 27.09.2026
+   traegt noch kein Mathe-Drehbuch das Feld — die Regeln greifen erst dann. */
+.cl-anim { display: flex; align-items: stretch; }
+.cl-anim[hidden] { display: none; }        /* Sofortsuche in clips.html */
+.cl-anim .cl-clip, .cl-sp .cl-anim .cl-clip { flex: 1; min-width: 0; background: var(--petrol-hell); border-left: 0; padding-left: 6px; }
+.cl-anim .cl-clip:hover { background: #cfe0f4; }
+.cl-anim .cl-folge, .cl-sp .cl-anim .cl-folge { background: var(--petrol); }
+/* «Anim» vor der Zeile: Link zur Animation, die der Clip erklärt */
+.cl-animlink {
+  flex-shrink: 0; display: flex; align-items: center; padding: 0 8px 0 12px;
+  background: var(--petrol-hell); color: var(--petrol); text-decoration: none;
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.4px;
+  border-left: 3px solid var(--petrol);
+}
+.cl-animlink:hover { background: #cfe0f4; text-decoration: underline; }
+.cl-animlink:focus-visible { outline: 2px solid var(--petrol); outline-offset: -2px; }
+.cl-animkopf {
+  margin: 20px 0 0; font-family: var(--mono); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.6px; text-transform: uppercase; color: var(--petrol);
+}
+
+/* Werkzeug-Reihe (Taschenrechner): in beiden Bereichen dieselbe Farbe —
+   sie soll gerade *nicht* zum Bereich gehoeren. */
+.cl-tr .cl-folge, .cl-sp .cl-tr .cl-folge { background: var(--orange); }
+.cl-tr .cl-clip,  .cl-sp .cl-tr .cl-clip  { border-left-color: var(--orange); }
+.cl-tr .cl-clip:hover { background: var(--orange-hell); }
+.cl-tr .cl-folge.cl-ohne, .cl-sp .cl-tr .cl-folge.cl-ohne {
+  background: none; color: var(--orange);
+}
+.cl-titel { font-size: 0.85rem; }
+.cl-zeit {
+  margin-left: auto; flex-shrink: 0;
+  font-family: var(--mono); font-size: 0.62rem; color: var(--tinte-2);
+}
+
+/* ── Grosse Buehne ────────────────────────────────────────────
+   Aus der Bibliothek laeuft ein Clip nicht in seiner Zeile, sondern
+   ueber dem Fenster: dort ist er so gross wie der Bildschirm hergibt,
+   und beim Schliessen steht man wieder genau in der Liste. Ein neuer
+   Tab kann das nicht — er verliert die Liste und laeuft weiter, wenn
+   man ihn vergisst. Fuers Projizieren fuehrt ein Link im Kopf trotzdem
+   in einen eigenen Tab. */
+.clip-buehne {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(14, 20, 24, 0.88);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; padding: 18px;
+}
+.cb-kopf {
+  display: flex; align-items: center; gap: 16px;
+  width: min(96vw, calc((100vh - 150px) * 16 / 9));
+  color: #eef2f5;
+}
+.cb-titel { font-family: var(--serif); font-size: 0.95rem; font-weight: 700; }
+.cb-tab, .cb-zu {
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: #eef2f5; background: none; border: 0; cursor: pointer; padding: 4px 6px;
+  text-decoration: none; white-space: nowrap;
+}
+.cb-tab { margin-left: auto; opacity: 0.72; }
+.cb-tab:hover, .cb-zu:hover { opacity: 1; text-decoration: underline; }
+.cb-zu { border: 1px solid rgba(255,255,255,.35); border-radius: 6px; }
+.cb-rahmen {
+  position: relative;
+  width: min(96vw, calc((100vh - 150px) * 16 / 9));
+  padding-bottom: min(calc(96vw * 0.5625 + 60px), calc(100vh - 150px));
+  border-radius: 9px; overflow: hidden; background: var(--papier);
+}
+.cb-rahmen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 720px) {
+  .clip-buehne { padding: 8px; }
+  .cb-kopf, .cb-rahmen { width: 100%; }
+  /* Schmal reicht eine Zeile nicht fuer Titel und beide Knoepfe: Der Titel
+     nimmt die erste, Tab und Schliessen stehen darunter rechts. */
+  .cb-kopf { flex-wrap: wrap; gap: 4px 12px; }
+  .cb-titel { flex: 1 1 100%; }
+  .cb-rahmen { padding-bottom: calc(100vw * 0.5625 + 60px); }
+}
+/* Ziel eines Suchtreffers: der Ring zeigt, welche Zeile gemeint war. */
+.cl-ziel { border-radius: 9px; box-shadow: 0 0 0 2px var(--petrol); }
+.cl-leer { color: var(--tinte-2); font-size: 0.85rem; }
+
+/* Schwerpunktfach violett — Bereichsfarben nach STYLEGUIDE 5.2 */
+.cl-sp .cl-nr   { background: var(--lila-hell); color: var(--lila); }
+.cl-sp .cl-folge.cl-ohne { background: none; color: var(--tinte-2); }
+.cl-sp .cl-clip:hover { background: var(--lila-hell); }
+.cl-sp .cl-hdr:focus-visible,
+.cl-sp .cl-clip:focus-visible { outline-color: var(--lila); }
+
+/* Transkripte: der einzige Text, den Suchmaschine und Volltextsuche vom
+   Clip sehen. Klasse darf NICHT in SKIP_CLASSES von build-suchindex.py. */
+.clip-transkript, .clip-transkripte { margin-top: 12px; }
+.clip-transkripte .clip-h { margin: 16px 0 2px; font-size: 0.95rem; }
+.clip-transkripte .clip-h:first-of-type { margin-top: 8px; }
+.clip-transkript > summary, .clip-transkripte > summary {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--tinte-2);
+  padding: 4px 0;
+}
+.clip-transkript > summary:hover, .clip-transkripte > summary:hover { color: var(--petrol); }
+.clip-transkript ol, .clip-transkripte ol { margin: 8px 0 0; padding-left: 0; list-style: none; }
+.clip-transkript li, .clip-transkripte li {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  padding: 3px 0;
+}
+
+.clip-transkript .tk-zeit, .clip-transkripte .tk-zeit {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--tinte-2);
+  min-width: 44px;
+}
+
+/* ════════════════════════════════════════════════════════════════
+ *  Animations-Karte (.anim)
+ *  Wird seitenübergreifend für interaktive Canvas-Animationen
+ *  verwendet. Layout: Canvas links, Bedienelemente rechts.
+ *  Auf schmalen Bildschirmen einspaltig.
+ * ════════════════════════════════════════════════════════════════ */
+.anim {
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  padding: 18px;
+  margin: 14px 0 22px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+}
+/* Steht eine .anim-Karte im Körper eines .widget, macht .widget den Rahmen.
+   .anim bleibt dann nur noch Namensraum für seine 22 Nachfahren-Regeln
+   (.bedien, .regler, .chips, .legende, .formel …) und gibt die Karten-Optik
+   ab — sonst entstünde Rahmen im Rahmen. Verbindlich seit STYLEGUIDE §2.10. */
+.widget-body > .anim {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+}
+.anim-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .anim-layout { grid-template-columns: minmax(0, 1fr); }
+}
+.anim canvas {
+  width: 100%;
+  height: auto;
+  background: var(--papier-2);
+  border: 1px solid var(--linie);
+  border-radius: 6px;
+  display: block;
+  touch-action: none;
+}
+.anim .bedien { display: flex; flex-direction: column; gap: 12px; }
+.anim .regler { display: flex; flex-direction: column; gap: 3px; }
+.anim .regler-label {
+  display: flex; justify-content: space-between;
+  font-size: 0.88rem; color: var(--tinte-2);
+}
+.anim .regler-label .wert {
+  font-family: var(--mono); color: var(--petrol); font-weight: 500;
+}
+.anim input[type="range"] { width: 100%; accent-color: var(--petrol); }
+.anim .feld-titel {
+  font-size: 0.74rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--tinte-2);
+  font-weight: 600; margin-bottom: 2px;
+}
+.anim .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.anim .chip {
+  background: var(--papier-2);
+  border: 1px solid var(--linie);
+  color: var(--tinte-2);
+  padding: 5px 9px; border-radius: 14px;
+  font-size: 0.82rem; cursor: pointer;
+  font-family: var(--mono); transition: all 0.12s;
+}
+.anim .chip:hover { border-color: var(--petrol-rand); color: var(--petrol); }
+.anim .chip.aktiv {
+  background: var(--petrol); border-color: var(--petrol); color: white;
+}
+.anim .legende {
+  background: var(--papier-2);
+  border: 1px solid var(--linie);
+  border-radius: 6px;
+  padding: 8px 11px;
+  font-size: 0.86rem;
+}
+.anim .legende-titel {
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--tinte-2);
+  font-weight: 600; margin-bottom: 5px;
+}
+.anim .legende-zeile {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 0.85rem;
+  padding: 1px 0;
+}
+.anim .legende-zeile .lab { color: var(--tinte); }
+.anim .legende-zeile .val { color: var(--petrol); font-weight: 500; }
+.anim .formel {
+  background: var(--petrol-hell);
+  border: 1px solid var(--petrol-rand);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.93rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+.anim .erklaerung {
+  background: var(--papier-2);
+  border-left: 3px solid var(--petrol);
+  padding: 7px 11px;
+  font-size: 0.84rem;
+  color: var(--tinte-2);
+  border-radius: 0 4px 4px 0;
+  min-height: 36px;
+}
+.anim .anim-titel {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--petrol);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.anim .kn-quad {
+  background: var(--papier-2);
+  border: 1px solid var(--linie);
+  color: var(--tinte);
+  padding: 4px 9px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: var(--mono);
+  transition: all 0.12s;
+}
+.anim .kn-quad:hover { border-color: var(--petrol-rand); color: var(--petrol); }
+
+/* ── MINI-CHECKS (Pilot g3-2; Muster aus TALS-Physik, Farben: Orange = Aufgabe/Übung) ──
+   Einklappbare Verständnisfragen je Abschnitt; Akkordeon-Logik in minicheck.js. */
+.minicheck { background: var(--weiss); border: 1px solid var(--orange-rand); border-radius: 12px; margin: 18px 0; overflow: hidden; }
+.minicheck > summary.mc-kopf {
+  cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px;
+  font-family: var(--serif); font-weight: 700; font-size: 0.9rem; color: var(--orange);
+  background: var(--orange-hell); padding: 9px 16px;
+}
+.minicheck > summary.mc-kopf::-webkit-details-marker { display: none; }
+.minicheck > summary.mc-kopf::after { content: '▸'; margin-left: auto; color: var(--orange-rand); transition: transform 0.15s ease; }
+.minicheck[open] > summary.mc-kopf::after { transform: rotate(90deg); }
+.minicheck[open] > summary.mc-kopf { border-bottom: 1px solid var(--orange-rand); }
+.minicheck > summary.mc-kopf:hover { filter: brightness(0.97); }
+.mc-item { padding: 12px 16px; }
+.mc-item + .mc-item { border-top: 1px solid var(--linie); }
+.mc-typ { display: inline-block; font-family: var(--sans); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.03em; text-transform: uppercase; color: var(--orange); background: var(--orange-hell);
+  border: 1px solid var(--orange-rand); border-radius: 5px; padding: 1px 7px; margin-bottom: 7px; }
+.mc-frage { font-size: 0.92rem; line-height: 1.55; margin: 0 0 8px; }
+.mc-optionen { list-style: none; margin: 0 0 8px; padding: 0; }
+.mc-optionen li { position: relative; padding: 3px 0 3px 1.8em; font-size: 0.9rem; line-height: 1.45; }
+.mc-optionen li::before { content: attr(data-opt) ')'; position: absolute; left: 0; font-weight: 700; color: var(--orange); }
+.mc-luecke { display: inline-block; min-width: 3.4em; border-bottom: 1.5px solid var(--orange); margin: 0 2px; }
+.mc-loesung { margin-top: 4px; }
+.mc-loesung > summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--orange); }
+.mc-loesung > summary::-webkit-details-marker { display: none; }
+.mc-loesung > summary::before { content: '▸'; transition: transform 0.15s ease; }
+.mc-loesung[open] > summary::before { transform: rotate(90deg); }
+.mc-loesung > summary:hover { filter: brightness(0.97); }
+.mc-antwort { margin-top: 8px; padding: 9px 12px; font-size: 0.88rem; line-height: 1.55; background: var(--orange-hell); border-radius: 7px; }
+
+/* ════════════════════════════════════════════════════════════════
+ *  Animations-Karte (.widget)
+ *  Rahmen für interaktive Canvas-Animationen: Kopfzeile mit Titel,
+ *  Untertitel und Hinweispaar, darunter der Körper mit Reglern,
+ *  Live-Formel und Canvas. Bis 03.08.2026 lag dieser Block als
+ *  wortgleiche Kopie in 35 Themenseiten — neue Seiten aus
+ *  TEMPLATE.html benutzten die Klassen, ohne sie zu definieren, und
+ *  blieben deshalb ungerahmt. Seither steht er nur noch hier.
+ *  Seiten-eigene Abwandlungen als Modifier daneben (z.B. g3-3
+ *  .widget-kompakt), nie als erneute Definition von .widget.
+ * ════════════════════════════════════════════════════════════════ */
+.widget { background:var(--weiss); border:1px solid var(--linie); border-radius:14px; overflow:hidden; box-shadow:var(--s); margin:16px 0; }
+.widget-header { padding:16px 22px 14px; border-bottom:1px solid var(--linie); background:var(--papier); }
+.widget-header h3 { font-family:var(--serif); font-size:1rem; font-weight:700; color:var(--tinte); margin-bottom:3px; }
+.widget-header p { font-size:0.8rem; color:var(--tinte-2); }
+.widget-body { padding:20px 22px; }
+
+/* ── ANIMATIONS-HINWEISE (Pilot g3-2; Muster aus TALS-Physik, Farben: Blau = Animation) ──
+   Rollover «Worauf achten?» / «Erkenntnis» mit Vorlese-Option; Logik in anim-hinweise.js. */
+.widget-titelzeile { position:relative; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0; }
+.widget-titelzeile h3 { margin:0; }
+.anim-hinweis { position:relative; display:inline-block; }
+/* Die erste Hinweis-Pille schiebt sich (und damit die zweite) ans rechte Titelende —
+   unabhängig davon, ob der Titel ein <h3>, .anim-titel oder <p> ist. position:static
+   verankert ihr .ah-pop an der (position:relative-)Titelzeile, sodass es nach links öffnet. */
+.widget-titelzeile .anim-hinweis.links { position:static; margin-left:auto; }
+.ah-trigger { font-size:0.8rem; color:var(--tinte-2); border-bottom:1px dotted var(--petrol-rand);
+  cursor:help; user-select:none; padding:1px 0; display:inline-block; white-space:nowrap; }
+.ah-trigger:focus-visible { outline:2px solid var(--petrol-rand); outline-offset:2px; border-radius:2px; }
+.ah-pop { position:absolute; left:0; top:calc(100% + 8px); z-index:50; width:min(440px,86vw);
+  background:var(--petrol-hell); border:1px solid var(--petrol-rand); border-radius:8px;
+  padding:11px 13px; box-shadow:0 6px 18px rgba(28,26,23,0.18);
+  opacity:0; visibility:hidden; transform:translateY(-3px);
+  transition:opacity .15s ease, transform .15s ease; pointer-events:none; }
+.anim-hinweis.rechts .ah-pop,
+.anim-hinweis.links  .ah-pop { left:auto; right:0; }
+.ah-pop::before { content:""; position:absolute; left:0; right:0; top:-8px; height:8px; }
+.anim-hinweis:hover .ah-pop,
+.anim-hinweis:focus-within .ah-pop,
+.anim-hinweis.fixiert .ah-pop { opacity:1; visibility:visible; transform:none; pointer-events:auto; }
+/* Clip zur Animation (.clip mit .ah-clip-knopf): Eintrag rechts in der Titelzeile, gleich unauffällig
+   wie die Hinweise, aber ein Knopf (clipStart öffnet die grosse Bühne). Gesetzt von build-clips-einbau.py. */
+.ah-clip-knopf { font:inherit; font-size:0.8rem; color:var(--petrol); background:none; border:0;
+  border-bottom:1px dotted var(--petrol-rand); padding:1px 0; cursor:pointer; white-space:nowrap; }
+.ah-clip-knopf:hover { color:var(--tinte); }
+.ah-clip-knopf:focus-visible { outline:2px solid var(--petrol-rand); outline-offset:2px; border-radius:2px; }
+/* Schmal: Titel über die ganze Zeile, die drei Einträge darunter gemeinsam rechts. Sonst
+   blieb bei kurzen Titeln «Worauf achten?» oben und «Erkenntnis ▶ Clip» fiel links darunter. */
+@media (max-width: 600px) {
+  .widget-titelzeile > h3, .widget-titelzeile > .anim-titel { flex-basis:100%; }
+}
+.ah-titel { display:block; font-weight:600; font-size:0.8rem; color:var(--petrol); margin-bottom:5px; }
+.ah-text { font-size:0.8rem; line-height:1.5; color:var(--tinte); }
+.ah-text ul { margin:0; padding-left:1.15em; }
+.ah-text li { margin:3px 0; }
+
+/* ── SLIDER-GRUPPIERUNG (Muster aus TALS-Physik Phase 5.34) ──
+   Mehrere Regler einer Animation in EINER .sl-row: jede .sl-grp ist eine
+   unzertrennliche Einheit Label+Slider+Wert; auf schmalen Screens brechen
+   ganze Gruppen um (kein Overflow, Label bleibt beim Regler).
+   Die .sl-row-Basisstile liegen seitenlokal (Widget-Pattern-Seiten). */
+.sl-row { flex-wrap: wrap; }
+.sl-row .sl-grp { display: flex; align-items: center; gap: 10px; flex: 1 1 210px; min-width: 0; }
+.sl-row .sl-grp label { min-width: 0; }
+.sl-row .sl-grp input[type=range] { min-width: 60px; }
+
+/* ── LERNZIELE (Pilot g3-2; Muster aus TALS-Physik, Blau = Orientierung/Begriff) ──
+   Aufklappbare Ich-kann-Liste direkt nach der RLP-Kompetenzen-Box. */
+.lernziele { border-radius: 8px; margin: 14px 0 28px; border: 1.5px solid var(--petrol-rand);
+  background: var(--petrol-hell); overflow: hidden; }
+.lernziele > summary { list-style: none; cursor: pointer; padding: 11px 16px;
+  font-family: var(--sans); font-weight: 700; font-size: 0.9rem; color: var(--petrol);
+  display: flex; align-items: center; gap: 9px; user-select: none; }
+.lernziele > summary::-webkit-details-marker { display: none; }
+.lernziele > summary::after { content: '▸'; margin-left: auto; font-size: 0.85rem; transition: transform 0.18s; }
+.lernziele[open] > summary::after { transform: rotate(90deg); }
+.lernziele > summary:hover { filter: brightness(0.97); }
+.lernziele .lz-body { padding: 4px 18px 14px; }
+.lernziele ul { margin: 0; padding-left: 1.25em; }
+.lernziele li { margin: 5px 0; font-size: 0.92rem; }
+.lernziele li::marker { color: var(--petrol-rand); }
+
+/* ── WERTEZUGEHÖRIGKEIT in zusammengelegten Slider-Zeilen ──
+   Wert direkt neben dem eigenen Slider (Nähe), deutlicher Abstand zwischen
+   den Gruppen (Distanz). Übersteuert per Spezifität die seitenlokalen
+   .sl-val-Regeln (min-width:64px / text-align:right). */
+.sl-row:has(.sl-grp) { gap: 30px; row-gap: 10px; }
+.sl-row .sl-grp { gap: 8px; }
+.sl-row .sl-grp .sl-val { min-width: 0; text-align: left; }
+
+/* Akzentfarbe pro Regler-Gruppe — koppelt Slider, Wert und Label-Variable.
+   Dieselben Farben stehen als .tx-*-Textakzente für Formelbestandteile bereit. */
+.sl-grp.akz-blau,   .sl-row.akz-blau   { --akz: var(--blau); }
+.sl-grp.akz-orange, .sl-row.akz-orange { --akz: var(--orange); }
+.sl-grp.akz-gruen,  .sl-row.akz-gruen  { --akz: var(--gruen); }
+.sl-grp[class*="akz-"] input[type=range],
+.sl-row[class*="akz-"] input[type=range] { accent-color: var(--akz); }
+.sl-grp[class*="akz-"] input[type=range]::-webkit-slider-thumb,
+.sl-row[class*="akz-"] input[type=range]::-webkit-slider-thumb { background: var(--akz); }
+.sl-grp[class*="akz-"] .sl-val,
+.sl-row[class*="akz-"] .sl-val { color: var(--akz); }
+.sl-grp[class*="akz-"] label .var,
+.sl-row[class*="akz-"] label .var { color: var(--akz); font-weight: 600; }
+.tx-blau   { color: var(--blau); }
+.tx-orange { color: var(--orange); }
+.tx-gruen  { color: var(--gruen); }
+
+/* ── Nachschlagen: Glossar & Formelsammlung (ab ZIP 59) ───────── */
+/* Glossar-Sprungleiste (A B C …) */
+.glossar-az {
+  display: flex; flex-wrap: wrap; gap: 5px;
+  margin: 6px 0 22px;
+}
+.glossar-az a {
+  font-family: var(--mono); font-size: 0.78rem; font-weight: 700;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; text-decoration: none;
+  background: var(--petrol-hell); color: var(--petrol);
+  border: 1px solid var(--petrol-rand);
+}
+.glossar-az a:hover { background: var(--petrol); color: #fff; }
+/* Glossar-Eintrag: Begriff + Definition */
+.glossar-eintrag {
+  border-left: 3px solid var(--petrol-rand);
+  padding: 4px 0 4px 14px;
+  margin: 14px 0;
+}
+.glossar-eintrag .ge-begriff {
+  font-family: var(--serif); font-weight: 700; font-size: 1.02rem;
+  color: var(--tinte);
+}
+.glossar-eintrag .ge-formel {
+  font-family: var(--mono); font-size: 0.82rem; color: var(--petrol);
+  margin-left: 8px;
+}
+.glossar-eintrag p { margin: 4px 0 0; font-size: 0.93rem; }
+.glossar-eintrag .ge-quer { font-size: 0.82rem; color: var(--tinte-2, var(--tinte)); font-style: italic; }
+.glossar-eintrag .ge-quer a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--petrol-rand); }
+.glossar-eintrag .ge-quer a:hover { color: var(--petrol); border-bottom-color: var(--petrol); }
+/* Glossar: Umschalter A–Z / Themengebiet */
+.gl-modus {
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  margin: 10px 0 14px; padding: 10px 14px;
+  background: var(--papier-2); border: 1px solid var(--linie); border-radius: 8px;
+}
+.gl-modus .gm-label { font-family: var(--mono); font-size: 0.82rem; color: var(--tinte-2); margin-right: 4px; }
+.gm-btn {
+  padding: 6px 14px; border: 1px solid var(--linie); background: var(--weiss);
+  border-radius: 6px; cursor: pointer; font-family: var(--mono); font-size: 0.82rem; transition: 0.12s;
+}
+.gm-btn:hover { border-color: var(--petrol); }
+.gm-btn.aktiv { background: var(--petrol); color: var(--weiss); border-color: var(--petrol); }
+.gl-lg-nav a { width: auto; height: auto; padding: 5px 11px; }
+.gl-anzahl {
+  font-family: var(--mono); font-size: 0.72rem; font-weight: 400; color: var(--tinte-2);
+  letter-spacing: 0; text-transform: none; margin-left: 8px;
+}
+/* Formelsammlung: Lerngebiet-Block mit Formelzeilen */
+.fs-block {
+  border: 1px solid var(--linie); border-radius: 10px;
+  padding: 16px 18px; margin: 16px 0; box-shadow: var(--s);
+  background: var(--weiss);
+}
+.fs-block > h3 {
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
+  margin: 0 0 4px; color: var(--tinte);
+}
+.fs-thema {
+  margin: 12px 0 4px; font-family: var(--mono); font-size: 0.68rem;
+  font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--orange);
+}
+.fs-zeile {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
+  padding: 5px 0; border-bottom: 1px solid var(--linie);
+}
+.fs-zeile:last-child { border-bottom: none; }
+.fs-name { flex: 0 0 200px; font-size: 0.9rem; color: var(--tinte); }
+.fs-formel { flex: 1 1 200px; font-size: 0.96rem; }
+.fs-quer {
+  font-family: var(--mono); font-size: 0.74rem; color: var(--petrol);
+  text-decoration: none; white-space: nowrap;
+}
+.fs-quer:hover { text-decoration: underline; }
+@media (max-width: 640px) { .fs-name { flex-basis: 100%; } }
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   Kein horizontaler Overflow auf schmalen Viewports
+   ──────────────────────────────────────────────────────────────────────
+   Ursache war nicht ein einzelnes Element, sondern die min-content-Breite
+   nicht umbrechbarer Inhalte (MathJax-Formeln, Canvas mit width-Attribut,
+   breite Tabellen). Ein Grid-Track «1fr» = minmax(auto, 1fr) übernimmt diese
+   min-content-Breite als Minimum und zieht die ganze Seite auf — deshalb
+   oben minmax(0, 1fr) und hier die Begrenzung der Inhalte selbst.
+   Breite Formeln und Tabellen scrollen ab jetzt in sich selbst, statt die
+   Seite zu sprengen.
+   ══════════════════════════════════════════════════════════════════════ */
+mjx-container { max-width: 100%; }
+mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+/* Lange Inline-Formeln (z.B. Mengenschreibweisen) dürfen ebenfalls scrollen. */
+mjx-container:not([display="true"]) { overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
+canvas, svg, img { max-width: 100%; }
+table { max-width: 100%; }
+
+/* MathJax legt für Screenreader eine unsichtbare MathML-Kopie ab (position:absolute).
+   Sie ist visuell geclippt, zählt aber zur Scrollbreite und schob die Seite auf.
+   Sie bleibt im DOM (und damit für Screenreader lesbar), nimmt aber keinen Platz mehr.
+   MathJax setzt selbst «width: 100% !important» und injiziert sein Stylesheet nach
+   diesem — deshalb braucht es hier die höhere Spezifität über «body». */
+body mjx-assistive-mml,
+body mjx-assistive-mml[display="block"] {
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+/* Auf schmalen Viewports scrollen breite Tabellen und mehrspaltige Info-Raster
+   in sich selbst. overflow-x != visible setzt ihre min-content-Breite auf 0 und
+   nimmt damit den Zug von der Seite. Auf dem Desktop bleibt alles unverändert. */
+@media (max-width: 900px) {
+  /* Viele Seiten geben ihren Tabellen eigene Klassen mit «overflow: hidden»
+     (für den Radius); die stünden sonst über dieser Regel und würden den Inhalt
+     abschneiden statt ihn scrollen zu lassen. Deshalb hier !important. */
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+  .anw-tabelle-wrap, .daten-wrap, .dia-wrap, .iv-tabelle,
+  .pot-vis, .sb-eigen, .fak-uebung, .entscheid, .workflow-grid,
+  .qual-grid, .formen-grid, .diag-grid, .urliste-demo, .tk-demo {
+    overflow-x: auto;
+  }
+}
+
+/* ── SUCHE (Header rechts) ───────────────────────────────────
+   Markup baut nav.js: .suche > .such-lupe + .such-feld + .such-panel
+   Logik in suche.js, Index in suchindex.js (generiert).
+   Farben: Site-Chrome — also Blau (Mathe-Leitfarbe), nicht Bernstein.
+   ───────────────────────────────────────────────────────────── */
+.suche { position: relative; flex-shrink: 0; }
+.such-lupe { display: none; background: none; border: none; cursor: pointer; font-size: 1rem; padding: 4px 6px; line-height: 1; }
+.such-feld {
+  font-family: var(--sans); font-size: 0.8rem; color: var(--tinte);
+  width: 190px; padding: 5px 11px; border-radius: 20px;
+  border: 1.5px solid var(--linie); background: var(--papier);
+  transition: width 0.18s, border-color 0.15s, background 0.15s;
+}
+.such-feld::placeholder { color: var(--tinte-2); opacity: 0.75; }
+.such-feld:focus {
+  outline: none; width: 260px;
+  border-color: var(--petrol-rand); background: var(--weiss);
+  box-shadow: 0 0 0 3px var(--petrol-hell);
+}
+.such-feld::-webkit-search-cancel-button { cursor: pointer; }
+
+.such-panel {
+  display: none; position: absolute; top: calc(100% + 8px); right: 0;
+  width: 460px; max-width: calc(100vw - 28px);
+  max-height: 70vh; overflow-y: auto;
+  background: var(--weiss); border: 1px solid var(--linie);
+  border-radius: 10px; box-shadow: var(--sl); padding: 6px; z-index: 300;
+}
+.such-panel.offen { display: block; }
+.sr {
+  display: flex; gap: 10px; align-items: baseline;
+  padding: 8px 11px; border-radius: 7px; text-decoration: none; color: inherit;
+}
+.sr:hover, .sr.sr-aktiv { background: var(--petrol-hell); text-decoration: none; }
+.sr-nr { font-family: var(--mono); font-size: 0.62rem; font-weight: 700; color: var(--petrol); min-width: 30px; flex-shrink: 0; }
+.sr-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sr-t { font-size: 0.83rem; font-weight: 700; color: var(--tinte); line-height: 1.35; }
+.sr-q { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 1px; text-transform: uppercase; color: var(--tinte-2); }
+.sr-x { font-size: 0.75rem; color: var(--tinte-2); line-height: 1.5; }
+.sr-x mark, .sr-t mark { background: var(--petrol-hell); color: var(--petrol); font-weight: 700; padding: 0 1px; border-radius: 2px; }
+.sr-leer { padding: 14px 12px; font-size: 0.8rem; color: var(--tinte-2); }
+.sr-fuss {
+  border-top: 1px solid var(--linie); margin-top: 4px; padding: 7px 11px 3px;
+  font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.5px; color: var(--tinte-2);
+}
+
+/* Sprungziele nicht unter den klebenden Header rutschen lassen
+   (gilt für die Sprünge aus dem Inhaltsverzeichnis und aus der Suche) */
+.content h2[id], .content h3[id] { scroll-margin-top: 66px; }
+
+@media (max-width: 1024px) {
+  .suche  { margin-left: auto; }
+  .burger { margin-left: 4px; }
+}
+@media (max-width: 640px) {
+  /* Platz ist knapp: nur die Lupe zeigen, Feld klappt darunter auf */
+  .such-lupe { display: block; }
+  .such-feld { display: none; }
+  .suche.offen .such-feld {
+    display: block; position: fixed; left: 10px; right: 10px; top: 62px;
+    width: auto; z-index: 320;
+  }
+  .such-panel { position: fixed; top: 104px; left: 10px; right: 10px; width: auto; max-width: none; }
+}
+
+/* §10: Links im Über-Panel bleiben inline — .dd-menu a { display:flex } macht
+   sonst jeden Link im Panel zu einer eigenen Zeile und reisst Links mitten
+   im Satz aus dem Fliesstext. */
+.ueber-panel .meta-link { display: inline; padding: 0; }

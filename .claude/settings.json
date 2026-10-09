@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(awk:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(git:*)",
+      "WebFetch(domain:youtube.com)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:de.serlo.org)",
+      "WebFetch(domain:sos-mathe.ch)",
+      "WebFetch(domain:www.sos-mathe.ch)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)"
+    ]
+  }
+}

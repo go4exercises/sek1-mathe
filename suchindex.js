@@ -1,0 +1,52 @@
+// ─────────────────────────────────────────────────────────────
+//  TALS Mathe — Suchindex  (GENERIERT, nicht von Hand aendern)
+//  Neu bauen:  python3 scripts/build-suchindex.py
+// ─────────────────────────────────────────────────────────────
+window.SUCHINDEX = {
+  fp: "8f9eb91aa70cd3ae",
+  seiten: [
+    {u:"themen/t1-1-zahlenmengen-zahlenarten.html", nr:"1.1", t:"Zahlenmengen und Zahlenarten"},
+    {u:"themen/t1-2-rechnen-in-z-potenzen.html", nr:"1.2", t:"Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten"},
+    {u:"themen/t1-3-uebergang-z-q.html", nr:"1.3", t:"Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ"},
+    {u:"themen/t1-4-rechnen-in-q.html", nr:"1.4", t:"Rechnen in ℚ"},
+    {u:"themen/t2-1-lineare-gleichungen.html", nr:"2.1", t:"Lineare Gleichungen"},
+    {u:"themen/t2-2-textaufgaben-lineare-gleichungen.html", nr:"2.2", t:"Textaufgaben zu den linearen Gleichungen"},
+    {u:"themen/t3-1-geometrische-grundbegriffe.html", nr:"3.1", t:"Geometrische Grundbegriffe"},
+    {u:"themen/t3-2-flaechen-geradlinig-begrenzter-figuren.html", nr:"3.2", t:"Flächen geradlinig begrenzter Figuren"},
+    {u:"themen/t3-3-pythagoras.html", nr:"3.3", t:"Pythagoras"},
+    {u:"themen/t3-4-kreis-kreisteile.html", nr:"3.4", t:"Berechnungen am Kreis, Kreisteile"},
+    {u:"themen/t3-5-quader-prisma-zylinder.html", nr:"3.5", t:"Volumen und Oberflächen von Quader, Prisma und Zylinder"},
+    {u:"glossar.html", nr:"A–Z", t:"Glossar"},
+    {u:"formelsammlung.html", nr:"∑", t:"Formelsammlung"},
+    {u:"clips.html", nr:"▶", t:"Clips"},
+    {u:"leitprogramme.html", nr:"▤", t:"Leitprogramme"},
+  ],
+  eintraege: [
+    {p:0, a:"", t:"1.1 Zahlenmengen und Zahlenarten", x:"1.1 Zahlenmengen und Zahlenarten 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:0, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Zahlenmengen und Zahlenarten». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:1, a:"", t:"1.2 Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten", x:"1.2 Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:1, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:2, a:"", t:"1.3 Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ", x:"1.3 Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:2, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:3, a:"", t:"1.4 Rechnen in ℚ", x:"1.4 Rechnen in ℚ 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:3, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Rechnen in ℚ». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:4, a:"", t:"2.1 Lineare Gleichungen", x:"2.1 Lineare Gleichungen 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:4, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Lineare Gleichungen». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:5, a:"", t:"2.2 Textaufgaben zu den linearen Gleichungen", x:"2.2 Textaufgaben zu den linearen Gleichungen 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:5, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Textaufgaben zu den linearen Gleichungen». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:6, a:"", t:"3.1 Geometrische Grundbegriffe", x:"3.1 Geometrische Grundbegriffe 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:6, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Geometrische Grundbegriffe». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:7, a:"", t:"3.2 Flächen geradlinig begrenzter Figuren", x:"3.2 Flächen geradlinig begrenzter Figuren 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:7, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Flächen geradlinig begrenzter Figuren». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:8, a:"", t:"3.3 Pythagoras", x:"3.3 Pythagoras 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:8, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Pythagoras». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:9, a:"", t:"3.4 Berechnungen am Kreis, Kreisteile", x:"3.4 Berechnungen am Kreis, Kreisteile 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:9, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Berechnungen am Kreis, Kreisteile». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:10, a:"", t:"3.5 Volumen und Oberflächen von Quader, Prisma und Zylinder", x:"3.5 Volumen und Oberflächen von Quader, Prisma und Zylinder 📋 Kompetenzen Diese Themenseite ist im Aufbau."},
+    {p:10, a:"einstieg", t:"Einstieg", x:"Einstieg Hier entsteht die Themenseite «Volumen und Oberflächen von Quader, Prisma und Zylinder». Aufbau nach TEMPLATE.html : Einstieg, Definition, Darstellungen, Theorie, Aufgaben A1–A6, Zusammenfassung, Zusatzmaterial und externe Ressourcen."},
+    {p:11, a:"", t:"Glossar", x:"Glossar Die Fachbegriffe der Themenseiten von A bis Z. Im Aufbau."},
+    {p:12, a:"", t:"Formelsammlung", x:"Formelsammlung Alle Formeln der Themenseiten, nach Bereichen geordnet. Im Aufbau."},
+    {p:13, a:"", t:"Clips", x:"Clips Kurze Animationen, die einen Rechenweg Zeile für Zeile aufbauen. Die Seite wird von scripts/clips bibliothek.py erzeugt, sobald es Clips gibt. Im Aufbau."},
+    {p:14, a:"", t:"Leitprogramme", x:"Leitprogramme Themen zum selbstständigen Durcharbeiten, mit Clips, Animationen und Kontrollfragen. Im Aufbau."},
+  ]
+};

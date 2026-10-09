@@ -1,0 +1,27 @@
+{
+  "name": "Papier",
+  "beschreibung": "Ruhiges weisses Papier ohne Karo — für Physik und Text.",
+  "papier": "#FCFCFA",
+  "tinte": "#20262B",
+  "blau": "#31688E",
+  "rot": "#B23A2E",
+  "gruen": "#2E7D5B",
+  "gold": "#C98A20",
+  "karo": false,
+  "rand": false,
+  "karte": "rgba(0,0,0,.03)",
+  "box": "rgba(0,0,0,.02)",
+  "vignette": "rgba(40,40,40,.07)",
+  "farben": [
+    "#1F6FB2",
+    "#B85A1B",
+    "#2C7A58",
+    "#7E4599"
+  ],
+  "flaechen": [
+    "rgba(31,111,178,.10)",
+    "rgba(184,90,27,.11)",
+    "rgba(44,122,88,.10)",
+    "rgba(126,69,153,.10)"
+  ]
+}

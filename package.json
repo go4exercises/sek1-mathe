@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "jsdom": "^29.1.1",
+    "mathjax-full": "^3.2.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  },
+  "scripts": {
+    "shots": "playwright install chromium && node .claude/tools/screenshot-widgets.mjs",
+    "render-check": "playwright install chromium && node .claude/tools/render-check.mjs"
+  }
+}

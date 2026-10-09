@@ -1,0 +1,29 @@
+{
+  "name": "Heft",
+  "beschreibung": "Karopapier, Tinte, roter Seitenrand — der Stil des ersten Films.",
+  "papier": "#FBF7EE",
+  "tinte": "#1C2B35",
+  "blau": "#2B5F8C",
+  "rot": "#BF3B2B",
+  "gruen": "#2C7A58",
+  "gold": "#E0A32E",
+  "karo": true,
+  "karo_farbe": "rgba(43,95,140,.12)",
+  "rand": true,
+  "rand_farbe": "rgba(191,59,43,.26)",
+  "karte": "rgba(255,255,255,.66)",
+  "box": "rgba(255,255,255,.60)",
+  "vignette": "rgba(90,70,40,.10)",
+  "farben": [
+    "#1F6FB2",
+    "#C2621C",
+    "#2C7A58",
+    "#8A4BA0"
+  ],
+  "flaechen": [
+    "rgba(31,111,178,.12)",
+    "rgba(194,98,28,.13)",
+    "rgba(44,122,88,.12)",
+    "rgba(138,75,160,.12)"
+  ]
+}

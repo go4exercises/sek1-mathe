@@ -1,0 +1,5 @@
+# Sek1-Mathe begreifbar — alles darf indexiert werden.
+User-agent: *
+Allow: /
+
+Sitemap: https://sek1-mathe.begreifbar.ch/sitemap.xml

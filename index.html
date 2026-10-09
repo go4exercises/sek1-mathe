@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sek1-Mathe begreifbar — Mathematik Sekundarstufe I</title>
+<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->
+<meta name="description" content="Kostenloses interaktives Mathematik-Lehrmittel für die Sekundarstufe I: Zahlenmengen, Rechnen in ℤ und ℚ, lineare Gleichungen, Flächen, Pythagoras, Kreis und Körper.">
+<meta name="author" content="Raphael Arnold Kohler">
+<link rel="canonical" href="https://sek1-mathe.begreifbar.ch/index.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sek1-Mathe begreifbar">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Sek1-Mathe begreifbar — interaktives Lehrmittel für die Sekundarstufe I">
+<meta property="og:description" content="Kostenloses interaktives Mathematik-Lehrmittel für die Sekundarstufe I: Zahlenmengen, Rechnen in ℤ und ℚ, lineare Gleichungen, Flächen, Pythagoras, Kreis und Körper.">
+<meta property="og:url" content="https://sek1-mathe.begreifbar.ch/index.html">
+<meta property="og:image" content="https://sek1-mathe.begreifbar.ch/og-bild.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://sek1-mathe.begreifbar.ch/index.html#inhalt",
+   "url": "https://sek1-mathe.begreifbar.ch/index.html",
+   "name": "Sek1-Mathe begreifbar — interaktives Lehrmittel für die Sekundarstufe I",
+   "description": "Kostenloses interaktives Mathematik-Lehrmittel für die Sekundarstufe I: Zahlenmengen, Rechnen in ℤ und ℚ, lineare Gleichungen, Flächen, Pythagoras, Kreis und Körper.",
+   "inLanguage": "de-CH",
+   "isAccessibleForFree": true,
+   "license": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
+   "creator": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "publisher": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "dateModified": "2026-10-09",
+   "isPartOf": {
+    "@id": "https://sek1-mathe.begreifbar.ch/#website"
+   },
+   "about": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Mathematik"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Sekundarstufe I"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Lehrmittel"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Arithmetik"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Gleichungen"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Geometrie"
+    }
+   ],
+   "keywords": "Mathematik, Sekundarstufe I, Lehrmittel, Arithmetik, Gleichungen, Geometrie"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sek1-mathe.begreifbar.ch/#website",
+   "url": "https://sek1-mathe.begreifbar.ch/",
+   "name": "Sek1-Mathe begreifbar",
+   "inLanguage": "de-CH",
+   "license": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
+   "publisher": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "https://sek1-mathe.begreifbar.ch/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+   }
+  }
+ ]
+}
+</script>
+<!-- SEO:ENDE -->
+<link rel="stylesheet" href="schriften.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── Index-spezifisch ── */
+  .hero { background: var(--weiss); border-bottom: 1px solid var(--linie); padding: 16px 40px 18px; text-align: center; }
+  .hero-ew { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 1px; color: var(--tinte-2); margin-bottom: 10px; }
+  .hero-ew strong { font-weight: 700; color: var(--petrol); }
+  .hero-ew::before, .hero-ew::after { content:''; display:block; width:22px; height:1.5px; background:var(--petrol-rand); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.15; margin-bottom: 0; }
+  .hero h1 span { color: var(--petrol); }
+
+  .page { max-width: 1100px; margin: 0 auto; padding: 18px 22px 80px; }
+
+  .bereich { margin-top: 40px; padding: 11px 18px 10px; border-radius: 10px 10px 0 0; border-bottom: none; }
+  /* Die 40px trennen Grundlagen- von Schwerpunktfach. Über dem ersten Block gibt es
+     nichts zu trennen, und .page bringt schon 18px padding-top mit: der Bereichskopf
+     startet damit auf derselben Höhe wie in Physik die Kapitelliste ohne Kopf. */
+  .page > .bereich:first-child { margin-top: 0; }
+  .b-gl { background: var(--petrol-hell); border: 1.5px solid var(--petrol-rand); border-bottom: none; }
+  .b-sp { background: var(--lila-hell); border: 1.5px solid var(--lila-rand); border-bottom: none; }
+  .bh { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+  .b-badge { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; }
+  .b-gl .b-badge { background: var(--petrol); color: #fff; }
+  .b-sp .b-badge { background: var(--lila); color: #fff; }
+  .b-titel { font-family: var(--serif); font-size: 1.06rem; font-weight: 700; }
+  .b-gl .b-titel { color: var(--petrol); }
+  .b-sp .b-titel { color: var(--lila); }
+  /* Der Bereichstitel ist selbst der Verweis auf den Rahmenlehrplan. Farbe kommt
+     unveraendert aus .b-gl/.b-sp oben; der Pfeil markiert das externe Ziel. */
+  a.b-titel { text-decoration: none; }
+  a.b-titel:hover, a.b-titel:focus-visible { text-decoration: underline; }
+  .b-ext { font-size: 0.7em; margin-left: 4px; vertical-align: 1px; opacity: 0.7; }
+
+  .kap { border: 1.5px solid; border-top: none; overflow: hidden; }
+  .kap:last-of-type { border-radius: 0 0 10px 10px; }
+  .gl-kap { border-color: var(--petrol-rand); }
+  .sp-kap { border-color: var(--lila-rand); }
+
+  .kap-hdr { display: flex; align-items: center; gap: 11px; padding: 12px 18px; background: var(--weiss); border-bottom: 1px solid var(--linie); cursor: pointer; user-select: none; transition: background 0.15s; }
+  .kap-hdr:hover, .kap-hdr.offen { background: var(--papier); }
+  .k-nr { font-family: var(--mono); font-size: 0.66rem; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+  .gl-kap > .kap-hdr > .k-nr { background: var(--petrol-hell); color: var(--petrol); }
+  .sp-kap > .kap-hdr > .k-nr { background: var(--lila-hell); color: var(--lila); }
+  .k-name { font-family: var(--serif); font-size: 0.96rem; font-weight: 600; color: var(--tinte); }
+  .k-lek { margin-left: auto; font-family: var(--mono); font-size: 0.62rem; color: var(--tinte-2); white-space: nowrap; }
+  .k-tog { color: var(--tinte-2); font-size: 0.72rem; transition: transform 0.2s; flex-shrink: 0; }
+  .kap-hdr.offen .k-tog { transform: rotate(180deg); }
+
+  .tc { background: var(--papier); display: none; padding: 14px; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .tc.vis { display: grid; }
+
+  .karte { background: var(--weiss); border: 1px solid var(--linie); border-radius: 8px; padding: 12px 14px 12px 17px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--s); position: relative; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; }
+  .karte::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; }
+  /* Nur fertige Karten haben einen sichtbaren grünen Streifen — geplante haben keinen Streifen */
+  .karte.fertig::before { background: var(--gruen); }
+  .karte.geplant::before { background: transparent; }
+  .karte:hover { transform: translateY(-2px); box-shadow: var(--sl); border-color: var(--petrol-rand); }
+  .k-id  { font-family: var(--mono); font-size: 0.62rem; color: var(--tinte-2); font-weight: 700; }
+  .gl-kap .karte .k-id { color: var(--petrol); }
+  .sp-kap .karte .k-id { color: var(--lila); }
+  .karte .k-tit { font-family: var(--serif); font-size: 0.93rem; font-weight: 600; color: var(--tinte); line-height: 1.25; }
+
+  /* Sub-Split-Gruppe: zwei oder mehr Sub-Karten unter einem RLP-Header (z.B. 2.2 → 2.2a + 2.2b;
+     5.2 → 5.2a–d). Belegt im äusseren Grid mehrere Spalten, damit Sub-Karten gleich breit
+     bleiben wie normale Karten. Inneres Grid skaliert mit Anzahl Sub-Karten. */
+  .ksub { background: var(--weiss); border: 1px solid var(--linie); border-radius: 8px; box-shadow: var(--s); padding: 9px 11px 11px; display: flex; flex-direction: column; gap: 6px; position: relative; overflow: hidden; }
+  .ksub.span-2 { grid-column: span 2; }
+  .ksub.span-3 { grid-column: span 3; }
+  .ksub.span-4 { grid-column: span 4; }
+  .ksub-hdr { display: flex; align-items: baseline; gap: 7px; padding: 0 2px 5px; border-bottom: 1px dashed var(--linie); }
+  .ksub-hdr .k-id  { font-family: var(--mono); font-size: 0.62rem; font-weight: 700; }
+  .gl-kap .ksub-hdr .k-id { color: var(--petrol); }
+  .sp-kap .ksub-hdr .k-id { color: var(--lila); }
+  .ksub-hdr .k-tit { font-family: var(--serif); font-size: 0.84rem; font-weight: 600; color: var(--tinte-2); line-height: 1.25; }
+  .ksub-grid { display: grid; gap: 6px; }
+  .ksub.span-2 .ksub-grid { grid-template-columns: repeat(2, 1fr); }
+  .ksub.span-3 .ksub-grid { grid-template-columns: repeat(3, 1fr); }
+  .ksub.span-4 .ksub-grid { grid-template-columns: repeat(4, 1fr); }
+  .ksub-grid .karte { padding: 8px 10px 8px 13px; box-shadow: none; border: 1px solid var(--linie); }
+  .ksub-grid .karte::before { width: 3px; }
+  .ksub-grid .karte .k-tit { font-size: 0.84rem; }
+
+  /* Schmaler Viewport: Sub-Karten umbrechen in 2 Spalten bzw. 1 Spalte,
+     und der Sub-Container schrumpft auf eine Index-Spalte. */
+  @media (max-width: 900px) {
+    .ksub.span-3, .ksub.span-4 { grid-column: span 2; }
+    .ksub.span-3 .ksub-grid, .ksub.span-4 .ksub-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .ksub.span-2, .ksub.span-3, .ksub.span-4 { grid-column: span 1; }
+    .ksub.span-2 .ksub-grid, .ksub.span-3 .ksub-grid, .ksub.span-4 .ksub-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Geplante Karten: visueller Stub-Hinweis */
+  /* «LP»: kleiner Link auf das Leitprogramm zur Themenseite (neben der Karte, nicht in ihr —
+     ein Link darf keinen Link enthalten). */
+  .karte-lp { position: relative; display: flex; min-width: 0; }
+  .karte-lp > .karte { flex: 1; min-width: 0; }
+  .lp-link { position: absolute; right: 7px; top: 7px; font-family: var(--mono); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.4px; color: var(--orange); background: var(--orange-hell); border: 1px solid var(--orange-rand); border-radius: 3px; padding: 1px 5px; text-decoration: none; z-index: 1; }
+  .lp-link:hover, .lp-link:focus-visible { background: var(--orange); color: var(--weiss); }
+  .karte.geplant { cursor: help; }
+  .karte.geplant .k-tit { color: var(--tinte-2); }
+  .karte.geplant::after { content: 'in Vorbereitung'; position: absolute; right: 8px; top: 7px; font-family: var(--mono); font-size: 0.55rem; color: var(--tinte-2); background: var(--papier-2); padding: 1px 5px; border-radius: 3px; letter-spacing: 0.3px; }
+
+  /* Kleine Wege zu Clips, Leitprogrammen, Notationstrainer — letztes Element der rechten Spalte.
+     Die .kap-Bloecke stossen bündig aneinander (0 px), darum genuegen 8 px,
+     damit die Karte sichtbar abgesetzt ist.
+     ACHTUNG: 8 px margin plus 43 px Hoehe sind genau die 51 px, um die die
+     rechte Spalte kuerzer war — beide Spalten enden dadurch im eingeklappten
+     Zustand auf derselben Linie. Das haengt am aktuellen Inhalt beider
+     Spalten: Kommt links oder rechts ein Teilgebiet dazu, stimmt es nicht
+     mehr und der Wert muss nachgemessen werden. */
+  .clip-hinweis { display: flex; align-items: center; gap: 10px; margin-top: 8px;
+    background: var(--weiss); border: 1px solid var(--linie); border-left: 4px solid var(--petrol);
+    border-radius: 8px; padding: 8px 13px; text-decoration: none; color: inherit;
+    box-shadow: var(--s); transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; }
+  .clip-hinweis:hover { transform: translateY(-1px); box-shadow: var(--sl); border-color: var(--petrol-rand); }
+  .clip-hinweis:focus-visible { outline: 2px solid var(--petrol); outline-offset: 2px; }
+  .ch-ic { flex-shrink: 0; width: 24px; height: 24px; display: grid; place-items: center;
+    border-radius: 50%; background: var(--petrol); color: #fff; font-size: 0.6rem; padding-left: 2px; }
+  .ch-t { font-family: var(--serif); font-size: 0.93rem; font-weight: 700; color: var(--petrol); }
+  .ch-pfeil { margin-left: auto; font-family: var(--mono); font-size: 0.7rem; font-weight: 700; color: var(--petrol); }
+  /* Drei Wege in einer Zeile (Clips, Leitprogramme, Notationstrainer) — gleiche Hoehe wie
+     die einzelne Karte zuvor (8 px Abstand + 43.5 px), damit die Spalten weiter buendig enden.
+     Schmal stehen die drei untereinander; dort liegen die Spalten ohnehin untereinander. */
+  .weg-leiste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 8px; }
+  .weg-leiste .clip-hinweis { margin-top: 0; padding: 8px 9px; gap: 7px; min-width: 0; min-height: 43.5px; }
+  .weg-leiste .ch-t { font-size: 0.86rem; white-space: nowrap; }
+  .weg-leiste .ch-ic { padding-left: 0; font-size: 0.58rem; }
+  .weg-leiste a:first-child .ch-ic { padding-left: 2px; }
+  @media (min-width: 601px) and (max-width: 1060px) { .weg-leiste .ch-ic { display: none; } .weg-leiste .clip-hinweis { justify-content: center; } }
+  @media (max-width: 600px) { .weg-leiste { grid-template-columns: 1fr; } }
+
+  .ds { background: var(--weiss); border: 1px solid var(--linie); border-radius: 10px; padding: 18px 22px; margin-top: 44px; box-shadow: var(--s); }
+  .ds-t { font-family: var(--serif); font-size: 0.88rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 9px; border-bottom: 1px solid var(--linie); display: flex; align-items: center; gap: 10px; }
+  .ds-t span { font-family: var(--mono); font-size: 0.6rem; background: var(--papier-2); color: var(--tinte-2); padding: 2px 7px; border-radius: 4px; }
+  /* feste Spaltenzahl statt auto-fill — Mathe hat FÜNF Kacheln, Physik sechs */
+  .ds-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .ds-i { display: flex; align-items: center; gap: 9px; font-size: 0.78rem; padding: 8px 10px; border-radius: 7px; border-left: 4px solid; }
+  .ds-i.def    { background: var(--blau-hell);   border-color: var(--blau); }
+  .ds-i.bsp    { background: var(--gruen-hell);  border-color: var(--gruen); }
+  .ds-i.aufg   { background: var(--orange-hell); border-color: var(--orange); }
+  .ds-i.fehler { background: var(--rot-hell);    border-color: var(--rot); }
+  .ds-i.beweis { background: var(--lila-hell);   border-color: var(--lila); }
+  .ds-ik { font-size: 1rem; }
+  .ds-lb { font-weight: 700; font-size: 0.72rem; color: var(--tinte); }
+  .ds-wn { font-size: 0.67rem; color: var(--tinte-2); font-style: italic; }
+
+  @media (max-width: 900px) { .ds-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 600px) {
+    .hero { padding: 16px 16px 14px; } .page { padding: 12px 12px 60px; }
+    .ds-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Lektionsangabe darf umbrechen, sonst läuft die Kapitelzeile rechts aus dem Bild */
+    .kap-hdr { align-items: flex-start; }
+    .k-lek   { white-space: normal; text-align: right; line-height: 1.4; }
+    .k-nr, .k-name { padding-top: 1px; }
+  }
+  /* ══════════════════════════════════════════════════════════════
+     Die beiden Fachbereiche stehen nebeneinander. Grundlagen- und
+     Schwerpunktfach sind unabhängige Listen — nebeneinander passen beide
+     samt Farbcode-Legende ohne Scrollen in den ersten Bildschirm.
+     ══════════════════════════════════════════════════════════════ */
+  .spalten { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  /* Kein Trenner-Abstand über dem Bereichskopf: er ist erstes Element seiner Spalte.
+     Ersetzt die Regel `.page > .bereich:first-child` der Produktivseite. */
+  .spalte > .bereich { margin-top: 0; }
+
+  /* Kapitelzeile: Lektionsangabe links unter dem Titel statt rechts aussen.
+     Polsterung 12 -> 9px und knappe line-heights halten die Zeilenhöhe fast
+     auf dem alten Wert, obwohl jetzt zwei Textzeilen darin stehen. */
+  .kap-hdr { padding: 9px 16px; align-items: center; gap: 10px; }
+  .k-txt   { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
+  .k-name  { line-height: 1.2; }
+  .k-lek   { margin-left: 0; font-size: 0.6rem; line-height: 1.25; white-space: normal; }
+
+  /* Die §9-Regel richtet .k-lek unter 600px rechts aus — richtig, solange die Angabe
+     am rechten Zeilenende sitzt. Hier steht sie unter dem Titel und muss mit ihm
+     linksbündig sein. Dasselbe gilt für das dortige align-items/padding-Gefummel. */
+  @media (max-width: 600px) {
+    .kap-hdr { align-items: center; }
+    .k-lek   { text-align: left; }
+    .k-nr, .k-name { padding-top: 0; }
+  }
+
+  /* Halbe Breite: Karten in 2 Spalten, Sub-Split-Container nie breiter als 2.
+     Ohne das würde `span-3`/`span-4` im schmalen Spaltengrid gestaucht. */
+  .spalte .tc { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); padding: 12px; }
+  .spalte .ksub.span-3, .spalte .ksub.span-4 { grid-column: span 2; }
+  .spalte .ksub.span-3 .ksub-grid,
+  .spalte .ksub.span-4 .ksub-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Unter 900px lohnt das Nebeneinander nicht mehr — zurück auf untereinander,
+     mit dem Trenner-Abstand über dem zweiten Bereich. */
+  @media (max-width: 900px) {
+    .spalten { grid-template-columns: 1fr; gap: 0; }
+    .spalte + .spalte > .bereich { margin-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="nav-root"></div>
+
+<div class="hero">
+  <div class="hero-ew"><span>Mathematik für die <strong>Sekundarstufe I</strong></span></div>
+  <h1>Mathematik <span>Sek I</span></h1>
+</div>
+
+<main class="page">
+
+  <div class="spalten">
+    <div class="spalte">
+  <div class="bereich b-gl">
+    <div class="bh">
+      <span class="b-titel">Zahlen und Gleichungen</span>
+    </div>
+  </div>
+
+  <div class="kap gl-kap">
+    <div class="kap-hdr" onclick="tog('t1')">
+      <span class="k-nr">1</span>
+      <span class="k-txt">
+        <span class="k-name">Arithmetik/Algebra</span>
+        <span class="k-lek">4 Themen</span>
+      </span>
+      <span class="k-tog" id="tg-t1">▼</span>
+    </div>
+    <div class="tc" id="tc-t1">
+
+      <a href="themen/t1-1-zahlenmengen-zahlenarten.html" class="karte">
+        <span class="k-id">1.1</span>
+        <span class="k-tit">Zahlenmengen und Zahlenarten</span>
+      </a>
+
+      <a href="themen/t1-2-rechnen-in-z-potenzen.html" class="karte">
+        <span class="k-id">1.2</span>
+        <span class="k-tit">Rechnen in ℤ, Potenzen mit positiven ganzen Exponenten</span>
+      </a>
+
+      <a href="themen/t1-3-uebergang-z-q.html" class="karte">
+        <span class="k-id">1.3</span>
+        <span class="k-tit">Rechnen in ℤ repetieren, Übergang zum Rechnen in ℚ</span>
+      </a>
+
+      <a href="themen/t1-4-rechnen-in-q.html" class="karte">
+        <span class="k-id">1.4</span>
+        <span class="k-tit">Rechnen in ℚ</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="kap gl-kap">
+    <div class="kap-hdr" onclick="tog('t2')">
+      <span class="k-nr">2</span>
+      <span class="k-txt">
+        <span class="k-name">Gleichungen</span>
+        <span class="k-lek">2 Themen</span>
+      </span>
+      <span class="k-tog" id="tg-t2">▼</span>
+    </div>
+    <div class="tc" id="tc-t2">
+
+      <a href="themen/t2-1-lineare-gleichungen.html" class="karte">
+        <span class="k-id">2.1</span>
+        <span class="k-tit">Lineare Gleichungen</span>
+      </a>
+
+      <a href="themen/t2-2-textaufgaben-lineare-gleichungen.html" class="karte">
+        <span class="k-id">2.2</span>
+        <span class="k-tit">Textaufgaben zu den linearen Gleichungen</span>
+      </a>
+
+    </div>
+  </div>
+
+    </div>
+    <div class="spalte">
+  <div class="bereich b-gl">
+    <div class="bh">
+      <span class="b-titel">Geometrie</span>
+    </div>
+  </div>
+
+  <div class="kap gl-kap">
+    <div class="kap-hdr" onclick="tog('t3')">
+      <span class="k-nr">3</span>
+      <span class="k-txt">
+        <span class="k-name">Geometrie</span>
+        <span class="k-lek">5 Themen</span>
+      </span>
+      <span class="k-tog" id="tg-t3">▼</span>
+    </div>
+    <div class="tc" id="tc-t3">
+
+      <a href="themen/t3-1-geometrische-grundbegriffe.html" class="karte">
+        <span class="k-id">3.1</span>
+        <span class="k-tit">Geometrische Grundbegriffe</span>
+      </a>
+
+      <a href="themen/t3-2-flaechen-geradlinig-begrenzter-figuren.html" class="karte">
+        <span class="k-id">3.2</span>
+        <span class="k-tit">Flächen geradlinig begrenzter Figuren</span>
+      </a>
+
+      <a href="themen/t3-3-pythagoras.html" class="karte">
+        <span class="k-id">3.3</span>
+        <span class="k-tit">Pythagoras</span>
+      </a>
+
+      <a href="themen/t3-4-kreis-kreisteile.html" class="karte">
+        <span class="k-id">3.4</span>
+        <span class="k-tit">Berechnungen am Kreis, Kreisteile</span>
+      </a>
+
+      <a href="themen/t3-5-quader-prisma-zylinder.html" class="karte">
+        <span class="k-id">3.5</span>
+        <span class="k-tit">Volumen und Oberflächen von Quader, Prisma und Zylinder</span>
+      </a>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="ds">
+    <div class="ds-t">Farbcode — auf jeder Seite gleich</div>
+    <div class="ds-grid">
+      <div class="ds-i def">   <span class="ds-ik">📘</span><div><div class="ds-lb">Definition</div><div class="ds-wn">Begriff, Merkkasten</div></div></div>
+      <div class="ds-i bsp">   <span class="ds-ik">🟢</span><div><div class="ds-lb">Beispiel</div><div class="ds-wn">Rechenweg, Lösung</div></div></div>
+      <div class="ds-i aufg">  <span class="ds-ik">🟠</span><div><div class="ds-lb">Aufgabe</div><div class="ds-wn">Übung, Prüfungsaufgabe</div></div></div>
+      <div class="ds-i fehler"><span class="ds-ik">⚠</span> <div><div class="ds-lb">Häufiger Fehler</div><div class="ds-wn">Achtung, Warnung</div></div></div>
+      <div class="ds-i beweis"><span class="ds-ik">🔷</span><div><div class="ds-lb">Beweis / Herleitung</div><div class="ds-wn">Rechnerische Begründung</div></div></div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p><strong>Sek1-Mathe begreifbar</strong> — Lernmaterial Mathematik für die Sekundarstufe I</p>
+  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+  <p><a href="feedback.html">Kontakt &amp; Feedback</a> · <a href="rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
+  <p>Keine Cookies · Kein Tracking · Version 0.1 · Stand 9. Oktober 2026</p>
+</footer>
+
+<script src="nav.js"></script>
+<script src="suche.js"></script>
+<script>
+  buildNav({ bereich:'index', homepage:true });
+
+  function tog(id) {
+    const tc  = document.getElementById('tc-' + id);
+    const tg  = document.getElementById('tg-' + id);
+    const hdr = tg.closest('.kap-hdr');
+    const open = tc.classList.toggle('vis');
+    hdr.classList.toggle('offen', open);
+  }
+  // Beim Laden: alle Bereiche geschlossen lassen.
+</script>
+</body>
+</html>
