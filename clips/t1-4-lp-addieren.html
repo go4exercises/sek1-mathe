@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="de-CH"><head><meta charset="utf-8"><title>Brüche sehen: Addieren und Subtrahieren</title><style>
+@import url("../schriften.css");
+:root{--papier:#f8f6f1;--tinte:#1c1a17;--blau:#1a4f8a;--rot:#9b1c1c;--gruen:#1f6b3a;--gold:#b85c00;--f1:#1a4f8a;--f1w:#ddeaf8;--f2:#b85c00;--f2w:#fdefd8;--f3:#1f6b3a;--f3w:#d8f0e2;--f4:#9b1c1c;--f4w:#fde8e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;background:#0d1418;overflow:hidden}
+#wrap{position:absolute;left:0;right:0;top:0;bottom:60px;overflow:hidden}
+:fullscreen #wrap{bottom:0} :fullscreen #ui{display:none}
+#stage{width:1920px;height:1080px;position:absolute;left:50%;top:50%;overflow:hidden;
+ background:var(--papier);color:var(--tinte);font-family:'Source Serif 4',Georgia,serif;transform-origin:center center}
+body.render #wrap{bottom:0} body.render #stage{left:0;top:0;transform:none!important}
+#stage::before{content:"";position:absolute;inset:0;pointer-events:none;}
+#stage::after{content:"";position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(120% 100% at 50% 40%,rgba(255,255,255,0) 55%,rgba(90,80,64,.09) 100%)}
+#rand{position:absolute;left:76px;top:0;bottom:0;width:3px}
+
+#kopf,#fuss{position:absolute;left:130px;right:100px;display:flex;justify-content:space-between;
+ align-items:baseline;font-family:'Source Sans 3',sans-serif;z-index:5}
+#kopf{top:46px;font-size:27px}
+#kopf .marke{font-weight:600;letter-spacing:.01em;color:var(--blau)}
+#kopf .bereich{color:var(--tinte);opacity:.55;letter-spacing:.07em;text-transform:uppercase;font-size:22px}
+#fuss{bottom:44px;font-size:21px;color:var(--tinte);opacity:.42}
+
+/* Bedingungsleiste: die Voraussetzung, auf der die Rechnung steht.
+   Sie liegt ausserhalb des Szenenflusses — darum kostet sie keine Zeile
+   und kann trotzdem stehen bleiben, solange sie gilt. Unterhalb des
+   Inhalts, oberhalb der Fusszeile. */
+#vorleiste{position:absolute;left:130px;right:100px;top:96px;
+ display:flex;justify-content:center;gap:14px;z-index:5;pointer-events:none}
+.vor{display:inline-flex;align-items:center;gap:.58em;
+ background:var(--f1w);border:1.5px solid var(--f1);border-radius:10px;
+ padding:7px 19px 8px;color:var(--tinte);font-size:30px;line-height:1.14;
+ box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.vor .vor-tag{font-family:'Source Sans 3',sans-serif;font-size:18px;font-weight:700;
+ letter-spacing:.13em;text-transform:uppercase;color:var(--f1);opacity:.95;
+ white-space:nowrap;align-self:center}
+.vor .vor-txt{white-space:nowrap}
+
+.l{position:absolute;will-change:opacity,transform}
+.l.flow{position:relative}
+.m{font-family:'Source Serif 4',Georgia,serif} .m i,i{font-style:italic}
+.hand{font-family:'Caveat',cursive;line-height:1.24}
+.sans{font-family:'Source Sans 3',system-ui,sans-serif}
+.huelle{display:flex;justify-content:flex-start}
+.mitte.huelle{justify-content:center}
+.huelle>span{white-space:nowrap}
+.f1,.f2,.f3,.f4{border-radius:7px;padding:0 .14em;margin:0 .02em}
+.f1{color:var(--f1);background:var(--f1w)}
+.f2{color:var(--f2);background:var(--f2w)}
+.f3{color:var(--f3);background:var(--f3w)}
+.f4{color:var(--f4);background:var(--f4w)}
+.dim{opacity:.62}
+.graf{line-height:0}
+.graf svg{display:inline-block;vertical-align:top}
+.ov{display:inline-block;line-height:1;padding-top:.07em;margin-top:.12em;border-top:3.5px solid currentColor}
+.row{display:flex;align-items:center;line-height:1.06;white-space:nowrap;gap:.26em}
+.mitte.row{justify-content:center}
+.fr{position:relative;z-index:1;display:inline-flex;flex-direction:column;align-items:center;
+ line-height:1.08;margin:0 .12em;vertical-align:middle}
+.fr>span:first-child{padding:0 .32em .07em}
+.fr>span:last-child{padding:.20em .32em 0;border-top:3.5px solid currentColor}
+.box{border:3.5px solid var(--tinte);border-radius:14px;padding:12px 30px;background:rgba(255,255,255,.62)}
+.boxg{border-color:var(--gruen);color:var(--gruen)}
+.karte{background:rgba(255,255,255,.70);border:2.5px solid rgba(128,128,128,.28);border-radius:16px;padding:14px 26px}
+.strich{height:5px;background:var(--rot);border-radius:3px;transform-origin:left center}
+.lz{display:flex;align-items:baseline;gap:22px;margin-bottom:26px}
+.ln{color:var(--blau);font-weight:600;min-width:34px}
+.step{display:flex;align-items:flex-start;gap:18px;margin-bottom:34px}
+.num{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--blau);color:var(--papier);
+ font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:31px;display:grid;place-items:center}
+.stxt{font-family:'Source Sans 3',sans-serif;font-size:31px;line-height:1.24;padding-top:7px}
+
+#ui{position:absolute;left:0;right:0;bottom:0;height:60px;display:flex;align-items:center;gap:18px;
+ padding:0 26px;background:rgba(13,20,24,.85);color:#e8eef2;font-family:system-ui,sans-serif;font-size:14px;z-index:99}
+body.render #ui{display:none}
+#bar{flex:1;height:8px;background:rgba(255,255,255,.18);border-radius:4px;overflow:hidden;cursor:pointer}
+#barf{height:100%;width:0;background:var(--gold)}
+#ui button{background:rgba(255,255,255,.12);color:#e8eef2;border:0;border-radius:7px;padding:7px 14px;
+ font-size:14px;cursor:pointer;white-space:nowrap}
+#tt{white-space:nowrap;font-variant-numeric:tabular-nums}
+#tip{opacity:.6;white-space:nowrap}
+/* Auf dem Telefon gibt es weder Leertaste noch Pfeiltasten — der Hinweis
+   waere dort nur Text, der die 60px hohe Leiste sprengt. */
+@media (max-width:700px){#ui{gap:11px;padding:0 12px} #tip{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[],macros:{fa:['\\bbox[##ddeaf8,3px]{\\textcolor{##1a4f8a}{#1}}',1],fb:['\\bbox[##fdefd8,3px]{\\textcolor{##b85c00}{#1}}',1],fc:['\\bbox[##d8f0e2,3px]{\\textcolor{##1f6b3a}{#1}}',1],fd:['\\bbox[##fde8e8,3px]{\\textcolor{##9b1c1c}{#1}}',1]}},svg:{fontCache:'global'},options:{enableMenu:false}};</script><script src="../vendor/mathjax/tex-svg.js"></script></head><body>
+<div id="wrap"><div id="stage">
+
+<div id="kopf"><span class="marke">begreifbar.ch</span><span class="bereich">Arithmetik/Algebra · Rechnen in ℚ</span></div>
+<div id="fuss"><span>Raphael Arnold Kohler</span><span>09.10.2026</span></div>
+<div class="l m row" data-at="5.04" data-out="9.02" data-anim="rise" style="left:150px;top:330px;font-size:66px"><span>\(\dfrac{\fa{3}}{8} + \dfrac{\fb{1}}{8} = \dfrac{4}{8} = \fc{\dfrac{1}{2}}\)</span></div>
+<div class="l graf" data-at="0.30" data-out="9.02" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg9f182822"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg9f182822)"><polygon points="45.2,231.2 296.3,231.2 296.3,141.9 45.2,141.9" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="0" stroke-linejoin="round"/><line x1="128.9" y1="231.2" x2="128.9" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="212.6" y1="231.2" x2="212.6" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="296.3" y1="231.2" x2="296.3" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="380.0" y1="231.2" x2="380.0" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="463.7" y1="231.2" x2="463.7" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="547.4" y1="231.2" x2="547.4" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="631.1" y1="231.2" x2="631.1" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,231.2 714.8,231.2 714.8,141.9 45.2,141.9" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="112.2" font-size="32" font-style="normal" fill="#1c1a17" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">3/8 + 1/8</text><g class="fb" data-fbis="3.88"><polygon points="45.2,409.8 128.9,409.8 128.9,320.5 45.2,320.5" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="3.88" data-fbis="3.93"><polygon points="45.5,409.5 129.2,409.5 129.2,320.3 45.5,320.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="3.93" data-fbis="3.98"><polygon points="48.0,407.8 131.7,407.8 131.7,318.5 48.0,318.5" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="3.98" data-fbis="4.03"><polygon points="52.8,404.4 136.5,404.4 136.5,315.1 52.8,315.1" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.03" data-fbis="4.08"><polygon points="59.7,399.5 143.4,399.5 143.4,310.2 59.7,310.2" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.08" data-fbis="4.13"><polygon points="68.4,393.3 152.1,393.3 152.1,304.0 68.4,304.0" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.13" data-fbis="4.18"><polygon points="78.7,385.9 162.4,385.9 162.4,296.6 78.7,296.6" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.18" data-fbis="4.23"><polygon points="90.5,377.6 174.2,377.6 174.2,288.3 90.5,288.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.23" data-fbis="4.28"><polygon points="103.4,368.3 187.1,368.3 187.1,279.1 103.4,279.1" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.28" data-fbis="4.33"><polygon points="117.4,358.4 201.1,358.4 201.1,269.2 117.4,269.2" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.33" data-fbis="4.38"><polygon points="132.1,348.0 215.8,348.0 215.8,258.7 132.1,258.7" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.38" data-fbis="4.43"><polygon points="147.3,337.1 231.0,337.1 231.0,247.9 147.3,247.9" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.43" data-fbis="4.48"><polygon points="162.9,326.1 246.6,326.1 246.6,236.8 162.9,236.8" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.48" data-fbis="4.53"><polygon points="178.6,314.9 262.3,314.9 262.3,225.6 178.6,225.6" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.53" data-fbis="4.58"><polygon points="194.2,303.8 277.9,303.8 277.9,214.5 194.2,214.5" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.58" data-fbis="4.63"><polygon points="209.4,293.0 293.1,293.0 293.1,203.7 209.4,203.7" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.63" data-fbis="4.68"><polygon points="224.1,282.5 307.8,282.5 307.8,193.2 224.1,193.2" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.68" data-fbis="4.73"><polygon points="238.1,272.6 321.8,272.6 321.8,183.3 238.1,183.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.73" data-fbis="4.78"><polygon points="251.0,263.4 334.7,263.4 334.7,174.1 251.0,174.1" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.78" data-fbis="4.83"><polygon points="262.8,255.0 346.5,255.0 346.5,165.8 262.8,165.8" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.83" data-fbis="4.88"><polygon points="273.1,247.7 356.8,247.7 356.8,158.4 273.1,158.4" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.88" data-fbis="4.93"><polygon points="281.8,241.5 365.5,241.5 365.5,152.2 281.8,152.2" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.93" data-fbis="4.98"><polygon points="288.7,236.6 372.4,236.6 372.4,147.3 288.7,147.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="4.98" data-fbis="5.03"><polygon points="293.5,233.2 377.2,233.2 377.2,143.9 293.5,143.9" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="5.03" data-fbis="5.08"><polygon points="296.0,231.4 379.7,231.4 379.7,142.1 296.0,142.1" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="5.08"><polygon points="296.3,231.2 380.0,231.2 380.0,141.9 296.3,141.9" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="6.66" data-out="9.02" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg6351386a"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg6351386a)"><line x1="380.0" y1="253.5" x2="380.0" y2="119.6" stroke="#1f6b3a" stroke-width="6" stroke-linecap="round"/><text x="212.6" y="290.7" font-size="32" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1/2</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="9.52" data-out="16.02" data-anim="rise" style="left:150px;top:330px;font-size:70px"><span>\(\dfrac{\fa{1}}{2} + \dfrac{\fb{1}}{3} = \;?\)</span></div>
+<div class="l hand" data-at="12.28" data-out="16.02" data-anim="rise" style="left:150px;top:514px;font-size:42px;color:var(--blau)">verschieden grosse Stücke</div>
+<div class="l graf" data-at="9.32" data-out="16.02" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg56e6043f"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg56e6043f)"><polygon points="45.2,231.2 380.0,231.2 380.0,141.9 45.2,141.9" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="0" stroke-linejoin="round"/><line x1="380.0" y1="231.2" x2="380.0" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,231.2 714.8,231.2 714.8,141.9 45.2,141.9" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="112.2" font-size="32" font-style="normal" fill="#1a4f8a" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1/2</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="10.58" data-out="16.02" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgecde2723"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgecde2723)"><polygon points="45.2,409.8 268.4,409.8 268.4,320.5 45.2,320.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="0" stroke-linejoin="round"/><line x1="268.4" y1="409.8" x2="268.4" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="491.6" y1="409.8" x2="491.6" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,409.8 714.8,409.8 714.8,320.5 45.2,320.5" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="290.7" font-size="32" font-style="normal" fill="#b85c00" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1/3</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="20.16" data-out="25.80" data-anim="rise" style="left:150px;top:280px;font-size:56px"><span>\(\dfrac{1}{2} = \dfrac{\fa{3}}{6}\)</span></div>
+<div class="l m row" data-at="22.02" data-out="25.80" data-anim="rise" style="left:150px;top:432px;font-size:56px"><span>\(\dfrac{1}{3} = \dfrac{\fb{2}}{6}\)</span></div>
+<div class="l m row" data-at="23.18" data-out="25.80" data-anim="rise" style="left:150px;top:584px;font-size:62px"><span>\(\dfrac{3}{6} + \dfrac{2}{6} = \fc{\dfrac{5}{6}}\)</span></div>
+<div class="l graf" data-at="16.07" data-out="25.80" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg44bf4af6"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg44bf4af6)"><polygon points="45.2,231.2 380.0,231.2 380.0,141.9 45.2,141.9" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="0" stroke-linejoin="round"/><line x1="380.0" y1="231.2" x2="380.0" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,231.2 714.8,231.2 714.8,141.9 45.2,141.9" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="112.2" font-size="32" font-style="normal" fill="#1a4f8a" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1/2</text><polygon points="45.2,409.8 268.4,409.8 268.4,320.5 45.2,320.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="0" stroke-linejoin="round"/><line x1="268.4" y1="409.8" x2="268.4" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="491.6" y1="409.8" x2="491.6" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,409.8 714.8,409.8 714.8,320.5 45.2,320.5" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="290.7" font-size="32" font-style="normal" fill="#b85c00" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1/3</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="16.07" data-out="25.80" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg6391aaa9"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg6391aaa9)"><g class="zt" data-ein="17.88"><line x1="156.8" y1="231.2" x2="156.8" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g><g class="zt" data-ein="17.92"><line x1="268.4" y1="231.2" x2="268.4" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g><g class="zt" data-ein="17.96"><line x1="491.6" y1="231.2" x2="491.6" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g><g class="zt" data-ein="18.00"><line x1="603.2" y1="231.2" x2="603.2" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g><g class="zt" data-ein="17.88"><line x1="156.8" y1="409.8" x2="156.8" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g><g class="zt" data-ein="17.92"><line x1="380.0" y1="409.8" x2="380.0" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g><g class="zt" data-ein="17.96"><line x1="603.2" y1="409.8" x2="603.2" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 10"/></g></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="22.88" data-out="25.80" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg31cdc9af"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg31cdc9af)"><line x1="156.8" y1="588.3" x2="156.8" y2="499.0" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="268.4" y1="588.3" x2="268.4" y2="499.0" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="380.0" y1="588.3" x2="380.0" y2="499.0" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="491.6" y1="588.3" x2="491.6" y2="499.0" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="603.2" y1="588.3" x2="603.2" y2="499.0" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,588.3 714.8,588.3 714.8,499.0 45.2,499.0" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="469.3" font-size="32" font-style="normal" fill="#1f6b3a" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">Summe</text><g class="fb" data-fbis="23.18"><polygon points="45.2,231.2 380.0,231.2 380.0,141.9 45.2,141.9" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.18" data-fbis="23.23"><polygon points="45.2,232.5 380.0,232.5 380.0,143.3 45.2,143.3" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.23" data-fbis="23.28"><polygon points="45.2,242.6 380.0,242.6 380.0,153.3 45.2,153.3" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.28" data-fbis="23.33"><polygon points="45.2,261.3 380.0,261.3 380.0,172.0 45.2,172.0" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.33" data-fbis="23.38"><polygon points="45.2,287.0 380.0,287.0 380.0,197.7 45.2,197.7" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.38" data-fbis="23.43"><polygon points="45.2,318.2 380.0,318.2 380.0,228.9 45.2,228.9" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.43" data-fbis="23.48"><polygon points="45.2,353.2 380.0,353.2 380.0,264.0 45.2,264.0" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.48" data-fbis="23.53"><polygon points="45.2,390.7 380.0,390.7 380.0,301.4 45.2,301.4" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.53" data-fbis="23.58"><polygon points="45.2,428.9 380.0,428.9 380.0,339.6 45.2,339.6" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.58" data-fbis="23.63"><polygon points="45.2,466.3 380.0,466.3 380.0,377.0 45.2,377.0" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.63" data-fbis="23.68"><polygon points="45.2,501.4 380.0,501.4 380.0,412.1 45.2,412.1" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.68" data-fbis="23.73"><polygon points="45.2,532.5 380.0,532.5 380.0,443.2 45.2,443.2" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.73" data-fbis="23.78"><polygon points="45.2,558.2 380.0,558.2 380.0,468.9 45.2,468.9" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.78" data-fbis="23.83"><polygon points="45.2,576.9 380.0,576.9 380.0,487.6 45.2,487.6" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.83" data-fbis="23.88"><polygon points="45.2,587.0 380.0,587.0 380.0,497.7 45.2,497.7" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.88"><polygon points="45.2,588.3 380.0,588.3 380.0,499.0 45.2,499.0" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fbis="23.43"><polygon points="45.2,409.8 268.4,409.8 268.4,320.5 45.2,320.5" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.43" data-fbis="23.48"><polygon points="46.5,410.4 269.7,410.4 269.7,321.1 46.5,321.1" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.48" data-fbis="23.53"><polygon points="55.9,415.5 279.1,415.5 279.1,326.2 55.9,326.2" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.53" data-fbis="23.58"><polygon points="73.4,424.8 296.6,424.8 296.6,335.5 73.4,335.5" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.58" data-fbis="23.63"><polygon points="97.5,437.7 320.7,437.7 320.7,348.4 97.5,348.4" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.63" data-fbis="23.68"><polygon points="126.7,453.2 349.9,453.2 349.9,364.0 126.7,364.0" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.68" data-fbis="23.73"><polygon points="159.6,470.8 382.8,470.8 382.8,381.5 159.6,381.5" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.73" data-fbis="23.78"><polygon points="194.7,489.5 417.9,489.5 417.9,400.2 194.7,400.2" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.78" data-fbis="23.83"><polygon points="230.5,508.6 453.7,508.6 453.7,419.3 230.5,419.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.83" data-fbis="23.88"><polygon points="265.6,527.3 488.8,527.3 488.8,438.0 265.6,438.0" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.88" data-fbis="23.93"><polygon points="298.5,544.8 521.7,544.8 521.7,455.6 298.5,455.6" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.93" data-fbis="23.98"><polygon points="327.7,560.4 550.9,560.4 550.9,471.1 327.7,471.1" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="23.98" data-fbis="24.03"><polygon points="351.8,573.3 575.0,573.3 575.0,484.0 351.8,484.0" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="24.03" data-fbis="24.08"><polygon points="369.3,582.6 592.5,582.6 592.5,493.3 369.3,493.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="24.08" data-fbis="24.13"><polygon points="378.7,587.7 601.9,587.7 601.9,498.4 378.7,498.4" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="fb" data-fvon="24.13"><polygon points="380.0,588.3 603.2,588.3 603.2,499.0 380.0,499.0" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-ein="24.06"><text x="324.2" y="647.8" font-size="32" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">5/6</text></g></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="27.54" data-out="35.60" data-anim="rise" style="left:150px;top:320px;font-size:66px"><span>\(\dfrac{1 + 1}{2 + 3} = \fd{\dfrac{2}{5}}\)</span></div>
+<div class="l m row" data-at="30.34" data-out="35.60" data-anim="rise" style="left:150px;top:494px;font-size:62px"><span>\(\fd{\dfrac{2}{5}} \lt \dfrac{1}{2}\)</span></div>
+<div class="l graf" data-at="25.85" data-out="35.60" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg4f009a62"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg4f009a62)"><polygon points="45.2,231.2 380.0,231.2 380.0,141.9 45.2,141.9" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="0" stroke-linejoin="round"/><line x1="380.0" y1="231.2" x2="380.0" y2="141.9" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,231.2 714.8,231.2 714.8,141.9 45.2,141.9" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="112.2" font-size="32" font-style="normal" fill="#1a4f8a" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1/2</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="28.86" data-out="35.60" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgb52a645d"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgb52a645d)"><polygon points="45.2,409.8 313.0,409.8 313.0,320.5 45.2,320.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="0" stroke-linejoin="round"/><line x1="179.1" y1="409.8" x2="179.1" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="313.0" y1="409.8" x2="313.0" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="447.0" y1="409.8" x2="447.0" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="580.9" y1="409.8" x2="580.9" y2="320.5" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,409.8 714.8,409.8 714.8,320.5 45.2,320.5" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="45.2" y="290.7" font-size="32" font-style="normal" fill="#9b1c1c" text-anchor="start" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2/5</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="30.34" data-out="35.60" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg37acff33"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg37acff33)"><line x1="380.0" y1="432.1" x2="380.0" y2="119.6" stroke="#1c1a17" stroke-width="3" stroke-linecap="round" stroke-dasharray="14 10"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l hand" data-at="37.80" data-out="51.51" data-anim="rise" style="left:150px;top:290px;font-size:46px;color:var(--blau)">Hauptnenner = kgV der Nenner</div>
+<div class="l m row" data-at="41.12" data-out="51.51" data-anim="rise" style="left:150px;top:420px;font-size:60px"><span>\(\dfrac{5}{\fa{12}} + \dfrac{7}{\fb{18}}\)</span></div>
+<div class="l m row" data-at="49.00" data-out="51.51" data-anim="rise" style="left:150px;top:581px;font-size:54px"><span>\(\text{kgV}(12;\ 18) = \fc{36}\)</span></div>
+<div class="l graf" data-at="41.12" data-out="51.51" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg82ee9939"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg82ee9939)"><line x1="45.2" y1="380.0" x2="714.8" y2="380.0" stroke="#1c1a17" stroke-width="3" stroke-linecap="round"/><text x="45.2" y="447.0" font-size="32" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">0</text><g class="zt" data-ein="49.00"><line x1="194.0" y1="380.0" x2="194.0" y2="327.9" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round"/></g><g class="zt" data-ein="49.00"><text x="194.0" y="298.2" font-size="30" font-style="normal" fill="#1a4f8a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">12</text></g><g class="zt" data-ein="49.00"><line x1="342.8" y1="380.0" x2="342.8" y2="327.9" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round"/></g><g class="zt" data-ein="49.00"><text x="342.8" y="298.2" font-size="30" font-style="normal" fill="#1a4f8a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">24</text></g><g class="zt" data-ein="49.00"><line x1="491.6" y1="380.0" x2="491.6" y2="327.9" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round"/></g><g class="zt" data-ein="49.00"><text x="491.6" y="298.2" font-size="30" font-style="normal" fill="#1a4f8a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">36</text></g><g class="zt" data-ein="49.00"><line x1="640.4" y1="380.0" x2="640.4" y2="327.9" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round"/></g><g class="zt" data-ein="49.00"><text x="640.4" y="298.2" font-size="30" font-style="normal" fill="#1a4f8a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">48</text></g><g class="zt" data-ein="39.72"><line x1="268.4" y1="432.1" x2="268.4" y2="380.0" stroke="#b85c00" stroke-width="5" stroke-linecap="round"/></g><g class="zt" data-ein="39.72"><text x="268.4" y="491.6" font-size="30" font-style="normal" fill="#b85c00" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">18</text></g><g class="zt" data-ein="39.72"><line x1="491.6" y1="432.1" x2="491.6" y2="380.0" stroke="#b85c00" stroke-width="5" stroke-linecap="round"/></g><g class="zt" data-ein="39.72"><text x="491.6" y="491.6" font-size="30" font-style="normal" fill="#b85c00" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">36</text></g><g class="zt" data-ein="49.40"><circle cx="491.6" cy="380.0" r="40.9" fill="#1f6b3a" fill-opacity="0.15" stroke="#1f6b3a" stroke-width="4"/></g></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="52.84" data-out="62.15" data-anim="rise" style="left:150px;top:300px;font-size:56px"><span>\(\dfrac{5 \cdot \fb{3}}{12 \cdot \fb{3}} + \dfrac{7 \cdot \fb{2}}{18 \cdot \fb{2}}\)</span></div>
+<div class="l m row" data-at="55.66" data-out="62.15" data-anim="rise" style="left:150px;top:452px;font-size:60px"><span>\(= \dfrac{\fa{15}}{36} + \dfrac{\fb{14}}{36} = \fc{\dfrac{29}{36}}\)</span></div>
+<div class="l graf" data-at="51.81" data-out="62.15" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg6c14ae79"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg6c14ae79)"><line x1="63.8" y1="305.6" x2="63.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="82.4" y1="305.6" x2="82.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="101.0" y1="305.6" x2="101.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="119.6" y1="305.6" x2="119.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="138.2" y1="305.6" x2="138.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="156.8" y1="305.6" x2="156.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="175.4" y1="305.6" x2="175.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="194.0" y1="305.6" x2="194.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="212.6" y1="305.6" x2="212.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="231.2" y1="305.6" x2="231.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="249.8" y1="305.6" x2="249.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="268.4" y1="305.6" x2="268.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="287.0" y1="305.6" x2="287.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="305.6" y1="305.6" x2="305.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="324.2" y1="305.6" x2="324.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="342.8" y1="305.6" x2="342.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="361.4" y1="305.6" x2="361.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="380.0" y1="305.6" x2="380.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="398.6" y1="305.6" x2="398.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="417.2" y1="305.6" x2="417.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="435.8" y1="305.6" x2="435.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="454.4" y1="305.6" x2="454.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="473.0" y1="305.6" x2="473.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="491.6" y1="305.6" x2="491.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="510.2" y1="305.6" x2="510.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="528.8" y1="305.6" x2="528.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="547.4" y1="305.6" x2="547.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="566.0" y1="305.6" x2="566.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="584.6" y1="305.6" x2="584.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="603.2" y1="305.6" x2="603.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="621.8" y1="305.6" x2="621.8" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="640.4" y1="305.6" x2="640.4" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="659.0" y1="305.6" x2="659.0" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="677.6" y1="305.6" x2="677.6" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><line x1="696.2" y1="305.6" x2="696.2" y2="216.3" stroke="#1c1a17" stroke-width="2" stroke-linecap="round"/><polygon points="45.2,305.6 714.8,305.6 714.8,216.3 45.2,216.3" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="4" stroke-linejoin="round"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="55.66" data-out="62.15" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg0131472b"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg0131472b)"><polygon points="45.2,305.6 324.2,305.6 324.2,216.3 45.2,216.3" fill="#1a4f8a" fill-opacity="0.45" stroke="#1a4f8a" stroke-width="0" stroke-linejoin="round"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="57.60" data-out="62.15" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fga3f2ddab"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fga3f2ddab)"><polygon points="324.2,305.6 584.6,305.6 584.6,216.3 324.2,216.3" fill="#b85c00" fill-opacity="0.45" stroke="#b85c00" stroke-width="0" stroke-linejoin="round"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="59.38" data-out="62.15" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg796db32b"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg796db32b)"><text x="314.9" y="365.1" font-size="32" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">29 von 36</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="65.36" data-out="74.74" data-anim="rise" style="left:150px;top:320px;font-size:56px"><span>\(\dfrac{1}{6} + \dfrac{1}{3} = \dfrac{1}{6} + \dfrac{2}{6} = \dfrac{3}{6} = \fc{\dfrac{1}{2}}\)</span></div>
+<div class="l m row" data-at="69.06" data-out="74.74" data-anim="rise" style="left:150px;top:472px;font-size:56px"><span>\(2 - \dfrac{3}{4} = \dfrac{8}{4} - \dfrac{3}{4} = \fc{\dfrac{5}{4}}\)</span></div>
+<div class="l hand mitte" data-at="75.14" data-out="84.80" data-anim="rise" style="left:150px;top:250px;font-size:76px;font-weight:600;color:var(--tinte)">Zum Mitnehmen</div>
+<div class="l hand" data-at="75.94" data-out="84.80" data-anim="rise" style="left:150px;top:400px;font-size:44px;color:var(--blau)">nur gleichnamig addieren und subtrahieren<br>Hauptnenner = kgV der Nenner<br>Nenner nie addieren, am Schluss kürzen</div>
+<div class="l hand mitte" data-at="85.20" data-out="91.22" data-anim="rise" style="left:150px;top:280px;font-size:86px;font-weight:600;color:var(--tinte)">Jetzt du</div>
+<div class="l hand" data-at="85.40" data-out="91.22" data-anim="rise" style="left:150px;top:430px;font-size:50px;color:var(--blau)">Erkunde diese Zusammenhänge<br>in der Animation unter dem Clip<br>und löse die Aufgaben.</div>
+</div></div>
+<audio id="ton" preload="auto" src="ton/t1-4-lp-addieren.mp3"></audio>
+<div id="ui">
+  <button id="pp">Pause</button>
+  <button id="ts" hidden>🔇 Ton an</button>
+  <div id="bar"><div id="barf"></div></div>
+  <span id="tt">0.0 s</span>
+  <span id="tip">Leertaste = Pause &middot; &larr; &rarr; = 5 s &middot; R = Neustart &middot; F = Vollbild</span>
+</div>
+<script>
+const DUR = 91.22;
+const SPRECHER = [{"bei": 0.4, "text": "Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also zählen wir sie. Vier Achtel, und gekürzt ein Halb."}, {"bei": 9.42, "text": "Ein Halb plus ein Drittel. Halbe und Drittel sind verschieden grosse Stücke. So kann man sie nicht einfach zählen."}, {"bei": 16.42, "text": "Teilen wir beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel."}, {"bei": 26.2, "text": "Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe kann nicht kleiner sein als einer ihrer Summanden."}, {"bei": 36.0, "text": "Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn und sechsunddreissig. Sechsunddreissig ist auch durch zwölf teilbar."}, {"bei": 51.91, "text": "Fünf Zwölftel erweitern wir mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel."}, {"bei": 62.55, "text": "Am Schluss immer prüfen, ob man kürzen kann. Ein Sechstel plus ein Drittel gibt drei Sechstel, also ein Halb. Und mit einer ganzen Zahl: zwei sind acht Viertel, also ist zwei minus drei Viertel gleich fünf Viertel."}, {"bei": 75.14, "text": "Zum Mitnehmen: Addieren und subtrahieren nur mit gleichen Nennern. Als gemeinsamen Nenner nimmt man das kleinste gemeinsame Vielfache. Nie die Nenner addieren, und am Schluss kürzen."}, {"bei": 85.2, "text": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben."}];
+const stage = document.getElementById('stage');
+const layers = [...document.querySelectorAll('.l')].map(el => ({
+  el, at: parseFloat(el.dataset.at || '0'),
+  out: el.dataset.out ? parseFloat(el.dataset.out) : Infinity,
+  anim: el.dataset.anim || 'fade',
+  dim: el.dataset.dim ? el.dataset.dim.split(',').map(Number) : null
+}));
+const IN = 0.5, OUT = 0.4;
+// Teile eines Bildes mit eigenem "ein"/"aus" (g.zt): blenden fuer sich ein und aus.
+// Bewegte Figuren (g.fb): vorgerechnete Bilder, je eines zwischen data-fvon und data-fbis.
+const fbilder = [...document.querySelectorAll('g.fb')].map(el => ({
+  el, von: el.dataset.fvon ? parseFloat(el.dataset.fvon) : -Infinity,
+  bis: el.dataset.fbis ? parseFloat(el.dataset.fbis) : Infinity }));
+const zteile = [...document.querySelectorAll('g.zt')].map(el => ({
+  el, at: el.dataset.ein ? parseFloat(el.dataset.ein) : -Infinity,
+  out: el.dataset.aus ? parseFloat(el.dataset.aus) : Infinity }));
+const ease = p => 1 - Math.pow(1 - p, 3);
+const cl = p => p < 0 ? 0 : p > 1 ? 1 : p;
+function seek(t)  {
+  for (const L of layers) {
+    const pi = ease(cl((t - L.at) / IN));
+    const po = L.out === Infinity ? 0 : ease(cl((t - L.out) / OUT));
+    let o = pi * (1 - po), tr = '';
+    if (L.anim === 'rise') tr = 'translateY(' + ((1 - pi) * 26) + 'px)';
+    else if (L.anim === 'pop') tr = 'scale(' + (0.90 + 0.10 * pi) + ')';
+    else if (L.anim === 'wipe') { tr = 'scaleX(' + pi + ')'; o = (t >= L.at ? 1 : 0) * (1 - po); }
+    if (L.dim && !(t >= L.dim[0] && t < L.dim[1])) o *= 0.34;
+    L.el.style.transform = tr; L.el.style.opacity = o;
+  }
+  for (const Z of zteile) {
+    const pi = Z.at === -Infinity ? 1 : ease(cl((t - Z.at) / IN));
+    const po = Z.out === Infinity ? 0 : ease(cl((t - Z.out) / OUT));
+    Z.el.style.opacity = pi * (1 - po);
+  }
+  for (const F of fbilder) F.el.style.display = t >= F.von && t < F.bis ? '' : 'none';
+}
+const FRAGEN = [{"typ": "wahl", "text": "Jemand rechnet 1/2 + 1/3 = 2/5. Ist 2/5 mehr oder weniger als 1/2 allein?", "optionen": ["mehr", "gleich viel", "weniger"], "richtig": 2, "rueck": {"2": "Ja.", "0": "Schau gleich im Bild: Wie lang ist der rote Streifen im Vergleich zu 1/2?", "1": "Schau gleich im Bild: Endet der rote Streifen bei der Hälfte?"}, "t": 26.1, "ton": {"frage": "ton/t1-4-lp-addieren-f0-frage.mp3", "r0": "ton/t1-4-lp-addieren-f0-r0.mp3", "r1": "ton/t1-4-lp-addieren-f0-r1.mp3"}}];
+(() => {
+  if (location.search.includes('render')) return;
+  const pp = document.getElementById('pp');
+  const css = document.createElement('style');
+  css.textContent = `
+    #frage{position:absolute;left:110px;top:560px;width:820px;z-index:50;display:none;
+      background:rgba(255,255,255,.97);border:3px solid var(--f2);border-radius:22px;
+      padding:28px 34px;box-shadow:0 10px 40px rgba(0,0,0,.18);font-family:inherit;color:inherit}
+    #frage .fr-kopf{font-size:26px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--f2);margin-bottom:10px}
+    #frage .fr-text{font-size:38px;line-height:1.3;margin-bottom:22px}
+    #frage .fr-knoepfe{display:flex;flex-wrap:wrap;gap:14px}
+    #frage button{font:inherit;font-size:32px;padding:10px 26px;border-radius:999px;cursor:pointer;
+      border:2.5px solid var(--f2);background:var(--f2w);color:inherit}
+    #frage button.ok{border-color:var(--f3);background:var(--f3w)}
+    #frage button.nein{border-color:var(--f4);background:var(--f4w)}
+    #frage .fr-rueck{font-size:32px;line-height:1.35;margin-top:20px}
+    #frage .fr-weiter{margin-top:20px}
+    #frage .fr-eingabe{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:30px;margin-top:14px;width:100%}
+    #frage .fr-eingabe input{font:inherit;font-size:30px;width:4.2em;padding:4px 10px;border:2.5px solid var(--f2);border-radius:12px}
+    .fr-tippbar, .fr-tippbar svg{pointer-events:auto !important;cursor:crosshair}`;
+  document.head.appendChild(css);
+  const box = document.createElement('div'); box.id = 'frage'; stage.appendChild(box);
+  let letzt = 0, offen = null, tippen = null, stimme = null, sprung = false;
+  // Vorlesen mit derselben Stimme wie der Clip — nur wenn dessen Ton an ist.
+  const hauptton = document.getElementById('ton');
+  const vorlesen = src => {
+    if (stimme) { stimme.pause(); stimme = null; }
+    if (!src || !hauptton || hauptton.muted) return;
+    stimme = new Audio(src); stimme.play().catch(() => {});
+  };
+  const erledigt = new Set();     // beantwortete Fragen
+  const pause = () => { if (pp.textContent === 'Pause') pp.click(); };
+  const weiter = () => { if (pp.textContent === 'Play') pp.click(); };
+  function schliessen() {
+    vorlesen(null);
+    // Fokus zurueck auf Play/Pause — auch wenn er mit dem gesperrten Antwortknopf
+    // schon auf <body> gefallen ist
+    const fo = document.activeElement;
+    if (!fo || fo === document.body || box.contains(fo)) pp.focus({ preventScroll: true });
+    box.style.display = 'none'; box.innerHTML = '';
+    document.querySelectorAll('.fr-marke').forEach(m => m.remove());
+    document.querySelectorAll('.fr-tippbar').forEach(l => l.classList.remove('fr-tippbar'));
+    if (tippen) { stage.removeEventListener('click', tippen); tippen = null; }
+    offen = null;
+  }
+  function antwort(F, ok, text, schl) {
+    const o = offen; erledigt.add(o.i);
+    box.dataset.fertig = '1';
+    vorlesen((F.ton || {})[schl]);
+    if (F.typ === 'klick') box.querySelector('.fr-knoepfe').innerHTML = '';
+    const r = box.querySelector('.fr-rueck');
+    r.innerHTML = (ok ? '✓ ' : '') + text;
+    r.style.color = ok ? 'var(--f3)' : '';
+    if (ok) {                      // richtig: kurz bestaetigen, dann von selbst weiter
+      setTimeout(() => { if (offen === o) { schliessen(); weiter(); } }, 1300);
+      return;
+    }
+    const w = document.createElement('button'); w.className = 'fr-weiter'; w.textContent = 'Weiter ▶';
+    w.onclick = () => { schliessen(); weiter(); };
+    box.appendChild(w); w.focus();
+  }
+  function zeigen(i, F) {
+    offen = { i, t: F.t }; pause(); delete box.dataset.fertig;
+    box.innerHTML = '<div class="fr-kopf"></div><div class="fr-text"></div>'
+      + '<div class="fr-knoepfe"></div><div class="fr-rueck"></div>';
+    box.querySelector('.fr-kopf').textContent = F.kopf || 'Deine Vorhersage';  // "kopf": z. B. «Dein Vorgehen»
+    box.querySelector('.fr-text').textContent = F.text;
+    const kn = box.querySelector('.fr-knoepfe');
+    if (F.typ === 'wahl') {
+      F.optionen.forEach((o, j) => {
+        const b = document.createElement('button'); b.textContent = o;
+        b.onclick = () => {
+          kn.querySelectorAll('button').forEach(x => x.disabled = true);
+          b.classList.add(j === F.richtig ? 'ok' : 'nein');
+          antwort(F, j === F.richtig, (F.rueck || {})[j] || (j === F.richtig ? 'Richtig.' : 'Schau, was der Clip zeigt.'), 'r' + j);
+        };
+        kn.appendChild(b);
+      });
+    } else if (F.typ === 'klick') {
+      const L = [...document.querySelectorAll('.l')].find(l => +l.style.opacity > 0.5 && l.querySelector('[data-fenster]'));
+      if (!L) { schliessen(); weiter(); return; }
+      const svg = L.querySelector('svg'), fe = L.querySelector('[data-fenster]').dataset.fenster.split(',').map(Number);
+      const [x0, x1, y0, y1, b, h, rd] = fe;
+      L.classList.add('fr-tippbar');
+      // Toleranz: eine Zahl (Abstand in Dateneinheiten) oder [dx, dy] je Achse —
+      // Letzteres, wenn die Achsen verschiedene Grössen tragen (s und C).
+      const tol = F.toleranz || 0.5;
+      // Ziel und Fallen sind ein Punkt [x, y] oder eine Strecke [[x1, y1], [x2, y2]] (seit 08.10.2026):
+      // Bei einer Strecke zaehlt ihr naechster Punkt — gerechnet in Toleranz-Einheiten, wenn die Achsen
+      // verschiedene Toleranzen tragen.
+      const tx_ = Array.isArray(tol) ? tol[0] : 1, ty_ = Array.isArray(tol) ? tol[1] : 1;
+      const fuss = (x, y, z) => {
+        if (!Array.isArray(z[0])) return z;
+        const [[ax, ay], [bx, by]] = z, dx = (bx - ax) / tx_, dy = (by - ay) / ty_, l2 = dx * dx + dy * dy;
+        const q = l2 ? Math.max(0, Math.min(1, ((x - ax) / tx_ * dx + (y - ay) / ty_ * dy) / l2)) : 0;
+        return [ax + (bx - ax) * q, ay + (by - ay) * q];
+      };
+      const nah = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.abs(x - z[0]) <= tol[0] && Math.abs(y - z[1]) <= tol[1]
+                                  : Math.hypot(x - z[0], y - z[1]) <= tol; };
+      // Wie weit weg, in Toleranzen — liegt ein Tipp in zwei Fallen, gewinnt die naechste (seit 08.10.2026)
+      const weit = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.max(Math.abs(x - z[0]) / tol[0], Math.abs(y - z[1]) / tol[1])
+                                  : Math.hypot(x - z[0], y - z[1]) / tol; };
+      const px = (x, y) => [rd + (x - x0) / (x1 - x0) * (b - 2 * rd), h - rd - (y - y0) / (y1 - y0) * (h - 2 * rd)];
+      const mk = (cx, cy, farbe) => { const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', 16); c.setAttribute('class', 'fr-marke');
+        c.setAttribute('fill', 'none'); c.setAttribute('stroke', farbe); c.setAttribute('stroke-width', 6); svg.appendChild(c); };
+      const pruefePunkt = (x, y) => {
+        mk(...px(x, y), 'var(--f2)');
+        if (nah(x, y, F.ziel)) return antwort(F, true, F.richtig_text || 'Getroffen.', 'ok');
+        if (Array.isArray(F.ziel[0])) {        // Strecke als Ziel: grün nachgezogen
+          const [a, e] = [px(...F.ziel[0]), px(...F.ziel[1])], l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          l.setAttribute('x1', a[0]); l.setAttribute('y1', a[1]); l.setAttribute('x2', e[0]); l.setAttribute('y2', e[1]);
+          l.setAttribute('class', 'fr-marke'); l.setAttribute('stroke', 'var(--f3)'); l.setAttribute('stroke-width', 14);
+          l.setAttribute('stroke-linecap', 'round'); l.setAttribute('stroke-opacity', '.6'); svg.appendChild(l);
+        } else mk(...px(F.ziel[0], F.ziel[1]), 'var(--f3)');
+        let fk = -1;
+        (F.fallen || []).forEach((f, k) => { if (nah(x, y, f.bei) && (fk < 0 || weit(x, y, f.bei) < weit(x, y, F.fallen[fk].bei))) fk = k; });
+        antwort(F, false, fk >= 0 ? F.fallen[fk].text : (F.falsch_text || 'Nicht ganz — der grüne Kreis zeigt die Stelle.'),
+                fk >= 0 ? 'fall' + fk : 'falsch');
+      };
+      // Am Stage horchen, nicht am Layer: unsichtbare spaetere Layer (Deckkraft 0)
+      // liegen obenauf und wuerden den Tipp abfangen.
+      tippen = ev => {
+        if (!offen || box.dataset.fertig || box.contains(ev.target)) return;
+        const r = svg.getBoundingClientRect();
+        if (ev.clientX < r.left || ev.clientX > r.right || ev.clientY < r.top || ev.clientY > r.bottom) return;
+        const sx = (ev.clientX - r.left) / r.width * b, sy = (ev.clientY - r.top) / r.height * h;
+        pruefePunkt(x0 + (sx - rd) / (b - 2 * rd) * (x1 - x0), y0 + (h - rd - sy) / (h - 2 * rd) * (y1 - y0));
+      };
+      stage.addEventListener('click', tippen);
+      kn.innerHTML = '<span style="font-size:30px;color:var(--f2)">👉 Tipp ins Bild rechts.</span>';
+      // Ohne Zeigegeraet: dieselbe Antwort als zwei Zahlen ("eingabe": [Name x, Name y])
+      if (F.eingabe) {
+        const f = document.createElement('form'); f.className = 'fr-eingabe';
+        f.innerHTML = '<span>oder eingeben:</span>' + F.eingabe.map((n, k) =>
+          '<label>' + n + ' <input inputmode="decimal" autocomplete="off" data-k="' + k + '"></label>').join('')
+          + '<button type="submit">Prüfen</button>';
+        f.onsubmit = ev => {
+          ev.preventDefault();
+          if (box.dataset.fertig) return;
+          const w = [...f.querySelectorAll('input')].map(i => parseFloat(i.value.replace(',', '.')));
+          if (w.some(isNaN)) { f.querySelector('input').focus(); return; }
+          pruefePunkt(w[0], w[1]);
+        };
+        kn.appendChild(f);
+      }
+    }
+    box.style.display = 'block';
+    // Fokus auf die erste Antwort: Tab, Enter und Leertaste reichen dann
+    const erst = box.querySelector('.fr-knoepfe button, .fr-eingabe input');
+    if (erst) erst.focus({ preventScroll: true });
+    vorlesen((F.ton || {}).frage);
+  }
+  // Spulen wird ausdruecklich erkannt: Pfeiltasten und ein Klick auf die
+  // Zeitleiste setzen ein Zeichen, das das naechste Bild auswertet. Ein
+  // spaetes Bild (langsames Laden, Hintergrund-Tab) ist kein Spulen.
+  // Neustart (R) und ein Sprung vor die erste Frage stellen alle Fragen neu;
+  // nach R laeuft der Clip ab 0 wie beim ersten Abspielen.
+  document.addEventListener('keydown', e => {
+    if (e.target && e.target.closest && e.target.closest('input, select, textarea')) return;
+    if ((e.key || '').toLowerCase() === 'r') { schliessen(); erledigt.clear(); letzt = 0; }
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') sprung = true;
+  });
+  const bar = document.getElementById('bar');
+  bar.addEventListener('click', () => { sprung = true; });
+  // Die Abspielzeit ist im Abspieler lokal; zurueckgestellt wird sie ueber
+  // dessen Zeitleiste.
+  const zurueck = s => {
+    const r = bar.getBoundingClientRect();
+    if (r.width > 0 && bar.onclick) bar.onclick({ currentTarget: bar, clientX: r.left + s / DUR * r.width });
+  };
+  const vorFragen = seek;
+  seek = function (t) {
+    vorFragen(t);
+    if (sprung) {
+      // gespult: eine uebersprungene Frage wird nicht gestellt, eine
+      // beantwortete kommt nicht wieder — ausser zurueck an den Anfang
+      sprung = false;
+      if (FRAGEN.length && t < Math.min(...FRAGEN.map(F => F.t))) { schliessen(); erledigt.clear(); }
+    } else if (!offen && pp.textContent === 'Pause') {
+      // gewoehnliches Abspielen, auch wenn ein Bild weit springt: die erste
+      // ueberschrittene Frage wird gestellt, der Clip geht an ihre Stelle zurueck
+      let i = -1;
+      FRAGEN.forEach((F, j) => {
+        if (!erledigt.has(j) && letzt < F.t && t >= F.t && (i < 0 || F.t < FRAGEN[i].t)) i = j;
+      });
+      if (i >= 0) {
+        zeigen(i, FRAGEN[i]);
+        if (offen && t - offen.t > 0.1) { t = offen.t; zurueck(t); vorFragen(t); }
+      }
+    }
+    if (offen && Math.abs(t - offen.t) > 1.0) schliessen();
+    letzt = t;
+  };
+})();
+window.__seek = seek;
+window.__dauer = DUR;
+if (!location.search.includes('render')) {
+  let t0 = performance.now(), playing = true, t = 0;
+  const barf = document.getElementById('barf'), tt = document.getElementById('tt'),
+        pp = document.getElementById('pp'), wrap = document.getElementById('wrap');
+  const fit = () => { stage.style.transform = 'translate(-50%,-50%) scale('
+      + Math.min(wrap.clientWidth / 1920, wrap.clientHeight / 1080) + ')'; };
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', () => setTimeout(fit, 60));
+  fit();
+  // Der Ton laeuft von selbst und hoerbar los. Erlaubt ist das, weil der
+  // Klick auf die Clipkarte die noetige Nutzergeste war und das <iframe>
+  // sie ueber `allow="autoplay"` weitergereicht bekommt (clipRahmen in
+  // physiklib.js bzw. mathlib.js). Verweigert der Browser trotzdem — etwa wenn jemand die
+  // Clipdatei direkt aufruft, ohne vorher zu klicken —, faellt der Clip auf
+  // stumm zurueck und der Knopf «Ton an» holt ihn hervor. Sobald der Ton
+  // laeuft, fuehrt er die Uhr: Tondrift faellt auf, Bilddrift nicht.
+  const ton = document.getElementById('ton'), ts = document.getElementById('ts');
+  const tonBeschriften = () => {
+    if (ts) ts.textContent = (!ton || ton.muted) ? '🔇 Ton an' : '🔊 Ton aus';
+  };
+  if (ton) {
+    ts.hidden = false;
+    ton.muted = false;
+    ton.play().then(tonBeschriften).catch(() => {
+      ton.muted = true;
+      tonBeschriften();
+      ton.play().catch(() => {});
+    });
+    tonBeschriften();
+    ts.onclick = () => {
+      ton.muted = !ton.muted;
+      tonBeschriften();
+      if (!ton.muted) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); }
+    };
+  }
+  const tonLaeuft = () => ton && !ton.paused && !ton.ended;
+  function loop(now) {
+    if (playing) {
+      if (tonLaeuft()) t = ton.currentTime;
+      else { t += (now - t0) / 1000; if (t > DUR) t = DUR; }
+    }
+    t0 = now; seek(t);
+    barf.style.width = (t / DUR * 100) + '%'; tt.textContent = t.toFixed(1) + ' s';
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  const tonAn = () => { if (ton) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); } };
+  const toggle = () => {
+    playing = !playing;
+    pp.textContent = playing ? 'Pause' : 'Play';
+    if (ton) { if (playing) ton.play().catch(() => {}); else ton.pause(); }
+  };
+  pp.onclick = toggle;
+  // Tastenkuerzel nicht in Eingabefeldern; die Leertaste nicht auf Knoepfen —
+  // dort bestaetigt sie den Knopf (Antwort einer Frage, Play/Pause selbst).
+  document.addEventListener('keydown', e => {
+    const ziel = e.target && e.target.closest ? e.target : null;
+    if (ziel && ziel.closest('input, select, textarea')) return;
+    if (e.code === 'Space' && ziel && ziel.closest('button, a, summary')) return;
+    if (e.code === 'Space') { e.preventDefault(); toggle(); }
+    if (e.code === 'ArrowRight') { t = Math.min(DUR, t + 5); tonAn(); }
+    if (e.code === 'ArrowLeft') { t = Math.max(0, t - 5); tonAn(); }
+    const k = e.key.toLowerCase();
+    if (k === 'r') { t = 0; playing = true; pp.textContent = 'Pause'; tonAn(); }
+    if (k === 'f') document.documentElement.requestFullscreen?.();
+  });
+  document.getElementById('bar').onclick = e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    t = (e.clientX - r.left) / r.width * DUR; tonAn();
+  };
+} else { document.body.classList.add('render'); seek(0); }
+</script></body></html>

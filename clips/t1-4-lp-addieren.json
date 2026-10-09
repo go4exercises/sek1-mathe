@@ -1,0 +1,2504 @@
+{
+ "titel": "Brüche sehen: Addieren und Subtrahieren",
+ "dateiname": "t1-4-lp-addieren",
+ "kurzbeschrieb": "Gleichnamige Brüche zählen (3/8 + 1/8 = 1/2); Halbe und Drittel in Sechstel zerlegen (1/2 + 1/3 = 5/6); der Fehler «Nenner addieren» (2/5 < 1/2); Hauptnenner als kgV (5/12 + 7/18 = 29/36); am Schluss kürzen; 2 − 3/4 = 5/4.",
+ "schlagworte": [
+  "Addieren",
+  "Subtrahieren",
+  "Hauptnenner",
+  "kgV",
+  "gleichnamig"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Rechnen in ℚ",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "t1-4"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Brüche sehen",
+ "folge": 3,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms bruchrechnen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Gleichnamig",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also zählen wir sie. Vier Achtel, und gekürzt ein Halb.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{\\fa{3}}{8} + \\dfrac{\\fb{1}}{8} = \\dfrac{4}{8} = \\fc{\\dfrac{1}{2}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 66,
+     "ein": 5.04
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         3.875,
+         7.0
+        ],
+        [
+         3.875,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.625,
+        7.0
+       ],
+       "bis": [
+        1.625,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.75,
+        7.0
+       ],
+       "bis": [
+        2.75,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.875,
+        7.0
+       ],
+       "bis": [
+        3.875,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        7.0
+       ],
+       "bis": [
+        5.0,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.125,
+        7.0
+       ],
+       "bis": [
+        6.125,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.25,
+        7.0
+       ],
+       "bis": [
+        7.25,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.375,
+        7.0
+       ],
+       "bis": [
+        8.375,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         9.5,
+         7.0
+        ],
+        [
+         9.5,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        8.6
+       ],
+       "text": "3/8 + 1/8",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         1.625,
+         4.6
+        ],
+        [
+         1.625,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 2,
+       "bewegung": [
+        [
+         3.88,
+         {}
+        ],
+        [
+         5.08,
+         {
+          "punkte": [
+           [
+            3.875,
+            7.0
+           ],
+           [
+            5.0,
+            7.0
+           ],
+           [
+            5.0,
+            8.2
+           ],
+           [
+            3.875,
+            8.2
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.66,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        6.7
+       ],
+       "bis": [
+        5.0,
+        8.5
+       ],
+       "farbe": 3,
+       "dicke": 6
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.75,
+        6.2
+       ],
+       "text": "1/2",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.02
+  },
+  {
+   "name": "Verschieden gross",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Halb plus ein Drittel. Halbe und Drittel sind verschieden grosse Stücke. So kann man sie nicht einfach zählen.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{\\fa{1}}{2} + \\dfrac{\\fb{1}}{3} = \\;?",
+     "x": 150,
+     "y": 330,
+     "groesse": 70,
+     "ein": 0.5
+    },
+    {
+     "typ": "notiz",
+     "text": "verschieden grosse Stücke",
+     "x": 150,
+     "y": 514,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 3.26
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         5.0,
+         7.0
+        ],
+        [
+         5.0,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        7.0
+       ],
+       "bis": [
+        5.0,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         9.5,
+         7.0
+        ],
+        [
+         9.5,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        8.6
+       ],
+       "text": "1/2",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.56,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         3.5,
+         4.6
+        ],
+        [
+         3.5,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        4.6
+       ],
+       "bis": [
+        3.5,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        4.6
+       ],
+       "bis": [
+        6.5,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         9.5,
+         4.6
+        ],
+        [
+         9.5,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        6.2
+       ],
+       "text": "1/3",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.0
+  },
+  {
+   "name": "Sechstel",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Teilen wir beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{2} = \\dfrac{\\fa{3}}{6}",
+     "x": 150,
+     "y": 280,
+     "groesse": 56,
+     "ein": 4.14
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{3} = \\dfrac{\\fb{2}}{6}",
+     "x": 150,
+     "y": 432,
+     "groesse": 56,
+     "ein": 6.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3}{6} + \\dfrac{2}{6} = \\fc{\\dfrac{5}{6}}",
+     "x": 150,
+     "y": 584,
+     "groesse": 62,
+     "ein": 7.16
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         5.0,
+         7.0
+        ],
+        [
+         5.0,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        7.0
+       ],
+       "bis": [
+        5.0,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         9.5,
+         7.0
+        ],
+        [
+         9.5,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        8.6
+       ],
+       "text": "1/2",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         3.5,
+         4.6
+        ],
+        [
+         3.5,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        4.6
+       ],
+       "bis": [
+        3.5,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        4.6
+       ],
+       "bis": [
+        6.5,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         9.5,
+         4.6
+        ],
+        [
+         9.5,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        6.2
+       ],
+       "text": "1/3",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        2.0,
+        7.0
+       ],
+       "bis": [
+        2.0,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.86
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        7.0
+       ],
+       "bis": [
+        3.5,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.9
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        7.0
+       ],
+       "bis": [
+        6.5,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.94
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.0,
+        7.0
+       ],
+       "bis": [
+        8.0,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.98
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.0,
+        4.6
+       ],
+       "bis": [
+        2.0,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.86
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        4.6
+       ],
+       "bis": [
+        5.0,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.9
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.0,
+        4.6
+       ],
+       "bis": [
+        8.0,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true,
+       "ein": 1.94
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.86,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        2.0,
+        2.2
+       ],
+       "bis": [
+        2.0,
+        3.4
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        2.2
+       ],
+       "bis": [
+        3.5,
+        3.4
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        2.2
+       ],
+       "bis": [
+        5.0,
+        3.4
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        2.2
+       ],
+       "bis": [
+        6.5,
+        3.4
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.0,
+        2.2
+       ],
+       "bis": [
+        8.0,
+        3.4
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         2.2
+        ],
+        [
+         9.5,
+         2.2
+        ],
+        [
+         9.5,
+         3.4
+        ],
+        [
+         0.5,
+         3.4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        3.8
+       ],
+       "text": "Summe",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         5.0,
+         7.0
+        ],
+        [
+         5.0,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.45,
+       "dicke": 2,
+       "bewegung": [
+        [
+         7.16,
+         {}
+        ],
+        [
+         7.86,
+         {
+          "punkte": [
+           [
+            0.5,
+            2.2
+           ],
+           [
+            5.0,
+            2.2
+           ],
+           [
+            5.0,
+            3.4000000000000004
+           ],
+           [
+            0.5,
+            3.4000000000000004
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         3.5,
+         4.6
+        ],
+        [
+         3.5,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 2,
+       "bewegung": [
+        [
+         7.41,
+         {}
+        ],
+        [
+         8.11,
+         {
+          "punkte": [
+           [
+            5.0,
+            2.2
+           ],
+           [
+            8.0,
+            2.2
+           ],
+           [
+            8.0,
+            3.4000000000000004
+           ],
+           [
+            5.0,
+            3.4000000000000004
+           ]
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.25,
+        1.4
+       ],
+       "text": "5/6",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 8.04
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.78
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe kann nicht kleiner sein als einer ihrer Summanden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1 + 1}{2 + 3} = \\fd{\\dfrac{2}{5}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 66,
+     "ein": 1.74
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{2}{5}} \\lt \\dfrac{1}{2}",
+     "x": 150,
+     "y": 494,
+     "groesse": 62,
+     "ein": 4.54
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         5.0,
+         7.0
+        ],
+        [
+         5.0,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        7.0
+       ],
+       "bis": [
+        5.0,
+        8.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.0
+        ],
+        [
+         9.5,
+         7.0
+        ],
+        [
+         9.5,
+         8.2
+        ],
+        [
+         0.5,
+         8.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        8.6
+       ],
+       "text": "1/2",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.06,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         4.1,
+         4.6
+        ],
+        [
+         4.1,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.3,
+        4.6
+       ],
+       "bis": [
+        2.3,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.1,
+        4.6
+       ],
+       "bis": [
+        4.1,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.9,
+        4.6
+       ],
+       "bis": [
+        5.9,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.7,
+        4.6
+       ],
+       "bis": [
+        7.7,
+        5.8
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.6
+        ],
+        [
+         9.5,
+         4.6
+        ],
+        [
+         9.5,
+         5.8
+        ],
+        [
+         0.5,
+         5.8
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        6.2
+       ],
+       "text": "2/5",
+       "farbe": 4,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.54,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        4.3
+       ],
+       "bis": [
+        5.0,
+        8.5
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.8
+  },
+  {
+   "name": "Hauptnenner",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn und sechsunddreissig. Sechsunddreissig ist auch durch zwölf teilbar.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Hauptnenner = kgV der Nenner",
+     "x": 150,
+     "y": 290,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 2.2
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{5}{\\fa{12}} + \\dfrac{7}{\\fb{18}}",
+     "x": 150,
+     "y": 420,
+     "groesse": 60,
+     "ein": 5.52
+    },
+    {
+     "typ": "formel",
+     "text": "\\text{kgV}(12;\\ 18) = \\fc{36}",
+     "x": 150,
+     "y": 581,
+     "groesse": 54,
+     "ein": 13.4
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.52,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.0
+       ],
+       "bis": [
+        9.5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        4.1
+       ],
+       "text": "0",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.5,
+        5.0
+       ],
+       "bis": [
+        2.5,
+        5.7
+       ],
+       "farbe": 1,
+       "dicke": 5,
+       "ein": 13.4
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.5,
+        6.1
+       ],
+       "text": "12",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 13.4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.5,
+        5.0
+       ],
+       "bis": [
+        4.5,
+        5.7
+       ],
+       "farbe": 1,
+       "dicke": 5,
+       "ein": 13.4
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.5,
+        6.1
+       ],
+       "text": "24",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 13.4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        5.0
+       ],
+       "bis": [
+        6.5,
+        5.7
+       ],
+       "farbe": 1,
+       "dicke": 5,
+       "ein": 13.4
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        6.1
+       ],
+       "text": "36",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 13.4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.5,
+        5.0
+       ],
+       "bis": [
+        8.5,
+        5.7
+       ],
+       "farbe": 1,
+       "dicke": 5,
+       "ein": 13.4
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.5,
+        6.1
+       ],
+       "text": "48",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 13.4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        4.3
+       ],
+       "bis": [
+        3.5,
+        5.0
+       ],
+       "farbe": 2,
+       "dicke": 5,
+       "ein": 4.12
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.5,
+        3.5
+       ],
+       "text": "18",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 4.12
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        4.3
+       ],
+       "bis": [
+        6.5,
+        5.0
+       ],
+       "farbe": 2,
+       "dicke": 5,
+       "ein": 4.12
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        3.5
+       ],
+       "text": "36",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 4.12
+      },
+      {
+       "art": "kreis",
+       "m": [
+        6.5,
+        5.0
+       ],
+       "r": 0.55,
+       "farbe": 3,
+       "fuellung": 0.15,
+       "dicke": 4,
+       "ein": 13.8
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 15.91
+  },
+  {
+   "name": "Erweitern auf 36",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Fünf Zwölftel erweitern wir mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{5 \\cdot \\fb{3}}{12 \\cdot \\fb{3}} + \\dfrac{7 \\cdot \\fb{2}}{18 \\cdot \\fb{2}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.33
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{\\fa{15}}{36} + \\dfrac{\\fb{14}}{36} = \\fc{\\dfrac{29}{36}}",
+     "x": 150,
+     "y": 452,
+     "groesse": 60,
+     "ein": 4.15
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0.75,
+        6.0
+       ],
+       "bis": [
+        0.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.0,
+        6.0
+       ],
+       "bis": [
+        1.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.25,
+        6.0
+       ],
+       "bis": [
+        1.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.5,
+        6.0
+       ],
+       "bis": [
+        1.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.75,
+        6.0
+       ],
+       "bis": [
+        1.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.0,
+        6.0
+       ],
+       "bis": [
+        2.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.25,
+        6.0
+       ],
+       "bis": [
+        2.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.5,
+        6.0
+       ],
+       "bis": [
+        2.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.75,
+        6.0
+       ],
+       "bis": [
+        2.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.0,
+        6.0
+       ],
+       "bis": [
+        3.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.25,
+        6.0
+       ],
+       "bis": [
+        3.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        6.0
+       ],
+       "bis": [
+        3.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.75,
+        6.0
+       ],
+       "bis": [
+        3.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.0,
+        6.0
+       ],
+       "bis": [
+        4.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.25,
+        6.0
+       ],
+       "bis": [
+        4.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.5,
+        6.0
+       ],
+       "bis": [
+        4.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.75,
+        6.0
+       ],
+       "bis": [
+        4.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        6.0
+       ],
+       "bis": [
+        5.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.25,
+        6.0
+       ],
+       "bis": [
+        5.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.5,
+        6.0
+       ],
+       "bis": [
+        5.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.75,
+        6.0
+       ],
+       "bis": [
+        5.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.0,
+        6.0
+       ],
+       "bis": [
+        6.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.25,
+        6.0
+       ],
+       "bis": [
+        6.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        6.0
+       ],
+       "bis": [
+        6.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.75,
+        6.0
+       ],
+       "bis": [
+        6.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.0,
+        6.0
+       ],
+       "bis": [
+        7.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.25,
+        6.0
+       ],
+       "bis": [
+        7.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.5,
+        6.0
+       ],
+       "bis": [
+        7.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.75,
+        6.0
+       ],
+       "bis": [
+        7.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.0,
+        6.0
+       ],
+       "bis": [
+        8.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.25,
+        6.0
+       ],
+       "bis": [
+        8.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.5,
+        6.0
+       ],
+       "bis": [
+        8.5,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.75,
+        6.0
+       ],
+       "bis": [
+        8.75,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        9.0,
+        6.0
+       ],
+       "bis": [
+        9.0,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        9.25,
+        6.0
+       ],
+       "bis": [
+        9.25,
+        7.2
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         9.5,
+         6.0
+        ],
+        [
+         9.5,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.15,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         4.25,
+         6.0
+        ],
+        [
+         4.25,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.45,
+       "dicke": 0
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.09,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.25,
+         6.0
+        ],
+        [
+         7.75,
+         6.0
+        ],
+        [
+         7.75,
+         7.2
+        ],
+        [
+         4.25,
+         7.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 0
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.87,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        4.125,
+        5.2
+       ],
+       "text": "29 von 36",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.64
+  },
+  {
+   "name": "Am Schluss kürzen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Am Schluss immer prüfen, ob man kürzen kann. Ein Sechstel plus ein Drittel gibt drei Sechstel, also ein Halb. Und mit einer ganzen Zahl: zwei sind acht Viertel, also ist zwei minus drei Viertel gleich fünf Viertel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{6} + \\dfrac{1}{3} = \\dfrac{1}{6} + \\dfrac{2}{6} = \\dfrac{3}{6} = \\fc{\\dfrac{1}{2}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 56,
+     "ein": 3.21
+    },
+    {
+     "typ": "formel",
+     "text": "2 - \\dfrac{3}{4} = \\dfrac{8}{4} - \\dfrac{3}{4} = \\fc{\\dfrac{5}{4}}",
+     "x": 150,
+     "y": 472,
+     "groesse": 56,
+     "ein": 6.91
+    }
+   ],
+   "dauer": 12.59
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Addieren und subtrahieren nur mit gleichen Nennern. Als gemeinsamen Nenner nimmt man das kleinste gemeinsame Vielfache. Nie die Nenner addieren, und am Schluss kürzen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "nur gleichnamig addieren und subtrahieren|Hauptnenner = kgV der Nenner|Nenner nie addieren, am Schluss kürzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.06
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.42
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Fehler",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Jemand rechnet 1/2 + 1/3 = 2/5. Ist 2/5 mehr oder weniger als 1/2 allein?",
+   "optionen": [
+    "mehr",
+    "gleich viel",
+    "weniger"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Schau gleich im Bild: Wie lang ist der rote Streifen im Vergleich zu 1/2?",
+    "1": "Schau gleich im Bild: Endet der rote Streifen bei der Hälfte?"
+   },
+   "sprich": "Jemand rechnet ein Halb plus ein Drittel gleich zwei Fünftel. Ist zwei Fünftel mehr oder weniger als ein Halb allein?",
+   "rueck_sprich": {
+    "0": "Schau gleich im Bild: Wie lang ist der rote Streifen im Vergleich zu einem Halb?",
+    "1": "Schau gleich im Bild: Endet der rote Streifen bei der Hälfte?"
+   }
+  }
+ ]
+}

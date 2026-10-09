@@ -1,0 +1,961 @@
+{
+ "titel": "Brüche sehen: Kontrollfragen zum Multiplizieren und Dividieren",
+ "dateiname": "t1-4-lp-kontrolle-malnehmen",
+ "kurzbeschrieb": "Fünf Fragen: 2/5 · 3/4, eine Multiplikation am Flächenmodell ablesen, 4/5 : 2/3, wie oft 1/6 in 2/3 passt, 5 · 2/7.",
+ "schlagworte": [
+  "Multiplizieren",
+  "Dividieren",
+  "Kehrwert",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Rechnen in ℚ",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "t1-4"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Brüche sehen",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms bruchrechnen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zähler mal Zähler und Nenner mal Nenner: sechs Zwanzigstel, gekürzt drei Zehntel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{5} \\cdot \\dfrac{3}{4} = \\dfrac{6}{20} = \\fc{\\dfrac{3}{10}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.1,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         4.1,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.25
+        ],
+        [
+         4.1,
+         7.25
+        ],
+        [
+         4.1,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         4.1,
+         0.5
+        ],
+        [
+         4.1,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        2.75
+       ],
+       "bis": [
+        9.5,
+        2.75
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.0
+       ],
+       "bis": [
+        9.5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        7.25
+       ],
+       "bis": [
+        9.5,
+        7.25
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.3,
+        0.5
+       ],
+       "bis": [
+        2.3,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.1,
+        0.5
+       ],
+       "bis": [
+        4.1,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.9,
+        0.5
+       ],
+       "bis": [
+        5.9,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.7,
+        0.5
+       ],
+       "bis": [
+        7.7,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 5.97
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Blau ist ein Drittel der Breite, orange drei Viertel der Höhe. Grün sind drei von zwölf Kästchen: ein Viertel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{3} \\cdot \\dfrac{3}{4} = \\dfrac{3}{12} = \\fc{\\dfrac{1}{4}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 0.05,
+       "aus": 1.0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         3.5,
+         0.5
+        ],
+        [
+         3.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 0.05,
+       "aus": 1.0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         3.5,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 1.0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.25
+        ],
+        [
+         3.5,
+         7.25
+        ],
+        [
+         3.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 1.0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         3.5,
+         0.5
+        ],
+        [
+         3.5,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 4,
+       "ein": 1.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        2.75
+       ],
+       "bis": [
+        9.5,
+        2.75
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 0.05
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.0
+       ],
+       "bis": [
+        9.5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 0.05
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        7.25
+       ],
+       "bis": [
+        9.5,
+        7.25
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 0.05
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        0.5
+       ],
+       "bis": [
+        3.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 0.05
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        0.5
+       ],
+       "bis": [
+        6.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 0.05
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.56
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mit dem Kehrwert des zweiten Bruchs: vier Fünftel mal drei Halbe, zwölf Zehntel, gekürzt sechs Fünftel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{4}{5} : \\dfrac{2}{3} = \\dfrac{4}{5} \\cdot \\dfrac{\\fb{3}}{\\fb{2}} = \\dfrac{12}{10} = \\fc{\\dfrac{6}{5}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 58,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.34
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwei Drittel sind vier Sechstel. Ein Sechstel passt also viermal hinein.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{3} : \\dfrac{1}{6} = \\dfrac{2}{3} \\cdot 6 = \\fc{4}",
+     "x": 150,
+     "y": 320,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         9.5,
+         6.0
+        ],
+        [
+         9.5,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         6.5,
+         6.0
+        ],
+        [
+         6.5,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 3
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.4
+        ],
+        [
+         2.0,
+         4.4
+        ],
+        [
+         2.0,
+         5.6
+        ],
+        [
+         0.5,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 1.0
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.25,
+        4.75
+       ],
+       "text": "1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 1.0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.0,
+         4.4
+        ],
+        [
+         3.5,
+         4.4
+        ],
+        [
+         3.5,
+         5.6
+        ],
+        [
+         2.0,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 1.3
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.75,
+        4.75
+       ],
+       "text": "2",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 1.3
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.5,
+         4.4
+        ],
+        [
+         5.0,
+         4.4
+        ],
+        [
+         5.0,
+         5.6
+        ],
+        [
+         3.5,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 1.6
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.25,
+        4.75
+       ],
+       "text": "3",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 1.6
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.0,
+         4.4
+        ],
+        [
+         6.5,
+         4.4
+        ],
+        [
+         6.5,
+         5.6
+        ],
+        [
+         5.0,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 1.9
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.75,
+        4.75
+       ],
+       "text": "4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 1.9
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        7.6
+       ],
+       "text": "2/3",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 5.1
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nur der Zähler wird mit fünf multipliziert: zehn Siebtel. Wer auch den Nenner multipliziert, hat nur erweitert.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5 \\cdot \\dfrac{2}{7} = \\dfrac{5 \\cdot 2}{7} = \\fc{\\dfrac{10}{7}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{5 \\cdot 2}{5 \\cdot 7} = \\dfrac{2}{7}}",
+     "x": 150,
+     "y": 486,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.4
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Mal heisst Zähler mal Zähler und Nenner mal Nenner. Durch heisst mal den Kehrwert des zweiten Bruchs.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "mal: Zähler @\\cdot@ Zähler, Nenner @\\cdot@ Nenner|durch: mal Kehrwert des zweiten Bruchs",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 7.19
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "2/5 · 3/4 = ?",
+   "optionen": [
+    "5/9",
+    "3/10",
+    "8/15"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das wäre geteilt (über Kreuz multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.",
+    "0": "Das wäre Zähler plus Zähler, Nenner plus Nenner — beim Multiplizieren wird multipliziert."
+   },
+   "sprich": "Zwei Fünftel mal drei Viertel gleich?",
+   "rueck_sprich": {
+    "2": "Das wäre geteilt, über Kreuz multipliziert. Mal heisst: Zähler mal Zähler, Nenner mal Nenner.",
+    "0": "Das wäre Zähler plus Zähler, Nenner plus Nenner. Beim Multiplizieren wird multipliziert."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Rechnung zeigt das Bild?",
+   "optionen": [
+    "1/3 · 3/4 = 1/4",
+    "1/3 + 3/4",
+    "3/4 : 1/3"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Zwei Anteile, die sich überlappen — das ist das Flächenmodell für Mal.",
+    "2": "Teilen fragt «Wie oft passt?» — im Bild überlappen sich zwei Anteile."
+   },
+   "sprich": "Welche Rechnung zeigt das Bild?",
+   "rueck_sprich": {
+    "1": "Zwei Anteile, die sich überlappen: Das ist das Flächenmodell für Mal.",
+    "2": "Teilen fragt: Wie oft passt es? Im Bild überlappen sich zwei Anteile."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "4/5 : 2/3 = ?",
+   "optionen": [
+    "5/6",
+    "6/5",
+    "8/15"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Kehrwert vergessen: Durch einen Bruch teilen heisst mit seinem Kehrwert multiplizieren.",
+    "0": "Den Kehrwert vom zweiten Bruch nehmen, nicht vom ersten."
+   },
+   "sprich": "Vier Fünftel durch zwei Drittel gleich?",
+   "rueck_sprich": {
+    "2": "Kehrwert vergessen. Durch einen Bruch teilen heisst mit seinem Kehrwert multiplizieren.",
+    "0": "Den Kehrwert vom zweiten Bruch nehmen, nicht vom ersten."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie oft passt 1/6 in 2/3?",
+   "optionen": [
+    "3-mal",
+    "1/9-mal",
+    "4-mal"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Schreib 2/3 in Sechsteln: Wie viele Sechstel sind es?",
+    "1": "1/9 wäre 2/3 · 1/6 — das ist mal, nicht durch."
+   },
+   "sprich": "Wie oft passt ein Sechstel in zwei Drittel?",
+   "rueck_sprich": {
+    "0": "Schreib zwei Drittel in Sechsteln. Wie viele Sechstel sind es?",
+    "1": "Ein Neuntel wäre mal, nicht durch."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "5 · 2/7 = ?",
+   "optionen": [
+    "10/35",
+    "7/10",
+    "10/7"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "10/35 = 2/7: Wer auch den Nenner mal 5 nimmt, hat nur erweitert.",
+    "1": "Das ist der Kehrwert des Ergebnisses — richtig ist mehr als 1."
+   },
+   "sprich": "Fünf mal zwei Siebtel gleich?",
+   "rueck_sprich": {
+    "0": "Zehn Fünfunddreissigstel sind zwei Siebtel. Wer auch den Nenner mal fünf nimmt, hat nur erweitert.",
+    "1": "Das ist der Kehrwert des Ergebnisses. Richtig ist mehr als ein Ganzes."
+   }
+  }
+ ]
+}

@@ -5,8 +5,9 @@
 \renewcommand{\lpname}{Bruchrechnen}
 \renewcommand{\lpteilgebiet}{1.4}
 \renewcommand{\lpfuss}{Bewertungspaket}
-\newcolumntype{P}{>{\centering\arraybackslash}p{10mm}}
-\newenvironment{raster}{\par\smallskip\noindent\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
+\newcolumntype{P}{>{\centering\arraybackslash\rule[-2.6ex]{0pt}{6.2ex}}p{10mm}}  % Stütze: Platz für \dfrac oben und unten
+% Hohe Brüche (\dfrac) brauchen Luft zwischen den Zeilen, sonst berühren sie die Nachbarzeile (Sichtprüfung 09.10.2026).
+\newenvironment{raster}{\par\smallskip\noindent\renewcommand{\arraystretch}{1.15}\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
   \small\textsc{Teilschritt} & \small\textsc{P} & \small\textsc{Musterlösung}\\\midrule}{\bottomrule\endtabularx\par}
 \newcommand{\fehler}[1]{\par\smallskip{\small\textcolor{lprot}{\bfseries Typische Fehler:} #1}}
 \newcommand{\E}{\,{\footnotesize\bfseries\color{lpgruen}(E)}}

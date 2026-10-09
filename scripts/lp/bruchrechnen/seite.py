@@ -8,6 +8,7 @@ umgestellt), seite.css, basis.js (Thema, Fortschritt, Schiene), seite.js (Simula
 Nur der SEO-Block wird aus der bestehenden Seite übernommen — ihn schreibt scripts/build-seo.py.
 Wiederholbar: zweimal laufen lassen ergibt dieselbe Datei. Danach Pre-Flight und build-seo.py.
 """
+import json
 import os
 
 SP = os.path.dirname(os.path.abspath(__file__)) + '/'
@@ -59,7 +60,27 @@ def test(tid, titel, punkte, aufgaben, zwei=False):
       </div>'''
 
 
-def kapitel(n, kid, titel, zeit, ziel, sim, festhalten, uebungen, aufgaben, mehr, komp):
+def dauer(name):
+    """Clipzeit aus dem Drehbuch (Summe der gemessenen Szenen, ohne Nachlauf — so rechnet die Bibliothek),
+    abgerundet auf Sekunden (HOWTO-leitprogramme §7)."""
+    p = R + 'clips/' + name + '.json'
+    if not os.path.exists(p):
+        return '0:00'
+    t = int(sum(q.get('dauer', 0) for q in json.load(open(p))['szenen']))
+    return '%d:%02d' % (t // 60, t % 60)
+
+
+def clipkarte(datei, titel):
+    return f'''<div class="clipkarte kap-clip" data-clip="clips/{datei}.html" data-titel="{titel}">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">{titel}</span></span>
+          <span class="clip-zeit">{dauer(datei)}</span>
+        </button>
+      </div>'''
+
+
+def kapitel(n, kid, titel, zeit, ziel, clip1, sim, clip2, festhalten, uebungen, aufgaben, mehr, komp):
     ue = '\n        '.join(uebungen)
     return f'''
     <section class="kap" id="k{n}">
@@ -67,18 +88,24 @@ def kapitel(n, kid, titel, zeit, ziel, sim, festhalten, uebungen, aufgaben, mehr
       <h2 id="{kid}">{titel}</h2>
       <p class="ziel">{ziel}</p>
 
-      <p class="phase"><span>①</span> Tüfteln</p>
+      <p class="phase"><span>①</span> Clip</p>
+      {clipkarte(*clip1)}
+
+      <p class="phase"><span>②</span> Tüfteln</p>
 {sim}
 
-      <p class="phase"><span>②</span> Festhalten</p>
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      {clipkarte(*clip2)}
+
+      <h3>Festhalten</h3>
 {festhalten}
 
-      <p class="phase"><span>③</span> Üben mit Rückmeldung</p>
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
       <div class="duo">
         {ue}
       </div>
 
-      <p class="phase"><span>④</span> Aufgaben mit Lösungen</p>
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
 {aufgaben}
       <p class="ausf">Mehr dazu: {mehr}</p>
     </section>'''
@@ -134,9 +161,10 @@ auf1 = test('t1', 'Aufgaben · Kapitel 1', 13, [
     ('1f', 2, r'Welcher Anteil ist gefärbt? Gib ihn vollständig gekürzt an. Wie viele Teile wären gefärbt, wenn derselbe Streifen in \(16\) Teile geteilt wäre?',
      r'<p>\(6\) von \(8\) Teilen: \(\tfrac{6}{8} = \tfrac{3}{4}\). Bei \(16\) Teilen: \(\tfrac{3}{4} = \tfrac{12}{16}\), also \(12\) Teile.</p>', streifen('8,6', 'Streifen mit 8 Teilen, davon 6 gefärbt')),
 ])
-k1 = kapitel(1, 'erweitern-kuerzen', 'Erweitern, Kürzen, Vergleichen', 35,
+k1 = kapitel(1, 'erweitern-kuerzen', 'Erweitern, Kürzen, Vergleichen', 40,
              r'Du erweiterst und kürzt Brüche, kürzt vollständig mit dem grössten gemeinsamen Teiler und vergleichst Brüche, indem du sie auf denselben Nenner bringst.',
-             sim1, fest1, [uebung('erweitern', 'Erweitern'), uebung('kuerzen', 'Vollständig kürzen')],
+             ('t1-4-lp-erweitern', 'Erweitern, Kürzen, Vergleichen'), sim1,
+             ('t1-4-lp-kontrolle-erweitern', 'Kontrollfragen zum Erweitern und Kürzen'), fest1, [uebung('erweitern', 'Erweitern'), uebung('kuerzen', 'Vollständig kürzen')],
              auf1, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K1')
 
 # ------------------------------------------------------------------ Kapitel 2
@@ -182,9 +210,10 @@ auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
      r'<p>Sechstel sind gleich grosse Stücke — man zählt einfach, wie viele es sind. Halbe und Drittel sind verschieden gross; erst wenn beide in Sechstel zerlegt sind (\(\tfrac{3}{6}\) und \(\tfrac{2}{6}\)), darf man zählen.</p>',
      streifen('2,1;3,1', 'Zwei Streifen: einer in Halbe geteilt mit einem gefärbten Teil, einer in Drittel geteilt mit einem gefärbten Teil')),
 ])
-k2 = kapitel(2, 'addieren', 'Addieren und Subtrahieren', 40,
+k2 = kapitel(2, 'addieren', 'Addieren und Subtrahieren', 45,
              r'Du addierst und subtrahierst Brüche, indem du sie mit dem Hauptnenner gleichnamig machst, und gibst das Ergebnis vollständig gekürzt an.',
-             sim2, fest2, [uebung('hauptnenner', 'Hauptnenner finden'), uebung('addsub', 'Addieren und Subtrahieren')],
+             ('t1-4-lp-addieren', 'Addieren und Subtrahieren'), sim2,
+             ('t1-4-lp-kontrolle-addieren', 'Kontrollfragen zum Addieren und Subtrahieren'), fest2, [uebung('hauptnenner', 'Hauptnenner finden'), uebung('addsub', 'Addieren und Subtrahieren')],
              auf2, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K2')
 
 # ------------------------------------------------------------------ Kapitel 3
@@ -238,9 +267,10 @@ auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
      r'<p>Blau sind \(\tfrac{3}{4}\) der Breite, orange \(\tfrac{2}{5}\) der Höhe: \(\tfrac{3}{4} \cdot \tfrac{2}{5}\). Grün sind \(6\) von \(20\) Kästchen: \(\tfrac{6}{20} = \tfrac{3}{10}\).</p>',
      '\n            <div class="mini-reihe"><svg class="mini-bruch" data-flaeche="3,4,2,5" aria-label="Quadrat: 3 von 4 Spalten blau, 2 von 5 Zeilen orange, Überlappung grün"></svg></div>'),
 ])
-k3 = kapitel(3, 'multiplizieren', 'Multiplizieren und Dividieren', 40,
+k3 = kapitel(3, 'multiplizieren', 'Multiplizieren und Dividieren', 45,
              r'Du multiplizierst Brüche, dividierst mit dem Kehrwert, kürzt vor dem Ausrechnen und erklärst beides am Bild.',
-             sim3, fest3, [uebung('mal', 'Multiplizieren'), uebung('durch', 'Dividieren')],
+             ('t1-4-lp-malnehmen', 'Multiplizieren und Dividieren'), sim3,
+             ('t1-4-lp-kontrolle-malnehmen', 'Kontrollfragen zum Multiplizieren und Dividieren'), fest3, [uebung('mal', 'Multiplizieren'), uebung('durch', 'Dividieren')],
              auf3, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K3')
 
 # ------------------------------------------------------------------ Kapitel 4
@@ -289,9 +319,10 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 16, [
     ('4f', 2, r'Warum ist \(\left(-\tfrac{2}{3}\right)^2\) positiv, \(-\left(\tfrac{2}{3}\right)^2\) aber negativ?',
      r'<p>\(\left(-\tfrac{2}{3}\right)^2 = \left(-\tfrac{2}{3}\right) \cdot \left(-\tfrac{2}{3}\right) = +\tfrac{4}{9}\): Minus mal Minus gibt Plus. Bei \(-\left(\tfrac{2}{3}\right)^2\) wird zuerst quadriert (Potenz vor Strich), das Minus kommt danach: \(-\tfrac{4}{9}\).</p>', ''),
 ])
-k4 = kapitel(4, 'reihenfolge', 'Rechenreihenfolge und negative Brüche', 45,
+k4 = kapitel(4, 'reihenfolge', 'Rechenreihenfolge und negative Brüche', 50,
              r'Du berechnest Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge — Klammern, Potenzen, Punkt vor Strich, von links nach rechts —, schreibst jeden Schritt auf und gibst das Ergebnis vollständig gekürzt an.',
-             sim4, fest4, [uebung('reihenfolge', 'Was kommt zuerst?'), uebung('vorzeichen', 'Negative Brüche')],
+             ('t1-4-lp-reihenfolge', 'Rechenreihenfolge und negative Brüche'), sim4,
+             ('t1-4-lp-kontrolle-reihenfolge', 'Kontrollfragen zur Rechenreihenfolge'), fest4, [uebung('reihenfolge', 'Was kommt zuerst?'), uebung('vorzeichen', 'Negative Brüche')],
              auf4, f'<a href="{TH}">Themenseite 1.4, Rechnen in ℚ</a>', komp='K4')
 
 # ------------------------------------------------------------------ Vorwissen
@@ -394,11 +425,11 @@ oben = '''<div id="nav-root"></div>
 
      Planung (Kapitel | Lernziel | Erkundung | Beispiel | Häufiger Fehler | min):
        0 | Vorwissen          | –                          | –                    | –                               | 10
-       1 | erweitern/kürzen   | Bruchstreifen nachbauen    | 12/18 = 2/3          | Summanden kürzen; addieren      | 35
-       2 | addieren           | gemeinsame Unterteilung    | 5/12 + 7/18 = 29/36  | Nenner addieren (1/2+1/3 ≠ 2/5) | 40
-       3 | mal/durch          | Flächenmodell, Messen      | 4/9 · 3/8 = 1/6      | Kehrwert vom falschen Bruch     | 40
-       4 | Reihenfolge        | Schrittwähler              | Kette mit Klammer    | Minus vor Klammer; links→rechts | 45
-       Gesamttest (PDF) 25 · Summe 195 min ≈ 4.3 Lektionen: vier Kapitel zu je einer Lektion, dazu
+       1 | erweitern/kürzen   | Bruchstreifen nachbauen    | 12/18 = 2/3          | Summanden kürzen; addieren      | 40
+       2 | addieren           | gemeinsame Unterteilung    | 5/12 + 7/18 = 29/36  | Nenner addieren (1/2+1/3 ≠ 2/5) | 45
+       3 | mal/durch          | Flächenmodell, Messen      | 4/9 · 3/8 = 1/6      | Kehrwert vom falschen Bruch     | 45
+       4 | Reihenfolge        | Schrittwähler              | Kette mit Klammer    | Minus vor Klammer; links→rechts | 50
+       Gesamttest (PDF) 25 · Summe 215 min ≈ 4.8 Lektionen: vier Kapitel zu je einer Lektion, dazu
        Vorwissen und Gesamttest. Vertiefung V1–V3 freiwillig, nicht eingerechnet.
 
      Aus der BM-Vorlage übernommen: Kompetenzen «Das kannst du danach», Vorwissen mit Verweisen,
@@ -408,9 +439,10 @@ oben = '''<div id="nav-root"></div>
      Bewusst nicht übernommen: Teams-/Flipped-Classroom-Ablauf, Kernpfad für die erste Doppellektion,
      Prüfungsanker der BM-Aufnahmeprüfung, Dezimalkomma als Alternative, Lehrpersonenmaterial.
 
-     Clips: keine. Die Clip-Bibliothek von Sek1-Mathe ist leer; Clips zu bauen war nicht Teil des Auftrags
-     (HOWTO-leitprogramme §7: «Fehlt ein Clip: melden, nicht ohne Auftrag bauen»). Ersatz: Phase ① ist die
-     Erkundung mit Aufgabenleiste. Clipkarten können später vor ① eingesetzt werden.
+     Clips: je Kapitel ein Einführungsclip (mit einer Vorhersagefrage) und ein Kontrollclip mit fünf Fragen,
+     Reihe «Brüche sehen», t1-4-lp-*.json, erzeugt mit scripts/lp/bruchrechnen/clips.py (probe: nicht in der
+     Bibliothek). Die Erkundungen benutzen andere Zahlen als Clip und Festhalten (HOWTO §15).
+     Muster je Kapitel: ① Clip → ② Tüfteln (Aufgabenleiste) → ③ Kontrollclip → Festhalten → ④ Üben → ⑤ Aufgaben.
 
      Farben: erster Bruch blau, zweiter Bruch orange, Ergebnis grün, Fehler rot; Bereichsfarbe Petrol.
      Gesamttest und Bewertungspaket nur als PDF (downloads/leitprogramme/bruchrechnen/*.tex). -->
@@ -419,7 +451,7 @@ oben = '''<div id="nav-root"></div>
     <div>
       <p class="marke">Sek1-Mathe begreifbar · Leitprogramm</p>
       <h1>Bruchrechnen</h1>
-      <p class="unter">Tüfteln, festhalten, üben. Vier Kapitel zu je einer Lektion, dazu Vorwissen und Gesamttest.</p>
+      <p class="unter">Zuschauen, tüfteln, kontrollieren, üben. Vier Kapitel zu je einer Lektion, dazu Vorwissen und Gesamttest.</p>
     </div>
     <div class="kopf-rechts">
       <button class="themenschalter" type="button" id="themenschalter">Dunkel / Hell</button>
@@ -462,10 +494,11 @@ oben = '''<div id="nav-root"></div>
       <details class="anleitung">
         <summary><h2 id="so-arbeitest-du">So arbeitest du</h2></summary>
         <ol>
-          <li><b>① Tüfteln:</b> Löse die Aufgaben in der orangen Leiste über dem Bild. Sie zeigt ✓, sobald es stimmt. Überspringen geht immer.</li>
-          <li><b>② Festhalten:</b> Lies die Regel und den häufigen Fehler — am besten schreibst du beides ins Heft.</li>
-          <li><b>③ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen.</li>
-          <li><b>④ Aufgaben</b> auf Papier mit Rechenweg, dann Lösung aufklappen und abhaken.</li>
+          <li><b>① Clip</b> anschauen. Er hält einmal an und fragt nach deiner Vorhersage.</li>
+          <li><b>② Tüfteln:</b> Löse die Aufgaben in der orangen Leiste über dem Bild. Sie zeigt ✓, sobald es stimmt. Überspringen geht immer.</li>
+          <li><b>③ Kontrollfragen:</b> Der Clip hält an. Erst antworten. Danach <b>Festhalten</b>: Regel und häufigen Fehler ins Heft.</li>
+          <li><b>④ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen.</li>
+          <li><b>⑤ Aufgaben</b> auf Papier mit Rechenweg, dann Lösung aufklappen und abhaken.</li>
           <li>Zum Schluss der <b>Gesamttest</b> auf Papier. Alles ohne Taschenrechner.</li>
         </ol>
       </details>
@@ -534,7 +567,7 @@ fuss = f'''
 </body>
 </html>
 '''
-# Zeiten (09.10.2026): Vorwissen 10 · K1 35 · K2 40 · K3 40 · K4 45 · Gesamttest 25 = 195 min
+# Zeiten (09.10.2026, mit Clips): Vorwissen 10 · K1 40 · K2 45 · K3 45 · K4 50 · Gesamttest 25 = 215 min
 body = oben + k0 + k1 + k2 + k3 + k4 + gt + vt + unten
 seite = (kopf + open(SP + 'kopf.css').read() + open(SP + 'seite.css').read() + '</style>\n</head>\n<body>\n' + body + '\n'
          + mathjax + open(SP + 'basis.js').read() + '\n</script>\n' + open(SP + 'seite.js').read() + '\n' + fuss)

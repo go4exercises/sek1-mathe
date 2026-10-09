@@ -1,0 +1,6 @@
+0.40	Vier Sechstel: Kürzt man durch zwei, erhält man zwei Drittel. Drei Viertel ist mehr, drei Fünftel weniger.
+7.66	Von sieben zu einundzwanzig kommt man mit mal drei. Also auch der Zähler mal drei: sechs Einundzwanzigstel.
+14.55	Der grösste gemeinsame Teiler von achtzehn und vierundzwanzig ist sechs. Also drei Viertel. Neun Zwölftel und sechs Achtel stimmen, sind aber noch kürzbar.
+24.57	Auf dem gemeinsamen Nenner vierzig: fünfundzwanzig Vierzigstel gegen vierundzwanzig Vierzigstel. Fünf Achtel ist grösser, wenn auch nur knapp.
+33.07	Kürzen darf man nur Faktoren. Die drei ist hier ein Summand. Zuerst ausrechnen: acht Zehntel. Gekürzt sind das vier Fünftel.
+41.14	Zum Mitnehmen: Zähler und Nenner mit derselben Zahl multiplizieren oder durch dieselbe Zahl dividieren. Vollständig kürzen mit dem ggT. Und nie Summanden kürzen.

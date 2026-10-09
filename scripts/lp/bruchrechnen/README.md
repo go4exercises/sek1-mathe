@@ -3,8 +3,9 @@
 Leitprogramm zur Themenseite 1.4 «Rechnen in ℚ» (Vorwissen 1.1–1.3), gebaut am 09.10.2026 im Kapitelmuster
 von `HOWTO-leitprogramme.md`, didaktisch ergänzt nach `~/HOWTO-TODO-BM-Vorkurs-LP01-02.md` §4 (LP 01), für die
 Sek I umgesetzt. Kapitel: Erweitern, Kürzen, Vergleichen · Addieren und Subtrahieren · Multiplizieren und
-Dividieren · Rechenreihenfolge und negative Brüche. Alles ohne Taschenrechner. **Ohne Clips** (Bibliothek leer):
-Phase ① ist die Erkundung mit Aufgabenleiste. Die Seite steht bis zur Prüfung nach §15 unverlinkt
+Dividieren · Rechenreihenfolge und negative Brüche. Alles ohne Taschenrechner. Je Kapitel ① Einführungsclip (mit einer
+Vorhersagefrage) → ② Erkundung mit Aufgabenleiste → ③ Kontrollclip (fünf Fragen) → Festhalten → ④ Üben → ⑤ Aufgaben.
+Die Erkundungen benutzen andere Zahlen als Clip und Festhalten. Die Seite steht bis zur Prüfung nach §15 unverlinkt
 (`noindex, nofollow`, keine Karte, kein Suchindex).
 
 | Datei | Zweck | laufen lassen? |
@@ -14,11 +15,29 @@ Phase ① ist die Erkundung mit Aufgabenleiste. Die Seite steht bis zur Prüfung
 | `seite.css` | Streifen, Flächenmodell, Schrittwähler, HTML-Brüche, Tipps in Stufen | wird eingebunden |
 | `basis.js` | Thema hell/dunkel, Fortschritt (`lp-bruch-*`), Schiene, «alle Lösungen» | wird eingebunden |
 | `seite.js` | Sim 1–4 mit Aufgabenleiste, 8 Übungstypen (`TYPEN`), Minibilder | wird eingebunden |
+| `clips.py` | erzeugt die acht Drehbücher `clips/t1-4-lp-*.json` (Reihe «Brüche sehen», `probe`); rettet gemessene `dauer`, meldet Szenen mit neuem Text | **ja**, nach jeder Änderung an den Clips; danach `build-clips.py` |
+| `wortzeiten.py` | misst die Wortzeiten der vertonten Clips (faster-whisper **medium**; small verhörte «Fünftel» als «Viertel») → `wortzeiten.json`; `clips.py` legt Einblendungen «@wort» darauf | nach jeder (Teil-)Vertonung |
 | `zahlen.py` | rechnet jede feste Zahl von Seite, Simulationen und PDFs nach, auch die Fehlerwerte | **muss bestehen** |
 | `pruef-schritte.mjs` | Lösbarkeit der Leisten, Schrittwähler-Durchlauf mit Fehlklick, Verteilung von 20 000 Würfen je Typ | **muss bestehen** |
 
 Gesamttest und Bewertungspaket: `downloads/leitprogramme/bruchrechnen/*.tex`, gebaut mit
 `python3 scripts/build-lp-pdf.py bruchrechnen` (gemeinsame Gestaltung `downloads/leitprogramme/lp-druck.sty`).
+
+## Clips
+
+```sh
+python3 scripts/lp/bruchrechnen/clips.py                       # Drehbücher
+export PATH="$HOME/.local/bin:$PATH" PIPER_MODELL=$HOME/piper-stimmen/de_DE-thorsten-high.onnx
+python3 scripts/build-clip-ton.py t1-4-lp-<name> [--szenen 2,5]  # Ton, misst dauer
+python3 scripts/build-clip-fragen-ton.py t1-4-lp-<name>          # Ton der Fragen
+python3 scripts/lp/bruchrechnen/wortzeiten.py                   # Wortzeiten, dann clips.py nochmals
+python3 scripts/build-clips.py t1-4-lp-<name>                    # HTML
+python3 scripts/lp/bruchrechnen/seite.py                        # Clipzeiten auf den Karten
+```
+
+Bilder: Bruchstreifen, Flächenmodell, «Wie oft passt es?», Zahlenstrahl der Vielfachen, Rechenbaum — alles `graf` mit
+`figuren` und `"achsen": false` im Fenster 0 … 10. Aussprache: «Hauptnenner» wird als «Haupt Nenner» gesprochen
+(`TAUSCH` in `build-clip-ton.py`).
 
 ## Bausteine
 
@@ -47,5 +66,6 @@ node .claude/tools/pruef-uebungen.mjs leitprogramme/bruchrechnen.html 3000
 node .claude/tools/pruef-formelsatz.mjs leitprogramme/bruchrechnen.html 60
 node .claude/tools/pruef-leiste.mjs leitprogramme/bruchrechnen.html
 node scripts/lp/bruchrechnen/pruef-schritte.mjs
+node .claude/tools/pruef-fragen.mjs t1-4-lp-erweitern t1-4-lp-kontrolle-erweitern …   # alle acht
 node .claude/tools/render-check.mjs leitprogramme/bruchrechnen.html
 ```

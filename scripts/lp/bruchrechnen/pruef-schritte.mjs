@@ -30,10 +30,10 @@ const melde = (ok, t) => { console.log((ok ? '[OK]     ' : '[FEHLER] ') + t); if
 
 // ---- 1. Leisten Sim 1–3: Zielwerte (Regler-ID → Wert, Schalter, Modus)
 const ZIELE = {
-  sim1: [{ 's1-n': 8, 's1-k': 6 }, { 's1-n': 20, 's1-k': 15 }, { 's1-n': 3, 's1-k': 2 }, { 's1-n': 12, 's1-k': 10 }, { 's1-n': 12, 's1-k': 9 }],
-  sim2: [{ 's2-n': 12 }, { 's2-n': 6 }, { schalter: true }, { 's2-n': 12 }, { 's2-n': 24 }, { 's2-n': 18 }],
-  sim3: [{ 's3-b': 3, 's3-a': 2, 's3-d': 4, 's3-c': 3 }, { 's3-b': 3, 's3-a': 1, 's3-d': 4, 's3-c': 3 }, { 's3-b': 6, 's3-a': 5, 's3-d': 6, 's3-c': 5 },
-         { 's3-b': 4, 's3-a': 3, 's3-d': 8, 's3-c': 1 }, { 's3-b': 4, 's3-a': 3, 's3-d': 2, 's3-c': 1 }, { 's3-b': 2, 's3-a': 1, 's3-d': 4, 's3-c': 1 }],
+  sim1: [{ 's1-n': 10, 's1-k': 6 }, { 's1-n': 20, 's1-k': 12 }, { 's1-n': 8, 's1-k': 5 }, { 's1-n': 12, 's1-k': 10 }, { 's1-n': 24, 's1-k': 8 }],
+  sim2: [{ 's2-n': 24 }, { 's2-n': 12 }, { schalter: true }, { 's2-n': 24 }, { 's2-n': 18 }, { 's2-n': 15 }],
+  sim3: [{ 's3-b': 5, 's3-a': 3, 's3-d': 3, 's3-c': 2 }, { 's3-b': 3, 's3-a': 1, 's3-d': 4, 's3-c': 3 }, { 's3-b': 6, 's3-a': 5, 's3-d': 6, 's3-c': 5 },
+         { 's3-b': 2, 's3-a': 1, 's3-d': 6, 's3-c': 1 }, { 's3-b': 3, 's3-a': 2, 's3-d': 2, 's3-c': 1 }, { 's3-b': 2, 's3-a': 1, 's3-d': 4, 's3-c': 1 }],
 };
 for (const [sim, ziele] of Object.entries(ZIELE)) {
   const r = await page.evaluate(([sim, ziele]) => {

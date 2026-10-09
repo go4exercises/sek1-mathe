@@ -1,0 +1,8 @@
+0.40	Ein Bruch beschreibt einen Anteil. Der Nenner sagt, in wie viele gleiche Teile das Ganze geteilt ist. Der Zähler sagt, wie viele Teile wir nehmen: hier drei von vier.
+11.50	Jetzt teilen wir jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. Die gefärbte Fläche ist dieselbe geblieben: drei Viertel gleich fünfzehn Zwanzigstel.
+23.45	Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier Fünftel. Das ist ein grösserer Anteil als drei Viertel.
+33.40	Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fassen wir je sechs Stücke zusammen. Es bleiben drei Teile, zwei davon gefärbt: zwei Drittel.
+42.25	Vollständig gekürzt ist ein Bruch erst, wenn Zähler und Nenner keinen gemeinsamen Teiler mehr haben. Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar.
+54.21	Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bringen wir beide auf den Nenner zwölf: acht Zwölftel gegen neun Zwölftel. Drei Viertel ist grösser.
+65.89	Zum Mitnehmen: Erweitern und Kürzen ändern den Wert nicht, nur die Einteilung. Vollständig gekürzt wird mit dem grössten gemeinsamen Teiler. Zum Vergleichen bringt man Brüche auf denselben Nenner.
+76.84	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

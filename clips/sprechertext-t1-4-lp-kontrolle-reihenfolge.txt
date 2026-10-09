@@ -1,0 +1,6 @@
+0.40	Punkt vor Strich: zuerst drei Fünftel mal ein Drittel, das ist ein Fünftel. Dann zwei Fünftel plus ein Fünftel: drei Fünftel.
+8.79	Gleichrangig, also von links nach rechts: drei Viertel durch ein Viertel ist drei. Drei mal ein Drittel ist eins.
+16.55	Minus mal Minus gibt Plus. Zehn Dreissigstel, gekürzt ein Drittel.
+22.01	Zuerst wird quadriert: neun Sechzehntel. Dann kommt das Minus: minus neun Sechzehntel.
+28.23	Zuerst die Klammer: ein Halb minus ein Sechstel ist ein Drittel. Zwei Drittel minus ein Drittel ist ein Drittel.
+35.46	Zum Mitnehmen: Erst überlegen, was zuerst dran ist, dann rechnen. Und das Vorzeichen getrennt bestimmen.

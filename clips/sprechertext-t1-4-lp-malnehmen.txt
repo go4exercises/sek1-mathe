@@ -1,0 +1,9 @@
+0.40	Was sind zwei Drittel von drei Vierteln? Im Quadrat färben wir zuerst drei Viertel der Höhe, dann zwei Drittel der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.
+10.82	Das Quadrat hat jetzt zwölf Kästchen, sechs davon sind grün. Zähler mal Zähler gibt sechs, Nenner mal Nenner gibt zwölf: sechs Zwölftel, gekürzt ein Halb.
+21.25	Vier Neuntel mal drei Achtel. Bevor wir ausrechnen, kürzen wir über Kreuz: vier und acht durch vier, drei und neun durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.
+32.36	Bei einer ganzen Zahl wird nur der Zähler multipliziert: drei mal zwei Fünftel sind sechs Fünftel, mehr als ein Ganzes. Und zwei Drittel von zwölf sind acht.
+42.73	Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Wir legen Achtel hinein. Es passt genau sechsmal.
+53.00	Und drei Viertel mal acht gibt ebenfalls sechs. Teilen durch einen Bruch heisst: mit seinem Kehrwert multiplizieren. Den Kehrwert erhält man, indem man Zähler und Nenner vertauscht.
+64.97	Umgedreht wird der zweite Bruch, durch den man teilt. Wer den ersten umdreht, rechnet vier Drittel mal ein Achtel und erhält ein Sechstel. Das ist falsch.
+75.62	Zum Mitnehmen: Beim Multiplizieren Zähler mal Zähler und Nenner mal Nenner, vorher kürzen. Beim Dividieren mit dem Kehrwert des zweiten Bruchs multiplizieren. Teilen fragt: Wie oft passt es hinein?
+87.90	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

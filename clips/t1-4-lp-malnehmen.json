@@ -1,0 +1,1355 @@
+{
+ "titel": "Brüche sehen: Multiplizieren und Dividieren",
+ "dateiname": "t1-4-lp-malnehmen",
+ "kurzbeschrieb": "Flächenmodell für 2/3 · 3/4 = 6/12 = 1/2; Zähler mal Zähler, Nenner mal Nenner; über Kreuz kürzen (4/9 · 3/8 = 1/6); ganze Zahl mal Bruch; 3/4 : 1/8 als «Wie oft passt?» (6) und der Kehrwert; Kehrwert vom falschen Bruch als Fehler.",
+ "schlagworte": [
+  "Multiplizieren",
+  "Dividieren",
+  "Kehrwert",
+  "Flächenmodell",
+  "Kürzen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Rechnen in ℚ",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "t1-4"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Brüche sehen",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms bruchrechnen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Von",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Was sind zwei Drittel von drei Vierteln? Im Quadrat färben wir zuerst drei Viertel der Höhe, dann zwei Drittel der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{\\fa{2}}{\\fa{3}} \\cdot \\dfrac{\\fb{3}}{\\fb{4}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 76,
+     "ein": 0.5
+    },
+    {
+     "typ": "notiz",
+     "text": "«von» heisst «mal»",
+     "x": 150,
+     "y": 527,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 0.3
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 4.72,
+       "aus": 7.72
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         6.5,
+         0.5
+        ],
+        [
+         6.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 6.06,
+       "aus": 7.72
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         6.5,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 7.72
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.25
+        ],
+        [
+         6.5,
+         7.25
+        ],
+        [
+         6.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 7.72
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         6.5,
+         0.5
+        ],
+        [
+         6.5,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 4,
+       "ein": 7.72
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        2.75
+       ],
+       "bis": [
+        9.5,
+        2.75
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 4.72
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.0
+       ],
+       "bis": [
+        9.5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 4.72
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        7.25
+       ],
+       "bis": [
+        9.5,
+        7.25
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 4.72
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        0.5
+       ],
+       "bis": [
+        3.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 6.06
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        0.5
+       ],
+       "bis": [
+        6.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 6.06
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.42
+  },
+  {
+   "name": "Zählen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das Quadrat hat jetzt zwölf Kästchen, sechs davon sind grün. Zähler mal Zähler gibt sechs, Nenner mal Nenner gibt zwölf: sechs Zwölftel, gekürzt ein Halb.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{3} \\cdot \\dfrac{3}{4} = \\dfrac{2 \\cdot 3}{3 \\cdot 4} = \\dfrac{\\fc{6}}{12} = \\fc{\\dfrac{1}{2}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 4.24
+    },
+    {
+     "typ": "notiz",
+     "text": "Zähler mal Zähler,|Nenner mal Nenner",
+     "x": 150,
+     "y": 500,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 5.86
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         6.5,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.25
+        ],
+        [
+         6.5,
+         7.25
+        ],
+        [
+         6.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         6.5,
+         0.5
+        ],
+        [
+         6.5,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        2.75
+       ],
+       "bis": [
+        9.5,
+        2.75
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.0
+       ],
+       "bis": [
+        9.5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        7.25
+       ],
+       "bis": [
+        9.5,
+        7.25
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        0.5
+       ],
+       "bis": [
+        3.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        0.5
+       ],
+       "bis": [
+        6.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        1.375
+       ],
+       "text": "1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 2.74
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.0,
+        1.375
+       ],
+       "text": "2",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 2.99
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        3.625
+       ],
+       "text": "3",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 3.24
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.0,
+        3.625
+       ],
+       "text": "4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 3.49
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        5.875
+       ],
+       "text": "5",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 3.74
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.0,
+        5.875
+       ],
+       "text": "6",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 3.99
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.43
+  },
+  {
+   "name": "Vorher kürzen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vier Neuntel mal drei Achtel. Bevor wir ausrechnen, kürzen wir über Kreuz: vier und acht durch vier, drei und neun durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{4}{9} \\cdot \\dfrac{3}{8} = \\dfrac{\\fa{4} \\cdot \\fb{3}}{\\fb{9} \\cdot \\fa{8}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 0.77
+    },
+    {
+     "typ": "notiz",
+     "text": "@4@ und @8@: durch @4@|@3@ und @9@: durch @3@",
+     "x": 150,
+     "y": 461,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 4.17
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{\\fa{1} \\cdot \\fb{1}}{\\fb{3} \\cdot \\fa{2}} = \\fc{\\dfrac{1}{6}}",
+     "x": 150,
+     "y": 600,
+     "groesse": 60,
+     "ein": 7.95
+    }
+   ],
+   "dauer": 11.11
+  },
+  {
+   "name": "Ganze Zahl",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei einer ganzen Zahl wird nur der Zähler multipliziert: drei mal zwei Fünftel sind sechs Fünftel, mehr als ein Ganzes. Und zwei Drittel von zwölf sind acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3 \\cdot \\dfrac{2}{5} = \\dfrac{3 \\cdot 2}{5} = \\fc{\\dfrac{6}{5}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 60,
+     "ein": 3.38
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{3} \\cdot 12 = \\dfrac{24}{3} = \\fc{8}",
+     "x": 150,
+     "y": 481,
+     "groesse": 60,
+     "ein": 7.58
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.5
+       ],
+       "bis": [
+        9.5,
+        5.5
+       ],
+       "farbe": 5,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        4.7
+       ],
+       "text": "0",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        5.1
+       ],
+       "bis": [
+        6.5,
+        7.7
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        4.7
+       ],
+       "text": "1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         2.9,
+         6.0
+        ],
+        [
+         2.9,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 3,
+       "ein": 3.6
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.9,
+         6.0
+        ],
+        [
+         5.3,
+         6.0
+        ],
+        [
+         5.3,
+         7.2
+        ],
+        [
+         2.9,
+         7.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 3,
+       "ein": 4.0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.3,
+         6.0
+        ],
+        [
+         7.7,
+         6.0
+        ],
+        [
+         7.7,
+         7.2
+        ],
+        [
+         5.3,
+         7.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 3,
+       "ein": 4.4
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.7,
+        6.4
+       ],
+       "text": "2/5",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 3.6
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.1,
+        6.4
+       ],
+       "text": "2/5",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 4.0
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        6.4
+       ],
+       "text": "2/5",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 4.4
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.1,
+        8.2
+       ],
+       "text": "6/5",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 4.5
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.37
+  },
+  {
+   "name": "Messen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Wir legen Achtel hinein. Es passt genau sechsmal.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{\\fa{3}}{\\fa{4}} : \\dfrac{\\fb{1}}{\\fb{8}} = \\;?",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.5
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3}{4} : \\dfrac{1}{8} = \\fc{6}",
+     "x": 150,
+     "y": 474,
+     "groesse": 66,
+     "ein": 7.75
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         9.5,
+         6.0
+        ],
+        [
+         9.5,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.0
+        ],
+        [
+         7.25,
+         6.0
+        ],
+        [
+         7.25,
+         7.2
+        ],
+        [
+         0.5,
+         7.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 3
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         4.4
+        ],
+        [
+         1.625,
+         4.4
+        ],
+        [
+         1.625,
+         5.6
+        ],
+        [
+         0.5,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 5.19
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.062,
+        4.75
+       ],
+       "text": "1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 5.19
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.625,
+         4.4
+        ],
+        [
+         2.75,
+         4.4
+        ],
+        [
+         2.75,
+         5.6
+        ],
+        [
+         1.625,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 5.64
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.188,
+        4.75
+       ],
+       "text": "2",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 5.64
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.75,
+         4.4
+        ],
+        [
+         3.875,
+         4.4
+        ],
+        [
+         3.875,
+         5.6
+        ],
+        [
+         2.75,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 6.09
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.312,
+        4.75
+       ],
+       "text": "3",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 6.09
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.875,
+         4.4
+        ],
+        [
+         5.0,
+         4.4
+        ],
+        [
+         5.0,
+         5.6
+        ],
+        [
+         3.875,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 6.54
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.438,
+        4.75
+       ],
+       "text": "4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 6.54
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.0,
+         4.4
+        ],
+        [
+         6.125,
+         4.4
+        ],
+        [
+         6.125,
+         5.6
+        ],
+        [
+         5.0,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 6.99
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.562,
+        4.75
+       ],
+       "text": "5",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 6.99
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.125,
+         4.4
+        ],
+        [
+         7.25,
+         4.4
+        ],
+        [
+         7.25,
+         5.6
+        ],
+        [
+         6.125,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.45,
+       "dicke": 3,
+       "ein": 7.44
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.688,
+        4.75
+       ],
+       "text": "6",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false,
+       "ein": 7.44
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        7.6
+       ],
+       "text": "3/4",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.5,
+        3.6
+       ],
+       "text": "Stücke zu 1/8",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.27
+  },
+  {
+   "name": "Kehrwert",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Und drei Viertel mal acht gibt ebenfalls sechs. Teilen durch einen Bruch heisst: mit seinem Kehrwert multiplizieren. Den Kehrwert erhält man, indem man Zähler und Nenner vertauscht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3}{4} \\cdot 8 = \\dfrac{24}{4} = \\fc{6}",
+     "x": 150,
+     "y": 290,
+     "groesse": 58,
+     "ein": 1.72
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{a}{b} : \\dfrac{c}{d} = \\dfrac{a}{b} \\cdot \\dfrac{\\fb{d}}{\\fb{c}}",
+     "x": 150,
+     "y": 446,
+     "groesse": 66,
+     "ein": 5.3
+    },
+    {
+     "typ": "notiz",
+     "text": "Kehrwert: Zähler und Nenner vertauscht|(@b, c, d \\neq 0@)",
+     "x": 150,
+     "y": 620,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 9.58
+    }
+   ],
+   "dauer": 11.97
+  },
+  {
+   "name": "Falscher Bruch",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Umgedreht wird der zweite Bruch, durch den man teilt. Wer den ersten umdreht, rechnet vier Drittel mal ein Achtel und erhält ein Sechstel. Das ist falsch.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3}{4} : \\dfrac{1}{8} = \\dfrac{3}{4} \\cdot \\dfrac{\\fb{8}}{\\fb{1}} = \\fc{6}",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 1.33
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{4}{3} \\cdot \\dfrac{1}{8} = \\dfrac{1}{6}}",
+     "x": 150,
+     "y": 456,
+     "groesse": 58,
+     "ein": 3.43
+    },
+    {
+     "typ": "notiz",
+     "text": "Kehrwert vom zweiten Bruch",
+     "x": 150,
+     "y": 612,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 7.97
+    }
+   ],
+   "dauer": 10.65
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Beim Multiplizieren Zähler mal Zähler und Nenner mal Nenner, vorher kürzen. Beim Dividieren mit dem Kehrwert des zweiten Bruchs multiplizieren. Teilen fragt: Wie oft passt es hinein?",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "mal: Zähler @\\cdot@ Zähler, Nenner @\\cdot@ Nenner|vorher über Kreuz kürzen|durch: mal Kehrwert des zweiten Bruchs",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.28
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.31
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Messen",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie oft passt 1/8 in 3/4?",
+   "optionen": [
+    "6-mal",
+    "3-mal",
+    "8-mal"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "3 ist der Zähler von 3/4. Zähl gleich mit, wie viele Achtel hineinpassen.",
+    "2": "In ein Ganzes passen 8 Achtel — hier sind es aber nur drei Viertel."
+   },
+   "sprich": "Wie oft passt ein Achtel in drei Viertel?",
+   "rueck_sprich": {
+    "1": "Drei ist der Zähler von drei Vierteln. Zähl gleich mit, wie viele Achtel hineinpassen.",
+    "2": "In ein Ganzes passen acht Achtel. Hier sind es aber nur drei Viertel."
+   }
+  }
+ ]
+}

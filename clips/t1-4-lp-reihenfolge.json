@@ -1,0 +1,850 @@
+{
+ "titel": "Brüche sehen: Rechenreihenfolge und negative Brüche",
+ "dateiname": "t1-4-lp-reihenfolge",
+ "kurzbeschrieb": "Klammer, Potenz, Punkt vor Strich, von links nach rechts am Rechenbaum von 1/2 − 1/3 · (3/4 − 1/4) = 1/3; Vorzeichen wie in ℤ ((−3/4) · (−2/9) = 1/6); (2/3)² = 4/9 im Flächenmodell; (−1/2)² gegen −(1/2)²; Minus vor der Klammer.",
+ "schlagworte": [
+  "Rechenreihenfolge",
+  "Punkt vor Strich",
+  "Klammer",
+  "negative Brüche",
+  "Potenz"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Rechnen in ℚ",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "t1-4"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Brüche sehen",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms bruchrechnen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Regeln",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "In welcher Reihenfolge wird gerechnet? Zuerst die Klammern, dann die Potenzen, dann Punkt vor Strich. Was gleichrangig ist, von links nach rechts.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "1  Klammern",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 3.56
+    },
+    {
+     "typ": "notiz",
+     "text": "2  Potenzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 4.38
+    },
+    {
+     "typ": "notiz",
+     "text": "3  Punkt vor Strich: @\\cdot@ und @:@ vor @+@ und @-@",
+     "x": 150,
+     "y": 500,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 5.2
+    },
+    {
+     "typ": "notiz",
+     "text": "4  gleichrangig: von links nach rechts",
+     "x": 150,
+     "y": 600,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 6.52
+    }
+   ],
+   "dauer": 9.66
+  },
+  {
+   "name": "Beispiel",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel, und das ist ein Drittel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{2} - \\dfrac{1}{3} \\cdot \\left(\\dfrac{3}{4} - \\dfrac{1}{4}\\right)",
+     "x": 150,
+     "y": 280,
+     "groesse": 52,
+     "ein": 0.05,
+     "aus": 4.04
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{2} - \\dfrac{1}{3} \\cdot \\left(\\fb{\\dfrac{3}{4} - \\dfrac{1}{4}}\\right)",
+     "x": 150,
+     "y": 280,
+     "groesse": 52,
+     "ein": 4.04
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{1}{2} - \\fb{\\dfrac{1}{3} \\cdot \\dfrac{1}{2}}",
+     "x": 150,
+     "y": 433,
+     "groesse": 52,
+     "ein": 6.72
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{1}{2} - \\dfrac{1}{6} = \\dfrac{3}{6} - \\dfrac{1}{6}",
+     "x": 150,
+     "y": 576,
+     "groesse": 52,
+     "ein": 9.74
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{\\dfrac{1}{3}}",
+     "x": 150,
+     "y": 719,
+     "groesse": 52,
+     "ein": 13.64
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.22,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        3.201,
+        8.07
+       ],
+       "bis": [
+        1.574,
+        6.631
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.353,
+        8.022
+       ],
+       "bis": [
+        5.447,
+        6.878
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.507,
+        5.67
+       ],
+       "bis": [
+        4.508,
+        4.394
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.457,
+        5.643
+       ],
+       "bis": [
+        7.143,
+        4.657
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.23,
+        3.291
+       ],
+       "bis": [
+        6.631,
+        2.143
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.97,
+        3.291
+       ],
+       "bis": [
+        8.569,
+        2.143
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "kreis",
+       "m": [
+        3.8,
+        8.6
+       ],
+       "r": 0.7,
+       "farbe": 5,
+       "fuellung": 0.0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.8,
+        8.3
+       ],
+       "text": "−",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 54,
+       "kursiv": false
+      },
+      {
+       "art": "kreis",
+       "m": [
+        6.0,
+        6.3
+       ],
+       "r": 0.7,
+       "farbe": 5,
+       "fuellung": 0.0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.0,
+        6.0
+       ],
+       "text": "·",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 70,
+       "kursiv": false
+      },
+      {
+       "art": "kreis",
+       "m": [
+        7.6,
+        4.0
+       ],
+       "r": 0.7,
+       "farbe": 5,
+       "fuellung": 0.0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        3.7
+       ],
+       "text": "(−)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 42,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.2,
+        6.05
+       ],
+       "text": "1/2",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.2,
+        3.75
+       ],
+       "text": "1/3",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.4,
+        1.45
+       ],
+       "text": "3/4",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.8,
+        1.45
+       ],
+       "text": "1/4",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "kreis",
+       "m": [
+        7.6,
+        4.0
+       ],
+       "r": 0.8,
+       "farbe": 3,
+       "fuellung": 0.0,
+       "dicke": 6,
+       "ein": 4.96
+      },
+      {
+       "art": "kreis",
+       "m": [
+        6.0,
+        6.3
+       ],
+       "r": 0.8,
+       "farbe": 3,
+       "fuellung": 0.0,
+       "dicke": 6,
+       "ein": 9.1
+      },
+      {
+       "art": "kreis",
+       "m": [
+        3.8,
+        8.6
+       ],
+       "r": 0.8,
+       "farbe": 3,
+       "fuellung": 0.0,
+       "dicke": 6,
+       "ein": 13.64
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.6,
+        3.75
+       ],
+       "text": "= 1/2",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 4.96
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.0,
+        6.05
+       ],
+       "text": "= 1/6",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 9.1
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.8,
+        8.35
+       ],
+       "text": "= 1/3",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 36,
+       "kursiv": false,
+       "ein": 13.64
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 16.59
+  },
+  {
+   "name": "Vorzeichen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mit negativen Brüchen gelten dieselben Vorzeichenregeln wie bei ganzen Zahlen. Minus drei Viertel mal minus zwei Neuntel: Minus mal Minus gibt Plus. Sechs Sechsunddreissigstel, gekürzt ein Sechstel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "-\\dfrac{2}{3} = \\dfrac{-2}{3} = \\dfrac{2}{-3}",
+     "x": 150,
+     "y": 290,
+     "groesse": 54,
+     "ein": 0.85
+    },
+    {
+     "typ": "formel",
+     "text": "\\left(-\\dfrac{3}{4}\\right) \\cdot \\left(-\\dfrac{2}{9}\\right) = +\\dfrac{6}{36} = \\fc{\\dfrac{1}{6}}",
+     "x": 150,
+     "y": 438,
+     "groesse": 52,
+     "ein": 6.61
+    },
+    {
+     "typ": "notiz",
+     "text": "@-@ mal @-@ gibt @+@,  @-@ mal @+@ gibt @-@",
+     "x": 150,
+     "y": 591,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 8.27
+    }
+   ],
+   "dauer": 12.36
+  },
+  {
+   "name": "Potenz",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei einer Potenz werden Zähler und Nenner potenziert. Zwei Drittel im Quadrat ist zwei Drittel mal zwei Drittel, im Flächenmodell vier von neun Kästchen: vier Neuntel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\left(\\dfrac{2}{3}\\right)^2 = \\dfrac{2^2}{3^2} = \\fc{\\dfrac{4}{9}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 4.43
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         6.5
+        ],
+        [
+         0.5,
+         6.5
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 5.53,
+       "aus": 6.81
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         6.5,
+         0.5
+        ],
+        [
+         6.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 5.53,
+       "aus": 6.81
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         6.5
+        ],
+        [
+         6.5,
+         6.5
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 6.81
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         6.5
+        ],
+        [
+         6.5,
+         6.5
+        ],
+        [
+         6.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0,
+       "ein": 6.81
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         6.5,
+         0.5
+        ],
+        [
+         6.5,
+         6.5
+        ],
+        [
+         0.5,
+         6.5
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 4,
+       "ein": 6.81
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        3.5
+       ],
+       "bis": [
+        9.5,
+        3.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 5.53
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        6.5
+       ],
+       "bis": [
+        9.5,
+        6.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 5.53
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.5,
+        0.5
+       ],
+       "bis": [
+        3.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 5.53
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.5,
+        0.5
+       ],
+       "bis": [
+        6.5,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 5.53
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.21
+  },
+  {
+   "name": "Klammer beim Minus",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Auf die Klammer kommt es an. Minus ein Halb in Klammern im Quadrat ist plus ein Viertel. Ohne Klammer wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\left(-\\dfrac{1}{2}\\right)^2 = \\fc{+\\dfrac{1}{4}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 4.02
+    },
+    {
+     "typ": "formel",
+     "text": "-\\left(\\dfrac{1}{2}\\right)^2 = \\fc{-\\dfrac{1}{4}}",
+     "x": 150,
+     "y": 473,
+     "groesse": 60,
+     "ein": 4.94
+    },
+    {
+     "typ": "notiz",
+     "text": "Potenz vor Strich",
+     "x": 150,
+     "y": 646,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 3.42
+    }
+   ],
+   "dauer": 10.02
+  },
+  {
+   "name": "Minus vor der Klammer",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vorsicht beim Minus vor einer Klammer. Drei Viertel minus die Klammer ein Halb minus ein Viertel: Zuerst die Klammer, ein Viertel. Das Ergebnis ist ein Halb. Wer die Klammer einfach weglässt, erhält null. Das ist falsch.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3}{4} - \\left(\\fb{\\dfrac{1}{2} - \\dfrac{1}{4}}\\right) = \\dfrac{3}{4} - \\fb{\\dfrac{1}{4}} = \\fc{\\dfrac{1}{2}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 5.14
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{3}{4} - \\dfrac{1}{2} - \\dfrac{1}{4} = 0}",
+     "x": 150,
+     "y": 450,
+     "groesse": 52,
+     "ein": 9.72
+    },
+    {
+     "typ": "notiz",
+     "text": "Ohne Klammer: @\\tfrac{3}{4} - \\tfrac{1}{2} + \\tfrac{1}{4}@",
+     "x": 150,
+     "y": 593,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 11.86
+    }
+   ],
+   "dauer": 14.47
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Klammer, Potenz, Punkt vor Strich, sonst von links nach rechts. Vorzeichen wie bei den ganzen Zahlen. Und jeden Schritt in eine eigene Zeile.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Klammer, Potenz, Punkt vor Strich, links nach rechts|Vorzeichen wie in @\\mathbb{Z}@|jeder Schritt eine Zeile",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.69
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge im Schrittwähler unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|im Schrittwähler unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.13
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Beispiel",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was wird hier zuerst gerechnet?",
+   "optionen": [
+    "1/3 · (…)",
+    "die Klammer",
+    "1/2 − 1/3"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Punkt vor Strich — und noch vorher die Klammer.",
+    "0": "Fast: Bevor man mit der Klammer multipliziert, muss sie ausgerechnet sein."
+   },
+   "sprich": "Was wird hier zuerst gerechnet?",
+   "rueck_sprich": {
+    "2": "Punkt vor Strich, und noch vorher die Klammer.",
+    "0": "Fast. Bevor man mit der Klammer multipliziert, muss sie ausgerechnet sein."
+   }
+  }
+ ]
+}

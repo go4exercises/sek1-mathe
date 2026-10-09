@@ -1,0 +1,461 @@
+{
+ "titel": "Brüche sehen: Kontrollfragen zur Rechenreihenfolge",
+ "dateiname": "t1-4-lp-kontrolle-reihenfolge",
+ "kurzbeschrieb": "Fünf Fragen: Punkt vor Strich bei 2/5 + 3/5 · 1/3, von links nach rechts bei 3/4 : 1/4 · 1/3, (−2/5) · (−5/6), −(3/4)², Minus vor der Klammer bei 2/3 − (1/2 − 1/6).",
+ "schlagworte": [
+  "Rechenreihenfolge",
+  "Punkt vor Strich",
+  "negative Brüche",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Rechnen in ℚ",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "t1-4"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Brüche sehen",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms bruchrechnen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Punkt vor Strich: zuerst drei Fünftel mal ein Drittel, das ist ein Fünftel. Dann zwei Fünftel plus ein Fünftel: drei Fünftel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{5} + \\fb{\\dfrac{3}{5} \\cdot \\dfrac{1}{3}} = \\dfrac{2}{5} + \\dfrac{1}{5} = \\fc{\\dfrac{3}{5}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.39
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gleichrangig, also von links nach rechts: drei Viertel durch ein Viertel ist drei. Drei mal ein Drittel ist eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fb{\\dfrac{3}{4} : \\dfrac{1}{4}} \\cdot \\dfrac{1}{3} = 3 \\cdot \\dfrac{1}{3} = \\fc{1}",
+     "x": 150,
+     "y": 320,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{3}{4} : \\dfrac{1}{12} = 9}",
+     "x": 150,
+     "y": 476,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.76
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Minus mal Minus gibt Plus. Zehn Dreissigstel, gekürzt ein Drittel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\left(-\\dfrac{2}{5}\\right) \\cdot \\left(-\\dfrac{5}{6}\\right) = +\\dfrac{10}{30} = \\fc{\\dfrac{1}{3}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.46
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zuerst wird quadriert: neun Sechzehntel. Dann kommt das Minus: minus neun Sechzehntel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "-\\left(\\dfrac{3}{4}\\right)^2 = -\\dfrac{9}{16}",
+     "x": 150,
+     "y": 320,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         7.25,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         7.25
+        ],
+        [
+         7.25,
+         7.25
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         7.25
+        ],
+        [
+         7.25,
+         7.25
+        ],
+        [
+         7.25,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         7.25,
+         0.5
+        ],
+        [
+         7.25,
+         7.25
+        ],
+        [
+         0.5,
+         7.25
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        2.75
+       ],
+       "bis": [
+        9.5,
+        2.75
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        5.0
+       ],
+       "bis": [
+        9.5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        7.25
+       ],
+       "bis": [
+        9.5,
+        7.25
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2.75,
+        0.5
+       ],
+       "bis": [
+        2.75,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        5.0,
+        0.5
+       ],
+       "bis": [
+        5.0,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.25,
+        0.5
+       ],
+       "bis": [
+        7.25,
+        9.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         0.5
+        ],
+        [
+         9.5,
+         0.5
+        ],
+        [
+         9.5,
+         9.5
+        ],
+        [
+         0.5,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 6.22
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zuerst die Klammer: ein Halb minus ein Sechstel ist ein Drittel. Zwei Drittel minus ein Drittel ist ein Drittel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{3} - \\left(\\fb{\\dfrac{1}{2} - \\dfrac{1}{6}}\\right) = \\dfrac{2}{3} - \\fb{\\dfrac{1}{3}} = \\fc{\\dfrac{1}{3}}",
+     "x": 150,
+     "y": 320,
+     "groesse": 50,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.23
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Erst überlegen, was zuerst dran ist, dann rechnen. Und das Vorzeichen getrennt bestimmen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zuerst: Was ist dran?|Vorzeichen getrennt bestimmen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 7.0
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was rechnest du bei 2/5 + 3/5 · 1/3 zuerst?",
+   "optionen": [
+    "3/5 · 1/3",
+    "2/5 + 3/5",
+    "egal"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Punkt vor Strich: Das Mal kommt vor dem Plus.",
+    "2": "Nicht egal: (2/5 + 3/5) · 1/3 = 1/3, richtig ist 3/5."
+   },
+   "sprich": "Was rechnest du bei zwei Fünftel plus drei Fünftel mal ein Drittel zuerst?",
+   "rueck_sprich": {
+    "1": "Punkt vor Strich: Das Mal kommt vor dem Plus.",
+    "2": "Nicht egal. Mit der falschen Reihenfolge kommt ein Drittel heraus, richtig sind drei Fünftel."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "3/4 : 1/4 · 1/3 = ?",
+   "optionen": [
+    "9",
+    "1/9",
+    "1"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "9 entsteht, wenn zuerst 1/4 · 1/3 gerechnet wird. Gleichrangig heisst: von links nach rechts.",
+    "1": "Rechne von links nach rechts: zuerst 3/4 : 1/4."
+   },
+   "sprich": "Drei Viertel durch ein Viertel mal ein Drittel gleich?",
+   "rueck_sprich": {
+    "0": "Neun entsteht, wenn zuerst ein Viertel mal ein Drittel gerechnet wird. Gleichrangig heisst: von links nach rechts.",
+    "1": "Rechne von links nach rechts: zuerst drei Viertel durch ein Viertel."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "(−2/5) · (−5/6) = ?",
+   "optionen": [
+    "−1/3",
+    "−10/11",
+    "1/3"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Vorzeichen: Minus mal Minus gibt Plus.",
+    "1": "Beim Multiplizieren: Zähler mal Zähler, Nenner mal Nenner — und Minus mal Minus gibt Plus."
+   },
+   "sprich": "Minus zwei Fünftel mal minus fünf Sechstel gleich?",
+   "rueck_sprich": {
+    "0": "Vorzeichen: Minus mal Minus gibt Plus.",
+    "1": "Beim Multiplizieren Zähler mal Zähler, Nenner mal Nenner, und Minus mal Minus gibt Plus."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "−(3/4)² = ?",
+   "optionen": [
+    "−3/2",
+    "−9/16",
+    "9/16"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das Minus steht ausserhalb der Klammer: Erst quadrieren, dann das Minus.",
+    "0": "Quadrieren heisst mit sich selbst multiplizieren, nicht mal 2."
+   },
+   "sprich": "Minus Klammer drei Viertel im Quadrat gleich?",
+   "rueck_sprich": {
+    "2": "Das Minus steht ausserhalb der Klammer: Erst quadrieren, dann das Minus.",
+    "0": "Quadrieren heisst mit sich selbst multiplizieren, nicht mal zwei."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "2/3 − (1/2 − 1/6) = ?",
+   "optionen": [
+    "0",
+    "1",
+    "1/3"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "0 entsteht, wenn man die Klammer einfach weglässt: 2/3 − 1/2 − 1/6. Das Minus gilt für die ganze Klammer.",
+    "1": "Rechne zuerst die Klammer aus: 1/2 − 1/6."
+   },
+   "sprich": "Zwei Drittel minus Klammer ein Halb minus ein Sechstel gleich?",
+   "rueck_sprich": {
+    "0": "Null entsteht, wenn man die Klammer einfach weglässt. Das Minus gilt für die ganze Klammer.",
+    "1": "Rechne zuerst die Klammer aus: ein Halb minus ein Sechstel."
+   }
+  }
+ ]
+}

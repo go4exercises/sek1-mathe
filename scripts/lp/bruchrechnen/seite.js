@@ -88,7 +88,7 @@
       if (i >= n){
         var k = anzahl();
         ok.textContent = ''; box.classList.remove('geloest');
-        if (k === n){ nr.textContent = '✓'; tx.innerHTML = 'Alle ' + n + ' Aufgaben gelöst — weiter mit «Festhalten».'; bt.textContent = 'nochmals'; bv.hidden = true; box.classList.add('fertig'); }
+        if (k === n){ nr.textContent = '✓'; tx.innerHTML = 'Alle ' + n + ' Aufgaben gelöst — weiter mit dem Kontrollclip.'; bt.textContent = 'nochmals'; bv.hidden = true; box.classList.add('fertig'); }
         else { nr.textContent = k + '/' + n; tx.innerHTML = k + ' von ' + n + ' gelöst, ' + (n - k) + ' übersprungen.'; bt.textContent = 'zu den offenen ▶'; bv.hidden = false; box.classList.remove('fertig'); }
         if (sim.ende) sim.ende();
         return;
@@ -172,16 +172,17 @@
     var sim = { zustand: zustand, zeichnen: zeichnen };
     var pr = null;
     pr = Leiste(fig, [
-      { text: 'Stell unten denselben Anteil dar wie oben — aber mit dem Nenner 8.', setup: function(){ S = { a: 3, b: 4 }; },
-        ok: function(z){ return z.n === 8 && z.k === 6; } },
-      { text: 'Jetzt mit dem Nenner 20. Wie viele Teile musst du färben?', setup: function(){ S = { a: 3, b: 4 }; },
-        ok: function(z){ return z.n === 20 && z.k === 15; } },
-      { text: 'Oben sind 12 von 18 Teilen gefärbt. Stell denselben Anteil mit möglichst wenigen Teilen dar.', setup: function(){ S = { a: 12, b: 18 }; },
-        ok: function(z){ return z.n === 3 && z.k === 2; } },
+      // Andere Zahlen als Clip und Festhalten (3/4 = 15/20, 12/18 = 2/3, 2/3 < 3/4): HOWTO §15.
+      { text: 'Stell unten denselben Anteil dar wie oben — aber mit dem Nenner 10.', setup: function(){ S = { a: 3, b: 5 }; },
+        ok: function(z){ return z.n === 10 && z.k === 6; } },
+      { text: 'Jetzt mit dem Nenner 20. Wie viele Teile musst du färben?', setup: function(){ S = { a: 3, b: 5 }; },
+        ok: function(z){ return z.n === 20 && z.k === 12; } },
+      { text: 'Oben sind 10 von 16 Teilen gefärbt. Stell denselben Anteil mit möglichst wenigen Teilen dar.', setup: function(){ S = { a: 10, b: 16 }; },
+        ok: function(z){ return z.n === 8 && z.k === 5; } },
       { text: 'Geht \\(\\tfrac{5}{6}\\) mit dem Nenner 4? Probier es. Stell dann den kleinsten Nenner über 6 ein, mit dem es geht.', setup: function(){ S = { a: 5, b: 6 }; },
         ok: function(z){ return z.n === 12 && z.k === 10; } },
-      { text: 'Oben steht \\(\\tfrac{2}{3}\\). Stell unten \\(\\tfrac{3}{4}\\) dar, und zwar mit dem kleinsten Nenner, den auch \\(\\tfrac{2}{3}\\) haben kann. Welcher Bruch ist grösser?', setup: function(){ S = { a: 2, b: 3 }; },
-        ok: function(z){ return z.n === 12 && z.k === 9; } }
+      { text: 'Oben steht \\(\\tfrac{3}{8}\\). Stell unten \\(\\tfrac{1}{3}\\) dar, und zwar mit dem kleinsten Nenner, den auch \\(\\tfrac{3}{8}\\) haben kann. Welcher Bruch ist grösser?', setup: function(){ S = { a: 3, b: 8 }; },
+        ok: function(z){ return z.n === 24 && z.k === 8; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
     zeichnen();
@@ -235,18 +236,19 @@
     var pr = null;
     function setze(a, b, o, c, d){ return function(){ S = { a: a, b: b, o: o, c: c, d: d }; }; }
     pr = Leiste(fig, [
-      { text: '\\(\\tfrac{1}{2} + \\tfrac{1}{3}\\): Stell eine Unterteilung ein, in die beide Streifen genau passen.', setup: setze(1, 2, '+', 1, 3),
-        ok: function(z){ return z.N % 2 === 0 && z.N % 3 === 0; } },
-      { text: 'Und jetzt die <b>kleinste</b> Unterteilung, die für beide passt.', setup: setze(1, 2, '+', 1, 3),
-        ok: function(z){ return z.N === 6; } },
-      { text: 'Schalte den roten Streifen ein: So rechnet, wer Zähler plus Zähler und Nenner plus Nenner nimmt. Ist \\(\\tfrac{2}{5}\\) grösser als \\(\\tfrac{1}{2}\\) allein?', setup: setze(1, 2, '+', 1, 3),
-        ok: function(z){ return z.falsch; } },
-      { text: '\\(\\tfrac{3}{4} + \\tfrac{1}{6}\\): Finde die kleinste gemeinsame Unterteilung.', setup: setze(3, 4, '+', 1, 6),
+      // Andere Zahlen als Clip und Festhalten (1/2 + 1/3, 5/12 + 7/18): HOWTO §15.
+      { text: '\\(\\tfrac{1}{4} + \\tfrac{1}{6}\\): Stell eine Unterteilung ein, in die beide Streifen genau passen.', setup: setze(1, 4, '+', 1, 6),
+        ok: function(z){ return z.N % 4 === 0 && z.N % 6 === 0; } },
+      { text: 'Und jetzt die <b>kleinste</b> Unterteilung, die für beide passt.', setup: setze(1, 4, '+', 1, 6),
         ok: function(z){ return z.N === 12; } },
-      { text: '\\(\\tfrac{7}{8} - \\tfrac{1}{6}\\): Wieder die kleinste gemeinsame Unterteilung. Wie viele \\(\\tfrac{1}{24}\\) bleiben?', setup: setze(7, 8, '−', 1, 6),
+      { text: 'Schalte den roten Streifen ein: So rechnet, wer Zähler plus Zähler und Nenner plus Nenner nimmt. Ist \\(\\tfrac{2}{10}\\) grösser als \\(\\tfrac{1}{4}\\) allein?', setup: setze(1, 4, '+', 1, 6),
+        ok: function(z){ return z.falsch; } },
+      { text: '\\(\\tfrac{3}{8} + \\tfrac{1}{6}\\): Finde die kleinste gemeinsame Unterteilung.', setup: setze(3, 8, '+', 1, 6),
         ok: function(z){ return z.N === 24; } },
-      { text: '\\(\\tfrac{2}{9} + \\tfrac{1}{6}\\): Das Produkt \\(9 \\cdot 6 = 54\\) passt nicht auf den Regler. Geht es mit weniger Teilen?', setup: setze(2, 9, '+', 1, 6),
-        ok: function(z){ return z.N === 18; } }
+      { text: '\\(\\tfrac{7}{9} - \\tfrac{1}{6}\\): Wieder die kleinste gemeinsame Unterteilung. Wie viele \\(\\tfrac{1}{18}\\) bleiben?', setup: setze(7, 9, '−', 1, 6),
+        ok: function(z){ return z.N === 18; } },
+      { text: '\\(\\tfrac{2}{5} + \\tfrac{1}{3}\\): Ist hier das Produkt der Nenner schon die kleinste gemeinsame Unterteilung?', setup: setze(2, 5, '+', 1, 3),
+        ok: function(z){ return z.N === 15; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
     zeichnen();
@@ -311,16 +313,16 @@
     var pr = null;
     function auf(m){ return function(){ modus.value = m; }; }
     pr = Leiste(fig, [
-      { text: '«Mal»: Stell \\(\\tfrac{2}{3} \\cdot \\tfrac{3}{4}\\) ein. Wie viele Kästchen hat das Quadrat, wie viele sind grün?', setup: auf('mal'),
-        ok: function(z){ return z.m === 'mal' && z.a === 2 && z.b === 3 && z.c === 3 && z.d === 4; } },
+      { text: '«Mal»: Stell \\(\\tfrac{3}{5} \\cdot \\tfrac{2}{3}\\) ein. Wie viele Kästchen hat das Quadrat, wie viele sind grün?', setup: auf('mal'),
+        ok: function(z){ return z.m === 'mal' && z.a === 3 && z.b === 5 && z.c === 2 && z.d === 3; } },
       { text: 'Stell zwei Brüche kleiner als 1 ein, deren Produkt genau \\(\\tfrac{1}{4}\\) ist — aber nicht \\(\\tfrac{1}{2} \\cdot \\tfrac{1}{2}\\).', setup: auf('mal'),
         ok: function(z){ return z.m === 'mal' && z.a < z.b && z.c < z.d && 4 * z.a * z.c === z.b * z.d && !(z.a * 2 === z.b && z.c * 2 === z.d); } },
       { text: 'Mal einen Bruch kleiner als 1 gibt weniger. Finde trotzdem ein Produkt, das grösser als \\(\\tfrac{1}{2}\\) ist — beide Brüche kleiner als 1.', setup: auf('mal'),
         ok: function(z){ return z.m === 'mal' && z.a < z.b && z.c < z.d && 2 * z.a * z.c > z.b * z.d; } },
-      { text: '«Durch»: Wie oft passt \\(\\tfrac{1}{8}\\) in \\(\\tfrac{3}{4}\\)? Stell \\(\\tfrac{3}{4} : \\tfrac{1}{8}\\) ein.', setup: auf('durch'),
-        ok: function(z){ return z.m === 'durch' && z.a === 3 && z.b === 4 && z.c === 1 && z.d === 8; } },
-      { text: 'Stell \\(\\tfrac{3}{4} : \\tfrac{1}{2}\\) ein. Passt \\(\\tfrac{1}{2}\\) mehr oder weniger als zweimal?', setup: auf('durch'),
-        ok: function(z){ return z.m === 'durch' && z.a === 3 && z.b === 4 && z.c === 1 && z.d === 2; } },
+      { text: '«Durch»: Wie oft passt \\(\\tfrac{1}{6}\\) in \\(\\tfrac{1}{2}\\)? Stell \\(\\tfrac{1}{2} : \\tfrac{1}{6}\\) ein.', setup: auf('durch'),
+        ok: function(z){ return z.m === 'durch' && z.a === 1 && z.b === 2 && z.c === 1 && z.d === 6; } },
+      { text: 'Stell \\(\\tfrac{2}{3} : \\tfrac{1}{2}\\) ein. Passt \\(\\tfrac{1}{2}\\) mehr oder weniger als zweimal?', setup: auf('durch'),
+        ok: function(z){ return z.m === 'durch' && z.a === 2 && z.b === 3 && z.c === 1 && z.d === 2; } },
       { text: 'Stell eine Division ein, deren Ergebnis genau 2 ist.', setup: auf('durch'),
         ok: function(z){ return z.m === 'durch' && z.a * z.d === 2 * z.b * z.c; } }
     ], sim);
@@ -513,7 +515,15 @@
       'vz|-3/4·-2/9', 'vz|-2/5+-2/5', 'vz|-3/2^2', 'vz|-2/3^2',
       // reihenfolge: rf|Term
       'rf|1/4+2/3·3/8', 'rf|5/6−(1/4:3/2)', 'rf|2/3:4/9·1/2', 'rf|7/12−1/4·2/3', 'rf|(3/4−1/3):5/6', 'rf|3/4:3/8·1/2', 'rf|3/4−1/2·(5/6−1/3)',
-      'rf|1/3+1/6·4', 'rf|1/2−1/3·(3/4−1/4)', 'rf|3/4−(1/2−1/4)', 'rf|1:1/2·1/2', 'rf|9/14·7/12:3/8', 'rf|7/15+5/6−1/2'
+      'rf|1/3+1/6·4', 'rf|1/2−1/3·(3/4−1/4)', 'rf|3/4−(1/2−1/4)', 'rf|1:1/2·1/2', 'rf|9/14·7/12:3/8', 'rf|7/15+5/6−1/2',
+      // Erkundungen und Clips (09.10.2026, mit den Clips)
+      'er|3/5|10', 'er|3/5|20', 'er|1/3|24', 'er|3/8|24', 'er|2/7|21', 'er|2/3|12', 'kz|10/16', 'kz|18/24', 'kz|6/9', 'kz|4/6', 'kz|8/10', 'kz|6/20', 'kz|3/12',
+      'hn|3|5', 'hn|8|12', 'hn|4|5', 'hn|4|6', 'hn|6|8', 'hn|6|9', 'hn|3|4',
+      'as|+|1/4|1/6', 'as|+|1/6|3/8', 'as|−|7/9|1/6', 'as|+|1/3|2/5', 'as|+|1/10|3/10', 'as|+|1/4|1/5', 'as|−|5/6|1/4', 'as|+|1/3|1/4',
+      'ml|2/3|3/5', 'ml|2/5|3/4', 'ml|1/3|3/4', 'ml|2/7|5', 'ml|2/3|2/3', 'ml|3/4|3/4',
+      'dv|1/2|1/6', 'dv|2/3|1/2', 'dv|4/5|2/3', 'dv|2/3|1/6', 'dv|1/2|1/3',
+      'vz|-2/5·-5/6', 'vz|-1/2^2', 'vz|-3/4^2',
+      'rf|2/5+3/5·1/3', 'rf|3/4:1/4·1/3', 'rf|2/3−(1/2−1/6)'
     ];
     function gesperrt(T, A){ return T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
     window.__SPERRE = SPERRE;                                  // Testhaken (pruef-schritte.mjs: Verteilung)
