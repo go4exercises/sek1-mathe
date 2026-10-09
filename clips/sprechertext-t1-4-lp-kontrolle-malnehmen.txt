@@ -1,6 +1,6 @@
-0.40	Zähler mal Zähler und Nenner mal Nenner: sechs Zwanzigstel, gekürzt drei Zehntel.
-6.37	Blau ist ein Drittel der Breite, orange drei Viertel der Höhe. Grün sind drei von zwölf Kästchen: ein Viertel.
-13.93	Mit dem Kehrwert des zweiten Bruchs: vier Fünftel mal drei Halbe, zwölf Zehntel, gekürzt sechs Fünftel.
-21.27	Zwei Drittel sind vier Sechstel. Ein Sechstel passt also viermal hinein.
-26.37	Nur der Zähler wird mit fünf multipliziert: zehn Siebtel. Wer auch den Nenner multipliziert, hat nur erweitert.
-33.77	Zum Mitnehmen: Mal heisst Zähler mal Zähler und Nenner mal Nenner. Durch heisst mal den Kehrwert des zweiten Bruchs.
+0.40	Zähler mal Zähler und Nenner mal Nenner: fünfzehn Dreissigstel, gekürzt ein Halb.
+6.19	Blau ist ein Drittel der Breite, orange drei Viertel der Höhe. Grün sind drei von zwölf Kästchen: ein Viertel.
+13.75	Mit dem Kehrwert des zweiten Bruchs: vier Fünftel mal drei Halbe, zwölf Zehntel, gekürzt sechs Fünftel.
+21.09	Zwei Drittel sind vier Sechstel. Ein Sechstel passt also viermal hinein.
+26.19	Nur der Zähler wird mit fünf multipliziert: zehn Siebtel. Wer auch den Nenner multipliziert, hat nur erweitert.
+33.59	Zum Mitnehmen: Mal heisst Zähler mal Zähler und Nenner mal Nenner. Durch heisst mal den Kehrwert des zweiten Bruchs.

@@ -31,7 +31,7 @@
    "name": "Gleichnamig",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also zählen wir sie. Vier Achtel, und gekürzt ein Halb.",
+   "sprecher": "Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also kannst du sie zählen. Vier Achtel, und gekürzt ein Halb.",
    "elemente": [
     {
      "typ": "formel",
@@ -39,7 +39,7 @@
      "x": 150,
      "y": 330,
      "groesse": 66,
-     "ein": 5.04
+     "ein": 4.94
     },
     {
      "typ": "graf",
@@ -230,11 +230,11 @@
        "dicke": 2,
        "bewegung": [
         [
-         3.88,
+         4.28,
          {}
         ],
         [
-         5.08,
+         5.48,
          {
           "punkte": [
            [
@@ -280,7 +280,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.66,
+     "ein": 6.58,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -325,7 +325,7 @@
      "achsen": false
     }
    ],
-   "dauer": 9.02
+   "dauer": 11.05
   },
   {
    "name": "Verschieden gross",
@@ -348,7 +348,7 @@
      "y": 514,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 3.26
+     "ein": 3.25
     },
     {
      "typ": "graf",
@@ -458,7 +458,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.56,
+     "ein": 1.57,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -570,7 +570,7 @@
    "name": "Sechstel",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Teilen wir beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.",
+   "sprecher": "Teilst du beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.",
    "elemente": [
     {
      "typ": "formel",
@@ -578,7 +578,7 @@
      "x": 150,
      "y": 280,
      "groesse": 56,
-     "ein": 4.14
+     "ein": 4.31
     },
     {
      "typ": "formel",
@@ -586,7 +586,7 @@
      "x": 150,
      "y": 432,
      "groesse": 56,
-     "ein": 6.0
+     "ein": 6.01
     },
     {
      "typ": "formel",
@@ -594,7 +594,7 @@
      "x": 150,
      "y": 584,
      "groesse": 62,
-     "ein": 7.16
+     "ein": 7.15
     },
     {
      "typ": "graf",
@@ -808,7 +808,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.86
+       "ein": 1.69
       },
       {
        "art": "strecke",
@@ -823,7 +823,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.9
+       "ein": 1.73
       },
       {
        "art": "strecke",
@@ -838,7 +838,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.94
+       "ein": 1.77
       },
       {
        "art": "strecke",
@@ -853,7 +853,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.98
+       "ein": 1.81
       },
       {
        "art": "strecke",
@@ -868,7 +868,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.86
+       "ein": 1.69
       },
       {
        "art": "strecke",
@@ -883,7 +883,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.9
+       "ein": 1.73
       },
       {
        "art": "strecke",
@@ -898,7 +898,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 1.94
+       "ein": 1.77
       }
      ],
      "pfeile": false,
@@ -922,7 +922,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.86,
+     "ein": 6.85,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1053,11 +1053,11 @@
        "dicke": 2,
        "bewegung": [
         [
-         7.16,
+         7.15,
          {}
         ],
         [
-         7.86,
+         7.85,
          {
           "punkte": [
            [
@@ -1106,11 +1106,11 @@
        "dicke": 2,
        "bewegung": [
         [
-         7.41,
+         7.4,
          {}
         ],
         [
-         8.11,
+         8.1,
          {
           "punkte": [
            [
@@ -1145,7 +1145,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 8.04
+       "ein": 8.09
       }
      ],
      "pfeile": false,
@@ -1162,13 +1162,13 @@
      "achsen": false
     }
    ],
-   "dauer": 9.78
+   "dauer": 10.42
   },
   {
    "name": "Fehler",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe kann nicht kleiner sein als einer ihrer Summanden.",
+   "sprecher": "Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe positiver Brüche kann nicht kleiner sein als einer ihrer Summanden.",
    "elemente": [
     {
      "typ": "formel",
@@ -1176,7 +1176,7 @@
      "x": 150,
      "y": 320,
      "groesse": 66,
-     "ein": 1.74
+     "ein": 1.63
     },
     {
      "typ": "formel",
@@ -1184,7 +1184,7 @@
      "x": 150,
      "y": 494,
      "groesse": 62,
-     "ein": 4.54
+     "ein": 4.71
     },
     {
      "typ": "graf",
@@ -1294,7 +1294,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.06,
+     "ein": 3.05,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1433,7 +1433,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.54,
+     "ein": 4.71,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1467,13 +1467,13 @@
      "achsen": false
     }
    ],
-   "dauer": 9.8
+   "dauer": 10.87
   },
   {
    "name": "Hauptnenner",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn und sechsunddreissig. Sechsunddreissig ist auch durch zwölf teilbar.",
+   "sprecher": "Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn, sechsunddreissig und so weiter. Schon sechsunddreissig ist durch zwölf teilbar.",
    "elemente": [
     {
      "typ": "notiz",
@@ -1482,7 +1482,7 @@
      "y": 290,
      "groesse": 46,
      "farbe": "blau",
-     "ein": 2.2
+     "ein": 2.12
     },
     {
      "typ": "formel",
@@ -1490,7 +1490,7 @@
      "x": 150,
      "y": 420,
      "groesse": 60,
-     "ein": 5.52
+     "ein": 5.46
     },
     {
      "typ": "formel",
@@ -1498,7 +1498,7 @@
      "x": 150,
      "y": 581,
      "groesse": 54,
-     "ein": 13.4
+     "ein": 13.74
     },
     {
      "typ": "graf",
@@ -1508,7 +1508,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.52,
+     "ein": 5.46,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1550,7 +1550,7 @@
        ],
        "farbe": 1,
        "dicke": 5,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "text",
@@ -1563,7 +1563,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "strecke",
@@ -1577,7 +1577,7 @@
        ],
        "farbe": 1,
        "dicke": 5,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "text",
@@ -1590,7 +1590,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "strecke",
@@ -1604,7 +1604,7 @@
        ],
        "farbe": 1,
        "dicke": 5,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "text",
@@ -1617,7 +1617,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "strecke",
@@ -1631,7 +1631,7 @@
        ],
        "farbe": 1,
        "dicke": 5,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "text",
@@ -1644,7 +1644,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 13.4
+       "ein": 13.74
       },
       {
        "art": "strecke",
@@ -1658,7 +1658,7 @@
        ],
        "farbe": 2,
        "dicke": 5,
-       "ein": 4.12
+       "ein": 8.02
       },
       {
        "art": "text",
@@ -1671,7 +1671,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 4.12
+       "ein": 8.02
       },
       {
        "art": "strecke",
@@ -1685,7 +1685,7 @@
        ],
        "farbe": 2,
        "dicke": 5,
-       "ein": 4.12
+       "ein": 8.02
       },
       {
        "art": "text",
@@ -1698,7 +1698,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 4.12
+       "ein": 8.02
       },
       {
        "art": "kreis",
@@ -1710,7 +1710,7 @@
        "farbe": 3,
        "fuellung": 0.15,
        "dicke": 4,
-       "ein": 13.8
+       "ein": 14.14
       }
      ],
      "pfeile": false,
@@ -1727,13 +1727,13 @@
      "achsen": false
     }
    ],
-   "dauer": 15.91
+   "dauer": 16.19
   },
   {
    "name": "Erweitern auf 36",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Fünf Zwölftel erweitern wir mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.",
+   "sprecher": "Fünf Zwölftel erweiterst du mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.",
    "elemente": [
     {
      "typ": "formel",
@@ -1741,7 +1741,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 1.33
+     "ein": 1.41
     },
     {
      "typ": "formel",
@@ -1749,7 +1749,7 @@
      "x": 150,
      "y": 452,
      "groesse": 60,
-     "ein": 4.15
+     "ein": 4.47
     },
     {
      "typ": "graf",
@@ -2265,7 +2265,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.15,
+     "ein": 4.47,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2316,7 +2316,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.09,
+     "ein": 6.27,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2367,7 +2367,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.87,
+     "ein": 8.01,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2399,7 +2399,7 @@
      "achsen": false
     }
    ],
-   "dauer": 10.64
+   "dauer": 10.94
   },
   {
    "name": "Am Schluss kürzen",

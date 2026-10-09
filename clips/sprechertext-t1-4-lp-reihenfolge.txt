@@ -1,8 +1,8 @@
 0.40	In welcher Reihenfolge wird gerechnet? Zuerst die Klammern, dann die Potenzen, dann Punkt vor Strich. Was gleichrangig ist, von links nach rechts.
-10.06	Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel, und das ist ein Drittel.
-26.65	Mit negativen Brüchen gelten dieselben Vorzeichenregeln wie bei ganzen Zahlen. Minus drei Viertel mal minus zwei Neuntel: Minus mal Minus gibt Plus. Sechs Sechsunddreissigstel, gekürzt ein Sechstel.
-39.01	Bei einer Potenz werden Zähler und Nenner potenziert. Zwei Drittel im Quadrat ist zwei Drittel mal zwei Drittel, im Flächenmodell vier von neun Kästchen: vier Neuntel.
-49.22	Auf die Klammer kommt es an. Minus ein Halb in Klammern im Quadrat ist plus ein Viertel. Ohne Klammer wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.
-59.24	Vorsicht beim Minus vor einer Klammer. Drei Viertel minus die Klammer ein Halb minus ein Viertel: Zuerst die Klammer, ein Viertel. Das Ergebnis ist ein Halb. Wer die Klammer einfach weglässt, erhält null. Das ist falsch.
-73.71	Zum Mitnehmen: Klammer, Potenz, Punkt vor Strich, sonst von links nach rechts. Vorzeichen wie bei den ganzen Zahlen. Und jeden Schritt in eine eigene Zeile.
-83.40	Jetzt du: Erkunde diese Zusammenhänge im Schrittwähler unter dem Clip und löse die Aufgaben.
+10.06	Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel sind zwei Sechstel, und das ist ein Drittel.
+31.19	Mit negativen Brüchen gelten dieselben Vorzeichenregeln wie bei ganzen Zahlen. Minus drei Viertel mal minus zwei Neuntel: Minus mal Minus gibt Plus. Sechs Sechsunddreissigstel, gekürzt ein Sechstel.
+43.55	Bei einer Potenz werden Zähler und Nenner potenziert. Zwei Drittel im Quadrat ist zwei Drittel mal zwei Drittel, im Flächenmodell vier von neun Kästchen: vier Neuntel.
+53.76	Auf die Klammer kommt es an. Minus ein Halb in Klammern, im Quadrat, ist plus ein Viertel. Steht das Minus vor der Klammer, wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.
+68.45	Vorsicht beim Minus vor einer Klammer. Drei Viertel minus die Klammer ein Halb minus ein Viertel: Zuerst die Klammer, ein Viertel. Das Ergebnis ist ein Halb. Wer die Klammer einfach weglässt, erhält null. Das ist falsch.
+82.92	Zum Mitnehmen: Klammer, Potenz, Punkt vor Strich, sonst von links nach rechts. Vorzeichen wie bei den ganzen Zahlen. Und jeden Schritt in eine eigene Zeile.
+92.61	Jetzt du: Erkunde diese Zusammenhänge im Schrittwähler unter dem Clip und löse die Aufgaben.

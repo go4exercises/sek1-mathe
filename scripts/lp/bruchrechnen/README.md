@@ -54,8 +54,15 @@ Bilder: Bruchstreifen, Flächenmodell, «Wie oft passt es?», Zahlenstrahl der V
 
 ## Farben — eine Farbe, eine Bedeutung
 
-blau = erster Bruch · orange = zweiter Bruch, Aufgabenleiste · grün = Ergebnis · rot = Fehler. Bereichsfarbe Petrol
-(Links, Kapitel-Pillen, PDF-Knöpfe).
+blau = erster Bruch · orange = zweiter Bruch, Aufgabenleiste, Regler · grün = Ergebnis · rot = Fehler. Bereichsfarbe Petrol
+(Links, Kapitel-Pillen, PDF-Knöpfe). Ausnahmen in den Clips: In Rechenketten markiert orange den Schritt, der gerade
+gerechnet wird; beim Kürzen über Kreuz tragen die beiden Kürzpaare je eine Farbe.
+
+## Lösungswege der Übungen
+
+`stufen(o, x, y)` liefert die Teilschritte einer Rechnung (gleichnamig → Zähler verrechnen → kürzen; mal Kehrwert; Quadrat
+als Produkt), `weg(term)` setzt daraus den Weg eines ganzen Terms zusammen. `hnMax(term)` begrenzt den grössten
+Hauptnenner in einem Zwischenschritt (Übung «Reihenfolge»: höchstens 48).
 
 ## Prüfen
 

@@ -23,6 +23,8 @@ Farben — eine Farbe, eine Bedeutung, gleich wie auf der Seite:
   3 grün   = Ergebnis                          \\fc{…}
   4 rot    = Fehler                            \\fd{…}
   5 Tinte  = neutral (Teilstriche, Beschriftung)
+Zwei bewusste Ausnahmen (Prüfung 09.10.2026): In Rechenketten markiert orange den Schritt, der gerade gerechnet wird
+(Clip und Kontrollclip Reihenfolge), und beim Kürzen über Kreuz tragen die beiden Kürzpaare je eine Farbe.
 Alle Zahlen in zahlen.py nachgerechnet.
 """
 import difflib
@@ -51,7 +53,7 @@ NENNERWORT = {'halb': '2', 'drittel': '3', 'viertel': '4', 'fünftel': '5', 'sec
 
 
 def passt(wort, gehoert):
-    g = re.sub(r'[^\wäöü]', '', gehoert.lower())
+    g = re.sub(r'[^\wäöü]', '', gehoert.lower().replace('ß', 'ss'))   # Whisper schreibt «größer»
     w_ = wort.lower()
     if not g:
         return False
@@ -64,8 +66,10 @@ def passt(wort, gehoert):
         return False                       # «15» ist nicht «fünf»
     if g.startswith(w_) or (len(w_) >= 6 and w_ in g):
         return True
-    return (len(w_) >= 5 and w_[0] == g[0] and abs(len(w_) - len(g)) <= 3
-            and difflib.SequenceMatcher(None, w_, g).ratio() >= 0.7)
+    # Ähnlich, aber nicht kürzer als das gesuchte Wort: sonst trifft «@Vielfachen» schon «Vielfache», «@quadriert»
+    # schon «Quadrat» (Prüfung 09.10.2026).
+    return (len(w_) >= 5 and w_[0] == g[0] and len(w_) <= len(g) <= len(w_) + 3
+            and difflib.SequenceMatcher(None, w_, g).ratio() >= 0.8)   # 0.7 liess «quadriert» auf «Quadrat» fallen (Prüfung 09.10.2026)
 
 
 def wann(clip_, szene, wort, nr=1, dazu=0.0):
@@ -319,14 +323,14 @@ clip('erweitern', 1, 'Brüche sehen: Erweitern, Kürzen, Vergleichen',
      ['Bruch', 'Erweitern', 'Kürzen', 'ggT', 'Vergleichen'], [
          sz('Anteil',
             'Ein Bruch beschreibt einen Anteil. Der Nenner sagt, in wie viele gleiche Teile das Ganze geteilt ist. '
-            'Der Zähler sagt, wie viele Teile wir nehmen: hier drei von vier.',
+            'Der Zähler sagt, wie viele Teile genommen werden: hier drei von vier.',
             f(r'\dfrac{\fa{3}}{4}', 330, 96, ein='@Bruch'),
             n('Nenner: in wie viele gleiche Teile|Zähler: wie viele Teile genommen', 500, 'blau', 42, ein='@Nenner'),
             graf(streifen(OBEN, 4, 0), ein=0.3),
             graf([RECHT(X0, OBEN, BW * 3 / 4, BH, 1, 0.35, dicke=0), T(X0 + BW * 3 / 8, OBEN - 0.8, '3 von 4', 1)], ein='@drei',
                  raster=False)),
          sz('Erweitern',
-            'Jetzt teilen wir jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. '
+            'Jetzt teilst du jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. '
             'Die gefärbte Fläche ist dieselbe geblieben: drei Viertel gleich fünfzehn Zwanzigstel.',
             f(r'\dfrac{3}{4} = \dfrac{3 \cdot \fb{5}}{4 \cdot \fb{5}} = \dfrac{15}{20}', 330, 66, ein='@fünfzehn'),
             n('gleiche Fläche, feinere Einteilung', 500, 'blau', 42, ein='@dieselbe'),
@@ -334,7 +338,7 @@ clip('erweitern', 1, 'Brüche sehen: Erweitern, Kürzen, Vergleichen',
             graf(feinteilung(OBEN, 4, 5, ein='@fünf'), ein=0.05),
             graf([T(X0 + BW * 3 / 8, OBEN - 0.8, '15 von 20', 1)], ein='@fünfzehn')),
          sz('Nicht addieren',
-            'Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier Fünftel. '
+            'Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier von fünf Teilen, also vier Fünftel. '
             'Das ist ein grösserer Anteil als drei Viertel.',
             f(r'\dfrac{3 \fd{+ 1}}{4 \fd{+ 1}} = \fd{\dfrac{4}{5}} \neq \dfrac{3}{4}', 330, 66, ein='@addiert'),
             n('Erweitern heisst @\\cdot@, nicht @+@', 500, 'blau', 42, ein='@multiplizieren'),
@@ -342,7 +346,7 @@ clip('erweitern', 1, 'Brüche sehen: Erweitern, Kürzen, Vergleichen',
             graf(streifen(Y2, 5, 4, 4) + [T(X0, Y2 + 1.6, '4/5', 4, 'start')], ein='@vier'),
             graf([S((X0 + BW * 0.75, Y2 - 0.4), (X0 + BW * 0.75, Y1 + BH + 0.4), 5, True, 3)], ein='@grösserer')),
          sz('Kürzen',
-            'Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fassen wir je sechs Stücke zusammen. '
+            'Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fasst du je sechs Stücke zusammen. '
             'Es bleiben drei Teile, zwei davon gefärbt: zwei Drittel.',
             f(r'\dfrac{12}{18} = \dfrac{12 : \fb{6}}{18 : \fb{6}} = \dfrac{2}{3}', 330, 66, ein='@zusammen'),
             f(r'\text{ggT}(12;\ 18) = \fb{6}', 480, 50, ein='@sechs'),
@@ -354,14 +358,15 @@ clip('erweitern', 1, 'Brüche sehen: Erweitern, Kürzen, Vergleichen',
                     mit(T(X0 + BW / 3, OBEN - 0.8, '2 von 3', 1), ein='@bleiben')], ein=0.3)),
          sz('Vollständig',
             'Vollständig gekürzt ist ein Bruch erst, wenn Zähler und Nenner keinen gemeinsamen Teiler mehr haben. '
-            'Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar.',
+            'Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar. '
+            'Am schnellsten kürzt du durch den grössten gemeinsamen Teiler.',
             f(r'\dfrac{12}{18} = \fb{\dfrac{6}{9}} = \fc{\dfrac{2}{3}}', 330, 66, ein='@Neuntel'),
             n('@6@ und @9@: beide durch @3@ teilbar', 490, 'orange', 42, ein='@teilbar'),
-            n('am schnellsten: durch den ggT', 590, 'blau', 42, ein='@gemeinsamen'),
+            n('am schnellsten: durch den ggT', 590, 'blau', 42, ein='@schnellsten'),
             graf(streifen(Y1, 9, 6, 2) + [T(X0, Y1 + 1.6, '6/9', 2, 'start')], ein='@Neuntel'),
             graf(streifen(Y2, 3, 2, 3) + [T(X0, Y2 + 1.6, '2/3', 3, 'start')], ein='@teilbar')),
          sz('Vergleichen',
-            'Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bringen wir beide auf den Nenner zwölf: '
+            'Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bring beide auf den Nenner zwölf: '
             'acht Zwölftel gegen neun Zwölftel. Drei Viertel ist grösser.',
             f(r'\dfrac{2}{3} = \dfrac{8}{12}', 300, 58, ein='@acht'),
             f(r'\dfrac{3}{4} = \dfrac{9}{12}', 420, 58, ein='@neun'),
@@ -369,8 +374,8 @@ clip('erweitern', 1, 'Brüche sehen: Erweitern, Kürzen, Vergleichen',
             graf(streifen(Y1, 3, 2, 1) + [T(X0, Y1 + 1.6, '2/3', 1, 'start')]
                  + streifen(Y2, 4, 3, 2) + [T(X0, Y2 + 1.6, '3/4', 2, 'start')], ein=0.05),
             graf(feinteilung(Y1, 3, 4, 5, ein='@zwölf') + feinteilung(Y2, 4, 3, 5, ein='@zwölf'), ein=0.05),
-            graf([T(X0 + BW * 8 / 12 - 0.1, Y1 - 0.7, '8', 1, 'end'), T(X0 + BW * 9 / 12 - 0.1, Y2 - 0.7, '9', 2, 'end')],
-                 ein='@acht'),
+            graf([T(X0 + BW * 8 / 12 - 0.1, Y1 - 0.7, '8', 1, 'end')], ein='@acht'),
+            graf([T(X0 + BW * 9 / 12 - 0.1, Y2 - 0.7, '9', 2, 'end')], ein='@neun'),
             graf([S((X0 + BW * 8 / 12, Y2 - 0.3), (X0 + BW * 8 / 12, Y1 + BH + 0.3), 3, True, 3)], ein='@grösser#2')),
          sz('Merke',
             'Zum Mitnehmen: Erweitern und Kürzen ändern den Wert nicht, nur die Einteilung. Vollständig gekürzt wird mit dem '
@@ -442,7 +447,7 @@ clip('kontrolle-erweitern', 2, 'Brüche sehen: Kontrollfragen zum Erweitern und 
                 {'bei': mitte(Y3), 'text': 'Das sind 3/5 — etwas weniger als 2/3.', 'sprich': 'Das sind drei Fünftel, etwas weniger als zwei Drittel.'}],
                'Nicht ganz. Grün siehst du den gesuchten Streifen.',
                sprich='Tipp den Streifen an, der denselben Anteil zeigt wie zwei Drittel.',
-               falsch_sprich='Nicht ganz. Grün siehst du den gesuchten Streifen.'),
+               falsch_sprich='Nicht ganz. Grün siehst du den gesuchten Streifen.', tol=0.7),
          wahl('Frage 2', '2/7 = ?/21 — welche Zahl gehört in den Zähler?', ['6', '16', '2'], 0,
               {0: 'Ja.', 1: 'Von 7 zu 21 kommst du mit mal 3, nicht mit plus 14.', 2: 'Der Nenner wurde mit 3 multipliziert — der Zähler auch?'},
               sprich='Zwei Siebtel sollen auf den Nenner einundzwanzig erweitert werden. Welche Zahl gehört in den Zähler?',
@@ -489,7 +494,7 @@ clip('addieren', 3, 'Brüche sehen: Addieren und Subtrahieren',
      '«Nenner addieren» (2/5 < 1/2); Hauptnenner als kgV (5/12 + 7/18 = 29/36); am Schluss kürzen; 2 − 3/4 = 5/4.',
      ['Addieren', 'Subtrahieren', 'Hauptnenner', 'kgV', 'gleichnamig'], [
          sz('Gleichnamig',
-            'Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also zählen wir sie. Vier Achtel, und gekürzt ein Halb.',
+            'Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also kannst du sie zählen. Vier Achtel, und gekürzt ein Halb.',
             f(r'\dfrac{\fa{3}}{8} + \dfrac{\fb{1}}{8} = \dfrac{4}{8} = \fc{\dfrac{1}{2}}', 330, 66, ein='@Vier'),
             graf(streifen(Y1, 8, 3, 1) + [T(X0, Y1 + 1.6, '3/8 + 1/8', 5, 'start')]
                  + [mit(RECHT(X0, Y2, BW / 8, BH, 2, 0.45, dicke=2),
@@ -505,7 +510,7 @@ clip('addieren', 3, 'Brüche sehen: Addieren und Subtrahieren',
             graf(streifen(Y1, 2, 1, 1) + [T(X0, Y1 + 1.6, '1/2', 1, 'start')], ein=0.3),
             graf(streifen(Y2, 3, 1, 2) + [T(X0, Y2 + 1.6, '1/3', 2, 'start')], ein='@Drittel')),
          sz('Sechstel',
-            'Teilen wir beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei '
+            'Teilst du beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei '
             'Sechstel. Zusammen ergeben sie fünf Sechstel.',
             f(r'\dfrac{1}{2} = \dfrac{\fa{3}}{6}', 280, 56, ein='@drei'),
             f(r'\dfrac{1}{3} = \dfrac{\fb{2}}{6}', 400, 56, ein='@zwei'),
@@ -523,7 +528,7 @@ clip('addieren', 3, 'Brüche sehen: Addieren und Subtrahieren',
                  ein='@Zusammen-0.3')),
          sz('Fehler',
             'Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. '
-            'Eine Summe kann nicht kleiner sein als einer ihrer Summanden.',
+            'Eine Summe positiver Brüche kann nicht kleiner sein als einer ihrer Summanden.',
             f(r'\dfrac{1 + 1}{2 + 3} = \fd{\dfrac{2}{5}}', 320, 66, ein='@einzeln'),
             f(r'\fd{\dfrac{2}{5}} \lt \dfrac{1}{2}', 470, 62, ein='@weniger'),
             graf(streifen(Y1, 2, 1, 1) + [T(X0, Y1 + 1.6, '1/2', 1, 'start')], ein=0.05),
@@ -531,16 +536,16 @@ clip('addieren', 3, 'Brüche sehen: Addieren und Subtrahieren',
             graf([S((X0 + BW / 2, Y2 - 0.3), (X0 + BW / 2, Y1 + BH + 0.3), 5, True, 3)], ein='@weniger')),
          sz('Hauptnenner',
             'Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. '
-            'Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn und sechsunddreissig. '
-            'Sechsunddreissig ist auch durch zwölf teilbar.',
+            'Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn, sechsunddreissig und so weiter. '
+            'Schon sechsunddreissig ist durch zwölf teilbar.',
             n('Hauptnenner = kgV der Nenner', 290, 'blau', 46, ein='@Hauptnenner'),
             f(r'\dfrac{5}{\fa{12}} + \dfrac{7}{\fb{18}}', 420, 60, ein='@fünf'),
             f(r'\text{kgV}(12;\ 18) = \fc{36}', 560, 54, ein='@teilbar'),
             graf(zahlstrahl([12, 24, 36, 48], [18, 36], 36, 54, '@teilbar', '@Vielfachen', '@teilbar+0.4'), ein='@fünf')),
          sz('Erweitern auf 36',
-            'Fünf Zwölftel erweitern wir mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn '
+            'Fünf Zwölftel erweiterst du mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn '
             'Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.',
-            f(r'\dfrac{5 \cdot \fb{3}}{12 \cdot \fb{3}} + \dfrac{7 \cdot \fb{2}}{18 \cdot \fb{2}}', 300, 56, ein='@erweitern'),
+            f(r'\dfrac{5 \cdot \fb{3}}{12 \cdot \fb{3}} + \dfrac{7 \cdot \fb{2}}{18 \cdot \fb{2}}', 300, 56, ein='@erweiterst'),
             f(r'= \dfrac{\fa{15}}{36} + \dfrac{\fb{14}}{36} = \fc{\dfrac{29}{36}}', 450, 60, ein='@Fünfzehn'),
             graf(streifen(OBEN, 36, 0, dicke=4), ein=0.3),
             graf([RECHT(X0, OBEN, BW * 15 / 36, BH, 1, 0.45, dicke=0)], ein='@Fünfzehn'),
@@ -580,7 +585,7 @@ clip('kontrolle-addieren', 4, 'Brüche sehen: Kontrollfragen zum Addieren und Su
          sz('Frage 2',
             'Vielfache von zwölf: zwölf, vierundzwanzig. Vierundzwanzig ist auch durch acht teilbar. Das ist der kleinste gemeinsame Nenner.',
             f(r'\text{kgV}(8;\ 12) = \fc{24}', 320, 58, ein=1.0),
-            graf(zahlstrahl([12, 24, 36, 48], [8, 16, 24, 32, 40, 48], 24, 54, 1.0, 1.0, 1.4), ein=1.0)),
+            graf(zahlstrahl([8, 16, 24, 32, 40, 48], [12, 24, 36, 48], 24, 54, 1.0, 1.0, 1.4), ein=1.0)),
          sz('Frage 3',
             'Gemeinsamer Nenner zwanzig: fünf Zwanzigstel plus vier Zwanzigstel ergibt neun Zwanzigstel.',
             f(r'\dfrac{1}{4} + \dfrac{1}{5} = \dfrac{\fa{5}}{20} + \dfrac{\fb{4}}{20} = \fc{\dfrac{9}{20}}', 320, 60, ein=1.0),
@@ -591,7 +596,7 @@ clip('kontrolle-addieren', 4, 'Brüche sehen: Kontrollfragen zum Addieren und Su
             'Gemeinsamer Nenner zwölf: zehn Zwölftel minus drei Zwölftel ergibt sieben Zwölftel.',
             f(r'\dfrac{5}{6} - \dfrac{1}{4} = \dfrac{\fa{10}}{12} - \dfrac{\fb{3}}{12} = \fc{\dfrac{7}{12}}', 320, 60, ein=1.0)),
          sz('Frage 5',
-            'Zwei Siebtel ist kleiner als ein Drittel. Die Summe muss aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.',
+            'Zwei Siebtel ist kleiner als ein Drittel. Bei positiven Brüchen muss die Summe aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.',
             f(r'\fd{\dfrac{2}{7}} \lt \dfrac{1}{3}', 320, 62, ein=1.0),
             f(r'\dfrac{1}{3} + \dfrac{1}{4} = \dfrac{4}{12} + \dfrac{3}{12} = \fc{\dfrac{7}{12}}', 460, 56, ein=1.0),
             graf(streifen(Y1, 3, 1, 1) + [T(X0, Y1 + 1.6, '1/3', 1, 'start')] + streifen(Y2, 7, 2, 4) + [T(X0, Y2 + 1.6, '2/7', 4, 'start')]
@@ -683,7 +688,7 @@ clip('malnehmen', 5, 'Brüche sehen: Multiplizieren und Dividieren',
      'ganze Zahl mal Bruch; 3/4 : 1/8 als «Wie oft passt?» (6) und der Kehrwert; Kehrwert vom falschen Bruch als Fehler.',
      ['Multiplizieren', 'Dividieren', 'Kehrwert', 'Flächenmodell', 'Kürzen'], [
          sz('Von',
-            'Was sind zwei Drittel von drei Vierteln? Im Quadrat färben wir zuerst drei Viertel der Höhe, dann zwei Drittel '
+            'Was sind zwei Drittel von drei Vierteln? Im Quadrat färbst du zuerst drei Viertel der Höhe, dann zwei Drittel '
             'der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.',
             f(r'\dfrac{\fa{2}}{\fa{3}} \cdot \dfrac{\fb{3}}{\fb{4}}', 330, 76, ein=0.5),
             n('«von» heisst «mal»', 480, 'blau', 44, ein='@Was'),
@@ -695,7 +700,7 @@ clip('malnehmen', 5, 'Brüche sehen: Multiplizieren und Dividieren',
             n('Zähler mal Zähler,|Nenner mal Nenner', 500, 'blau', 44, ein='@Nenner'),
             graf(flaeche(2, 3, 3, 4, mit_zahlen='@sechs'), ein=0.05)),
          sz('Vorher kürzen',
-            'Vier Neuntel mal drei Achtel. Bevor wir ausrechnen, kürzen wir über Kreuz: vier und acht durch vier, drei und neun '
+            'Vier Neuntel mal drei Achtel. Bevor du ausrechnest, kürzt du über Kreuz: vier und acht durch vier, drei und neun '
             'durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.',
             f(r'\dfrac{4}{9} \cdot \dfrac{3}{8} = \dfrac{\fa{4} \cdot \fb{3}}{\fb{9} \cdot \fa{8}}', 300, 60, ein='@Neuntel'),
             n('@4@ und @8@: durch @4@|@3@ und @9@: durch @3@', 440, 'blau', 42, ein='@Kreuz'),
@@ -712,7 +717,7 @@ clip('malnehmen', 5, 'Brüche sehen: Multiplizieren und Dividieren',
                  + [mit(T(X0 + 1.2 + 2.4 * k, OBEN + 0.4, '2/5', 1, g=30), ein='@mal+%.2f' % (0.4 * k)) for k in range(3)]
                  + [mit(T(X0 + 3.6, OBEN + 2.2, '6/5', 3), ein='@sechs')], ein=0.3)),
          sz('Messen',
-            'Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Wir legen Achtel '
+            'Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Du legst Achtel '
             'hinein. Es passt genau sechsmal.',
             f(r'\dfrac{\fa{3}}{\fa{4}} : \dfrac{\fb{1}}{\fb{8}} = \;?', 300, 66, ein=0.5),
             f(r'\dfrac{3}{4} : \dfrac{1}{8} = \fc{6}', 450, 66, ein='@sechsmal'),
@@ -748,12 +753,12 @@ clip('malnehmen', 5, 'Brüche sehen: Multiplizieren und Dividieren',
 
 # ════════════════════════════════════════════════ Kapitel 3 · Kontrolle
 clip('kontrolle-malnehmen', 6, 'Brüche sehen: Kontrollfragen zum Multiplizieren und Dividieren',
-     'Fünf Fragen: 2/5 · 3/4, eine Multiplikation am Flächenmodell ablesen, 4/5 : 2/3, wie oft 1/6 in 2/3 passt, 5 · 2/7.',
+     'Fünf Fragen: 3/5 · 5/6, eine Multiplikation am Flächenmodell ablesen, 4/5 : 2/3, wie oft 1/6 in 2/3 passt, 5 · 2/7.',
      ['Multiplizieren', 'Dividieren', 'Kehrwert', 'Kontrollfragen'], [
          sz('Frage 1',
-            'Zähler mal Zähler und Nenner mal Nenner: sechs Zwanzigstel, gekürzt drei Zehntel.',
-            f(r'\dfrac{2}{5} \cdot \dfrac{3}{4} = \dfrac{6}{20} = \fc{\dfrac{3}{10}}', 320, 64, ein=1.0),
-            graf(flaeche(2, 5, 3, 4), ein=1.0)),
+            'Zähler mal Zähler und Nenner mal Nenner: fünfzehn Dreissigstel, gekürzt ein Halb.',
+            f(r'\dfrac{3}{5} \cdot \dfrac{5}{6} = \dfrac{15}{30} = \fc{\dfrac{1}{2}}', 320, 64, ein=1.0),
+            graf(flaeche(3, 5, 5, 6), ein=1.0)),
          sz('Frage 2',
             'Blau ist ein Drittel der Breite, orange drei Viertel der Höhe. Grün sind drei von zwölf Kästchen: ein Viertel.',
             f(r'\dfrac{1}{3} \cdot \dfrac{3}{4} = \dfrac{3}{12} = \fc{\dfrac{1}{4}}', 320, 64, ein=1.0),
@@ -774,13 +779,13 @@ clip('kontrolle-malnehmen', 6, 'Brüche sehen: Kontrollfragen zum Multiplizieren
             titel('Zum Mitnehmen', 250, 76),
             n('mal: Zähler @\\cdot@ Zähler, Nenner @\\cdot@ Nenner|durch: mal Kehrwert des zweiten Bruchs', 400, 'blau', 44, ein=1.2)),
      ], [
-         wahl('Frage 1', '2/5 · 3/4 = ?', ['3/10', '8/15', '5/9'], 0,
-              {0: 'Ja.', 1: 'Das wäre geteilt (über Kreuz multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.',
+         wahl('Frage 1', '3/5 · 5/6 = ?', ['1/2', '18/25', '8/11'], 0,
+              {0: 'Ja.', 1: 'Das wäre geteilt (mit dem Kehrwert multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.',
                2: 'Das wäre Zähler plus Zähler, Nenner plus Nenner — beim Multiplizieren wird multipliziert.'},
-              sprich='Zwei Fünftel mal drei Viertel gleich?',
-              rueck_sprich={1: 'Das wäre geteilt, über Kreuz multipliziert. Mal heisst: Zähler mal Zähler, Nenner mal Nenner.',
+              sprich='Drei Fünftel mal fünf Sechstel gleich?',
+              rueck_sprich={1: 'Das wäre geteilt, mit dem Kehrwert multipliziert. Mal heisst: Zähler mal Zähler und Nenner mal Nenner.',
                             2: 'Das wäre Zähler plus Zähler, Nenner plus Nenner. Beim Multiplizieren wird multipliziert.'}),
-         wahl('Frage 2', 'Welche Rechnung zeigt das Bild?', ['1/3 · 3/4 = 1/4', '1/3 + 3/4', '3/4 : 1/3'], 0,
+         wahl('Frage 2', 'Welche Rechnung zeigt das Bild?', ['1/3 · 3/4', '1/3 + 3/4', '3/4 : 1/3'], 0,
               {0: 'Ja.', 1: 'Zwei Anteile, die sich überlappen — das ist das Flächenmodell für Mal.',
                2: 'Teilen fragt «Wie oft passt?» — im Bild überlappen sich zwei Anteile.'},
               sprich='Welche Rechnung zeigt das Bild?',
@@ -847,13 +852,13 @@ clip('reihenfolge', 7, 'Brüche sehen: Rechenreihenfolge und negative Brüche',
          sz('Beispiel',
             'Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, '
             'also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein '
-            'Sechstel: drei Sechstel minus ein Sechstel, und das ist ein Drittel.',
+            'Sechstel: drei Sechstel minus ein Sechstel sind zwei Sechstel, und das ist ein Drittel.',
             # Fragebild: Die Frage «Was zuerst?» kommt bei 0.3 s — die Markierung der Klammer und der Baum erst danach.
             mit(f(r'\dfrac{1}{2} - \dfrac{1}{3} \cdot \left(\dfrac{3}{4} - \dfrac{1}{4}\right)', 280, 52, ein=0.05), aus='@Zuerst'),
             f(r'\dfrac{1}{2} - \dfrac{1}{3} \cdot \left(\fb{\dfrac{3}{4} - \dfrac{1}{4}}\right)', 280, 52, ein='@Zuerst'),
             f(r'= \dfrac{1}{2} - \fb{\dfrac{1}{3} \cdot \dfrac{1}{2}}', 400, 52, ein='@Dann'),
             f(r'= \dfrac{1}{2} - \dfrac{1}{6} = \dfrac{3}{6} - \dfrac{1}{6}', 520, 52, ein='@Zuletzt'),
-            f(r'= \fc{\dfrac{1}{3}}', 640, 52, ein='@Drittel#3'),
+            f(r'= \dfrac{2}{6} = \fc{\dfrac{1}{3}}', 640, 52, ein='@zwei#2'),
             graf(baum('@zwei', '@Sechstel', '@Drittel#3'), ein='@Klammer')),
          sz('Vorzeichen',
             'Mit negativen Brüchen gelten dieselben Vorzeichenregeln wie bei ganzen Zahlen. Minus drei Viertel mal minus zwei '
@@ -867,11 +872,11 @@ clip('reihenfolge', 7, 'Brüche sehen: Rechenreihenfolge und negative Brüche',
             f(r'\left(\dfrac{2}{3}\right)^2 = \dfrac{2^2}{3^2} = \fc{\dfrac{4}{9}}', 330, 62, ein='@Quadrat'),
             graf(flaeche(2, 3, 2, 3, ein_c='@mal', ein_a='@mal', ein_g='@Flächenmodell'), ein=0.3)),
          sz('Klammer beim Minus',
-            'Auf die Klammer kommt es an. Minus ein Halb in Klammern im Quadrat ist plus ein Viertel. Ohne Klammer wird zuerst '
-            'quadriert und dann das Minus gesetzt: minus ein Viertel.',
+            'Auf die Klammer kommt es an. Minus ein Halb in Klammern, im Quadrat, ist plus ein Viertel. Steht das Minus vor der '
+            'Klammer, wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.',
             f(r'\left(-\dfrac{1}{2}\right)^2 = \fc{+\dfrac{1}{4}}', 300, 60, ein='@plus'),
-            f(r'-\left(\dfrac{1}{2}\right)^2 = \fc{-\dfrac{1}{4}}', 440, 60, ein='@Ohne'),
-            n('Potenz vor Strich', 580, 'blau', 44, ein='@quadriert')),
+            f(r'-\left(\dfrac{1}{2}\right)^2 = \fc{-\dfrac{1}{4}}', 440, 60, ein='@Steht'),
+            n('Potenz vor Strich', 580, 'blau', 44, ein='@gesetzt')),
          sz('Minus vor der Klammer',
             'Vorsicht beim Minus vor einer Klammer. Drei Viertel minus die Klammer ein Halb minus ein Viertel: Zuerst die Klammer, '
             'ein Viertel. Das Ergebnis ist ein Halb. Wer die Klammer einfach weglässt, erhält null. Das ist falsch.',
@@ -925,10 +930,10 @@ clip('kontrolle-reihenfolge', 8, 'Brüche sehen: Kontrollfragen zur Rechenreihen
               rueck_sprich={1: 'Punkt vor Strich: Das Mal kommt vor dem Plus.', 2: 'Nicht egal. Mit der falschen Reihenfolge kommt ein Drittel heraus, richtig sind drei Fünftel.'}),
          wahl('Frage 2', '3/4 : 1/4 · 1/3 = ?', ['1', '9', '1/9'], 0,
               {0: 'Ja.', 1: '9 entsteht, wenn zuerst 1/4 · 1/3 gerechnet wird. Gleichrangig heisst: von links nach rechts.',
-               2: 'Rechne von links nach rechts: zuerst 3/4 : 1/4.'},
+               2: '1/9 entsteht, wenn man 1/4 · 1/3 durch 3/4 teilt. Rechne von links nach rechts: zuerst 3/4 : 1/4.'},
               sprich='Drei Viertel durch ein Viertel mal ein Drittel gleich?',
               rueck_sprich={1: 'Neun entsteht, wenn zuerst ein Viertel mal ein Drittel gerechnet wird. Gleichrangig heisst: von links nach rechts.',
-                            2: 'Rechne von links nach rechts: zuerst drei Viertel durch ein Viertel.'}),
+                            2: 'Ein Neuntel entsteht, wenn man ein Viertel mal ein Drittel durch drei Viertel teilt. Rechne von links nach rechts: zuerst drei Viertel durch ein Viertel.'}),
          wahl('Frage 3', '(−2/5) · (−5/6) = ?', ['1/3', '−1/3', '−10/11'], 0,
               {0: 'Ja.', 1: 'Vorzeichen: Minus mal Minus gibt Plus.', 2: 'Beim Multiplizieren: Zähler mal Zähler, Nenner mal Nenner — und Minus mal Minus gibt Plus.'},
               sprich='Minus zwei Fünftel mal minus fünf Sechstel gleich?',

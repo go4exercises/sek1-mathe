@@ -113,3 +113,8 @@ sup .sw-op{font-size:.75rem;min-width:1.6em;min-height:1.6em}
 .vertiefung{border:1.5px dashed var(--lila-rand);border-radius:11px;padding:4px 18px 14px;margin-top:30px;background:var(--karte)}
 .vertiefung h2{font-size:1.25rem;margin:14px 0 4px}
 .vertiefung .aufg{padding:6px 0 0}
+/* Vorwissen: «Kurz wiederholt» (Prüfung 09.10.2026: statt Verweis auf noch leere Themenseiten) */
+.kap > details.anleitung{margin:6px 0 18px;padding:14px 20px}
+.kap > details.anleitung h3{margin:0;font-size:1rem}
+.kurz{margin:10px 0 0;padding-left:1.2em;font-size:.95rem}
+.kurz li{margin:6px 0}

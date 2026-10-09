@@ -624,7 +624,26 @@ gegen sie und darüber hinaus.
 - **Definition über eine Eigenschaft, die eine Oberklasse auch hat** (gleichschenkliges Trapez über b = d — gilt für
   jedes Parallelogramm). Definitionen an der Klassenhierarchie des Leitprogramms prüfen.
 
+- **Regeln, die nur für positive Zahlen gelten, so sagen** (Bruchrechnen 09.10.2026): «Eine Summe kann nicht kleiner
+  sein als ihr Summand» — falsch für \(-\tfrac25 + (-\tfrac25)\), und das Leitprogramm rechnete diese Aufgabe selbst.
+  Ebenso «mal einen Bruch kleiner als 1 gibt weniger». Sobald negative Zahlen vorkommen, jede Faustregel gegen sie lesen.
+- **Ein Zwischenergebnis darf einen gelehrten Fehler nicht unsichtbar machen** (Bruchrechnen 09.10.2026):
+  \(\tfrac{9}{14} \cdot \tfrac{7}{12} : \tfrac38\) — das Zwischenergebnis \(\tfrac38\) ist der Divisor, der Fehler
+  «Kehrwert vom falschen Bruch» gibt \(\tfrac83 \cdot \tfrac38 = 1\), das richtige Ergebnis. Jeden typischen Fehler einer
+  Testaufgabe durchrechnen, nicht nur die Lösung; ebenso in Würfen (\(\tfrac23 - \tfrac12\): Zähler nicht erweitert gibt
+  \(\tfrac{2-1}{6} = \tfrac16\) — richtig).
+- **Eine Begründung im Raster gilt allgemein, nicht nur für die Aufgabe**: «bei Mal und Durch ändert die Reihenfolge
+  nichts» stimmte für \(a \cdot b : c\), widersprach aber dem eigenen Leitprogramm bei \(a : b \cdot c\).
+
 **Clips**
+- **Wortanker scharf halten** (Bruchrechnen 09.10.2026): Ein unscharfer Wortvergleich traf kürzere Nachbarwörter
+  («@quadriert» auf «Quadrat», «@Vielfachen» auf «Vielfache») — die Einblendung kam Sekunden zu früh. Nur gleich lange oder
+  längere gehörte Wörter zulassen. Whisper schreibt «größer» mit ß; vor dem Vergleich ß → ss.
+- **Aussprache mit Whisper medium gegenhören, nicht mit small** (Bruchrechnen 09.10.2026): small verhörte «Fünftel» als
+  «Viertel». Piper sprach «kürzen» wie «kratzen» — behoben mit `TAUSCH` («kührz»). Ein Satz, der im Gesamtton falsch
+  verstanden wird, einzeln aus der Tonspur ausschneiden und nochmals hören lassen: Der Satzzusammenhang lenkt Whisper.
+  Rückmeldungen, deren Sinn kippt, wenn ein Wort verhört wird («Primzahlen im Nenner sind erlaubt» → «keine Zahlen …»),
+  umformulieren.
 - **Eine neue Bewegung einmal wirklich laufen lassen.** Nicht ein Bild ansehen, sondern
   über `window.__seek(t)` im `?render`-Modus mehrere Zeitpunkte abtasten und die Pfade
   (`getAttribute('d')`) vergleichen. Am 03.10.2026 standen *alle* bewegten Geraden und

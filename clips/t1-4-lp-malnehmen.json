@@ -31,7 +31,7 @@
    "name": "Von",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Was sind zwei Drittel von drei Vierteln? Im Quadrat färben wir zuerst drei Viertel der Höhe, dann zwei Drittel der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.",
+   "sprecher": "Was sind zwei Drittel von drei Vierteln? Im Quadrat färbst du zuerst drei Viertel der Höhe, dann zwei Drittel der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.",
    "elemente": [
     {
      "typ": "formel",
@@ -86,8 +86,8 @@
        "farbe": 2,
        "fuellung": 0.3,
        "dicke": 0,
-       "ein": 4.72,
-       "aus": 7.72
+       "ein": 4.88,
+       "aus": 8.24
       },
       {
        "art": "vieleck",
@@ -112,8 +112,8 @@
        "farbe": 1,
        "fuellung": 0.3,
        "dicke": 0,
-       "ein": 6.06,
-       "aus": 7.72
+       "ein": 6.38,
+       "aus": 8.24
       },
       {
        "art": "vieleck",
@@ -138,7 +138,7 @@
        "farbe": 2,
        "fuellung": 0.3,
        "dicke": 0,
-       "ein": 7.72
+       "ein": 8.24
       },
       {
        "art": "vieleck",
@@ -163,7 +163,7 @@
        "farbe": 1,
        "fuellung": 0.3,
        "dicke": 0,
-       "ein": 7.72
+       "ein": 8.24
       },
       {
        "art": "vieleck",
@@ -188,7 +188,7 @@
        "farbe": 3,
        "fuellung": 0.35,
        "dicke": 4,
-       "ein": 7.72
+       "ein": 8.24
       },
       {
        "art": "strecke",
@@ -202,7 +202,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 4.72
+       "ein": 4.88
       },
       {
        "art": "strecke",
@@ -216,7 +216,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 4.72
+       "ein": 4.88
       },
       {
        "art": "strecke",
@@ -230,7 +230,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 4.72
+       "ein": 4.88
       },
       {
        "art": "strecke",
@@ -244,7 +244,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 6.06
+       "ein": 6.38
       },
       {
        "art": "strecke",
@@ -258,7 +258,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 6.06
+       "ein": 6.38
       },
       {
        "art": "vieleck",
@@ -299,7 +299,7 @@
      "achsen": false
     }
    ],
-   "dauer": 10.42
+   "dauer": 10.92
   },
   {
    "name": "Zählen",
@@ -313,7 +313,7 @@
      "x": 150,
      "y": 330,
      "groesse": 60,
-     "ein": 4.24
+     "ein": 4.26
     },
     {
      "typ": "notiz",
@@ -597,7 +597,7 @@
    "name": "Vorher kürzen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Vier Neuntel mal drei Achtel. Bevor wir ausrechnen, kürzen wir über Kreuz: vier und acht durch vier, drei und neun durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.",
+   "sprecher": "Vier Neuntel mal drei Achtel. Bevor du ausrechnest, kürzt du über Kreuz: vier und acht durch vier, drei und neun durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.",
    "elemente": [
     {
      "typ": "formel",
@@ -605,7 +605,7 @@
      "x": 150,
      "y": 300,
      "groesse": 60,
-     "ein": 0.77
+     "ein": 0.89
     },
     {
      "typ": "notiz",
@@ -614,7 +614,7 @@
      "y": 461,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 4.17
+     "ein": 4.21
     },
     {
      "typ": "formel",
@@ -622,10 +622,10 @@
      "x": 150,
      "y": 600,
      "groesse": 60,
-     "ein": 7.95
+     "ein": 8.49
     }
    ],
-   "dauer": 11.11
+   "dauer": 11.92
   },
   {
    "name": "Ganze Zahl",
@@ -639,7 +639,7 @@
      "x": 150,
      "y": 320,
      "groesse": 60,
-     "ein": 3.38
+     "ein": 3.37
     },
     {
      "typ": "formel",
@@ -647,7 +647,7 @@
      "x": 150,
      "y": 481,
      "groesse": 60,
-     "ein": 7.58
+     "ein": 7.55
     },
     {
      "typ": "graf",
@@ -736,7 +736,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 3,
-       "ein": 3.6
+       "ein": 3.59
       },
       {
        "art": "vieleck",
@@ -761,7 +761,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 3,
-       "ein": 4.0
+       "ein": 3.99
       },
       {
        "art": "vieleck",
@@ -786,7 +786,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 3,
-       "ein": 4.4
+       "ein": 4.39
       },
       {
        "art": "text",
@@ -799,7 +799,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 3.6
+       "ein": 3.59
       },
       {
        "art": "text",
@@ -812,7 +812,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 4.0
+       "ein": 3.99
       },
       {
        "art": "text",
@@ -825,7 +825,7 @@
        "anker": "middle",
        "groesse": 30,
        "kursiv": false,
-       "ein": 4.4
+       "ein": 4.39
       },
       {
        "art": "text",
@@ -838,7 +838,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 4.5
+       "ein": 4.49
       }
      ],
      "pfeile": false,
@@ -861,7 +861,7 @@
    "name": "Messen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Wir legen Achtel hinein. Es passt genau sechsmal.",
+   "sprecher": "Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Du legst Achtel hinein. Es passt genau sechsmal.",
    "elemente": [
     {
      "typ": "formel",
@@ -877,7 +877,7 @@
      "x": 150,
      "y": 474,
      "groesse": 66,
-     "ein": 7.75
+     "ein": 7.86
     },
     {
      "typ": "graf",
@@ -963,7 +963,7 @@
        "farbe": 2,
        "fuellung": 0.45,
        "dicke": 3,
-       "ein": 5.19
+       "ein": 5.08
       },
       {
        "art": "text",
@@ -976,7 +976,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 5.19
+       "ein": 5.08
       },
       {
        "art": "vieleck",
@@ -1001,7 +1001,7 @@
        "farbe": 2,
        "fuellung": 0.45,
        "dicke": 3,
-       "ein": 5.64
+       "ein": 5.53
       },
       {
        "art": "text",
@@ -1014,7 +1014,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 5.64
+       "ein": 5.53
       },
       {
        "art": "vieleck",
@@ -1039,7 +1039,7 @@
        "farbe": 2,
        "fuellung": 0.45,
        "dicke": 3,
-       "ein": 6.09
+       "ein": 5.98
       },
       {
        "art": "text",
@@ -1052,7 +1052,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 6.09
+       "ein": 5.98
       },
       {
        "art": "vieleck",
@@ -1077,7 +1077,7 @@
        "farbe": 2,
        "fuellung": 0.45,
        "dicke": 3,
-       "ein": 6.54
+       "ein": 6.43
       },
       {
        "art": "text",
@@ -1090,7 +1090,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 6.54
+       "ein": 6.43
       },
       {
        "art": "vieleck",
@@ -1115,7 +1115,7 @@
        "farbe": 2,
        "fuellung": 0.45,
        "dicke": 3,
-       "ein": 6.99
+       "ein": 6.88
       },
       {
        "art": "text",
@@ -1128,7 +1128,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 6.99
+       "ein": 6.88
       },
       {
        "art": "vieleck",
@@ -1153,7 +1153,7 @@
        "farbe": 2,
        "fuellung": 0.45,
        "dicke": 3,
-       "ein": 7.44
+       "ein": 7.33
       },
       {
        "art": "text",
@@ -1166,7 +1166,7 @@
        "anker": "middle",
        "groesse": 32,
        "kursiv": false,
-       "ein": 7.44
+       "ein": 7.33
       },
       {
        "art": "text",
@@ -1207,7 +1207,7 @@
      "achsen": false
     }
    ],
-   "dauer": 10.27
+   "dauer": 12.37
   },
   {
    "name": "Kehrwert",
@@ -1221,7 +1221,7 @@
      "x": 150,
      "y": 290,
      "groesse": 58,
-     "ein": 1.72
+     "ein": 1.71
     },
     {
      "typ": "formel",
@@ -1229,7 +1229,7 @@
      "x": 150,
      "y": 446,
      "groesse": 66,
-     "ein": 5.3
+     "ein": 5.29
     },
     {
      "typ": "notiz",
@@ -1238,7 +1238,7 @@
      "y": 620,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 9.58
+     "ein": 9.59
     }
    ],
    "dauer": 11.97
@@ -1255,7 +1255,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 1.33
+     "ein": 1.36
     },
     {
      "typ": "formel",
@@ -1263,7 +1263,7 @@
      "x": 150,
      "y": 456,
      "groesse": 58,
-     "ein": 3.43
+     "ein": 3.42
     },
     {
      "typ": "notiz",
@@ -1272,7 +1272,7 @@
      "y": 612,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 7.97
+     "ein": 7.96
     }
    ],
    "dauer": 10.65

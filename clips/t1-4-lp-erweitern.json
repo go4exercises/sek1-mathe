@@ -31,7 +31,7 @@
    "name": "Anteil",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Ein Bruch beschreibt einen Anteil. Der Nenner sagt, in wie viele gleiche Teile das Ganze geteilt ist. Der Zähler sagt, wie viele Teile wir nehmen: hier drei von vier.",
+   "sprecher": "Ein Bruch beschreibt einen Anteil. Der Nenner sagt, in wie viele gleiche Teile das Ganze geteilt ist. Der Zähler sagt, wie viele Teile genommen werden: hier drei von vier.",
    "elemente": [
     {
      "typ": "formel",
@@ -39,7 +39,7 @@
      "x": 150,
      "y": 330,
      "groesse": 96,
-     "ein": 0.64
+     "ein": 0.66
     },
     {
      "typ": "notiz",
@@ -48,7 +48,7 @@
      "y": 572,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 2.68
+     "ein": 2.72
     },
     {
      "typ": "graf",
@@ -148,7 +148,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.48,
+     "ein": 9.32,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -204,13 +204,13 @@
      "achsen": false
     }
    ],
-   "dauer": 11.1
+   "dauer": 13.65
   },
   {
    "name": "Erweitern",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Jetzt teilen wir jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. Die gefärbte Fläche ist dieselbe geblieben: drei Viertel gleich fünfzehn Zwanzigstel.",
+   "sprecher": "Jetzt teilst du jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. Die gefärbte Fläche ist dieselbe geblieben: drei Viertel gleich fünfzehn Zwanzigstel.",
    "elemente": [
     {
      "typ": "formel",
@@ -218,7 +218,7 @@
      "x": 150,
      "y": 330,
      "groesse": 66,
-     "ein": 5.0
+     "ein": 4.55
     },
     {
      "typ": "notiz",
@@ -227,7 +227,7 @@
      "y": 504,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 7.98
+     "ein": 7.51
     },
     {
      "typ": "graf",
@@ -369,7 +369,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.28
+       "ein": 1.95
       },
       {
        "art": "strecke",
@@ -384,7 +384,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.32
+       "ein": 1.99
       },
       {
        "art": "strecke",
@@ -399,7 +399,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.36
+       "ein": 2.03
       },
       {
        "art": "strecke",
@@ -414,7 +414,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.4
+       "ein": 2.07
       },
       {
        "art": "strecke",
@@ -429,7 +429,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.44
+       "ein": 2.11
       },
       {
        "art": "strecke",
@@ -444,7 +444,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.48
+       "ein": 2.15
       },
       {
        "art": "strecke",
@@ -459,7 +459,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.52
+       "ein": 2.19
       },
       {
        "art": "strecke",
@@ -474,7 +474,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.56
+       "ein": 2.23
       },
       {
        "art": "strecke",
@@ -489,7 +489,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.6
+       "ein": 2.27
       },
       {
        "art": "strecke",
@@ -504,7 +504,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.64
+       "ein": 2.31
       },
       {
        "art": "strecke",
@@ -519,7 +519,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.68
+       "ein": 2.35
       },
       {
        "art": "strecke",
@@ -534,7 +534,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.72
+       "ein": 2.39
       },
       {
        "art": "strecke",
@@ -549,7 +549,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.76
+       "ein": 2.43
       },
       {
        "art": "strecke",
@@ -564,7 +564,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.8
+       "ein": 2.47
       },
       {
        "art": "strecke",
@@ -579,7 +579,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.84
+       "ein": 2.51
       },
       {
        "art": "strecke",
@@ -594,7 +594,7 @@
        "farbe": 2,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 2.88
+       "ein": 2.55
       }
      ],
      "pfeile": false,
@@ -618,7 +618,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.0,
+     "ein": 4.55,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -650,13 +650,13 @@
      "achsen": false
     }
    ],
-   "dauer": 11.95
+   "dauer": 11.35
   },
   {
    "name": "Nicht addieren",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier Fünftel. Das ist ein grösserer Anteil als drei Viertel.",
+   "sprecher": "Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier von fünf Teilen, also vier Fünftel. Das ist ein grösserer Anteil als drei Viertel.",
    "elemente": [
     {
      "typ": "formel",
@@ -664,7 +664,7 @@
      "x": 150,
      "y": 330,
      "groesse": 66,
-     "ein": 4.67
+     "ein": 4.62
     },
     {
      "typ": "notiz",
@@ -673,7 +673,7 @@
      "y": 504,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 1.57
+     "ein": 1.36
     },
     {
      "typ": "graf",
@@ -809,7 +809,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.65,
+     "ein": 5.54,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -948,7 +948,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.19,
+     "ein": 8.82,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -982,13 +982,13 @@
      "achsen": false
     }
    ],
-   "dauer": 9.95
+   "dauer": 11.74
   },
   {
    "name": "Kürzen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fassen wir je sechs Stücke zusammen. Es bleiben drei Teile, zwei davon gefärbt: zwei Drittel.",
+   "sprecher": "Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fasst du je sechs Stücke zusammen. Es bleiben drei Teile, zwei davon gefärbt: zwei Drittel.",
    "elemente": [
     {
      "typ": "formel",
@@ -996,7 +996,7 @@
      "x": 150,
      "y": 330,
      "groesse": 66,
-     "ein": 4.4
+     "ein": 4.44
     },
     {
      "typ": "formel",
@@ -1055,7 +1055,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1069,7 +1069,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1083,7 +1083,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1097,7 +1097,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1111,7 +1111,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1125,7 +1125,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1139,7 +1139,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1153,7 +1153,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1167,7 +1167,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1181,7 +1181,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1195,7 +1195,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1209,7 +1209,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1223,7 +1223,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1237,7 +1237,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1251,7 +1251,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 5.0
+       "aus": 5.04
       },
       {
        "art": "strecke",
@@ -1344,13 +1344,13 @@
      "achsen": false
     }
    ],
-   "dauer": 8.85
+   "dauer": 8.84
   },
   {
    "name": "Vollständig",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Vollständig gekürzt ist ein Bruch erst, wenn Zähler und Nenner keinen gemeinsamen Teiler mehr haben. Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar.",
+   "sprecher": "Vollständig gekürzt ist ein Bruch erst, wenn Zähler und Nenner keinen gemeinsamen Teiler mehr haben. Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar. Am schnellsten kürzt du durch den grössten gemeinsamen Teiler.",
    "elemente": [
     {
      "typ": "formel",
@@ -1358,7 +1358,7 @@
      "x": 150,
      "y": 330,
      "groesse": 66,
-     "ein": 6.01
+     "ein": 6.08
     },
     {
      "typ": "notiz",
@@ -1367,7 +1367,7 @@
      "y": 504,
      "groesse": 42,
      "farbe": "orange",
-     "ein": 10.65
+     "ein": 10.94
     },
     {
      "typ": "notiz",
@@ -1376,7 +1376,7 @@
      "y": 590,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 4.19
+     "ein": 11.78
     },
     {
      "typ": "graf",
@@ -1386,7 +1386,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.01,
+     "ein": 6.08,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1577,7 +1577,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 10.65,
+     "ein": 10.94,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1683,13 +1683,13 @@
      "achsen": false
     }
    ],
-   "dauer": 11.96
+   "dauer": 15.73
   },
   {
    "name": "Vergleichen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bringen wir beide auf den Nenner zwölf: acht Zwölftel gegen neun Zwölftel. Drei Viertel ist grösser.",
+   "sprecher": "Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bring beide auf den Nenner zwölf: acht Zwölftel gegen neun Zwölftel. Drei Viertel ist grösser.",
    "elemente": [
     {
      "typ": "formel",
@@ -1697,7 +1697,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 5.95
+     "ein": 6.07
     },
     {
      "typ": "formel",
@@ -1705,7 +1705,7 @@
      "x": 150,
      "y": 456,
      "groesse": 58,
-     "ein": 6.85
+     "ein": 6.91
     },
     {
      "typ": "formel",
@@ -1953,7 +1953,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.25
+       "ein": 5.35
       },
       {
        "art": "strecke",
@@ -1968,7 +1968,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.29
+       "ein": 5.39
       },
       {
        "art": "strecke",
@@ -1983,7 +1983,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.33
+       "ein": 5.43
       },
       {
        "art": "strecke",
@@ -1998,7 +1998,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.37
+       "ein": 5.47
       },
       {
        "art": "strecke",
@@ -2013,7 +2013,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.41
+       "ein": 5.51
       },
       {
        "art": "strecke",
@@ -2028,7 +2028,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.45
+       "ein": 5.55
       },
       {
        "art": "strecke",
@@ -2043,7 +2043,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.49
+       "ein": 5.59
       },
       {
        "art": "strecke",
@@ -2058,7 +2058,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.53
+       "ein": 5.63
       },
       {
        "art": "strecke",
@@ -2073,7 +2073,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.57
+       "ein": 5.67
       },
       {
        "art": "strecke",
@@ -2088,7 +2088,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.25
+       "ein": 5.35
       },
       {
        "art": "strecke",
@@ -2103,7 +2103,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.29
+       "ein": 5.39
       },
       {
        "art": "strecke",
@@ -2118,7 +2118,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.33
+       "ein": 5.43
       },
       {
        "art": "strecke",
@@ -2133,7 +2133,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.37
+       "ein": 5.47
       },
       {
        "art": "strecke",
@@ -2148,7 +2148,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.41
+       "ein": 5.51
       },
       {
        "art": "strecke",
@@ -2163,7 +2163,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.45
+       "ein": 5.55
       },
       {
        "art": "strecke",
@@ -2178,7 +2178,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.49
+       "ein": 5.59
       },
       {
        "art": "strecke",
@@ -2193,7 +2193,7 @@
        "farbe": 5,
        "dicke": 2,
        "gestrichelt": true,
-       "ein": 5.53
+       "ein": 5.63
       }
      ],
      "pfeile": false,
@@ -2217,7 +2217,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.95,
+     "ein": 6.07,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2233,7 +2233,34 @@
        "anker": "end",
        "groesse": 32,
        "kursiv": false
-      },
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.91,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
       {
        "art": "text",
        "bei": [
@@ -2302,7 +2329,7 @@
      "achsen": false
     }
    ],
-   "dauer": 11.68
+   "dauer": 12.1
   },
   {
    "name": "Merke",

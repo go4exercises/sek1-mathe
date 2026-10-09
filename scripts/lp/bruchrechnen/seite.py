@@ -144,7 +144,7 @@ fest1 = r'''      <div class="festhalten">
           <div class="titel">Häufiger Fehler</div>
           <p><b>Kürzen nur bei Faktoren, nie bei Summanden.</b> \(\tfrac{2 + 3}{2 + 5}\) ist \(\tfrac{5}{7}\), nicht \(\tfrac{3}{5}\). Zuerst ausrechnen, dann kürzen.</p>
           <p><b>Erweitern heisst multiplizieren, nicht addieren:</b> \(\tfrac{3 + 1}{4 + 1} = \tfrac{4}{5}\) ist ein anderer Anteil als \(\tfrac{3}{4}\).</p>
-          <p><b>Nur teilweise gekürzt:</b> \(\tfrac{12}{18} = \tfrac{6}{9}\) stimmt, ist aber noch nicht fertig — \(6\) und \(9\) sind beide durch \(3\) teilbar.</p>
+          <p><b>Nur teilweise gekürzt:</b> \(\tfrac{12}{18} = \tfrac{6}{9}\) stimmt, ist aber noch nicht fertig: \(6\) und \(9\) sind beide durch \(3\) teilbar.</p>
         </div>
       </div>'''
 auf1 = test('t1', 'Aufgaben · Kapitel 1', 13, [
@@ -152,8 +152,8 @@ auf1 = test('t1', 'Aufgaben · Kapitel 1', 13, [
      r'<p>\(\tfrac{5}{6} = \tfrac{5 \cdot 4}{6 \cdot 4} = \tfrac{20}{24}\). \(\text{ggT}(45;\ 60) = 15\): \(\tfrac{45}{60} = \tfrac{3}{4}\).</p>', ''),
     ('1b', 2, r'Welche Brüche sind gleich gross wie \(\tfrac{2}{5}\)? \(\;\tfrac{4}{10}\), \(\tfrac{6}{15}\), \(\tfrac{7}{10}\), \(\tfrac{10}{25}\), \(\tfrac{3}{6}\)',
      r'<p>\(\tfrac{4}{10}\), \(\tfrac{6}{15}\) und \(\tfrac{10}{25}\) — sie lassen sich alle auf \(\tfrac{2}{5}\) kürzen. \(\tfrac{7}{10}\) und \(\tfrac{3}{6} = \tfrac{1}{2}\) nicht.</p>', ''),
-    ('1c', 3, r'Ordne der Grösse nach, beginne mit dem kleinsten: \(\;\tfrac{3}{4}\), \(\tfrac{5}{8}\), \(\tfrac{2}{3}\)',
-     r'<p>Gemeinsamer Nenner \(24\): \(\tfrac{3}{4} = \tfrac{18}{24}\), \(\tfrac{5}{8} = \tfrac{15}{24}\), \(\tfrac{2}{3} = \tfrac{16}{24}\). Also \(\tfrac{5}{8} \lt \tfrac{2}{3} \lt \tfrac{3}{4}\).</p>', ''),
+    ('1c', 3, r'Ordne der Grösse nach, beginne mit dem kleinsten: \(\;\tfrac{5}{6}\), \(\tfrac{4}{5}\), \(\tfrac{7}{10}\)',
+     r'<p>Gemeinsamer Nenner \(30\): \(\tfrac{5}{6} = \tfrac{25}{30}\), \(\tfrac{4}{5} = \tfrac{24}{30}\), \(\tfrac{7}{10} = \tfrac{21}{30}\). Also \(\tfrac{7}{10} \lt \tfrac{4}{5} \lt \tfrac{5}{6}\).</p>', ''),
     ('1d', 2, r'Lea kürzt so: «\(\tfrac{6 + 4}{6 + 9}\) — die \(6\) streiche ich oben und unten, also \(\tfrac{4}{9}\).» Was ist falsch? Rechne richtig.',
      r'<p>Lea kürzt Summanden. Kürzen darf man nur Faktoren. Richtig: \(\tfrac{6 + 4}{6 + 9} = \tfrac{10}{15} = \tfrac{2}{3}\) — und \(\tfrac{4}{9}\) ist kleiner als \(\tfrac{2}{3}\).</p>', ''),
     ('1e', 2, r'Warum ändert sich der Wert eines Bruchs beim Erweitern nicht? Erkläre mit dem Bruchstreifen.',
@@ -174,7 +174,7 @@ sim2 = f'''      <figure class="sim sim-gross" id="sim2" aria-label="Bruchstreif
         <svg viewBox="0 0 340 200" role="img" aria-label="Zwei Bruchstreifen mit einer gemeinsamen Unterteilung, darunter das Ergebnis"></svg>
         <label class="sim-schalter"><input type="checkbox"> roter Streifen: «Zähler plus Zähler, Nenner plus Nenner»</label>
         <div class="sl-row">
-          {regler('s2-n', 'gemeinsame Unterteilung', 'gruen', 1, 24, 4)}
+          {regler('s2-n', 'gemeinsame Unterteilung', 'orange', 1, 24, 4)}
         </div>
       </figure>'''
 fest2 = r'''      <div class="festhalten">
@@ -187,7 +187,7 @@ fest2 = r'''      <div class="festhalten">
             <li>\(\dfrac{5}{12} + \dfrac{7}{18} = \dfrac{15}{36} + \dfrac{14}{36}\) <span class="warum">erweitern mit 3 und mit 2</span></li>
             <li>\(= \dfrac{29}{36}\) <span class="warum">Zähler addieren; 29 und 36 haben keinen gemeinsamen Teiler</span></li>
           </ol>
-          <p>Mit einer ganzen Zahl: \(2 - \tfrac{3}{4} = \tfrac{8}{4} - \tfrac{3}{4} = \tfrac{5}{4}\).</p>
+          <p>Mit einer ganzen Zahl: \(2 - \tfrac{3}{4} = \tfrac{8}{4} - \tfrac{3}{4} = \tfrac{5}{4}\). Bei drei oder mehr Brüchen braucht es einen Nenner, in dem alle aufgehen.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -195,20 +195,20 @@ fest2 = r'''      <div class="festhalten">
           <p><b>Am Schluss nicht kürzen:</b> \(\tfrac{1}{6} + \tfrac{1}{3} = \tfrac{1}{6} + \tfrac{2}{6} = \tfrac{3}{6}\) ist erst fertig als \(\tfrac{1}{2}\).</p>
         </div>
       </div>'''
-auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
-    ('2a', 2, r'Berechne und kürze: \(\tfrac{3}{8} + \tfrac{1}{8}\) und \(\tfrac{7}{10} - \tfrac{3}{10}\)',
-     r'<p>\(\tfrac{4}{8} = \tfrac{1}{2}\) und \(\tfrac{4}{10} = \tfrac{2}{5}\).</p>', ''),
+auf2 = test('t2', 'Aufgaben · Kapitel 2', 15, [
+    ('2a', 3, r'Berechne und kürze: \(\tfrac{5}{12} + \tfrac{1}{12}\); \(\;\tfrac{9}{10} - \tfrac{3}{10}\); \(\;3 - \tfrac{5}{7}\)',
+     r'<p>\(\tfrac{6}{12} = \tfrac{1}{2}\); \(\tfrac{6}{10} = \tfrac{3}{5}\); \(3 = \tfrac{21}{7}\), also \(\tfrac{21}{7} - \tfrac{5}{7} = \tfrac{16}{7}\).</p>', ''),
     ('2b', 3, r'Berechne: \(\tfrac{3}{4} + \tfrac{5}{6}\)',
      r'<p>Hauptnenner \(12\): \(\tfrac{9}{12} + \tfrac{10}{12} = \tfrac{19}{12}\). Vollständig gekürzt, denn \(19\) ist eine Primzahl.</p>', ''),
     ('2c', 3, r'Berechne: \(\tfrac{11}{12} - \tfrac{4}{9}\)',
      r'<p>\(\text{kgV}(12;\ 9) = 36\): \(\tfrac{33}{36} - \tfrac{16}{36} = \tfrac{17}{36}\).</p><p class="komm">Mit dem Produkt \(108\) als Nenner geht es auch, aber dann muss am Schluss gekürzt werden: \(\tfrac{51}{108} = \tfrac{17}{36}\).</p>', ''),
-    ('2d', 2, r'Berechne: \(3 - \tfrac{5}{7}\)',
-     r'<p>\(3 = \tfrac{21}{7}\), also \(\tfrac{21}{7} - \tfrac{5}{7} = \tfrac{16}{7}\).</p>', ''),
-    ('2e', 2, r'Tim rechnet \(\tfrac{2}{3} + \tfrac{1}{4} = \tfrac{3}{7}\). Zeige ohne Rechnung, dass das nicht stimmen kann. Rechne dann richtig.',
-     r'<p>\(\tfrac{3}{7}\) ist kleiner als \(\tfrac{1}{2}\), also auch kleiner als \(\tfrac{2}{3}\) allein — die Summe muss aber grösser sein als \(\tfrac{2}{3}\). Richtig: \(\tfrac{8}{12} + \tfrac{3}{12} = \tfrac{11}{12}\).</p>', ''),
-    ('2f', 2, r'Die Streifen zeigen \(\tfrac{1}{2}\) und \(\tfrac{1}{3}\). Warum darf man bei \(\tfrac{1}{6} + \tfrac{2}{6}\) die Zähler direkt addieren, bei \(\tfrac{1}{2} + \tfrac{1}{3}\) aber nicht?',
-     r'<p>Sechstel sind gleich grosse Stücke — man zählt einfach, wie viele es sind. Halbe und Drittel sind verschieden gross; erst wenn beide in Sechstel zerlegt sind (\(\tfrac{3}{6}\) und \(\tfrac{2}{6}\)), darf man zählen.</p>',
-     streifen('2,1;3,1', 'Zwei Streifen: einer in Halbe geteilt mit einem gefärbten Teil, einer in Drittel geteilt mit einem gefärbten Teil')),
+    ('2d', 2, r'Tim rechnet \(\tfrac{2}{3} + \tfrac{1}{4} = \tfrac{3}{7}\). Zeige ohne Rechnung, dass das nicht stimmen kann. Rechne dann richtig.',
+     r'<p>\(\tfrac{3}{7}\) ist kleiner als \(\tfrac{1}{2}\), also auch kleiner als \(\tfrac{2}{3}\) allein — die Summe zweier positiver Brüche muss aber grösser sein als \(\tfrac{2}{3}\). Richtig: \(\tfrac{8}{12} + \tfrac{3}{12} = \tfrac{11}{12}\).</p>', ''),
+    ('2e', 2, r'Die Streifen zeigen \(\tfrac{1}{3}\) und \(\tfrac{1}{5}\). Warum darf man bei \(\tfrac{2}{15} + \tfrac{4}{15}\) die Zähler direkt addieren, bei \(\tfrac{1}{3} + \tfrac{1}{5}\) aber nicht?',
+     r'<p>Fünfzehntel sind gleich grosse Stücke — man zählt einfach, wie viele es sind. Drittel und Fünftel sind verschieden gross; erst wenn beide in Fünfzehntel zerlegt sind (\(\tfrac{5}{15}\) und \(\tfrac{3}{15}\)), darf man zählen: \(\tfrac{8}{15}\).</p>',
+     streifen('3,1;5,1', 'Zwei Streifen: einer in Drittel geteilt mit einem gefärbten Teil, einer in Fünftel geteilt mit einem gefärbten Teil')),
+    ('2f', 2, r'Drei Brüche: \(\tfrac{1}{2} + \tfrac{2}{3} - \tfrac{3}{4}\)',
+     r'<p>Hauptnenner \(\text{kgV}(2;\ 3;\ 4) = 12\): \(\tfrac{6}{12} + \tfrac{8}{12} - \tfrac{9}{12} = \tfrac{5}{12}\).</p><p class="komm">Bei drei Brüchen geht es gleich: ein Nenner, in dem alle drei aufgehen.</p>', ''),
 ])
 k2 = kapitel(2, 'addieren', 'Addieren und Subtrahieren', 45,
              r'Du addierst und subtrahierst Brüche, indem du sie mit dem Hauptnenner gleichnamig machst, und gibst das Ergebnis vollständig gekürzt an.',
@@ -243,6 +243,7 @@ fest3 = r'''      <div class="festhalten">
           <p>Ganze Zahl mal Bruch: Nur der Zähler wird multipliziert, \(3 \cdot \tfrac{2}{5} = \tfrac{6}{5}\). «\(\tfrac{2}{3}\) von \(12\)» heisst \(\tfrac{2}{3} \cdot 12 = 8\).</p>
           <p><b>Dividieren:</b> Mit dem <b>Kehrwert</b> des zweiten Bruchs multiplizieren (Zähler und Nenner vertauscht):</p>
           <p>\[ \frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} \qquad (b,\ c,\ d \neq 0) \]</p>
+          <p>Auch eine ganze Zahl hat einen Kehrwert: \(2 = \tfrac{2}{1}\), Kehrwert \(\tfrac{1}{2}\). Also \(\tfrac{4}{5} : 2 = \tfrac{4}{5} \cdot \tfrac{1}{2} = \tfrac{2}{5}\).</p>
           <p>Warum: \(\tfrac{3}{4} : \tfrac{1}{8}\) fragt «Wie oft passt \(\tfrac{1}{8}\) in \(\tfrac{3}{4}\)?» — sechsmal, denn \(\tfrac{3}{4} = \tfrac{6}{8}\). Und \(\tfrac{3}{4} \cdot 8 = 6\): Teilen durch \(\tfrac{1}{8}\) ist dasselbe wie mal \(8\).</p>
         </div>
         <div class="warn">
@@ -252,20 +253,20 @@ fest3 = r'''      <div class="festhalten">
           <p><b>Beim Multiplizieren braucht es keinen gemeinsamen Nenner</b> — gleichnamig machen ist nur beim Addieren und Subtrahieren nötig.</p>
         </div>
       </div>'''
-auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
-    ('3a', 2, r'Berechne und kürze vollständig: \(\tfrac{5}{6} \cdot \tfrac{3}{10}\)',
-     r'<p>Über Kreuz: \(5\) und \(10\) durch \(5\), \(3\) und \(6\) durch \(3\): \(\tfrac{1 \cdot 1}{2 \cdot 2} = \tfrac{1}{4}\).</p>', ''),
+auf3 = test('t3', 'Aufgaben · Kapitel 3', 16, [
+    ('3a', 4, r'Berechne und kürze vollständig: \(\tfrac{5}{6} \cdot \tfrac{3}{10}\) und \(\tfrac{3}{5} : \tfrac{9}{10}\)',
+     r'<p>Über Kreuz: \(5\) und \(10\) durch \(5\), \(3\) und \(6\) durch \(3\): \(\tfrac{1 \cdot 1}{2 \cdot 2} = \tfrac{1}{4}\). Und \(\tfrac{3}{5} \cdot \tfrac{10}{9} = \tfrac{30}{45} = \tfrac{2}{3}\).</p>', ''),
     ('3b', 4, r'Ganze Zahlen und Brüche: \(4 \cdot \tfrac{5}{6}\); \(\;\tfrac{2}{3}\) von \(15\); \(\;\tfrac{7}{8} : 7\); \(\;6 : \tfrac{3}{4}\)',
      r'<p>\(\tfrac{20}{6} = \tfrac{10}{3}\); \(\tfrac{2}{3} \cdot 15 = \tfrac{30}{3} = 10\); \(\tfrac{7}{8} \cdot \tfrac{1}{7} = \tfrac{1}{8}\); \(6 \cdot \tfrac{4}{3} = 8\).</p><p class="komm">Kontrolle zur letzten: \(\tfrac{3}{4}\) passt achtmal in \(6\), denn \(8 \cdot \tfrac{3}{4} = 6\).</p>', ''),
-    ('3c', 2, r'Berechne: \(\tfrac{3}{5} : \tfrac{9}{10}\)',
-     r'<p>\(\tfrac{3}{5} \cdot \tfrac{10}{9} = \tfrac{30}{45} = \tfrac{2}{3}\).</p>', ''),
-    ('3d', 2, r'Nora rechnet \(\tfrac{2}{5} : \tfrac{4}{7} = \tfrac{5}{2} \cdot \tfrac{4}{7} = \tfrac{20}{14} = \tfrac{10}{7}\). Finde den Fehler und rechne richtig.',
+    ('3c', 2, r'Nora rechnet \(\tfrac{2}{5} : \tfrac{4}{7} = \tfrac{5}{2} \cdot \tfrac{4}{7} = \tfrac{20}{14} = \tfrac{10}{7}\). Finde den Fehler und rechne richtig.',
      r'<p>Nora hat den Kehrwert vom ersten Bruch genommen. Umgedreht wird der zweite: \(\tfrac{2}{5} \cdot \tfrac{7}{4} = \tfrac{14}{20} = \tfrac{7}{10}\).</p><p class="komm">Ihr Ergebnis \(\tfrac{10}{7}\) ist genau der Kehrwert des richtigen — ein typisches Zeichen für diesen Fehler.</p>', ''),
-    ('3e', 2, r'Warum ist \(\tfrac{3}{4} \cdot \tfrac{2}{3}\) kleiner als \(\tfrac{3}{4}\), aber \(\tfrac{3}{4} : \tfrac{2}{3}\) grösser als \(\tfrac{3}{4}\)?',
-     r'<p>Mal \(\tfrac{2}{3}\) heisst: \(\tfrac{2}{3}\) davon nehmen — das ist weniger als das Ganze, \(\tfrac{1}{2}\). Durch \(\tfrac{2}{3}\) fragt, wie oft \(\tfrac{2}{3}\) hineinpasst; das Stück ist kleiner als \(\tfrac{3}{4}\), also passt es mehr als einmal: \(\tfrac{9}{8}\).</p>', ''),
-    ('3f', 2, r'Welche Multiplikation zeigt das Flächenmodell? Lies das Ergebnis ab und kürze.',
+    ('3d', 2, r'Warum ist \(\tfrac{5}{6} \cdot \tfrac{3}{5}\) kleiner als \(\tfrac{5}{6}\), aber \(\tfrac{5}{6} : \tfrac{3}{5}\) grösser als \(\tfrac{5}{6}\)?',
+     r'<p>Mal \(\tfrac{3}{5}\) heisst: \(\tfrac{3}{5}\) von \(\tfrac{5}{6}\) nehmen — das ist nur ein Teil davon: \(\tfrac{1}{2}\). Durch \(\tfrac{3}{5}\) fragt, wie oft \(\tfrac{3}{5}\) in \(\tfrac{5}{6}\) passt; das Stück ist kleiner, also passt es mehr als einmal: \(\tfrac{25}{18}\).</p>', ''),
+    ('3e', 2, r'Welche Multiplikation zeigt das Flächenmodell? Lies das Ergebnis ab und kürze.',
      r'<p>Blau sind \(\tfrac{3}{4}\) der Breite, orange \(\tfrac{2}{5}\) der Höhe: \(\tfrac{3}{4} \cdot \tfrac{2}{5}\). Grün sind \(6\) von \(20\) Kästchen: \(\tfrac{6}{20} = \tfrac{3}{10}\).</p>',
      '\n            <div class="mini-reihe"><svg class="mini-bruch" data-flaeche="3,4,2,5" aria-label="Quadrat: 3 von 4 Spalten blau, 2 von 5 Zeilen orange, Überlappung grün"></svg></div>'),
+    ('3f', 2, r'Lena hat \(\tfrac{5}{4}\) kg Mehl. Ein Rezept braucht \(\tfrac{3}{8}\) kg. (a) Für wie viele ganze Rezepte reicht das Mehl? Zeichne dazu einen Streifen in Achteln. (b) Wie viel Mehl sind \(\tfrac{2}{5}\) ihres Vorrats?',
+     r'<p>(a) Wie oft passt \(\tfrac{3}{8}\) in \(\tfrac{5}{4}\)? \(\tfrac{5}{4} : \tfrac{3}{8} = \tfrac{5}{4} \cdot \tfrac{8}{3} = \tfrac{10}{3}\) — dreimal ganz (es bleiben \(\tfrac{1}{8}\) kg). Im Streifen: \(\tfrac{5}{4} = \tfrac{10}{8}\), also zehn Achtel; je drei Achtel sind ein Rezept — drei Gruppen, ein Achtel bleibt. (b) «von» heisst mal: \(\tfrac{2}{5} \cdot \tfrac{5}{4} = \tfrac{1}{2}\) kg.</p>', ''),
 ])
 k3 = kapitel(3, 'multiplizieren', 'Multiplizieren und Dividieren', 45,
              r'Du multiplizierst Brüche, dividierst mit dem Kehrwert, kürzt vor dem Ausrechnen und erklärst beides am Bild.',
@@ -292,9 +293,10 @@ fest4 = r'''      <div class="festhalten">
             <li>Gleichrangiges <b>von links nach rechts</b>.</li>
           </ol>
           <p>Eine Rechnung, eine Kette — jeder Schritt eine Zeile:</p>
-          <p>\[ \frac{1}{2} - \frac{1}{3} \cdot \left(\frac{3}{4} - \frac{1}{4}\right) = \frac{1}{2} - \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{1}{3} \]</p>
+          <p>\[ \frac{1}{2} - \frac{1}{3} \cdot \left(\frac{3}{4} - \frac{1}{4}\right) = \frac{1}{2} - \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{2}{6} = \frac{1}{3} \]</p>
           <h4>Negative Brüche</h4>
           <p>Das Minus darf vor dem Bruch, im Zähler oder im Nenner stehen: \(-\tfrac{2}{3} = \tfrac{-2}{3} = \tfrac{2}{-3}\). Gerechnet wird mit den Vorzeichenregeln aus ℤ: \(\left(-\tfrac{3}{4}\right) \cdot \left(-\tfrac{2}{9}\right) = +\tfrac{6}{36} = \tfrac{1}{6}\).</p>
+          <p>Minus einer negativen Zahl heisst plus: \(\tfrac{1}{2} - \left(-\tfrac{1}{4}\right) = \tfrac{1}{2} + \tfrac{1}{4} = \tfrac{3}{4}\).</p>
           <h4>Potenzen von Brüchen</h4>
           <p>Zähler und Nenner werden potenziert: \(\left(\tfrac{2}{3}\right)^2 = \tfrac{4}{9}\). Auf die Klammer kommt es an: \(\left(-\tfrac{1}{2}\right)^2 = \tfrac{1}{4}\), aber \(-\left(\tfrac{1}{2}\right)^2 = -\tfrac{1}{4}\).</p>
         </div>
@@ -316,10 +318,10 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 16, [
      r'<p>\(\tfrac{9}{4} - \tfrac{3}{4} = \tfrac{6}{4} = \tfrac{3}{2}\) und \(-\tfrac{9}{4} + \tfrac{3}{4} = -\tfrac{6}{4} = -\tfrac{3}{2}\). Die beiden Ergebnisse sind Gegenzahlen.</p>', ''),
     ('4e', 3, r'Mia rechnet: \(\tfrac{3}{4} : \tfrac{3}{8} \cdot \tfrac{1}{2} = \tfrac{3}{4} : \tfrac{3}{16} = 4\). Welche Regel hat sie verletzt? Rechne richtig.',
      r'<p>\(:\) und \(\cdot\) sind gleichrangig — von links nach rechts. Mia hat zuerst multipliziert. Richtig: \(\tfrac{3}{4} : \tfrac{3}{8} = \tfrac{3}{4} \cdot \tfrac{8}{3} = 2\), dann \(2 \cdot \tfrac{1}{2} = 1\).</p>', ''),
-    ('4f', 2, r'Warum ist \(\left(-\tfrac{2}{3}\right)^2\) positiv, \(-\left(\tfrac{2}{3}\right)^2\) aber negativ?',
-     r'<p>\(\left(-\tfrac{2}{3}\right)^2 = \left(-\tfrac{2}{3}\right) \cdot \left(-\tfrac{2}{3}\right) = +\tfrac{4}{9}\): Minus mal Minus gibt Plus. Bei \(-\left(\tfrac{2}{3}\right)^2\) wird zuerst quadriert (Potenz vor Strich), das Minus kommt danach: \(-\tfrac{4}{9}\).</p>', ''),
+    ('4f', 2, r'Warum ist \(\left(-\tfrac{2}{3}\right) \cdot \left(-\tfrac{3}{4}\right)\) positiv, \(-\tfrac{2}{3} + \left(-\tfrac{3}{4}\right)\) aber negativ?',
+     r'<p>Beim Multiplizieren gilt: Minus mal Minus gibt Plus, also \(+\tfrac{6}{12} = \tfrac{1}{2}\). Beim Addieren kommt zu einer negativen Zahl noch eine negative dazu — man geht zweimal in die Minusrichtung: \(-\tfrac{8}{12} - \tfrac{9}{12} = -\tfrac{17}{12}\).</p>', ''),
 ])
-k4 = kapitel(4, 'reihenfolge', 'Rechenreihenfolge und negative Brüche', 50,
+k4 = kapitel(4, 'reihenfolge', 'Rechenreihenfolge und negative Brüche', 45,
              r'Du berechnest Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge — Klammern, Potenzen, Punkt vor Strich, von links nach rechts —, schreibst jeden Schritt auf und gibst das Ergebnis vollständig gekürzt an.',
              ('t1-4-lp-reihenfolge', 'Rechenreihenfolge und negative Brüche'), sim4,
              ('t1-4-lp-kontrolle-reihenfolge', 'Kontrollfragen zur Rechenreihenfolge'), fest4, [uebung('reihenfolge', 'Was kommt zuerst?'), uebung('vorzeichen', 'Negative Brüche')],
@@ -330,20 +332,30 @@ k0 = f'''
     <section class="kap" id="k0">
       <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen · 1.1 · 1.2 · 1.3</span><span class="zeit">≈ 10 min</span></div>
       <h2 id="vorwissen">Vorwissen</h2>
-      <p class="ziel">Teiler und Vielfache, Rechnen mit negativen Zahlen, Punkt vor Strich, Potenzen. Wenn das wackelt: <a href="{T1}">1.1 Zahlenmengen und Zahlenarten</a>, <a href="{T2}">1.2 Rechnen in ℤ, Potenzen</a> und <a href="{T3}">1.3 Übergang zu ℚ</a>.</p>
+      <p class="ziel">Teiler und Vielfache, Rechnen mit negativen Zahlen, Punkt vor Strich, Potenzen. Zuerst kurz wiederholen, dann der Vortest.</p>
+''' + r'''      <details class="anleitung">
+        <summary><h3>Kurz wiederholt</h3></summary>
+        <ul class="kurz">
+          <li><b>ggT</b> (grösster gemeinsamer Teiler): die grösste Zahl, durch die beide teilbar sind, zum Beispiel \(\text{ggT}(12;\ 18) = 6\). Braucht es zum Kürzen.</li>
+          <li><b>kgV</b> (kleinstes gemeinsames Vielfaches): die kleinste Zahl, die durch beide teilbar ist, zum Beispiel \(\text{kgV}(4;\ 6) = 12\). Braucht es zum Addieren.</li>
+          <li><b>Vorzeichen:</b> Plus mal Plus und Minus mal Minus gibt Plus, verschiedene Vorzeichen geben Minus; gleich beim Dividieren. Minus einer negativen Zahl ist plus: \(5 - (-2) = 7\).</li>
+          <li><b>Reihenfolge:</b> Klammern, Potenzen, Punkt vor Strich, sonst von links nach rechts.</li>
+          <li><b>Potenz:</b> \(2^3 = 2 \cdot 2 \cdot 2\). Bei \(-3^2\) gehört das Quadrat nur zur \(3\): \(-9\).</li>
+        </ul>
+      </details>
 ''' + test('t0', 'Vortest', 10, [
-    ('0a', 2, r'Bestimme den grössten gemeinsamen Teiler von \(18\) und \(24\) und das kleinste gemeinsame Vielfache von \(4\) und \(6\).',
-     r'<p>\(\text{ggT}(18;\ 24) = 6\); \(\text{kgV}(4;\ 6) = 12\).</p><p class="komm">ggT braucht Kapitel 1 (Kürzen), kgV Kapitel 2 (Hauptnenner).</p>', ''),
-    ('0b', 2, r'Berechne: \((-2) \cdot 3\); \(\;(-12) : (-4)\); \(\;-5 + 8\); \(\;3 - 7\)',
-     r'<p>\(-6\); \(3\); \(3\); \(-4\).</p><p class="komm">Dieselben Vorzeichenregeln gelten in Kapitel 4 für Brüche.</p>', ''),
+    ('0a', 2, r'Bestimme den grössten gemeinsamen Teiler von \(16\) und \(40\) und das kleinste gemeinsame Vielfache von \(6\) und \(10\).',
+     r'<p>\(\text{ggT}(16;\ 40) = 8\); \(\text{kgV}(6;\ 10) = 30\).</p><p class="komm">ggT braucht Kapitel 1 (Kürzen), kgV Kapitel 2 (Hauptnenner).</p>', ''),
+    ('0b', 2, r'Berechne: \((-2) \cdot 3\); \(\;(-12) : (-4)\); \(\;-5 + 8\); \(\;3 - 7\); \(\;3 - (-7)\)',
+     r'<p>\(-6\); \(3\); \(3\); \(-4\); \(10\).</p><p class="komm">Dieselben Vorzeichenregeln gelten in Kapitel 4 für Brüche.</p>', ''),
     ('0c', 2, r'Berechne: \(12 : 3 \cdot 2\) und \(2 + 3 \cdot 4\)',
      r'<p>\(12 : 3 \cdot 2 = 4 \cdot 2 = 8\) (von links nach rechts); \(2 + 3 \cdot 4 = 2 + 12 = 14\) (Punkt vor Strich).</p>', ''),
-    ('0d', 2, r'Welcher Anteil des Streifens ist gefärbt? Schreib \(0.75\) als Bruch.',
-     r'<p>\(\tfrac{3}{8}\); \(0.75 = \tfrac{75}{100} = \tfrac{3}{4}\).</p>', streifen('8,3', 'Streifen mit 8 Teilen, davon 3 gefärbt')),
+    ('0d', 2, r'Welcher Anteil des Streifens ist gefärbt, welcher nicht?',
+     r'<p>Gefärbt \(\tfrac{3}{8}\), nicht gefärbt \(\tfrac{5}{8}\) — zusammen \(\tfrac{8}{8} = 1\), das Ganze.</p>', streifen('8,3', 'Streifen mit 8 Teilen, davon 3 gefärbt')),
     ('0e', 2, r'Berechne: \(2^3\); \(\;(-3)^2\); \(\;-3^2\)',
      r'<p>\(8\); \(9\); \(-9\).</p><p class="komm">Bei \(-3^2\) gehört das Quadrat nur zur \(3\) — Potenz vor Strich.</p>', ''),
 ]) + '''
-      <p class="komm">Weniger als 7 von 10 Punkten: zuerst die verlinkten Themenseiten, dann Kapitel 1.</p>
+      <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen, die Lösungen des Vortests Schritt für Schritt nachrechnen, dann Kapitel 1.</p>
     </section>'''
 
 # ------------------------------------------------------------------ Gesamttest
@@ -352,7 +364,7 @@ gt = f'''
     <section class="kap" id="gesamttest">
       <div class="gesamt">
         <div class="gesamt-kopf">
-          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">1.4 · Kapitel 1–4</span><span class="zeit">≈ 25 min · 24 Punkte</span></div>
+          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">1.4 · Kapitel 1–4</span><span class="zeit">≈ 30 min · 25 Punkte</span></div>
           <h2 id="gesamttest-titel">Gesamttest</h2>
           <div class="pdf-weg">
             <div class="pdf-schritt"><span class="nr">1</span><div><b>Lösen</b> — auf Papier, mit Rechenweg, ohne Taschenrechner.<br>
@@ -365,10 +377,10 @@ gt = f'''
         <div class="bewertung">
           <b>Selbsteinschätzung</b>
           <table>
-            <tr><td>21 – 24 P</td><td>Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals (Zuordnung unten).</td></tr>
-            <tr><td>16 – 20 P</td><td>Den schwächsten Teil nochmals: Tüfteln und Übungen des Kapitels, in dem du die meisten Punkte verloren hast.</td></tr>
-            <tr><td>10 – 15 P</td><td>Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.</td></tr>
-            <tr><td>0 – 9 P</td><td>Zurück zum Vortest und zu Kapitel 1, von dort der Reihe nach weiter.</td></tr>
+            <tr><td>22 – 25 P</td><td>Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals (Zuordnung unten).</td></tr>
+            <tr><td>17 – 21 P</td><td>Den schwächsten Teil nochmals — gemessen am Anteil (Teil A 7, B 6, C 12 P): Tüfteln und Übungen der Kapitel dieses Teils.</td></tr>
+            <tr><td>11 – 16 P</td><td>Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.</td></tr>
+            <tr><td>0 – 10 P</td><td>Zurück zu den Kapiteln jedes Teils, in dem du weniger als die Hälfte erreicht hast; sind es alle drei, zum Vortest und zu Kapitel 1.</td></tr>
           </table>
           <p>Aufgabe → Kapitel: G1 → 1; G2 → 2; G3 → 1 und 2; G4, G5 → 3; G6 bis G9 → 4</p>
         </div>
@@ -428,12 +440,12 @@ oben = '''<div id="nav-root"></div>
        1 | erweitern/kürzen   | Bruchstreifen nachbauen    | 12/18 = 2/3          | Summanden kürzen; addieren      | 40
        2 | addieren           | gemeinsame Unterteilung    | 5/12 + 7/18 = 29/36  | Nenner addieren (1/2+1/3 ≠ 2/5) | 45
        3 | mal/durch          | Flächenmodell, Messen      | 4/9 · 3/8 = 1/6      | Kehrwert vom falschen Bruch     | 45
-       4 | Reihenfolge        | Schrittwähler              | Kette mit Klammer    | Minus vor Klammer; links→rechts | 50
-       Gesamttest (PDF) 25 · Summe 215 min ≈ 4.8 Lektionen: vier Kapitel zu je einer Lektion, dazu
+       4 | Reihenfolge        | Schrittwähler              | Kette mit Klammer    | Minus vor Klammer; links→rechts | 45
+       Gesamttest (PDF) 30 · Summe 215 min ≈ 4.8 Lektionen: vier Kapitel zu je einer Lektion, dazu
        Vorwissen und Gesamttest. Vertiefung V1–V3 freiwillig, nicht eingerechnet.
 
      Aus der BM-Vorlage übernommen: Kompetenzen «Das kannst du danach», Vorwissen mit Verweisen,
-     Erkundung mit Entscheidung statt Lesen, Fehlerbeispiel mit Diagnosefrage je Kapitel (1d, 2e, 3d, 4e),
+     Erkundung mit Entscheidung statt Lesen, Fehlerbeispiel mit Diagnosefrage je Kapitel (1d, 2d, 3c, 4e),
      Feedback nach Fehlertyp, Tipps in drei Stufen (Impuls → nächster Schritt → Lösungsweg),
      «vollständig gekürzt» getrennt bewertet, Vertiefung getrennt vom Pflichtpfad.
      Bewusst nicht übernommen: Teams-/Flipped-Classroom-Ablauf, Kernpfad für die erste Doppellektion,
@@ -567,7 +579,7 @@ fuss = f'''
 </body>
 </html>
 '''
-# Zeiten (09.10.2026, mit Clips): Vorwissen 10 · K1 40 · K2 45 · K3 45 · K4 50 · Gesamttest 25 = 215 min
+# Zeiten (09.10.2026, mit Clips, nach der Prüfung): Vorwissen 10 · K1 40 · K2 45 · K3 45 · K4 45 · Gesamttest 30 = 215 min
 body = oben + k0 + k1 + k2 + k3 + k4 + gt + vt + unten
 seite = (kopf + open(SP + 'kopf.css').read() + open(SP + 'seite.css').read() + '</style>\n</head>\n<body>\n' + body + '\n'
          + mathjax + open(SP + 'basis.js').read() + '\n</script>\n' + open(SP + 'seite.js').read() + '\n' + fuss)

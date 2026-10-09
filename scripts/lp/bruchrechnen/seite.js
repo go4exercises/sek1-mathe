@@ -217,7 +217,7 @@
         var k1 = S.a * N / S.b, k2 = S.c * N / S.d;
         el(svg, 'text', { x: 4, y: 136, 'class': 'st-name' }, S.o === '+' ? 'Summe' : 'Differenz');
         if (S.o === '+'){ streifen(svg, X0, 114, W, 30, N, k1, 'f1'); for (var j = k1; j < k1 + k2; j++) el(svg, 'rect', { x: X0 + W * j / N, y: 114, width: W / N, height: 30, 'class': 'zelle f2' }); }
-        else { streifen(svg, X0, 114, W, 30, N, k1 - k2, 'f3'); for (var q = k1 - k2; q < k1; q++) el(svg, 'rect', { x: X0 + W * q / N, y: 114, width: W / N, height: 30, 'class': 'zelle weg' }); }
+        else { streifen(svg, X0, 114, W, 30, N, k1 - k2, 'f1'); for (var q = k1 - k2; q < k1; q++) el(svg, 'rect', { x: X0 + W * q / N, y: 114, width: W / N, height: 30, 'class': 'zelle weg' }); }
         el(svg, 'rect', { x: X0, y: 114, width: W, height: 30, 'class': 'rahmen' });
         var roh = { z: S.o === '+' ? k1 + k2 : k1 - k2, n: N };
         t += '<br>' + hb({ z: k1, n: N }) + ' ' + S.o + ' ' + hb({ z: k2, n: N }) + ' = ' + hb(roh) + (gleich(roh, r) && (roh.n !== r.n) ? ' = ' + hb(r) : '');
@@ -317,7 +317,7 @@
         ok: function(z){ return z.m === 'mal' && z.a === 3 && z.b === 5 && z.c === 2 && z.d === 3; } },
       { text: 'Stell zwei Brüche kleiner als 1 ein, deren Produkt genau \\(\\tfrac{1}{4}\\) ist — aber nicht \\(\\tfrac{1}{2} \\cdot \\tfrac{1}{2}\\).', setup: auf('mal'),
         ok: function(z){ return z.m === 'mal' && z.a < z.b && z.c < z.d && 4 * z.a * z.c === z.b * z.d && !(z.a * 2 === z.b && z.c * 2 === z.d); } },
-      { text: 'Mal einen Bruch kleiner als 1 gibt weniger. Finde trotzdem ein Produkt, das grösser als \\(\\tfrac{1}{2}\\) ist — beide Brüche kleiner als 1.', setup: auf('mal'),
+      { text: 'Mal einen positiven Bruch kleiner als 1 gibt weniger. Finde trotzdem ein Produkt, das grösser als \\(\\tfrac{1}{2}\\) ist — beide Brüche kleiner als 1.', setup: auf('mal'),
         ok: function(z){ return z.m === 'mal' && z.a < z.b && z.c < z.d && 2 * z.a * z.c > z.b * z.d; } },
       { text: '«Durch»: Wie oft passt \\(\\tfrac{1}{6}\\) in \\(\\tfrac{1}{2}\\)? Stell \\(\\tfrac{1}{2} : \\tfrac{1}{6}\\) ein.', setup: auf('durch'),
         ok: function(z){ return z.m === 'durch' && z.a === 1 && z.b === 2 && z.c === 1 && z.d === 6; } },
@@ -346,10 +346,36 @@
   var TEXOP = { '+': '+', '−': '-', '·': '\\cdot', ':': ':' };
   function texVon(k, erst){
     if (k.t === 'z') return tb(k.b, !erst);
+    if (k.t === 'x') return erst ? k.s : '\\left(' + k.s + '\\right)';   // Zwischenschritt im Lösungsweg
     if (k.t === 'k') return '\\left(' + texVon(k.x, true) + '\\right)';
     if (k.t === 'p'){ var b = k.x.t === 'z' && (k.x.b.n !== 1 || k.x.b.z < 0) ? '\\left(' + tb(k.x.b, false) + '\\right)' : texVon(k.x, true); return b + '^{' + k.e + '}'; }
     return texVon(k.l, erst) + ' ' + TEXOP[k.o] + ' ' + texVon(k.r, false);
   }
+  /* Teilschritte einer einzelnen Rechnung als LaTeX, für die Lösungswege der Übungen (Prüfung 09.10.2026: «kleinschrittig»):
+     + und −: gleichnamig machen → Zähler verrechnen → kürzen;  ·: Produkt → kürzen;  ':': mal Kehrwert → Produkt → kürzen. */
+  function frT(z, n, kl){ return tb({ z: z, n: n }, kl); }
+  function stufen(o, x, y){
+    var out = [], r, roh;
+    if (o === '+' || o === '−'){
+      var h = kgV(x.n, y.n), z1 = x.z * h / x.n, z2 = y.z * h / y.n;
+      if (h !== x.n || h !== y.n) out.push(frT(z1, h) + ' ' + TEXOP[o] + ' ' + frT(z2, h, true));
+      roh = { z: o === '+' ? z1 + z2 : z1 - z2, n: h };
+    } else if (o === ':'){
+      var kw = B(y.n, y.z);
+      out.push(tb(x) + ' \\cdot ' + tb(kw, true));
+      roh = { z: x.z * kw.z, n: x.n * kw.n };
+    } else if (o === '·'){
+      roh = { z: x.z * y.z, n: x.n * y.n };
+    } else {                                              // Potenz (nur Quadrat)
+      out.push(tb(x, true) + ' \\cdot ' + tb(x, true));
+      roh = { z: x.z * x.z, n: x.n * x.n };
+    }
+    r = B(roh.z, roh.n);
+    if (roh.n !== r.n) out.push(frT(roh.z, roh.n));
+    out.push(tb(r));
+    return out;
+  }
+
   function schluessel(k){
     if (k.t === 'z') return txt(k.b);
     if (k.t === 'k') return '(' + schluessel(k.x) + ')';
@@ -430,11 +456,13 @@
       if (gleich(e, { z: -r.z, n: r.n })) return 'Vorzeichen prüfen' + (k.o === '·' || k.o === ':' || k.t === 'p' ? ': Minus mal Minus gibt Plus, Minus mal Plus gibt Minus.' : '.');
       if (k.t === 'p'){ if (e.n === x.n && e.z === x.z * x.z) return 'Auch den Nenner quadrieren: \\(\\left(\\tfrac{a}{b}\\right)^2 = \\tfrac{a^2}{b^2}\\).';
         return 'Quadrieren heisst: den Bruch mit sich selbst multiplizieren.'; }
+      if (k.o === '−' && y.z < 0 && gleich(e, minus(x, B(-y.z, y.n)))) return '<b>Minus einer negativen Zahl</b> heisst plus: \\(a - (-b) = a + b\\).';
       if ((k.o === '+' || k.o === '−') && x.n !== y.n && e.n === x.n + y.n) return 'Nenner nicht addieren — zuerst <b>gleichnamig</b> machen, dann die Zähler verrechnen.';
       if (k.o === '·' && gleich(e, durch(x, y))) return 'Das wäre geteilt. Mal: Zähler mal Zähler, Nenner mal Nenner.';
       if (k.o === ':' && gleich(e, mal(x, y))) return '<b>Kehrwert</b> vergessen: Durch einen Bruch teilen heisst mit seinem Kehrwert multiplizieren.';
       if (k.o === ':' && gleich(e, durch(y, x))) return 'Kehrwert vom <b>zweiten</b> Bruch nehmen, nicht vom ersten.';
-      if (k.o === '−' && gleich(e, minus(y, x))) return 'Reihenfolge: Rechne «links minus rechts».';
+      // (Die Diagnose «links minus rechts» entfiel: y − x = −r fängt schon die Vorzeichenprüfung oben ab.)
+      if ((k.o === '+' || k.o === '−') && x.n === y.n) return 'Die Brüche sind schon gleichnamig: Zähler verrechnen, der Nenner bleibt. Achte auf die Vorzeichen.';
       return k.o === '+' || k.o === '−' ? 'Gleichnamig machen, dann die Zähler verrechnen. Rechne nochmals nach.' : 'Rechne nochmals nach.';
     }
     function uebernehmen(r, roh){
@@ -510,9 +538,9 @@
       'ml|2/3|3/4', 'ml|3/8|4/9', 'ml|3/10|5/6', 'ml|2/5|3/4', 'ml|7/12|9/14', 'ml|4|5/6', 'ml|2/5|3', 'ml|12|2/3', 'ml|15|2/3', 'ml|1/2|1/3', 'ml|1/2|1/2', 'ml|1/3|1/2',
       // durch: dv|x|y
       'dv|3/4|1/8', 'dv|3/4|1/2', 'dv|3/5|9/10', 'dv|7/8|7', 'dv|6|3/4', 'dv|2/5|4/7', 'dv|3/4|2/3', 'dv|3/2|1/4', 'dv|1/4|3/2', 'dv|2/3|4/9', 'dv|5/12|5/6', 'dv|3/8|3/8',
-      'dv|4/9|8/9', 'dv|2/3|-4/9', 'dv|3/4|3/8',
+      'dv|4/9|8/9', 'dv|3/4|3/8',
       // vorzeichen: vz|Term
-      'vz|-3/4·-2/9', 'vz|-2/5+-2/5', 'vz|-3/2^2', 'vz|-2/3^2',
+      'vz|-2/9·-3/4', 'vz|-2/5+-2/5', 'vz|-3/2^2', 'vz|-2/3^2', 'vz|2/3:-4/9', 'vz|-2/3·-3/4', 'vz|-1/2--1/4', 'vz|1/2−--1/4',
       // reihenfolge: rf|Term
       'rf|1/4+2/3·3/8', 'rf|5/6−(1/4:3/2)', 'rf|2/3:4/9·1/2', 'rf|7/12−1/4·2/3', 'rf|(3/4−1/3):5/6', 'rf|3/4:3/8·1/2', 'rf|3/4−1/2·(5/6−1/3)',
       'rf|1/3+1/6·4', 'rf|1/2−1/3·(3/4−1/4)', 'rf|3/4−(1/2−1/4)', 'rf|1:1/2·1/2', 'rf|9/14·7/12:3/8', 'rf|7/15+5/6−1/2',
@@ -523,11 +551,55 @@
       'ml|2/3|3/5', 'ml|2/5|3/4', 'ml|1/3|3/4', 'ml|2/7|5', 'ml|2/3|2/3', 'ml|3/4|3/4',
       'dv|1/2|1/6', 'dv|2/3|1/2', 'dv|4/5|2/3', 'dv|2/3|1/6', 'dv|1/2|1/3',
       'vz|-2/5·-5/6', 'vz|-1/2^2', 'vz|-3/4^2',
-      'rf|2/5+3/5·1/3', 'rf|3/4:1/4·1/3', 'rf|2/3−(1/2−1/6)'
+      'rf|2/5+3/5·1/3', 'rf|3/4:1/4·1/3', 'rf|2/3−(1/2−1/6)',
+      // Nachprüfung 09.10.2026: Teilschritte fester Aufgaben, neue Aufgaben (2a, 2f, 2g, 3e, 3g, 4f, G1, G3, G4, G6, G7)
+      'er|3/4|16', 'er|3/4|24', 'er|5/8|24', 'er|2/3|24', 'er|5/6|36', 'er|7/9|36', 'er|3/4|36', 'er|1/2|12', 'er|2/3|12', 'er|3/4|12',
+      'kz|4/8', 'kz|6/10', 'kz|21/28', 'kz|15/20', 'kz|6/12', 'kz|15/30', 'kz|10/12',
+      'hn|12|18', 'hn|9|12', 'hn|3|5', 'hn|2|3', 'hn|4|6', 'hn|6|15',
+      'as|+|1/12|5/12', 'as|−|9/10|3/10', 'as|+|2/15|4/15', 'as|+|1/3|1/5', 'as|+|1/2|2/3', 'as|−|7/6|3/4', 'as|−|3/4|1/3',
+      'as|−|5/6|1/3', 'as|−|13/10|1/2', 'as|−|7/9|3/4', 'as|+|1/8|3/8', 'as|−|7/12|1/6',
+      'ml|1/4|2/3', 'ml|1/6|4', 'ml|1/2|3/4', 'ml|3/5|5/6', 'ml|2/5|5/4', 'ml|7/12|9/14', 'ml|9/16|8/9', 'ml|1/2|4/5',
+      'dv|3/8|3/4', 'dv|9/16|9/8', 'dv|5/6|3/5', 'dv|5/4|3/8', 'dv|4/5|2',
+      'rf|9/14·7/12:3/4', 'rf|(5/6−1/3)·3/4+1/8', 'rf|1/2+2/3−3/4'
     ];
     function gesperrt(T, A){ return T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
     window.__SPERRE = SPERRE;                                  // Testhaken (pruef-schritte.mjs: Verteilung)
     function sortiert(a, b){ return [a, b].sort().join('|'); }
+
+    /* Grösster Hauptnenner, den ein Term beim Ausrechnen in einem Plus- oder Minus-Schritt braucht. */
+    function hnMax(k){
+      var m = 0;
+      (function w(n){
+        if (n.t === 'z') return n.b;
+        if (n.t === 'k') return w(n.x);
+        if (n.t === 'p') return hoch(w(n.x), n.e);
+        var a = w(n.l), b = w(n.r);
+        if (n.o === '+' || n.o === '−') m = Math.max(m, kgV(a.n, b.n));
+        return rechne(n.o, a, b);
+      })(k);
+      return m;
+    }
+    /* Lösungsweg eines Terms: Schritt für Schritt, jede Rechnung mit ihren Teilschritten (stufen). */
+    function weg(t0){
+      var k = [texVon(t0, true)], t = JSON.parse(JSON.stringify(t0));
+      function schritt(n){                                  // innerster bereiter Knoten, links zuerst
+        if (n.t === 'z') return null;
+        if (n.t === 'k') return schritt(n.x);
+        if (n.t === 'p') return n.x.t === 'z' ? n : schritt(n.x);
+        var a = schritt(n.l); if (a) return a;
+        var b = schritt(n.r); if (b) return b;
+        return n.l.t === 'z' && n.r.t === 'z' ? n : null;
+      }
+      function ers(n, alt, neu){ if (n === alt) return neu; ['l', 'r', 'x'].forEach(function(s_){ if (n[s_]) n[s_] = ers(n[s_], alt, neu); }); if (n.t === 'k' && n.x.t === 'z') return n.x; return n; }
+      for (var i = 0; i < 12 && t.t !== 'z'; i++){
+        var s = schritt(t); if (!s) break;
+        var teil = s.t === 'p' ? stufen('^', s.x.b) : stufen(s.o, s.l.b, s.r.b), alt = s.t;
+        teil.slice(0, -1).forEach(function(m){ s.t = 'x'; s.s = m; k.push(texVon(t, true)); s.t = alt; });
+        t = ers(t, s, { t: 'z', b: s.t === 'p' ? hoch(s.x.b, s.e) : rechne(s.o, s.l.b, s.r.b) });
+        k.push(texVon(t, true));
+      }
+      return chain(k);
+    }
 
     var TYPEN = {
       /* ── Kapitel 1 ─────────────────────────────────────────────── */
@@ -587,9 +659,9 @@
           if (e.h > 0 && e.h % A.b === 0 && e.h % A.d === 0) return 'Ein gemeinsamer Nenner ist \\(' + e.h + '\\) schon — aber nicht der <b>kleinste</b>. Gesucht ist das kleinste gemeinsame Vielfache.';
           return '\\(' + e.h + '\\) geht nicht: Beide Nenner \\(' + A.b + '\\) und \\(' + A.d + '\\) müssen im Hauptnenner <b>aufgehen</b>.'; },
         tipps: function(A){ var m = Math.max(A.b, A.d), k = Math.min(A.b, A.d), v = [];
-          for (var i = 1; i <= 5; i++) v.push(m * i);
+          for (var i = 1; i <= 3; i++) v.push(m * i);         // nur der Anfang: Die Liste soll nicht vor dem kgV abbrechen
           return ['Zähle die Vielfachen des grösseren Nenners auf, bis eines durch den kleineren teilbar ist.',
-            'Vielfache von \\(' + m + '\\): \\(' + v.join(';\\ ') + ';\\ \\ldots\\) — welches ist durch \\(' + k + '\\) teilbar?']; },
+            'Vielfache von \\(' + m + '\\): \\(' + v.join(';\\ ') + ';\\ \\ldots\\) — zähl weiter, bis eines durch \\(' + k + '\\) teilbar ist.']; },
         loesung: function(A){ return '\\text{kgV}(' + A.b + ';\\ ' + A.d + ') = ' + A.h; } },
 
       'addsub': { felder: ['b'],
@@ -602,7 +674,9 @@
             else { var b = zufallG(2, 12), d = zufallG(2, 12); if (b === d && Math.random() < 0.7) continue; x = B(echt(b, Math.min(b * 2, 20)), b); y = B(echt(d, Math.min(d * 2, 20)), d); }
             if (o === '−' && !(x.z * y.n > y.z * x.n)){ var t = x; x = y; y = t; }
             r = rechne(o, x, y); h = kgV(x.n, y.n);
-            if (!gleich(x, y) && h <= 48 && r.z > 0 && Math.abs(r.z) <= 60) break;
+            // Sonderwert (Prüfung 09.10.2026): 2/3 − 1/2 ergäbe auch mit nicht erweiterten Zählern (2 − 1)/6 = 1/6 — verwerfen.
+            var nichtErw = { z: o === '+' ? x.z + y.z : x.z - y.z, n: h };
+            if (!gleich(x, y) && h <= 48 && r.z > 0 && Math.abs(r.z) <= 60 && (x.n === y.n || !gleich(nichtErw, r))) break;
           }
           return { x: x, y: y, o: o, r: r, h: h, muster: '\\(' + gT(x, true) + ' ' + TEXOP[o] + ' ' + gT(y, true) + ' = \\) {b}',
             text: 'Berechne und kürze vollständig.' }; },
@@ -620,7 +694,7 @@
         pruefen: function(A, e){
           var f = TYPEN.addsub.falsche(A);
           for (var i = 0; i < f.length; i++) if (gleich(e.b, f[i][0])){
-            if (f[i][1] === 'gleichnamig') return 'Zähler plus Zähler und Nenner plus Nenner geht nicht: Die Stücke sind verschieden gross. Zuerst <b>gleichnamig</b> machen.';
+            if (f[i][1] === 'gleichnamig') return (A.o === '+' ? 'Zähler plus Zähler und Nenner plus Nenner' : 'Zähler minus Zähler und Nenner minus Nenner') + ' geht nicht: Die Stücke sind verschieden gross. Zuerst <b>gleichnamig</b> machen.';
             if (f[i][1] === 'Zähler') return 'Der Hauptnenner \\(' + A.h + '\\) stimmt. Beim Erweitern wird aber auch der <b>Zähler</b> multipliziert.';
             if (f[i][1] === 'Reihenfolge') return 'Vorzeichen falsch: Rechne «erster Bruch minus zweiter» — die <b>Reihenfolge</b> zählt beim Subtrahieren.';
           }
@@ -664,7 +738,7 @@
         pruefen: function(A, e){
           var f = TYPEN.mal.falsche(A);
           for (var i = 0; i < f.length; i++) if (gleich(e.b, f[i][0])){
-            if (f[i][1] === 'geteilt') return 'Das wäre <b>geteilt</b> (über Kreuz multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.';
+            if (f[i][1] === 'geteilt') return 'Das wäre <b>geteilt</b> (mit dem Kehrwert multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.';
             return 'Nur den Zähler mit der ganzen Zahl multiplizieren: \\(n \\cdot \\tfrac{a}{b} = \\tfrac{n \\cdot a}{b}\\). Wer auch den Nenner mitnimmt, hat nur erweitert.';
           }
           return 'Zähler mal Zähler, Nenner mal Nenner — und kürzen. Rechne nochmals nach.'; },
@@ -674,8 +748,13 @@
             g1 > 1 || g2 > 1 ? 'Über Kreuz kürzen: ' + (g1 > 1 ? '\\(' + A.x.z + '\\) und \\(' + A.y.n + '\\) durch \\(' + g1 + '\\)' : '') + (g1 > 1 && g2 > 1 ? '; ' : '') + (g2 > 1 ? '\\(' + A.y.z + '\\) und \\(' + A.x.n + '\\) durch \\(' + g2 + '\\)' : '') + '.'
                              : 'Hier lässt sich nicht über Kreuz kürzen: \\(\\tfrac{' + A.x.z + ' \\cdot ' + A.y.z + '}{' + A.x.n + ' \\cdot ' + A.y.n + '}\\) ausrechnen und am Schluss kürzen.']; },
         loesung: function(A){
-          var k = [gT(A.x) + ' \\cdot ' + gT(A.y), '\\tfrac{' + A.x.z + ' \\cdot ' + A.y.z + '}{' + A.x.n + ' \\cdot ' + A.y.n + '}', '\\tfrac{' + A.x.z * A.y.z + '}{' + A.x.n * A.y.n + '}'];
-          if (A.r.n !== A.x.n * A.y.n) k.push(gT(A.r));
+          // wie Tipp und Festhalten: zuerst über Kreuz kürzen, dann multiplizieren
+          var g1 = ggT(A.x.z, A.y.n), g2 = ggT(A.y.z, A.x.n);
+          var k = [gT(A.x) + ' \\cdot ' + gT(A.y), '\\tfrac{' + A.x.z + ' \\cdot ' + A.y.z + '}{' + A.x.n + ' \\cdot ' + A.y.n + '}'];
+          if (g1 > 1 || g2 > 1) k.push('\\tfrac{' + A.x.z / g1 + ' \\cdot ' + A.y.z / g2 + '}{' + A.x.n / g2 + ' \\cdot ' + A.y.n / g1 + '}');
+          var roh = { z: (A.x.z / g1) * (A.y.z / g2), n: (A.x.n / g2) * (A.y.n / g1) };
+          if (roh.n !== A.r.n) k.push('\\tfrac{' + roh.z + '}{' + roh.n + '}');
+          k.push(gT(A.r));
           return chain(k); } },
 
       'durch': { felder: ['b'],
@@ -710,6 +789,7 @@
 
       /* ── Kapitel 4 ─────────────────────────────────────────────── */
       'reihenfolge': { felder: ['b'],
+        // (hnMax und weg stehen vor TYPEN)
         schl: function(A){ return 'rf|' + schluessel(A.t); },
         eingabe: function(A){ return { b: bz(A.r) }; },
         neu: function(){
@@ -728,6 +808,7 @@
             else { t = O('+', O('−', x, y), z); w = minus(x.b, plus(y.b, z.b)); regel = 'links nach rechts'; }
             r = wertVon(t);
             if (r.n > 36 || Math.abs(r.z) > 40 || r.z === 0 || w.n === 0 || gleich(w, r) || w.n > 200) continue;
+            if (hnMax(t) > 48) continue;                       // auch kein Zwischenschritt mit Hauptnenner über 48 (Prüfung 09.10.2026)
             if (SPERRE.indexOf('rf|' + schluessel(t)) >= 0) continue;
             break;
           }
@@ -744,22 +825,7 @@
           return 'Arbeite Schritt für Schritt: Klammer, Potenz, Punkt vor Strich, sonst von links nach rechts. Rechne nochmals nach.'; },
         tipps: function(A){ return ['Was kommt zuerst? Klammern, dann Potenzen, dann Punkt vor Strich, sonst von links nach rechts.',
           'Hier gilt besonders: ' + (A.regel === 'Minus vor der Klammer' ? 'zuerst die Klammer ausrechnen.' : A.regel === 'Klammer' ? 'die Klammer zuerst.' : A.regel === 'Punkt vor Strich' ? 'Punkt vor Strich.' : 'von links nach rechts.')]; },
-        loesung: function(A){
-          var k = [texVon(A.t, true)], t = JSON.parse(JSON.stringify(A.t));
-          function schritt(n){                                  // innerster bereiter Knoten, links zuerst
-            if (n.t === 'z') return null;
-            if (n.t === 'k'){ var s0 = schritt(n.x); if (s0) return s0; return null; }
-            var a = schritt(n.l); if (a) return a;
-            var b = schritt(n.r); if (b) return b;
-            return n.l.t === 'z' && n.r.t === 'z' ? n : null;
-          }
-          function ers(n, alt, neu){ if (n === alt) return neu; ['l', 'r', 'x'].forEach(function(s){ if (n[s]) n[s] = ers(n[s], alt, neu); }); if (n.t === 'k' && n.x.t === 'z') return n.x; return n; }
-          for (var i = 0; i < 6 && t.t !== 'z'; i++){
-            var s = schritt(t); if (!s) break;
-            t = ers(t, s, { t: 'z', b: rechne(s.o, s.l.b, s.r.b) });
-            k.push(texVon(t, true));
-          }
-          return chain(k); } },
+        loesung: function(A){ return weg(A.t); } },
 
       'vorzeichen': { felder: ['b'],
         schl: function(A){ return 'vz|' + A.k; },
@@ -771,7 +837,7 @@
           for (var v = 0; v < 400; v++){
             x = q(); y = q(); art = zufallG(1, 5);
             if (art === 1){ var sx = zufall([-1, 1]), sy = sx === 1 ? -1 : zufall([-1, 1]); x = B(sx * x.z, x.n); y = B(sy * y.z, y.n);
-              r = mal(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' \\cdot ' + tb(y, true); k = txt(x) + '·' + txt(y); msg = 'mal'; }
+              r = mal(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' \\cdot ' + tb(y, true); k = [txt(x), txt(y)].sort().join('·'); msg = 'mal'; }   // sortiert: Produkt in beiden Reihenfolgen gesperrt
             else if (art === 2){ var sx2 = zufall([-1, 1]), sy2 = sx2 === 1 ? -1 : zufall([-1, 1]); x = B(sx2 * x.z, x.n); y = B(sy2 * y.z, y.n);
               r = durch(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' : ' + tb(y, true); k = txt(x) + ':' + txt(y); msg = 'mal'; }
             else if (art === 3){ x = B(-x.z, x.n); r = plus(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' + ' + tb(y, false); k = txt(x) + '+' + txt(y); msg = 'plus'; }
@@ -794,7 +860,10 @@
           return 'Zuerst das Vorzeichen bestimmen, dann mit den Beträgen rechnen und kürzen.'; },
         tipps: function(A){ return ['Rechne mit den Beträgen wie mit positiven Brüchen und bestimme das Vorzeichen getrennt — nach den Regeln aus ℤ.',
           A.msg === 'minusminus' ? 'Aus «minus minus» wird plus: \\(' + tb(A.x) + ' + ' + tb(A.y) + '\\).' : A.msg === 'plus' ? 'Gleichnamig machen; das Ergebnis hat das Vorzeichen der Zahl mit dem grösseren Betrag.' : A.msg === 'quadrat' ? 'Quadrat: mit sich selbst multiplizieren — Minus mal Minus.' : 'Vorzeichen des Ergebnisses: ' + (A.r.z > 0 ? 'plus' : 'minus') + '.']; },
-        loesung: function(A){ return A.tex + (A.msg === 'minusminus' ? ' = ' + tb(A.x) + ' + ' + tb(A.y) : '') + ' = ' + tb(A.r); } }
+        loesung: function(A){
+          var t = A.art === 1 ? stufen('·', A.x, A.y) : A.art === 2 ? stufen(':', A.x, A.y) : A.art === 3 ? stufen('+', A.x, A.y)
+                : A.art === 4 ? [tb(A.x) + ' + ' + tb(A.y)].concat(stufen('+', A.x, A.y)) : stufen('^', A.x);
+          return [A.tex].concat(t).join(' = '); } }
     };
     window.__TYPEN = TYPEN;
 
@@ -838,9 +907,10 @@
           if (r.komma) komma = true;
           if (f[0] === 'b'){
             if (gleich(r, A.r)){
-              if (r.dez) return hinweis('Gleicher Wert — gib das Ergebnis aber als <b>Bruch</b> an.');
-              if (!gekuerzt(r)) return hinweis(r.n === 1 ? 'Richtig gerechnet — schreib ganze Zahlen ohne Nenner: <code>' + r.z + '</code> statt <code>' + r.z + '/1</code>.'
-                : 'Richtiger Wert, aber noch nicht vollständig <b>gekürzt</b>: \\(' + Math.abs(r.z) + '\\) und \\(' + r.n + '\\) sind beide durch \\(' + ggT(r.z, r.n) + '\\) teilbar.');
+              if (r.dez) return hinweis(A.r.n === 1 ? 'Gleicher Wert — schreib die ganze Zahl ohne Komma und Nachkommastellen: <code>' + A.r.z + '</code>.' : 'Gleicher Wert — gib das Ergebnis aber als <b>Bruch</b> an.');
+              if (!gekuerzt(r)){ versuche++;                       // nicht fertig gekürzt: zählt als Versuch, «in Folge» bricht ab
+                return hinweis(r.n === 1 ? 'Richtig gerechnet — schreib ganze Zahlen ohne Nenner: <code>' + r.z + '</code> statt <code>' + r.z + '/1</code>.'
+                : 'Richtiger Wert, aber noch nicht vollständig <b>gekürzt</b>: \\(' + Math.abs(r.z) + '\\) und \\(' + r.n + '\\) sind beide durch \\(' + ggT(r.z, r.n) + '\\) teilbar.'); }
             }
             e[f] = r;
           } else {

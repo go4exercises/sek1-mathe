@@ -1,7 +1,7 @@
 {
  "titel": "Brüche sehen: Kontrollfragen zum Multiplizieren und Dividieren",
  "dateiname": "t1-4-lp-kontrolle-malnehmen",
- "kurzbeschrieb": "Fünf Fragen: 2/5 · 3/4, eine Multiplikation am Flächenmodell ablesen, 4/5 : 2/3, wie oft 1/6 in 2/3 passt, 5 · 2/7.",
+ "kurzbeschrieb": "Fünf Fragen: 3/5 · 5/6, eine Multiplikation am Flächenmodell ablesen, 4/5 : 2/3, wie oft 1/6 in 2/3 passt, 5 · 2/7.",
  "schlagworte": [
   "Multiplizieren",
   "Dividieren",
@@ -30,11 +30,11 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zähler mal Zähler und Nenner mal Nenner: sechs Zwanzigstel, gekürzt drei Zehntel.",
+   "sprecher": "Zähler mal Zähler und Nenner mal Nenner: fünfzehn Dreissigstel, gekürzt ein Halb.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\dfrac{2}{5} \\cdot \\dfrac{3}{4} = \\dfrac{6}{20} = \\fc{\\dfrac{3}{10}}",
+     "text": "\\dfrac{3}{5} \\cdot \\dfrac{5}{6} = \\dfrac{15}{30} = \\fc{\\dfrac{1}{2}}",
      "x": 150,
      "y": 320,
      "groesse": 64,
@@ -57,7 +57,7 @@
        "art": "vieleck",
        "punkte": [
         [
-         4.1,
+         5.9,
          0.5
         ],
         [
@@ -66,11 +66,11 @@
         ],
         [
          9.5,
-         7.25
+         8.0
         ],
         [
-         4.1,
-         7.25
+         5.9,
+         8.0
         ]
        ],
        "farbe": 2,
@@ -82,14 +82,14 @@
        "punkte": [
         [
          0.5,
-         7.25
+         8.0
         ],
         [
-         4.1,
-         7.25
+         5.9,
+         8.0
         ],
         [
-         4.1,
+         5.9,
          9.5
         ],
         [
@@ -109,16 +109,16 @@
          0.5
         ],
         [
-         4.1,
+         5.9,
          0.5
         ],
         [
-         4.1,
-         7.25
+         5.9,
+         8.0
         ],
         [
          0.5,
-         7.25
+         8.0
         ]
        ],
        "farbe": 3,
@@ -129,11 +129,24 @@
        "art": "strecke",
        "von": [
         0.5,
-        2.75
+        2.0
        ],
        "bis": [
         9.5,
-        2.75
+        2.0
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        3.5
+       ],
+       "bis": [
+        9.5,
+        3.5
        ],
        "farbe": 5,
        "dicke": 2
@@ -155,11 +168,24 @@
        "art": "strecke",
        "von": [
         0.5,
-        7.25
+        6.5
        ],
        "bis": [
         9.5,
-        7.25
+        6.5
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        8.0
+       ],
+       "bis": [
+        9.5,
+        8.0
        ],
        "farbe": 5,
        "dicke": 2
@@ -255,7 +281,7 @@
      "achsen": false
     }
    ],
-   "dauer": 5.97
+   "dauer": 5.79
   },
   {
    "name": "Frage 2",
@@ -851,22 +877,22 @@
    "szene": "Frage 1",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "2/5 · 3/4 = ?",
+   "text": "3/5 · 5/6 = ?",
    "optionen": [
-    "5/9",
-    "3/10",
-    "8/15"
+    "18/25",
+    "8/11",
+    "1/2"
    ],
-   "richtig": 1,
+   "richtig": 2,
    "rueck": {
-    "1": "Ja.",
-    "2": "Das wäre geteilt (über Kreuz multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.",
-    "0": "Das wäre Zähler plus Zähler, Nenner plus Nenner — beim Multiplizieren wird multipliziert."
+    "2": "Ja.",
+    "0": "Das wäre geteilt (mit dem Kehrwert multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.",
+    "1": "Das wäre Zähler plus Zähler, Nenner plus Nenner — beim Multiplizieren wird multipliziert."
    },
-   "sprich": "Zwei Fünftel mal drei Viertel gleich?",
+   "sprich": "Drei Fünftel mal fünf Sechstel gleich?",
    "rueck_sprich": {
-    "2": "Das wäre geteilt, über Kreuz multipliziert. Mal heisst: Zähler mal Zähler, Nenner mal Nenner.",
-    "0": "Das wäre Zähler plus Zähler, Nenner plus Nenner. Beim Multiplizieren wird multipliziert."
+    "0": "Das wäre geteilt, mit dem Kehrwert multipliziert. Mal heisst: Zähler mal Zähler und Nenner mal Nenner.",
+    "1": "Das wäre Zähler plus Zähler, Nenner plus Nenner. Beim Multiplizieren wird multipliziert."
    }
   },
   {
@@ -875,7 +901,7 @@
    "typ": "wahl",
    "text": "Welche Rechnung zeigt das Bild?",
    "optionen": [
-    "1/3 · 3/4 = 1/4",
+    "1/3 · 3/4",
     "1/3 + 3/4",
     "3/4 : 1/3"
    ],

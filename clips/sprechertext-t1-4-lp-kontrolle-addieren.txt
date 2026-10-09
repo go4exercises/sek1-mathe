@@ -2,5 +2,5 @@
 6.31	Vielfache von zwölf: zwölf, vierundzwanzig. Vierundzwanzig ist auch durch acht teilbar. Das ist der kleinste gemeinsame Nenner.
 14.72	Gemeinsamer Nenner zwanzig: fünf Zwanzigstel plus vier Zwanzigstel ergibt neun Zwanzigstel.
 20.98	Gemeinsamer Nenner zwölf: zehn Zwölftel minus drei Zwölftel ergibt sieben Zwölftel.
-27.04	Zwei Siebtel ist kleiner als ein Drittel. Die Summe muss aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.
-34.50	Zum Mitnehmen: Zuerst den kleinsten gemeinsamen Nenner suchen, dann Zähler und Nenner erweitern, dann die Zähler verrechnen und kürzen. Und eine schnelle Probe: Ist das Ergebnis überhaupt möglich?
+27.04	Zwei Siebtel ist kleiner als ein Drittel. Bei positiven Brüchen muss die Summe aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.
+35.83	Zum Mitnehmen: Zuerst den kleinsten gemeinsamen Nenner suchen, dann Zähler und Nenner erweitern, dann die Zähler verrechnen und kürzen. Und eine schnelle Probe: Ist das Ergebnis überhaupt möglich?

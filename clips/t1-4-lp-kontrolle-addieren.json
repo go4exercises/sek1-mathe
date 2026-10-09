@@ -353,11 +353,11 @@
       {
        "art": "strecke",
        "von": [
-        2.5,
+        1.833,
         5.0
        ],
        "bis": [
-        2.5,
+        1.833,
         5.7
        ],
        "farbe": 1,
@@ -367,10 +367,37 @@
       {
        "art": "text",
        "bei": [
-        2.5,
+        1.833,
         6.1
        ],
-       "text": "12",
+       "text": "8",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 1.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.167,
+        5.0
+       ],
+       "bis": [
+        3.167,
+        5.7
+       ],
+       "farbe": 1,
+       "dicke": 5,
+       "ein": 1.0
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.167,
+        6.1
+       ],
+       "text": "16",
        "farbe": 1,
        "anker": "middle",
        "groesse": 30,
@@ -407,11 +434,11 @@
       {
        "art": "strecke",
        "von": [
-        6.5,
+        5.833,
         5.0
        ],
        "bis": [
-        6.5,
+        5.833,
         5.7
        ],
        "farbe": 1,
@@ -421,10 +448,37 @@
       {
        "art": "text",
        "bei": [
-        6.5,
+        5.833,
         6.1
        ],
-       "text": "36",
+       "text": "32",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false,
+       "ein": 1.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7.167,
+        5.0
+       ],
+       "bis": [
+        7.167,
+        5.7
+       ],
+       "farbe": 1,
+       "dicke": 5,
+       "ein": 1.0
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.167,
+        6.1
+       ],
+       "text": "40",
        "farbe": 1,
        "anker": "middle",
        "groesse": 30,
@@ -461,11 +515,11 @@
       {
        "art": "strecke",
        "von": [
-        1.833,
+        2.5,
         4.3
        ],
        "bis": [
-        1.833,
+        2.5,
         5.0
        ],
        "farbe": 2,
@@ -475,37 +529,10 @@
       {
        "art": "text",
        "bei": [
-        1.833,
+        2.5,
         3.5
        ],
-       "text": "8",
-       "farbe": 2,
-       "anker": "middle",
-       "groesse": 30,
-       "kursiv": false,
-       "ein": 1.0
-      },
-      {
-       "art": "strecke",
-       "von": [
-        3.167,
-        4.3
-       ],
-       "bis": [
-        3.167,
-        5.0
-       ],
-       "farbe": 2,
-       "dicke": 5,
-       "ein": 1.0
-      },
-      {
-       "art": "text",
-       "bei": [
-        3.167,
-        3.5
-       ],
-       "text": "16",
+       "text": "12",
        "farbe": 2,
        "anker": "middle",
        "groesse": 30,
@@ -542,11 +569,11 @@
       {
        "art": "strecke",
        "von": [
-        5.833,
+        6.5,
         4.3
        ],
        "bis": [
-        5.833,
+        6.5,
         5.0
        ],
        "farbe": 2,
@@ -556,37 +583,10 @@
       {
        "art": "text",
        "bei": [
-        5.833,
+        6.5,
         3.5
        ],
-       "text": "32",
-       "farbe": 2,
-       "anker": "middle",
-       "groesse": 30,
-       "kursiv": false,
-       "ein": 1.0
-      },
-      {
-       "art": "strecke",
-       "von": [
-        7.167,
-        4.3
-       ],
-       "bis": [
-        7.167,
-        5.0
-       ],
-       "farbe": 2,
-       "dicke": 5,
-       "ein": 1.0
-      },
-      {
-       "art": "text",
-       "bei": [
-        7.167,
-        3.5
-       ],
-       "text": "40",
+       "text": "36",
        "farbe": 2,
        "anker": "middle",
        "groesse": 30,
@@ -1283,7 +1283,7 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zwei Siebtel ist kleiner als ein Drittel. Die Summe muss aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.",
+   "sprecher": "Zwei Siebtel ist kleiner als ein Drittel. Bei positiven Brüchen muss die Summe aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.",
    "elemente": [
     {
      "typ": "formel",
@@ -1567,7 +1567,7 @@
      "achsen": false
     }
    ],
-   "dauer": 7.46
+   "dauer": 8.79
   },
   {
    "name": "Merke",

@@ -383,12 +383,12 @@
    "rueck": {
     "2": "Ja.",
     "0": "9 entsteht, wenn zuerst 1/4 · 1/3 gerechnet wird. Gleichrangig heisst: von links nach rechts.",
-    "1": "Rechne von links nach rechts: zuerst 3/4 : 1/4."
+    "1": "1/9 entsteht, wenn man 1/4 · 1/3 durch 3/4 teilt. Rechne von links nach rechts: zuerst 3/4 : 1/4."
    },
    "sprich": "Drei Viertel durch ein Viertel mal ein Drittel gleich?",
    "rueck_sprich": {
     "0": "Neun entsteht, wenn zuerst ein Viertel mal ein Drittel gerechnet wird. Gleichrangig heisst: von links nach rechts.",
-    "1": "Rechne von links nach rechts: zuerst drei Viertel durch ein Viertel."
+    "1": "Ein Neuntel entsteht, wenn man ein Viertel mal ein Drittel durch drei Viertel teilt. Rechne von links nach rechts: zuerst drei Viertel durch ein Viertel."
    }
   },
   {

@@ -1,9 +1,9 @@
-0.40	Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also zählen wir sie. Vier Achtel, und gekürzt ein Halb.
-9.42	Ein Halb plus ein Drittel. Halbe und Drittel sind verschieden grosse Stücke. So kann man sie nicht einfach zählen.
-16.42	Teilen wir beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.
-26.20	Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe kann nicht kleiner sein als einer ihrer Summanden.
-36.00	Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn und sechsunddreissig. Sechsunddreissig ist auch durch zwölf teilbar.
-51.91	Fünf Zwölftel erweitern wir mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.
-62.55	Am Schluss immer prüfen, ob man kürzen kann. Ein Sechstel plus ein Drittel gibt drei Sechstel, also ein Halb. Und mit einer ganzen Zahl: zwei sind acht Viertel, also ist zwei minus drei Viertel gleich fünf Viertel.
-75.14	Zum Mitnehmen: Addieren und subtrahieren nur mit gleichen Nennern. Als gemeinsamen Nenner nimmt man das kleinste gemeinsame Vielfache. Nie die Nenner addieren, und am Schluss kürzen.
-85.20	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+0.40	Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also kannst du sie zählen. Vier Achtel, und gekürzt ein Halb.
+11.45	Ein Halb plus ein Drittel. Halbe und Drittel sind verschieden grosse Stücke. So kann man sie nicht einfach zählen.
+18.45	Teilst du beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.
+28.87	Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe positiver Brüche kann nicht kleiner sein als einer ihrer Summanden.
+39.74	Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn, sechsunddreissig und so weiter. Schon sechsunddreissig ist durch zwölf teilbar.
+55.93	Fünf Zwölftel erweiterst du mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.
+66.87	Am Schluss immer prüfen, ob man kürzen kann. Ein Sechstel plus ein Drittel gibt drei Sechstel, also ein Halb. Und mit einer ganzen Zahl: zwei sind acht Viertel, also ist zwei minus drei Viertel gleich fünf Viertel.
+79.46	Zum Mitnehmen: Addieren und subtrahieren nur mit gleichen Nennern. Als gemeinsamen Nenner nimmt man das kleinste gemeinsame Vielfache. Nie die Nenner addieren, und am Schluss kürzen.
+89.52	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

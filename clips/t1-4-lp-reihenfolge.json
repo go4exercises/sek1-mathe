@@ -76,7 +76,7 @@
    "name": "Beispiel",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel, und das ist ein Drittel.",
+   "sprecher": "Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel sind zwei Sechstel, und das ist ein Drittel.",
    "elemente": [
     {
      "typ": "formel",
@@ -85,7 +85,7 @@
      "y": 280,
      "groesse": 52,
      "ein": 0.05,
-     "aus": 4.04
+     "aus": 4.06
     },
     {
      "typ": "formel",
@@ -93,7 +93,7 @@
      "x": 150,
      "y": 280,
      "groesse": 52,
-     "ein": 4.04
+     "ein": 4.06
     },
     {
      "typ": "formel",
@@ -101,7 +101,7 @@
      "x": 150,
      "y": 433,
      "groesse": 52,
-     "ein": 6.72
+     "ein": 6.96
     },
     {
      "typ": "formel",
@@ -109,15 +109,15 @@
      "x": 150,
      "y": 576,
      "groesse": 52,
-     "ein": 9.74
+     "ein": 9.9
     },
     {
      "typ": "formel",
-     "text": "= \\fc{\\dfrac{1}{3}}",
+     "text": "= \\dfrac{2}{6} = \\fc{\\dfrac{1}{3}}",
      "x": 150,
      "y": 719,
      "groesse": 52,
-     "ein": 13.64
+     "ein": 13.46
     },
     {
      "typ": "graf",
@@ -127,7 +127,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.22,
+     "ein": 2.06,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -337,7 +337,7 @@
        "farbe": 3,
        "fuellung": 0.0,
        "dicke": 6,
-       "ein": 4.96
+       "ein": 5.38
       },
       {
        "art": "kreis",
@@ -349,7 +349,7 @@
        "farbe": 3,
        "fuellung": 0.0,
        "dicke": 6,
-       "ein": 9.1
+       "ein": 9.28
       },
       {
        "art": "kreis",
@@ -361,7 +361,7 @@
        "farbe": 3,
        "fuellung": 0.0,
        "dicke": 6,
-       "ein": 13.64
+       "ein": 14.9
       },
       {
        "art": "text",
@@ -374,7 +374,7 @@
        "anker": "start",
        "groesse": 36,
        "kursiv": false,
-       "ein": 4.96
+       "ein": 5.38
       },
       {
        "art": "text",
@@ -387,7 +387,7 @@
        "anker": "start",
        "groesse": 36,
        "kursiv": false,
-       "ein": 9.1
+       "ein": 9.28
       },
       {
        "art": "text",
@@ -400,7 +400,7 @@
        "anker": "start",
        "groesse": 36,
        "kursiv": false,
-       "ein": 13.64
+       "ein": 14.9
       }
      ],
      "pfeile": false,
@@ -417,7 +417,7 @@
      "achsen": false
     }
    ],
-   "dauer": 16.59
+   "dauer": 21.13
   },
   {
    "name": "Vorzeichen",
@@ -439,7 +439,7 @@
      "x": 150,
      "y": 438,
      "groesse": 52,
-     "ein": 6.61
+     "ein": 6.59
     },
     {
      "typ": "notiz",
@@ -448,7 +448,7 @@
      "y": 591,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 8.27
+     "ein": 8.25
     }
    ],
    "dauer": 12.36
@@ -465,7 +465,7 @@
      "x": 150,
      "y": 330,
      "groesse": 62,
-     "ein": 4.43
+     "ein": 4.41
     },
     {
      "typ": "graf",
@@ -708,7 +708,7 @@
    "name": "Klammer beim Minus",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Auf die Klammer kommt es an. Minus ein Halb in Klammern im Quadrat ist plus ein Viertel. Ohne Klammer wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.",
+   "sprecher": "Auf die Klammer kommt es an. Minus ein Halb in Klammern, im Quadrat, ist plus ein Viertel. Steht das Minus vor der Klammer, wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.",
    "elemente": [
     {
      "typ": "formel",
@@ -716,7 +716,7 @@
      "x": 150,
      "y": 300,
      "groesse": 60,
-     "ein": 4.02
+     "ein": 4.36
     },
     {
      "typ": "formel",
@@ -724,7 +724,7 @@
      "x": 150,
      "y": 473,
      "groesse": 60,
-     "ein": 4.94
+     "ein": 5.3
     },
     {
      "typ": "notiz",
@@ -733,10 +733,10 @@
      "y": 646,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 3.42
+     "ein": 9.06
     }
    ],
-   "dauer": 10.02
+   "dauer": 14.69
   },
   {
    "name": "Minus vor der Klammer",
@@ -750,7 +750,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 5.14
+     "ein": 5.11
     },
     {
      "typ": "formel",
@@ -758,7 +758,7 @@
      "x": 150,
      "y": 450,
      "groesse": 52,
-     "ein": 9.72
+     "ein": 9.73
     },
     {
      "typ": "notiz",
@@ -767,7 +767,7 @@
      "y": 593,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 11.86
+     "ein": 11.87
     }
    ],
    "dauer": 14.47

@@ -1,16 +1,16 @@
 {
  "erweitern": {
   "Anteil": {
-   "sprecher": "Ein Bruch beschreibt einen Anteil. Der Nenner sagt, in wie viele gleiche Teile das Ganze geteilt ist. Der Zähler sagt, wie viele Teile wir nehmen: hier drei von vier.",
+   "sprecher": "Ein Bruch beschreibt einen Anteil. Der Nenner sagt, in wie viele gleiche Teile das Ganze geteilt ist. Der Zähler sagt, wie viele Teile genommen werden: hier drei von vier.",
    "woerter": [
     [
      "Ein",
      0.0,
-     0.64
+     0.66
     ],
     [
      "Bruch",
-     0.64,
+     0.66,
      0.96
     ],
     [
@@ -21,456 +21,476 @@
     [
      "einen",
      1.42,
-     1.68
+     1.7
     ],
     [
      "Anteil.",
-     1.68,
-     2.16
+     1.7,
+     2.22
     ],
     [
      "Der",
-     2.5,
-     2.68
+     2.54,
+     2.72
     ],
     [
      "Nenner",
-     2.68,
-     2.94
+     2.72,
+     3.0
     ],
     [
      "sagt,",
-     2.94,
-     3.32
+     3.0,
+     3.36
     ],
     [
      "in",
-     3.52,
-     3.68
+     3.66,
+     3.74
     ],
     [
      "wie",
-     3.68,
-     3.8
+     3.74,
+     3.9
     ],
     [
      "viele",
-     3.8,
-     4.02
+     3.9,
+     4.18
     ],
     [
      "gleiche",
-     4.02,
-     4.46
+     4.18,
+     4.62
     ],
     [
      "Teile",
-     4.46,
-     4.66
+     4.62,
+     4.82
     ],
     [
      "das",
-     4.66,
-     4.84
+     4.82,
+     4.98
     ],
     [
      "Ganze",
-     4.84,
-     5.1
+     4.98,
+     5.26
     ],
     [
      "geteilt",
-     5.1,
-     5.52
+     5.26,
+     5.66
     ],
     [
      "ist.",
-     5.52,
-     5.78
+     5.66,
+     5.9
     ],
     [
      "Der",
-     5.92,
-     6.12
+     6.04,
+     6.24
     ],
     [
      "Zähler",
-     6.12,
-     6.4
+     6.24,
+     6.6
     ],
     [
      "sagt,",
-     6.4,
-     6.78
+     6.6,
+     6.98
     ],
     [
      "wie",
-     7.0,
-     7.16
+     7.32,
+     7.5
     ],
     [
      "viele",
-     7.16,
-     7.4
+     7.5,
+     7.72
     ],
     [
      "Teile",
-     7.4,
-     7.64
+     7.72,
+     8.04
     ],
     [
-     "wir",
-     7.64,
-     7.84
+     "genommen",
+     8.04,
+     8.32
     ],
     [
-     "nehmen.",
-     7.84,
-     8.16
+     "werden.",
+     8.32,
+     8.7
     ],
     [
      "Hier",
-     8.42,
-     8.48
+     9.12,
+     9.32
     ],
     [
      "3",
-     8.48,
-     8.74
+     9.32,
+     9.54
     ],
     [
      "von",
-     8.74,
-     8.92
+     9.54,
+     9.72
     ],
     [
      "4.",
-     8.92,
-     9.44
+     9.72,
+     10.2
     ]
    ]
   },
   "Erweitern": {
-   "sprecher": "Jetzt teilen wir jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. Die gefärbte Fläche ist dieselbe geblieben: drei Viertel gleich fünfzehn Zwanzigstel.",
+   "sprecher": "Jetzt teilst du jedes Viertel in fünf gleiche Stücke. Es gibt zwanzig Stücke, und fünfzehn davon sind gefärbt. Die gefärbte Fläche ist dieselbe geblieben: drei Viertel gleich fünfzehn Zwanzigstel.",
    "woerter": [
     [
      "Jetzt",
-     0.56,
-     0.88
+     0.51,
+     0.79
     ],
     [
-     "teilen",
-     0.88,
-     1.28
+     "teilst",
+     0.79,
+     1.03
     ],
     [
-     "wir",
-     1.28,
-     1.46
+     "du",
+     1.03,
+     1.21
     ],
     [
      "jedes",
-     1.46,
-     1.7
+     1.21,
+     1.45
     ],
     [
      "Viertel",
-     1.7,
-     2.12
+     1.45,
+     1.83
     ],
     [
      "in",
-     2.12,
-     2.28
+     1.83,
+     1.95
     ],
     [
      "5",
-     2.28,
-     2.6
+     1.95,
+     2.21
     ],
     [
      "gleiche",
-     2.6,
-     3.04
+     2.21,
+     2.65
     ],
     [
      "Stücke.",
-     3.04,
-     3.22
+     2.65,
+     2.81
     ],
     [
      "Es",
-     3.5,
-     3.64
+     3.09,
+     3.27
     ],
     [
      "gibt",
-     3.64,
-     3.9
+     3.27,
+     3.49
     ],
     [
      "20",
-     3.9,
-     4.34
+     3.49,
+     3.87
     ],
     [
      "Stücke",
-     4.34,
-     4.7
+     3.87,
+     4.25
     ],
     [
      "und",
-     4.7,
-     5.0
+     4.25,
+     4.55
     ],
     [
      "15",
-     5.0,
-     5.42
+     4.55,
+     4.99
     ],
     [
      "davon",
-     5.42,
-     5.72
+     4.99,
+     5.31
     ],
     [
      "sind",
-     5.72,
-     6.02
+     5.31,
+     5.61
     ],
     [
      "gefärbt.",
-     6.02,
-     6.46
+     5.61,
+     6.07
     ],
     [
      "Die",
-     6.58,
-     6.84
+     6.25,
+     6.45
     ],
     [
      "gefärbte",
-     6.84,
-     7.38
+     6.45,
+     6.93
     ],
     [
      "Fläche",
-     7.38,
-     7.68
+     6.93,
+     7.29
     ],
     [
      "ist",
-     7.68,
-     7.98
+     7.29,
+     7.51
     ],
     [
      "dieselbe",
-     7.98,
-     8.4
+     7.51,
+     7.93
     ],
     [
      "geblieben.",
-     8.4,
-     8.98
+     7.93,
+     8.51
     ],
     [
      "3",
-     9.14,
-     9.36
+     8.71,
+     8.91
     ],
     [
      "Viertel",
-     9.36,
-     9.76
+     8.91,
+     9.27
     ],
     [
      "gleich",
-     9.76,
-     9.96
+     9.27,
+     9.49
     ],
     [
      "15",
-     9.96,
-     10.4
+     9.49,
+     9.91
     ],
     [
      "20.",
-     10.4,
-     10.86
+     9.91,
+     10.41
     ]
    ]
   },
   "Nicht addieren": {
-   "sprecher": "Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier Fünftel. Das ist ein grösserer Anteil als drei Viertel.",
+   "sprecher": "Erweitern heisst multiplizieren. Wer stattdessen zu Zähler und Nenner eins addiert, erhält vier von fünf Teilen, also vier Fünftel. Das ist ein grösserer Anteil als drei Viertel.",
    "woerter": [
     [
      "Erweitern",
-     0.63,
-     1.23
+     0.54,
+     1.06
     ],
     [
      "heißt",
-     1.23,
-     1.57
+     1.06,
+     1.36
     ],
     [
-     "multiplizieren.",
-     1.57,
-     2.43
+     "Multiplizieren.",
+     1.36,
+     2.26
     ],
     [
      "Wer",
-     2.63,
-     2.75
+     2.4,
+     2.6
     ],
     [
      "stattdessen",
-     2.75,
-     3.25
+     2.6,
+     3.08
     ],
     [
      "zu",
-     3.25,
-     3.55
+     3.08,
+     3.3
     ],
     [
      "Zähler",
-     3.55,
-     3.93
+     3.3,
+     3.76
     ],
     [
      "und",
-     3.93,
-     4.23
+     3.76,
+     4.08
     ],
     [
      "Nenner",
-     4.23,
-     4.45
+     4.08,
+     4.34
     ],
     [
-     "1",
-     4.45,
-     4.67
+     "eins",
+     4.34,
+     4.62
     ],
     [
      "addiert,",
-     4.67,
-     5.27
+     4.62,
+     5.16
     ],
     [
      "erhält",
-     5.45,
-     5.65
+     5.36,
+     5.54
     ],
     [
      "4",
-     5.65,
-     5.95
+     5.54,
+     5.8
     ],
     [
-     "Fünfte.",
-     5.95,
-     6.35
+     "von",
+     5.8,
+     6.0
     ],
     [
-     "Das",
-     6.35,
-     6.73
+     "5",
+     6.0,
+     6.32
     ],
     [
-     "ist",
-     6.73,
-     7.01
+     "Teilen,",
+     6.32,
+     6.98
     ],
     [
-     "ein",
-     7.01,
-     7.19
+     "also",
+     6.98,
+     7.18
     ],
     [
-     "größerer",
-     7.19,
-     7.63
-    ],
-    [
-     "Anteil",
-     7.63,
-     8.03
-    ],
-    [
-     "als",
-     8.03,
-     8.29
-    ],
-    [
-     "3",
-     8.29,
-     8.61
+     "4",
+     7.18,
+     7.42
     ],
     [
      "Viertel.",
-     8.61,
-     9.35
+     7.42,
+     7.96
+    ],
+    [
+     "Das",
+     8.2,
+     8.42
+    ],
+    [
+     "ist",
+     8.42,
+     8.68
+    ],
+    [
+     "ein",
+     8.68,
+     8.82
+    ],
+    [
+     "größerer",
+     8.82,
+     9.26
+    ],
+    [
+     "Anteil",
+     9.26,
+     9.68
+    ],
+    [
+     "als",
+     9.68,
+     9.94
+    ],
+    [
+     "3",
+     9.94,
+     10.22
+    ],
+    [
+     "Viertel.",
+     10.22,
+     11.06
     ]
    ]
   },
   "Kürzen": {
-   "sprecher": "Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fassen wir je sechs Stücke zusammen. Es bleiben drei Teile, zwei davon gefärbt: zwei Drittel.",
+   "sprecher": "Kürzen ist der umgekehrte Weg. Bei zwölf Achtzehnteln fasst du je sechs Stücke zusammen. Es bleiben drei Teile, zwei davon gefärbt: zwei Drittel.",
    "woerter": [
     [
      "Kürzen",
-     0.52,
-     0.86
+     0.58,
+     0.94
     ],
     [
      "ist",
-     0.86,
-     1.08
-    ],
-    [
-     "der",
-     1.08,
+     0.94,
      1.16
     ],
     [
-     "umgekehrte",
+     "der",
      1.16,
-     1.66
+     1.28
+    ],
+    [
+     "umgekehrte",
+     1.28,
+     1.82
     ],
     [
      "Weg.",
-     1.66,
-     1.94
+     1.82,
+     2.04
     ],
     [
      "Bei",
-     2.1,
-     2.3
+     2.18,
+     2.38
     ],
     [
      "12",
-     2.3,
-     2.62
+     2.38,
+     2.76
     ],
     [
      "8",
-     2.62,
-     2.96
+     2.76,
+     3.08
     ],
     [
      "Zehnteln",
-     2.96,
-     3.3
+     3.08,
+     3.42
     ],
     [
-     "fassen",
-     3.3,
-     3.62
-    ],
-    [
-     "wir",
-     3.62,
+     "fasste",
+     3.42,
      3.78
     ],
     [
@@ -481,357 +501,397 @@
     [
      "6",
      3.94,
-     4.18
+     4.2
     ],
     [
      "Stücke",
-     4.18,
-     4.4
+     4.2,
+     4.44
     ],
     [
      "zusammen.",
-     4.4,
-     4.84
+     4.44,
+     4.88
     ],
     [
      "Es",
-     5.16,
+     5.08,
      5.22
     ],
     [
      "bleiben",
      5.22,
-     5.48
+     5.46
     ],
     [
      "3",
-     5.48,
-     5.72
+     5.46,
+     5.7
     ],
     [
      "Teile,",
-     5.72,
-     6.22
+     5.7,
+     6.1
     ],
     [
      "2",
-     6.34,
-     6.54
+     6.26,
+     6.42
     ],
     [
      "davon",
-     6.54,
-     6.84
+     6.42,
+     6.68
     ],
     [
      "gefärbt,",
-     6.84,
-     7.38
+     6.68,
+     7.22
     ],
     [
      "2",
-     7.44,
-     7.66
+     7.42,
+     7.7
     ],
     [
      "Drittel.",
-     7.66,
-     8.38
+     7.7,
+     8.72
     ]
    ]
   },
   "Vollständig": {
-   "sprecher": "Vollständig gekürzt ist ein Bruch erst, wenn Zähler und Nenner keinen gemeinsamen Teiler mehr haben. Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar.",
+   "sprecher": "Vollständig gekürzt ist ein Bruch erst, wenn Zähler und Nenner keinen gemeinsamen Teiler mehr haben. Sechs Neuntel stimmt zwar, ist aber noch nicht fertig: Sechs und neun sind beide durch drei teilbar. Am schnellsten kürzt du durch den grössten gemeinsamen Teiler.",
    "woerter": [
     [
      "Vollständig",
-     0.71,
-     1.27
+     0.7,
+     1.22
     ],
     [
      "gekürzt",
-     1.27,
-     1.69
+     1.22,
+     1.64
     ],
     [
      "ist",
-     1.69,
-     1.89
+     1.64,
+     1.86
     ],
     [
      "ein",
-     1.89,
-     2.09
+     1.86,
+     2.06
     ],
     [
      "Bruch",
-     2.09,
-     2.29
+     2.06,
+     2.24
     ],
     [
      "erst,",
-     2.29,
-     2.67
+     2.24,
+     2.64
     ],
     [
      "wenn",
-     2.71,
-     2.93
+     2.76,
+     2.98
     ],
     [
      "Zähler",
-     2.93,
-     3.43
+     2.98,
+     3.44
     ],
     [
      "und",
-     3.43,
-     3.75
+     3.44,
+     3.7
     ],
     [
      "Nenner",
-     3.75,
-     3.97
+     3.7,
+     3.98
     ],
     [
      "keinen",
-     3.97,
-     4.19
+     3.98,
+     4.24
     ],
     [
      "gemeinsamen",
-     4.19,
-     4.73
+     4.24,
+     4.74
     ],
     [
      "Teile",
-     4.73,
-     5.01
+     4.74,
+     5.02
     ],
     [
      "mehr",
-     5.01,
-     5.25
+     5.02,
+     5.26
     ],
     [
      "haben.",
-     5.25,
-     5.47
+     5.26,
+     5.44
     ],
     [
      "6",
-     5.71,
-     6.01
-    ],
-    [
-     "Neuntel",
-     6.01,
-     6.41
-    ],
-    [
-     "stimmt",
-     6.41,
-     6.63
-    ],
-    [
-     "zwar,",
-     6.63,
-     7.05
-    ],
-    [
-     "ist",
-     7.17,
-     7.41
-    ],
-    [
-     "aber",
-     7.41,
-     7.59
-    ],
-    [
-     "noch",
-     7.59,
-     7.79
-    ],
-    [
-     "nicht",
-     7.79,
-     7.99
-    ],
-    [
-     "fertig.",
-     7.99,
-     8.35
-    ],
-    [
-     "6",
-     8.61,
-     8.97
-    ],
-    [
-     "und",
-     8.97,
-     9.25
+     5.44,
+     6.08
     ],
     [
      "9",
-     9.25,
-     9.55
+     6.08,
+     6.36
+    ],
+    [
+     "stimmt",
+     6.36,
+     6.7
+    ],
+    [
+     "zwar,",
+     6.7,
+     7.2
+    ],
+    [
+     "ist",
+     7.44,
+     7.66
+    ],
+    [
+     "aber",
+     7.66,
+     7.84
+    ],
+    [
+     "noch",
+     7.84,
+     8.06
+    ],
+    [
+     "nicht",
+     8.06,
+     8.24
+    ],
+    [
+     "fertig.",
+     8.24,
+     8.66
+    ],
+    [
+     "6",
+     8.94,
+     9.28
+    ],
+    [
+     "und",
+     9.28,
+     9.6
+    ],
+    [
+     "9",
+     9.6,
+     9.94
     ],
     [
      "sind",
-     9.55,
-     9.85
+     9.94,
+     10.18
     ],
     [
      "beide",
-     9.85,
-     10.13
+     10.18,
+     10.44
     ],
     [
      "durch",
-     10.13,
-     10.41
+     10.44,
+     10.7
     ],
     [
      "3",
-     10.41,
-     10.65
+     10.7,
+     10.94
     ],
     [
      "teilbar.",
-     10.65,
-     11.13
+     10.94,
+     11.42
+    ],
+    [
+     "Am",
+     11.6,
+     11.78
+    ],
+    [
+     "schnellsten",
+     11.78,
+     12.24
+    ],
+    [
+     "kürzt",
+     12.24,
+     12.52
+    ],
+    [
+     "du",
+     12.52,
+     12.66
+    ],
+    [
+     "durch",
+     12.66,
+     12.76
+    ],
+    [
+     "den",
+     12.76,
+     12.96
+    ],
+    [
+     "größten",
+     12.96,
+     13.38
+    ],
+    [
+     "gemeinsamen",
+     13.38,
+     13.82
+    ],
+    [
+     "Teile.",
+     13.82,
+     14.44
     ]
    ]
   },
   "Vergleichen": {
-   "sprecher": "Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bringen wir beide auf den Nenner zwölf: acht Zwölftel gegen neun Zwölftel. Drei Viertel ist grösser.",
+   "sprecher": "Welcher Anteil ist grösser, zwei Drittel oder drei Viertel? Bring beide auf den Nenner zwölf: acht Zwölftel gegen neun Zwölftel. Drei Viertel ist grösser.",
    "woerter": [
     [
      "Welcher",
-     0.77,
-     1.07
+     0.49,
+     0.87
     ],
     [
      "Anteil",
-     1.07,
-     1.43
+     0.87,
+     1.27
     ],
     [
      "ist",
-     1.43,
-     1.63
+     1.27,
+     1.51
     ],
     [
-     "größer?",
-     1.63,
-     2.15
+     "größer,",
+     1.51,
+     2.01
     ],
     [
      "2",
-     2.15,
-     2.59
+     2.19,
+     2.43
     ],
     [
      "Drittel",
-     2.59,
-     2.97
+     2.43,
+     2.87
     ],
     [
      "oder",
-     2.97,
-     3.21
+     2.87,
+     3.09
     ],
     [
      "3",
-     3.21,
-     3.49
+     3.09,
+     3.43
     ],
     [
-     "Viertel",
-     3.49,
-     3.91
+     "Viertel?",
+     3.43,
+     4.03
     ],
     [
-     "bringen",
-     3.91,
-     4.25
-    ],
-    [
-     "wir",
-     4.25,
-     4.43
+     "Bring",
+     4.07,
+     4.39
     ],
     [
      "beide",
-     4.43,
-     4.69
+     4.39,
+     4.71
     ],
     [
      "auf",
-     4.69,
-     4.87
+     4.71,
+     4.89
     ],
     [
      "den",
-     4.87,
-     4.99
+     4.89,
+     5.07
     ],
     [
      "Nenner",
-     4.99,
-     5.25
+     5.07,
+     5.35
     ],
     [
      "12.",
-     5.25,
-     5.75
+     5.35,
+     5.77
     ],
     [
      "8",
-     5.95,
-     6.11
+     6.07,
+     6.25
     ],
     [
      "Zwölftel",
-     6.11,
-     6.63
+     6.25,
+     6.69
     ],
     [
      "gegen",
-     6.63,
-     6.85
+     6.69,
+     6.91
     ],
     [
      "9",
-     6.85,
-     7.09
+     6.91,
+     7.11
     ],
     [
      "Zwölftel.",
-     7.09,
-     7.87
+     7.11,
+     7.91
     ],
     [
      "3",
-     8.05,
-     8.35
+     8.11,
+     8.43
     ],
     [
      "Viertel",
-     8.35,
-     8.73
+     8.43,
+     8.77
     ],
     [
      "ist",
-     8.73,
+     8.77,
      8.95
     ],
     [
      "größer.",
      8.95,
-     10.15
+     9.71
     ]
    ]
   },
@@ -840,32 +900,32 @@
    "woerter": [
     [
      "Zum",
-     0.61,
-     0.75
+     0.33,
+     0.85
     ],
     [
-     "Mitnehmen,",
-     0.75,
-     1.33
+     "Mitnehmen.",
+     0.85,
+     1.37
     ],
     [
      "Erweitern",
-     1.67,
+     1.61,
      2.01
     ],
     [
      "und",
      2.01,
-     2.13
+     2.11
     ],
     [
-     "Kürzen",
-     2.13,
-     2.51
+     "kürzen",
+     2.11,
+     2.53
     ],
     [
      "ändern",
-     2.51,
+     2.53,
      2.81
     ],
     [
@@ -881,11 +941,11 @@
     [
      "nicht,",
      3.19,
-     3.57
+     3.55
     ],
     [
      "nur",
-     3.75,
+     3.81,
      3.81
     ],
     [
@@ -896,16 +956,16 @@
     [
      "Einteilung.",
      3.97,
-     4.59
+     4.57
     ],
     [
      "Vollständig",
      4.93,
-     5.47
+     5.45
     ],
     [
      "gekürzt",
-     5.47,
+     5.45,
      5.87
     ],
     [
@@ -921,22 +981,22 @@
     [
      "dem",
      6.19,
-     6.35
+     6.33
     ],
     [
      "größten",
-     6.35,
-     6.75
+     6.33,
+     6.77
     ],
     [
      "gemeinsamen",
-     6.75,
+     6.77,
      7.29
     ],
     [
      "Teile.",
      7.29,
-     7.61
+     7.63
     ],
     [
      "Zum",
@@ -971,12 +1031,12 @@
     [
      "denselben",
      9.39,
-     9.83
+     9.85
     ],
     [
      "Nenner.",
-     9.83,
-     10.27
+     9.85,
+     10.53
     ]
    ]
   },
@@ -989,18 +1049,18 @@
      0.86
     ],
     [
-     "zu,",
+     "zu.",
      0.86,
-     1.1
+     1.08
     ],
     [
-     "erkundet",
-     1.32,
-     1.68
+     "Erkundet",
+     1.26,
+     1.72
     ],
     [
      "diese",
-     1.68,
+     1.72,
      1.96
     ],
     [
@@ -1011,11 +1071,11 @@
     [
      "in",
      2.48,
-     2.64
+     2.66
     ],
     [
      "der",
-     2.64,
+     2.66,
      2.84
     ],
     [
@@ -1026,37 +1086,37 @@
     [
      "unter",
      3.42,
-     3.7
+     3.68
     ],
     [
      "dem",
-     3.7,
-     3.92
+     3.68,
+     3.9
     ],
     [
      "Clip",
-     3.92,
+     3.9,
      4.1
     ],
     [
      "und",
      4.1,
-     4.34
+     4.32
     ],
     [
      "löse",
-     4.34,
+     4.32,
      4.58
     ],
     [
      "die",
      4.58,
-     4.74
+     4.72
     ],
     [
      "Aufgaben.",
-     4.74,
-     5.2
+     4.72,
+     5.18
     ]
    ]
   }
@@ -1685,107 +1745,112 @@
  },
  "addieren": {
   "Gleichnamig": {
-   "sprecher": "Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also zählen wir sie. Vier Achtel, und gekürzt ein Halb.",
+   "sprecher": "Drei Achtel plus ein Achtel: Die Stücke sind gleich gross, also kannst du sie zählen. Vier Achtel, und gekürzt ein Halb.",
    "woerter": [
     [
      "Drei",
      0.0,
-     0.76
+     0.84
     ],
     [
      "Achtel",
-     0.76,
-     1.12
+     0.84,
+     1.18
     ],
     [
      "plus",
-     1.12,
-     1.32
+     1.18,
+     1.4
     ],
     [
      "ein",
-     1.32,
-     1.58
+     1.4,
+     1.62
     ],
     [
-     "Achtel.",
-     1.58,
-     2.14
+     "Achtel,",
+     1.62,
+     2.06
     ],
     [
-     "Die",
-     2.18,
-     2.38
+     "die",
+     2.1,
+     2.28
     ],
     [
      "Stöcke",
-     2.38,
-     2.58
+     2.28,
+     2.46
     ],
     [
      "sind",
-     2.58,
-     2.78
+     2.46,
+     2.68
     ],
     [
      "gleich",
-     2.78,
-     3.08
+     2.68,
+     2.98
     ],
     [
      "groß,",
-     3.08,
-     3.44
+     2.98,
+     3.32
     ],
     [
      "also",
-     3.66,
-     3.88
+     3.62,
+     3.78
     ],
     [
-     "zählen",
-     3.88,
-     4.26
+     "kannst",
+     3.78,
+     4.02
     ],
     [
-     "wir",
-     4.26,
-     4.4
+     "du",
+     4.02,
+     4.12
     ],
     [
-     "sie.",
-     4.4,
-     4.82
+     "sie",
+     4.12,
+     4.28
+    ],
+    [
+     "zählen.",
+     4.28,
+     4.78
     ],
     [
      "Vier",
-     5.04,
-     5.3
+     4.94,
+     5.2
     ],
     [
      "Achtel",
-     5.3,
-     5.74
+     5.2,
+     5.72
     ],
     [
      "und",
-     5.74,
-     6.06
+     5.72,
+     5.98
     ],
     [
      "gekürzt",
-     6.06,
-     6.5
+     5.98,
+     6.38
     ],
     [
      "ein",
-     6.5,
-     6.66
+     6.38,
+     6.58
     ],
     [
      "Halb.",
-     6.66,
-     8.68
+     6.58,
+     8.0
     ]
    ]
   },
@@ -1794,628 +1859,638 @@
    "woerter": [
     [
      "Ein",
-     0.74,
-     0.92
+     0.75,
+     0.93
     ],
     [
      "Halb",
-     0.92,
-     1.2
+     0.93,
+     1.21
     ],
     [
      "plus",
-     1.2,
-     1.38
+     1.21,
+     1.39
     ],
     [
      "ein",
-     1.38,
-     1.56
+     1.39,
+     1.57
     ],
     [
      "Drittel.",
-     1.56,
-     1.9
+     1.57,
+     1.93
     ],
     [
      "Halbe",
-     2.24,
-     2.62
+     2.23,
+     2.63
     ],
     [
      "und",
-     2.62,
-     2.8
+     2.63,
+     2.79
     ],
     [
      "Drittel",
-     2.8,
-     3.06
+     2.79,
+     3.07
     ],
     [
      "sind",
-     3.06,
-     3.26
+     3.07,
+     3.25
     ],
     [
      "verschieden",
-     3.26,
-     3.66
+     3.25,
+     3.67
     ],
     [
      "große",
-     3.66,
-     3.92
+     3.67,
+     3.91
     ],
     [
      "Stöcke.",
-     3.92,
-     4.26
+     3.91,
+     4.27
     ],
     [
      "So",
-     4.48,
-     4.68
+     4.49,
+     4.67
     ],
     [
      "kann",
-     4.68,
-     4.9
+     4.67,
+     4.91
     ],
     [
      "man",
-     4.9,
-     5.04
+     4.91,
+     5.03
     ],
     [
      "sie",
-     5.04,
-     5.14
+     5.03,
+     5.15
     ],
     [
      "nicht",
-     5.14,
-     5.34
+     5.15,
+     5.35
     ],
     [
      "einfach",
-     5.34,
-     5.7
+     5.35,
+     5.69
     ],
     [
      "zählen.",
-     5.7,
-     6.94
+     5.69,
+     6.55
     ]
    ]
   },
   "Sechstel": {
-   "sprecher": "Teilen wir beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.",
+   "sprecher": "Teilst du beide Streifen in Sechstel, passen beide genau. Ein Halb sind drei Sechstel, ein Drittel sind zwei Sechstel. Zusammen ergeben sie fünf Sechstel.",
    "woerter": [
     [
-     "Teilen",
-     0.54,
-     0.82
+     "Teilst",
+     0.49,
+     0.75
     ],
     [
-     "wir",
-     0.82,
-     1.02
+     "du",
+     0.75,
+     0.93
     ],
     [
      "beide",
-     1.02,
-     1.2
+     0.93,
+     1.13
     ],
     [
      "Streifen",
-     1.2,
-     1.66
+     1.13,
+     1.53
     ],
     [
      "in",
-     1.66,
-     1.86
+     1.53,
+     1.69
     ],
     [
      "Sechstel,",
-     1.86,
-     2.4
+     1.69,
+     2.19
     ],
     [
-     "hassen",
-     2.52,
-     2.72
+     "passen",
+     2.31,
+     2.59
     ],
     [
      "beide",
-     2.72,
-     3.0
+     2.59,
+     2.83
     ],
     [
      "genau.",
-     3.0,
-     3.32
+     2.83,
+     3.23
     ],
     [
      "Ein",
-     3.46,
-     3.72
+     3.59,
+     3.87
     ],
     [
      "Halb",
-     3.72,
-     4.0
+     3.87,
+     4.11
     ],
     [
      "sind",
-     4.0,
-     4.14
+     4.11,
+     4.31
     ],
     [
-     "3",
-     4.14,
-     4.44
+     "drei",
+     4.31,
+     4.59
     ],
     [
      "Sechstel,",
-     4.44,
-     4.9
+     4.59,
+     5.05
     ],
     [
      "ein",
-     5.14,
-     5.32
+     5.19,
+     5.37
     ],
     [
      "Drittel",
-     5.32,
-     5.72
+     5.37,
+     5.73
     ],
     [
      "sind",
-     5.72,
-     6.0
+     5.73,
+     6.01
     ],
     [
-     "2",
-     6.0,
-     6.24
+     "zwei",
+     6.01,
+     6.23
     ],
     [
      "Sechstel.",
-     6.24,
-     6.82
+     6.23,
+     6.79
     ],
     [
      "Zusammen",
-     7.16,
-     7.46
+     7.15,
+     7.45
     ],
     [
      "ergeben",
-     7.46,
-     7.84
+     7.45,
+     7.87
     ],
     [
      "sie",
-     7.84,
-     8.04
+     7.87,
+     8.09
     ],
     [
-     "5",
-     8.04,
-     8.26
+     "fünf",
+     8.09,
+     8.37
     ],
     [
      "Sechstel.",
-     8.26,
-     9.04
+     8.37,
+     8.95
     ]
    ]
   },
   "Fehler": {
-   "sprecher": "Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe kann nicht kleiner sein als einer ihrer Summanden.",
+   "sprecher": "Wer Zähler und Nenner einzeln addiert, erhält zwei Fünftel. Das ist sogar weniger als ein Halb allein. Eine Summe positiver Brüche kann nicht kleiner sein als einer ihrer Summanden.",
    "woerter": [
     [
      "Wer",
-     0.46,
-     0.74
+     0.13,
+     0.67
     ],
     [
      "Zähler",
-     0.74,
-     1.24
+     0.67,
+     1.15
     ],
     [
      "und",
-     1.24,
-     1.46
+     1.15,
+     1.37
     ],
     [
      "Nenner",
-     1.46,
-     1.74
+     1.37,
+     1.63
     ],
     [
      "einzeln",
-     1.74,
-     2.14
+     1.63,
+     1.99
     ],
     [
      "addiert,",
-     2.14,
-     2.68
+     1.99,
+     2.55
     ],
     [
      "erhält",
-     2.68,
-     3.06
+     2.81,
+     3.05
     ],
     [
      "zwei",
-     3.06,
-     3.34
+     3.05,
+     3.39
     ],
     [
      "Fünftel.",
-     3.34,
-     3.8
+     3.39,
+     3.87
     ],
     [
      "Das",
-     3.9,
-     4.06
+     4.01,
+     4.21
     ],
     [
      "ist",
-     4.06,
-     4.28
+     4.21,
+     4.45
     ],
     [
      "sogar",
-     4.28,
-     4.54
+     4.45,
+     4.71
     ],
     [
      "weniger",
-     4.54,
-     4.88
+     4.71,
+     5.03
     ],
     [
      "als",
-     4.88,
-     5.08
+     5.03,
+     5.27
     ],
     [
      "ein",
-     5.08,
-     5.3
+     5.27,
+     5.49
     ],
     [
      "Halb",
-     5.3,
-     5.54
+     5.49,
+     5.75
     ],
     [
      "allein.",
-     5.54,
-     5.86
+     5.75,
+     6.03
     ],
     [
      "Eine",
-     6.28,
-     6.46
+     6.31,
+     6.47
     ],
     [
      "Summe",
-     6.46,
-     6.72
+     6.47,
+     6.79
+    ],
+    [
+     "positiver",
+     6.79,
+     7.47
+    ],
+    [
+     "Brüche",
+     7.47,
+     7.83
     ],
     [
      "kann",
-     6.72,
-     6.94
+     7.83,
+     8.07
     ],
     [
      "nicht",
-     6.94,
-     7.16
+     8.07,
+     8.35
     ],
     [
      "kleiner",
-     7.16,
-     7.4
+     8.35,
+     8.59
     ],
     [
-     "sein,",
-     7.4,
-     7.68
+     "sein",
+     8.59,
+     8.83
     ],
     [
      "als",
-     7.86,
-     7.9
+     8.83,
+     9.09
     ],
     [
-     "eine",
-     7.9,
-     8.12
+     "einer",
+     9.09,
+     9.25
     ],
     [
-     "ihrer",
-     8.12,
-     8.44
-    ],
-    [
-     "Summanden.",
-     8.44,
-     10.0
+     "Irresumante.",
+     9.25,
+     10.03
     ]
    ]
   },
   "Hauptnenner": {
-   "sprecher": "Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn und sechsunddreissig. Sechsunddreissig ist auch durch zwölf teilbar.",
+   "sprecher": "Der kleinste gemeinsame Nenner heisst Hauptnenner: das kleinste gemeinsame Vielfache der Nenner. Bei fünf Zwölfteln plus sieben Achtzehnteln: Die Vielfachen von achtzehn sind achtzehn, sechsunddreissig und so weiter. Schon sechsunddreissig ist durch zwölf teilbar.",
    "woerter": [
     [
      "Der",
-     0.52,
-     0.64
+     0.46,
+     0.7
     ],
     [
      "kleinste",
-     0.64,
-     1.1
+     0.7,
+     1.12
     ],
     [
      "gemeinsame",
-     1.1,
+     1.12,
      1.64
     ],
     [
      "Nenner",
      1.64,
-     1.9
+     1.86
     ],
     [
      "heißt",
-     1.9,
-     2.2
+     1.86,
+     2.12
     ],
     [
-     "Hauptnenner.",
-     2.2,
-     2.94
+     "Hauptmänner,",
+     2.12,
+     2.76
     ],
     [
-     "Das",
-     3.08,
-     3.22
+     "das",
+     2.96,
+     3.16
     ],
     [
      "kleinste",
-     3.22,
-     3.62
+     3.16,
+     3.58
     ],
     [
      "gemeinsame",
-     3.62,
-     4.12
+     3.58,
+     4.1
     ],
     [
      "Vielfache",
-     4.12,
-     4.6
+     4.1,
+     4.58
     ],
     [
      "der",
-     4.6,
-     4.78
+     4.58,
+     4.74
     ],
     [
      "Nenner.",
-     4.78,
-     5.16
+     4.74,
+     5.12
     ],
     [
      "Bei",
-     5.34,
-     5.52
+     5.26,
+     5.46
     ],
     [
-     "5",
-     5.52,
-     5.84
+     "fünf",
+     5.46,
+     5.72
     ],
     [
      "Zwölfteln",
-     5.84,
+     5.72,
      6.32
     ],
     [
      "plus",
      6.32,
-     6.66
+     6.54
     ],
     [
-     "7",
-     6.66,
-     6.96
+     "sieben",
+     6.54,
+     6.84
     ],
     [
-     "Achtzehnteln.",
-     6.96,
-     7.72
+     "Achtzehnten,",
+     6.84,
+     7.5
     ],
     [
-     "Die",
-     7.96,
-     8.16
+     "die",
+     7.88,
+     8.02
     ],
     [
      "Vielfachen",
-     8.16,
-     8.78
+     8.02,
+     8.5
     ],
     [
      "von",
-     8.78,
-     8.96
+     8.5,
+     8.68
     ],
     [
      "18",
-     8.96,
-     9.48
+     8.68,
+     9.2
     ],
     [
      "sind",
-     9.48,
-     9.76
+     9.2,
+     9.46
     ],
     [
-     "18",
-     9.76,
-     10.28
-    ],
-    [
-     "und",
-     10.28,
-     10.46
-    ],
-    [
-     "36.",
-     10.46,
-     11.18
+     "18,",
+     9.46,
+     10.0
     ],
     [
      "36",
-     11.76,
+     10.24,
+     11.02
+    ],
+    [
+     "und",
+     11.02,
+     11.3
+    ],
+    [
+     "so",
+     11.3,
+     11.48
+    ],
+    [
+     "weiter.",
+     11.48,
+     11.8
+    ],
+    [
+     "Schon",
+     12.12,
      12.32
     ],
     [
-     "ist",
+     "36",
      12.32,
-     12.6
+     13.08
     ],
     [
-     "auch",
-     12.6,
-     12.84
+     "ist",
+     13.08,
+     13.3
     ],
     [
      "durch",
-     12.84,
-     13.06
+     13.3,
+     13.5
     ],
     [
      "12",
-     13.06,
-     13.4
+     13.5,
+     13.74
     ],
     [
-     "Teil",
-     13.4,
-     13.62
-    ],
-    [
-     "da.",
-     13.62,
-     13.96
+     "teilbar.",
+     13.74,
+     14.42
     ]
    ]
   },
   "Erweitern auf 36": {
-   "sprecher": "Fünf Zwölftel erweitern wir mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.",
+   "sprecher": "Fünf Zwölftel erweiterst du mit drei, sieben Achtzehntel mit zwei. Fünfzehn Sechsunddreissigstel plus vierzehn Sechsunddreissigstel ergibt neunundzwanzig Sechsunddreissigstel.",
    "woerter": [
     [
-     "5",
-     0.57,
-     0.81
+     "Fünf",
+     0.35,
+     0.91
     ],
     [
      "Zwölftel",
-     0.81,
-     1.33
+     0.91,
+     1.41
     ],
     [
-     "erweitern",
-     1.33,
-     1.83
-    ],
-    [
-     "wir",
-     1.83,
+     "erweiterst",
+     1.41,
      1.95
     ],
     [
-     "mit",
+     "du",
      1.95,
-     2.15
+     1.99
     ],
     [
-     "3.",
-     2.15,
-     2.51
+     "mit",
+     1.99,
+     2.19
     ],
     [
-     "7",
-     2.71,
-     2.97
+     "drei,",
+     2.19,
+     2.47
+    ],
+    [
+     "sieben",
+     2.65,
+     2.95
     ],
     [
      "Achtzehntel",
-     2.97,
-     3.57
+     2.95,
+     3.53
     ],
     [
      "mit",
-     3.57,
-     3.75
+     3.53,
+     3.67
     ],
     [
-     "2.",
-     3.75,
-     4.15
+     "zwei.",
+     3.67,
+     4.13
     ],
     [
-     "15",
-     4.15,
-     4.89
+     "Fünfzehn",
+     4.47,
+     4.93
     ],
     [
-     "36",
-     4.89,
-     5.65
+     "Sechshundreißigstel",
+     4.93,
+     5.93
     ],
     [
      "plus",
-     5.65,
-     6.09
+     5.93,
+     6.27
     ],
     [
-     "14",
-     6.09,
-     6.59
+     "vierzehn",
+     6.27,
+     6.81
     ],
     [
-     "36",
-     6.59,
-     7.39
+     "Sechshundreißigstel",
+     6.81,
+     7.75
     ],
     [
      "ergibt",
-     7.39,
-     7.87
+     7.75,
+     8.01
     ],
     [
      "29",
-     7.87,
-     8.75
+     8.01,
+     8.83
     ],
     [
-     "36.",
-     8.75,
-     9.67
+     "Sechshundreißigstel.",
+     8.83,
+     10.23
     ]
    ]
   },
@@ -2425,21 +2500,21 @@
     [
      "Am",
      0.39,
-     0.65
+     0.63
     ],
     [
      "Schluss",
-     0.65,
-     0.95
+     0.63,
+     0.93
     ],
     [
      "immer",
-     0.95,
-     1.27
+     0.93,
+     1.25
     ],
     [
      "prüfen,",
-     1.27,
+     1.25,
      1.73
     ],
     [
@@ -2450,31 +2525,31 @@
     [
      "man",
      1.97,
-     2.19
+     2.17
     ],
     [
      "kürzen",
-     2.19,
+     2.17,
      2.57
     ],
     [
      "kann.",
      2.57,
-     2.85
+     2.83
     ],
     [
-     "1",
-     3.03,
+     "Ein",
+     3.01,
      3.21
     ],
     [
      "Sechstel",
      3.21,
-     3.67
+     3.65
     ],
     [
      "plus",
-     3.67,
+     3.65,
      3.93
     ],
     [
@@ -2490,41 +2565,41 @@
     [
      "gibt",
      4.41,
-     4.67
+     4.69
     ],
     [
-     "3",
-     4.67,
+     "drei",
+     4.69,
      4.95
     ],
     [
      "Sechstel,",
      4.95,
-     5.51
+     5.43
     ],
     [
      "also",
-     5.57,
+     5.59,
      5.79
     ],
     [
      "ein",
      5.79,
-     6.05
+     6.03
     ],
     [
-     "Halb",
-     6.05,
+     "Halb,",
+     6.03,
      6.37
     ],
     [
      "und",
-     6.37,
-     6.59
+     6.39,
+     6.63
     ],
     [
      "mit",
-     6.59,
+     6.63,
      6.77
     ],
     [
@@ -2535,36 +2610,36 @@
     [
      "ganzen",
      6.91,
-     7.23
+     7.21
     ],
     [
      "Zahl.",
-     7.23,
+     7.21,
      7.61
     ],
     [
-     "2",
+     "Zwei",
      7.95,
-     8.15
+     8.19
     ],
     [
      "sind",
-     8.15,
-     8.35
+     8.19,
+     8.37
     ],
     [
-     "8",
-     8.35,
-     8.61
+     "acht",
+     8.37,
+     8.63
     ],
     [
      "Viertel,",
-     8.61,
+     8.63,
      9.05
     ],
     [
      "also",
-     9.25,
+     9.23,
      9.43
     ],
     [
@@ -2573,39 +2648,39 @@
      9.63
     ],
     [
-     "2",
+     "zwei",
      9.63,
-     9.81
+     9.79
     ],
     [
      "minus",
-     9.81,
-     10.13
+     9.79,
+     10.11
     ],
     [
-     "3",
-     10.13,
-     10.35
+     "drei",
+     10.11,
+     10.37
     ],
     [
      "Viertel",
-     10.35,
+     10.37,
      10.71
     ],
     [
      "gleich",
      10.71,
-     10.93
+     10.95
     ],
     [
      "von",
-     10.93,
+     10.95,
      11.13
     ],
     [
      "Viertel.",
      11.13,
-     11.89
+     11.85
     ]
    ]
   },
@@ -2614,17 +2689,17 @@
    "woerter": [
     [
      "Zum",
-     0.5,
+     0.1,
      0.68
     ],
     [
      "Mitnehmen",
      0.68,
-     1.2
+     1.26
     ],
     [
      "addieren",
-     1.2,
+     1.26,
      1.76
     ],
     [
@@ -2635,31 +2710,31 @@
     [
      "subtraieren",
      2.0,
-     2.52
+     2.54
     ],
     [
      "nur",
-     2.52,
-     2.68
+     2.54,
+     2.7
     ],
     [
      "mit",
-     2.68,
+     2.7,
      2.9
     ],
     [
      "gleichen",
      2.9,
-     3.12
+     3.16
     ],
     [
      "Nennern.",
-     3.12,
-     3.62
+     3.16,
+     3.64
     ],
     [
      "Als",
-     3.66,
+     3.76,
      3.94
     ],
     [
@@ -2690,21 +2765,21 @@
     [
      "kleinste",
      5.3,
-     5.7
+     5.72
     ],
     [
      "gemeinsame",
-     5.7,
-     6.2
+     5.72,
+     6.22
     ],
     [
      "Vielfach.",
-     6.2,
-     6.72
+     6.22,
+     6.7
     ],
     [
      "Nie",
-     6.9,
+     6.92,
      7.08
     ],
     [
@@ -2715,21 +2790,21 @@
     [
      "Nenner",
      7.28,
-     7.44
+     7.46
     ],
     [
      "addieren",
-     7.44,
+     7.46,
      7.98
     ],
     [
      "und",
      7.98,
-     8.28
+     8.3
     ],
     [
      "am",
-     8.28,
+     8.3,
      8.5
     ],
     [
@@ -2738,24 +2813,9 @@
      8.64
     ],
     [
-     "nur",
-     8.64,
-     8.64
-    ],
-    [
-     "die",
-     8.64,
-     8.64
-    ],
-    [
-     "Nenner",
-     8.64,
-     8.64
-    ],
-    [
      "kürzen.",
      8.64,
-     9.28
+     9.58
     ]
    ]
   },
@@ -2765,26 +2825,26 @@
     [
      "Dazu",
      0.58,
-     1.02
+     1.0
     ],
     [
      "erkundet",
-     1.02,
-     1.72
+     1.0,
+     1.7
     ],
     [
      "diese",
-     1.72,
-     2.02
+     1.7,
+     2.0
     ],
     [
      "Zusammenhänge",
-     2.02,
-     2.6
+     2.0,
+     2.58
     ],
     [
      "in",
-     2.6,
+     2.58,
      2.76
     ],
     [
@@ -2795,11 +2855,11 @@
     [
      "Animation",
      2.88,
-     3.58
+     3.54
     ],
     [
      "unter",
-     3.58,
+     3.54,
      3.9
     ],
     [
@@ -2810,27 +2870,27 @@
     [
      "Clip",
      4.1,
-     4.4
+     4.42
     ],
     [
      "und",
-     4.4,
-     4.68
+     4.42,
+     4.7
     ],
     [
      "löse",
-     4.68,
+     4.7,
      4.94
     ],
     [
      "die",
      4.94,
-     5.1
+     5.12
     ],
     [
      "Aufgaben.",
-     5.1,
-     5.52
+     5.12,
+     5.54
     ]
    ]
   }
@@ -2842,11 +2902,11 @@
     [
      "Gleich",
      0.0,
-     0.72
+     0.74
     ],
     [
      "große",
-     0.72,
+     0.74,
      1.08
     ],
     [
@@ -2861,37 +2921,37 @@
     ],
     [
      "4",
-     2.04,
+     2.06,
      2.2
     ],
     [
      "Zehntel.",
      2.2,
-     2.88
+     2.9
     ],
     [
      "Gekürzt",
      3.06,
-     3.46
+     3.48
     ],
     [
      "durch",
-     3.46,
-     3.68
+     3.48,
+     3.7
     ],
     [
      "2,",
-     3.68,
+     3.7,
      4.12
     ],
     [
      "2",
      4.3,
-     4.54
+     4.52
     ],
     [
      "Fünftel.",
-     4.54,
+     4.52,
      6.1
     ]
    ]
@@ -2926,17 +2986,17 @@
     ],
     [
      "24",
-     3.41,
-     4.09
+     3.45,
+     4.11
     ],
     [
      "ist",
-     4.09,
-     4.43
+     4.11,
+     4.41
     ],
     [
      "auch",
-     4.43,
+     4.41,
      4.67
     ],
     [
@@ -2962,11 +3022,11 @@
     [
      "ist",
      5.99,
-     6.23
+     6.25
     ],
     [
      "der",
-     6.23,
+     6.25,
      6.35
     ],
     [
@@ -3012,11 +3072,11 @@
     [
      "Zwanzigstel",
      2.58,
-     3.16
+     3.14
     ],
     [
      "plus",
-     3.16,
+     3.14,
      3.38
     ],
     [
@@ -3037,7 +3097,7 @@
     [
      "29.",
      4.58,
-     5.0
+     5.1
     ]
    ]
   },
@@ -3046,12 +3106,12 @@
    "woerter": [
     [
      "Gemeinsamer",
-     0.32,
-     1.0
+     0.36,
+     1.02
     ],
     [
      "Nenner",
-     1.0,
+     1.02,
      1.3
     ],
     [
@@ -3092,17 +3152,17 @@
     [
      "7",
      4.3,
-     4.56
+     4.58
     ],
     [
      "Zwölftel.",
-     4.56,
-     5.38
+     4.58,
+     5.34
     ]
    ]
   },
   "Frage 5": {
-   "sprecher": "Zwei Siebtel ist kleiner als ein Drittel. Die Summe muss aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.",
+   "sprecher": "Zwei Siebtel ist kleiner als ein Drittel. Bei positiven Brüchen muss die Summe aber grösser sein als jeder Summand. Richtig sind sieben Zwölftel.",
    "woerter": [
     [
      "2",
@@ -3112,97 +3172,112 @@
     [
      "Siebtel",
      0.76,
-     1.1
+     1.2
     ],
     [
      "ist",
-     1.1,
-     1.28
+     1.2,
+     1.42
     ],
     [
      "kleiner",
-     1.28,
-     1.58
+     1.42,
+     1.76
     ],
     [
      "als",
-     1.58,
-     1.82
+     1.76,
+     2.02
     ],
     [
-     "ein",
-     1.82,
-     1.96
-    ],
-    [
-     "Drittel.",
-     1.96,
+     "1",
+     2.02,
      2.22
     ],
     [
-     "Die",
-     2.48,
-     2.56
+     "Drittel.",
+     2.22,
+     2.52
     ],
     [
-     "Summe",
-     2.56,
-     2.82
+     "Bei",
+     2.62,
+     2.86
+    ],
+    [
+     "positiven",
+     2.86,
+     3.48
+    ],
+    [
+     "Brüchen",
+     3.48,
+     3.86
     ],
     [
      "muss",
-     2.82,
-     3.08
+     3.86,
+     4.06
+    ],
+    [
+     "die",
+     4.06,
+     4.2
+    ],
+    [
+     "Summe",
+     4.2,
+     4.5
     ],
     [
      "aber",
-     3.08,
-     3.36
+     4.5,
+     4.76
     ],
     [
      "größer",
-     3.36,
-     3.68
+     4.76,
+     5.12
     ],
     [
      "sein",
-     3.68,
-     3.82
+     5.12,
+     5.3
     ],
     [
      "als",
-     3.82,
-     4.14
+     5.3,
+     5.6
     ],
     [
      "jeder",
-     4.14,
-     4.34
+     5.6,
+     5.82
     ],
     [
-     "Sommand.",
-     4.34,
-     4.78
+     "summand.",
+     5.82,
+     6.18
     ],
     [
      "Richtig",
-     5.16,
-     5.52
+     6.38,
+     6.8
     ],
     [
      "sind",
-     5.52,
-     5.74
+     6.8,
+     7.02
     ],
     [
      "7",
-     5.74,
-     5.98
+     7.02,
+     7.32
     ],
     [
      "Zwölftel.",
-     5.98,
-     7.52
+     7.32,
+     8.28
     ]
    ]
   },
@@ -3211,300 +3286,300 @@
    "woerter": [
     [
      "Zum",
-     0.52,
-     0.68
+     0.53,
+     0.69
     ],
     [
-     "Mitnehmen",
-     0.68,
-     1.24
+     "Mitnehmen,",
+     0.69,
+     1.23
     ],
     [
      "zuerst",
-     1.24,
-     1.64
+     1.41,
+     1.65
     ],
     [
      "den",
-     1.64,
-     1.8
+     1.65,
+     1.79
     ],
     [
      "kleinsten",
-     1.8,
-     2.22
+     1.79,
+     2.21
     ],
     [
      "gemeinsamen",
-     2.22,
-     2.76
+     2.21,
+     2.75
     ],
     [
      "Nenner",
-     2.76,
-     3.0
+     2.75,
+     2.97
     ],
     [
      "suchen,",
-     3.0,
-     3.36
+     2.97,
+     3.35
     ],
     [
      "dann",
-     3.62,
-     3.78
+     3.63,
+     3.79
     ],
     [
      "Zähler",
-     3.78,
-     4.22
+     3.79,
+     4.23
     ],
     [
      "und",
-     4.22,
-     4.48
+     4.23,
+     4.49
     ],
     [
      "Nenner",
-     4.48,
-     4.74
+     4.49,
+     4.73
     ],
     [
      "erweitern,",
-     4.74,
-     5.28
+     4.73,
+     5.23
     ],
     [
      "dann",
-     5.42,
-     5.5
+     5.41,
+     5.49
     ],
     [
      "die",
-     5.5,
-     5.68
+     5.49,
+     5.65
     ],
     [
      "Zähler",
-     5.68,
-     5.96
+     5.65,
+     5.97
     ],
     [
      "verrechnen",
-     5.96,
-     6.48
+     5.97,
+     6.49
     ],
     [
      "und",
-     6.48,
-     6.7
+     6.49,
+     6.71
     ],
     [
      "kürzen.",
-     6.7,
-     7.14
+     6.71,
+     7.13
     ],
     [
      "Und",
-     7.38,
-     7.58
+     7.35,
+     7.59
     ],
     [
      "eine",
-     7.58,
-     7.8
+     7.59,
+     7.79
     ],
     [
      "schnelle",
-     7.8,
-     8.02
+     7.79,
+     8.03
     ],
     [
      "Probe.",
-     8.02,
-     8.52
+     8.03,
+     8.41
     ],
     [
      "Ist",
-     8.68,
-     8.82
+     8.63,
+     8.81
     ],
     [
      "das",
-     8.82,
-     9.02
+     8.81,
+     9.03
     ],
     [
      "Ergebnis",
-     9.02,
-     9.5
+     9.03,
+     9.49
     ],
     [
      "überhaupt",
-     9.5,
-     10.0
+     9.49,
+     10.01
     ],
     [
      "möglich?",
-     10.0,
-     10.42
+     10.01,
+     10.43
     ]
    ]
   }
  },
  "malnehmen": {
   "Von": {
-   "sprecher": "Was sind zwei Drittel von drei Vierteln? Im Quadrat färben wir zuerst drei Viertel der Höhe, dann zwei Drittel der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.",
+   "sprecher": "Was sind zwei Drittel von drei Vierteln? Im Quadrat färbst du zuerst drei Viertel der Höhe, dann zwei Drittel der Breite. Das Rechteck, das zu beiden gehört, ist das Ergebnis.",
    "woerter": [
     [
      "Was",
      0.0,
-     0.58
+     0.72
     ],
     [
      "sind",
-     0.58,
-     0.82
+     0.72,
+     0.98
     ],
     [
      "zwei",
-     0.82,
-     1.16
+     0.98,
+     1.32
     ],
     [
      "Drittel",
-     1.16,
-     1.46
+     1.32,
+     1.64
     ],
     [
      "von",
-     1.46,
-     1.68
+     1.64,
+     1.88
     ],
     [
      "drei",
-     1.68,
-     1.96
+     1.88,
+     2.16
     ],
     [
      "Vierteln?",
-     1.96,
-     2.4
+     2.16,
+     2.6
     ],
     [
      "Im",
-     2.5,
-     2.7
+     2.76,
+     2.96
     ],
     [
      "Quadrat",
-     2.7,
-     3.22
+     2.96,
+     3.34
     ],
     [
-     "färben",
-     3.22,
-     3.56
+     "färbst",
+     3.34,
+     3.66
     ],
     [
-     "wir",
-     3.56,
-     3.74
+     "du",
+     3.66,
+     3.82
     ],
     [
      "zuerst",
-     3.74,
-     4.04
+     3.82,
+     4.14
     ],
     [
      "drei",
-     4.04,
-     4.3
+     4.14,
+     4.44
     ],
     [
      "Viertel",
-     4.3,
-     4.62
-    ],
-    [
-     "der",
-     4.62,
+     4.44,
      4.72
     ],
     [
-     "Höhe,",
+     "der",
      4.72,
-     5.2
+     4.88
+    ],
+    [
+     "Höhe,",
+     4.88,
+     5.36
     ],
     [
      "dann",
-     5.26,
-     5.38
+     5.46,
+     5.58
     ],
     [
      "zwei",
-     5.38,
-     5.6
+     5.58,
+     5.84
     ],
     [
      "Drittel",
-     5.6,
-     5.86
+     5.84,
+     6.1
     ],
     [
      "der",
-     5.86,
-     6.06
+     6.1,
+     6.38
     ],
     [
      "Breite.",
-     6.06,
-     6.42
+     6.38,
+     6.82
     ],
     [
      "Das",
-     6.54,
-     6.74
+     7.14,
+     7.36
     ],
     [
      "Rechteck,",
-     6.74,
-     7.3
+     7.36,
+     7.88
     ],
     [
      "das",
-     7.3,
-     7.52
+     7.88,
+     8.06
     ],
     [
      "zu",
-     7.52,
-     7.72
+     8.06,
+     8.24
     ],
     [
      "beiden",
-     7.72,
-     7.9
+     8.24,
+     8.42
     ],
     [
      "gehört,",
-     7.9,
-     8.28
+     8.42,
+     8.82
     ],
     [
      "ist",
-     8.6,
-     8.74
+     9.14,
+     9.3
     ],
     [
      "das",
-     8.74,
-     8.92
+     9.3,
+     9.52
     ],
     [
      "Ergebnis.",
-     8.92,
-     9.44
+     9.52,
+     10.0
     ]
    ]
   },
@@ -3513,17 +3588,17 @@
    "woerter": [
     [
      "Das",
-     0.54,
+     0.52,
      0.74
     ],
     [
      "Quadrat",
      0.74,
-     1.2
+     1.22
     ],
     [
      "hat",
-     1.2,
+     1.22,
      1.4
     ],
     [
@@ -3559,11 +3634,11 @@
     [
      "grün.",
      3.54,
-     3.98
+     3.96
     ],
     [
      "Zähler",
-     4.24,
+     4.26,
      4.48
     ],
     [
@@ -3594,207 +3669,207 @@
     [
      "mal",
      6.12,
-     6.26
+     6.28
     ],
     [
      "Nenner",
-     6.26,
-     6.56
+     6.28,
+     6.54
     ],
     [
      "gibt",
-     6.56,
+     6.54,
      6.82
     ],
     [
-     "zwölf,",
+     "zwölf.",
      6.82,
-     7.44
+     7.42
     ],
     [
-     "sechs",
+     "Sechs",
      7.62,
      7.9
     ],
     [
-     "Zwölfte,",
+     "Zwölftel,",
      7.9,
-     8.46
+     8.54
     ],
     [
      "gekürzt",
-     8.64,
+     8.58,
      9.04
     ],
     [
-     "eine",
+     "ein",
      9.04,
-     9.28
+     9.26
     ],
     [
      "halb.",
-     9.28,
-     9.58
+     9.26,
+     10.8
     ]
    ]
   },
   "Vorher kürzen": {
-   "sprecher": "Vier Neuntel mal drei Achtel. Bevor wir ausrechnen, kürzen wir über Kreuz: vier und acht durch vier, drei und neun durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.",
+   "sprecher": "Vier Neuntel mal drei Achtel. Bevor du ausrechnest, kürzt du über Kreuz: vier und acht durch vier, drei und neun durch drei. Es bleibt ein Sechstel, und die Zahlen bleiben klein.",
    "woerter": [
     [
      "Vier",
-     0.51,
-     0.77
+     0.63,
+     0.89
     ],
     [
      "Neuntel",
-     0.77,
-     1.09
+     0.89,
+     1.23
     ],
     [
      "mal",
-     1.09,
-     1.27
+     1.23,
+     1.43
     ],
     [
      "drei",
-     1.27,
-     1.55
+     1.43,
+     1.71
     ],
     [
      "Achte.",
-     1.55,
-     1.87
+     1.71,
+     2.01
     ],
     [
      "Bevor",
-     2.09,
-     2.45
+     2.13,
+     2.43
     ],
     [
-     "wir",
-     2.45,
-     2.67
+     "du",
+     2.43,
+     2.59
     ],
     [
-     "ausrechnen,",
-     2.67,
-     3.37
+     "ausrechnest,",
+     2.59,
+     3.43
     ],
     [
-     "kürzen",
-     3.43,
-     3.79
+     "kürzt",
+     3.65,
+     3.85
     ],
     [
-     "wir",
-     3.79,
-     3.89
+     "du",
+     3.85,
+     3.93
     ],
     [
      "über",
-     3.89,
-     4.17
+     3.93,
+     4.21
     ],
     [
      "Kreuz.",
-     4.17,
-     4.71
+     4.21,
+     4.73
     ],
     [
      "Vier",
-     4.71,
-     5.15
+     4.89,
+     5.31
     ],
     [
      "und",
-     5.15,
-     5.45
+     5.31,
+     5.47
     ],
     [
      "acht",
-     5.45,
-     5.67
+     5.47,
+     5.71
     ],
     [
      "durch",
-     5.67,
-     5.89
+     5.71,
+     5.87
     ],
     [
      "vier,",
-     5.89,
-     6.29
+     5.87,
+     6.21
     ],
     [
      "drei",
-     6.41,
-     6.71
+     6.51,
+     6.87
     ],
     [
      "und",
-     6.71,
-     6.93
-    ],
-    [
-     "neun",
-     6.93,
+     6.87,
      7.17
     ],
     [
-     "durch",
+     "neun",
      7.17,
-     7.29
+     7.43
+    ],
+    [
+     "durch",
+     7.43,
+     7.57
     ],
     [
      "drei.",
-     7.29,
-     7.61
+     7.57,
+     7.93
     ],
     [
      "Es",
-     7.71,
-     7.95
+     8.21,
+     8.49
     ],
     [
      "bleibt",
-     7.95,
-     8.21
+     8.49,
+     8.77
     ],
     [
      "ein",
-     8.21,
-     8.47
+     8.77,
+     9.01
     ],
     [
      "Sechstel",
-     8.47,
-     8.95
+     9.01,
+     9.49
     ],
     [
      "und",
-     8.95,
-     9.11
+     9.49,
+     9.65
     ],
     [
      "die",
-     9.11,
-     9.41
+     9.65,
+     9.97
     ],
     [
      "Zahlen",
-     9.41,
-     9.63
+     9.97,
+     10.17
     ],
     [
      "bleiben",
-     9.63,
-     9.95
+     10.17,
+     10.51
     ],
     [
      "klein.",
-     9.95,
-     10.41
+     10.51,
+     10.95
     ]
    ]
   },
@@ -3803,273 +3878,273 @@
    "woerter": [
     [
      "Bei",
-     0.46,
-     0.64
+     0.45,
+     0.63
     ],
     [
      "einer",
-     0.64,
-     0.84
+     0.63,
+     0.85
     ],
     [
      "ganzen",
-     0.84,
-     1.24
+     0.85,
+     1.23
     ],
     [
      "Zahl",
-     1.24,
-     1.46
+     1.23,
+     1.45
     ],
     [
      "wird",
-     1.46,
-     1.62
+     1.45,
+     1.63
     ],
     [
      "nur",
-     1.62,
-     1.78
+     1.63,
+     1.79
     ],
     [
      "der",
-     1.78,
-     1.92
+     1.79,
+     1.93
     ],
     [
      "Zähler",
-     1.92,
-     2.22
+     1.93,
+     2.21
     ],
     [
      "multipliziert.",
-     2.22,
-     3.06
+     2.21,
+     3.01
     ],
     [
      "Drei",
-     3.38,
-     3.6
+     3.37,
+     3.59
     ],
     [
      "mal",
-     3.6,
-     3.78
+     3.59,
+     3.79
     ],
     [
      "zwei",
-     3.78,
-     4.0
+     3.79,
+     3.99
     ],
     [
      "Fünftel",
-     4.0,
-     4.36
+     3.99,
+     4.35
     ],
     [
      "sind",
-     4.36,
-     4.5
+     4.35,
+     4.49
     ],
     [
      "sechs",
-     4.5,
-     4.8
+     4.49,
+     4.79
     ],
     [
      "Fünftel,",
-     4.8,
-     5.34
+     4.79,
+     5.33
     ],
     [
      "mehr",
-     5.38,
-     5.56
+     5.37,
+     5.57
     ],
     [
      "als",
-     5.56,
-     5.76
+     5.57,
+     5.79
     ],
     [
      "ein",
-     5.76,
-     5.96
+     5.79,
+     5.97
     ],
     [
      "Ganzes.",
-     5.96,
-     6.44
+     5.97,
+     6.43
     ],
     [
      "Und",
-     6.56,
-     6.82
+     6.55,
+     6.81
     ],
     [
      "zwei",
-     6.82,
-     7.0
+     6.81,
+     6.99
     ],
     [
      "Drittel",
-     7.0,
-     7.32
+     6.99,
+     7.33
     ],
     [
      "von",
-     7.32,
-     7.58
+     7.33,
+     7.55
     ],
     [
      "zwölf",
-     7.58,
-     7.86
+     7.55,
+     7.87
     ],
     [
      "sind",
-     7.86,
-     8.08
+     7.87,
+     8.07
     ],
     [
      "acht.",
-     8.08,
-     8.42
+     8.07,
+     8.41
     ]
    ]
   },
   "Messen": {
-   "sprecher": "Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Wir legen Achtel hinein. Es passt genau sechsmal.",
+   "sprecher": "Und das Teilen? Drei Viertel durch ein Achtel fragt: Wie oft passt ein Achtel in drei Viertel? Du legst Achtel hinein. Es passt genau sechsmal.",
    "woerter": [
     [
      "Und",
-     0.41,
-     0.65
+     0.5,
+     0.78
     ],
     [
      "das",
-     0.65,
-     0.89
+     0.78,
+     1.1
     ],
     [
      "Teilen?",
-     0.89,
-     1.73
+     1.1,
+     1.76
     ],
     [
      "Drei",
-     1.85,
-     1.99
+     1.86,
+     2.08
     ],
     [
      "Viertel",
-     1.99,
-     2.27
+     2.08,
+     2.38
     ],
     [
      "durch",
-     2.27,
-     2.49
+     2.38,
+     2.64
     ],
     [
      "ein",
-     2.49,
-     2.69
+     2.64,
+     2.88
     ],
     [
      "Achtel",
-     2.69,
-     3.01
+     2.88,
+     3.18
     ],
     [
      "fragt,",
-     3.01,
-     3.45
+     3.18,
+     3.62
     ],
     [
      "wie",
-     3.55,
-     3.73
+     3.7,
+     3.88
     ],
     [
      "oft",
-     3.73,
-     3.91
+     3.88,
+     4.06
     ],
     [
      "passt",
-     3.91,
-     4.19
+     4.06,
+     4.34
     ],
     [
      "ein",
-     4.19,
-     4.37
+     4.34,
+     4.54
     ],
     [
      "Achtel",
-     4.37,
-     4.65
+     4.54,
+     4.8
     ],
     [
      "in",
-     4.65,
-     4.81
+     4.8,
+     4.94
     ],
     [
      "drei",
-     4.81,
-     5.01
+     4.94,
+     5.14
     ],
     [
      "Viertel?",
-     5.01,
-     5.41
+     5.14,
+     5.48
     ],
     [
-     "Wir",
-     5.57,
-     5.75
+     "Du",
+     5.54,
+     5.7
     ],
     [
-     "legen",
-     5.75,
-     6.01
+     "legst",
+     5.7,
+     5.98
     ],
     [
      "Achtel",
-     6.01,
-     6.39
+     5.98,
+     6.28
     ],
     [
-     "hinein.",
-     6.39,
-     6.95
+     "hinein,",
+     6.28,
+     6.76
     ],
     [
-     "Es",
-     6.97,
-     7.17
+     "es",
+     6.8,
+     7.02
     ],
     [
      "passt",
-     7.17,
-     7.43
+     7.02,
+     7.28
     ],
     [
      "genau",
-     7.43,
-     7.75
+     7.28,
+     7.58
     ],
     [
      "sechs",
-     7.75,
-     8.01
+     7.58,
+     7.86
     ],
     [
      "Mal.",
-     8.01,
-     8.35
+     7.86,
+     8.46
     ]
    ]
   },
@@ -4078,138 +4153,138 @@
    "woerter": [
     [
      "Und",
-     0.34,
-     0.86
+     0.33,
+     0.85
     ],
     [
      "drei",
-     0.86,
-     1.24
+     0.85,
+     1.23
     ],
     [
      "Viertel",
-     1.24,
-     1.6
+     1.23,
+     1.61
     ],
     [
      "mal",
-     1.6,
-     1.72
+     1.61,
+     1.71
     ],
     [
      "acht",
-     1.72,
-     1.94
+     1.71,
+     1.95
     ],
     [
      "gibt",
-     1.94,
-     2.2
+     1.95,
+     2.21
     ],
     [
      "ebenfalls",
-     2.2,
-     2.7
+     2.21,
+     2.71
     ],
     [
      "sechs.",
-     2.7,
-     3.02
+     2.71,
+     3.03
     ],
     [
      "Teilen",
-     3.28,
-     3.56
+     3.23,
+     3.57
     ],
     [
      "durch",
-     3.56,
-     3.8
+     3.57,
+     3.79
     ],
     [
      "einen",
-     3.8,
-     4.06
+     3.79,
+     4.09
     ],
     [
      "Bruch",
-     4.06,
-     4.3
+     4.09,
+     4.27
     ],
     [
      "heißt,",
-     4.3,
-     4.76
+     4.27,
+     4.73
     ],
     [
      "mit",
-     4.96,
-     5.1
+     4.99,
+     5.09
     ],
     [
      "seinem",
-     5.1,
-     5.3
+     5.09,
+     5.29
     ],
     [
      "Kehrwert",
-     5.3,
-     5.66
+     5.29,
+     5.67
     ],
     [
      "multiplizieren.",
-     5.66,
-     6.58
+     5.67,
+     6.59
     ],
     [
      "Den",
-     6.76,
-     6.92
+     6.77,
+     6.91
     ],
     [
      "Kehrwert",
-     6.92,
-     7.34
+     6.91,
+     7.35
     ],
     [
      "erhält",
-     7.34,
-     7.72
+     7.35,
+     7.73
     ],
     [
      "man,",
-     7.72,
-     8.08
+     7.73,
+     8.09
     ],
     [
      "indem",
-     8.1,
-     8.4
+     8.11,
+     8.39
     ],
     [
      "man",
-     8.4,
-     8.62
+     8.39,
+     8.63
     ],
     [
      "Zähler",
-     8.62,
-     9.1
+     8.63,
+     9.11
     ],
     [
      "und",
-     9.1,
-     9.38
+     9.11,
+     9.41
     ],
     [
      "Nenner",
-     9.38,
-     9.58
+     9.41,
+     9.59
     ],
     [
      "vertauscht.",
-     9.58,
-     11.36
+     9.59,
+     10.53
     ]
    ]
   },
@@ -4218,133 +4293,133 @@
    "woerter": [
     [
      "Umgedreht",
-     0.53,
-     1.01
+     0.52,
+     1.02
     ],
     [
      "wird",
-     1.01,
-     1.13
+     1.02,
+     1.14
     ],
     [
      "der",
-     1.13,
-     1.33
+     1.14,
+     1.36
     ],
     [
      "zweite",
-     1.33,
-     1.57
+     1.36,
+     1.56
     ],
     [
      "Bruch,",
-     1.57,
-     2.07
+     1.56,
+     2.04
     ],
     [
      "durch",
-     2.19,
-     2.33
+     2.18,
+     2.34
     ],
     [
      "den",
-     2.33,
-     2.45
+     2.34,
+     2.42
     ],
     [
      "man",
-     2.45,
-     2.67
+     2.42,
+     2.7
     ],
     [
      "teilt.",
-     2.67,
-     3.01
+     2.7,
+     2.98
     ],
     [
      "Wer",
-     3.17,
-     3.19
+     3.18,
+     3.18
     ],
     [
      "den",
-     3.19,
-     3.43
+     3.18,
+     3.42
     ],
     [
      "ersten",
-     3.43,
-     3.63
+     3.42,
+     3.64
     ],
     [
      "umdreht,",
-     3.63,
-     4.35
+     3.64,
+     4.36
     ],
     [
      "rechnet",
-     4.57,
-     4.77
+     4.54,
+     4.78
     ],
     [
      "vier",
-     4.77,
-     5.07
+     4.78,
+     5.06
     ],
     [
      "Drittel",
-     5.07,
-     5.33
+     5.06,
+     5.32
     ],
     [
      "mal",
-     5.33,
-     5.53
+     5.32,
+     5.54
     ],
     [
      "ein",
-     5.53,
-     5.73
+     5.54,
+     5.76
     ],
     [
      "Achtel",
-     5.73,
-     6.13
+     5.76,
+     6.16
     ],
     [
      "und",
-     6.13,
-     6.39
+     6.16,
+     6.36
     ],
     [
      "erhält",
-     6.39,
-     6.67
+     6.36,
+     6.66
     ],
     [
      "ein",
-     6.67,
-     6.91
+     6.66,
+     6.9
     ],
     [
      "Sechstel.",
-     6.91,
-     7.33
+     6.9,
+     7.38
     ],
     [
      "Das",
-     7.55,
-     7.71
+     7.56,
+     7.72
     ],
     [
      "ist",
-     7.71,
-     7.97
+     7.72,
+     7.96
     ],
     [
      "falsch.",
-     7.97,
-     8.61
+     7.96,
+     8.68
     ]
    ]
   },
@@ -4353,148 +4428,148 @@
    "woerter": [
     [
      "Zum",
-     0.06,
-     0.62
+     0.41,
+     0.63
     ],
     [
      "Mitnehmen.",
-     0.62,
-     1.18
-    ],
-    [
-     "Bei",
-     1.36,
-     1.46
-    ],
-    [
-     "Multiplizieren",
-     1.46,
-     2.36
-    ],
-    [
-     "Zähler",
-     2.36,
-     2.7
-    ],
-    [
-     "mal",
-     2.7,
-     2.92
-    ],
-    [
-     "Zähler",
-     2.92,
-     3.44
-    ],
-    [
-     "und",
-     3.44,
-     3.84
-    ],
-    [
-     "Nenner",
-     3.84,
-     4.1
-    ],
-    [
-     "mal",
-     4.1,
-     4.2
-    ],
-    [
-     "Nenner",
-     4.2,
-     4.72
-    ],
-    [
-     "vorher",
-     4.72,
-     5.04
-    ],
-    [
-     "kürzen.",
-     5.04,
-     5.56
+     0.63,
+     1.15
     ],
     [
      "Beim",
-     5.74,
-     5.88
+     1.35,
+     1.51
+    ],
+    [
+     "Multiplizieren",
+     1.51,
+     2.33
+    ],
+    [
+     "Zähler",
+     2.33,
+     2.69
+    ],
+    [
+     "mal",
+     2.69,
+     2.93
+    ],
+    [
+     "Zähler,",
+     2.93,
+     3.39
+    ],
+    [
+     "und",
+     3.39,
+     3.79
+    ],
+    [
+     "Nenner",
+     3.79,
+     4.09
+    ],
+    [
+     "mal",
+     4.09,
+     4.23
+    ],
+    [
+     "Nenner,",
+     4.23,
+     4.71
+    ],
+    [
+     "vorher",
+     4.85,
+     5.01
+    ],
+    [
+     "kürzen.",
+     5.01,
+     5.53
+    ],
+    [
+     "Beim",
+     5.73,
+     5.89
     ],
     [
      "Dividieren",
-     5.88,
-     6.58
+     5.89,
+     6.57
     ],
     [
      "mit",
-     6.58,
-     6.72
+     6.57,
+     6.75
     ],
     [
      "dem",
-     6.72,
-     6.94
+     6.75,
+     6.95
     ],
     [
      "Kehrwert",
-     6.94,
-     7.36
+     6.95,
+     7.37
     ],
     [
      "des",
-     7.36,
-     7.68
+     7.37,
+     7.73
     ],
     [
      "zweiten",
-     7.68,
-     8.0
+     7.73,
+     7.99
     ],
     [
-     "Bruchs",
-     8.0,
-     8.36
+     "Bruchs,",
+     7.99,
+     8.37
     ],
     [
-     "multiplizieren.",
-     8.36,
-     9.26
+     "Multiplizieren.",
+     8.37,
+     9.27
     ],
     [
      "Kein",
-     9.42,
-     9.66
+     9.43,
+     9.65
     ],
     [
      "fragt,",
-     9.66,
-     10.14
+     9.65,
+     10.15
     ],
     [
      "wie",
-     10.26,
-     10.42
+     10.27,
+     10.39
     ],
     [
      "oft",
-     10.42,
-     10.56
+     10.39,
+     10.57
     ],
     [
      "passt",
-     10.56,
-     10.82
+     10.57,
+     10.81
     ],
     [
      "es",
-     10.82,
-     11.02
+     10.81,
+     10.99
     ],
     [
      "hinein?",
-     11.02,
-     12.42
+     10.99,
+     12.43
     ]
    ]
   },
@@ -4503,140 +4578,145 @@
    "woerter": [
     [
      "Jetzt",
-     0.54,
-     0.82
+     0.55,
+     0.81
     ],
     [
-     "du.",
-     0.82,
-     1.08
+     "du",
+     0.81,
+     1.17
     ],
     [
-     "Erkunde",
-     1.28,
-     1.68
+     "erkunde",
+     1.17,
+     1.67
     ],
     [
      "diese",
-     1.68,
-     1.98
+     1.67,
+     1.99
     ],
     [
      "Zusammenhänge",
-     1.98,
-     2.5
+     1.99,
+     2.51
     ],
     [
      "in",
-     2.5,
-     2.66
+     2.51,
+     2.67
     ],
     [
      "der",
-     2.66,
-     2.8
+     2.67,
+     2.79
     ],
     [
      "Animation",
-     2.8,
-     3.44
+     2.79,
+     3.43
     ],
     [
      "unter",
-     3.44,
-     3.76
+     3.43,
+     3.77
     ],
     [
      "dem",
-     3.76,
-     4.04
+     3.77,
+     4.03
     ],
     [
      "Clip",
-     4.04,
-     4.28
+     4.03,
+     4.29
     ],
     [
      "und",
-     4.28,
-     4.56
+     4.29,
+     4.57
     ],
     [
      "löse",
-     4.56,
-     4.84
+     4.57,
+     4.85
     ],
     [
      "die",
-     4.84,
-     4.96
+     4.85,
+     4.99
     ],
     [
      "Aufgaben.",
-     4.96,
-     5.42
+     4.99,
+     5.43
     ]
    ]
   }
  },
  "kontrolle-malnehmen": {
   "Frage 1": {
-   "sprecher": "Zähler mal Zähler und Nenner mal Nenner: sechs Zwanzigstel, gekürzt drei Zehntel.",
+   "sprecher": "Zähler mal Zähler und Nenner mal Nenner: fünfzehn Dreissigstel, gekürzt ein Halb.",
    "woerter": [
     [
      "Zähler",
      0.0,
-     0.76
+     0.78
     ],
     [
      "mal",
-     0.76,
-     0.96
+     0.78,
+     0.98
     ],
     [
-     "Zähler,",
-     0.96,
-     1.46
+     "Zähler",
+     0.98,
+     1.48
     ],
     [
      "und",
-     1.7,
+     1.48,
      1.82
     ],
     [
      "Nenner",
      1.82,
-     2.04
+     2.08
     ],
     [
      "mal",
-     2.04,
-     2.14
+     2.08,
+     2.22
     ],
     [
      "Nenner.",
-     2.14,
-     2.74
+     2.22,
+     2.7
     ],
     [
-     "Sechszwanzigstel,",
-     3.5,
-     4.0
+     "15",
+     2.88,
+     3.2
+    ],
+    [
+     "Dreißigstel,",
+     3.2,
+     4.06
     ],
     [
      "gekürzt",
-     4.12,
-     4.46
+     4.2,
+     4.52
     ],
     [
-     "drei",
-     4.46,
-     4.7
+     "ein",
+     4.52,
+     4.74
     ],
     [
-     "Zehntel.",
-     4.7,
-     5.36
+     "Halb.",
+     4.74,
+     6.06
     ]
    ]
   },
@@ -4645,17 +4725,17 @@
    "woerter": [
     [
      "Blau",
-     0.53,
-     0.83
+     0.57,
+     0.85
     ],
     [
      "ist",
-     0.83,
-     0.99
+     0.85,
+     1.01
     ],
     [
      "ein",
-     0.99,
+     1.01,
      1.17
     ],
     [
@@ -4671,21 +4751,21 @@
     [
      "Breite,",
      1.65,
-     2.19
+     2.21
     ],
     [
-     "Orange",
-     2.39,
+     "orange",
+     2.37,
      2.59
     ],
     [
      "drei",
      2.59,
-     2.97
+     2.99
     ],
     [
      "Viertel",
-     2.97,
+     2.99,
      3.39
     ],
     [
@@ -4696,10 +4776,10 @@
     [
      "Höhe,",
      3.55,
-     3.87
+     4.01
     ],
     [
-     "Grün",
+     "grün",
      4.05,
      4.29
     ],
@@ -4726,7 +4806,7 @@
     [
      "Kästchen,",
      5.25,
-     5.85
+     5.83
     ],
     [
      "ein",
@@ -4736,7 +4816,7 @@
     [
      "Viertel.",
      6.29,
-     6.85
+     6.89
     ]
    ]
   },
@@ -4745,7 +4825,7 @@
    "woerter": [
     [
      "Mit",
-     0.47,
+     0.45,
      0.65
     ],
     [
@@ -4769,13 +4849,13 @@
      1.73
     ],
     [
-     "Bruchs,",
+     "Brooks,",
      1.73,
-     2.17
+     2.09
     ],
     [
      "vier",
-     2.41,
+     2.39,
      2.57
     ],
     [
@@ -4800,28 +4880,28 @@
     ],
     [
      "zwölf",
-     4.17,
-     4.53
+     4.21,
+     4.55
     ],
     [
      "Zehntel,",
-     4.53,
+     4.55,
      5.13
     ],
     [
      "gekürzt",
-     5.27,
+     5.29,
      5.69
     ],
     [
      "sechs",
      5.69,
-     5.97
+     5.99
     ],
     [
      "Fünftel.",
-     5.97,
-     7.51
+     5.99,
+     7.45
     ]
    ]
   },
@@ -4830,7 +4910,7 @@
    "woerter": [
     [
      "Zwei",
-     0.65,
+     0.63,
      0.83
     ],
     [
@@ -4851,7 +4931,7 @@
     [
      "Sechstel,",
      1.75,
-     2.19
+     2.23
     ],
     [
      "ein",
@@ -4881,12 +4961,17 @@
     [
      "Mal",
      3.61,
-     3.77
+     3.79
     ],
     [
      "hinein.",
-     3.77,
-     4.85
+     3.79,
+     5.03
+    ],
+    [
+     "Nur",
+     5.03,
+     5.75
     ]
    ]
   },
@@ -4894,49 +4979,44 @@
    "sprecher": "Nur der Zähler wird mit fünf multipliziert: zehn Siebtel. Wer auch den Nenner multipliziert, hat nur erweitert.",
    "woerter": [
     [
-     "Nur",
-     0.49,
-     0.65
-    ],
-    [
      "der",
      0.65,
-     0.91
+     0.87
     ],
     [
      "Zähler",
-     0.91,
+     0.87,
      1.07
     ],
     [
      "wird",
      1.07,
-     1.23
+     1.21
     ],
     [
      "mit",
-     1.23,
-     1.41
+     1.21,
+     1.39
     ],
     [
      "fünf",
-     1.41,
+     1.39,
      1.65
     ],
     [
      "multipliziert,",
      1.65,
-     2.53
+     2.59
     ],
     [
      "zehn",
-     2.53,
-     2.99
+     2.89,
+     3.01
     ],
     [
-     "Siebtel.",
-     2.99,
-     3.53
+     "Sechstel.",
+     3.01,
+     3.47
     ],
     [
      "Wer",
@@ -4956,27 +5036,27 @@
     [
      "Nenner",
      4.25,
-     4.49
+     4.47
     ],
     [
      "multipliziert,",
-     4.49,
-     5.37
+     4.47,
+     5.43
     ],
     [
      "hat",
-     5.71,
+     5.73,
      5.81
     ],
     [
      "nur",
      5.81,
-     6.03
+     6.01
     ],
     [
      "erweitert.",
-     6.03,
-     7.21
+     6.01,
+     7.23
     ]
    ]
   },
@@ -4991,21 +5071,21 @@
     [
      "Mitnehmen,",
      0.61,
-     1.25
+     1.21
     ],
     [
      "mal",
-     1.35,
+     1.43,
      1.59
     ],
     [
      "heißt",
      1.59,
-     1.89
+     1.87
     ],
     [
      "Zähler",
-     1.89,
+     1.87,
      2.27
     ],
     [
@@ -5014,18 +5094,18 @@
      2.49
     ],
     [
-     "Zähler,",
+     "Zähler",
      2.49,
-     2.99
+     3.01
     ],
     [
      "und",
-     3.27,
-     3.43
+     3.01,
+     3.39
     ],
     [
      "Nenner",
-     3.43,
+     3.39,
      3.67
     ],
     [
@@ -5040,12 +5120,12 @@
     ],
     [
      "Durch",
-     4.33,
-     4.45
+     4.29,
+     4.43
     ],
     [
      "heißt",
-     4.45,
+     4.43,
      4.69
     ],
     [
@@ -5061,22 +5141,22 @@
     [
      "Kehrwert",
      5.09,
-     5.41
+     5.43
     ],
     [
      "des",
-     5.41,
-     5.71
+     5.43,
+     5.65
     ],
     [
      "zweiten",
-     5.71,
-     5.99
+     5.65,
+     6.01
     ],
     [
-     "Bruchs.",
-     5.99,
-     6.33
+     "Brooks.",
+     6.01,
+     6.31
     ]
    ]
   }
@@ -5088,11 +5168,11 @@
     [
      "In",
      0.0,
-     0.86
+     0.92
     ],
     [
      "welcher",
-     0.86,
+     0.92,
      1.26
     ],
     [
@@ -5103,11 +5183,11 @@
     [
      "wird",
      2.06,
-     2.26
+     2.28
     ],
     [
      "gerechnet",
-     2.26,
+     2.28,
      2.84
     ],
     [
@@ -5127,22 +5207,22 @@
     ],
     [
      "dann",
-     4.1,
-     4.18
+     4.08,
+     4.2
     ],
     [
      "die",
-     4.18,
+     4.2,
      4.38
     ],
     [
      "Potenzen,",
      4.38,
-     4.98
+     4.94
     ],
     [
      "dann",
-     5.08,
+     5.1,
      5.2
     ],
     [
@@ -5153,7 +5233,7 @@
     [
      "Vorstrich,",
      5.52,
-     6.14
+     6.12
     ],
     [
      "was",
@@ -5168,11 +5248,11 @@
     [
      "ist",
      7.16,
-     7.42
+     7.44
     ],
     [
      "von",
-     7.42,
+     7.44,
      7.72
     ],
     [
@@ -5188,247 +5268,262 @@
     [
      "rechts.",
      8.14,
-     8.56
+     8.68
     ]
    ]
   },
   "Beispiel": {
-   "sprecher": "Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel, und das ist ein Drittel.",
+   "sprecher": "Ein Halb minus ein Drittel mal die Klammer drei Viertel minus ein Viertel. Zuerst die Klammer: zwei Viertel, also ein Halb. Dann Punkt vor Strich: ein Drittel mal ein Halb ist ein Sechstel. Zuletzt ein Halb minus ein Sechstel: drei Sechstel minus ein Sechstel sind zwei Sechstel, und das ist ein Drittel.",
    "woerter": [
     [
      "Einhalb",
-     0.64,
-     0.92
+     0.56,
+     0.82
     ],
     [
      "minus",
-     0.92,
-     1.3
+     0.82,
+     1.2
     ],
     [
      "ein",
-     1.3,
-     1.54
+     1.2,
+     1.44
     ],
     [
      "Drittel",
-     1.54,
-     1.82
+     1.44,
+     1.66
     ],
     [
      "mal",
-     1.82,
-     2.02
+     1.66,
+     1.84
     ],
     [
      "die",
-     2.02,
-     2.22
+     1.84,
+     2.06
     ],
     [
      "Klammer",
-     2.22,
-     2.46
+     2.06,
+     2.34
     ],
     [
      "drei",
-     2.46,
-     2.72
+     2.34,
+     2.62
     ],
     [
      "Viertel",
-     2.72,
-     3.1
+     2.62,
+     3.08
     ],
     [
      "minus",
-     3.1,
-     3.4
+     3.08,
+     3.38
     ],
     [
      "ein",
-     3.4,
-     3.66
+     3.38,
+     3.64
     ],
     [
-     "Viertel,",
-     3.66,
-     3.98
+     "Viertel.",
+     3.64,
+     4.02
     ],
     [
-     "zuerst",
-     4.04,
-     4.38
+     "Zuerst",
+     4.06,
+     4.5
     ],
     [
      "die",
-     4.38,
-     4.6
+     4.5,
+     4.72
     ],
     [
-     "Klammer",
-     4.6,
-     4.96
+     "Klammer,",
+     4.72,
+     5.22
     ],
     [
      "zwei",
-     4.96,
-     5.34
+     5.38,
+     5.6
     ],
     [
      "Viertel,",
-     5.34,
-     5.88
+     5.6,
+     6.12
     ],
     [
      "also",
-     6.0,
-     6.08
+     6.16,
+     6.32
     ],
     [
      "ein",
-     6.08,
-     6.34
+     6.32,
+     6.56
     ],
     [
      "Halb,",
-     6.34,
-     6.64
+     6.56,
+     6.92
     ],
     [
      "dann",
-     6.72,
-     6.82
+     6.96,
+     7.08
     ],
     [
      "Punkt",
-     6.82,
-     7.06
+     7.08,
+     7.3
     ],
     [
      "Vorstrich,",
-     7.06,
-     7.66
+     7.3,
+     7.86
     ],
     [
      "ein",
-     7.8,
-     7.92
+     8.04,
+     8.14
     ],
     [
      "Drittel",
-     7.92,
-     8.16
+     8.14,
+     8.38
     ],
     [
      "mal",
-     8.16,
-     8.34
+     8.38,
+     8.54
     ],
     [
      "ein",
-     8.34,
-     8.58
-    ],
-    [
-     "Halb",
-     8.58,
+     8.54,
      8.76
     ],
     [
-     "ist",
+     "Halb",
      8.76,
-     8.92
+     8.94
     ],
     [
-     "ein",
-     8.92,
+     "ist",
+     8.94,
      9.1
     ],
     [
-     "Sechstel,",
+     "ein",
      9.1,
-     9.56
+     9.28
+    ],
+    [
+     "Sechstel,",
+     9.28,
+     9.72
     ],
     [
      "zuletzt",
-     9.74,
-     10.0
+     9.9,
+     10.16
     ],
     [
      "ein",
-     10.0,
-     10.24
+     10.16,
+     10.4
     ],
     [
      "Halb",
-     10.24,
-     10.44
+     10.4,
+     10.6
     ],
     [
      "minus",
-     10.44,
-     10.68
+     10.6,
+     10.88
     ],
     [
      "ein",
-     10.68,
-     10.86
+     10.88,
+     11.08
     ],
     [
      "Sechstel,",
-     10.86,
-     11.4
+     11.08,
+     11.64
     ],
     [
      "drei",
-     11.56,
-     11.74
+     11.78,
+     11.96
     ],
     [
      "Sechstel",
-     11.74,
-     12.1
+     11.96,
+     12.32
     ],
     [
      "minus",
-     12.1,
-     12.36
+     12.32,
+     12.62
     ],
     [
      "ein",
-     12.36,
-     12.54
+     12.62,
+     12.8
     ],
     [
      "Sechstel",
-     12.54,
-     13.0
+     12.8,
+     13.24
+    ],
+    [
+     "sind",
+     13.24,
+     13.46
+    ],
+    [
+     "zwei",
+     13.46,
+     13.7
+    ],
+    [
+     "Sechstel",
+     13.7,
+     14.16
     ],
     [
      "und",
-     13.0,
-     13.16
+     14.16,
+     14.32
     ],
     [
      "das",
-     13.16,
-     13.34
+     14.32,
+     14.52
     ],
     [
      "ist",
-     13.34,
-     13.5
+     14.52,
+     14.72
     ],
     [
      "ein",
-     13.5,
-     13.64
+     14.72,
+     14.9
     ],
     [
      "Drittel.",
-     13.64,
-     14.36
+     14.9,
+     15.18
     ]
    ]
   },
@@ -5458,21 +5553,21 @@
     [
      "dieselben",
      2.11,
-     2.51
+     2.53
     ],
     [
      "Vorzeichenregeln",
-     2.51,
+     2.53,
      3.55
     ],
     [
      "wie",
      3.55,
-     3.77
+     3.75
     ],
     [
      "bei",
-     3.77,
+     3.75,
      3.97
     ],
     [
@@ -5481,48 +5576,48 @@
      4.25
     ],
     [
-     "Zahlen,",
+     "Zahlen.",
      4.25,
      4.71
     ],
     [
-     "minus",
-     4.91,
-     5.15
+     "Minus",
+     5.03,
+     5.23
     ],
     [
      "drei",
-     5.15,
-     5.45
+     5.23,
+     5.47
     ],
     [
      "Viertel",
-     5.45,
-     5.83
+     5.47,
+     5.85
     ],
     [
      "mal",
-     5.83,
+     5.85,
      6.03
     ],
     [
      "minus",
      6.03,
-     6.41
+     6.37
     ],
     [
      "zwei",
-     6.41,
-     6.61
+     6.37,
+     6.59
     ],
     [
      "Neunte,",
-     6.61,
-     6.95
+     6.59,
+     6.99
     ],
     [
      "minus",
-     7.31,
+     7.33,
      7.57
     ],
     [
@@ -5538,37 +5633,37 @@
     [
      "gibt",
      7.99,
-     8.27
+     8.25
     ],
     [
      "plus,",
-     8.27,
+     8.25,
      8.65
     ],
     [
      "sechs",
-     8.89,
+     8.87,
      9.11
     ],
     [
-     "Sechsundreißigstel,",
+     "Sechsunreißigstel,",
      9.11,
-     10.23
+     10.25
     ],
     [
      "gekürzt",
-     10.41,
-     10.83
+     10.43,
+     10.81
     ],
     [
      "ein",
-     10.83,
+     10.81,
      11.09
     ],
     [
-     "Sechstel.",
+     "Sechste.",
      11.09,
-     11.81
+     11.49
     ]
    ]
   },
@@ -5578,11 +5673,11 @@
     [
      "Bei",
      0.47,
-     0.65
+     0.67
     ],
     [
      "einer",
-     0.65,
+     0.67,
      0.91
     ],
     [
@@ -5593,56 +5688,56 @@
     [
      "werden",
      1.45,
-     1.73
+     1.71
     ],
     [
      "Zähler",
-     1.73,
+     1.71,
      2.19
     ],
     [
      "und",
      2.19,
-     2.43
+     2.41
     ],
     [
      "Nenner",
-     2.43,
-     2.63
+     2.41,
+     2.61
     ],
     [
-     "potenziert,",
-     2.63,
+     "potenziert.",
+     2.61,
      3.31
     ],
     [
-     "zwei",
+     "Zwei",
      3.61,
-     3.87
+     3.85
     ],
     [
      "Drittel",
-     3.87,
-     4.19
+     3.85,
+     4.17
     ],
     [
      "im",
-     4.19,
-     4.43
+     4.17,
+     4.41
     ],
     [
      "Quadrat",
-     4.43,
+     4.41,
      4.79
     ],
     [
      "ist",
      4.79,
-     5.01
+     4.99
     ],
     [
      "zwei",
-     5.01,
+     4.99,
      5.25
     ],
     [
@@ -5653,21 +5748,21 @@
     [
      "mal",
      5.53,
-     5.73
+     5.71
     ],
     [
      "zwei",
-     5.73,
+     5.71,
      5.99
     ],
     [
      "Drittel,",
      5.99,
-     6.39
+     6.35
     ],
     [
      "im",
-     6.59,
+     6.57,
      6.81
     ],
     [
@@ -5697,163 +5792,188 @@
     ],
     [
      "vier",
-     8.85,
+     8.83,
      8.97
     ],
     [
      "Neuntel.",
      8.97,
-     9.49
+     9.29
     ]
    ]
   },
   "Klammer beim Minus": {
-   "sprecher": "Auf die Klammer kommt es an. Minus ein Halb in Klammern im Quadrat ist plus ein Viertel. Ohne Klammer wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.",
+   "sprecher": "Auf die Klammer kommt es an. Minus ein Halb in Klammern, im Quadrat, ist plus ein Viertel. Steht das Minus vor der Klammer, wird zuerst quadriert und dann das Minus gesetzt: minus ein Viertel.",
    "woerter": [
     [
      "Auf",
      0.46,
-     0.68
+     0.66
     ],
     [
      "die",
-     0.68,
-     0.86
+     0.66,
+     0.88
     ],
     [
      "Klammer",
-     0.86,
-     1.1
+     0.88,
+     1.14
     ],
     [
      "kommt",
-     1.1,
-     1.3
+     1.14,
+     1.34
     ],
     [
      "es",
-     1.3,
-     1.54
+     1.34,
+     1.58
     ],
     [
      "an,",
-     1.54,
-     1.86
+     1.58,
+     1.78
     ],
     [
      "minus",
-     2.08,
-     2.42
+     1.94,
+     2.18
     ],
     [
-     "einen",
-     2.42,
-     2.66
+     "ein",
+     2.18,
+     2.36
     ],
     [
-     "halben",
-     2.66,
-     2.9
+     "Halb",
+     2.36,
+     2.6
+    ],
+    [
+     "in",
+     2.6,
+     2.74
     ],
     [
      "Klammern",
-     2.9,
-     3.24
+     2.74,
+     3.18
     ],
     [
      "im",
-     3.24,
-     3.42
+     3.18,
+     3.48
     ],
     [
      "Quadrat",
-     3.42,
-     3.76
+     3.48,
+     4.06
     ],
     [
      "ist",
-     3.76,
-     4.02
+     4.06,
+     4.36
     ],
     [
      "plus",
-     4.02,
-     4.26
+     4.36,
+     4.64
     ],
     [
      "ein",
-     4.26,
-     4.38
-    ],
-    [
-     "Viertel,",
-     4.38,
-     4.86
-    ],
-    [
-     "ohne",
-     4.94,
-     5.2
-    ],
-    [
-     "Klammer",
-     5.2,
-     5.68
-    ],
-    [
-     "wird",
-     5.68,
-     5.86
-    ],
-    [
-     "zuerst",
-     5.86,
-     6.2
-    ],
-    [
-     "quadriert",
-     6.2,
-     6.78
-    ],
-    [
-     "und",
-     6.78,
-     7.0
-    ],
-    [
-     "dann",
-     7.0,
-     7.18
-    ],
-    [
-     "das",
-     7.18,
-     7.36
-    ],
-    [
-     "Minus",
-     7.36,
-     7.7
-    ],
-    [
-     "gesetzt,",
-     7.7,
-     8.2
-    ],
-    [
-     "minus",
-     8.34,
-     8.56
-    ],
-    [
-     "ein",
-     8.56,
-     8.8
+     4.64,
+     4.78
     ],
     [
      "Viertel.",
-     8.8,
-     9.1
+     4.78,
+     5.3
+    ],
+    [
+     "Steht",
+     5.3,
+     5.76
+    ],
+    [
+     "das",
+     5.76,
+     5.98
+    ],
+    [
+     "Minus",
+     5.98,
+     6.2
+    ],
+    [
+     "vor",
+     6.2,
+     6.34
+    ],
+    [
+     "der",
+     6.34,
+     6.54
+    ],
+    [
+     "Klammer,",
+     6.54,
+     7.02
+    ],
+    [
+     "wird",
+     7.14,
+     7.28
+    ],
+    [
+     "zuerst",
+     7.28,
+     7.62
+    ],
+    [
+     "quadriert",
+     7.62,
+     8.18
+    ],
+    [
+     "und",
+     8.18,
+     8.42
+    ],
+    [
+     "dann",
+     8.42,
+     8.6
+    ],
+    [
+     "das",
+     8.6,
+     8.76
+    ],
+    [
+     "Minus",
+     8.76,
+     9.06
+    ],
+    [
+     "gesetzt,",
+     9.06,
+     9.6
+    ],
+    [
+     "minus",
+     9.78,
+     10.06
+    ],
+    [
+     "ein",
+     10.06,
+     10.3
+    ],
+    [
+     "Viertel.",
+     10.3,
+     10.94
     ]
    ]
   },
@@ -5862,183 +5982,183 @@
    "woerter": [
     [
      "Vorsicht",
-     0.44,
-     0.92
+     0.57,
+     0.91
     ],
     [
      "bei",
-     0.92,
-     1.06
+     0.91,
+     1.05
     ],
     [
      "Minus",
-     1.06,
-     1.42
+     1.05,
+     1.43
     ],
     [
      "vor",
-     1.42,
-     1.58
+     1.43,
+     1.57
     ],
     [
      "einer",
-     1.58,
-     1.78
+     1.57,
+     1.79
     ],
     [
      "Klammer,",
-     1.78,
-     2.26
+     1.79,
+     2.31
     ],
     [
      "drei",
-     2.52,
-     2.68
+     2.53,
+     2.69
     ],
     [
      "Viertel",
-     2.68,
-     3.06
+     2.69,
+     3.05
     ],
     [
      "minus",
-     3.06,
-     3.22
+     3.05,
+     3.23
     ],
     [
      "die",
-     3.22,
-     3.48
+     3.23,
+     3.49
     ],
     [
      "Klammer",
-     3.48,
-     3.78
+     3.49,
+     3.79
     ],
     [
      "ein",
-     3.78,
-     3.96
+     3.79,
+     3.95
     ],
     [
-     "halb",
-     3.96,
-     4.18
+     "Halb",
+     3.95,
+     4.17
     ],
     [
      "minus",
-     4.18,
-     4.38
+     4.17,
+     4.37
     ],
     [
      "ein",
-     4.38,
-     4.6
+     4.37,
+     4.55
     ],
     [
      "Viertel,",
-     4.6,
-     4.98
+     4.55,
+     4.97
     ],
     [
      "zuerst",
-     5.14,
-     5.34
+     5.11,
+     5.35
     ],
     [
      "die",
-     5.34,
-     5.58
+     5.35,
+     5.55
     ],
     [
      "Klammer",
-     5.58,
-     5.9
+     5.55,
+     5.91
     ],
     [
      "ein",
-     5.9,
-     6.12
+     5.91,
+     6.11
     ],
     [
-     "Viertel,",
-     6.12,
-     6.5
+     "Viertel.",
+     6.11,
+     6.59
     ],
     [
-     "das",
-     6.86,
-     7.1
+     "Das",
+     6.87,
+     7.11
     ],
     [
      "Ergebnis",
-     7.1,
-     7.66
+     7.11,
+     7.65
     ],
     [
      "ist",
-     7.66,
-     7.98
+     7.65,
+     7.95
     ],
     [
      "ein",
-     7.98,
-     8.18
+     7.95,
+     8.15
     ],
     [
-     "Halb,",
-     8.18,
-     8.58
+     "Halb.",
+     8.15,
+     8.61
     ],
     [
-     "wer",
-     8.7,
-     8.86
+     "Wer",
+     8.69,
+     8.85
     ],
     [
      "die",
-     8.86,
-     9.08
+     8.85,
+     9.05
     ],
     [
      "Klammer",
-     9.08,
-     9.36
+     9.05,
+     9.37
     ],
     [
      "einfach",
-     9.36,
-     9.72
+     9.37,
+     9.73
     ],
     [
-     "weglässt",
-     9.72,
-     10.46
+     "weglässt,",
+     9.73,
+     10.45
     ],
     [
      "erhält",
-     10.46,
-     10.86
+     10.59,
+     10.87
     ],
     [
      "Null,",
-     10.86,
-     11.24
+     10.87,
+     11.27
     ],
     [
      "das",
-     11.42,
-     11.64
+     11.41,
+     11.63
     ],
     [
      "ist",
-     11.64,
-     11.86
+     11.63,
+     11.87
     ],
     [
      "falsch.",
-     11.86,
-     12.42
+     11.87,
+     12.39
     ]
    ]
   },
@@ -6047,123 +6167,123 @@
    "woerter": [
     [
      "Zum",
-     0.51,
-     0.65
+     0.46,
+     0.64
     ],
     [
-     "Mitnehmen",
-     0.65,
-     1.13
+     "Mitnehmen,",
+     0.64,
+     1.14
     ],
     [
      "Klammer,",
-     1.13,
-     1.85
+     1.32,
+     1.84
     ],
     [
      "Potenz,",
-     1.95,
-     2.51
+     1.96,
+     2.48
     ],
     [
      "Punkt",
-     2.73,
-     2.79
+     2.68,
+     2.78
     ],
     [
      "Vorstrich,",
-     2.79,
-     3.51
+     2.78,
+     3.48
     ],
     [
      "sonst",
-     3.71,
-     3.89
+     3.7,
+     3.9
     ],
     [
      "von",
-     3.89,
-     4.11
+     3.9,
+     4.12
     ],
     [
      "links",
-     4.11,
-     4.37
+     4.12,
+     4.36
     ],
     [
      "nach",
-     4.37,
-     4.57
+     4.36,
+     4.58
     ],
     [
-     "rechts,",
-     4.57,
-     4.91
+     "rechts",
+     4.58,
+     4.9
     ],
     [
-     "Vorzeichen",
-     5.05,
-     5.53
+     "vorzeichen",
+     4.9,
+     5.54
     ],
     [
      "wie",
-     5.53,
-     5.65
+     5.54,
+     5.7
     ],
     [
      "bei",
-     5.65,
-     5.83
+     5.7,
+     5.84
     ],
     [
      "den",
-     5.83,
-     5.97
+     5.84,
+     5.96
     ],
     [
      "ganzen",
-     5.97,
-     6.29
+     5.96,
+     6.28
     ],
     [
      "Zahlen",
-     6.29,
-     6.65
+     6.28,
+     6.64
     ],
     [
      "und",
-     6.65,
-     7.11
+     6.64,
+     7.1
     ],
     [
      "jeden",
-     7.11,
-     7.27
+     7.1,
+     7.28
     ],
     [
      "Schritt",
-     7.27,
-     7.65
+     7.28,
+     7.62
     ],
     [
      "in",
-     7.65,
-     7.89
+     7.62,
+     7.88
     ],
     [
      "eine",
-     7.89,
-     8.03
+     7.88,
+     8.06
     ],
     [
      "eigene",
-     8.03,
-     8.39
+     8.06,
+     8.38
     ],
     [
      "Zeile.",
-     8.39,
-     9.11
+     8.38,
+     8.74
     ]
    ]
   },
@@ -6172,73 +6292,73 @@
    "woerter": [
     [
      "Jetzt",
-     0.64,
-     0.88
+     0.65,
+     0.89
     ],
     [
      "du,",
-     0.88,
-     1.26
+     0.89,
+     1.27
     ],
     [
      "erkunde",
-     1.44,
-     1.76
+     1.43,
+     1.75
     ],
     [
      "diese",
-     1.76,
-     2.04
+     1.75,
+     2.03
     ],
     [
      "Zusammenhänge",
-     2.04,
-     2.52
+     2.03,
+     2.53
     ],
     [
      "im",
-     2.52,
-     2.72
+     2.53,
+     2.75
     ],
     [
      "Schrittwähler",
-     2.72,
-     3.3
+     2.75,
+     3.31
     ],
     [
      "unter",
-     3.3,
-     3.56
+     3.31,
+     3.55
     ],
     [
      "dem",
-     3.56,
-     3.78
+     3.55,
+     3.75
     ],
     [
      "Clip",
-     3.78,
-     4.12
+     3.75,
+     4.13
     ],
     [
      "und",
-     4.12,
-     4.44
+     4.13,
+     4.45
     ],
     [
      "löse",
-     4.44,
-     4.72
+     4.45,
+     4.71
     ],
     [
      "die",
-     4.72,
-     4.86
+     4.71,
+     4.87
     ],
     [
      "Aufgaben.",
-     4.86,
-     5.3
+     4.87,
+     5.33
     ]
    ]
   }
