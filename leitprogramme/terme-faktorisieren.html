@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leitprogramm Terme und Faktorisieren</title>
+<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->
+<meta name="description" content="Leitprogramm Terme und Faktorisieren, Sekundarstufe I: zusammenfassen, Klammern auflösen, Klammer mal Klammer, binomische Formeln, ausklammern, Zweiklammersatz — mit Übungen.">
+<meta name="author" content="Raphael Arnold Kohler">
+<link rel="canonical" href="https://sek1-mathe.begreifbar.ch/leitprogramme/terme-faktorisieren.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sek1-Mathe begreifbar">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Leitprogramm Terme und Faktorisieren — vereinfachen, ausmultiplizieren, binomische Formeln">
+<meta property="og:description" content="Leitprogramm Terme und Faktorisieren, Sekundarstufe I: zusammenfassen, Klammern auflösen, Klammer mal Klammer, binomische Formeln, ausklammern, Zweiklammersatz — mit Übungen.">
+<meta property="og:url" content="https://sek1-mathe.begreifbar.ch/leitprogramme/terme-faktorisieren.html">
+<meta property="og:image" content="https://sek1-mathe.begreifbar.ch/og-bild.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://sek1-mathe.begreifbar.ch/leitprogramme/terme-faktorisieren.html#inhalt",
+   "url": "https://sek1-mathe.begreifbar.ch/leitprogramme/terme-faktorisieren.html",
+   "name": "Leitprogramm Terme und Faktorisieren — vereinfachen, ausmultiplizieren, binomische Formeln",
+   "description": "Leitprogramm Terme und Faktorisieren, Sekundarstufe I: zusammenfassen, Klammern auflösen, Klammer mal Klammer, binomische Formeln, ausklammern, Zweiklammersatz — mit Übungen.",
+   "inLanguage": "de-CH",
+   "isAccessibleForFree": true,
+   "license": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
+   "creator": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "publisher": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "dateModified": "2026-10-09",
+   "isPartOf": {
+    "@id": "https://sek1-mathe.begreifbar.ch/#website"
+   },
+   "about": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Mathematik"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Terme"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Klammern"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Ausmultiplizieren"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Binomische Formeln"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Faktorisieren"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Ausklammern"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Leitprogramm"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Sekundarstufe I"
+    }
+   ],
+   "keywords": "Mathematik, Terme, Klammern, Ausmultiplizieren, Binomische Formeln, Faktorisieren, Ausklammern, Leitprogramm, Sekundarstufe I",
+   "learningResourceType": "Leitprogramm",
+   "educationalLevel": "Sekundarstufe I (Schweiz)",
+   "typicalAgeRange": "12-16",
+   "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": [
+     "student",
+     "teacher"
+    ]
+   },
+   "interactivityType": "active"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sek1-mathe.begreifbar.ch/#website",
+   "url": "https://sek1-mathe.begreifbar.ch/",
+   "name": "Sek1-Mathe begreifbar"
+  }
+ ]
+}
+</script>
+<!-- SEO:ENDE -->
+<link rel="stylesheet" href="../schriften.css">
+<!-- Die Seite erbt Farben, Karten und Kopf von der Site. Reihenfolge zählt: der eigene <style> unten
+     gewinnt bei gleichem Gewicht, das Leitprogramm behält also sein Layout. -->
+<link rel="stylesheet" href="../style.css">
+<style>
+:root{
+  /* Die Palette kommt aus ../style.css — 20 Tokens, Wert fuer Wert dieselben.
+     Hier steht nur, was dort anders heisst oder fehlt. Damit kann sie nicht
+     mehr auseinanderlaufen. */
+  --karte:var(--weiss);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+    --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+    --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+    --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+    --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+    --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+    --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+    --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+    --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+  --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+  --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+  --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+  --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+  --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+  --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+  --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+  --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);
+  font-family:var(--serif);font-size:17px;line-height:1.62;
+  -webkit-text-size-adjust:100%}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.22;margin:0}
+a{color:var(--petrol)}   /* Bereichsfarbe Sek I (CLAUDE.md) */
+:focus-visible{outline:2.5px solid var(--lila-rand);outline-offset:2px;border-radius:3px}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+
+/* ---------- Gerüst ---------- */
+.huelle{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+.raster{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:1000px){
+  .raster{grid-template-columns:236px minmax(0,1fr);gap:52px;align-items:start}
+}
+.inhalt{min-width:0;max-width:70ch}
+
+/* ---------- Kopf ---------- */
+.kopf{border-bottom:1px solid var(--linie);background:var(--papier-2);
+  margin-bottom:44px;padding:0 20px}
+.kopf-innen{max-width:1180px;margin:0 auto;padding:30px 0 34px;
+  display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+.marke{font-family:var(--sans);font-size:.76rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinte-2);margin:0 0 10px}
+.kopf h1{font-size:clamp(2rem,5.2vw,2.9rem);font-weight:700;letter-spacing:-.015em}
+.kopf .unter{font-family:var(--sans);color:var(--tinte-2);margin:10px 0 0;font-size:1rem;max-width:52ch}
+.kopf-rechts{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);text-align:right;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.themenschalter{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--tinte-2);
+  background:var(--karte);border:1px solid var(--linie);border-radius:999px;
+  padding:6px 13px;cursor:pointer}
+.themenschalter:hover{color:var(--tinte);border-color:var(--tinte-2)}
+
+/* ---------- Seitenschiene ---------- */
+.schiene{font-family:var(--sans);font-size:.87rem;margin-bottom:40px}
+@media(min-width:1000px){.schiene{position:sticky;top:22px;margin-bottom:0}}
+.schiene h2{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin-bottom:12px}
+.schiene ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.schiene a{display:flex;gap:9px;align-items:baseline;padding:6px 8px;border-radius:5px;
+  text-decoration:none;color:var(--tinte);border-left:2.5px solid transparent}
+.schiene a:hover{background:var(--papier-2)}
+.schiene a.aktiv{border-left-color:var(--petrol-rand);background:var(--papier-2);font-weight:600}
+.schiene .nr{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);min-width:1.6em}
+.schiene .lekt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin:16px 0 5px;padding-left:8px}
+.fortschritt{margin-top:22px;padding-top:16px;border-top:1px solid var(--linie)}
+.balken{height:6px;background:var(--papier-2);border:1px solid var(--linie);border-radius:99px;overflow:hidden}
+.balken i{display:block;height:100%;background:var(--gruen-rand);width:0;transition:width .35s ease}
+.fortschritt p{margin:9px 0 0;font-size:.79rem;color:var(--tinte-2)}
+.fortschritt button{margin-top:10px;font-family:var(--sans);font-size:.75rem;color:var(--tinte-2);
+  background:none;border:none;padding:0;cursor:pointer;text-decoration:underline}
+
+/* ---------- Anleitung ---------- */
+.anleitung{background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:22px 26px;margin-bottom:46px;box-shadow:var(--s)}
+.anleitung summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px}
+.anleitung summary::-webkit-details-marker{display:none}
+.anleitung summary::after{content:"";flex:none;margin-left:auto;width:.5em;height:.5em;
+  border-right:2px solid var(--tinte-2);border-bottom:2px solid var(--tinte-2);
+  transform:translateY(-.15em) rotate(45deg);transition:transform .2s}
+.anleitung[open] summary::after{transform:translateY(.1em) rotate(-135deg)}
+.anleitung h2{font-size:1.12rem}
+.anleitung ol{margin:12px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.94rem;color:var(--tinte-2)}
+.anleitung li{margin:6px 0}
+.anleitung li b{color:var(--tinte)}
+
+/* ---------- Lektionsband ---------- */
+.band{display:flex;align-items:center;gap:14px;margin:56px 0 30px}
+.band:first-of-type{margin-top:8px}
+.band .strich{flex:1;height:1px;background:var(--linie)}
+.band span{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--tinte-2);white-space:nowrap}
+
+/* ---------- Kapitel ---------- */
+.kap{margin-bottom:52px;scroll-margin-top:20px}
+.kap-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.marker{font-family:var(--mono);font-size:.74rem;font-weight:700;letter-spacing:.04em;
+  padding:3px 8px;border-radius:4px;background:var(--papier-2);color:var(--tinte-2)}
+.abz{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.05em;
+  padding:3px 9px;border-radius:999px;border:1px solid}
+.abz-th{color:var(--petrol);border-color:var(--petrol-rand);background:var(--petrol-hell)}
+.abz-sf{color:var(--lila);border-color:var(--lila-rand);background:var(--lila-hell)}
+.zeit{font-family:var(--sans);font-size:.78rem;color:var(--tinte-2)}
+.kap h2{font-size:1.62rem;font-weight:700;letter-spacing:-.01em}
+.ziel{font-family:var(--sans);font-size:.95rem;color:var(--tinte-2);
+  border-left:2.5px solid var(--linie);padding-left:13px;margin:12px 0 22px}
+.kap h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:30px 0 10px}
+.kap p{margin:0 0 14px}
+
+/* ---------- Clipkarte ---------- */
+.clipkarte{margin:22px 0 26px}
+.clip-start{display:flex;width:100%;align-items:center;gap:15px;text-align:left;cursor:pointer;
+  background:var(--lila-hell);border:1px solid var(--lila-rand);border-radius:10px;
+  padding:14px 17px;font-family:var(--sans);color:var(--tinte)}
+.clip-start:hover{box-shadow:var(--sl)}
+.clip-play{flex:none;width:38px;height:38px;border-radius:50%;background:var(--lila);color:#fff;
+  display:grid;place-items:center;font-size:.9rem;padding-left:3px}
+:root[data-theme="dark"] .clip-play,
+:root:not([data-theme="light"]) .clip-play{color:#171512}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .clip-play{color:#fff}}
+.clip-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.clip-titel{font-weight:600;font-size:.97rem;line-height:1.32}
+.clip-quelle{font-size:.75rem;color:var(--tinte-2);letter-spacing:.03em}
+.clip-zeit{font-family:var(--mono);font-size:.8rem;color:var(--tinte-2);flex:none}
+@media(max-width:720px){
+}
+
+/* ---------- Merkkasten, Beispiele, Warnung ---------- */
+.merk{background:var(--blau-hell);border:1px solid var(--blau-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.merk .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--blau);margin-bottom:8px}
+.merk p:last-child{margin-bottom:0}
+.warn{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.warn .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.warn p:last-child{margin-bottom:0}
+
+table.gesetze{width:100%;border-collapse:collapse;margin:18px 0;font-size:.97rem}
+.tabhuelle{overflow-x:auto}
+table.gesetze th,table.gesetze td{border-bottom:1px solid var(--linie);padding:9px 10px;text-align:left;vertical-align:middle}
+table.gesetze th{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tinte-2)}
+table.gesetze td:first-child{font-family:var(--mono);font-size:.82rem;color:var(--tinte-2);white-space:nowrap;width:1%}
+table.gesetze td.wort{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+
+.beisp{margin:18px 0;border:1px solid var(--linie);border-radius:8px;background:var(--karte);overflow:hidden}
+.beisp .kopfz{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--tinte-2);background:var(--papier-2);
+  padding:7px 16px;border-bottom:1px solid var(--linie)}
+.beisp ul{list-style:none;margin:0;padding:12px 16px;display:flex;flex-direction:column;gap:9px}
+.beisp li{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.beisp .schritt{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2)}
+
+/* ---------- Selbsttest ---------- */
+.test{border:1.5px solid var(--gruen-rand);border-radius:11px;background:var(--karte);
+  margin:30px 0 0;overflow:hidden}
+.test-kopf{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
+  background:var(--gruen-hell);padding:11px 18px;border-bottom:1px solid var(--gruen-rand)}
+.test-kopf h3{font-family:var(--sans);font-size:.94rem;font-weight:700;color:var(--gruen);margin:0}
+.test-kopf .werkz{display:flex;gap:14px;align-items:center;font-family:var(--sans);font-size:.78rem}
+.test-kopf button{font-family:var(--sans);font-size:.78rem;background:none;border:none;
+  color:var(--gruen);cursor:pointer;text-decoration:underline;padding:0}
+.test-kopf label{display:flex;gap:6px;align-items:center;color:var(--tinte-2);cursor:pointer}
+.aufg{list-style:none;margin:0;padding:6px 18px 18px}
+.aufg>li{border-bottom:1px dotted var(--linie);padding:11px 0}
+.aufg>li:last-child{border-bottom:none;padding-bottom:2px}
+.frage{display:flex;gap:11px;align-items:baseline}
+.frage .nr{font-family:var(--mono);font-size:.83rem;font-weight:700;color:var(--gruen);
+  flex:none;min-width:2.4em}
+.frage .pkt{font-family:var(--mono);font-size:.72rem;color:var(--tinte-2);
+  flex:none;min-width:3.4em;margin-left:-4px}
+.frage .txt{flex:1;min-width:0}
+details.loes{margin:7px 0 0 calc(5.8em + 11px)}
+details.loes summary{font-family:var(--sans);font-size:.79rem;color:var(--tinte-2);
+  cursor:pointer;list-style:none;display:inline-flex;gap:6px;align-items:center;
+  border:1px solid var(--linie);border-radius:999px;padding:2px 11px}
+details.loes summary::-webkit-details-marker{display:none}
+details.loes summary:hover{border-color:var(--gruen-rand);color:var(--gruen)}
+details.loes[open] summary{color:var(--gruen);border-color:var(--gruen-rand)}
+details.loes .inhaltbox{border-left:2.5px solid var(--gruen-rand);padding:6px 0 2px 13px;margin-top:9px}
+details.loes .inhaltbox p{margin:0 0 7px}
+details.loes .inhaltbox p:last-child{margin-bottom:0}
+.komm{font-family:var(--sans);font-size:.87rem;color:var(--tinte-2)}
+
+/* ---------- Gesamttest ---------- */
+.gesamt{border:2px solid var(--tinte-2);border-radius:12px;background:var(--karte);
+  padding:0;overflow:hidden;margin-top:20px}
+.gesamt-kopf{background:var(--papier-2);padding:16px 20px;border-bottom:1px solid var(--linie)}
+.gesamt-kopf h2{font-size:1.4rem}
+.gesamt-kopf p{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2);margin:7px 0 0}
+.gesamt-teil{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinte-2);padding:18px 20px 0}
+.gesamt .aufg{padding:6px 20px 16px}
+.summe{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);white-space:nowrap}
+.bewertung{margin:0;padding:16px 20px 20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+.bewertung table{width:100%;border-collapse:collapse;margin-top:8px}
+.bewertung td{padding:5px 8px;border-bottom:1px solid var(--linie)}
+.bewertung td:first-child{font-family:var(--mono);white-space:nowrap;width:1%;color:var(--tinte)}
+
+/* ---------- Fuss ---------- */
+.fuss{margin-top:64px;padding-top:20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .huelle{padding:0 15px 70px}
+  details.loes{margin-left:0}
+}
+@media print{
+  .schiene,.themenschalter,.clip-buehne,.test-kopf .werkz{display:none}
+  .kap{break-inside:avoid}
+  details.loes{display:none}
+  body{background:#fff}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* ── Fuss im Dunkelmodus ─────────────────────────────────────────
+   Kopf und Menue kommen ohne Nachhilfe aus: style.css faerbt seine
+   Flaechen mit --weiss, und das ist oben dunkel gesetzt. Nur der Fuss
+   braucht eine Regel — er benutzt --tinte als *Flaeche*, und die kippt
+   im Dunkelmodus mit dem Text nach hell. */
+:root[data-theme="dark"] .site-footer{
+  background:var(--papier-2); color:var(--tinte-2);
+  border-top:1px solid var(--linie);
+}
+:root[data-theme="dark"] .site-footer a{ color:var(--petrol); }
+
+/* Das Lektionsband traegt `white-space:nowrap`. Auf schmalen Schirmen
+   laeuft ein laengerer Untertitel damit ueber den Rand hinaus — in der
+   Uebungspruefung derselbe Fall, dort mit derselben Zeile behoben. */
+@media(max-width:600px){ .band span{white-space:normal} }
+/* ════════ HOWTO-leitprogramme.md §6 — Fliesstext schmal, Arbeitsflaechen breit ════════
+   Vorher: .inhalt max-width 70ch (~620 px), .huelle 1180 px. Auf 1280 px blieben
+   rechts ~230 px leer. Jetzt begrenzen die Textelemente sich selbst, Beispiele,
+   Tabellen, Tests und Erkundungen nehmen die ganze Spalte, und .duo stellt zwei
+   zusammengehoerige Teile ab 1180 px nebeneinander. Quelltextreihenfolge =
+   Lesereihenfolge auf dem Handy. */
+.huelle,.kopf-innen{max-width:1440px}
+.inhalt{max-width:none}
+.kap>p,.kap>h2,.kap>h3,.ziel,.duo>div>p,.erkunden p,.erkunden ol{max-width:68ch}
+.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px;align-items:start}
+.duo>*{min-width:0}
+@media(min-width:1180px){
+  .duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .aufg.zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:34px}
+  .aufg.zwei>li:nth-last-child(2):nth-child(odd){border-bottom:none}
+}
+.duo>.anleitung{margin-bottom:24px}
+.duo>.rlp-kompetenzen{margin:0 0 24px}
+.rlp-kompetenzen .rlp-fuss{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin:8px 0 0}
+
+/* Didaktische Farben nach STYLEGUIDE §5: Rot = Fehler/Achtung, Orange = Aufgabe.
+   Die Vorlage faerbte den Haeufigen Fehler orange; hier rot, damit das Orange
+   frei ist fuer den Erkundungsauftrag. */
+.warn{background:var(--rot-hell);border-color:var(--rot-rand)}
+.warn .titel{color:var(--rot)}
+.erkunden{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.erkunden .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.erkunden ol{margin:6px 0 10px;padding-left:1.3em}
+.erkunden li{margin:4px 0}
+.erkunden p:last-child{margin-bottom:0}
+.notiz{font-family:var(--sans);font-size:.9rem;color:var(--tinte-2)}
+.ausf{font-family:var(--sans);font-size:.92rem;border-top:1px solid var(--linie);padding-top:12px;margin-top:26px}
+.knopf-link{font-family:var(--sans);font-size:.8rem;background:none;border:none;padding:0;
+  color:var(--tinte-2);text-decoration:underline;cursor:pointer}
+table.gesetze.formen td:first-child{font-family:var(--sans);font-size:.86rem;color:var(--tinte);
+  white-space:normal;width:auto;font-weight:600}
+table.gesetze.formen td:first-child .wort{font-weight:400}
+.weiter{margin-top:30px}
+.beisp .wert{flex:1;min-width:0}
+
+/* ---------- eingebettete Simulation (§8b) ---------- */
+.sim{margin:20px 0;background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:14px 16px 12px}
+.sim > svg{display:block;width:100%;max-width:420px;height:auto;margin:6px auto 10px}
+.sim-formel{font-family:var(--mono);font-size:1rem;text-align:center;padding:6px 8px;
+  background:var(--papier-2);border-radius:6px}
+.sim figcaption{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);text-align:center;margin-top:8px}
+.sl-row{display:flex;gap:10px;align-items:center;font-family:var(--sans);font-size:.9rem}
+.sl-row input[type=range]{flex:1}
+.sl-val{font-family:var(--mono);font-size:.86rem;min-width:2.6em}
+.sim .gitter{stroke:var(--linie);stroke-width:.6}
+.sim .achse{stroke:var(--tinte-2);stroke-width:1.2}
+.sim .skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+.sim .normal{fill:none;stroke:var(--tinte-2);stroke-width:1.4;stroke-dasharray:5 4;opacity:.7}
+.sim .kurve{fill:none;stroke:var(--blau);stroke-width:2.6}
+.sim .scheitel{fill:var(--tinte)}
+.sim .s-text{fill:var(--tinte);font-family:var(--sans);font-size:12px;font-weight:600}
+
+/* ════════ Fassung 2 — «zuerst sehen» (HOWTO-leitprogramme.md §4, §8) ════════ */
+.phase{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinte-2);margin:34px 0 8px;display:flex;align-items:center;gap:8px}
+.phase span{display:inline-grid;place-items:center;width:1.7em;height:1.7em;border-radius:50%;
+  background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte);font-size:.9rem;letter-spacing:0}
+.sim-knoepfe{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin:8px 0 2px;
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2)}
+.sim-knoepfe button,.formen-live button{font-family:var(--sans);font-size:.8rem;cursor:pointer;
+  background:var(--karte);color:var(--tinte);border:1px solid var(--linie);border-radius:999px;padding:4px 12px}
+.sim-knoepfe button.aktiv{background:var(--gruen-hell);border-color:var(--gruen-rand);color:var(--gruen);font-weight:700}
+.formen-live{display:flex;flex-direction:column;gap:5px}
+.formen-live button{border-radius:7px;display:flex;gap:10px;align-items:baseline;text-align:left;padding:6px 10px;
+  font-family:var(--mono);font-size:.86rem}
+.formen-live .fl-name{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;min-width:8.5em;color:var(--tinte-2)}
+.formen-live button[data-form="g"].aktiv{border-color:var(--blau-rand);background:var(--blau-hell)}
+.formen-live button[data-form="s"].aktiv{border-color:var(--gruen-rand);background:var(--gruen-hell)}
+.formen-live button[data-form="p"].aktiv{border-color:var(--orange-rand);background:var(--orange-hell)}
+.sim.treffer{border-color:var(--gruen-rand);box-shadow:0 0 0 2px var(--gruen-hell)}
+.sim .zielkurve{fill:none;stroke:var(--gruen);stroke-width:3;stroke-dasharray:7 5;opacity:.85}
+.sim .symachse{stroke:var(--tinte-2);stroke-width:1.3;stroke-dasharray:6 5}
+.p-s{fill:var(--gruen)} .p-g{fill:var(--blau)} .p-n{fill:var(--orange)} .p-geist{fill:var(--orange);opacity:.35}
+text.p-text{font-family:var(--sans);font-size:11.5px;font-weight:700}
+.sim .feld-rahmen{fill:none;stroke:var(--linie);stroke-dasharray:4 4}
+.sim .feld{fill:var(--gruen-hell);stroke:var(--gruen);stroke-width:2}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+.beisp .mini-reihe{margin:10px 16px 0}
+svg.mini{width:128px;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px}
+svg.mini.gross{width:190px}
+svg.mini .kurve{fill:none;stroke:var(--blau);stroke-width:2.2}
+svg.mini .gitter{stroke:var(--linie);stroke-width:.5}
+svg.mini .achse{stroke:var(--tinte-2);stroke-width:1}
+svg.mini .skala{font-size:8px}
+svg.mini .mini-titel{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--tinte)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} svg.mini{width:110px} }
+
+/* ---------- Üben mit Rückmeldung (Prototyp) ---------- */
+.uebung{border:1.5px solid var(--orange-rand);border-radius:11px;background:var(--karte);padding:12px 16px 14px;margin:14px 0}
+.ue-kopf{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-family:var(--sans);font-size:.8rem;margin-bottom:6px}
+.ue-titel{font-weight:700;color:var(--orange)}
+.ue-serie{color:var(--tinte-2)}
+.ue-aufgabe{margin:6px 0 10px}
+.ue-zeile{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--mono);font-size:.95rem}
+.ue-eingabe input{width:4.2em;font-family:var(--mono);font-size:.95rem;padding:4px 6px;margin:0 3px;border:1.5px solid var(--linie);
+  border-radius:6px;background:var(--papier);color:var(--tinte);text-align:center}
+.ue-eingabe input:focus{outline:none;border-color:var(--orange-rand)}
+.ue-eingabe input.falsch{border-color:var(--rot-rand)}
+.ue-zeile button,.ue-weiter{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--orange-rand);background:var(--orange-hell);color:var(--tinte)}
+.ue-zeile .ue-neu{background:none;border-color:var(--linie);color:var(--tinte-2)}
+.ue-rueck{font-family:var(--sans);font-size:.9rem;margin-top:10px;border-radius:7px}
+.ue-rueck:empty{display:none}
+.ue-rueck.richtig{background:var(--gruen-hell);border-left:4px solid var(--gruen-rand);padding:8px 12px}
+.ue-rueck.falsch{background:var(--rot-hell);border-left:4px solid var(--rot-rand);padding:8px 12px}
+.ue-rueck.hinweis{background:var(--papier-2);padding:8px 12px}
+.ue-loes{margin-top:6px} .ue-loes summary{cursor:pointer;color:var(--tinte-2)}
+.uebung .ue-bild{display:block;margin:4px 0 6px}
+
+.fahrplan{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px;font-family:var(--sans);font-size:.78rem}
+.fahrplan span{padding:3px 10px;border-radius:999px;background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte-2)}
+
+.pdf-weg{margin:14px 0 4px;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:.92rem}
+.pdf-schritt{display:flex;gap:12px;align-items:flex-start}
+.pdf-schritt .nr{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:grid;place-items:center;
+  background:var(--karte);border:1px solid var(--linie);font-weight:700}
+.pdf-knoepfe{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.pdf-knopf{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--petrol-hell);border:1px solid var(--petrol-rand);
+  color:var(--tinte);text-decoration:none;font-weight:600}
+.pdf-knopf:hover{box-shadow:var(--sl)}
+.pdf-link{font-size:.85rem}
+
+
+/* ════════ Terme und Faktorisieren (09.10.2026) — Kapitelmuster wie Bruchrechnen ════════
+   Grundgerüst (Leiste, Übungen, Festhalten, PDF-Weg) wie in den Leitprogrammen von TALS Mathe.
+   Neu: Termkacheln, Flächenmodell, Rechteckschema, Quadrat der binomischen Formeln, Termeingabe.
+   Farben: x² und x blau, Zahlen orange, negative Kacheln rot, Ergebnis grün. */
+.sim-gross{max-width:680px;margin:10px auto 6px}
+.sim-gross > svg{max-width:520px}
+.leiste{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 10px;padding:9px 12px;border-radius:9px;
+  background:var(--orange-hell);border:1px solid var(--orange-rand);font-family:var(--sans);font-size:.92rem}
+.leiste .ls-nr{font-family:var(--mono);font-size:.78rem;color:var(--orange);font-weight:700}
+.leiste .ls-text{flex:1 1 260px;min-width:0}
+.leiste .ls-ok{color:var(--gruen);font-weight:700;font-size:1.1rem;min-width:1em}
+.leiste .ls-weiter,.leiste .ls-neu{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--linie);background:var(--karte);color:var(--tinte-2)}
+.leiste.geloest{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.leiste.geloest .ls-weiter{border-color:var(--gruen-rand);color:var(--tinte);font-weight:700}
+.leiste.fertig{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.kompetenzen ul{margin:10px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.92rem}
+.kompetenzen li{margin:5px 0}
+.kompetenzen .rlp-quelle{font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);margin:8px 0 0}
+.kompetenzen .ohm{font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--orange-hell);border:1px solid var(--orange-rand);white-space:nowrap}
+.sim-schalter{display:flex;gap:7px;align-items:center;justify-content:center;font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);margin:2px 0 8px;cursor:pointer}
+.festhalten{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px}
+@media(min-width:1180px){.festhalten{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.sim-formel{line-height:1.9;font-family:var(--sans);font-size:.95rem}
+.sim-wahl{font-family:var(--sans);font-size:.88rem;padding:4px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte)}
+.sl-row{flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.sl-grp{display:flex;gap:8px;align-items:center;flex:1 1 200px;min-width:0}
+.sl-grp input[type=range]{flex:1;min-width:90px}
+.sl-grp.akz-blau input{accent-color:var(--blau)} .sl-grp.akz-orange input{accent-color:var(--orange)} .sl-grp.akz-gruen input{accent-color:var(--gruen)}
+.sl-grp .var{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);white-space:nowrap}
+
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+
+/* Termkacheln (Sim 1) */
+.kachel{stroke-width:1}
+.kachel.kx{fill:var(--blau-hell);stroke:var(--blau)}
+.kachel.k1{fill:var(--orange-hell);stroke:var(--orange)}
+.kachel.neg{fill:var(--rot-hell);stroke:var(--rot)}
+.kl-rahmen{fill:none;stroke:var(--tinte-2);stroke-width:1.2}
+.kl-rahmen.minus{stroke:var(--rot);stroke-dasharray:4 3}
+.kl-vz{font-family:var(--sans);font-size:20px;font-weight:700;fill:var(--rot)}
+.treffer-rahmen{fill:none;stroke:var(--gruen);stroke-width:2.5}
+
+/* Flächenmodell, Quadrat (Sim 2, 3, Minibilder) */
+.fl-q{fill:var(--blau-hell);stroke:var(--blau);stroke-width:1}
+.fl-x{fill:var(--blau-hell);stroke:var(--blau);stroke-width:1;opacity:.75}
+.fl-1{fill:var(--orange-hell);stroke:var(--orange);stroke-width:1}
+.fl-leer{fill:var(--karte);stroke:var(--tinte-2);stroke-width:.8}
+.fl-weg{fill:var(--rot-hell);stroke:var(--rot);stroke-width:1;stroke-dasharray:4 3;fill-opacity:.55}
+#sim3 .fl-x{fill:var(--orange-hell);stroke:var(--orange);opacity:1}
+#sim3 .fl-1,svg.mini-term[data-binom] .fl-1{fill:var(--gruen-hell);stroke:var(--gruen)}
+svg.mini-term[data-binom] .fl-x{fill:var(--orange-hell);stroke:var(--orange);opacity:1}
+.rahmen{fill:none;stroke:var(--tinte);stroke-width:1.6}
+.rahmen.duenn{stroke-width:1;stroke:var(--tinte-2)}
+.st-name{font-family:var(--sans);font-size:12px;font-weight:700;fill:var(--tinte-2)}
+.st-frage{font-family:var(--sans);font-size:11.5px;fill:var(--tinte-2)}
+.st-zahl{font-family:var(--sans);font-size:11px;font-weight:700;fill:var(--tinte)}
+.st-zahl.grau-t{fill:var(--tinte-2);font-weight:400}
+svg.mini-term{width:200px;max-width:100%;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px;display:block}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} }
+
+/* Rechteckschema (Sim 2, Sim 4) */
+table.schema{border-collapse:collapse;margin:10px auto 4px;font-family:var(--sans);font-size:.95rem;font-variant-numeric:tabular-nums}
+table.schema th,table.schema td{border:1px solid var(--linie);padding:5px 14px;text-align:center;min-width:3.4em}
+table.schema th{background:var(--papier-2);color:var(--tinte-2);font-weight:700}
+table.schema td.t-q,table.schema td.t-x{background:var(--blau-hell)}
+table.schema td.t-z{background:var(--orange-hell)}
+.sim-ziel{font-family:var(--sans);font-size:.95rem;text-align:center;margin:0 0 6px}
+
+/* Übungen: Termfeld breit, Tipps in Stufen */
+.ue-eingabe input.term{width:13em;max-width:100%;font-family:var(--mono)}
+.ue-zeile .ue-tipp{background:none;border-color:var(--blau-rand);color:var(--blau)}
+.ue-zeile .ue-tipp:disabled{opacity:.5;cursor:default}
+.ue-tipps:empty{display:none}
+.ue-tipps{margin-top:8px;padding:6px 12px;border-left:3px solid var(--blau-rand);background:var(--blau-hell);border-radius:0 6px 6px 0;font-family:var(--sans);font-size:.88rem}
+.ue-stufe{margin:4px 0}
+
+/* Beispiel mit Rechenweg */
+.weg{margin:10px 0 4px;padding-left:0;list-style:none;font-size:1rem}
+.weg li{margin:4px 0}
+.weg .warum{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin-left:.6em}
+.merk ol{padding-left:1.4em;margin:6px 0 10px}
+.merk ol.weg{padding-left:0}
+.merk h4{font-family:var(--sans);font-size:.9rem;margin:12px 0 4px}
+.vertiefung{border:1.5px dashed var(--lila-rand);border-radius:11px;padding:4px 18px 14px;margin-top:30px;background:var(--karte)}
+.vertiefung h2{font-size:1.25rem;margin:14px 0 4px}
+.vertiefung .aufg{padding:6px 0 0}
+/* Vorwissen: «Kurz wiederholt» (Prüfung 09.10.2026: statt Verweis auf noch leere Themenseiten) */
+.kap > details.anleitung{margin:6px 0 18px;padding:14px 20px}
+.kap > details.anleitung h3{margin:0;font-size:1rem}
+.kurz{margin:10px 0 0;padding-left:1.2em;font-size:.95rem}
+.kurz li{margin:6px 0}
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+<!-- Leitprogramm Terme und Faktorisieren, Version 1.0 (09.10.2026). Gebaut aus scripts/lp/terme-faktorisieren/seite.py —
+     Änderungen dort, nicht in dieser Datei. Grundlagen: HOWTO-leitprogramme.md (Kapitelmuster) und
+     ~/HOWTO-TODO-BM-Vorkurs-LP01-02.md, Abschnitt LP 02 (Terme und Faktorisieren), für die Sek I umgesetzt.
+
+     Sek1-Mathe hat keine Themenseiten (Entscheid 09.10.2026): Das Leitprogramm ist selbst die fachliche Quelle;
+     Vertiefungslinks zeigen auf Mathe begreifbar (TALS). Notation nach STYLEGUIDE.md und CLAUDE.md: Dezimalpunkt,
+     ggT mit Strichpunkt, «gleichartige Glieder», «Zweiklammersatz» (wie TALS), «vollständig faktorisiert».
+
+     Kompetenzen — eigene Formulierung, ohne Lehrplan-Nummern (CLAUDE.md: keine erfundenen Lehrplan-Stellen):
+       K1  Terme vereinfachen: zusammenfassen, Klammern auflösen (auch Minus davor, verschachtelt), Probe
+       K2  Klammer mal Klammer ausmultiplizieren (Flächenmodell, Rechteckschema)
+       K3  Die drei binomischen Formeln anwenden und am Quadrat begründen
+       K4  Faktorisieren: ausklammern, binomisch rückwärts, Zweiklammersatz, vollständig; Fehler finden
+     Alles ohne Taschenrechner.
+
+     Kompetenzmatrix (Kompetenz | Kapitel | Simulation | Übungen | Kapitelaufgaben | Gesamttest):
+       K1 | 1 | Sim 1 | zusammenfassen, klammern     | 1a–1f | G1, G2
+       K2 | 2 | Sim 2 | ausmult, koeffizienten       | 2a–2f | G3
+       K3 | 3 | Sim 3 | binom, binomluecke           | 3a–3f | G4, G5
+       K4 | 4 | Sim 4 | ausklammern, faktorisieren   | 4a–4f | G6–G9
+
+     Planung (Kapitel | Lernziel | Erkundung | Beispiel | Häufiger Fehler | min):
+       0 | Vorwissen       | –                     | –                       | –                                | 10
+       1 | vereinfachen    | Termkacheln           | 7x − (2x − 5) = 5x + 5  | Minus nur beim ersten Glied      | 40
+       2 | ausmultiplizieren | Flächenmodell/Schema | (x + 2)(x + 3)         | (x + 2)(x + 3) = x² + 6          | 40
+       3 | binomische Formeln | Quadrat             | (x + 4)²                | mittleres Glied fehlt            | 40
+       4 | faktorisieren   | Faktorisierer         | x² − 7x + 12            | unvollständig; Gleichung gelöst  | 45
+       Gesamttest (PDF) 30 · Summe 205 min ≈ 4.6 Lektionen. Vertiefung V1–V3 freiwillig, nicht eingerechnet.
+
+     Clips: je Kapitel ein Einführungsclip (mit einer Vorhersagefrage) und ein Kontrollclip mit fünf Fragen,
+     Reihe «Terme sehen», terme-lp-*.json, erzeugt mit scripts/lp/terme-faktorisieren/clips.py (probe: nicht
+     in der Bibliothek). Die Erkundungen benutzen andere Zahlen als Clip und Festhalten (HOWTO §15).
+
+     Farben: x² und x blau, Zahlen orange, negative Kacheln und Fehler rot, Ergebnis grün; Bereichsfarbe Petrol.
+     Gesamttest und Bewertungspaket nur als PDF (downloads/leitprogramme/terme-faktorisieren/*.tex). -->
+<header class="kopf">
+  <div class="kopf-innen">
+    <div>
+      <p class="marke">Sek1-Mathe begreifbar · Leitprogramm</p>
+      <h1>Terme und Faktorisieren</h1>
+      <p class="unter">Zuschauen, tüfteln, kontrollieren, üben. Vier Kapitel zu je einer Lektion, dazu Vorwissen und Gesamttest.</p>
+    </div>
+    <div class="kopf-rechts">
+      <button class="themenschalter" type="button" id="themenschalter">Dunkel / Hell</button>
+      <span>Arithmetik/Algebra</span>
+    </div>
+  </div>
+</header>
+
+<div class="huelle">
+<div class="raster">
+
+  <nav class="schiene" aria-label="Kapitelnavigation">
+    <h2 id="ablauf">Ablauf</h2>
+    <p class="lekt">Vorab</p>
+    <ol>
+      <li><a href="#k0"><span class="nr">0</span><span>Vorwissen</span></a></li>
+    </ol>
+    <p class="lekt">Kapitel</p>
+    <ol>
+      <li><a href="#k1"><span class="nr">1</span><span>Vereinfachen</span></a></li>
+      <li><a href="#k2"><span class="nr">2</span><span>Klammer mal Klammer</span></a></li>
+      <li><a href="#k3"><span class="nr">3</span><span>Binomische Formeln</span></a></li>
+      <li><a href="#k4"><span class="nr">4</span><span>Faktorisieren</span></a></li>
+    </ol>
+    <p class="lekt">Abschluss</p>
+    <ol>
+      <li><a href="#gesamttest"><span class="nr">✓</span><span>Gesamttest</span></a></li>
+      <li><a href="#vertiefung"><span class="nr">★</span><span>Vertiefung</span></a></li>
+    </ol>
+    <div class="fortschritt">
+      <div class="balken"><i id="balken-fuellung"></i></div>
+      <p id="fortschritt-text">0 von 5 Aufgabenblöcken bearbeitet</p>
+      <button type="button" id="fortschritt-reset">zurücksetzen</button>
+    </div>
+  </nav>
+
+  <main class="inhalt">
+
+    <div class="duo">
+      <details class="anleitung">
+        <summary><h2 id="so-arbeitest-du">So arbeitest du</h2></summary>
+        <ol>
+          <li><b>① Clip</b> anschauen. Er hält einmal an und fragt nach deiner Vorhersage.</li>
+          <li><b>② Tüfteln:</b> Löse die Aufgaben in der orangen Leiste über dem Bild. Sie zeigt ✓, sobald es stimmt. Überspringen geht immer.</li>
+          <li><b>③ Kontrollfragen:</b> Der Clip hält an. Erst antworten. Danach <b>Festhalten</b>: Regel und häufigen Fehler ins Heft.</li>
+          <li><b>④ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen. Terme tippst du so ein: <code>3x^2-2x+1</code> oder <code>(x-3)(x+4)</code>.</li>
+          <li><b>⑤ Aufgaben</b> auf Papier mit Rechenweg, dann Lösung aufklappen und abhaken.</li>
+          <li>Zum Schluss der <b>Gesamttest</b> auf Papier. Alles ohne Taschenrechner.</li>
+        </ol>
+      </details>
+      <details class="anleitung kompetenzen">
+        <summary><h2 id="kompetenzen">Kompetenzen</h2></summary>
+        <p class="rlp-quelle">Das kannst du danach, alles <span class="ohm">ohne Taschenrechner</span>:</p>
+        <ul>
+          <li><b>K1</b> Terme vereinfachen: gleichartige Glieder zusammenfassen, Klammern auflösen, auch mit Minus davor und verschachtelt, und durch Einsetzen prüfen (Kapitel 1)</li>
+          <li><b>K2</b> zwei Klammern ausmultiplizieren und das Ergebnis am Flächenmodell erklären (Kapitel 2)</li>
+          <li><b>K3</b> die drei binomischen Formeln anwenden, am Quadrat begründen und zum Kopfrechnen nutzen (Kapitel 3)</li>
+          <li><b>K4</b> Summen vollständig faktorisieren: ausklammern, binomische Formel rückwärts, Zweiklammersatz, und Fehler in fremden Lösungen finden (Kapitel 4)</li>
+        </ul>
+        <p class="rlp-quelle">Nicht in diesem Leitprogramm: Terme mit mehreren Variablen faktorisieren, Bruchterme. Zum Vertiefen bei Mathe begreifbar: <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#faktorisieren" target="_blank" rel="noopener">Faktorisieren ↗</a> · <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#bruchterme" target="_blank" rel="noopener">Bruchterme ↗</a>.</p>
+      </details>
+    </div>
+
+    <section class="kap" id="k0">
+      <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen</span><span class="zeit">≈ 10 min</span></div>
+      <h2 id="vorwissen">Vorwissen</h2>
+      <p class="ziel">Rechnen mit negativen Zahlen, Distributivgesetz, Potenzen, Einsetzen, grösster gemeinsamer Teiler. Zuerst kurz wiederholen, dann der Vortest.</p>
+      <details class="anleitung">
+        <summary><h3>Kurz wiederholt</h3></summary>
+        <ul class="kurz">
+          <li><b>Vorzeichen:</b> Minus mal Minus gibt Plus, verschiedene Vorzeichen geben Minus: \((-3) \cdot (-2) = 6\), \((-3) \cdot 2 = -6\).</li>
+          <li><b>Distributivgesetz:</b> \(3 \cdot (4 + 5) = 3 \cdot 4 + 3 \cdot 5\). Die Zahl vor der Klammer wird mit jedem Summanden multipliziert.</li>
+          <li><b>Variable:</b> Ein Buchstabe steht für eine Zahl. \(3x\) heisst \(3 \cdot x\), \(x^2\) heisst \(x \cdot x\).</li>
+          <li><b>Einsetzen:</b> Für \(x = 3\) ist \(2x^2 = 2 \cdot 3^2 = 18\). Potenz vor Punkt.</li>
+          <li><b>ggT</b> (grösster gemeinsamer Teiler): die grösste Zahl, durch die beide teilbar sind, zum Beispiel \(\text{ggT}(12;\ 18) = 6\). Braucht es zum Ausklammern.</li>
+        </ul>
+      </details>
+<div class="test" data-test="t0">
+        <div class="test-kopf">
+          <h3>Vortest <span class="summe">· 10 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">0a</span><span class="pkt">(2 P)</span><span class="txt">Berechne: \((-3) \cdot (-4)\); \(\;-2 \cdot 5\); \(\;-7 + 3\); \(\;-4 - 6\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(12\); \(-10\); \(-4\); \(-10\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0b</span><span class="pkt">(2 P)</span><span class="txt">Berechne \(3 \cdot (4 + 5)\) auf zwei Arten.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Klammer zuerst: \(3 \cdot 9 = 27\). Ausmultipliziert: \(12 + 15 = 27\).</p><p class="komm">Das zweite ist das Distributivgesetz, die Grundlage von Kapitel 1 und 2.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0c</span><span class="pkt">(2 P)</span><span class="txt">Schreib kürzer: \(x \cdot x\); \(\;3x \cdot 2x\); \(\;(-2x) \cdot 5\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x^2\); \(6x^2\); \(-10x\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0d</span><span class="pkt">(2 P)</span><span class="txt">Setze \(x = 3\) ein: \(2x^2 - x\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(2 \cdot 9 - 3 = 15\).</p><p class="komm">Einsetzen ist die Probe in allen Kapiteln.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0e</span><span class="pkt">(2 P)</span><span class="txt">Bestimme \(\text{ggT}(12;\ 18)\) und \(\text{ggT}(8;\ 20)\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(6\) und \(4\).</p><p class="komm">Braucht es in Kapitel 4 zum Ausklammern.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen, die Lösungen des Vortests Schritt für Schritt nachrechnen, dann Kapitel 1.</p>
+    </section>
+    <section class="kap" id="k1">
+      <div class="kap-meta"><span class="marker">Kapitel 1</span><span class="abz abz-th">K1</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="vereinfachen">Terme vereinfachen</h2>
+      <p class="ziel">Du fasst gleichartige Glieder zusammen, löst Klammern auf, auch mit Minus davor und verschachtelt, und prüfst dein Ergebnis durch Einsetzen.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-zusammenfassen.html" data-titel="Terme vereinfachen">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Terme vereinfachen</span></span>
+          <span class="clip-zeit">2:08</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim1" aria-label="Termkacheln: einen Term zusammenfassen">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg viewBox="0 0 360 165" role="img" aria-label="Oben der Term der Aufgabe als Kacheln, unten dein Term"></svg>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s1-a"><span class="var">x-Kacheln</span></label><input type="range" id="s1-a" min="-6" max="8" step="1" value="1"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s1-b"><span class="var">Einer</span></label><input type="range" id="s1-b" min="-9" max="9" step="1" value="0"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-kontrolle-zusammenfassen.html" data-titel="Kontrollfragen zum Vereinfachen">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zum Vereinfachen</span></span>
+          <span class="clip-zeit">0:54</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Terme vereinfachen</div>
+          <p><b>Zusammenfassen:</b> Nur <b>gleichartige</b> Glieder lassen sich addieren, also Glieder mit derselben Variable und derselben Hochzahl. \(3x + 5x = 8x\), aber \(3x + 5\) bleibt, wie es ist. Das Vorzeichen gehört zum Glied dahinter.</p>
+          <p><b>Zahl vor der Klammer:</b> Sie wird mit <b>jedem</b> Glied in der Klammer multipliziert (Distributivgesetz):</p>
+          <p>\[ 3(2x - 4) = 6x - 12 \qquad -2(x - 3) = -2x + 6 \]</p>
+          <p><b>Minus vor der Klammer:</b> Klammer weglassen und <b>jedes</b> Vorzeichen darin umdrehen:</p>
+          <ol class="weg">
+            <li>\(7x - (2x - 5) = 7x - 2x + 5\) <span class="warum">aus \(-5\) wird \(+5\)</span></li>
+            <li>\(= 5x + 5\) <span class="warum">gleichartige Glieder zusammenfassen</span></li>
+          </ol>
+          <p><b>Verschachtelte Klammern:</b> innen beginnen. \(4x - (2x - 3(1 - x)) = 4x - (2x - 3 + 3x) = 4x - (5x - 3) = 3 - x\).</p>
+          <p><b>Probe:</b> Für \(x\) eine Zahl einsetzen, zum Beispiel \(x = 2\). Gleichwertige Terme geben dasselbe: \(7 \cdot 2 - (2 \cdot 2 - 5) = 15\) und \(5 \cdot 2 + 5 = 15\).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Minus nur beim ersten Glied:</b> \(7x - (2x - 5)\) ist nicht \(7x - 2x - 5\). Das Minus gilt für die ganze Klammer.</p>
+          <p><b>Nur das erste Glied multipliziert:</b> \(3(x + 4)\) ist nicht \(3x + 4\), sondern \(3x + 12\).</p>
+          <p><b>Ungleichartiges zusammengezählt:</b> \(3x + 2\) ist nicht \(5x\). Probe mit \(x = 2\): \(8\) gegen \(10\).</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="zusammenfassen">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Zusammenfassen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="klammern">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Klammern auflösen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t1">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 1 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">1a</span><span class="pkt">(2 P)</span><span class="txt">Fasse zusammen: \(5a + 3 - 2a + 7\) und \(x^2 + 4x - 2x^2 + x\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(5a - 2a = 3a\) und \(3 + 7 = 10\): \(3a + 10\). Bei der zweiten: \(x^2 - 2x^2 = -x^2\) und \(4x + x = 5x\): \(-x^2 + 5x\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1b</span><span class="pkt">(2 P)</span><span class="txt">Löse die Klammer auf: \(4(3x - 2)\) und \(-3(2 - x)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(4 \cdot 3x - 4 \cdot 2 = 12x - 8\). \(-3 \cdot 2 + (-3) \cdot (-x) = -6 + 3x\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1c</span><span class="pkt">(3 P)</span><span class="txt">Vereinfache: \(6x - (4 - 2x) + 3(x - 1)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(6x - 4 + 2x + 3x - 3 = 11x - 7\).</p><p class="komm">Probe mit \(x = 1\): \(6 - 2 + 0 = 4\) und \(11 - 7 = 4\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1d</span><span class="pkt">(3 P)</span><span class="txt">Vereinfache, von innen nach aussen: \(2x - (x - 2(3 - x))\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Innen: \(x - 2(3 - x) = x - 6 + 2x = 3x - 6\). Dann \(2x - (3x - 6) = 2x - 3x + 6 = -x + 6\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1e</span><span class="pkt">(2 P)</span><span class="txt">Ben rechnet: \(8x - (3x - 5) = 5x - 5\). Prüfe mit \(x = 1\), finde den Fehler und rechne richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Mit \(x = 1\): links \(8 - (3 - 5) = 10\), Bens Ergebnis \(5 - 5 = 0\). Ben hat das Minus nur auf \(3x\) angewendet. Richtig: \(8x - 3x + 5 = 5x + 5\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Mit \(x = 1\) ist \(3x + 2 = 5\) und \(5x = 5\). Sind \(3x + 2\) und \(5x\) also gleichwertig? Begründe.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Nein. Gleichwertig heisst: gleich für <b>jede</b> Zahl. Mit \(x = 2\) ist \(3x + 2 = 8\), aber \(5x = 10\). Ein einziges Gegenbeispiel genügt. \(3x\) und \(2\) sind nicht gleichartig.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#zusammenfassen" target="_blank" rel="noopener">Gleichartige Glieder zusammenfassen ↗</a> · <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#klammern" target="_blank" rel="noopener">Klammern auflösen ↗</a></p>
+    </section>
+    <section class="kap" id="k2">
+      <div class="kap-meta"><span class="marker">Kapitel 2</span><span class="abz abz-th">K2</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="ausmultiplizieren">Klammer mal Klammer</h2>
+      <p class="ziel">Du multiplizierst zwei Klammern aus, mit dem Flächenmodell oder dem Rechteckschema, fasst zusammen und machst die Probe durch Einsetzen.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-ausmultiplizieren.html" data-titel="Klammer mal Klammer">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Klammer mal Klammer</span></span>
+          <span class="clip-zeit">1:35</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim2" aria-label="Klammer mal Klammer: Flächenmodell und Rechteckschema">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg viewBox="0 0 300 240" role="img" aria-label="Rechteck aus einem x-Quadrat, x-Streifen und Einerkacheln"></svg>
+        <table class="schema" aria-label="Rechteckschema"></table>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s2-a"><span class="var">Zahl links</span></label><input type="range" id="s2-a" min="-6" max="6" step="1" value="1"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s2-b"><span class="var">Zahl oben</span></label><input type="range" id="s2-b" min="-6" max="6" step="1" value="1"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-kontrolle-ausmultiplizieren.html" data-titel="Kontrollfragen zum Ausmultiplizieren">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zum Ausmultiplizieren</span></span>
+          <span class="clip-zeit">1:00</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Klammer mal Klammer</div>
+          <p><b>Jedes</b> Glied der ersten Klammer wird mit <b>jedem</b> Glied der zweiten multipliziert. Das gibt vier Produkte, danach wird zusammengefasst.</p>
+          <p><b>Flächenmodell:</b> Ein Rechteck mit den Seiten \(x + 2\) und \(x + 3\) besteht aus vier Teilen: \(x^2\), \(3x\), \(2x\) und \(6\).</p>
+            <div class="mini-reihe"><svg class="mini-term" data-rechteck="2,3" aria-label="Rechteck mit Seiten x plus 2 und x plus 3, aufgeteilt in x-Quadrat, fünf x-Streifen und sechs Einerkacheln"></svg></div>
+          <p>\[ (x + 2)(x + 3) = x^2 + 3x + 2x + 6 = x^2 + 5x + 6 \]</p>
+          <p><b>Rechteckschema:</b> Es funktioniert auch mit Minus. Das Vorzeichen gehört zur Zahl dahinter.</p>
+          <table class="schema"><tr><th>·</th><th>\(3x\)</th><th>\(-2\)</th></tr><tr><th>\(x\)</th><td class="t-q">\(3x^2\)</td><td class="t-x">\(-2x\)</td></tr><tr><th>\(+4\)</th><td class="t-x">\(12x\)</td><td class="t-z">\(-8\)</td></tr></table>
+          <p>\[ (3x - 2)(x + 4) = 3x^2 + 12x - 2x - 8 = 3x^2 + 10x - 8 \]</p>
+          <p><b>Probe</b> mit \(x = 1\): \((1 + 2)(1 + 3) = 12\) und \(1 + 5 + 6 = 12\).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Nur «vorne mal vorne, hinten mal hinten»:</b> \((x + 2)(x + 3)\) ist nicht \(x^2 + 6\). Im Flächenmodell fehlen die beiden Streifen. Probe mit \(x = 1\): \(12\) gegen \(7\).</p>
+          <p><b>Vorzeichen verloren:</b> Bei \((3x - 2)(x + 4)\) ist das letzte Produkt \((-2) \cdot 4 = -8\), nicht \(+8\).</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="ausmult">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Ausmultiplizieren</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="koeffizienten">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Summe und Produkt</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t2">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 2 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">2a</span><span class="pkt">(2 P)</span><span class="txt">Multipliziere aus: \((x + 4)(x + 5)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x^2 + 5x + 4x + 20 = x^2 + 9x + 20\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2b</span><span class="pkt">(3 P)</span><span class="txt">Multipliziere aus: \((2x - 3)(x + 6)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(2x^2 + 12x - 3x - 18 = 2x^2 + 9x - 18\).</p><p class="komm">Probe mit \(x = 1\): \((-1) \cdot 7 = -7\) und \(2 + 9 - 18 = -7\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2c</span><span class="pkt">(2 P)</span><span class="txt">Multipliziere aus: \((a - 4)(a - 7)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(a^2 - 7a - 4a + 28 = a^2 - 11a + 28\). Minus mal Minus gibt \(+28\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2d</span><span class="pkt">(2 P)</span><span class="txt">Lara rechnet: \((x + 5)(x - 2) = x^2 - 10\). Was hat sie vergessen? Rechne richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Sie hat nur die ersten und die letzten Glieder multipliziert. Es fehlen \(-2x\) und \(5x\). Richtig: \(x^2 - 2x + 5x - 10 = x^2 + 3x - 10\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2e</span><span class="pkt">(2 P)</span><span class="txt">Welches Produkt zeigt das Flächenmodell? Schreib es als Produkt und als Summe.</span></div>
+            <div class="mini-reihe"><svg class="mini-term" data-rechteck="1,4" aria-label="Rechteck: ein x-Quadrat, fünf x-Streifen, vier Einerkacheln"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Seiten \(x + 1\) und \(x + 4\): \((x + 1)(x + 4) = x^2 + 5x + 4\). Im Bild: ein \(x^2\), fünf x-Streifen, vier Einer.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2f</span><span class="pkt">(3 P)</span><span class="txt">Multipliziere \((x + 3)(x - 3)\) aus. Warum kommt kein Glied mit \(x\) vor?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x^2 - 3x + 3x - 9 = x^2 - 9\). Die beiden gemischten Produkte sind \(-3x\) und \(+3x\). Sie heben sich auf, weil die Zahlen \(3\) und \(-3\) Gegenzahlen sind.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#klammern" target="_blank" rel="noopener">Klammern auflösen ↗</a></p>
+    </section>
+    <section class="kap" id="k3">
+      <div class="kap-meta"><span class="marker">Kapitel 3</span><span class="abz abz-th">K3</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="binome">Binomische Formeln</h2>
+      <p class="ziel">Du wendest die drei binomischen Formeln an, auch mit Zahlen vor der Variable, erklärst das mittlere Glied am Quadrat und rechnest damit im Kopf.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-binome.html" data-titel="Binomische Formeln">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Binomische Formeln</span></span>
+          <span class="clip-zeit">2:04</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim3" aria-label="Binomische Formeln am Quadrat">
+        <div class="leiste" aria-live="polite"></div>
+        <label class="sim-schalter">Formel <select class="sim-wahl" aria-label="Binomische Formel">
+          <option value="plus" selected>(a + b)²</option>
+          <option value="minus">(a − b)²</option>
+          <option value="produkt">(a + b)(a − b)</option>
+        </select></label>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg viewBox="0 0 300 300" role="img" aria-label="Quadrat oder Rechteck, aufgeteilt in Teilflächen"></svg>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s3-a"><span class="var">a</span></label><input type="range" id="s3-a" min="2" max="8" step="1" value="4"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s3-b"><span class="var">b</span></label><input type="range" id="s3-b" min="1" max="4" step="1" value="1"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-kontrolle-binome.html" data-titel="Kontrollfragen zu den binomischen Formeln">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zu den binomischen Formeln</span></span>
+          <span class="clip-zeit">0:59</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Binomische Formeln</div>
+          <p>\[ (a + b)^2 = a^2 + 2ab + b^2 \]</p>
+          <p>\[ (a - b)^2 = a^2 - 2ab + b^2 \]</p>
+          <p>\[ (a + b)(a - b) = a^2 - b^2 \]</p>
+          <p>Im Quadrat mit der Seite \(a + b\) siehst du die vier Teile: \(a^2\), zweimal \(ab\) und \(b^2\). Darum steht in der Mitte <b>\(2ab\)</b>.</p>
+          <div class="mini-reihe"><svg class="mini-term" data-binom="1" aria-label="Quadrat mit Seite a plus b: Quadrat a mal a, zwei Rechtecke a mal b, Quadrat b mal b"></svg></div>
+          <p>Für \(a\) und \(b\) darf alles stehen, auch \(2y\) oder eine Zahl:</p>
+          <p>\[ (x + 4)^2 = x^2 + 8x + 16 \qquad (2y - 3)^2 = 4y^2 - 12y + 9 \qquad (5 + x)(5 - x) = 25 - x^2 \]</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Das mittlere Glied vergessen:</b> \((a + b)^2\) ist nicht \(a^2 + b^2\). Mit Zahlen: \((3 + 4)^2 = 49\), aber \(3^2 + 4^2 = 25\).</p>
+          <p><b>\(ab\) statt \(2ab\):</b> Es sind zwei Rechtecke. \((x + 4)^2\) hat in der Mitte \(8x\), nicht \(4x\).</p>
+          <p><b>Die Zahl vor der Variable nicht quadriert:</b> \((2y)^2 = 4y^2\), nicht \(2y^2\).</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="binom">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Binomische Formeln</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="binomluecke">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Lücken füllen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t3">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 3 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">3a</span><span class="pkt">(2 P)</span><span class="txt">Rechne mit der binomischen Formel: \((x + 6)^2\) und \((x - 1)^2\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x^2 + 12x + 36\) und \(x^2 - 2x + 1\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3b</span><span class="pkt">(2 P)</span><span class="txt">Rechne: \((3a - 2)^2\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\((3a)^2 - 2 \cdot 3a \cdot 2 + 2^2 = 9a^2 - 12a + 4\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3c</span><span class="pkt">(2 P)</span><span class="txt">Rechne: \((x + 7)(x - 7)\) und \((4 - y)(4 + y)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x^2 - 49\) und \(16 - y^2\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3d</span><span class="pkt">(2 P)</span><span class="txt">Tom schreibt \((x + 5)^2 = x^2 + 25\). Zeige mit \(x = 1\), dass das falsch ist, und rechne richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Mit \(x = 1\): \((1 + 5)^2 = 36\), aber \(1 + 25 = 26\). Es fehlt das mittlere Glied: \((x + 5)^2 = x^2 + 10x + 25\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3e</span><span class="pkt">(3 P)</span><span class="txt">Kopfrechnen mit den Formeln: \(21^2\) und \(19 \cdot 21\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(21^2 = (20 + 1)^2 = 400 + 40 + 1 = 441\). \(19 \cdot 21 = (20 - 1)(20 + 1) = 400 - 1 = 399\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3f</span><span class="pkt">(3 P)</span><span class="txt">Das Quadrat hat die Seite \(a + b\). Benenne die vier Teilflächen und erkläre damit, warum \((a + b)^2\) grösser ist als \(a^2 + b^2\).</span></div>
+            <div class="mini-reihe"><svg class="mini-term" data-binom="1" aria-label="Quadrat mit Seite a plus b, in vier Teile geteilt"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Oben links \(a^2\), unten rechts \(b^2\), dazu zwei Rechtecke mit je \(ab\). Zusammen \(a^2 + 2ab + b^2\). In \(a^2 + b^2\) fehlen die beiden Rechtecke, also \(2ab\).</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#binomi" target="_blank" rel="noopener">Binomische Formeln ↗</a></p>
+    </section>
+    <section class="kap" id="k4">
+      <div class="kap-meta"><span class="marker">Kapitel 4</span><span class="abz abz-th">K4</span><span class="zeit">≈ 45 min</span></div>
+      <h2 id="faktorisieren">Faktorisieren</h2>
+      <p class="ziel">Du schreibst Summen als Produkte: durch Ausklammern, mit den binomischen Formeln rückwärts und mit dem Zweiklammersatz. Du faktorisierst vollständig und prüfst durch Ausmultiplizieren.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-faktorisieren.html" data-titel="Faktorisieren">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Faktorisieren</span></span>
+          <span class="clip-zeit">2:05</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim4" aria-label="Faktorisierer: zwei Klammern zu einem Ergebnis finden">
+        <div class="leiste" aria-live="polite"></div>
+        <p class="sim-ziel" data-rolle="ziel" aria-live="polite"></p>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <table class="schema" aria-label="Rechteckschema"></table>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s4-m"><span class="var">Zahl links</span></label><input type="range" id="s4-m" min="-9" max="9" step="1" value="1"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s4-n"><span class="var">Zahl oben</span></label><input type="range" id="s4-n" min="-9" max="9" step="1" value="1"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/terme-lp-kontrolle-faktorisieren.html" data-titel="Kontrollfragen zum Faktorisieren">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zum Faktorisieren</span></span>
+          <span class="clip-zeit">1:03</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Faktorisieren</div>
+          <p><b>Faktorisieren</b> heisst: eine Summe als <b>Produkt</b> schreiben. Es ist das Ausmultiplizieren rückwärts. Prüfe in dieser Reihenfolge:</p>
+          <ol>
+            <li><b>Ausklammern:</b> den grössten gemeinsamen Faktor vor die Klammer. \(6a^2 - 9a = 3a(2a - 3)\), denn \(\text{ggT}(6;\ 9) = 3\) und jedes Glied enthält \(a\).</li>
+            <li><b>Binomische Formel rückwärts:</b> \(y^2 - 10y + 25 = (y - 5)^2\) und \(9y^2 - 25 = (3y - 5)(3y + 5)\).</li>
+            <li><b>Zweiklammersatz:</b> Bei \(x^2 + px + q\) zwei Zahlen suchen, deren <b>Produkt</b> \(q\) und deren <b>Summe</b> \(p\) ist.</li>
+          </ol>
+          <ol class="weg">
+            <li>\(x^2 - 7x + 12\) <span class="warum">Produkt \(12\), Summe \(-7\)</span></li>
+            <li>Paare mit Produkt \(12\): \(1 \cdot 12\), \(2 \cdot 6\), \(3 \cdot 4\) und dieselben negativ <span class="warum">Summe \(-7\) hat nur \(-3\) und \(-4\)</span></li>
+            <li>\(= (x - 3)(x - 4)\) <span class="warum">Probe: ausmultiplizieren</span></li>
+          </ol>
+          <p><b>Vollständig</b> faktorisiert ist ein Term, wenn sich kein Faktor weiter zerlegen lässt: \(5x^2 - 20 = 5(x^2 - 4) = 5(x - 2)(x + 2)\).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Nicht alles ausgeklammert:</b> \(6a^2 - 9a = a(6a - 9)\) stimmt, ist aber nicht fertig. \(6\) und \(9\) haben noch den Faktor \(3\).</p>
+          <p><b>Summe statt Produkt gesucht:</b> Bei \(x^2 - 7x + 12\) bestimmt das <b>Produkt</b> die Zahl am Schluss, die <b>Summe</b> das Glied mit \(x\).</p>
+          <p><b>Vorzeichen:</b> \((x + 3)(x + 4)\) gibt \(x^2 + 7x + 12\), nicht \(x^2 - 7x + 12\). Probe machen!</p>
+          <p><b>Faktorisieren ist kein Gleichungslösen:</b> Bei «Faktorisiere \(x^2 - 25\)» ist \((x - 5)(x + 5)\) die Antwort, nicht «\(x = 5\)».</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="ausklammern">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Ausklammern</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="faktorisieren">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Faktorisieren</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t4">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 4 <span class="summe">· 15 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">4a</span><span class="pkt">(2 P)</span><span class="txt">Klammere so viel wie möglich aus: \(8x + 12\) und \(5y^2 - 15y\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(4(2x + 3)\), denn \(\text{ggT}(8;\ 12) = 4\). \(5y(y - 3)\), denn \(5\) und \(y\) stecken in beiden Gliedern.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4b</span><span class="pkt">(3 P)</span><span class="txt">Faktorisiere mit einer binomischen Formel: \(x^2 + 14x + 49\) und \(4a^2 - 1\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(49 = 7^2\) und \(14x = 2 \cdot x \cdot 7\): \((x + 7)^2\). \(4a^2 = (2a)^2\) und \(1 = 1^2\): \((2a - 1)(2a + 1)\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4c</span><span class="pkt">(3 P)</span><span class="txt">Faktorisiere: \(x^2 + 9x + 14\) und \(x^2 - 3x - 10\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Produkt \(14\), Summe \(9\): \(2\) und \(7\), also \((x + 2)(x + 7)\). Produkt \(-10\), Summe \(-3\): \(-5\) und \(2\), also \((x - 5)(x + 2)\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4d</span><span class="pkt">(2 P)</span><span class="txt">Mia soll \(x^2 - 9\) faktorisieren und schreibt «\(x = 3\)». Was hat sie falsch verstanden? Gib die richtige Antwort.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Mia hat eine Gleichung gelöst. Gesucht ist aber ein Produkt, das gleichwertig zu \(x^2 - 9\) ist: \((x - 3)(x + 3)\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4e</span><span class="pkt">(3 P)</span><span class="txt">Faktorisiere vollständig: \(2x^2 - 18\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Zuerst ausklammern: \(2(x^2 - 9)\). Dann die dritte binomische Formel: \(2(x - 3)(x + 3)\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Warum lässt sich \(x^2 + 4\) nicht als \((x + m)(x + n)\) mit ganzen Zahlen schreiben?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Es bräuchte \(m + n = 0\) (kein Glied mit \(x\)) und \(m \cdot n = 4\). Aus \(m + n = 0\) folgt \(n = -m\), dann ist \(m \cdot n = -m^2\) nie positiv. Eine Summe von zwei Quadraten zerfällt nicht.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#faktorisieren" target="_blank" rel="noopener">Faktorisieren ↗</a></p>
+    </section>
+    <section class="kap" id="gesamttest">
+      <div class="gesamt">
+        <div class="gesamt-kopf">
+          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">Kapitel 1–4</span><span class="zeit">≈ 30 min · 25 Punkte</span></div>
+          <h2 id="gesamttest-titel">Gesamttest</h2>
+          <div class="pdf-weg">
+            <div class="pdf-schritt"><span class="nr">1</span><div><b>Lösen</b> — auf Papier, mit Rechenweg, ohne Taschenrechner.<br>
+              <a class="pdf-knopf" href="../downloads/leitprogramme/terme-faktorisieren/gesamttest.pdf" download>⬇ Gesamttest (PDF)</a></div></div>
+            <div class="pdf-schritt"><span class="nr">2</span><div><b>Bewerten</b> — selbst mit dem Punkteraster oder mit einer KI: Lösung scannen oder fotografieren (ohne Namen und Standort). Das Paket enthält die Musterlösung: erst danach öffnen.<br>
+              <a class="pdf-knopf" href="../downloads/leitprogramme/terme-faktorisieren/bewertungspaket.pdf" download>⬇ Bewertungspaket (PDF)</a></div></div>
+            <div class="pdf-schritt"><span class="nr">3</span><div><b>Gezielt wiederholen</b> — nach der Tabelle unten.</div></div>
+          </div>
+        </div>
+        <div class="bewertung">
+          <b>Selbsteinschätzung</b>
+          <table>
+            <tr><td>22 – 25 P</td><td>Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals (Zuordnung unten).</td></tr>
+            <tr><td>17 – 21 P</td><td>Den schwächsten Teil nochmals — gemessen am Anteil (Teil A 5, B 8, C 12 P): Tüfteln und Übungen der Kapitel dieses Teils.</td></tr>
+            <tr><td>11 – 16 P</td><td>Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.</td></tr>
+            <tr><td>0 – 10 P</td><td>Zurück zu den Kapiteln jedes Teils, in dem du weniger als die Hälfte erreicht hast; sind es alle drei, zum Vortest und zu Kapitel 1.</td></tr>
+          </table>
+          <p>Aufgabe → Kapitel: G1, G2 → 1; G3 → 2; G4, G5 → 3; G6 bis G9 → 4</p>
+        </div>
+      </div>
+    </section>
+    <section class="kap" id="vertiefung">
+      <div class="vertiefung">
+        <h2 id="vertiefung-titel">Vertiefung — zum Knobeln</h2>
+        <p class="komm">Freiwillig, ohne Punkte. Für alle, die nach dem Gesamttest weiterdenken möchten.</p>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">V1</span><span class="txt">Berechne \(4^2 - 3^2\), \(5^2 - 4^2\), \(6^2 - 5^2\). Was fällt auf? Begründe mit \((n + 1)^2 - n^2\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(7\), \(9\), \(11\): immer ungerade, und zwar die Summe der beiden Zahlen. \((n + 1)^2 - n^2 = n^2 + 2n + 1 - n^2 = 2n + 1\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">V2</span><span class="txt">Zahlen mit \(5\) am Ende quadrieren: \(35^2 = 1225\), denn \(3 \cdot 4 = 12\), dann \(25\) anhängen. Prüfe den Trick an \(45^2\) und erkläre ihn mit \((10a + 5)^2\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(45^2 = 2025\), und \(4 \cdot 5 = 20\), dann \(25\). Allgemein: \((10a + 5)^2 = 100a^2 + 100a + 25 = 100 \cdot a(a + 1) + 25\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">V3</span><span class="txt">Setze \(x = 10\) in \(x^2 + 5x + 6\) und in \((x + 2)(x + 3)\) ein. Zerlege damit \(156\) in zwei Faktoren.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(100 + 50 + 6 = 156\) und \(12 \cdot 13 = 156\). Faktorisieren zerlegt also auch Zahlen.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf weiter">Weiter: Was hier bewusst fehlt (Terme mit mehreren Variablen, Bruchterme kürzen) steht bei Mathe begreifbar unter <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#faktorisieren" target="_blank" rel="noopener">Faktorisieren ↗</a> und <a href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html#bruchterme" target="_blank" rel="noopener">Bruchterme ↗</a>.</p>
+    </section>
+    <div class="fuss">
+      <span>Leitprogramm Terme und Faktorisieren · Sek1-Mathe begreifbar</span>
+      <span>Raphael Arnold Kohler</span>
+    </div>
+
+  </main>
+</div>
+</div>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+    svg: { fontCache: 'global' },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+  };
+</script>
+<script src="../vendor/mathjax/tex-svg.js"></script>
+
+<script>
+(function(){
+  'use strict';
+  // Relativ, nicht absolut: Im Repo liegt die Datei eine Ebene tief, und die
+  // Clips sollen von hier kommen — sonst zeigt eine lokale Vorschau den Stand
+  // der Live-Site und ohne Netz gar nichts.
+  var BASIS = '../';
+
+  /* ---- Theme ---- */
+  var schalter = document.getElementById('themenschalter');
+  function themaLesen(){ try { return localStorage.getItem('lp-terme-thema'); } catch(e){ return null; } }
+  var gespeichert = themaLesen();
+  if (gespeichert === 'dark' || gespeichert === 'light') document.documentElement.setAttribute('data-theme', gespeichert);
+  schalter.addEventListener('click', function(){
+    var jetzt = document.documentElement.getAttribute('data-theme');
+    if (!jetzt) jetzt = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var neu = jetzt === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', neu);
+    try { localStorage.setItem('lp-terme-thema', neu); } catch(e){}
+  });
+
+  /* ---- Clip-Buehne (nach clipBuehne/clipZu von mathe.begreifbar.ch) ---- */
+
+  /* Clip-Buehne kommt aus ../mathlib.js — clipBuehne(quelle, titel).
+     Vorher stand hier eine Kopie; Scrollsperre und Fokusrueckgabe
+     sind dabei nach mathlib.js gewandert und gelten jetzt ueberall. */
+
+  document.querySelectorAll('.clipkarte').forEach(function(karte){
+    var knopf = karte.querySelector('.clip-start');
+    knopf.addEventListener('click', function(){
+      if (document.querySelector('.clip-buehne')) return;
+      clipBuehne(BASIS + karte.dataset.clip, karte.dataset.titel || 'Clip');
+    });
+  });
+
+  /* ---- Lösungen: alle auf/zu ---- */
+  document.querySelectorAll('.alle-loesungen').forEach(function(knopf){
+    knopf.addEventListener('click', function(){
+      var test = knopf.closest('.test') || knopf.closest('.gesamt');
+      var alle = test.querySelectorAll('details.loes');
+      var oeffnen = Array.prototype.some.call(alle, function(d){ return !d.open; });
+      alle.forEach(function(d){ d.open = oeffnen; });
+      knopf.textContent = oeffnen ? 'Lösungen zuklappen' : 'alle Lösungen';
+    });
+  });
+
+  /* ---- Fortschritt ---- */
+  var tests = Array.prototype.slice.call(document.querySelectorAll('.test'));
+  var fuellung = document.getElementById('balken-fuellung');
+  var text = document.getElementById('fortschritt-text');
+  function standLesen(){
+    try { return JSON.parse(localStorage.getItem('lp-terme-stand') || '{}'); } catch(e){ return {}; }
+  }
+  function standSchreiben(s){ try { localStorage.setItem('lp-terme-stand', JSON.stringify(s)); } catch(e){} }
+  function zeichnen(){
+    var fertig = tests.filter(function(t){ return t.querySelector('.erledigt').checked; }).length;
+    fuellung.style.width = (fertig / tests.length * 100) + '%';
+    text.textContent = fertig + ' von ' + tests.length + ' Aufgabenblöcken bearbeitet';
+  }
+  var stand = standLesen();
+  tests.forEach(function(t){
+    var box = t.querySelector('.erledigt');
+    if (stand[t.dataset.test]) box.checked = true;
+    box.addEventListener('change', function(){
+      var s = standLesen();
+      s[t.dataset.test] = box.checked;
+      standSchreiben(s);
+      zeichnen();
+    });
+  });
+  zeichnen();
+  document.getElementById('fortschritt-reset').addEventListener('click', function(){
+    tests.forEach(function(t){ t.querySelector('.erledigt').checked = false; });
+    standSchreiben({});
+    zeichnen();
+  });
+
+  /* ---- aktives Kapitel in der Schiene ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.schiene a'));
+  var ziele = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if ('IntersectionObserver' in window && ziele.length){
+    var beobachter = new IntersectionObserver(function(eintraege){
+      eintraege.forEach(function(e){
+        if (!e.isIntersecting) return;
+        links.forEach(function(a){ a.classList.toggle('aktiv', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-15% 0px -70% 0px' });
+    ziele.forEach(function(z){ beobachter.observe(z); });
+  }
+})();
+
+</script>
+<script>
+/* Leitprogramm Terme und Faktorisieren — Termkacheln (Sim 1), Flächenmodell und Rechteckschema (Sim 2),
+   binomische Formeln am Quadrat (Sim 3), Faktorisierer (Sim 4), Übungen mit Rückmeldung, Minibilder.
+   Polynome in einer Variablen als Liste ganzer Koeffizienten [c0, c1, c2, …]. Eingaben werden geparst
+   (3x^2, 3x², 3·x·x, (x−3)(x+4), −(…)), gleichwertig geprüft, und getrennt davon: «zusammengefasst»
+   (Ausmultiplizieren) und «Produktform, vollständig faktorisiert» (Faktorisieren).
+   Farben: x² und x-Kacheln blau, Zahlen orange, negative Kacheln rot, Ergebnis grün. */
+(function(){
+  'use strict';
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(eltern, name, attr, text){
+    var e = document.createElementNS(NS, name);
+    for (var k in attr) e.setAttribute(k, attr[k]);
+    if (text != null) e.textContent = text;
+    eltern.appendChild(e); return e;
+  }
+  function setzen(e){ if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([e]).catch(function(){}); }
+  function zufall(l){ return l[Math.floor(Math.random() * l.length)]; }
+  function zufallG(a, b){ return a + Math.floor(Math.random() * (b - a + 1)); }
+  function ggT(a, b){ a = Math.abs(a); b = Math.abs(b); while (b){ var t = a % b; a = b; b = t; } return a; }
+  function mz(n){ return (n < 0 ? '−' : '') + Math.abs(n); }
+
+  /* ---------- Polynome ---------- */
+  function P(c){ c = (c || []).slice(); while (c.length > 1 && !c[c.length - 1]) c.pop(); return c.length ? c : [0]; }
+  function pAdd(p, q){ var r = []; for (var i = 0; i < Math.max(p.length, q.length); i++) r[i] = (p[i] || 0) + (q[i] || 0); return P(r); }
+  function pNeg(p){ return P(p.map(function(c){ return -c; })); }
+  function pMul(p, q){ var r = []; for (var i = 0; i < p.length; i++) for (var j = 0; j < q.length; j++) r[i + j] = (r[i + j] || 0) + p[i] * q[j]; return P(r); }
+  function pPow(p, n){ var r = [1]; for (var i = 0; i < n; i++) r = pMul(r, p); return r; }
+  function pEq(p, q){ p = P(p); q = P(q); return p.length === q.length && p.every(function(c, i){ return c === q[i]; }); }
+  function lin(a, b){ return P([b, a]); }                              // a·v + b
+  function pInhalt(p){ return p.reduce(function(g, c){ return ggT(g, c); }, 0); }
+  /* LaTeX eines Polynoms, absteigend: 3x^2 - 2x + 1 */
+  function pTex(p, v){
+    v = v || 'x'; p = P(p); var s = '';
+    for (var i = p.length - 1; i >= 0; i--){
+      var c = p[i]; if (!c) continue;
+      var a = Math.abs(c), teil = i === 0 ? String(a) : (a === 1 ? '' : a) + v + (i > 1 ? '^' + i : '');
+      s += s ? (c < 0 ? ' - ' : ' + ') + teil : (c < 0 ? '-' : '') + teil;
+    }
+    return s || '0';
+  }
+  /* So tippt man es ein: 3x^2-2x+1 */
+  function pTxt(p, v){ return pTex(p, v).replace(/ /g, ''); }
+  /* Lineare Klammer (a·v + b) als LaTeX, mit Klammern */
+  function kl(a, b, v){ return '(' + pTex(lin(a, b), v) + ')'; }
+
+  /* ---------- Termeingabe lesen ----------
+     Baum: {t:'n', w} Zahl · {t:'v'} Variable · {t:'+'|'*', a:[…]} · {t:'neg', x} · {t:'^', x, e} · {t:'()', x}.
+     Erlaubt: Ziffern, eine Variable, + − · * × ^ ² ³, Klammern, unsichtbares Mal (3x, 2(x+1), (x+1)(x−1)). */
+  function termLesen(s, v){
+    s = String(s == null ? '' : s).trim();
+    if (!s) return { leer: true };
+    s = s.replace(/[\u2212\u2013]/g, '-').replace(/[·×]/g, '*').replace(/²/g, '^2').replace(/³/g, '^3').replace(/\s+/g, '');
+    if (/\d,\d/.test(s)) return { kaputt: true, grund: 'Dezimalzahlen braucht es hier nicht.' };
+    if (new RegExp(v + '\\d').test(s)) return { kaputt: true, grund: 'Hochzahlen mit <code>^</code> schreiben: <code>' + v + '^2</code> (oder ' + v + '²).' };
+    var fremd = s.replace(/[0-9+\-*^()]/g, '').replace(new RegExp(v, 'g'), '');
+    if (fremd) return { kaputt: true, grund: /[a-z]/i.test(fremd) ? 'Die Variable heisst hier \\(' + v + '\\).' : 'Zeichen «' + fremd[0] + '» verstehe ich nicht.' };
+    var i = 0;
+    function peek(){ return s[i]; }
+    function summe(){
+      var glieder = [], vz = 1;
+      if (peek() === '+' || peek() === '-'){ vz = peek() === '-' ? -1 : 1; i++; }
+      var g = produkt(); glieder.push(vz < 0 ? { t: 'neg', x: g } : g);
+      while (peek() === '+' || peek() === '-'){
+        var m = peek() === '-'; i++;
+        g = produkt(); glieder.push(m ? { t: 'neg', x: g } : g);
+      }
+      return glieder.length === 1 ? glieder[0] : { t: '+', a: glieder };
+    }
+    function produkt(){
+      var f = [potenz()];
+      while (i < s.length && (peek() === '*' || peek() === '(' || /[0-9]/.test(peek()) || peek() === v)){
+        if (peek() === '*') i++;
+        f.push(potenz());
+      }
+      return f.length === 1 ? f[0] : { t: '*', a: f };
+    }
+    function potenz(){
+      var b = basis();
+      if (peek() === '^'){ i++; var m = s.slice(i).match(/^\d+/); if (!m) throw 'hoch'; i += m[0].length; return { t: '^', x: b, e: +m[0] }; }
+      return b;
+    }
+    function basis(){
+      var c = peek();
+      if (c === '('){ i++; var x = summe(); if (peek() !== ')') throw 'klammer'; i++; return { t: '()', x: x }; }
+      if (c === '-'){ i++; return { t: 'neg', x: potenz() }; }
+      if (c === v){ i++; return { t: 'v' }; }
+      var m = s.slice(i).match(/^\d+/); if (m){ i += m[0].length; return { t: 'n', w: +m[0] }; }
+      throw 'zeichen';
+    }
+    try {
+      var baum = summe();
+      if (i !== s.length) throw 'rest';
+      return { baum: baum, p: wert(baum) };
+    } catch (e){
+      return { kaputt: true, grund: e === 'klammer' ? 'Eine Klammer ist nicht geschlossen.' : 'Schreib den Term zum Beispiel so: <code>3' + v + '^2 - 2' + v + ' + 1</code> oder <code>(' + v + '-3)(' + v + '+4)</code>.' };
+    }
+  }
+  function wert(k){
+    if (k.t === 'n') return [k.w];
+    if (k.t === 'v') return [0, 1];
+    if (k.t === '()') return wert(k.x);
+    if (k.t === 'neg') return pNeg(wert(k.x));
+    if (k.t === '^') return pPow(wert(k.x), k.e);
+    if (k.t === '+') return k.a.reduce(function(r, g){ return pAdd(r, wert(g)); }, [0]);
+    return k.a.reduce(function(r, g){ return pMul(r, wert(g)); }, [1]);
+  }
+  function ohneKl(k){ while (k.t === '()') k = k.x; return k; }
+  /* Zusammengefasst: eine Summe von Monomen (Zahl, Variable, Potenzen, Produkte daraus), jeder Grad höchstens einmal. */
+  function zusammengefasst(k){
+    var grade = {}, ok = true;
+    function monom(m){
+      if (m.t === 'n' || m.t === 'v') return true;
+      if (m.t === '^') return m.x.t === 'v';
+      if (m.t === '*') return m.a.every(monom);
+      return false;
+    }
+    function glied(g){
+      if (g.t === 'neg') g = g.x;
+      if (!monom(g)){ ok = false; return; }
+      var d = wert(g).length - 1;
+      if (grade[d]) ok = false; grade[d] = true;
+    }
+    k = ohneKl(k);
+    (k.t === '+' ? k.a : [k]).forEach(glied);
+    return ok;
+  }
+  /* Faktoren eines Produkts (Klammern und Vorzeichen weg); null, wenn die Wurzel kein Produkt ist. */
+  function faktoren(k){
+    k = ohneKl(k);
+    if (k.t === 'neg') return faktoren(k.x);
+    if (k.t === '^'){ var f = []; for (var j = 0; j < k.e; j++) f.push(k.x); return f.map(ohneKl); }
+    if (k.t === '*'){ var out = []; k.a.forEach(function(g){ var f2 = faktoren(g); out = out.concat(f2 || [ohneKl(g)]); }); return out; }
+    return null;
+  }
+  /* Ganzzahlig weiter zerlegbar? Inhalt > 1, gemeinsames v (Zahlglied 0 bei Grad ≥ 2), oder Quadratik mit ganzen Nullstellen. */
+  function zerlegbar(p){
+    p = P(p); var d = p.length - 1;
+    if (d < 1) return false;
+    if (pInhalt(p) > 1 && d >= 1 && p.filter(function(c){ return c; }).length > 1) return 'inhalt';
+    if (d >= 2 && p[0] === 0) return 'variable';
+    if (d === 2){
+      var D = p[1] * p[1] - 4 * p[2] * p[0];
+      if (D >= 0 && Math.round(Math.sqrt(D)) ** 2 === D) return 'quadratik';
+    }
+    return false;
+  }
+  /* Produktform-Befund: 'summe' (keine Produktform), 'unvollstaendig' (+ welcher Faktor), oder null (fertig). */
+  function produktBefund(lese){
+    var f = faktoren(lese.baum);
+    if (!f || f.filter(function(g){ return wert(g).length > 1; }).length === 0) return { art: 'summe' };
+    var zahl = 1;
+    for (var j = 0; j < f.length; j++){
+      var p = wert(f[j]);
+      if (p.length === 1){ zahl *= p[0]; continue; }
+      var z = zerlegbar(p);
+      if (z) return { art: 'unvollstaendig', grund: z, p: p };
+    }
+    return null;
+  }
+
+  /* ---------- Aufgabenleiste (wie in den anderen Leitprogrammen) ---------- */
+  function Leiste(fig, aufgaben, sim){
+    var box = fig.querySelector('.leiste'); if (!box) return function(){};
+    var n = aufgaben.length, i = 0, erledigt = {};
+    box.innerHTML = '<span class="ls-nr"></span><span class="ls-text"></span><span class="ls-ok" aria-live="polite"></span><button type="button" class="ls-weiter"></button><button type="button" class="ls-neu" hidden>von vorn</button>';
+    var nr = box.querySelector('.ls-nr'), tx = box.querySelector('.ls-text'), ok = box.querySelector('.ls-ok'),
+        bt = box.querySelector('.ls-weiter'), bv = box.querySelector('.ls-neu');
+    function anzahl(){ var k = 0; for (var j = 0; j < n; j++) if (erledigt[j]) k++; return k; }
+    function offen(ab){ for (var j = ab; j < n; j++) if (!erledigt[j]) return j; return n; }
+    function zeigen(){
+      if (i >= n){
+        var k = anzahl();
+        ok.textContent = ''; box.classList.remove('geloest');
+        if (k === n){ nr.textContent = '✓'; tx.innerHTML = 'Alle ' + n + ' Aufgaben gelöst — weiter mit dem Kontrollclip.'; bt.textContent = 'nochmals'; bv.hidden = true; box.classList.add('fertig'); }
+        else { nr.textContent = k + '/' + n; tx.innerHTML = k + ' von ' + n + ' gelöst, ' + (n - k) + ' übersprungen.'; bt.textContent = 'zu den offenen ▶'; bv.hidden = false; box.classList.remove('fertig'); }
+        return;
+      }
+      box.classList.remove('fertig'); bv.hidden = true;
+      nr.textContent = (i + 1) + '/' + n; tx.innerHTML = aufgaben[i].text; setzen(tx);
+      if (aufgaben[i].setup) aufgaben[i].setup(sim);
+      if (sim.zeichnen) sim.zeichnen();
+      pruefen();
+    }
+    function pruefen(){
+      if (i >= n) return;
+      var gut = !!aufgaben[i].ok(sim.zustand());
+      if (gut) erledigt[i] = true;
+      ok.textContent = erledigt[i] ? '✓' : '';
+      bt.textContent = erledigt[i] ? 'Nächste ▶' : 'überspringen';
+      box.classList.toggle('geloest', !!erledigt[i]);
+    }
+    function gehe(j){
+      i = j;
+      fig.querySelectorAll('input[type=range]').forEach(function(inp){ inp.value = inp.defaultValue; });
+      fig.querySelectorAll('.sim-schalter input').forEach(function(inp){ inp.checked = inp.defaultChecked; });
+      fig.querySelectorAll('select.sim-wahl').forEach(function(s){ s.value = s.querySelector('option[selected]').value; });
+      zeigen(); if (sim.zeichnen) sim.zeichnen();
+    }
+    bt.addEventListener('click', function(){
+      if (i >= n){ if (anzahl() === n){ erledigt = {}; gehe(0); } else gehe(offen(0)); }
+      else gehe(offen(i + 1));
+    });
+    bv.addEventListener('click', function(){ erledigt = {}; gehe(0); });
+    setTimeout(zeigen, 0);
+    return pruefen;
+  }
+  function wertR(fig, id){ return +fig.querySelector('#' + id).value; }
+  function zeigeWert(fig, id){ var i = fig.querySelector('#' + id); var v = i.parentNode.querySelector('.sl-val'); if (v) v.textContent = mz(+i.value); }
+  function hx(p){ return pTex(p).replace(/\^2/g, '²').replace(/-/g, '−'); }      // Live-Anzeige ohne MathJax
+
+  /* ════════ Sim 1 — Termkacheln ════════
+     Oben der Term der Aufgabe als Kacheln (x-Streifen blau, Einer orange, negative rot), Klammern als Rahmen —
+     «3·( )» dreimal, «−( )» mit Minus davor. Unten baut man mit zwei Reglern den zusammengefassten Term a·x + b.
+     Gleichwertig ist er, wenn beide Kachelsätze nach dem Wegheben der Nullpaare gleich sind; die Probe mit x = 2
+     steht daneben. (Es gibt keine Themenseite: Diese Erkundung ist die einzige Darstellung im Lehrmittel.) */
+  (function(){
+    var fig = document.getElementById('sim1'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
+    var S = null;
+    function wertTerm(items){
+      return items.reduce(function(r, it){
+        if (it.gruppe) return pAdd(r, pMul([it.faktor], wertTerm(it.gruppe)));
+        return pAdd(r, it.art === 'x' ? [0, it.k] : [it.k]);
+      }, [0]);
+    }
+    function texTerm(items){
+      var s = '';
+      items.forEach(function(it, j){
+        var t;
+        if (it.gruppe){ t = (it.faktor === -1 ? '-' : it.faktor === 1 ? '' : it.faktor) + '(' + texTerm(it.gruppe) + ')'; }
+        else t = it.art === 'x' ? (Math.abs(it.k) === 1 ? (it.k < 0 ? '-' : '') : it.k) + 'x' : String(it.k);
+        if (j && t[0] !== '-') s += ' + ' + t; else if (j) s += ' - ' + t.slice(1); else s += t;
+      });
+      return s;
+    }
+    function zustand(){ return { a: wertR(fig, 's1-a'), b: wertR(fig, 's1-b'), p: S ? wertTerm(S) : [0] }; }
+    function kacheln(g, items, x0, y0, neg){
+      var x = x0;
+      items.forEach(function(it){
+        if (it.gruppe){
+          var kopien = Math.abs(it.faktor);
+          if (it.faktor < 0){ el(g, 'text', { x: x, y: y0 + 26, 'class': 'kl-vz' }, '−'); x += 12; }
+          for (var c = 0; c < kopien; c++){
+            var x1 = x; x += 4;
+            x = kacheln(g, it.gruppe, x, y0 + 4, neg) + 4;
+            el(g, 'rect', { x: x1, y: y0, width: x - x1, height: 48, rx: 6, 'class': 'kl-rahmen' + (it.faktor < 0 ? ' minus' : '') });
+            x += 6;
+          }
+          return;
+        }
+        for (var j = 0; j < Math.abs(it.k); j++){
+          var n = (it.k < 0) !== !!neg;
+          if (it.art === 'x') el(g, 'rect', { x: x, y: y0 + 2, width: 9, height: 40, rx: 2, 'class': 'kachel ' + (n ? 'neg' : 'kx') });
+          else el(g, 'rect', { x: x, y: y0 + 32, width: 9, height: 9, rx: 2, 'class': 'kachel ' + (n ? 'neg' : 'k1') });
+          x += 11;
+        }
+        x += 8;
+      });
+      return x;
+    }
+    function zeichnen(){
+      var Z = zustand(); zeigeWert(fig, 's1-a'); zeigeWert(fig, 's1-b');
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      el(svg, 'text', { x: 10, y: 16, 'class': 'st-name' }, 'Term');
+      if (S) kacheln(svg, S, 10, 24);
+      el(svg, 'text', { x: 10, y: 100, 'class': 'st-name' }, 'dein Term');
+      kacheln(svg, [{ art: 'x', k: Z.a }, { art: '1', k: Z.b }], 10, 108);
+      var eigen = lin(Z.a, Z.b), gl = pEq(eigen, Z.p);
+      if (gl) el(svg, 'rect', { x: 4, y: 104, width: 352, height: 56, rx: 8, 'class': 'treffer-rahmen' });
+      var w = function(p){ return p.reduce(function(s, c, k){ return s + c * Math.pow(2, k); }, 0); };
+      formel.innerHTML = 'dein Term: ' + hx(eigen) + (gl ? ' <span class="ok-text">gleichwertig</span>' : ' <span class="nein-text">noch nicht gleich</span>') +
+        ' <span class="grau">(Probe mit x = 2: Term ' + mz(w(Z.p)) + '; dein Term ' + mz(w(eigen)) + ')</span>';
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    function A(items){ return function(){ S = items; }; }
+    var aufg = [
+      [{ art: 'x', k: 3 }, { art: '1', k: 2 }, { art: 'x', k: -1 }, { art: '1', k: 4 }],
+      [{ art: 'x', k: 2 }, { art: '1', k: -5 }, { art: 'x', k: 4 }, { art: '1', k: 1 }],
+      [{ gruppe: [{ art: 'x', k: 1 }, { art: '1', k: 2 }], faktor: 3 }],
+      [{ gruppe: [{ art: 'x', k: 2 }, { art: '1', k: -1 }], faktor: 2 }, { art: 'x', k: 1 }],
+      [{ art: 'x', k: 4 }, { gruppe: [{ art: 'x', k: 1 }, { art: '1', k: 3 }], faktor: -1 }]
+    ];
+    var hinweise = ['Fasse zusammen: Stell unten den kürzesten gleichwertigen Term ein.', 'Negative Kacheln heben positive auf (Nullpaare). Fasse zusammen.',
+                    'Drei gleiche Klammern: Wie viele x-Kacheln, wie viele Einer sind es zusammen?', 'Zweimal die Klammer, dazu ein x. Fasse zusammen.',
+                    'Das Minus gilt für die ganze Klammer — jede Kachel darin wird umgedreht. Fasse zusammen.'];
+    pr = Leiste(fig, aufg.map(function(it, j){
+      var ziel = (function(){ S = it; var p = zustand().p; S = null; return p; })();
+      return { text: hinweise[j] + ' \\(' + texTerm(it) + '\\)', setup: A(it), ok: function(z){ return pEq(lin(z.a, z.b), ziel); } };
+    }), sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
+    S = aufg[0]; zeichnen();
+  })();
+
+  /* ════════ Sim 2 — Klammer mal Klammer: Flächenmodell und Rechteckschema ════════
+     (x + a)(x + b): Bei positiven a, b ist das Produkt ein Rechteck aus x² (blau), zwei x-Streifen (blau) und
+     a·b Einerkacheln (orange). Das Rechteckschema darunter gilt für alle Vorzeichen. */
+  function rechteckschema(tab, a, b, v){
+    v = v || 'x';
+    var z = function(n){ return (n < 0 ? '− ' : '+ ') + Math.abs(n); };
+    var g = function(c){ return c === 0 ? '0' : (c < 0 ? '−' : '') + (Math.abs(c) === 1 ? '' : Math.abs(c)) + v; };
+    tab.innerHTML = '<tr><th>·</th><th>' + v + '</th><th>' + z(b) + '</th></tr>' +
+      '<tr><th>' + v + '</th><td class="t-q">' + v + '²</td><td class="t-x">' + g(b) + '</td></tr>' +
+      '<tr><th>' + z(a) + '</th><td class="t-x">' + g(a) + '</td><td class="t-z">' + mz(a * b) + '</td></tr>';
+  }
+  function flaeche(svg, a, b, x0, y0, X){
+    // X = Länge von x in px; Einheit 16 px. Nur für a, b ≥ 0.
+    var E = 16;
+    el(svg, 'rect', { x: x0, y: y0, width: X, height: X, 'class': 'fl-q' });
+    for (var j = 0; j < b; j++) el(svg, 'rect', { x: x0 + X + j * E, y: y0, width: E, height: X, 'class': 'fl-x' });
+    for (var k = 0; k < a; k++) el(svg, 'rect', { x: x0, y: y0 + X + k * E, width: X, height: E, 'class': 'fl-x' });
+    for (j = 0; j < b; j++) for (k = 0; k < a; k++) el(svg, 'rect', { x: x0 + X + j * E, y: y0 + X + k * E, width: E, height: E, 'class': 'fl-1' });
+    el(svg, 'rect', { x: x0, y: y0, width: X + b * E, height: X + a * E, 'class': 'rahmen' });
+    el(svg, 'text', { x: x0 + X / 2, y: y0 - 6, 'class': 'st-name', 'text-anchor': 'middle' }, 'x');
+    if (b) el(svg, 'text', { x: x0 + X + b * E / 2, y: y0 - 6, 'class': 'st-name', 'text-anchor': 'middle' }, String(b));
+    el(svg, 'text', { x: x0 - 8, y: y0 + X / 2 + 4, 'class': 'st-name', 'text-anchor': 'end' }, 'x');
+    if (a) el(svg, 'text', { x: x0 - 8, y: y0 + X + a * E / 2 + 4, 'class': 'st-name', 'text-anchor': 'end' }, String(a));
+  }
+  (function(){
+    var fig = document.getElementById('sim2'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]'), tab = fig.querySelector('table');
+    function zustand(){ return { a: wertR(fig, 's2-a'), b: wertR(fig, 's2-b') }; }
+    function zeichnen(){
+      var Z = zustand(); zeigeWert(fig, 's2-a'); zeigeWert(fig, 's2-b');
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      if (Z.a >= 0 && Z.b >= 0) flaeche(svg, Z.a, Z.b, 40, 24, 110);
+      else { el(svg, 'text', { x: 150, y: 100, 'text-anchor': 'middle', 'class': 'st-frage' }, 'Mit negativen Zahlen gibt es kein Rechteck.');
+             el(svg, 'text', { x: 150, y: 120, 'text-anchor': 'middle', 'class': 'st-frage' }, 'Das Rechteckschema unten gilt immer.'); }
+      rechteckschema(tab, Z.a, Z.b);
+      var p = pMul(lin(1, Z.a), lin(1, Z.b));
+      formel.innerHTML = '(x ' + (Z.a < 0 ? '− ' : '+ ') + Math.abs(Z.a) + ')(x ' + (Z.b < 0 ? '− ' : '+ ') + Math.abs(Z.b) + ') = ' + hx(p);
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    var paar = function(a, b){ return function(z){ return (z.a === a && z.b === b) || (z.a === b && z.b === a); }; };
+    pr = Leiste(fig, [
+      { text: 'Stell \\((x + 3)(x + 1)\\) ein. Zähle: Wie viele x-Streifen, wie viele Einerkacheln?', ok: paar(3, 1) },
+      { text: 'Stell \\((x + 4)(x - 1)\\) ein. Welches Vorzeichen bekommt die Zahl am Schluss?', ok: paar(4, -1) },
+      { text: 'Stell \\((x - 2)(x - 5)\\) ein. Warum ist die Zahl am Schluss positiv?', ok: paar(-2, -5) },
+      { text: 'Finde ein Produkt, bei dem das x-Glied ganz wegfällt (und keine Zahl 0 ist).', ok: function(z){ return z.a === -z.b && z.a !== 0; } },
+      { text: 'Finde \\(a\\) und \\(b\\) so, dass das Ergebnis \\(x^2 + x - 12\\) ist.', ok: paar(4, -3) }
+    ], sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 3 — Binomische Formeln am Quadrat ════════
+     a und b sind Längen (Zahlen). (a+b)²: Quadrat mit a² (blau), zwei Rechtecken a·b (orange) und b² (grün).
+     (a−b)²: im Quadrat a² bleibt nach dem Wegnehmen zweier Streifen a·b (rot gestrichelt) und Zurückgeben von b²
+     das Quadrat (a−b)². (a+b)(a−b): das Rechteck hat dieselbe Fläche wie a² ohne b². */
+  (function(){
+    var fig = document.getElementById('sim3'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]'), modus = fig.querySelector('select.sim-wahl');
+    function korrigiere(){ var b = fig.querySelector('#s3-b'), a = wertR(fig, 's3-a'); b.max = Math.min(4, a - 1); if (+b.value > +b.max) b.value = b.max; }
+    function zustand(){ return { m: modus.value, a: wertR(fig, 's3-a'), b: wertR(fig, 's3-b') }; }
+    function zeichnen(){
+      korrigiere();
+      var Z = zustand(), a = Z.a, b = Z.b, E = 22, x0 = 40, y0 = 20;
+      ['s3-a', 's3-b'].forEach(function(id){ zeigeWert(fig, id); });
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      var R = function(x, y, w, h, c){ el(svg, 'rect', { x: x0 + x * E, y: y0 + y * E, width: w * E, height: h * E, 'class': c }); };
+      var L = function(name, w, breite){ return breite >= 3 ? name + ' = ' + w : String(w); };
+      var T = function(x, y, t, c){ el(svg, 'text', { x: x0 + x * E, y: y0 + y * E + 4, 'text-anchor': 'middle', 'class': 'st-zahl' + (c ? ' ' + c : '') }, t); };
+      if (Z.m === 'plus'){
+        R(0, 0, a, a, 'fl-q'); R(a, 0, b, a, 'fl-x'); R(0, a, a, b, 'fl-x'); R(a, a, b, b, 'fl-1'); R(0, 0, a + b, a + b, 'rahmen');
+        T(a / 2, a / 2, L('a²', a * a, a)); T(a + b / 2, a / 2, a * b); T(a / 2, a + b / 2, L('ab', a * b, a)); T(a + b / 2, a + b / 2, b * b);
+        formel.innerHTML = '(' + a + ' + ' + b + ')² = ' + (a + b) * (a + b) + ' = ' + a * a + ' + 2 · ' + a * b + ' + ' + b * b +
+          ' <span class="nein-text">≠ ' + a + '² + ' + b + '² = ' + (a * a + b * b) + '</span>';
+      } else if (Z.m === 'minus'){
+        R(0, 0, a, a, 'fl-leer'); R(0, 0, a - b, a - b, 'fl-q'); R(a - b, 0, b, a, 'fl-weg'); R(0, a - b, a, b, 'fl-weg'); R(a - b, a - b, b, b, 'fl-1');
+        R(0, 0, a, a, 'rahmen');
+        T((a - b) / 2, (a - b) / 2, L('(a−b)²', (a - b) * (a - b), a - b + 1)); T(a - b / 2, (a - b) / 2, a * b, 'grau-t'); T((a - b) / 2, a - b / 2, a * b, 'grau-t'); T(a - b / 2, a - b / 2, b * b);
+        formel.innerHTML = '(' + a + ' − ' + b + ')² = ' + (a - b) * (a - b) + ' = ' + a * a + ' − 2 · ' + a * b + ' + ' + b * b +
+          ' <span class="grau">(vom Quadrat a² zwei Streifen ab weg; das Eckquadrat b² war dabei doppelt weg, also einmal zurück)</span>';
+      } else {
+        var yo = a - b + 1;
+        R(0, 0, a, a - b, 'fl-q'); R(a, 0, b, a - b, 'fl-x'); R(0, 0, a + b, a - b, 'rahmen');
+        R(0, yo, a, a - b, 'fl-q'); R(0, yo + a - b, a - b, b, 'fl-x'); R(a - b, yo + a - b, b, b, 'fl-weg'); R(0, yo, a, a, 'rahmen duenn');
+        T(a / 2, (a - b) / 2, L('(a+b)(a−b)', (a + b) * (a - b), a));
+        T(a / 2, yo + (a - b) / 2, L('a² − b²', a * a - b * b, a));
+        formel.innerHTML = '(' + a + ' + ' + b + ')(' + a + ' − ' + b + ') = ' + (a + b) * (a - b) + ' = ' + a * a + ' − ' + b * b +
+          ' <span class="grau">(unten: a² ohne das Eckquadrat b²; das orange Stück wandert nach rechts, so entsteht das Rechteck oben)</span>';
+      }
+      svg.setAttribute('viewBox', '0 0 300 ' + (Z.m === 'produkt' ? 40 + (a - b + 1 + a) * E : 40 + (a + (Z.m === 'plus' ? b : 0)) * E));
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    function auf(m){ return function(){ modus.value = m; }; }
+    pr = Leiste(fig, [
+      { text: '«(a + b)²»: Stell \\(a = 5\\) und \\(b = 2\\) ein. Welche vier Teilflächen siehst du, und wie gross sind sie?', setup: auf('plus'),
+        ok: function(z){ return z.m === 'plus' && z.a === 5 && z.b === 2; } },
+      { text: 'Finde \\(a\\) und \\(b\\) mit \\((a + b)^2 = 64\\) und \\(a^2 + b^2 = 34\\). Wie gross ist der Unterschied?', setup: auf('plus'),
+        ok: function(z){ return z.m === 'plus' && z.a === 5 && z.b === 3; } },
+      { text: '«(a − b)²»: Bei \\(a = 7\\): Welches \\(b\\) gibt \\((a - b)^2 = 9\\)?', setup: auf('minus'),
+        ok: function(z){ return z.m === 'minus' && z.a === 7 && z.b === 4; } },
+      { text: '«(a + b)(a − b)»: Finde \\(a\\) und \\(b\\), sodass das Rechteck die Fläche \\(24\\) hat.', setup: auf('produkt'),
+        ok: function(z){ return z.m === 'produkt' && z.a * z.a - z.b * z.b === 24; } }
+    ], sim);
+    fig.querySelectorAll('input, select').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 4 — Faktorisierer: Zweiklammersatz ════════
+     Ziel x² + px + q; mit zwei Reglern (x + m)(x + n) suchen. Das Rechteckschema zeigt, was herauskommt; daneben
+     m · n und m + n. Unterschied zu Sim 2: Dort ist das Produkt gegeben, hier das Ergebnis. */
+  (function(){
+    var fig = document.getElementById('sim4'); if (!fig) return;
+    var formel = fig.querySelector('[data-rolle="formel"]'), tab = fig.querySelector('table'), ziel = fig.querySelector('[data-rolle="ziel"]');
+    var Q = [8, 6, 1];
+    function zustand(){ return { m: wertR(fig, 's4-m'), n: wertR(fig, 's4-n') }; }
+    function zeichnen(){
+      var Z = zustand(); zeigeWert(fig, 's4-m'); zeigeWert(fig, 's4-n');
+      rechteckschema(tab, Z.m, Z.n);
+      var p = pMul(lin(1, Z.m), lin(1, Z.n)), gl = pEq(p, Q);
+      ziel.innerHTML = 'Ziel: ' + hx(Q) + ' <span class="grau">(Summe ' + mz(Q[1]) + '; Produkt ' + mz(Q[0]) + ')</span>';
+      formel.innerHTML = 'dein Produkt: ' + hx(p) + ' <span class="grau">(m + n = ' + mz(Z.m + Z.n) + '; m · n = ' + mz(Z.m * Z.n) + ')</span>' +
+        (gl ? ' <span class="ok-text">✓ getroffen</span>' : '');
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    var ziele = [[8, 6, 1], [15, -8, 1], [-15, 2, 1], [9, -6, 1], [-16, 0, 1]];
+    var texte = ['Faktorisiere: Produkt \\(8\\), Summe \\(6\\).', 'Produkt positiv, Summe negativ — welche Vorzeichen?', 'Produkt negativ: Die Zahlen haben verschiedene Vorzeichen.',
+                 'Was fällt bei diesem Ergebnis auf?', 'Hier fehlt das x-Glied: Die Summe ist \\(0\\).'];
+    pr = Leiste(fig, ziele.map(function(q, j){
+      return { text: texte[j] + ' Ziel: \\(' + pTex(q) + '\\)', setup: function(){ Q = q; }, ok: function(z){ return pEq(pMul(lin(1, z.m), lin(1, z.n)), q); } };
+    }), sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Übungen mit Rückmeldung ════════
+     Termfelder (Name beginnt mit «t»): gleichwertig geprüft; bei Ausmultiplizieren muss das Ergebnis zusammengefasst
+     sein, bei Faktorisieren in Produktform und vollständig. Beides ist ein eigener Hinweis und zählt als Versuch.
+     Zahlenfelder: ganze Zahlen. Tipps in drei Stufen. Testhaken: box.__aufgabe, box.__typ. */
+  (function(){
+    var ALLE = document.querySelectorAll('.uebung[data-typ]'); if (!ALLE.length) return;
+    function nz(a, b){ var r; do { r = zufallG(a, b); } while (!r); return r; }
+    function kopfTerm(p, v){ return pTxt(p, v); }
+    function vzTex(n){ return n < 0 ? '- ' + Math.abs(n) : '+ ' + n; }
+
+    /* Feste Aufgaben (Erkundungen, Clips, Festhalten, Kapitelaufgaben, Vortest, Gesamttest): je Typ ein Schlüssel. */
+    var SPERRE = [
+      'zs|3,2,-1,4', 'zs|2,-5,4,1', 'zs|2,4,3,-1', 'zs|5,3,-2,7', 'zs|4,-7,2,3',
+      'kl|3|1|2', 'kl|2|2|-1', 'kl|3|2|-4', 'kl|-2|1|-3', 'kl|4|3|-2', 'kl|-3|-1|2', 'kl|5|2|-3', 'km|7|2|-5', 'km|4|1|3', 'km|8|3|-5', 'km|1|-3|4', 'km|-1|3|-8',
+      'am|1,2|1,3', 'am|3,-2|1,4', 'am|1,4|1,5', 'am|2,-3|1,6', 'am|1,-4|1,-7', 'am|1,5|1,-2', 'am|1,1|1,4', 'am|1,6|1,1', 'am|1,-3|1,5', 'am|2,1|1,-4', 'am|1,5|1,2', 'am|1,2|1,-1', 'am|2,5|1,-3',
+      'ko|3|2', 'ko|1|3', 'ko|4|-1', 'ko|-2|-5', 'ko|4|-3', 'ko|2|3', 'ko|-3|5', 'ko|2|-1', 'ko|6|1', 'ko|5|2', 'ko|1|4', 'ko|3|-3',
+      'bi|p|1|4', 'bi|m|2|3', 'bi|d|1|5', 'bi|p|1|6', 'bi|m|1|1', 'bi|m|3|2', 'bi|d|1|7', 'bi|d|1|4', 'bi|p|1|5', 'bi|p|1|9', 'bi|m|1|6', 'bi|d|2|5', 'bi|m|3|4', 'bi|p|1|3',
+      'bl|p|1|4', 'bl|m|1|5', 'bl|p|1|7', 'bl|m|1|3', 'bl|p|1|5', 'bl|p|1|9', 'bl|m|1|6', 'bl|m|3|2', 'bl|m|2|3', 'bl|m|3|4', 'bl|m|1|1', 'bl|m|1|12',
+      'ak|3|2|-3', 'ak|4|2|3', 'ak|5|1|-3', 'ak|7|2|-3', 'ak|6|2|3', 'ak|2|1|-9', 'ak|3|1|-4',
+      'fz|t|2|3', 'fz|t|2|4', 'fz|t|-3|-5', 'fz|t|5|-3', 'fz|t|-3|-3', 'fz|t|4|-4', 'fz|t|-3|-4', 'fz|t|2|7', 'fz|t|-5|2', 'fz|t|-6|4', 'fz|t|4|-3', 'fz|t|-9|9',
+      'fz|b|-5', 'fz|b|7', 'fz|b|5', 'fz|b|3', 'fz|b|-3', 'fz|d|3|5', 'fz|d|2|1', 'fz|d|1|9', 'fz|d|1|3', 'fz|d|1|2', 'fz|d|1|4'
+    ];
+    function gesperrt(T, A){ return T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    function paarSchl(m, n){ return [m, n].sort(function(u, w){ return u - w; }).join('|'); }
+
+    var TYPEN = {
+      /* ── Kapitel 1 ── */
+      'zusammenfassen': { felder: ['t'],
+        schl: function(A){ return 'zs|' + A.z.join(','); },
+        eingabe: function(A){ return { t: kopfTerm(A.r) }; },
+        neu: function(){
+          var mitQ = Math.random() < 0.3, a = nz(-6, 7), b = nz(-9, 9), c = nz(-6, 7), d = nz(-9, 9);
+          if (a + c === 0) c = c === -1 ? -2 : c + 1;
+          var glieder = mitQ ? [[2, a], [1, b], [2, c], [1, d]] : [[1, a], [0, b], [1, c], [0, d]];
+          var tex = '', r = [0];
+          glieder.forEach(function(g, j){
+            var t = pTex(g[0] === 0 ? [g[1]] : g[0] === 1 ? [0, g[1]] : [0, 0, g[1]]);
+            tex += j === 0 ? t : (t[0] === '-' ? ' - ' + t.slice(1) : ' + ' + t);
+            r = pAdd(r, g[0] === 0 ? [g[1]] : g[0] === 1 ? [0, g[1]] : [0, 0, g[1]]);
+          });
+          return { z: [a, b, c, d], q: mitQ, r: r, tex: tex, muster: '\\(' + tex + ' = \\) {t}', text: 'Fasse zusammen.' }; },
+        falsche: function(A){
+          var s = A.z.reduce(function(u, w){ return u + w; }, 0);
+          var f = [[A.q ? [0, 0, s] : [0, s], 'gleichartige']];
+          return f.filter(function(p){ return !pEq(p[0], A.r); }); },
+        fehler: function(A){ return TYPEN.zusammenfassen.falsche(A).map(function(p){ return [{ t: kopfTerm(p[0]) }, p[1]]; }); },
+        pruefen: function(A, e){
+          var f = TYPEN.zusammenfassen.falsche(A);
+          for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0]))
+            return 'Nur <b>gleichartige</b> Glieder zusammenfassen: ' + (A.q ? '\\(x^2\\)-Glieder mit \\(x^2\\)-Gliedern, \\(x\\)-Glieder mit \\(x\\)-Gliedern.' : '\\(x\\)-Glieder mit \\(x\\)-Gliedern, Zahlen mit Zahlen.');
+          return 'Ordne zuerst: gleichartige Glieder untereinander, das Vorzeichen gehört zum Glied dahinter. Rechne nochmals nach.'; },
+        tipps: function(A){ return ['Gleichartig sind Glieder mit derselben Variable und derselben Hochzahl.', A.q ? 'Sammle die \\(x^2\\)-Glieder und die \\(x\\)-Glieder getrennt.' : 'Sammle die \\(x\\)-Glieder und die Zahlen getrennt.']; },
+        loesung: function(A){ return A.tex + ' = ' + pTex(A.r); } },
+
+      'klammern': { felder: ['t'],
+        schl: function(A){ return A.art === 'k' ? 'kl|' + A.k + '|' + A.a + '|' + A.b : 'km|' + A.m + '|' + A.a + '|' + A.b; },
+        eingabe: function(A){ return { t: kopfTerm(A.r) }; },
+        neu: function(){
+          var art = Math.random() < 0.5 ? 'k' : 'm', a = nz(-4, 5), b = nz(-9, 9);
+          if (art === 'k'){
+            var k = zufall([-5, -4, -3, -2, 2, 3, 4, 5, 6]);
+            return { art: art, k: k, a: a, b: b, r: pMul([k], lin(a, b)), tex: k + kl(a, b),
+              muster: '\\(' + k + kl(a, b) + ' = \\) {t}', text: 'Löse die Klammer auf.' };
+          }
+          var m = nz(-6, 9); if (m === a) m += 2;
+          return { art: art, m: m, a: a, b: b, r: pAdd([0, m], pNeg(lin(a, b))), tex: pTex([0, m]) + ' - ' + kl(a, b),
+            muster: '\\(' + pTex([0, m]) + ' - ' + kl(a, b) + ' = \\) {t}', text: 'Löse die Klammer auf und fasse zusammen.' }; },
+        falsche: function(A){
+          var f = A.art === 'k' ? [[lin(A.k * A.a, A.b), 'jedem'], [lin(A.k * A.a, -A.k * A.b), 'Vorzeichen']]
+                                : [[lin(A.m - A.a, A.b), 'Minus']];
+          return f.filter(function(p){ return !pEq(p[0], A.r); }); },
+        fehler: function(A){ return TYPEN.klammern.falsche(A).map(function(p){ return [{ t: kopfTerm(p[0]) }, p[1]]; }); },
+        pruefen: function(A, e){
+          var f = TYPEN.klammern.falsche(A);
+          for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0])){
+            if (f[j][1] === 'jedem') return 'Die Zahl vor der Klammer wird mit <b>jedem</b> Glied in der Klammer multipliziert.';
+            if (f[j][1] === 'Minus') return '<b>Minus</b> vor der Klammer dreht <b>jedes</b> Vorzeichen in der Klammer um, auch das zweite.';
+            return '<b>Vorzeichen:</b> Rechne \\(' + A.k + ' \\cdot (' + A.b + ')\\). Minus mal Minus gibt Plus, Minus mal Plus gibt Minus.';
+          }
+          return 'Klammer auflösen, dann gleichartige Glieder zusammenfassen. Rechne nochmals nach und mach die Probe mit \\(x = 1\\).'; },
+        tipps: function(A){ return A.art === 'k' ? ['Distributivgesetz: \\(k(a + b) = ka + kb\\).', 'Rechne \\(' + A.k + ' \\cdot ' + pTex([0, A.a]) + '\\) und \\(' + A.k + ' \\cdot (' + A.b + ')\\).']
+                                                 : ['Minus vor der Klammer: Klammer weglassen und jedes Vorzeichen darin umdrehen.', '\\(-' + kl(A.a, A.b) + ' = ' + pTex(lin(-A.a, -A.b)) + '\\), dann zusammenfassen.']; },
+        loesung: function(A){ return A.art === 'k' ? A.tex + ' = ' + pTex(A.r) : A.tex + ' = ' + pTex([0, A.m]) + (A.a > 0 ? ' - ' : ' + ') + pTex([0, Math.abs(A.a)]) + (A.b > 0 ? ' - ' : ' + ') + Math.abs(A.b) + ' = ' + pTex(A.r); } },
+
+      /* ── Kapitel 2 ── */
+      'ausmult': { felder: ['t'],
+        schl: function(A){ return 'am|' + A.a + ',' + A.b + '|' + A.c + ',' + A.d; },
+        eingabe: function(A){ return { t: kopfTerm(A.r) }; },
+        neu: function(){
+          var a = zufall([1, 1, 1, 2, 3]), c = zufall([1, 1, 2]), b = nz(-9, 9), d = nz(-9, 9);
+          if (a * d + b * c === 0) d = d > 0 ? d + 1 : d - 1;
+          return { a: a, b: b, c: c, d: d, r: pMul(lin(a, b), lin(c, d)), muster: '\\(' + kl(a, b) + kl(c, d) + ' = \\) {t}', text: 'Multipliziere aus und fasse zusammen.' }; },
+        falsche: function(A){
+          var f = [[[A.b * A.d, 0, A.a * A.c], 'jedes'], [[-A.b * A.d, A.a * A.d + A.b * A.c, A.a * A.c], 'Vorzeichen'], [[A.b * A.d, A.a * A.d - A.b * A.c, A.a * A.c], 'Vorzeichen']];
+          return f.filter(function(p, i){ return !pEq(p[0], A.r) && !f.slice(0, i).some(function(q){ return pEq(q[0], p[0]); }); }); },
+        fehler: function(A){ return TYPEN.ausmult.falsche(A).map(function(p){ return [{ t: kopfTerm(p[0]) }, p[1]]; }); },
+        pruefen: function(A, e){
+          var f = TYPEN.ausmult.falsche(A);
+          for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0]))
+            return f[j][1] === 'jedes' ? 'Es fehlen die gemischten Glieder: <b>Jedes</b> Glied der ersten Klammer mal <b>jedes</b> der zweiten — vier Produkte.'
+                                       : '<b>Vorzeichen</b> prüfen: Das Vorzeichen gehört zur Zahl dahinter. Schreib die vier Produkte einzeln auf.';
+          return 'Vier Produkte bilden (Rechteckschema), dann die beiden \\(x\\)-Glieder zusammenfassen. Probe mit \\(x = 1\\).'; },
+        tipps: function(A){ return ['Rechteckschema: jedes Glied der ersten Klammer mal jedes der zweiten.',
+          'Die vier Produkte: \\(' + pTex([0, 0, A.a * A.c]) + '\\), \\(' + pTex([0, A.a * A.d]) + '\\), \\(' + pTex([0, A.b * A.c]) + '\\), \\(' + A.b * A.d + '\\).']; },
+        loesung: function(A){ var g = function(c){ return (c < 0 ? ' - ' : ' + ') + pTex([0, Math.abs(c)]); };
+          return kl(A.a, A.b) + kl(A.c, A.d) + ' = ' + pTex([0, 0, A.a * A.c]) + g(A.a * A.d) + g(A.b * A.c) + ' ' + vzTex(A.b * A.d) + ' = ' + pTex(A.r); } },
+
+      'koeffizienten': { felder: ['p', 'q'],
+        schl: function(A){ return 'ko|' + paarSchl(A.m, A.n); },
+        neu: function(){
+          var m = nz(-9, 9), n = nz(-9, 9); if (m + n === 0 || m === n && Math.random() < 0.7) n = n > 0 ? n - 1 || 2 : n + 1 || -2;
+          return { m: m, n: n, p: m + n, q: m * n, muster: '\\(x^2 + \\) {p} \\(x + \\) {q}',
+            text: 'Fülle aus: \\(' + kl(1, m) + kl(1, n) + ' = x^2 + \\square\\, x + \\square\\)' }; },
+        fehler: function(A){
+          var f = [];
+          if (-A.q !== A.q) f.push([{ p: String(A.p), q: String(-A.q) }, 'Zahlglied']);
+          if (A.q !== A.p) f.push([{ p: String(A.q), q: String(A.p) }, 'vertauscht']);
+          return f; },
+        pruefen: function(A, e){
+          if (e.p === A.q && e.q === A.p && A.p !== A.q) return 'Die beiden Werte sind vertauscht: Das <b>x-Glied</b> ist die <b>Summe</b> \\(' + A.m + ' + (' + A.n + ')\\), die Zahl am Schluss das <b>Produkt</b>.';
+          if (e.p === A.p && e.q !== A.q) return 'Das x-Glied stimmt. Das <b>Zahlglied</b> ist \\(' + A.m + ' \\cdot (' + A.n + ')\\). Achte auf das Vorzeichen.';
+          if (e.q === A.q && e.p !== A.p) return 'Das Zahlglied stimmt. Das <b>x-Glied</b> ist die Summe der beiden Zahlen, mit Vorzeichen.';
+          return 'Das x-Glied ist die Summe der Zahlen in den Klammern, das Zahlglied ihr Produkt.'; },
+        tipps: function(A){ return ['\\((x + m)(x + n) = x^2 + (m + n)x + m \\cdot n\\).', 'Hier: \\(m = ' + A.m + '\\), \\(n = ' + A.n + '\\).']; },
+        loesung: function(A){ return kl(1, A.m) + kl(1, A.n) + ' = ' + pTex([A.q, A.p, 1]); } },
+
+      /* ── Kapitel 3 ── */
+      'binom': { felder: ['t'],
+        schl: function(A){ return 'bi|' + A.art + '|' + A.a + '|' + A.b; },
+        eingabe: function(A){ return { t: kopfTerm(A.r) }; },
+        neu: function(){
+          var art = zufall(['p', 'm', 'd']), a = zufall([1, 1, 2, 3, 4]), b = zufallG(1, 9);
+          var r = art === 'p' ? pPow(lin(a, b), 2) : art === 'm' ? pPow(lin(a, -b), 2) : pMul(lin(a, b), lin(a, -b));
+          var tex = art === 'p' ? kl(a, b) + '^2' : art === 'm' ? kl(a, -b) + '^2' : kl(a, b) + kl(a, -b);
+          return { art: art, a: a, b: b, r: r, tex: tex, muster: '\\(' + tex + ' = \\) {t}', text: 'Rechne mit der binomischen Formel.' }; },
+        falsche: function(A){
+          var s = A.art === 'm' ? -1 : 1, f = [];
+          if (A.art !== 'd'){
+            f.push([[A.b * A.b, 0, A.a * A.a], 'mittlere']);
+            f.push([[A.b * A.b, s * A.a * A.b, A.a * A.a], '2ab']);
+          } else f.push([[A.b * A.b, 0, -A.a * A.a], 'Vorzeichen']);
+          if (A.a > 1) f.push([[A.art === 'd' ? -A.b * A.b : A.b * A.b, A.art === 'd' ? 0 : 2 * s * A.a * A.b, A.a], 'Koeffizient']);
+          return f.filter(function(p, i){ return p[1] && !pEq(p[0], A.r) && !f.slice(0, i).some(function(q){ return pEq(q[0], p[0]); }); }); },
+        fehler: function(A){ return TYPEN.binom.falsche(A).map(function(p){ return [{ t: kopfTerm(p[0]) }, p[1] === '2ab' ? 'zwei Rechtecke' : p[1]]; }); },
+        pruefen: function(A, e){
+          var f = TYPEN.binom.falsche(A);
+          for (var j = 0; j < f.length; j++) if (pEq(e.t.p, f[j][0])){
+            if (f[j][1] === 'mittlere') return 'Das <b>mittlere</b> Glied fehlt: \\((a + b)^2\\) ist nicht \\(a^2 + b^2\\), sondern \\(a^2 + 2ab + b^2\\).';
+            if (f[j][1] === '2ab') return 'Das mittlere Glied ist <b>2</b>·a·b, nicht a·b — im Quadrat-Bild gibt es zwei Rechtecke.';
+            if (f[j][1] === 'Koeffizient') return 'Auch die Zahl vor \\(x\\) wird quadriert: \\((' + A.a + 'x)^2 = ' + A.a * A.a + 'x^2\\) (<b>Koeffizient</b> quadrieren).';
+            return '<b>Vorzeichen:</b> \\((a + b)(a - b) = a^2 - b^2\\).';
+          }
+          return 'Setz \\(a\\) und \\(b\\) in die Formel ein und rechne jedes Glied einzeln. Probe mit \\(x = 1\\).'; },
+        tipps: function(A){ var at = A.a === 1 ? 'x' : A.a + 'x';
+          return [A.art === 'p' ? '\\((a + b)^2 = a^2 + 2ab + b^2\\)' : A.art === 'm' ? '\\((a - b)^2 = a^2 - 2ab + b^2\\)' : '\\((a + b)(a - b) = a^2 - b^2\\)',
+                  'Hier ist \\(a = ' + at + '\\) und \\(b = ' + A.b + '\\).']; },
+        loesung: function(A){ var at = A.a === 1 ? 'x' : '(' + A.a + 'x)';
+          return A.tex + ' = ' + (A.art === 'd' ? at + '^2 - ' + A.b + '^2' : at + '^2 ' + (A.art === 'm' ? '-' : '+') + ' 2 \\cdot ' + (A.a === 1 ? 'x' : A.a + 'x') + ' \\cdot ' + A.b + ' + ' + A.b + '^2') + ' = ' + pTex(A.r); } },
+
+      'binomluecke': { felder: ['m', 'q'],
+        schl: function(A){ return 'bl|' + (A.s > 0 ? 'p' : 'm') + '|' + A.a + '|' + A.k; },
+        neu: function(){
+          var a = zufall([1, 1, 1, 2, 3]), k, s = zufall([1, -1]);
+          do { k = zufallG(1, 12); } while (ggT(a, k) !== 1);
+          var ax = a === 1 ? 'x' : a + 'x';
+          return { a: a, k: k, s: s, m: k, q: k * k, ax: ax,
+            muster: '\\((' + ax + ' ' + (s > 0 ? '+' : '-') + '\\) {m} \\()^2 = ' + pTex([0, 0, a * a]) + ' ' + (s > 0 ? '+' : '-') + ' ' + 2 * a * k + 'x + \\) {q}',
+            text: 'Ergänze die Lücken.' }; },
+        fehler: function(A){ var f = [[{ m: String(2 * A.a * A.k), q: String(4 * A.a * A.a * A.k * A.k) }, 'mittlere']];
+          if (2 * A.k !== A.q) f.push([{ m: String(A.k), q: String(2 * A.k) }, 'Quadrat']); return f; },
+        pruefen: function(A, e){
+          if (e.m === 2 * A.a * A.k || (A.a > 1 && e.m === A.a * A.k)) return 'Das <b>mittlere</b> Glied ist \\(2 \\cdot ' + A.ax + ' \\cdot \\square\\). Teile \\(' + 2 * A.a * A.k + 'x\\) durch \\(2 \\cdot ' + A.ax + '\\).';
+          if (e.m === A.k && e.q !== A.q) return 'Die Zahl in der Klammer stimmt. Am Schluss steht ihr <b>Quadrat</b>.';
+          return 'Vergleiche mit \\((a + b)^2 = a^2 + 2ab + b^2\\): Hier ist \\(a = ' + A.ax + '\\), das mittlere Glied ist \\(2ab\\), am Schluss steht \\(b^2\\).'; },
+        tipps: function(A){ return ['\\((a + b)^2 = a^2 + 2ab + b^2\\) mit \\(a = ' + A.ax + '\\): Das mittlere Glied verrät \\(b\\).',
+          '\\(2 \\cdot ' + A.ax + ' \\cdot b = ' + 2 * A.a * A.k + 'x\\), also \\(b = ' + A.k + '\\).']; },
+        loesung: function(A){ return '(' + A.ax + (A.s > 0 ? ' + ' : ' - ') + A.k + ')^2 = ' + pTex([A.k * A.k, 2 * A.s * A.a * A.k, A.a * A.a]); } },
+
+      /* ── Kapitel 4 ── */
+      'ausklammern': { felder: ['t'], produkt: true,
+        schl: function(A){ return 'ak|' + A.g + '|' + A.p + '|' + A.q; },
+        eingabe: function(A){ return { t: A.loes }; },
+        neu: function(){
+          var v = zufall(['x', 'a', 'y']), g = zufallG(2, 9), p, q, mitV = Math.random() < 0.5;
+          do { p = zufallG(1, 6); q = nz(-9, 9); } while (ggT(p, q) !== 1);
+          var inner = lin(p, q), faktor = mitV ? [0, g] : [g];
+          var r = pMul(faktor, inner), gT = mitV ? g + v : String(g);
+          return { v: v, g: g, p: p, q: q, mitV: mitV, r: r, loes: (mitV ? g + v : g) + '(' + pTxt(inner, v) + ')',
+            muster: '\\(' + pTex(r, v) + ' = \\) {t}', text: 'Klammere so viel wie möglich aus (Produktform).', gT: gT }; },
+        fehler: function(A){
+          var f = [[{ t: pTxt(A.r, A.v) }, 'Produkt']];
+          if (A.mitV) f.push([{ t: A.v + '(' + pTxt(lin(A.g * A.p, A.g * A.q), A.v) + ')' }, 'vollständig']);
+          else if (A.g % 2 === 0 && A.g > 2) f.push([{ t: '2(' + pTxt(lin(A.g / 2 * A.p, A.g / 2 * A.q), A.v) + ')' }, 'vollständig']);
+          f.push([{ t: A.gT.replace(/x|a|y/, A.v) + '(' + pTxt(lin(A.p, -A.q), A.v) + ')' }, 'Probe']);
+          return f; },
+        pruefen: function(A, e){ return 'Multipliziere zur <b>Probe</b> aus: Es muss \\(' + pTex(A.r, A.v) + '\\) herauskommen.'; },
+        tipps: function(A){ return ['Suche den grössten gemeinsamen Faktor: den ggT der Zahlen' + (A.mitV ? ' und die gemeinsame Variable.' : '.'),
+          'Gemeinsamer Faktor: \\(' + A.gT + '\\). Teile jedes Glied durch ihn.']; },
+        loesung: function(A){ return pTex(A.r, A.v) + ' = ' + A.gT + kl(A.p, A.q, A.v); } },
+
+      'faktorisieren': { felder: ['t'], produkt: true,
+        schl: function(A){ return 'fz|' + A.art + '|' + (A.art === 't' ? paarSchl(A.m, A.n) : A.art === 'b' ? A.k : A.a + '|' + A.b); },
+        eingabe: function(A){ return { t: A.loes }; },
+        neu: function(){
+          var art = zufall(['t', 't', 'b', 'd']), m, n, r, loes, k, a, b;
+          if (art === 't'){ do { m = nz(-9, 9); n = nz(-9, 9); } while (m === n || m === -n || Math.abs(m * n) > 60);
+            r = pMul(lin(1, m), lin(1, n)); loes = '(' + pTxt(lin(1, m)) + ')(' + pTxt(lin(1, n)) + ')';
+            return { art: art, m: m, n: n, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere (Zweiklammersatz).' }; }
+          if (art === 'b'){ k = nz(-9, 9); r = pPow(lin(1, k), 2); loes = '(' + pTxt(lin(1, k)) + ')^2';
+            return { art: art, k: k, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere (binomische Formel).' }; }
+          a = zufall([1, 1, 2, 3, 4, 5]); do { b = zufallG(1, 9); } while (ggT(a, b) !== 1);
+          r = pMul(lin(a, b), lin(a, -b)); loes = '(' + pTxt(lin(a, b)) + ')(' + pTxt(lin(a, -b)) + ')';
+          return { art: art, a: a, b: b, r: r, loes: loes, muster: '\\(' + pTex(r) + ' = \\) {t}', text: 'Faktorisiere (binomische Formel).' }; },
+        falsche: function(A){
+          var f = [];
+          if (A.art === 't'){ f.push([lin(1, -A.m), lin(1, -A.n), 'Vorzeichen']); if (A.m * A.n < 0) f.push([lin(1, A.m), lin(1, -A.n), 'Vorzeichen']); }
+          if (A.art === 'b'){ f.push([lin(1, A.k), lin(1, -A.k), 'Binom']); f.push([lin(1, -A.k), lin(1, -A.k), 'Vorzeichen']); }
+          if (A.art === 'd'){ f.push([lin(A.a, -A.b), lin(A.a, -A.b), 'Binom']); }
+          return f.filter(function(p){ return !pEq(pMul(p[0], p[1]), A.r); }); },
+        fehler: function(A){
+          var f = TYPEN.faktorisieren.falsche(A).map(function(p){ return [{ t: '(' + pTxt(p[0]) + ')(' + pTxt(p[1]) + ')' }, p[2]]; });
+          f.push([{ t: pTxt(A.r) }, 'Produkt']);
+          return f; },
+        pruefen: function(A, e){
+          var f = TYPEN.faktorisieren.falsche(A);
+          for (var j = 0; j < f.length; j++) if (pEq(e.t.p, pMul(f[j][0], f[j][1]))){
+            if (f[j][2] === 'Vorzeichen') return '<b>Vorzeichen</b> prüfen: Die beiden Zahlen müssen multipliziert \\(' + A.r[0] + '\\) und addiert \\(' + A.r[1] + '\\) ergeben.';
+            return A.art === 'b' ? 'Mit einem mittleren Glied ist es ein Quadrat \\((a + b)^2\\) oder \\((a - b)^2\\). Ein Produkt \\((a + b)(a - b)\\) hat kein mittleres Glied (<b>Binom</b> verwechselt).'
+                                 : 'Ohne mittleres Glied ist es \\(a^2 - b^2 = (a + b)(a - b)\\), also kein Quadrat (<b>Binom</b> verwechselt).';
+          }
+          return 'Multipliziere zur <b>Probe</b> aus: Es muss \\(' + pTex(A.r) + '\\) herauskommen.'; },
+        tipps: function(A){
+          if (A.art === 't') return ['Suche zwei Zahlen mit Produkt \\(' + A.r[0] + '\\) und Summe \\(' + A.r[1] + '\\).', 'Die Zahlenpaare mit Produkt \\(' + A.r[0] + '\\) aufschreiben, dann die Summe prüfen.'];
+          if (A.art === 'b') return ['Erstes und letztes Glied sind Quadrate: binomische Formel rückwärts.', '\\(' + A.k * A.k + ' = ' + Math.abs(A.k) + '^2\\); das mittlere Glied entscheidet über das Vorzeichen.'];
+          return ['Zwei Quadrate mit Minus dazwischen: \\(a^2 - b^2 = (a + b)(a - b)\\).', '\\(' + pTex([0, 0, A.a * A.a]) + ' = (' + (A.a === 1 ? 'x' : A.a + 'x') + ')^2\\) und \\(' + A.b * A.b + ' = ' + A.b + '^2\\).']; },
+        loesung: function(A){ return pTex(A.r) + ' = ' + A.loes.replace(/\*/g, ''); } }
+    };
+    window.__TYPEN = TYPEN; window.__SPERRE = SPERRE;
+    window.__term = { termLesen: termLesen, produktBefund: produktBefund, zusammengefasst: zusammengefasst, pEq: pEq };
+
+    ALLE.forEach(function(box){
+      var T = TYPEN[box.dataset.typ]; if (!T) return;
+      var A, serie = 0, versuche = 0, geloest = false, stufe = 0;
+      var auf = box.querySelector('.ue-aufgabe'), ein = box.querySelector('.ue-eingabe'), rueck = box.querySelector('.ue-rueck'),
+          zaehler = box.querySelector('.ue-serie'), tippK = box.querySelector('.ue-tipp'), tippBox = box.querySelector('.ue-tipps');
+      function neu(){
+        A = T.neu();
+        for (var v = 0; v < 60 && gesperrt(T, A); v++) A = T.neu();
+        versuche = 0; geloest = false; stufe = 0; box.__aufgabe = A; box.__typ = T;   // Testhaken (.claude/tools/pruef-uebungen.mjs)
+        auf.innerHTML = A.text;
+        var html = A.muster || T.muster;
+        T.felder.forEach(function(f){
+          html = html.replace('{' + f + '}', f === 't'
+            ? '<input type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Term" data-f="t" class="term" placeholder="' + (T.produkt ? 'z. B. 3' + (A.v || 'x') + '(' + (A.v || 'x') + '-2)' : 'z. B. 3x^2 - 2x + 1') + '">'
+            : '<input type="text" inputmode="numeric" autocomplete="off" aria-label="Zahl" data-f="' + f + '">');
+        });
+        ein.innerHTML = html; rueck.className = 'ue-rueck'; rueck.innerHTML = '';
+        tippBox.innerHTML = ''; tippK.textContent = '💡 Tipp'; tippK.disabled = false;
+        setzen(auf); setzen(ein);
+      }
+      function tipp(){
+        var t = T.tipps(A);
+        if (stufe < t.length) tippBox.innerHTML += '<p class="ue-stufe"><b>' + (stufe === 0 ? 'Impuls' : 'Nächster Schritt') + ':</b> ' + t[stufe] + '</p>';
+        else tippBox.innerHTML += '<p class="ue-stufe"><b>Lösungsweg:</b> \\(' + T.loesung(A) + '\\)</p>';
+        stufe++;
+        if (stufe > t.length){ tippK.disabled = true; tippK.textContent = '💡 alle Tipps'; } else tippK.textContent = '💡 Tipp ' + (stufe + 1) + '/' + (t.length + 1);
+        setzen(tippBox);
+      }
+      function hinweis(h){ rueck.className = 'ue-rueck hinweis'; rueck.innerHTML = h; setzen(rueck); }
+      function pruefen(){
+        if (geloest) return;
+        var e = {}, felder = ein.querySelectorAll('input');
+        for (var i = 0; i < felder.length; i++){
+          var inp = felder[i], f = inp.dataset.f, roh = inp.value.trim().replace(/[\u2212\u2013]/g, '-');
+          inp.classList.remove('falsch');
+          if (!roh) return hinweis('Fülle das Feld aus.');
+          if (f === 't'){
+            var r = termLesen(roh, A.v || 'x');
+            if (r.kaputt){ inp.classList.add('falsch'); return hinweis(r.grund); }
+            if (pEq(r.p, A.r)){
+              if (T.produkt){
+                var bef = produktBefund(r);
+                if (bef && bef.art === 'summe'){ versuche++; return hinweis('Gleichwertig — aber das ist eine Summe. Gesucht ist ein <b>Produkt</b> (Faktoren mit Klammern).'); }
+                if (bef){ versuche++; return hinweis('Gleichwertig, aber noch nicht <b>vollständig</b> faktorisiert: Der Faktor \\(' + pTex(bef.p, A.v || 'x') + '\\) lässt sich weiter zerlegen' + (bef.grund === 'inhalt' ? ' — er hat noch einen gemeinsamen Faktor.' : bef.grund === 'variable' ? ' — jedes Glied enthält die Variable.' : '.')); }
+              } else if (!zusammengefasst(r.baum)){ versuche++; return hinweis('Gleichwertig, aber noch nicht <b>zusammengefasst</b>: keine Klammern mehr, jede Art Glied nur einmal.'); }
+            }
+            e.t = r;
+          } else {
+            if (!/^[+-]?\d+$/.test(roh)){ inp.classList.add('falsch'); return hinweis('Gib eine ganze Zahl ein.'); }
+            e[f] = +roh;
+          }
+        }
+        versuche++;
+        var ok = T.felder.every(function(f){ return f === 't' ? pEq(e.t.p, A.r) : e[f] === A[f]; });
+        if (ok){
+          serie = versuche === 1 && stufe === 0 ? serie + 1 : 0; geloest = true;
+          rueck.className = 'ue-rueck richtig';
+          rueck.innerHTML = '✓ Richtig <button type="button" class="ue-weiter">Nächste</button>';
+          rueck.querySelector('.ue-weiter').addEventListener('click', neu);
+        } else {
+          serie = 0; rueck.className = 'ue-rueck falsch';
+          rueck.innerHTML = T.pruefen(A, e) + (versuche >= 2 ? ' <details class="ue-loes"><summary>Lösung</summary>\\(' + T.loesung(A) + '\\)</details>' : '');
+        }
+        zaehler.textContent = serie + ' in Folge' + (serie >= 3 ? ' ✓' : '');
+        setzen(rueck);
+      }
+      box.querySelector('.ue-pruefen').addEventListener('click', pruefen);
+      box.querySelector('.ue-neu').addEventListener('click', neu);
+      tippK.addEventListener('click', tipp);
+      ein.addEventListener('keydown', function(ev){ if (ev.key === 'Enter') pruefen(); });
+      neu();
+    });
+  })();
+
+  /* ---------- Minibilder: <svg class="mini-term" data-rechteck="a,b"> Flächenmodell (x + a)(x + b);
+       data-binom="a,b" Quadrat (a + b)² mit vier Teilflächen (ohne Zahlen). ---------- */
+  document.querySelectorAll('svg.mini-term').forEach(function(svg){
+    svg.setAttribute('role', 'img');
+    if (svg.dataset.rechteck){
+      var q = svg.dataset.rechteck.split(',').map(Number);
+      svg.setAttribute('viewBox', '0 0 ' + (60 + 90 + q[1] * 16) + ' ' + (40 + 90 + q[0] * 16));
+      flaeche(svg, q[0], q[1], 30, 22, 90);
+    } else if (svg.dataset.binom){
+      var E = 26, a = 4, b = 2;
+      svg.setAttribute('viewBox', '0 0 ' + (30 + (a + b) * E) + ' ' + (30 + (a + b) * E));
+      var R = function(x, y, w, h, c){ el(svg, 'rect', { x: 20 + x * E, y: 10 + y * E, width: w * E, height: h * E, 'class': c }); };
+      R(0, 0, a, a, 'fl-q'); R(a, 0, b, a, 'fl-x'); R(0, a, a, b, 'fl-x'); R(a, a, b, b, 'fl-1'); R(0, 0, a + b, a + b, 'rahmen');
+      el(svg, 'text', { x: 20 + a * E / 2, y: 8 + (a + b) * E + 18, 'text-anchor': 'middle', 'class': 'st-name' }, 'a');
+      el(svg, 'text', { x: 20 + (a + b / 2) * E, y: 8 + (a + b) * E + 18, 'text-anchor': 'middle', 'class': 'st-name' }, 'b');
+    }
+  });
+})();
+</script>
+
+
+<footer class="site-footer">
+  <p><strong>Sek1-Mathe begreifbar</strong> — Lernmaterial Mathematik für die Sekundarstufe I</p>
+  <p>Leitprogramm · Terme und Faktorisieren</p>
+  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+  <p><a href="../feedback.html">Kontakt &amp; Feedback</a> · <a href="../rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
+  <p>Keine Cookies · Kein Tracking · Version 1.0 · Stand 9. Oktober 2026</p>
+</footer>
+
+<script src="../mathlib.js"></script>
+<script src="../nav.js"></script>
+<script src="../suche.js"></script>
+<script>buildNav({ bereich: 'lp', id: 'lp-terme' });</script>
+</body>
+</html>

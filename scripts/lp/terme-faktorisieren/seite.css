@@ -1,0 +1,94 @@
+
+/* ════════ Terme und Faktorisieren (09.10.2026) — Kapitelmuster wie Bruchrechnen ════════
+   Grundgerüst (Leiste, Übungen, Festhalten, PDF-Weg) wie in den Leitprogrammen von TALS Mathe.
+   Neu: Termkacheln, Flächenmodell, Rechteckschema, Quadrat der binomischen Formeln, Termeingabe.
+   Farben: x² und x blau, Zahlen orange, negative Kacheln rot, Ergebnis grün. */
+.sim-gross{max-width:680px;margin:10px auto 6px}
+.sim-gross > svg{max-width:520px}
+.leiste{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 10px;padding:9px 12px;border-radius:9px;
+  background:var(--orange-hell);border:1px solid var(--orange-rand);font-family:var(--sans);font-size:.92rem}
+.leiste .ls-nr{font-family:var(--mono);font-size:.78rem;color:var(--orange);font-weight:700}
+.leiste .ls-text{flex:1 1 260px;min-width:0}
+.leiste .ls-ok{color:var(--gruen);font-weight:700;font-size:1.1rem;min-width:1em}
+.leiste .ls-weiter,.leiste .ls-neu{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--linie);background:var(--karte);color:var(--tinte-2)}
+.leiste.geloest{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.leiste.geloest .ls-weiter{border-color:var(--gruen-rand);color:var(--tinte);font-weight:700}
+.leiste.fertig{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.kompetenzen ul{margin:10px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.92rem}
+.kompetenzen li{margin:5px 0}
+.kompetenzen .rlp-quelle{font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);margin:8px 0 0}
+.kompetenzen .ohm{font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--orange-hell);border:1px solid var(--orange-rand);white-space:nowrap}
+.sim-schalter{display:flex;gap:7px;align-items:center;justify-content:center;font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);margin:2px 0 8px;cursor:pointer}
+.festhalten{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px}
+@media(min-width:1180px){.festhalten{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.sim-formel{line-height:1.9;font-family:var(--sans);font-size:.95rem}
+.sim-wahl{font-family:var(--sans);font-size:.88rem;padding:4px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte)}
+.sl-row{flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.sl-grp{display:flex;gap:8px;align-items:center;flex:1 1 200px;min-width:0}
+.sl-grp input[type=range]{flex:1;min-width:90px}
+.sl-grp.akz-blau input{accent-color:var(--blau)} .sl-grp.akz-orange input{accent-color:var(--orange)} .sl-grp.akz-gruen input{accent-color:var(--gruen)}
+.sl-grp .var{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);white-space:nowrap}
+
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+
+/* Termkacheln (Sim 1) */
+.kachel{stroke-width:1}
+.kachel.kx{fill:var(--blau-hell);stroke:var(--blau)}
+.kachel.k1{fill:var(--orange-hell);stroke:var(--orange)}
+.kachel.neg{fill:var(--rot-hell);stroke:var(--rot)}
+.kl-rahmen{fill:none;stroke:var(--tinte-2);stroke-width:1.2}
+.kl-rahmen.minus{stroke:var(--rot);stroke-dasharray:4 3}
+.kl-vz{font-family:var(--sans);font-size:20px;font-weight:700;fill:var(--rot)}
+.treffer-rahmen{fill:none;stroke:var(--gruen);stroke-width:2.5}
+
+/* Flächenmodell, Quadrat (Sim 2, 3, Minibilder) */
+.fl-q{fill:var(--blau-hell);stroke:var(--blau);stroke-width:1}
+.fl-x{fill:var(--blau-hell);stroke:var(--blau);stroke-width:1;opacity:.75}
+.fl-1{fill:var(--orange-hell);stroke:var(--orange);stroke-width:1}
+.fl-leer{fill:var(--karte);stroke:var(--tinte-2);stroke-width:.8}
+.fl-weg{fill:var(--rot-hell);stroke:var(--rot);stroke-width:1;stroke-dasharray:4 3;fill-opacity:.55}
+#sim3 .fl-x{fill:var(--orange-hell);stroke:var(--orange);opacity:1}
+#sim3 .fl-1,svg.mini-term[data-binom] .fl-1{fill:var(--gruen-hell);stroke:var(--gruen)}
+svg.mini-term[data-binom] .fl-x{fill:var(--orange-hell);stroke:var(--orange);opacity:1}
+.rahmen{fill:none;stroke:var(--tinte);stroke-width:1.6}
+.rahmen.duenn{stroke-width:1;stroke:var(--tinte-2)}
+.st-name{font-family:var(--sans);font-size:12px;font-weight:700;fill:var(--tinte-2)}
+.st-frage{font-family:var(--sans);font-size:11.5px;fill:var(--tinte-2)}
+.st-zahl{font-family:var(--sans);font-size:11px;font-weight:700;fill:var(--tinte)}
+.st-zahl.grau-t{fill:var(--tinte-2);font-weight:400}
+svg.mini-term{width:200px;max-width:100%;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px;display:block}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} }
+
+/* Rechteckschema (Sim 2, Sim 4) */
+table.schema{border-collapse:collapse;margin:10px auto 4px;font-family:var(--sans);font-size:.95rem;font-variant-numeric:tabular-nums}
+table.schema th,table.schema td{border:1px solid var(--linie);padding:5px 14px;text-align:center;min-width:3.4em}
+table.schema th{background:var(--papier-2);color:var(--tinte-2);font-weight:700}
+table.schema td.t-q,table.schema td.t-x{background:var(--blau-hell)}
+table.schema td.t-z{background:var(--orange-hell)}
+.sim-ziel{font-family:var(--sans);font-size:.95rem;text-align:center;margin:0 0 6px}
+
+/* Übungen: Termfeld breit, Tipps in Stufen */
+.ue-eingabe input.term{width:13em;max-width:100%;font-family:var(--mono)}
+.ue-zeile .ue-tipp{background:none;border-color:var(--blau-rand);color:var(--blau)}
+.ue-zeile .ue-tipp:disabled{opacity:.5;cursor:default}
+.ue-tipps:empty{display:none}
+.ue-tipps{margin-top:8px;padding:6px 12px;border-left:3px solid var(--blau-rand);background:var(--blau-hell);border-radius:0 6px 6px 0;font-family:var(--sans);font-size:.88rem}
+.ue-stufe{margin:4px 0}
+
+/* Beispiel mit Rechenweg */
+.weg{margin:10px 0 4px;padding-left:0;list-style:none;font-size:1rem}
+.weg li{margin:4px 0}
+.weg .warum{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin-left:.6em}
+.merk ol{padding-left:1.4em;margin:6px 0 10px}
+.merk ol.weg{padding-left:0}
+.merk h4{font-family:var(--sans);font-size:.9rem;margin:12px 0 4px}
+.vertiefung{border:1.5px dashed var(--lila-rand);border-radius:11px;padding:4px 18px 14px;margin-top:30px;background:var(--karte)}
+.vertiefung h2{font-size:1.25rem;margin:14px 0 4px}
+.vertiefung .aufg{padding:6px 0 0}
+/* Vorwissen: «Kurz wiederholt» (Prüfung 09.10.2026: statt Verweis auf noch leere Themenseiten) */
+.kap > details.anleitung{margin:6px 0 18px;padding:14px 20px}
+.kap > details.anleitung h3{margin:0;font-size:1rem}
+.kurz{margin:10px 0 0;padding-left:1.2em;font-size:.95rem}
+.kurz li{margin:6px 0}

@@ -1,0 +1,480 @@
+{
+ "titel": "Terme sehen: Kontrollfragen zum Faktorisieren",
+ "dateiname": "terme-lp-kontrolle-faktorisieren",
+ "kurzbeschrieb": "Fünf Fragen: 14x − 21 ausklammern, x² − 81, x² + 10x + 25, x² + x − 12, ist 5a(a + 2) + 1 faktorisiert?",
+ "schlagworte": [
+  "faktorisieren",
+  "ausklammern",
+  "Zweiklammersatz",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Terme und Faktorisieren",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "lp-terme"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Terme sehen",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms terme-faktorisieren; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der grösste gemeinsame Teiler von vierzehn und einundzwanzig ist sieben. Vierzehn x durch sieben ist zwei x, einundzwanzig durch sieben ist drei: sieben mal die Klammer zwei x minus drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\text{ggT}(14;\\ 21) = \\fb{7}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "14x - 21 = \\fc{\\fb{7}(2x - 3)}",
+     "x": 150,
+     "y": 420,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "14x − 21",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 11.95
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwei Quadrate mit Minus dazwischen: x Quadrat und neun Quadrat. Dritte Formel rückwärts: x minus neun mal x plus neun.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x^2 - 9^2 = \\fc{(x - 9)(x + 9)}",
+     "x": 150,
+     "y": 320,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "x² − 81",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.9
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Fünfundzwanzig ist fünf Quadrat, und zehn x ist zwei mal x mal fünf. Erste Formel rückwärts: x plus fünf im Quadrat.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "25 = 5^2, \\quad 10x = 2 \\cdot x \\cdot 5",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "x^2 + 10x + 25 = \\fc{(x + 5)^2}",
+     "x": 150,
+     "y": 420,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "x² + 10x + 25",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.56
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gesucht: Produkt minus zwölf, Summe plus eins. Vier und minus drei: Vier mal minus drei ist minus zwölf, vier minus drei ist eins. Also x plus vier mal x minus drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4 \\cdot (-3) = -12, \\quad 4 + (-3) = 1",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "x^2 + x - 12 = \\fc{(x + 4)(x - 3)}",
+     "x": 150,
+     "y": 420,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "x² + x − 12",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 12.04
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nein. Zuletzt wird plus eins gerechnet, also ist der ganze Term eine Summe. Faktorisiert ist ein Term erst, wenn er als Ganzes ein Produkt ist.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5a(a + 2) \\fd{+ 1}",
+     "x": 150,
+     "y": 320,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "notiz",
+     "text": "zuletzt @+@: eine Summe",
+     "x": 150,
+     "y": 460,
+     "groesse": 44,
+     "farbe": "orange",
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "5a(a + 2) + 1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.65
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zuerst ausklammern, dann binomische Formeln prüfen, dann Produkt und Summe suchen. Am Ende muss ein Produkt stehen, und die Probe durch Ausmultiplizieren zeigt, ob es stimmt.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "ausklammern, binomisch, Zweiklammersatz|am Ende ein Produkt|Probe durch Ausmultiplizieren",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.26
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Klammere aus: 14x − 21",
+   "optionen": [
+    "7(2x − 3)",
+    "7(2x − 21)",
+    "2(7x − 10)"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Multipliziere zur Probe aus: 7 · 21 ist nicht 21.",
+    "2": "Ausmultipliziert gibt das 14x − 20."
+   },
+   "sprich": "Klammere aus: vierzehn x minus einundzwanzig.",
+   "rueck_sprich": {
+    "1": "Multipliziere zur Probe aus: sieben mal einundzwanzig ist nicht einundzwanzig.",
+    "2": "Ausmultipliziert gibt das vierzehn x minus zwanzig."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Faktorisiere: x² − 81",
+   "optionen": [
+    "(x − 9)²",
+    "(x − 81)(x + 1)",
+    "(x − 9)(x + 9)"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "(x − 9)² hat ein mittleres Glied −18x. Hier fehlt es.",
+    "1": "Ausmultipliziert gibt das x² − 80x − 81."
+   },
+   "sprich": "Faktorisiere: x Quadrat minus einundachtzig.",
+   "rueck_sprich": {
+    "0": "x minus neun im Quadrat hat ein mittleres Glied. Hier fehlt es.",
+    "1": "Ausmultipliziert gibt das x Quadrat minus achtzig x minus einundachtzig."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Faktorisiere: x² + 10x + 25",
+   "optionen": [
+    "(x + 10)(x + 25)",
+    "(x + 5)²",
+    "(x + 5)(x − 5)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "(x + 5)(x − 5) = x² − 25. Hier gibt es ein mittleres Glied.",
+    "0": "Ausmultipliziert gibt das x² + 35x + 250."
+   },
+   "sprich": "Faktorisiere: x Quadrat plus zehn x plus fünfundzwanzig.",
+   "rueck_sprich": {
+    "2": "x plus fünf mal x minus fünf ist x Quadrat minus fünfundzwanzig. Hier gibt es ein mittleres Glied.",
+    "0": "Ausmultipliziert gibt das x Quadrat plus fünfunddreissig x plus zweihundertfünfzig."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Faktorisiere: x² + x − 12",
+   "optionen": [
+    "(x + 6)(x − 2)",
+    "(x + 4)(x − 3)",
+    "(x − 4)(x + 3)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das Produkt stimmt, aber −4 + 3 = −1, nicht +1.",
+    "0": "6 · (−2) = −12 stimmt, aber 6 + (−2) = 4."
+   },
+   "sprich": "Faktorisiere: x Quadrat plus x minus zwölf.",
+   "rueck_sprich": {
+    "2": "Das Produkt stimmt, aber minus vier plus drei ist minus eins.",
+    "0": "Sechs mal minus zwei ist minus zwölf, aber sechs minus zwei ist vier."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ist 5a(a + 2) + 1 faktorisiert?",
+   "optionen": [
+    "Nein, es ist eine Summe.",
+    "Ja, es kommen Klammern vor.",
+    "Ja, 5a ist ausgeklammert."
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Am Schluss steht + 1: Der ganze Term ist eine Summe, kein Produkt.",
+    "2": "Der Faktor 5a gilt nur für das erste Glied. Das + 1 steht ausserhalb."
+   },
+   "sprich": "Ist fünf a mal Klammer a plus zwei, plus eins, faktorisiert?",
+   "rueck_sprich": {
+    "1": "Am Schluss steht plus eins: Der ganze Term ist eine Summe, kein Produkt.",
+    "2": "Der Faktor fünf a gilt nur für das erste Glied. Das plus eins steht ausserhalb."
+   }
+  }
+ ]
+}

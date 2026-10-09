@@ -1,0 +1,9 @@
+0.40	Stell dir x als langen Streifen vor und die Zahl eins als kleines Quadrat. Dann besteht der Term zwei x plus vier aus zwei Streifen und vier kleinen Quadraten.
+10.41	Kommt drei x minus eins dazu, legst du gleiche Kacheln zueinander. Die Streifen ergeben fünf x. Eine rote Kachel steht für minus eins, sie hebt ein kleines Quadrat auf. Es bleiben drei. Das Ergebnis: fünf x plus drei.
+26.72	Streifen und kleine Quadrate lassen sich nicht zusammenzählen. Drei x plus zwei bleibt drei x plus zwei. Fünf x wäre falsch. Setz zur Probe x gleich zwei ein: Der Term ergibt acht, fünf x aber zehn.
+39.88	Drei mal die Klammer zwei x minus vier heisst: Die Klammer kommt dreimal vor. Das sind sechs Streifen und zwölf rote Kacheln, also sechs x minus zwölf. Die Drei wird mit jedem Glied in der Klammer multipliziert.
+54.80	Sieben x minus die Klammer zwei x minus fünf. Das Minus gilt für die ganze Klammer: Jede Kachel darin wird umgedreht. Aus zwei x wird minus zwei x, aus minus fünf wird plus fünf. Zwei rote Streifen heben zwei blaue auf. Es bleibt fünf x plus fünf.
+74.77	Bei verschachtelten Klammern beginnst du innen. Innen steht minus drei mal die Klammer eins minus x, das gibt minus drei plus drei x. Die mittlere Klammer wird damit fünf x minus drei. Dann löst du die äussere Klammer auf: vier x minus fünf x plus drei, also drei minus x.
+92.62	Ob du richtig vereinfacht hast, prüfst du mit einer Zahl. Setz x gleich zwei ein. Sieben mal zwei minus die Klammer vier minus fünf gibt fünfzehn. Fünf mal zwei plus fünf gibt auch fünfzehn. So muss es sein.
+109.87	Zum Mitnehmen: Nur gleichartige Glieder zusammenfassen. Die Zahl vor der Klammer mal jedes Glied. Ein Minus vor der Klammer dreht jedes Vorzeichen um. Verschachtelt: innen beginnen. Und am Schluss die Probe mit einer Zahl.
+122.29	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

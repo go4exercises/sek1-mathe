@@ -15,13 +15,14 @@
 const SITE = {
   leitprogramme: [
     { id:'lp-bruchrechnen', nr:'1', titel:'Bruchrechnen', url:'leitprogramme/bruchrechnen.html' },
+    { id:'lp-terme', nr:'2', titel:'Terme und Faktorisieren', url:'leitprogramme/terme-faktorisieren.html' },
   ]
 };
 
 // Bereiche für die Gruppierung im Menü — nur Bereiche mit mindestens einem Leitprogramm.
 const GROUPS = {
   leitprogramme: [
-    { nr:'1', titel:'Arithmetik/Algebra', ids:['lp-bruchrechnen'] }
+    { nr:'1', titel:'Arithmetik/Algebra', ids:['lp-bruchrechnen', 'lp-terme'] }
   ]
 };
 

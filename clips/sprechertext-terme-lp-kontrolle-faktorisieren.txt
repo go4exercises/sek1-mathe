@@ -1,0 +1,6 @@
+0.40	Der grösste gemeinsame Teiler von vierzehn und einundzwanzig ist sieben. Vierzehn x durch sieben ist zwei x, einundzwanzig durch sieben ist drei: sieben mal die Klammer zwei x minus drei.
+12.35	Zwei Quadrate mit Minus dazwischen: x Quadrat und neun Quadrat. Dritte Formel rückwärts: x minus neun mal x plus neun.
+21.25	Fünfundzwanzig ist fünf Quadrat, und zehn x ist zwei mal x mal fünf. Erste Formel rückwärts: x plus fünf im Quadrat.
+29.81	Gesucht: Produkt minus zwölf, Summe plus eins. Vier und minus drei: Vier mal minus drei ist minus zwölf, vier minus drei ist eins. Also x plus vier mal x minus drei.
+41.85	Nein. Zuletzt wird plus eins gerechnet, also ist der ganze Term eine Summe. Faktorisiert ist ein Term erst, wenn er als Ganzes ein Produkt ist.
+51.50	Zum Mitnehmen: Zuerst ausklammern, dann binomische Formeln prüfen, dann Produkt und Summe suchen. Am Ende muss ein Produkt stehen, und die Probe durch Ausmultiplizieren zeigt, ob es stimmt.

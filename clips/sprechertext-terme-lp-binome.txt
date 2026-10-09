@@ -1,0 +1,8 @@
+0.40	Rechne nach: Sieben im Quadrat ist neunundvierzig. Drei Quadrat plus vier Quadrat ist neun plus sechzehn, also nur fünfundzwanzig. Es fehlen vierundzwanzig. Wo stecken sie?
+12.70	Allgemein: Ein Quadrat mit der Seite a plus b besteht aus vier Teilen. Oben links a Quadrat, unten rechts b Quadrat und dazu zwei Rechtecke, jedes a mal b. Darum steht in der Mitte zwei a b.
+27.85	Für a und b darf auch x und eine Zahl stehen. x plus vier im Quadrat: x Quadrat, dann zwei mal x mal vier, also acht x, und am Schluss vier Quadrat, also sechzehn.
+41.45	Mit Minus ändert sich nur das mittlere Glied: a minus b im Quadrat ist a Quadrat minus zwei a b plus b Quadrat. Bei zwei y minus drei im Quadrat wird auch die Zwei quadriert: vier y Quadrat minus zwölf y plus neun.
+58.43	Die dritte Formel: a plus b mal a minus b ist a Quadrat minus b Quadrat. Die beiden gemischten Glieder heben sich auf. Zum Beispiel ist fünf plus x mal fünf minus x gleich fünfundzwanzig minus x Quadrat. Im Bild fehlt beim Quadrat a Quadrat die Ecke b Quadrat. Das orange Stück passt rechts an, und es entsteht ein Rechteck mit den Seiten a plus b und a minus b.
+85.79	Die Formeln helfen auch beim Kopfrechnen. Einundfünfzig im Quadrat ist fünfzig plus eins im Quadrat: zweitausend fünfhundert plus hundert plus eins, also zweitausend sechshundert eins. Und neunundvierzig mal einundfünfzig ist fünfzig Quadrat minus eins: zweitausend vierhundert neunundneunzig.
+104.72	Zum Mitnehmen: a plus b im Quadrat ist a Quadrat plus zwei a b plus b Quadrat, mit Minus wird nur das mittlere Glied negativ. a plus b mal a minus b ist a Quadrat minus b Quadrat. Nie das mittlere Glied vergessen.
+118.84	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

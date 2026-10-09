@@ -1,0 +1,721 @@
+{
+ "titel": "Terme sehen: Kontrollfragen zu den binomischen Formeln",
+ "dateiname": "terme-lp-kontrolle-binome",
+ "kurzbeschrieb": "Fünf Fragen: (x + 9)², (y − 6)², (2x + 5)(2x − 5), (3y)², 41² im Kopf.",
+ "schlagworte": [
+  "binomische Formeln",
+  "Kopfrechnen",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Terme und Faktorisieren",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "lp-terme"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Terme sehen",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms terme-faktorisieren; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Erste Formel: x Quadrat plus zwei mal x mal neun plus neun Quadrat, also x Quadrat plus achtzehn x plus einundachtzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x^2 + 2 \\cdot x \\cdot 9 + 9^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{x^2 + 18x + 81}",
+     "x": 150,
+     "y": 420,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.0
+        ],
+        [
+         9.5,
+         1.0
+        ],
+        [
+         9.5,
+         9.0
+        ],
+        [
+         1.5,
+         9.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        9.35
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.0,
+        9.35
+       ],
+       "text": "9",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        6.35
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        2.35
+       ],
+       "text": "9",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        0.4
+       ],
+       "text": "(x + 9)²",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         4.0
+        ],
+        [
+         6.5,
+         4.0
+        ],
+        [
+         6.5,
+         9.0
+        ],
+        [
+         1.5,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         4.0
+        ],
+        [
+         9.5,
+         4.0
+        ],
+        [
+         9.5,
+         9.0
+        ],
+        [
+         6.5,
+         9.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.0
+        ],
+        [
+         6.5,
+         1.0
+        ],
+        [
+         6.5,
+         4.0
+        ],
+        [
+         1.5,
+         4.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         1.0
+        ],
+        [
+         9.5,
+         1.0
+        ],
+        [
+         9.5,
+         4.0
+        ],
+        [
+         6.5,
+         4.0
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        6.3
+       ],
+       "text": "x²",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.0,
+        6.3
+       ],
+       "text": "9x",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        2.3
+       ],
+       "text": "9x",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.0,
+        2.3
+       ],
+       "text": "81",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.71
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zweite Formel: y Quadrat minus zwölf y plus sechsunddreissig. Am Schluss steht plus, weil minus sechs mal minus sechs positiv ist.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(y - 6)^2 = y^2 - 2 \\cdot y \\cdot 6 + 6^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{y^2 - 12y + 36}",
+     "x": 150,
+     "y": 420,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(y − 6)²",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.86
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Dritte Formel: zwei x im Quadrat minus fünf im Quadrat, also vier x Quadrat minus fünfundzwanzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(2x)^2 - 5^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{4x^2 - 25}",
+     "x": 150,
+     "y": 420,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(2x + 5)(2x − 5)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.4
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Drei y mal drei y: drei mal drei ist neun, y mal y ist y Quadrat. Also neun y Quadrat.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3y \\cdot 3y = \\fc{9y^2}",
+     "x": 150,
+     "y": 320,
+     "groesse": 66,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(3y)²",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.01
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Einundvierzig ist vierzig plus eins. Vierzig Quadrat ist sechzehnhundert, das mittlere Glied zwei mal vierzig mal eins ist achtzig, dazu eins. Zusammen sechzehnhunderteinundachtzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(40 + 1)^2 = 1600 + 80 + 1",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{1681}",
+     "x": 150,
+     "y": 420,
+     "groesse": 64,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "41²",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 11.89
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Bei a plus b im Quadrat und a minus b im Quadrat nie das mittlere Glied vergessen. Bei a plus b mal a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "mittleres Glied @2ab@ nie vergessen|@(a + b)(a - b)@: kein mittleres Glied|Zahl vor der Variable mitquadrieren",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.91
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: (x + 9)²",
+   "optionen": [
+    "x² + 9x + 81",
+    "x² + 18x + 81",
+    "x² + 81"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das mittlere Glied fehlt.",
+    "0": "Das mittlere Glied ist 2ab, also zweimal 9x."
+   },
+   "sprich": "Rechne: x plus neun im Quadrat.",
+   "rueck_sprich": {
+    "2": "Das mittlere Glied fehlt.",
+    "0": "Das mittlere Glied ist zwei a b, also zweimal neun x."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: (y − 6)²",
+   "optionen": [
+    "y² − 12y + 36",
+    "y² − 36",
+    "y² + 12y + 36"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Hier steht ein Quadrat einer Klammer. Es gibt ein mittleres Glied.",
+    "2": "Bei (a − b)² ist das mittlere Glied negativ."
+   },
+   "sprich": "Rechne: y minus sechs im Quadrat.",
+   "rueck_sprich": {
+    "1": "Hier steht ein Quadrat einer Klammer. Es gibt ein mittleres Glied.",
+    "2": "Bei a minus b im Quadrat ist das mittlere Glied negativ."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: (2x + 5)(2x − 5)",
+   "optionen": [
+    "4x² − 20x − 25",
+    "4x² − 25",
+    "2x² − 25"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Auch die 2 wird quadriert: (2x)² = 4x².",
+    "0": "Die gemischten Glieder +10x und −10x heben sich auf."
+   },
+   "sprich": "Rechne: zwei x plus fünf mal zwei x minus fünf.",
+   "rueck_sprich": {
+    "2": "Auch die Zwei wird quadriert: zwei x im Quadrat ist vier x Quadrat.",
+    "0": "Die gemischten Glieder plus zehn x und minus zehn x heben sich auf."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was ist (3y)²?",
+   "optionen": [
+    "6y",
+    "9y²",
+    "3y²"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Auch die 3 wird quadriert: 3y · 3y.",
+    "0": "Quadrieren heisst mal sich selbst, nicht mal 2."
+   },
+   "sprich": "Was ist drei y im Quadrat?",
+   "rueck_sprich": {
+    "2": "Auch die Drei wird quadriert: drei y mal drei y.",
+    "0": "Quadrieren heisst mal sich selbst, nicht mal zwei."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne im Kopf: 41²",
+   "optionen": [
+    "1601",
+    "1641",
+    "1681"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Es fehlt das mittlere Glied 2 · 40 · 1.",
+    "1": "Das mittlere Glied ist 2 · 40 · 1, also 80."
+   },
+   "sprich": "Rechne im Kopf: einundvierzig im Quadrat.",
+   "rueck_sprich": {
+    "0": "Es fehlt das mittlere Glied zwei mal vierzig mal eins.",
+    "1": "Das mittlere Glied ist zwei mal vierzig mal eins, also achtzig."
+   }
+  }
+ ]
+}

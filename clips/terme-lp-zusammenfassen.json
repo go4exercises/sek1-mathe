@@ -1,0 +1,3216 @@
+{
+ "titel": "Terme sehen: Terme vereinfachen",
+ "dateiname": "terme-lp-zusammenfassen",
+ "kurzbeschrieb": "Terme als Kacheln: x als Streifen, 1 als kleines Quadrat. Gleichartige Glieder zusammenfassen (2x + 4 + 3x − 1 = 5x + 3), 3x + 2 ist nicht 5x, Zahl vor der Klammer (3(2x − 4) = 6x − 12), Minus vor der Klammer dreht jede Kachel um (7x − (2x − 5) = 5x + 5), verschachtelte Klammern von innen, Probe mit x = 2.",
+ "schlagworte": [
+  "Term",
+  "zusammenfassen",
+  "gleichartige Glieder",
+  "Klammer",
+  "Minus vor der Klammer",
+  "Probe"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Terme und Faktorisieren",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "lp-terme"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Terme sehen",
+ "folge": 1,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms terme-faktorisieren; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Kacheln",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Stell dir x als langen Streifen vor und die Zahl eins als kleines Quadrat. Dann besteht der Term zwei x plus vier aus zwei Streifen und vier kleinen Quadraten.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fa{2x} + \\fb{4}",
+     "x": 150,
+     "y": 330,
+     "groesse": 86,
+     "ein": 5.08
+    },
+    {
+     "typ": "notiz",
+     "text": "@x@: langer Streifen|@1@: kleines Quadrat",
+     "x": 150,
+     "y": 500,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.78
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.78,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         6.5
+        ],
+        [
+         1.9,
+         6.5
+        ],
+        [
+         1.9,
+         8.5
+        ],
+        [
+         1.5,
+         8.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.0,
+        7.3
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.96,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.5,
+         6.5
+        ],
+        [
+         5.9,
+         6.5
+        ],
+        [
+         5.9,
+         6.9
+        ],
+        [
+         5.5,
+         6.9
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.6,
+        6.55
+       ],
+       "text": "1",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.08,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         2.0
+        ],
+        [
+         1.9,
+         2.0
+        ],
+        [
+         1.9,
+         4.0
+        ],
+        [
+         1.5,
+         4.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.05,
+         2.0
+        ],
+        [
+         2.45,
+         2.0
+        ],
+        [
+         2.45,
+         4.0
+        ],
+        [
+         2.05,
+         4.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.95,
+         2.0
+        ],
+        [
+         3.35,
+         2.0
+        ],
+        [
+         3.35,
+         2.4
+        ],
+        [
+         2.95,
+         2.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.5,
+         2.0
+        ],
+        [
+         3.9,
+         2.0
+        ],
+        [
+         3.9,
+         2.4
+        ],
+        [
+         3.5,
+         2.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.05,
+         2.0
+        ],
+        [
+         4.45,
+         2.0
+        ],
+        [
+         4.45,
+         2.4
+        ],
+        [
+         4.05,
+         2.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.6,
+         2.0
+        ],
+        [
+         5.0,
+         2.0
+        ],
+        [
+         5.0,
+         2.4
+        ],
+        [
+         4.6,
+         2.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        2.8
+       ],
+       "text": "2x + 4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.01
+  },
+  {
+   "name": "Zusammenfassen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Kommt drei x minus eins dazu, legst du gleiche Kacheln zueinander. Die Streifen ergeben fünf x. Eine rote Kachel steht für minus eins, sie hebt ein kleines Quadrat auf. Es bleiben drei. Das Ergebnis: fünf x plus drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + 4 + 3x - 1",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.5
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fa{5x} + \\fb{3}",
+     "x": 150,
+     "y": 430,
+     "groesse": 66,
+     "ein": 11.11
+    },
+    {
+     "typ": "notiz",
+     "text": "gleiche Kacheln zueinander",
+     "x": 150,
+     "y": 560,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 2.37
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         7.0
+        ],
+        [
+         1.2,
+         7.0
+        ],
+        [
+         1.2,
+         9.0
+        ],
+        [
+         0.8,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         7.0
+        ],
+        [
+         1.75,
+         7.0
+        ],
+        [
+         1.75,
+         9.0
+        ],
+        [
+         1.35,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.25,
+         7.0
+        ],
+        [
+         2.65,
+         7.0
+        ],
+        [
+         2.65,
+         7.4
+        ],
+        [
+         2.25,
+         7.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.8,
+         7.0
+        ],
+        [
+         3.2,
+         7.0
+        ],
+        [
+         3.2,
+         7.4
+        ],
+        [
+         2.8,
+         7.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.35,
+         7.0
+        ],
+        [
+         3.75,
+         7.0
+        ],
+        [
+         3.75,
+         7.4
+        ],
+        [
+         3.35,
+         7.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.9,
+         7.0
+        ],
+        [
+         4.3,
+         7.0
+        ],
+        [
+         4.3,
+         7.4
+        ],
+        [
+         3.9,
+         7.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 10.09
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        7.8
+       ],
+       "text": "2x + 4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.6,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         4.0
+        ],
+        [
+         1.2,
+         4.0
+        ],
+        [
+         1.2,
+         6.0
+        ],
+        [
+         0.8,
+         6.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         4.0
+        ],
+        [
+         1.75,
+         4.0
+        ],
+        [
+         1.75,
+         6.0
+        ],
+        [
+         1.35,
+         6.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.9,
+         4.0
+        ],
+        [
+         2.3,
+         4.0
+        ],
+        [
+         2.3,
+         6.0
+        ],
+        [
+         1.9,
+         6.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.8,
+         4.0
+        ],
+        [
+         3.2,
+         4.0
+        ],
+        [
+         3.2,
+         4.4
+        ],
+        [
+         2.8,
+         4.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 10.09
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        4.8
+       ],
+       "text": "3x − 1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.23,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "kreis",
+       "m": [
+        4.1,
+        7.2
+       ],
+       "r": 0.42,
+       "farbe": 4,
+       "fuellung": 0,
+       "dicke": 3,
+       "aus": 10.09
+      },
+      {
+       "art": "kreis",
+       "m": [
+        3.0,
+        4.2
+       ],
+       "r": 0.42,
+       "farbe": 4,
+       "fuellung": 0,
+       "dicke": 3,
+       "aus": 10.09
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4.1,
+        6.6
+       ],
+       "bis": [
+        3.0,
+        4.85
+       ],
+       "farbe": 4,
+       "dicke": 3,
+       "aus": 10.09,
+       "gestrichelt": true
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 11.11,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         0.8
+        ],
+        [
+         1.2,
+         0.8
+        ],
+        [
+         1.2,
+         2.8
+        ],
+        [
+         0.8,
+         2.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         0.8
+        ],
+        [
+         1.75,
+         0.8
+        ],
+        [
+         1.75,
+         2.8
+        ],
+        [
+         1.35,
+         2.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.9,
+         0.8
+        ],
+        [
+         2.3,
+         0.8
+        ],
+        [
+         2.3,
+         2.8
+        ],
+        [
+         1.9,
+         2.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         0.8
+        ],
+        [
+         2.85,
+         0.8
+        ],
+        [
+         2.85,
+         2.8
+        ],
+        [
+         2.45,
+         2.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         0.8
+        ],
+        [
+         3.4,
+         0.8
+        ],
+        [
+         3.4,
+         2.8
+        ],
+        [
+         3.0,
+         2.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.9,
+         0.8
+        ],
+        [
+         4.3,
+         0.8
+        ],
+        [
+         4.3,
+         1.2
+        ],
+        [
+         3.9,
+         1.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.45,
+         0.8
+        ],
+        [
+         4.85,
+         0.8
+        ],
+        [
+         4.85,
+         1.2
+        ],
+        [
+         4.45,
+         1.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.0,
+         0.8
+        ],
+        [
+         5.4,
+         0.8
+        ],
+        [
+         5.4,
+         1.2
+        ],
+        [
+         5.0,
+         1.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        1.6
+       ],
+       "text": "5x + 3",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 16.31
+  },
+  {
+   "name": "Nicht gleichartig",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Streifen und kleine Quadrate lassen sich nicht zusammenzählen. Drei x plus zwei bleibt drei x plus zwei. Fünf x wäre falsch. Setz zur Probe x gleich zwei ein: Der Term ergibt acht, fünf x aber zehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3x + 2",
+     "x": 150,
+     "y": 300,
+     "groesse": 76,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{\\neq 5x}",
+     "x": 150,
+     "y": 430,
+     "groesse": 70,
+     "ein": 7.32
+    },
+    {
+     "typ": "formel",
+     "text": "x = 2: \\quad 8 \\neq 10",
+     "x": 150,
+     "y": 560,
+     "groesse": 56,
+     "ein": 8.38
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         6.0
+        ],
+        [
+         1.2,
+         6.0
+        ],
+        [
+         1.2,
+         8.0
+        ],
+        [
+         0.8,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         6.0
+        ],
+        [
+         1.75,
+         6.0
+        ],
+        [
+         1.75,
+         8.0
+        ],
+        [
+         1.35,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.9,
+         6.0
+        ],
+        [
+         2.3,
+         6.0
+        ],
+        [
+         2.3,
+         8.0
+        ],
+        [
+         1.9,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.8,
+         6.0
+        ],
+        [
+         3.2,
+         6.0
+        ],
+        [
+         3.2,
+         6.4
+        ],
+        [
+         2.8,
+         6.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.35,
+         6.0
+        ],
+        [
+         3.75,
+         6.0
+        ],
+        [
+         3.75,
+         6.4
+        ],
+        [
+         3.35,
+         6.4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        6.8
+       ],
+       "text": "3x + 2",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.32,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         2.2
+        ],
+        [
+         1.2,
+         2.2
+        ],
+        [
+         1.2,
+         4.2
+        ],
+        [
+         0.8,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         2.2
+        ],
+        [
+         1.75,
+         2.2
+        ],
+        [
+         1.75,
+         4.2
+        ],
+        [
+         1.35,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.9,
+         2.2
+        ],
+        [
+         2.3,
+         2.2
+        ],
+        [
+         2.3,
+         4.2
+        ],
+        [
+         1.9,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         2.2
+        ],
+        [
+         2.85,
+         2.2
+        ],
+        [
+         2.85,
+         4.2
+        ],
+        [
+         2.45,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         2.2
+        ],
+        [
+         3.4,
+         2.2
+        ],
+        [
+         3.4,
+         4.2
+        ],
+        [
+         3.0,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.6,
+        3.0
+       ],
+       "text": "5x",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.6,
+        2.0
+       ],
+       "bis": [
+        3.8,
+        4.4
+       ],
+       "farbe": 4,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 13.16
+  },
+  {
+   "name": "Zahl vor der Klammer",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Drei mal die Klammer zwei x minus vier heisst: Die Klammer kommt dreimal vor. Das sind sechs Streifen und zwölf rote Kacheln, also sechs x minus zwölf. Die Drei wird mit jedem Glied in der Klammer multipliziert.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fb{3}(2x - 4)",
+     "x": 150,
+     "y": 300,
+     "groesse": 76,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fa{6x} \\fd{- 12}",
+     "x": 150,
+     "y": 430,
+     "groesse": 70,
+     "ein": 7.86
+    },
+    {
+     "typ": "notiz",
+     "text": "die Zahl vor der Klammer|mal jedes Glied",
+     "x": 150,
+     "y": 570,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 10.38
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.54,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.75,
+         6.95
+        ],
+        [
+         5.2,
+         6.95
+        ],
+        [
+         5.2,
+         9.45
+        ],
+        [
+         0.75,
+         9.45
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         7.2
+        ],
+        [
+         1.4,
+         7.2
+        ],
+        [
+         1.4,
+         9.2
+        ],
+        [
+         1.0,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.55,
+         7.2
+        ],
+        [
+         1.95,
+         7.2
+        ],
+        [
+         1.95,
+         9.2
+        ],
+        [
+         1.55,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         7.2
+        ],
+        [
+         2.85,
+         7.2
+        ],
+        [
+         2.85,
+         7.6
+        ],
+        [
+         2.45,
+         7.6
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         7.2
+        ],
+        [
+         3.4,
+         7.2
+        ],
+        [
+         3.4,
+         7.6
+        ],
+        [
+         3.0,
+         7.6
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.55,
+         7.2
+        ],
+        [
+         3.95,
+         7.2
+        ],
+        [
+         3.95,
+         7.6
+        ],
+        [
+         3.55,
+         7.6
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.1,
+         7.2
+        ],
+        [
+         4.5,
+         7.2
+        ],
+        [
+         4.5,
+         7.6
+        ],
+        [
+         4.1,
+         7.6
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        8.0
+       ],
+       "text": "2x − 4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.94,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.75,
+         4.15
+        ],
+        [
+         5.2,
+         4.15
+        ],
+        [
+         5.2,
+         6.65
+        ],
+        [
+         0.75,
+         6.65
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         4.4
+        ],
+        [
+         1.4,
+         4.4
+        ],
+        [
+         1.4,
+         6.4
+        ],
+        [
+         1.0,
+         6.4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.55,
+         4.4
+        ],
+        [
+         1.95,
+         4.4
+        ],
+        [
+         1.95,
+         6.4
+        ],
+        [
+         1.55,
+         6.4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         4.4
+        ],
+        [
+         2.85,
+         4.4
+        ],
+        [
+         2.85,
+         4.8
+        ],
+        [
+         2.45,
+         4.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         4.4
+        ],
+        [
+         3.4,
+         4.4
+        ],
+        [
+         3.4,
+         4.8
+        ],
+        [
+         3.0,
+         4.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.55,
+         4.4
+        ],
+        [
+         3.95,
+         4.4
+        ],
+        [
+         3.95,
+         4.8
+        ],
+        [
+         3.55,
+         4.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.1,
+         4.4
+        ],
+        [
+         4.5,
+         4.4
+        ],
+        [
+         4.5,
+         4.8
+        ],
+        [
+         4.1,
+         4.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        5.2
+       ],
+       "text": "2x − 4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.34,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.75,
+         1.35
+        ],
+        [
+         5.2,
+         1.35
+        ],
+        [
+         5.2,
+         3.85
+        ],
+        [
+         0.75,
+         3.85
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         1.6
+        ],
+        [
+         1.4,
+         1.6
+        ],
+        [
+         1.4,
+         3.6
+        ],
+        [
+         1.0,
+         3.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.55,
+         1.6
+        ],
+        [
+         1.95,
+         1.6
+        ],
+        [
+         1.95,
+         3.6
+        ],
+        [
+         1.55,
+         3.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         1.6
+        ],
+        [
+         2.85,
+         1.6
+        ],
+        [
+         2.85,
+         2.0
+        ],
+        [
+         2.45,
+         2.0
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         1.6
+        ],
+        [
+         3.4,
+         1.6
+        ],
+        [
+         3.4,
+         2.0
+        ],
+        [
+         3.0,
+         2.0
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.55,
+         1.6
+        ],
+        [
+         3.95,
+         1.6
+        ],
+        [
+         3.95,
+         2.0
+        ],
+        [
+         3.55,
+         2.0
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.1,
+         1.6
+        ],
+        [
+         4.5,
+         1.6
+        ],
+        [
+         4.5,
+         2.0
+        ],
+        [
+         4.1,
+         2.0
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        2.4
+       ],
+       "text": "2x − 4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 14.92
+  },
+  {
+   "name": "Minus vor der Klammer",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sieben x minus die Klammer zwei x minus fünf. Das Minus gilt für die ganze Klammer: Jede Kachel darin wird umgedreht. Aus zwei x wird minus zwei x, aus minus fünf wird plus fünf. Zwei rote Streifen heben zwei blaue auf. Es bleibt fünf x plus fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "7x - (2x - 5)",
+     "x": 150,
+     "y": 300,
+     "groesse": 70,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "= 7x \\fd{- 2x} \\fb{+ 5}",
+     "x": 150,
+     "y": 430,
+     "groesse": 66,
+     "ein": 7.1
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fa{5x} + \\fb{5}",
+     "x": 150,
+     "y": 560,
+     "groesse": 66,
+     "ein": 13.96
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         7.0
+        ],
+        [
+         1.2,
+         7.0
+        ],
+        [
+         1.2,
+         9.0
+        ],
+        [
+         0.8,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 13.96
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         7.0
+        ],
+        [
+         1.75,
+         7.0
+        ],
+        [
+         1.75,
+         9.0
+        ],
+        [
+         1.35,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 13.96
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.9,
+         7.0
+        ],
+        [
+         2.3,
+         7.0
+        ],
+        [
+         2.3,
+         9.0
+        ],
+        [
+         1.9,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         7.0
+        ],
+        [
+         2.85,
+         7.0
+        ],
+        [
+         2.85,
+         9.0
+        ],
+        [
+         2.45,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         7.0
+        ],
+        [
+         3.4,
+         7.0
+        ],
+        [
+         3.4,
+         9.0
+        ],
+        [
+         3.0,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.55,
+         7.0
+        ],
+        [
+         3.95,
+         7.0
+        ],
+        [
+         3.95,
+         9.0
+        ],
+        [
+         3.55,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.1,
+         7.0
+        ],
+        [
+         4.5,
+         7.0
+        ],
+        [
+         4.5,
+         9.0
+        ],
+        [
+         4.1,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.0,
+        7.8
+       ],
+       "text": "7x",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        0.75,
+        4.6
+       ],
+       "text": "−",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 64,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         3.55
+        ],
+        [
+         5.4,
+         3.55
+        ],
+        [
+         5.4,
+         6.05
+        ],
+        [
+         1.0,
+         6.05
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.2,
+         3.8
+        ],
+        [
+         1.6,
+         3.8
+        ],
+        [
+         1.6,
+         5.8
+        ],
+        [
+         1.2,
+         5.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.75,
+         3.8
+        ],
+        [
+         2.15,
+         3.8
+        ],
+        [
+         2.15,
+         5.8
+        ],
+        [
+         1.75,
+         5.8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.65,
+         3.8
+        ],
+        [
+         3.05,
+         3.8
+        ],
+        [
+         3.05,
+         4.2
+        ],
+        [
+         2.65,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.2,
+         3.8
+        ],
+        [
+         3.6,
+         3.8
+        ],
+        [
+         3.6,
+         4.2
+        ],
+        [
+         3.2,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.75,
+         3.8
+        ],
+        [
+         4.15,
+         3.8
+        ],
+        [
+         4.15,
+         4.2
+        ],
+        [
+         3.75,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.3,
+         3.8
+        ],
+        [
+         4.7,
+         3.8
+        ],
+        [
+         4.7,
+         4.2
+        ],
+        [
+         4.3,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.85,
+         3.8
+        ],
+        [
+         5.25,
+         3.8
+        ],
+        [
+         5.25,
+         4.2
+        ],
+        [
+         4.85,
+         4.2
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 6.56
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.56,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.2,
+         3.8
+        ],
+        [
+         1.6,
+         3.8
+        ],
+        [
+         1.6,
+         5.8
+        ],
+        [
+         1.2,
+         5.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 13.96
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.75,
+         3.8
+        ],
+        [
+         2.15,
+         3.8
+        ],
+        [
+         2.15,
+         5.8
+        ],
+        [
+         1.75,
+         5.8
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2,
+       "aus": 13.96
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.65,
+         3.8
+        ],
+        [
+         3.05,
+         3.8
+        ],
+        [
+         3.05,
+         4.2
+        ],
+        [
+         2.65,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.2,
+         3.8
+        ],
+        [
+         3.6,
+         3.8
+        ],
+        [
+         3.6,
+         4.2
+        ],
+        [
+         3.2,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.75,
+         3.8
+        ],
+        [
+         4.15,
+         3.8
+        ],
+        [
+         4.15,
+         4.2
+        ],
+        [
+         3.75,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.3,
+         3.8
+        ],
+        [
+         4.7,
+         3.8
+        ],
+        [
+         4.7,
+         4.2
+        ],
+        [
+         4.3,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.85,
+         3.8
+        ],
+        [
+         5.25,
+         3.8
+        ],
+        [
+         5.25,
+         4.2
+        ],
+        [
+         4.85,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 13.96,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        6.8,
+        1.6
+       ],
+       "text": "5x + 5",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 19.97
+  },
+  {
+   "name": "Verschachtelt",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei verschachtelten Klammern beginnst du innen. Innen steht minus drei mal die Klammer eins minus x, das gibt minus drei plus drei x. Die mittlere Klammer wird damit fünf x minus drei. Dann löst du die äussere Klammer auf: vier x minus fünf x plus drei, also drei minus x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4x - (2x \\fb{- 3(1 - x)})",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "= 4x - (2x \\fb{- 3 + 3x})",
+     "x": 150,
+     "y": 390,
+     "groesse": 58,
+     "ein": 6.27
+    },
+    {
+     "typ": "formel",
+     "text": "= 4x - (5x - 3)",
+     "x": 150,
+     "y": 500,
+     "groesse": 58,
+     "ein": 8.39
+    },
+    {
+     "typ": "formel",
+     "text": "= 4x - 5x + 3 = \\fc{3 - x}",
+     "x": 150,
+     "y": 610,
+     "groesse": 58,
+     "ein": 11.67
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.01,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.2,
+         3.0
+        ],
+        [
+         7.8,
+         3.0
+        ],
+        [
+         7.8,
+         5.2
+        ],
+        [
+         2.2,
+         5.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        3.9
+       ],
+       "text": "1. innen: 1 − x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.39,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.3,
+         2.2
+        ],
+        [
+         8.7,
+         2.2
+        ],
+        [
+         8.7,
+         7.0
+        ],
+        [
+         1.3,
+         7.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.06,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        6.0
+       ],
+       "text": "2. Mitte: 2x − 3( … )",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 11.67,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.5,
+         1.2
+        ],
+        [
+         9.5,
+         1.2
+        ],
+        [
+         9.5,
+         8.8
+        ],
+        [
+         0.5,
+         8.8
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        7.7
+       ],
+       "text": "3. aussen: 4x − ( … )",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 17.85
+  },
+  {
+   "name": "Probe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ob du richtig vereinfacht hast, prüfst du mit einer Zahl. Setz x gleich zwei ein. Sieben mal zwei minus die Klammer vier minus fünf gibt fünfzehn. Fünf mal zwei plus fünf gibt auch fünfzehn. So muss es sein.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x = 2",
+     "x": 150,
+     "y": 280,
+     "groesse": 64,
+     "ein": 3.3
+    },
+    {
+     "typ": "formel",
+     "text": "7 \\cdot 2 - (2 \\cdot 2 - 5) = 14 + 1 = 15",
+     "x": 150,
+     "y": 400,
+     "groesse": 54,
+     "ein": 4.84
+    },
+    {
+     "typ": "formel",
+     "text": "5 \\cdot 2 + 5 = 15",
+     "x": 150,
+     "y": 520,
+     "groesse": 54,
+     "ein": 9.88
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{15 = 15}",
+     "x": 150,
+     "y": 640,
+     "groesse": 64,
+     "ein": 11.04
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        6.5
+       ],
+       "text": "7x − (2x − 5)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        4.6
+       ],
+       "text": "5x + 5",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.88,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        2.6
+       ],
+       "text": "x = 2:  15 und 15",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 17.25
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Nur gleichartige Glieder zusammenfassen. Die Zahl vor der Klammer mal jedes Glied. Ein Minus vor der Klammer dreht jedes Vorzeichen um. Verschachtelt: innen beginnen. Und am Schluss die Probe mit einer Zahl.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "nur gleichartige Glieder zusammenfassen|Zahl vor der Klammer: mal jedes Glied|Minus vor der Klammer: jedes Vorzeichen um|verschachtelt: innen beginnen|Probe mit einer Zahl",
+     "x": 150,
+     "y": 400,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.42
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.15
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Minus vor der Klammer",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was wird aus −5, wenn du in 7x − (2x − 5) die Klammer weglässt?",
+   "optionen": [
+    "+5",
+    "−5",
+    "5x"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das Minus vor der Klammer dreht jedes Vorzeichen in der Klammer um, auch das von −5.",
+    "2": "Aus einer Zahl wird kein x-Glied. Nur das Vorzeichen ändert sich."
+   },
+   "sprich": "Was wird aus minus fünf, wenn du die Klammer weglässt?",
+   "rueck_sprich": {
+    "1": "Das Minus vor der Klammer dreht jedes Vorzeichen in der Klammer um, auch das von minus fünf.",
+    "2": "Aus einer Zahl wird kein x-Glied. Nur das Vorzeichen ändert sich."
+   }
+  }
+ ]
+}

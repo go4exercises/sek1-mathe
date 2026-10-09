@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de-CH"><head><meta charset="utf-8"><title>Terme sehen: Terme vereinfachen</title><style>
+@import url("../schriften.css");
+:root{--papier:#f8f6f1;--tinte:#1c1a17;--blau:#1a4f8a;--rot:#9b1c1c;--gruen:#1f6b3a;--gold:#b85c00;--f1:#1a4f8a;--f1w:#ddeaf8;--f2:#b85c00;--f2w:#fdefd8;--f3:#1f6b3a;--f3w:#d8f0e2;--f4:#9b1c1c;--f4w:#fde8e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;background:#0d1418;overflow:hidden}
+#wrap{position:absolute;left:0;right:0;top:0;bottom:60px;overflow:hidden}
+:fullscreen #wrap{bottom:0} :fullscreen #ui{display:none}
+#stage{width:1920px;height:1080px;position:absolute;left:50%;top:50%;overflow:hidden;
+ background:var(--papier);color:var(--tinte);font-family:'Source Serif 4',Georgia,serif;transform-origin:center center}
+body.render #wrap{bottom:0} body.render #stage{left:0;top:0;transform:none!important}
+#stage::before{content:"";position:absolute;inset:0;pointer-events:none;}
+#stage::after{content:"";position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(120% 100% at 50% 40%,rgba(255,255,255,0) 55%,rgba(90,80,64,.09) 100%)}
+#rand{position:absolute;left:76px;top:0;bottom:0;width:3px}
+
+#kopf,#fuss{position:absolute;left:130px;right:100px;display:flex;justify-content:space-between;
+ align-items:baseline;font-family:'Source Sans 3',sans-serif;z-index:5}
+#kopf{top:46px;font-size:27px}
+#kopf .marke{font-weight:600;letter-spacing:.01em;color:var(--blau)}
+#kopf .bereich{color:var(--tinte);opacity:.55;letter-spacing:.07em;text-transform:uppercase;font-size:22px}
+#fuss{bottom:44px;font-size:21px;color:var(--tinte);opacity:.42}
+
+/* Bedingungsleiste: die Voraussetzung, auf der die Rechnung steht.
+   Sie liegt ausserhalb des Szenenflusses — darum kostet sie keine Zeile
+   und kann trotzdem stehen bleiben, solange sie gilt. Unterhalb des
+   Inhalts, oberhalb der Fusszeile. */
+#vorleiste{position:absolute;left:130px;right:100px;top:96px;
+ display:flex;justify-content:center;gap:14px;z-index:5;pointer-events:none}
+.vor{display:inline-flex;align-items:center;gap:.58em;
+ background:var(--f1w);border:1.5px solid var(--f1);border-radius:10px;
+ padding:7px 19px 8px;color:var(--tinte);font-size:30px;line-height:1.14;
+ box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.vor .vor-tag{font-family:'Source Sans 3',sans-serif;font-size:18px;font-weight:700;
+ letter-spacing:.13em;text-transform:uppercase;color:var(--f1);opacity:.95;
+ white-space:nowrap;align-self:center}
+.vor .vor-txt{white-space:nowrap}
+
+.l{position:absolute;will-change:opacity,transform}
+.l.flow{position:relative}
+.m{font-family:'Source Serif 4',Georgia,serif} .m i,i{font-style:italic}
+.hand{font-family:'Caveat',cursive;line-height:1.24}
+.sans{font-family:'Source Sans 3',system-ui,sans-serif}
+.huelle{display:flex;justify-content:flex-start}
+.mitte.huelle{justify-content:center}
+.huelle>span{white-space:nowrap}
+.f1,.f2,.f3,.f4{border-radius:7px;padding:0 .14em;margin:0 .02em}
+.f1{color:var(--f1);background:var(--f1w)}
+.f2{color:var(--f2);background:var(--f2w)}
+.f3{color:var(--f3);background:var(--f3w)}
+.f4{color:var(--f4);background:var(--f4w)}
+.dim{opacity:.62}
+.graf{line-height:0}
+.graf svg{display:inline-block;vertical-align:top}
+.ov{display:inline-block;line-height:1;padding-top:.07em;margin-top:.12em;border-top:3.5px solid currentColor}
+.row{display:flex;align-items:center;line-height:1.06;white-space:nowrap;gap:.26em}
+.mitte.row{justify-content:center}
+.fr{position:relative;z-index:1;display:inline-flex;flex-direction:column;align-items:center;
+ line-height:1.08;margin:0 .12em;vertical-align:middle}
+.fr>span:first-child{padding:0 .32em .07em}
+.fr>span:last-child{padding:.20em .32em 0;border-top:3.5px solid currentColor}
+.box{border:3.5px solid var(--tinte);border-radius:14px;padding:12px 30px;background:rgba(255,255,255,.62)}
+.boxg{border-color:var(--gruen);color:var(--gruen)}
+.karte{background:rgba(255,255,255,.70);border:2.5px solid rgba(128,128,128,.28);border-radius:16px;padding:14px 26px}
+.strich{height:5px;background:var(--rot);border-radius:3px;transform-origin:left center}
+.lz{display:flex;align-items:baseline;gap:22px;margin-bottom:26px}
+.ln{color:var(--blau);font-weight:600;min-width:34px}
+.step{display:flex;align-items:flex-start;gap:18px;margin-bottom:34px}
+.num{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--blau);color:var(--papier);
+ font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:31px;display:grid;place-items:center}
+.stxt{font-family:'Source Sans 3',sans-serif;font-size:31px;line-height:1.24;padding-top:7px}
+
+#ui{position:absolute;left:0;right:0;bottom:0;height:60px;display:flex;align-items:center;gap:18px;
+ padding:0 26px;background:rgba(13,20,24,.85);color:#e8eef2;font-family:system-ui,sans-serif;font-size:14px;z-index:99}
+body.render #ui{display:none}
+#bar{flex:1;height:8px;background:rgba(255,255,255,.18);border-radius:4px;overflow:hidden;cursor:pointer}
+#barf{height:100%;width:0;background:var(--gold)}
+#ui button{background:rgba(255,255,255,.12);color:#e8eef2;border:0;border-radius:7px;padding:7px 14px;
+ font-size:14px;cursor:pointer;white-space:nowrap}
+#tt{white-space:nowrap;font-variant-numeric:tabular-nums}
+#tip{opacity:.6;white-space:nowrap}
+/* Auf dem Telefon gibt es weder Leertaste noch Pfeiltasten — der Hinweis
+   waere dort nur Text, der die 60px hohe Leiste sprengt. */
+@media (max-width:700px){#ui{gap:11px;padding:0 12px} #tip{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[],macros:{fa:['\\bbox[##ddeaf8,3px]{\\textcolor{##1a4f8a}{#1}}',1],fb:['\\bbox[##fdefd8,3px]{\\textcolor{##b85c00}{#1}}',1],fc:['\\bbox[##d8f0e2,3px]{\\textcolor{##1f6b3a}{#1}}',1],fd:['\\bbox[##fde8e8,3px]{\\textcolor{##9b1c1c}{#1}}',1]}},svg:{fontCache:'global'},options:{enableMenu:false}};</script><script src="../vendor/mathjax/tex-svg.js"></script></head><body>
+<div id="wrap"><div id="stage">
+
+<div id="kopf"><span class="marke">begreifbar.ch</span><span class="bereich">Arithmetik/Algebra · Terme und Faktorisieren</span></div>
+<div id="fuss"><span>Raphael Arnold Kohler</span><span>09.10.2026</span></div>
+<div class="l m row" data-at="5.08" data-out="10.01" data-anim="rise" style="left:150px;top:330px;font-size:86px"><span>\(\fa{2x} + \fb{4}\)</span></div>
+<div class="l hand" data-at="1.78" data-out="10.01" data-anim="rise" style="left:150px;top:500px;font-size:44px;color:var(--blau)">\(x\): langer Streifen<br>\(1\): kleines Quadrat</div>
+<div class="l graf" data-at="1.78" data-out="10.01" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg6bffaa8d"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg6bffaa8d)"><polygon points="119.6,268.4 149.4,268.4 149.4,119.6 119.6,119.6" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><text x="231.2" y="208.9" font-size="40" font-style="normal" fill="#1a4f8a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">x</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="3.96" data-out="10.01" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg4682cacd"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg4682cacd)"><polygon points="417.2,268.4 447.0,268.4 447.0,238.6 417.2,238.6" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><text x="499.0" y="264.7" font-size="40" font-style="normal" fill="#b85c00" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="5.08" data-out="10.01" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg1e33df36"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg1e33df36)"><polygon points="119.6,603.2 149.4,603.2 149.4,454.4 119.6,454.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="160.5,603.2 190.3,603.2 190.3,454.4 160.5,454.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="227.5,603.2 257.2,603.2 257.2,573.4 227.5,573.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="268.4,603.2 298.2,603.2 298.2,573.4 268.4,573.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="309.3,603.2 339.1,603.2 339.1,573.4 309.3,573.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="350.2,603.2 380.0,603.2 380.0,573.4 350.2,573.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><text x="573.4" y="543.7" font-size="36" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2x + 4</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="10.51" data-out="26.32" data-anim="rise" style="left:150px;top:300px;font-size:66px"><span>\(2x + 4 + 3x - 1\)</span></div>
+<div class="l m row" data-at="21.12" data-out="26.32" data-anim="rise" style="left:150px;top:430px;font-size:66px"><span>\(= \fa{5x} + \fb{3}\)</span></div>
+<div class="l hand" data-at="12.38" data-out="26.32" data-anim="rise" style="left:150px;top:560px;font-size:42px;color:var(--blau)">gleiche Kacheln zueinander</div>
+<div class="l graf" data-at="10.31" data-out="26.32" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgac70cbed"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgac70cbed)"><polygon points="67.5,231.2 97.3,231.2 97.3,82.4 67.5,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="108.4,231.2 138.2,231.2 138.2,82.4 108.4,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="175.4,231.2 205.2,231.2 205.2,201.4 175.4,201.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="216.3,231.2 246.1,231.2 246.1,201.4 216.3,201.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="257.2,231.2 287.0,231.2 287.0,201.4 257.2,201.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><g class="zt" data-aus="20.10"><polygon points="298.2,231.2 327.9,231.2 327.9,201.4 298.2,201.4" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><text x="573.4" y="171.7" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2x + 4</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="10.61" data-out="26.32" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgf45958e3"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgf45958e3)"><polygon points="67.5,454.4 97.3,454.4 97.3,305.6 67.5,305.6" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="108.4,454.4 138.2,454.4 138.2,305.6 108.4,305.6" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="149.4,454.4 179.1,454.4 179.1,305.6 149.4,305.6" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><g class="zt" data-aus="20.10"><polygon points="216.3,454.4 246.1,454.4 246.1,424.6 216.3,424.6" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><text x="573.4" y="394.9" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">3x − 1</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="18.24" data-out="26.32" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg8c5354a1"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg8c5354a1)"><g class="zt" data-aus="20.10"><circle cx="313.0" cy="216.3" r="31.2" fill="#9b1c1c" fill-opacity="0" stroke="#9b1c1c" stroke-width="3"/></g><g class="zt" data-aus="20.10"><circle cx="231.2" cy="439.5" r="31.2" fill="#9b1c1c" fill-opacity="0" stroke="#9b1c1c" stroke-width="3"/></g><g class="zt" data-aus="20.10"><line x1="313.0" y1="261.0" x2="231.2" y2="391.2" stroke="#9b1c1c" stroke-width="3" stroke-linecap="round" stroke-dasharray="14 10"/></g></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="21.12" data-out="26.32" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg8d251f2d"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg8d251f2d)"><polygon points="67.5,692.5 97.3,692.5 97.3,543.7 67.5,543.7" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="108.4,692.5 138.2,692.5 138.2,543.7 108.4,543.7" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="149.4,692.5 179.1,692.5 179.1,543.7 149.4,543.7" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="190.3,692.5 220.0,692.5 220.0,543.7 190.3,543.7" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="231.2,692.5 261.0,692.5 261.0,543.7 231.2,543.7" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="298.2,692.5 327.9,692.5 327.9,662.7 298.2,662.7" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="339.1,692.5 368.8,692.5 368.8,662.7 339.1,662.7" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="380.0,692.5 409.8,692.5 409.8,662.7 380.0,662.7" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><text x="573.4" y="633.0" font-size="36" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">5x + 3</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="26.72" data-out="39.48" data-anim="rise" style="left:150px;top:300px;font-size:76px"><span>\(3x + 2\)</span></div>
+<div class="l m row" data-at="33.64" data-out="39.48" data-anim="rise" style="left:150px;top:430px;font-size:70px"><span>\(\fd{\neq 5x}\)</span></div>
+<div class="l m row" data-at="34.70" data-out="39.48" data-anim="rise" style="left:150px;top:560px;font-size:56px"><span>\(x = 2: \quad 8 \neq 10\)</span></div>
+<div class="l graf" data-at="26.62" data-out="39.48" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg9e7ee540"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg9e7ee540)"><polygon points="67.5,305.6 97.3,305.6 97.3,156.8 67.5,156.8" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="108.4,305.6 138.2,305.6 138.2,156.8 108.4,156.8" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="149.4,305.6 179.1,305.6 179.1,156.8 149.4,156.8" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="216.3,305.6 246.1,305.6 246.1,275.8 216.3,275.8" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="257.2,305.6 287.0,305.6 287.0,275.8 257.2,275.8" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><text x="573.4" y="246.1" font-size="36" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">3x + 2</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="33.64" data-out="39.48" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg1d4435f0"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg1d4435f0)"><polygon points="67.5,588.3 97.3,588.3 97.3,439.5 67.5,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="108.4,588.3 138.2,588.3 138.2,439.5 108.4,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="149.4,588.3 179.1,588.3 179.1,439.5 149.4,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="190.3,588.3 220.0,588.3 220.0,439.5 190.3,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="231.2,588.3 261.0,588.3 261.0,439.5 231.2,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><text x="573.4" y="528.8" font-size="36" font-style="normal" fill="#9b1c1c" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">5x</text><line x1="52.6" y1="603.2" x2="290.7" y2="424.6" stroke="#9b1c1c" stroke-width="4" stroke-linecap="round"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="39.88" data-out="54.40" data-anim="rise" style="left:150px;top:300px;font-size:76px"><span>\(\fb{3}(2x - 4)\)</span></div>
+<div class="l m row" data-at="47.34" data-out="54.40" data-anim="rise" style="left:150px;top:430px;font-size:70px"><span>\(= \fa{6x} \fd{- 12}\)</span></div>
+<div class="l hand" data-at="49.86" data-out="54.40" data-anim="rise" style="left:150px;top:570px;font-size:42px;color:var(--blau)">die Zahl vor der Klammer<br>mal jedes Glied</div>
+<div class="l graf" data-at="40.02" data-out="54.40" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg2873ce2a"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg2873ce2a)"><polygon points="63.8,234.9 394.9,234.9 394.9,48.9 63.8,48.9" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="2" stroke-linejoin="round"/><polygon points="82.4,216.3 112.2,216.3 112.2,67.5 82.4,67.5" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="123.3,216.3 153.1,216.3 153.1,67.5 123.3,67.5" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="190.3,216.3 220.0,216.3 220.0,186.6 190.3,186.6" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="231.2,216.3 261.0,216.3 261.0,186.6 231.2,186.6" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="272.1,216.3 301.9,216.3 301.9,186.6 272.1,186.6" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="313.0,216.3 342.8,216.3 342.8,186.6 313.0,186.6" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><text x="558.6" y="156.8" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2x − 4</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="40.42" data-out="54.40" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgc54ccf39"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgc54ccf39)"><polygon points="63.8,443.2 394.9,443.2 394.9,257.2 63.8,257.2" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="2" stroke-linejoin="round"/><polygon points="82.4,424.6 112.2,424.6 112.2,275.8 82.4,275.8" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="123.3,424.6 153.1,424.6 153.1,275.8 123.3,275.8" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="190.3,424.6 220.0,424.6 220.0,394.9 190.3,394.9" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="231.2,424.6 261.0,424.6 261.0,394.9 231.2,394.9" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="272.1,424.6 301.9,424.6 301.9,394.9 272.1,394.9" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="313.0,424.6 342.8,424.6 342.8,394.9 313.0,394.9" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><text x="558.6" y="365.1" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2x − 4</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="40.82" data-out="54.40" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg9aeb6d18"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg9aeb6d18)"><polygon points="63.8,651.6 394.9,651.6 394.9,465.6 63.8,465.6" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="2" stroke-linejoin="round"/><polygon points="82.4,633.0 112.2,633.0 112.2,484.2 82.4,484.2" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="123.3,633.0 153.1,633.0 153.1,484.2 123.3,484.2" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="190.3,633.0 220.0,633.0 220.0,603.2 190.3,603.2" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="231.2,633.0 261.0,633.0 261.0,603.2 231.2,603.2" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="272.1,633.0 301.9,633.0 301.9,603.2 272.1,603.2" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><polygon points="313.0,633.0 342.8,633.0 342.8,603.2 313.0,603.2" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/><text x="558.6" y="573.4" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2x − 4</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="54.45" data-out="74.37" data-anim="rise" style="left:150px;top:300px;font-size:70px"><span>\(7x - (2x - 5)\)</span></div>
+<div class="l m row" data-at="61.50" data-out="74.37" data-anim="rise" style="left:150px;top:430px;font-size:66px"><span>\(= 7x \fd{- 2x} \fb{+ 5}\)</span></div>
+<div class="l m row" data-at="68.36" data-out="74.37" data-anim="rise" style="left:150px;top:560px;font-size:66px"><span>\(= \fa{5x} + \fb{5}\)</span></div>
+<div class="l graf" data-at="54.45" data-out="74.37" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg313966d3"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg313966d3)"><g class="zt" data-aus="68.36"><polygon points="67.5,231.2 97.3,231.2 97.3,82.4 67.5,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="68.36"><polygon points="108.4,231.2 138.2,231.2 138.2,82.4 108.4,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><polygon points="149.4,231.2 179.1,231.2 179.1,82.4 149.4,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="190.3,231.2 220.0,231.2 220.0,82.4 190.3,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="231.2,231.2 261.0,231.2 261.0,82.4 231.2,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="272.1,231.2 301.9,231.2 301.9,82.4 272.1,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><polygon points="313.0,231.2 342.8,231.2 342.8,82.4 313.0,82.4" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/><text x="454.4" y="171.7" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">7x</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="54.45" data-out="74.37" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fge307d45c"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fge307d45c)"><text x="63.8" y="409.8" font-size="64" font-style="normal" fill="#9b1c1c" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">−</text><polygon points="82.4,487.9 409.8,487.9 409.8,301.9 82.4,301.9" fill="#9b1c1c" fill-opacity="0" stroke="#9b1c1c" stroke-width="3" stroke-linejoin="round" stroke-dasharray="14 10"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="54.45" data-out="74.37" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg38d7ef60"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg38d7ef60)"><g class="zt" data-aus="60.96"><polygon points="97.3,469.3 127.0,469.3 127.0,320.5 97.3,320.5" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="60.96"><polygon points="138.2,469.3 168.0,469.3 168.0,320.5 138.2,320.5" fill="#1a4f8a" fill-opacity="0.35" stroke="#1a4f8a" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="60.96"><polygon points="205.2,469.3 234.9,469.3 234.9,439.5 205.2,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="60.96"><polygon points="246.1,469.3 275.8,469.3 275.8,439.5 246.1,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="60.96"><polygon points="287.0,469.3 316.8,469.3 316.8,439.5 287.0,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="60.96"><polygon points="327.9,469.3 357.7,469.3 357.7,439.5 327.9,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="60.96"><polygon points="368.8,469.3 398.6,469.3 398.6,439.5 368.8,439.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="60.96" data-out="74.37" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg4f6ef06a"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg4f6ef06a)"><g class="zt" data-aus="68.36"><polygon points="97.3,469.3 127.0,469.3 127.0,320.5 97.3,320.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><g class="zt" data-aus="68.36"><polygon points="138.2,469.3 168.0,469.3 168.0,320.5 138.2,320.5" fill="#9b1c1c" fill-opacity="0.35" stroke="#9b1c1c" stroke-width="2" stroke-linejoin="round"/></g><polygon points="205.2,469.3 234.9,469.3 234.9,439.5 205.2,439.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="246.1,469.3 275.8,469.3 275.8,439.5 246.1,439.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="287.0,469.3 316.8,469.3 316.8,439.5 287.0,439.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="327.9,469.3 357.7,469.3 357.7,439.5 327.9,439.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/><polygon points="368.8,469.3 398.6,469.3 398.6,439.5 368.8,439.5" fill="#b85c00" fill-opacity="0.35" stroke="#b85c00" stroke-width="2" stroke-linejoin="round"/></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="68.36" data-out="74.37" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg7e1511e7"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg7e1511e7)"><text x="513.9" y="633.0" font-size="40" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">5x + 5</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="74.77" data-out="92.22" data-anim="rise" style="left:150px;top:280px;font-size:58px"><span>\(4x - (2x \fb{- 3(1 - x)})\)</span></div>
+<div class="l m row" data-at="80.64" data-out="92.22" data-anim="rise" style="left:150px;top:390px;font-size:58px"><span>\(= 4x - (2x \fb{- 3 + 3x})\)</span></div>
+<div class="l m row" data-at="82.76" data-out="92.22" data-anim="rise" style="left:150px;top:500px;font-size:58px"><span>\(= 4x - (5x - 3)\)</span></div>
+<div class="l m row" data-at="86.04" data-out="92.22" data-anim="rise" style="left:150px;top:610px;font-size:58px"><span>\(= 4x - 5x + 3 = \fc{3 - x}\)</span></div>
+<div class="l graf" data-at="76.38" data-out="92.22" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgd22e43db"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgd22e43db)"><polygon points="171.7,528.8 588.3,528.8 588.3,365.1 171.7,365.1" fill="#1a4f8a" fill-opacity="0.15" stroke="#1a4f8a" stroke-width="3" stroke-linejoin="round"/><text x="380.0" y="461.8" font-size="34" font-style="normal" fill="#1a4f8a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">1. innen: 1 − x</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="82.76" data-out="92.22" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgba7e7789"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgba7e7789)"><polygon points="104.7,588.3 655.3,588.3 655.3,231.2 104.7,231.2" fill="#b85c00" fill-opacity="0.06" stroke="#b85c00" stroke-width="3" stroke-linejoin="round"/><text x="380.0" y="305.6" font-size="34" font-style="normal" fill="#b85c00" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">2. Mitte: 2x − 3( … )</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="86.04" data-out="92.22" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg9ad3ece1"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg9ad3ece1)"><polygon points="45.2,662.7 714.8,662.7 714.8,97.3 45.2,97.3" fill="#1c1a17" fill-opacity="0" stroke="#1c1a17" stroke-width="3" stroke-linejoin="round"/><text x="380.0" y="179.1" font-size="34" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">3. aussen: 4x − ( … )</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="95.52" data-out="109.47" data-anim="rise" style="left:150px;top:280px;font-size:64px"><span>\(x = 2\)</span></div>
+<div class="l m row" data-at="97.06" data-out="109.47" data-anim="rise" style="left:150px;top:400px;font-size:54px"><span>\(7 \cdot 2 - (2 \cdot 2 - 5) = 14 + 1 = 15\)</span></div>
+<div class="l m row" data-at="102.10" data-out="109.47" data-anim="rise" style="left:150px;top:520px;font-size:54px"><span>\(5 \cdot 2 + 5 = 15\)</span></div>
+<div class="l m row" data-at="103.26" data-out="109.47" data-anim="rise" style="left:150px;top:640px;font-size:64px"><span>\(\fc{15 = 15}\)</span></div>
+<div class="l graf" data-at="92.52" data-out="109.47" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fg22170581"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fg22170581)"><text x="380.0" y="268.4" font-size="44" font-style="normal" fill="#1c1a17" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">7x − (2x − 5)</text><text x="380.0" y="409.8" font-size="44" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">5x + 5</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="102.10" data-out="109.47" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><clipPath id="fgf0f7cdd8"><rect x="0" y="0" width="760" height="760"/></clipPath><g clip-path="url(#fgf0f7cdd8)"><text x="380.0" y="558.6" font-size="38" font-style="normal" fill="#1f6b3a" text-anchor="middle" stroke="#f8f6f1" stroke-width="8" paint-order="stroke">x = 2:  15 und 15</text></g><path data-fenster="0,10,0,10,760,760,8" d="" fill="none"/></svg></div>
+<div class="l hand mitte" data-at="109.87" data-out="121.89" data-anim="rise" style="left:150px;top:250px;font-size:76px;font-weight:600;color:var(--tinte)">Zum Mitnehmen</div>
+<div class="l hand" data-at="110.67" data-out="121.89" data-anim="rise" style="left:150px;top:400px;font-size:42px;color:var(--blau)">nur gleichartige Glieder zusammenfassen<br>Zahl vor der Klammer: mal jedes Glied<br>Minus vor der Klammer: jedes Vorzeichen um<br>verschachtelt: innen beginnen<br>Probe mit einer Zahl</div>
+<div class="l hand mitte" data-at="122.29" data-out="128.04" data-anim="rise" style="left:150px;top:280px;font-size:86px;font-weight:600;color:var(--tinte)">Jetzt du</div>
+<div class="l hand" data-at="122.49" data-out="128.04" data-anim="rise" style="left:150px;top:430px;font-size:50px;color:var(--blau)">Erkunde diese Zusammenhänge<br>in der Animation unter dem Clip<br>und löse die Aufgaben.</div>
+</div></div>
+<audio id="ton" preload="auto" src="ton/terme-lp-zusammenfassen.mp3"></audio>
+<div id="ui">
+  <button id="pp">Pause</button>
+  <button id="ts" hidden>🔇 Ton an</button>
+  <div id="bar"><div id="barf"></div></div>
+  <span id="tt">0.0 s</span>
+  <span id="tip">Leertaste = Pause &middot; &larr; &rarr; = 5 s &middot; R = Neustart &middot; F = Vollbild</span>
+</div>
+<script>
+const DUR = 128.04;
+const SPRECHER = [{"bei": 0.4, "text": "Stell dir x als langen Streifen vor und die Zahl eins als kleines Quadrat. Dann besteht der Term zwei x plus vier aus zwei Streifen und vier kleinen Quadraten."}, {"bei": 10.41, "text": "Kommt drei x minus eins dazu, legst du gleiche Kacheln zueinander. Die Streifen ergeben fünf x. Eine rote Kachel steht für minus eins, sie hebt ein kleines Quadrat auf. Es bleiben drei. Das Ergebnis: fünf x plus drei."}, {"bei": 26.72, "text": "Streifen und kleine Quadrate lassen sich nicht zusammenzählen. Drei x plus zwei bleibt drei x plus zwei. Fünf x wäre falsch. Setz zur Probe x gleich zwei ein: Der Term ergibt acht, fünf x aber zehn."}, {"bei": 39.88, "text": "Drei mal die Klammer zwei x minus vier heisst: Die Klammer kommt dreimal vor. Das sind sechs Streifen und zwölf rote Kacheln, also sechs x minus zwölf. Die Drei wird mit jedem Glied in der Klammer multipliziert."}, {"bei": 54.8, "text": "Sieben x minus die Klammer zwei x minus fünf. Das Minus gilt für die ganze Klammer: Jede Kachel darin wird umgedreht. Aus zwei x wird minus zwei x, aus minus fünf wird plus fünf. Zwei rote Streifen heben zwei blaue auf. Es bleibt fünf x plus fünf."}, {"bei": 74.77, "text": "Bei verschachtelten Klammern beginnst du innen. Innen steht minus drei mal die Klammer eins minus x, das gibt minus drei plus drei x. Die mittlere Klammer wird damit fünf x minus drei. Dann löst du die äussere Klammer auf: vier x minus fünf x plus drei, also drei minus x."}, {"bei": 92.62, "text": "Ob du richtig vereinfacht hast, prüfst du mit einer Zahl. Setz x gleich zwei ein. Sieben mal zwei minus die Klammer vier minus fünf gibt fünfzehn. Fünf mal zwei plus fünf gibt auch fünfzehn. So muss es sein."}, {"bei": 109.87, "text": "Zum Mitnehmen: Nur gleichartige Glieder zusammenfassen. Die Zahl vor der Klammer mal jedes Glied. Ein Minus vor der Klammer dreht jedes Vorzeichen um. Verschachtelt: innen beginnen. Und am Schluss die Probe mit einer Zahl."}, {"bei": 122.29, "text": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben."}];
+const stage = document.getElementById('stage');
+const layers = [...document.querySelectorAll('.l')].map(el => ({
+  el, at: parseFloat(el.dataset.at || '0'),
+  out: el.dataset.out ? parseFloat(el.dataset.out) : Infinity,
+  anim: el.dataset.anim || 'fade',
+  dim: el.dataset.dim ? el.dataset.dim.split(',').map(Number) : null
+}));
+const IN = 0.5, OUT = 0.4;
+// Teile eines Bildes mit eigenem "ein"/"aus" (g.zt): blenden fuer sich ein und aus.
+// Bewegte Figuren (g.fb): vorgerechnete Bilder, je eines zwischen data-fvon und data-fbis.
+const fbilder = [...document.querySelectorAll('g.fb')].map(el => ({
+  el, von: el.dataset.fvon ? parseFloat(el.dataset.fvon) : -Infinity,
+  bis: el.dataset.fbis ? parseFloat(el.dataset.fbis) : Infinity }));
+const zteile = [...document.querySelectorAll('g.zt')].map(el => ({
+  el, at: el.dataset.ein ? parseFloat(el.dataset.ein) : -Infinity,
+  out: el.dataset.aus ? parseFloat(el.dataset.aus) : Infinity }));
+const ease = p => 1 - Math.pow(1 - p, 3);
+const cl = p => p < 0 ? 0 : p > 1 ? 1 : p;
+function seek(t)  {
+  for (const L of layers) {
+    const pi = ease(cl((t - L.at) / IN));
+    const po = L.out === Infinity ? 0 : ease(cl((t - L.out) / OUT));
+    let o = pi * (1 - po), tr = '';
+    if (L.anim === 'rise') tr = 'translateY(' + ((1 - pi) * 26) + 'px)';
+    else if (L.anim === 'pop') tr = 'scale(' + (0.90 + 0.10 * pi) + ')';
+    else if (L.anim === 'wipe') { tr = 'scaleX(' + pi + ')'; o = (t >= L.at ? 1 : 0) * (1 - po); }
+    if (L.dim && !(t >= L.dim[0] && t < L.dim[1])) o *= 0.34;
+    L.el.style.transform = tr; L.el.style.opacity = o;
+  }
+  for (const Z of zteile) {
+    const pi = Z.at === -Infinity ? 1 : ease(cl((t - Z.at) / IN));
+    const po = Z.out === Infinity ? 0 : ease(cl((t - Z.out) / OUT));
+    Z.el.style.opacity = pi * (1 - po);
+  }
+  for (const F of fbilder) F.el.style.display = t >= F.von && t < F.bis ? '' : 'none';
+}
+const FRAGEN = [{"typ": "wahl", "text": "Was wird aus −5, wenn du in 7x − (2x − 5) die Klammer weglässt?", "optionen": ["+5", "−5", "5x"], "richtig": 0, "rueck": {"0": "Ja.", "1": "Das Minus vor der Klammer dreht jedes Vorzeichen in der Klammer um, auch das von −5.", "2": "Aus einer Zahl wird kein x-Glied. Nur das Vorzeichen ändert sich."}, "t": 54.7, "ton": {"frage": "ton/terme-lp-zusammenfassen-f0-frage.mp3", "r1": "ton/terme-lp-zusammenfassen-f0-r1.mp3", "r2": "ton/terme-lp-zusammenfassen-f0-r2.mp3"}}];
+(() => {
+  if (location.search.includes('render')) return;
+  const pp = document.getElementById('pp');
+  const css = document.createElement('style');
+  css.textContent = `
+    #frage{position:absolute;left:110px;top:560px;width:820px;z-index:50;display:none;
+      background:rgba(255,255,255,.97);border:3px solid var(--f2);border-radius:22px;
+      padding:28px 34px;box-shadow:0 10px 40px rgba(0,0,0,.18);font-family:inherit;color:inherit}
+    #frage .fr-kopf{font-size:26px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--f2);margin-bottom:10px}
+    #frage .fr-text{font-size:38px;line-height:1.3;margin-bottom:22px}
+    #frage .fr-knoepfe{display:flex;flex-wrap:wrap;gap:14px}
+    #frage button{font:inherit;font-size:32px;padding:10px 26px;border-radius:999px;cursor:pointer;
+      border:2.5px solid var(--f2);background:var(--f2w);color:inherit}
+    #frage button.ok{border-color:var(--f3);background:var(--f3w)}
+    #frage button.nein{border-color:var(--f4);background:var(--f4w)}
+    #frage .fr-rueck{font-size:32px;line-height:1.35;margin-top:20px}
+    #frage .fr-weiter{margin-top:20px}
+    #frage .fr-eingabe{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:30px;margin-top:14px;width:100%}
+    #frage .fr-eingabe input{font:inherit;font-size:30px;width:4.2em;padding:4px 10px;border:2.5px solid var(--f2);border-radius:12px}
+    .fr-tippbar, .fr-tippbar svg{pointer-events:auto !important;cursor:crosshair}`;
+  document.head.appendChild(css);
+  const box = document.createElement('div'); box.id = 'frage'; stage.appendChild(box);
+  let letzt = 0, offen = null, tippen = null, stimme = null, sprung = false;
+  // Vorlesen mit derselben Stimme wie der Clip — nur wenn dessen Ton an ist.
+  const hauptton = document.getElementById('ton');
+  const vorlesen = src => {
+    if (stimme) { stimme.pause(); stimme = null; }
+    if (!src || !hauptton || hauptton.muted) return;
+    stimme = new Audio(src); stimme.play().catch(() => {});
+  };
+  const erledigt = new Set();     // beantwortete Fragen
+  const pause = () => { if (pp.textContent === 'Pause') pp.click(); };
+  const weiter = () => { if (pp.textContent === 'Play') pp.click(); };
+  function schliessen() {
+    vorlesen(null);
+    // Fokus zurueck auf Play/Pause — auch wenn er mit dem gesperrten Antwortknopf
+    // schon auf <body> gefallen ist
+    const fo = document.activeElement;
+    if (!fo || fo === document.body || box.contains(fo)) pp.focus({ preventScroll: true });
+    box.style.display = 'none'; box.innerHTML = '';
+    document.querySelectorAll('.fr-marke').forEach(m => m.remove());
+    document.querySelectorAll('.fr-tippbar').forEach(l => l.classList.remove('fr-tippbar'));
+    if (tippen) { stage.removeEventListener('click', tippen); tippen = null; }
+    offen = null;
+  }
+  function antwort(F, ok, text, schl) {
+    const o = offen; erledigt.add(o.i);
+    box.dataset.fertig = '1';
+    vorlesen((F.ton || {})[schl]);
+    if (F.typ === 'klick') box.querySelector('.fr-knoepfe').innerHTML = '';
+    const r = box.querySelector('.fr-rueck');
+    r.innerHTML = (ok ? '✓ ' : '') + text;
+    r.style.color = ok ? 'var(--f3)' : '';
+    if (ok) {                      // richtig: kurz bestaetigen, dann von selbst weiter
+      setTimeout(() => { if (offen === o) { schliessen(); weiter(); } }, 1300);
+      return;
+    }
+    const w = document.createElement('button'); w.className = 'fr-weiter'; w.textContent = 'Weiter ▶';
+    w.onclick = () => { schliessen(); weiter(); };
+    box.appendChild(w); w.focus();
+  }
+  function zeigen(i, F) {
+    offen = { i, t: F.t }; pause(); delete box.dataset.fertig;
+    box.innerHTML = '<div class="fr-kopf"></div><div class="fr-text"></div>'
+      + '<div class="fr-knoepfe"></div><div class="fr-rueck"></div>';
+    box.querySelector('.fr-kopf').textContent = F.kopf || 'Deine Vorhersage';  // "kopf": z. B. «Dein Vorgehen»
+    box.querySelector('.fr-text').textContent = F.text;
+    const kn = box.querySelector('.fr-knoepfe');
+    if (F.typ === 'wahl') {
+      F.optionen.forEach((o, j) => {
+        const b = document.createElement('button'); b.textContent = o;
+        b.onclick = () => {
+          kn.querySelectorAll('button').forEach(x => x.disabled = true);
+          b.classList.add(j === F.richtig ? 'ok' : 'nein');
+          antwort(F, j === F.richtig, (F.rueck || {})[j] || (j === F.richtig ? 'Richtig.' : 'Schau, was der Clip zeigt.'), 'r' + j);
+        };
+        kn.appendChild(b);
+      });
+    } else if (F.typ === 'klick') {
+      const L = [...document.querySelectorAll('.l')].find(l => +l.style.opacity > 0.5 && l.querySelector('[data-fenster]'));
+      if (!L) { schliessen(); weiter(); return; }
+      const svg = L.querySelector('svg'), fe = L.querySelector('[data-fenster]').dataset.fenster.split(',').map(Number);
+      const [x0, x1, y0, y1, b, h, rd] = fe;
+      L.classList.add('fr-tippbar');
+      // Toleranz: eine Zahl (Abstand in Dateneinheiten) oder [dx, dy] je Achse —
+      // Letzteres, wenn die Achsen verschiedene Grössen tragen (s und C).
+      const tol = F.toleranz || 0.5;
+      // Ziel und Fallen sind ein Punkt [x, y] oder eine Strecke [[x1, y1], [x2, y2]] (seit 08.10.2026):
+      // Bei einer Strecke zaehlt ihr naechster Punkt — gerechnet in Toleranz-Einheiten, wenn die Achsen
+      // verschiedene Toleranzen tragen.
+      const tx_ = Array.isArray(tol) ? tol[0] : 1, ty_ = Array.isArray(tol) ? tol[1] : 1;
+      const fuss = (x, y, z) => {
+        if (!Array.isArray(z[0])) return z;
+        const [[ax, ay], [bx, by]] = z, dx = (bx - ax) / tx_, dy = (by - ay) / ty_, l2 = dx * dx + dy * dy;
+        const q = l2 ? Math.max(0, Math.min(1, ((x - ax) / tx_ * dx + (y - ay) / ty_ * dy) / l2)) : 0;
+        return [ax + (bx - ax) * q, ay + (by - ay) * q];
+      };
+      const nah = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.abs(x - z[0]) <= tol[0] && Math.abs(y - z[1]) <= tol[1]
+                                  : Math.hypot(x - z[0], y - z[1]) <= tol; };
+      // Wie weit weg, in Toleranzen — liegt ein Tipp in zwei Fallen, gewinnt die naechste (seit 08.10.2026)
+      const weit = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.max(Math.abs(x - z[0]) / tol[0], Math.abs(y - z[1]) / tol[1])
+                                  : Math.hypot(x - z[0], y - z[1]) / tol; };
+      const px = (x, y) => [rd + (x - x0) / (x1 - x0) * (b - 2 * rd), h - rd - (y - y0) / (y1 - y0) * (h - 2 * rd)];
+      const mk = (cx, cy, farbe) => { const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', 16); c.setAttribute('class', 'fr-marke');
+        c.setAttribute('fill', 'none'); c.setAttribute('stroke', farbe); c.setAttribute('stroke-width', 6); svg.appendChild(c); };
+      const pruefePunkt = (x, y) => {
+        mk(...px(x, y), 'var(--f2)');
+        if (nah(x, y, F.ziel)) return antwort(F, true, F.richtig_text || 'Getroffen.', 'ok');
+        if (Array.isArray(F.ziel[0])) {        // Strecke als Ziel: grün nachgezogen
+          const [a, e] = [px(...F.ziel[0]), px(...F.ziel[1])], l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          l.setAttribute('x1', a[0]); l.setAttribute('y1', a[1]); l.setAttribute('x2', e[0]); l.setAttribute('y2', e[1]);
+          l.setAttribute('class', 'fr-marke'); l.setAttribute('stroke', 'var(--f3)'); l.setAttribute('stroke-width', 14);
+          l.setAttribute('stroke-linecap', 'round'); l.setAttribute('stroke-opacity', '.6'); svg.appendChild(l);
+        } else mk(...px(F.ziel[0], F.ziel[1]), 'var(--f3)');
+        let fk = -1;
+        (F.fallen || []).forEach((f, k) => { if (nah(x, y, f.bei) && (fk < 0 || weit(x, y, f.bei) < weit(x, y, F.fallen[fk].bei))) fk = k; });
+        antwort(F, false, fk >= 0 ? F.fallen[fk].text : (F.falsch_text || 'Nicht ganz — der grüne Kreis zeigt die Stelle.'),
+                fk >= 0 ? 'fall' + fk : 'falsch');
+      };
+      // Am Stage horchen, nicht am Layer: unsichtbare spaetere Layer (Deckkraft 0)
+      // liegen obenauf und wuerden den Tipp abfangen.
+      tippen = ev => {
+        if (!offen || box.dataset.fertig || box.contains(ev.target)) return;
+        const r = svg.getBoundingClientRect();
+        if (ev.clientX < r.left || ev.clientX > r.right || ev.clientY < r.top || ev.clientY > r.bottom) return;
+        const sx = (ev.clientX - r.left) / r.width * b, sy = (ev.clientY - r.top) / r.height * h;
+        pruefePunkt(x0 + (sx - rd) / (b - 2 * rd) * (x1 - x0), y0 + (h - rd - sy) / (h - 2 * rd) * (y1 - y0));
+      };
+      stage.addEventListener('click', tippen);
+      kn.innerHTML = '<span style="font-size:30px;color:var(--f2)">👉 Tipp ins Bild rechts.</span>';
+      // Ohne Zeigegeraet: dieselbe Antwort als zwei Zahlen ("eingabe": [Name x, Name y])
+      if (F.eingabe) {
+        const f = document.createElement('form'); f.className = 'fr-eingabe';
+        f.innerHTML = '<span>oder eingeben:</span>' + F.eingabe.map((n, k) =>
+          '<label>' + n + ' <input inputmode="decimal" autocomplete="off" data-k="' + k + '"></label>').join('')
+          + '<button type="submit">Prüfen</button>';
+        f.onsubmit = ev => {
+          ev.preventDefault();
+          if (box.dataset.fertig) return;
+          const w = [...f.querySelectorAll('input')].map(i => parseFloat(i.value.replace(',', '.')));
+          if (w.some(isNaN)) { f.querySelector('input').focus(); return; }
+          pruefePunkt(w[0], w[1]);
+        };
+        kn.appendChild(f);
+      }
+    }
+    box.style.display = 'block';
+    // Fokus auf die erste Antwort: Tab, Enter und Leertaste reichen dann
+    const erst = box.querySelector('.fr-knoepfe button, .fr-eingabe input');
+    if (erst) erst.focus({ preventScroll: true });
+    vorlesen((F.ton || {}).frage);
+  }
+  // Spulen wird ausdruecklich erkannt: Pfeiltasten und ein Klick auf die
+  // Zeitleiste setzen ein Zeichen, das das naechste Bild auswertet. Ein
+  // spaetes Bild (langsames Laden, Hintergrund-Tab) ist kein Spulen.
+  // Neustart (R) und ein Sprung vor die erste Frage stellen alle Fragen neu;
+  // nach R laeuft der Clip ab 0 wie beim ersten Abspielen.
+  document.addEventListener('keydown', e => {
+    if (e.target && e.target.closest && e.target.closest('input, select, textarea')) return;
+    if ((e.key || '').toLowerCase() === 'r') { schliessen(); erledigt.clear(); letzt = 0; }
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') sprung = true;
+  });
+  const bar = document.getElementById('bar');
+  bar.addEventListener('click', () => { sprung = true; });
+  // Die Abspielzeit ist im Abspieler lokal; zurueckgestellt wird sie ueber
+  // dessen Zeitleiste.
+  const zurueck = s => {
+    const r = bar.getBoundingClientRect();
+    if (r.width > 0 && bar.onclick) bar.onclick({ currentTarget: bar, clientX: r.left + s / DUR * r.width });
+  };
+  const vorFragen = seek;
+  seek = function (t) {
+    vorFragen(t);
+    if (sprung) {
+      // gespult: eine uebersprungene Frage wird nicht gestellt, eine
+      // beantwortete kommt nicht wieder — ausser zurueck an den Anfang
+      sprung = false;
+      if (FRAGEN.length && t < Math.min(...FRAGEN.map(F => F.t))) { schliessen(); erledigt.clear(); }
+    } else if (!offen && pp.textContent === 'Pause') {
+      // gewoehnliches Abspielen, auch wenn ein Bild weit springt: die erste
+      // ueberschrittene Frage wird gestellt, der Clip geht an ihre Stelle zurueck
+      let i = -1;
+      FRAGEN.forEach((F, j) => {
+        if (!erledigt.has(j) && letzt < F.t && t >= F.t && (i < 0 || F.t < FRAGEN[i].t)) i = j;
+      });
+      if (i >= 0) {
+        zeigen(i, FRAGEN[i]);
+        if (offen && t - offen.t > 0.1) { t = offen.t; zurueck(t); vorFragen(t); }
+      }
+    }
+    if (offen && Math.abs(t - offen.t) > 1.0) schliessen();
+    letzt = t;
+  };
+})();
+window.__seek = seek;
+window.__dauer = DUR;
+if (!location.search.includes('render')) {
+  let t0 = performance.now(), playing = true, t = 0;
+  const barf = document.getElementById('barf'), tt = document.getElementById('tt'),
+        pp = document.getElementById('pp'), wrap = document.getElementById('wrap');
+  const fit = () => { stage.style.transform = 'translate(-50%,-50%) scale('
+      + Math.min(wrap.clientWidth / 1920, wrap.clientHeight / 1080) + ')'; };
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', () => setTimeout(fit, 60));
+  fit();
+  // Der Ton laeuft von selbst und hoerbar los. Erlaubt ist das, weil der
+  // Klick auf die Clipkarte die noetige Nutzergeste war und das <iframe>
+  // sie ueber `allow="autoplay"` weitergereicht bekommt (clipRahmen in
+  // physiklib.js bzw. mathlib.js). Verweigert der Browser trotzdem — etwa wenn jemand die
+  // Clipdatei direkt aufruft, ohne vorher zu klicken —, faellt der Clip auf
+  // stumm zurueck und der Knopf «Ton an» holt ihn hervor. Sobald der Ton
+  // laeuft, fuehrt er die Uhr: Tondrift faellt auf, Bilddrift nicht.
+  const ton = document.getElementById('ton'), ts = document.getElementById('ts');
+  const tonBeschriften = () => {
+    if (ts) ts.textContent = (!ton || ton.muted) ? '🔇 Ton an' : '🔊 Ton aus';
+  };
+  if (ton) {
+    ts.hidden = false;
+    ton.muted = false;
+    ton.play().then(tonBeschriften).catch(() => {
+      ton.muted = true;
+      tonBeschriften();
+      ton.play().catch(() => {});
+    });
+    tonBeschriften();
+    ts.onclick = () => {
+      ton.muted = !ton.muted;
+      tonBeschriften();
+      if (!ton.muted) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); }
+    };
+  }
+  const tonLaeuft = () => ton && !ton.paused && !ton.ended;
+  function loop(now) {
+    if (playing) {
+      if (tonLaeuft()) t = ton.currentTime;
+      else { t += (now - t0) / 1000; if (t > DUR) t = DUR; }
+    }
+    t0 = now; seek(t);
+    barf.style.width = (t / DUR * 100) + '%'; tt.textContent = t.toFixed(1) + ' s';
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  const tonAn = () => { if (ton) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); } };
+  const toggle = () => {
+    playing = !playing;
+    pp.textContent = playing ? 'Pause' : 'Play';
+    if (ton) { if (playing) ton.play().catch(() => {}); else ton.pause(); }
+  };
+  pp.onclick = toggle;
+  // Tastenkuerzel nicht in Eingabefeldern; die Leertaste nicht auf Knoepfen —
+  // dort bestaetigt sie den Knopf (Antwort einer Frage, Play/Pause selbst).
+  document.addEventListener('keydown', e => {
+    const ziel = e.target && e.target.closest ? e.target : null;
+    if (ziel && ziel.closest('input, select, textarea')) return;
+    if (e.code === 'Space' && ziel && ziel.closest('button, a, summary')) return;
+    if (e.code === 'Space') { e.preventDefault(); toggle(); }
+    if (e.code === 'ArrowRight') { t = Math.min(DUR, t + 5); tonAn(); }
+    if (e.code === 'ArrowLeft') { t = Math.max(0, t - 5); tonAn(); }
+    const k = e.key.toLowerCase();
+    if (k === 'r') { t = 0; playing = true; pp.textContent = 'Pause'; tonAn(); }
+    if (k === 'f') document.documentElement.requestFullscreen?.();
+  });
+  document.getElementById('bar').onclick = e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    t = (e.clientX - r.left) / r.width * DUR; tonAn();
+  };
+} else { document.body.classList.add('render'); seek(0); }
+</script></body></html>

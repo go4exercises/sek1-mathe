@@ -1,0 +1,871 @@
+{
+ "titel": "Terme sehen: Kontrollfragen zum Vereinfachen",
+ "dateiname": "terme-lp-kontrolle-zusammenfassen",
+ "kurzbeschrieb": "Fünf Fragen: 4y − 7 + 2y + 3 zusammenfassen, −(3x − 8), 5(2a − 3), ist 2x + 3x² dasselbe wie 5x³, x − (4 − 3x).",
+ "schlagworte": [
+  "zusammenfassen",
+  "Klammer",
+  "Minus vor der Klammer",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Terme und Faktorisieren",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "lp-terme"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Terme sehen",
+ "folge": 2,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms terme-faktorisieren; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gleichartig sind vier y und zwei y, das gibt sechs y. Minus sieben plus drei gibt minus vier. Also sechs y minus vier.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4y + 2y = \\fa{6y}",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "-7 + 3 = \\fd{-4}",
+     "x": 150,
+     "y": 420,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{6y - 4}",
+     "x": 150,
+     "y": 540,
+     "groesse": 66,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         6.0
+        ],
+        [
+         1.2,
+         6.0
+        ],
+        [
+         1.2,
+         8.0
+        ],
+        [
+         0.8,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         6.0
+        ],
+        [
+         1.75,
+         6.0
+        ],
+        [
+         1.75,
+         8.0
+        ],
+        [
+         1.35,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.9,
+         6.0
+        ],
+        [
+         2.3,
+         6.0
+        ],
+        [
+         2.3,
+         8.0
+        ],
+        [
+         1.9,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.45,
+         6.0
+        ],
+        [
+         2.85,
+         6.0
+        ],
+        [
+         2.85,
+         8.0
+        ],
+        [
+         2.45,
+         8.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.35,
+         6.0
+        ],
+        [
+         3.75,
+         6.0
+        ],
+        [
+         3.75,
+         6.4
+        ],
+        [
+         3.35,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.9,
+         6.0
+        ],
+        [
+         4.3,
+         6.0
+        ],
+        [
+         4.3,
+         6.4
+        ],
+        [
+         3.9,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.45,
+         6.0
+        ],
+        [
+         4.85,
+         6.0
+        ],
+        [
+         4.85,
+         6.4
+        ],
+        [
+         4.45,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.0,
+         6.0
+        ],
+        [
+         5.4,
+         6.0
+        ],
+        [
+         5.4,
+         6.4
+        ],
+        [
+         5.0,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.55,
+         6.0
+        ],
+        [
+         5.95,
+         6.0
+        ],
+        [
+         5.95,
+         6.4
+        ],
+        [
+         5.55,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.1,
+         6.0
+        ],
+        [
+         6.5,
+         6.0
+        ],
+        [
+         6.5,
+         6.4
+        ],
+        [
+         6.1,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.65,
+         6.0
+        ],
+        [
+         7.05,
+         6.0
+        ],
+        [
+         7.05,
+         6.4
+        ],
+        [
+         6.65,
+         6.4
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        9.4
+       ],
+       "text": "4y − 7 + 2y + 3",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         2.6
+        ],
+        [
+         1.2,
+         2.6
+        ],
+        [
+         1.2,
+         4.6
+        ],
+        [
+         0.8,
+         4.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.35,
+         2.6
+        ],
+        [
+         1.75,
+         2.6
+        ],
+        [
+         1.75,
+         4.6
+        ],
+        [
+         1.35,
+         4.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.25,
+         2.6
+        ],
+        [
+         2.65,
+         2.6
+        ],
+        [
+         2.65,
+         3.0
+        ],
+        [
+         2.25,
+         3.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2.8,
+         2.6
+        ],
+        [
+         3.2,
+         2.6
+        ],
+        [
+         3.2,
+         3.0
+        ],
+        [
+         2.8,
+         3.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.35,
+         2.6
+        ],
+        [
+         3.75,
+         2.6
+        ],
+        [
+         3.75,
+         3.0
+        ],
+        [
+         3.35,
+         3.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.13
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das Minus vor der Klammer dreht jedes Vorzeichen um: Aus drei x wird minus drei x, aus minus acht wird plus acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "-(3x - 8) = \\fc{-3x + 8}",
+     "x": 150,
+     "y": 320,
+     "groesse": 66,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "−(3x − 8)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.19
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Fünf wird mit beiden Gliedern multipliziert: fünf mal zwei a ist zehn a, fünf mal minus drei ist minus fünfzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fb{5} \\cdot 2a + \\fb{5} \\cdot (-3)",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{10a - 15}",
+     "x": 150,
+     "y": 430,
+     "groesse": 66,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "5(2a − 3)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.93
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nein. Zwei x und drei x Quadrat sind nicht gleichartig, man kann sie nicht zusammenfassen. Probe mit x gleich zwei: links vier plus zwölf, also sechzehn, rechts fünf mal acht, also vierzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x = 2: \\quad 4 + 12 = 16",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "5 \\cdot 8 = 40 \\quad \\fd{16 \\neq 40}",
+     "x": 150,
+     "y": 420,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "2x + 3x²  =  5x³ ?",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 12.9
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Klammer weg, jedes Vorzeichen umdrehen: x minus vier plus drei x. Zusammengefasst vier x minus vier.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x - 4 + 3x",
+     "x": 150,
+     "y": 300,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{4x - 4}",
+     "x": 150,
+     "y": 420,
+     "groesse": 66,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "x − (4 − 3x)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.63
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Nur Gleichartiges zusammenfassen, die Zahl vor der Klammer mal jedes Glied, und ein Minus vor der Klammer dreht alle Vorzeichen um.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "nur Gleichartiges zusammenfassen|Zahl vor der Klammer: mal jedes Glied|Minus vor der Klammer: alle Vorzeichen um",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.7
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Fasse zusammen: 4y − 7 + 2y + 3",
+   "optionen": [
+    "6y − 10",
+    "6y − 4",
+    "2y"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "y-Glieder und Zahlen sind nicht gleichartig. Sie bleiben getrennt.",
+    "0": "Achte auf das Vorzeichen: −7 + 3 = −4."
+   },
+   "sprich": "Fasse zusammen: vier y minus sieben plus zwei y plus drei.",
+   "rueck_sprich": {
+    "2": "y-Glieder und Zahlen sind nicht gleichartig. Sie bleiben getrennt.",
+    "0": "Achte auf das Vorzeichen: minus sieben plus drei ist minus vier."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse die Klammer auf: −(3x − 8)",
+   "optionen": [
+    "−3x − 8",
+    "3x − 8",
+    "−3x + 8"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Auch das Vorzeichen von −8 dreht sich um.",
+    "1": "Das Minus vor der Klammer gilt auch für 3x."
+   },
+   "sprich": "Löse die Klammer auf: minus Klammer drei x minus acht.",
+   "rueck_sprich": {
+    "0": "Auch das Vorzeichen von minus acht dreht sich um.",
+    "1": "Das Minus vor der Klammer gilt auch für drei x."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse die Klammer auf: 5(2a − 3)",
+   "optionen": [
+    "10a − 3",
+    "2a − 15",
+    "10a − 15"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Die 5 gilt auch für −3.",
+    "1": "Die 5 gilt auch für 2a."
+   },
+   "sprich": "Löse die Klammer auf: fünf mal Klammer zwei a minus drei.",
+   "rueck_sprich": {
+    "0": "Die Fünf gilt auch für minus drei.",
+    "1": "Die Fünf gilt auch für zwei a."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ist 2x + 3x² dasselbe wie 5x³?",
+   "optionen": [
+    "Ja, weil beide Glieder x enthalten.",
+    "Nein, 2x und 3x² sind nicht gleichartig.",
+    "Ja, 2 + 3 = 5 und die Hochzahlen werden addiert."
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Hochzahlen addiert man beim Multiplizieren, nicht beim Addieren. Probe mit x = 2: 16 gegen 40.",
+    "0": "x und x² sind verschiedene Arten von Gliedern, wie Streifen und Quadrate."
+   },
+   "sprich": "Ist zwei x plus drei x Quadrat dasselbe wie fünf x hoch drei?",
+   "rueck_sprich": {
+    "2": "Hochzahlen addiert man beim Multiplizieren, nicht beim Addieren. Probe mit x gleich zwei: sechzehn gegen vierzig.",
+    "0": "x und x Quadrat sind verschiedene Arten von Gliedern, wie Streifen und Quadrate."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Vereinfache: x − (4 − 3x)",
+   "optionen": [
+    "4x + 4",
+    "4x − 4",
+    "−2x − 4"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das Minus vor der Klammer dreht auch −3x um: Es wird +3x.",
+    "0": "Die 4 in der Klammer wird zu −4."
+   },
+   "sprich": "Vereinfache: x minus Klammer vier minus drei x.",
+   "rueck_sprich": {
+    "2": "Das Minus vor der Klammer dreht auch minus drei x um: Es wird plus drei x.",
+    "0": "Die Vier in der Klammer wird zu minus vier."
+   }
+  }
+ ]
+}

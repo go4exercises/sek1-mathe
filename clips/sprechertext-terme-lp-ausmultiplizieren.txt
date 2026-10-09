@@ -1,0 +1,8 @@
+0.40	Ein Rechteck hat die Seiten x plus drei und x plus zwei. Seine Fläche ist das Produkt der beiden Klammern.
+8.15	Unterteile beide Seiten bei x. Es entstehen vier Teile: das Quadrat x Quadrat, ein Streifen mit drei x, ein Streifen mit zwei x und ein Rechteck aus sechs kleinen Quadraten.
+22.46	Die beiden Streifen sind gleichartig: drei x plus zwei x gibt fünf x. Also ist x plus zwei mal x plus drei gleich x Quadrat plus fünf x plus sechs.
+32.92	Häufiger Fehler: nur vorne mal vorne und hinten mal hinten. Das gibt x Quadrat plus sechs. Im Bild fehlen dann die beiden Streifen. Probe mit x gleich eins: drei mal vier ist zwölf, aber eins plus sechs ist nur sieben.
+47.00	Mit Minuszeichen gibt es kein Rechteck mehr. Das Rechteck-Schema funktioniert aber immer. Bei drei x minus zwei mal x plus vier schreibst du oben drei x und minus zwei, links x und plus vier. In jedes Feld kommt das Produkt.
+64.36	Die vier Produkte: drei x Quadrat, minus zwei x, zwölf x und minus acht. Das Vorzeichen gehört immer zur Zahl dahinter: minus zwei mal vier gibt minus acht. Zusammengefasst: drei x Quadrat plus zehn x minus acht.
+78.95	Zum Mitnehmen: Jedes Glied der ersten Klammer mal jedes Glied der zweiten. Das gibt vier Produkte. Dann gleichartige Glieder zusammenfassen und mit einer Zahl die Probe machen.
+89.24	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

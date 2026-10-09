@@ -107,6 +107,11 @@ SEITEN = {
    titel='Leitprogramm Bruchrechnen — erweitern, kürzen, addieren, multiplizieren, dividieren',
    beschreibung='Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.',
    themen=['Mathematik', 'Bruchrechnen', 'Brüche', 'Kürzen', 'Hauptnenner', 'Kehrwert', 'Rechenreihenfolge', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/terme-faktorisieren.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Terme und Faktorisieren — vereinfachen, ausmultiplizieren, binomische Formeln',
+   beschreibung='Leitprogramm Terme und Faktorisieren, Sekundarstufe I: zusammenfassen, Klammern auflösen, Klammer mal Klammer, binomische Formeln, ausklammern, Zweiklammersatz — mit Übungen.',
+   themen=['Mathematik', 'Terme', 'Klammern', 'Ausmultiplizieren', 'Binomische Formeln', 'Faktorisieren', 'Ausklammern', 'Leitprogramm', 'Sekundarstufe I']),
 
 }
 

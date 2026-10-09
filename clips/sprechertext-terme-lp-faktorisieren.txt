@@ -1,0 +1,9 @@
+0.40	Faktorisieren heisst: eine Summe als Produkt schreiben. Es ist das Ausmultiplizieren rückwärts. Aus x Quadrat plus fünf x plus sechs wird wieder x plus zwei mal x plus drei.
+12.65	Zuerst suchst du einen gemeinsamen Faktor. In sechs a Quadrat und in neun a steckt beide Male drei a. Klammere ihn aus: drei a mal die Klammer zwei a minus drei. Nur a auszuklammern reicht nicht: In sechs a minus neun steckt noch die Drei.
+29.36	Dann prüfst du, ob eine binomische Formel passt. Bei y Quadrat minus zehn y plus fünfundzwanzig ist fünfundzwanzig gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also y minus fünf im Quadrat. Neun y Quadrat minus fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: drei y minus fünf mal drei y plus fünf.
+51.66	Schreib die Zahlenpaare mit dem Produkt zwölf auf: eins und zwölf, zwei und sechs, drei und vier, und dieselben negativ. Die Summe minus sieben haben nur minus drei und minus vier. Also x minus drei mal x minus vier.
+67.73	Prüfe, indem du ausmultiplizierst: x Quadrat minus vier x minus drei x plus zwölf, also wieder x Quadrat minus sieben x plus zwölf.
+77.34	Achtung: Faktorisieren ist kein Gleichungslösen. Bei der Aufgabe, x Quadrat minus fünfundzwanzig zu faktorisieren, ist die Antwort ein Produkt: x minus fünf mal x plus fünf. Ein Ergebnis wie x gleich fünf beantwortet eine andere Frage.
+92.17	Vollständig faktorisiert ist ein Term erst, wenn sich kein Faktor mehr zerlegen lässt. Fünf x Quadrat minus zwanzig: zuerst fünf ausklammern, dann bleibt x Quadrat minus vier, und das ist x minus zwei mal x plus zwei.
+105.20	Zum Mitnehmen: Faktorisieren macht aus einer Summe ein Produkt. Zuerst ausklammern, dann eine binomische Formel prüfen, dann der Zweiklammersatz mit Produkt und Summe. Vollständig faktorisieren und am Schluss ausmultiplizieren, als Probe.
+119.83	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

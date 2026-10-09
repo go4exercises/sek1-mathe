@@ -1,0 +1,1746 @@
+{
+ "titel": "Terme sehen: Binomische Formeln",
+ "dateiname": "terme-lp-binome",
+ "kurzbeschrieb": "(3 + 4)² = 49, aber 3² + 4² = 25: Es fehlen zwei Rechtecke. Das Quadrat (a + b)² = a² + 2ab + b²; mit x: (x + 4)² = x² + 8x + 16; (a − b)² und (2y − 3)² = 4y² − 12y + 9; (a + b)(a − b) = a² − b² als umgelegtes Rechteck; Kopfrechnen 51² und 49 · 51.",
+ "schlagworte": [
+  "binomische Formeln",
+  "Quadrat",
+  "mittleres Glied",
+  "Kopfrechnen"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Terme und Faktorisieren",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "lp-terme"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Terme sehen",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms terme-faktorisieren; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Zahlen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Rechne nach: Sieben im Quadrat ist neunundvierzig. Drei Quadrat plus vier Quadrat ist neun plus sechzehn, also nur fünfundzwanzig. Es fehlen vierundzwanzig. Wo stecken sie?",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(3 + 4)^2 \\;\\overset{?}{=}\\; 3^2 + 4^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "7^2 = 49",
+     "x": 150,
+     "y": 430,
+     "groesse": 58,
+     "ein": 0.3
+    },
+    {
+     "typ": "formel",
+     "text": "9 + 16 = 25",
+     "x": 150,
+     "y": 540,
+     "groesse": 58,
+     "ein": 3.56
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{49 - 25 = 24}",
+     "x": 150,
+     "y": 650,
+     "groesse": 58,
+     "ein": 8.32
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.58,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         2.0
+        ],
+        [
+         8.5,
+         2.0
+        ],
+        [
+         8.5,
+         9.0
+        ],
+        [
+         1.5,
+         9.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.0,
+        9.35
+       ],
+       "text": "3",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        9.35
+       ],
+       "text": "4",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        7.35
+       ],
+       "text": "3",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        3.85
+       ],
+       "text": "4",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.56,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         6.0
+        ],
+        [
+         4.5,
+         6.0
+        ],
+        [
+         4.5,
+         9.0
+        ],
+        [
+         1.5,
+         9.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.5,
+         2.0
+        ],
+        [
+         8.5,
+         2.0
+        ],
+        [
+         8.5,
+         6.0
+        ],
+        [
+         4.5,
+         6.0
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.0,
+        7.3
+       ],
+       "text": "9",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        3.8
+       ],
+       "text": "16",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.76,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.5,
+         6.0
+        ],
+        [
+         8.5,
+         6.0
+        ],
+        [
+         8.5,
+         9.0
+        ],
+        [
+         4.5,
+         9.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         2.0
+        ],
+        [
+         4.5,
+         2.0
+        ],
+        [
+         4.5,
+         6.0
+        ],
+        [
+         1.5,
+         6.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.5,
+        7.3
+       ],
+       "text": "12",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.0,
+        3.8
+       ],
+       "text": "12",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 12.3
+  },
+  {
+   "name": "Quadrat",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Allgemein: Ein Quadrat mit der Seite a plus b besteht aus vier Teilen. Oben links a Quadrat, unten rechts b Quadrat und dazu zwei Rechtecke, jedes a mal b. Darum steht in der Mitte zwei a b.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(a + b)^2 = \\fa{a^2} + \\fb{2ab} + \\fc{b^2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 10.1
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.7
+        ],
+        [
+         9.0,
+         1.7
+        ],
+        [
+         9.0,
+         9.2
+        ],
+        [
+         1.5,
+         9.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        9.55
+       ],
+       "text": "a",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.75,
+        9.55
+       ],
+       "text": "b",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        6.55
+       ],
+       "text": "a",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        2.8
+       ],
+       "text": "b",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.0,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         4.2
+        ],
+        [
+         6.5,
+         4.2
+        ],
+        [
+         6.5,
+         9.2
+        ],
+        [
+         1.5,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        6.5
+       ],
+       "text": "a²",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.48,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         1.7
+        ],
+        [
+         9.0,
+         1.7
+        ],
+        [
+         9.0,
+         4.2
+        ],
+        [
+         6.5,
+         4.2
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.75,
+        2.75
+       ],
+       "text": "b²",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.24,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         4.2
+        ],
+        [
+         9.0,
+         4.2
+        ],
+        [
+         9.0,
+         9.2
+        ],
+        [
+         6.5,
+         9.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.7
+        ],
+        [
+         6.5,
+         1.7
+        ],
+        [
+         6.5,
+         4.2
+        ],
+        [
+         1.5,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.75,
+        6.5
+       ],
+       "text": "ab",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        2.75
+       ],
+       "text": "ab",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 15.15
+  },
+  {
+   "name": "Mit x",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Für a und b darf auch x und eine Zahl stehen. x plus vier im Quadrat: x Quadrat, dann zwei mal x mal vier, also acht x, und am Schluss vier Quadrat, also sechzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(x + 4)^2",
+     "x": 150,
+     "y": 280,
+     "groesse": 64,
+     "ein": 0.3
+    },
+    {
+     "typ": "formel",
+     "text": "= x^2 + 2 \\cdot x \\cdot 4 + 4^2",
+     "x": 150,
+     "y": 400,
+     "groesse": 58,
+     "ein": 5.19
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{x^2 + 8x + 16}",
+     "x": 150,
+     "y": 520,
+     "groesse": 62,
+     "ein": 7.91
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.7
+        ],
+        [
+         9.0,
+         1.7
+        ],
+        [
+         9.0,
+         9.2
+        ],
+        [
+         1.5,
+         9.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        9.55
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.75,
+        9.55
+       ],
+       "text": "4",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        6.55
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        2.8
+       ],
+       "text": "4",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         4.2
+        ],
+        [
+         6.5,
+         4.2
+        ],
+        [
+         6.5,
+         9.2
+        ],
+        [
+         1.5,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         4.2
+        ],
+        [
+         9.0,
+         4.2
+        ],
+        [
+         9.0,
+         9.2
+        ],
+        [
+         6.5,
+         9.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.7
+        ],
+        [
+         6.5,
+         1.7
+        ],
+        [
+         6.5,
+         4.2
+        ],
+        [
+         1.5,
+         4.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.5,
+         1.7
+        ],
+        [
+         9.0,
+         1.7
+        ],
+        [
+         9.0,
+         4.2
+        ],
+        [
+         6.5,
+         4.2
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        6.5
+       ],
+       "text": "x²",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.75,
+        6.5
+       ],
+       "text": "4x",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        2.75
+       ],
+       "text": "4x",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.75,
+        2.75
+       ],
+       "text": "16",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 13.6
+  },
+  {
+   "name": "Minus",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mit Minus ändert sich nur das mittlere Glied: a minus b im Quadrat ist a Quadrat minus zwei a b plus b Quadrat. Bei zwei y minus drei im Quadrat wird auch die Zwei quadriert: vier y Quadrat minus zwölf y plus neun.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(a - b)^2 = a^2 \\fd{- 2ab} + b^2",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 1.97
+    },
+    {
+     "typ": "formel",
+     "text": "(2y - 3)^2 = \\fb{4}y^2 - 12y + 9",
+     "x": 150,
+     "y": 420,
+     "groesse": 58,
+     "ein": 10.45
+    },
+    {
+     "typ": "notiz",
+     "text": "@(2y)^2 = 4y^2@, nicht @2y^2@",
+     "x": 150,
+     "y": 560,
+     "groesse": 42,
+     "farbe": "orange",
+     "ein": 11.25
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.97,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.5
+        ],
+        [
+         8.5,
+         1.5
+        ],
+        [
+         8.5,
+         8.5
+        ],
+        [
+         1.5,
+         8.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         4.0
+        ],
+        [
+         6.0,
+         4.0
+        ],
+        [
+         6.0,
+         8.5
+        ],
+        [
+         1.5,
+         8.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         1.5
+        ],
+        [
+         8.5,
+         1.5
+        ],
+        [
+         8.5,
+         8.5
+        ],
+        [
+         6.0,
+         8.5
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.1,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.5
+        ],
+        [
+         8.5,
+         1.5
+        ],
+        [
+         8.5,
+         4.0
+        ],
+        [
+         1.5,
+         4.0
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.1,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         1.5
+        ],
+        [
+         8.5,
+         1.5
+        ],
+        [
+         8.5,
+         4.0
+        ],
+        [
+         6.0,
+         4.0
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.4,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         1.5
+        ],
+        [
+         8.5,
+         1.5
+        ],
+        [
+         8.5,
+         8.5
+        ],
+        [
+         1.5,
+         8.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.75,
+        6.05
+       ],
+       "text": "(a − b)²",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.25,
+        6.0
+       ],
+       "text": "ab",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.75,
+        2.55
+       ],
+       "text": "ab",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.25,
+        2.55
+       ],
+       "text": "b²",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.0,
+        8.85
+       ],
+       "text": "a",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.05,
+        5.0
+       ],
+       "text": "a",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 16.98
+  },
+  {
+   "name": "Dritte Formel",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die dritte Formel: a plus b mal a minus b ist a Quadrat minus b Quadrat. Die beiden gemischten Glieder heben sich auf. Zum Beispiel ist fünf plus x mal fünf minus x gleich fünfundzwanzig minus x Quadrat. Im Bild fehlt beim Quadrat a Quadrat die Ecke b Quadrat. Das orange Stück passt rechts an, und es entsteht ein Rechteck mit den Seiten a plus b und a minus b.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(a + b)(a - b) = a^2 - b^2",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 0.67
+    },
+    {
+     "typ": "formel",
+     "text": "(5 + x)(5 - x) = 25 - x^2",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 7.33
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 12.83,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         2.0
+        ],
+        [
+         5.5,
+         2.0
+        ],
+        [
+         5.5,
+         5.0
+        ],
+        [
+         1.0,
+         5.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         0.5
+        ],
+        [
+         5.5,
+         0.5
+        ],
+        [
+         5.5,
+         5.0
+        ],
+        [
+         1.0,
+         5.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.25,
+        5.3
+       ],
+       "text": "a",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.6,
+        2.6
+       ],
+       "text": "a",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 14.81,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.0,
+         0.5
+        ],
+        [
+         5.5,
+         0.5
+        ],
+        [
+         5.5,
+         2.0
+        ],
+        [
+         4.0,
+         2.0
+        ]
+       ],
+       "farbe": 4,
+       "fuellung": 0.12,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.75,
+        1.0
+       ],
+       "text": "b²",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 12.83,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         0.5
+        ],
+        [
+         4.0,
+         0.5
+        ],
+        [
+         4.0,
+         2.0
+        ],
+        [
+         1.0,
+         2.0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.4,
+       "dicke": 2,
+       "bewegung": [
+        [
+         16.95,
+         {}
+        ],
+        [
+         18.35,
+         {
+          "punkte": [
+           [
+            5.5,
+            9.5
+           ],
+           [
+            5.5,
+            6.5
+           ],
+           [
+            7.0,
+            6.5
+           ],
+           [
+            7.0,
+            9.5
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 19.03,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         6.5
+        ],
+        [
+         5.5,
+         6.5
+        ],
+        [
+         5.5,
+         9.5
+        ],
+        [
+         1.0,
+         9.5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         6.5
+        ],
+        [
+         7.0,
+         6.5
+        ],
+        [
+         7.0,
+         9.5
+        ],
+        [
+         1.0,
+         9.5
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.0,
+        9.8
+       ],
+       "text": "a + b",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        7.9
+       ],
+       "text": "a − b",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 27.36
+  },
+  {
+   "name": "Kopfrechnen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Formeln helfen auch beim Kopfrechnen. Einundfünfzig im Quadrat ist fünfzig plus eins im Quadrat: zweitausend fünfhundert plus hundert plus eins, also zweitausend sechshundert eins. Und neunundvierzig mal einundfünfzig ist fünfzig Quadrat minus eins: zweitausend vierhundert neunundneunzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "51^2 = (50 + 1)^2 = 2500 + 100 + 1 = \\fc{2601}",
+     "x": 150,
+     "y": 330,
+     "groesse": 52,
+     "ein": 2.65
+    },
+    {
+     "typ": "formel",
+     "text": "49 \\cdot 51 = (50 - 1)(50 + 1) = 2500 - 1 = \\fc{2499}",
+     "x": 150,
+     "y": 480,
+     "groesse": 52,
+     "ein": 11.51
+    }
+   ],
+   "dauer": 18.93
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: a plus b im Quadrat ist a Quadrat plus zwei a b plus b Quadrat, mit Minus wird nur das mittlere Glied negativ. a plus b mal a minus b ist a Quadrat minus b Quadrat. Nie das mittlere Glied vergessen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "formel",
+     "text": "(a + b)^2 = a^2 + 2ab + b^2",
+     "x": 150,
+     "y": 400,
+     "groesse": 52,
+     "ein": 1.2
+    },
+    {
+     "typ": "formel",
+     "text": "(a - b)^2 = a^2 - 2ab + b^2",
+     "x": 150,
+     "y": 500,
+     "groesse": 52,
+     "ein": 1.6
+    },
+    {
+     "typ": "formel",
+     "text": "(a + b)(a - b) = a^2 - b^2",
+     "x": 150,
+     "y": 600,
+     "groesse": 52,
+     "ein": 2.0
+    }
+   ],
+   "dauer": 14.12
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.29
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Zahlen",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ist (3 + 4)² dasselbe wie 3² + 4²?",
+   "optionen": [
+    "Ja, beides ist 49.",
+    "Nein",
+    "Ja"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja, richtig: Es ist nicht dasselbe.",
+    "2": "Rechne nach: (3 + 4)² = 7² = 49, aber 3² + 4² = 9 + 16 = 25.",
+    "0": "3² + 4² = 9 + 16 = 25, nicht 49."
+   },
+   "sprich": "Ist drei plus vier im Quadrat dasselbe wie drei Quadrat plus vier Quadrat?",
+   "rueck_sprich": {
+    "1": "Richtig: Es ist nicht dasselbe.",
+    "2": "Rechne nach: Sieben im Quadrat ist neunundvierzig, aber neun plus sechzehn ist fünfundzwanzig.",
+    "0": "Drei Quadrat plus vier Quadrat ist neun plus sechzehn, also fünfundzwanzig."
+   }
+  }
+ ]
+}

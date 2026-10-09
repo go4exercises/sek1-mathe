@@ -1,0 +1,1582 @@
+{
+ "titel": "Terme sehen: Faktorisieren",
+ "dateiname": "terme-lp-faktorisieren",
+ "kurzbeschrieb": "Faktorisieren als Ausmultiplizieren rückwärts; ausklammern (6a² − 9a = 3a(2a − 3)), binomische Formeln rückwärts (y² − 10y + 25, 9y² − 25), Zweiklammersatz mit Paartabelle (x² − 7x + 12 = (x − 3)(x − 4)), Probe, kein Gleichungslösen (x² − 25), vollständig faktorisieren (5x² − 20).",
+ "schlagworte": [
+  "faktorisieren",
+  "ausklammern",
+  "binomische Formeln",
+  "Zweiklammersatz",
+  "vollständig"
+ ],
+ "themenbereich": "Arithmetik/Algebra · Terme und Faktorisieren",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "1 · Arithmetik/Algebra",
+ "lektion": [
+  "lp-terme"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Terme sehen",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms terme-faktorisieren; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Rückwärts",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Faktorisieren heisst: eine Summe als Produkt schreiben. Es ist das Ausmultiplizieren rückwärts. Aus x Quadrat plus fünf x plus sechs wird wieder x plus zwei mal x plus drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x^2 + 5x + 6",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 2.26
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{(x + 2)(x + 3)}",
+     "x": 150,
+     "y": 430,
+     "groesse": 66,
+     "ein": 8.86
+    },
+    {
+     "typ": "notiz",
+     "text": "Summe → Produkt",
+     "x": 150,
+     "y": 570,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 2.72
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.52,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         4.7
+        ],
+        [
+         6.0,
+         4.7
+        ],
+        [
+         6.0,
+         9.2
+        ],
+        [
+         1.5,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         4.7
+        ],
+        [
+         6.75,
+         4.7
+        ],
+        [
+         6.75,
+         9.2
+        ],
+        [
+         6.0,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.18,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.75,
+         4.7
+        ],
+        [
+         7.5,
+         4.7
+        ],
+        [
+         7.5,
+         9.2
+        ],
+        [
+         6.75,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.18,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         7.5,
+         4.7
+        ],
+        [
+         8.25,
+         4.7
+        ],
+        [
+         8.25,
+         9.2
+        ],
+        [
+         7.5,
+         9.2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.18,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         3.95
+        ],
+        [
+         6.0,
+         3.95
+        ],
+        [
+         6.0,
+         4.7
+        ],
+        [
+         1.5,
+         4.7
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.18,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         3.2
+        ],
+        [
+         6.0,
+         3.2
+        ],
+        [
+         6.0,
+         3.95
+        ],
+        [
+         1.5,
+         3.95
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.18,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         3.95
+        ],
+        [
+         6.75,
+         3.95
+        ],
+        [
+         6.75,
+         4.7
+        ],
+        [
+         6.0,
+         4.7
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         3.2
+        ],
+        [
+         6.75,
+         3.2
+        ],
+        [
+         6.75,
+         3.95
+        ],
+        [
+         6.0,
+         3.95
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.75,
+         3.95
+        ],
+        [
+         7.5,
+         3.95
+        ],
+        [
+         7.5,
+         4.7
+        ],
+        [
+         6.75,
+         4.7
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.75,
+         3.2
+        ],
+        [
+         7.5,
+         3.2
+        ],
+        [
+         7.5,
+         3.95
+        ],
+        [
+         6.75,
+         3.95
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         7.5,
+         3.95
+        ],
+        [
+         8.25,
+         3.95
+        ],
+        [
+         8.25,
+         4.7
+        ],
+        [
+         7.5,
+         4.7
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         7.5,
+         3.2
+        ],
+        [
+         8.25,
+         3.2
+        ],
+        [
+         8.25,
+         3.95
+        ],
+        [
+         7.5,
+         3.95
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.35,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.5,
+         3.2
+        ],
+        [
+         8.25,
+         3.2
+        ],
+        [
+         8.25,
+         9.2
+        ],
+        [
+         1.5,
+         9.2
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.86,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        4.875,
+        9.6
+       ],
+       "text": "x + 3",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.9,
+        6.0
+       ],
+       "text": "x + 2",
+       "farbe": 3,
+       "anker": "end",
+       "groesse": 38,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 12.25
+  },
+  {
+   "name": "Ausklammern",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zuerst suchst du einen gemeinsamen Faktor. In sechs a Quadrat und in neun a steckt beide Male drei a. Klammere ihn aus: drei a mal die Klammer zwei a minus drei. Nur a auszuklammern reicht nicht: In sechs a minus neun steckt noch die Drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "6a^2 - 9a",
+     "x": 150,
+     "y": 280,
+     "groesse": 64,
+     "ein": 0.3
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fb{3a} \\cdot 2a - \\fb{3a} \\cdot 3",
+     "x": 150,
+     "y": 392,
+     "groesse": 58,
+     "ein": 5.35
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{\\fb{3a}(2a - 3)}",
+     "x": 150,
+     "y": 500,
+     "groesse": 62,
+     "ein": 6.87
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{a(6a - 9)}: \\text{ nicht fertig}",
+     "x": 150,
+     "y": 620,
+     "groesse": 52,
+     "ein": 11.71
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.35,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        7.4
+       ],
+       "text": "ggT(6; 9) = 3",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 42,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.15,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.6
+       ],
+       "text": "a² = a · a  und  a",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.87,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        3.8
+       ],
+       "text": "gemeinsam: 3a",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 46,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 16.71
+  },
+  {
+   "name": "Binomisch rückwärts",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Dann prüfst du, ob eine binomische Formel passt. Bei y Quadrat minus zehn y plus fünfundzwanzig ist fünfundzwanzig gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also y minus fünf im Quadrat. Neun y Quadrat minus fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: drei y minus fünf mal drei y plus fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y^2 - 10y + 25 = \\fc{(y - 5)^2}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 11.3
+    },
+    {
+     "typ": "notiz",
+     "text": "@25 = 5^2@, @10y = 2 \\cdot y \\cdot 5@",
+     "x": 150,
+     "y": 420,
+     "groesse": 40,
+     "farbe": "orange",
+     "ein": 6.88
+    },
+    {
+     "typ": "formel",
+     "text": "9y^2 - 25 = \\fc{(3y - 5)(3y + 5)}",
+     "x": 150,
+     "y": 540,
+     "groesse": 56,
+     "ein": 17.5
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.6,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        7.4
+       ],
+       "text": "a² − 2ab + b² = (a − b)²",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 16.88,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        4.4
+       ],
+       "text": "a² − b² = (a + b)(a − b)",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 22.3
+  },
+  {
+   "name": "Zweiklammersatz",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Schreib die Zahlenpaare mit dem Produkt zwölf auf: eins und zwölf, zwei und sechs, drei und vier, und dieselben negativ. Die Summe minus sieben haben nur minus drei und minus vier. Also x minus drei mal x minus vier.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x^2 \\fa{- 7}x \\fb{+ 12}",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.05
+    },
+    {
+     "typ": "notiz",
+     "text": "Produkt @12@, Summe @-7@",
+     "x": 150,
+     "y": 430,
+     "groesse": 44,
+     "farbe": "orange",
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{(x - 3)(x - 4)}",
+     "x": 150,
+     "y": 560,
+     "groesse": 66,
+     "ein": 11.32
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.94,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        9.1
+       ],
+       "text": "Produkt 12",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        9.1
+       ],
+       "text": "Summe",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.8,
+        8.65
+       ],
+       "bis": [
+        9.2,
+        8.65
+       ],
+       "farbe": 5,
+       "dicke": 2
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.06,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        7.9
+       ],
+       "text": "1 · 12",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        7.9
+       ],
+       "text": "13",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.3,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        6.85
+       ],
+       "text": "2 · 6",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        6.85
+       ],
+       "text": "8",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.44,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        5.8
+       ],
+       "text": "3 · 4",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        5.8
+       ],
+       "text": "7",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.14,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        4.75
+       ],
+       "text": "(−1) · (−12)",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        4.75
+       ],
+       "text": "−13",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        3.7
+       ],
+       "text": "(−2) · (−6)",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        3.7
+       ],
+       "text": "−8",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        2.65
+       ],
+       "text": "(−3) · (−4)",
+       "farbe": 4,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.4,
+        2.65
+       ],
+       "text": "−7",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.12,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.8,
+         2.3
+        ],
+        [
+         9.2,
+         2.3
+        ],
+        [
+         9.2,
+         3.25
+        ],
+        [
+         0.8,
+         3.25
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.15,
+       "dicke": 4
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 16.07
+  },
+  {
+   "name": "Probe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Prüfe, indem du ausmultiplizierst: x Quadrat minus vier x minus drei x plus zwölf, also wieder x Quadrat minus sieben x plus zwölf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(x - 3)(x - 4) = x^2 - 4x - 3x + 12",
+     "x": 150,
+     "y": 300,
+     "groesse": 52,
+     "ein": 0.57
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{x^2 - 7x + 12}",
+     "x": 150,
+     "y": 420,
+     "groesse": 62,
+     "ein": 6.45
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.57,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1.0,
+         3.6
+        ],
+        [
+         9.0,
+         3.6
+        ],
+        [
+         9.0,
+         9.0
+        ],
+        [
+         1.0,
+         9.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0,
+       "dicke": 3
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3.0,
+        9.0
+       ],
+       "bis": [
+        3.0,
+        3.6
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6.0,
+        9.0
+       ],
+       "bis": [
+        6.0,
+        3.6
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.0,
+        7.6
+       ],
+       "bis": [
+        9.0,
+        7.6
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.0,
+        5.6
+       ],
+       "bis": [
+        9.0,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        8.15
+       ],
+       "text": "·",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.5,
+        8.15
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        6.45
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.5,
+        8.15
+       ],
+       "text": "−4",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        4.45
+       ],
+       "text": "−3",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         5.6
+        ],
+        [
+         6.0,
+         5.6
+        ],
+        [
+         6.0,
+         7.6
+        ],
+        [
+         3.0,
+         7.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.2,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         5.6
+        ],
+        [
+         9.0,
+         5.6
+        ],
+        [
+         9.0,
+         7.6
+        ],
+        [
+         6.0,
+         7.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.2,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3.0,
+         3.6
+        ],
+        [
+         6.0,
+         3.6
+        ],
+        [
+         6.0,
+         5.6
+        ],
+        [
+         3.0,
+         5.6
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.2,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         3.6
+        ],
+        [
+         9.0,
+         3.6
+        ],
+        [
+         9.0,
+         5.6
+        ],
+        [
+         6.0,
+         5.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.2,
+       "dicke": 0
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.5,
+        6.45
+       ],
+       "text": "x²",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.5,
+        6.45
+       ],
+       "text": "−4x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.5,
+        4.45
+       ],
+       "text": "−3x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.5,
+        4.45
+       ],
+       "text": "+12",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.61
+  },
+  {
+   "name": "Kein Gleichungslösen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Achtung: Faktorisieren ist kein Gleichungslösen. Bei der Aufgabe, x Quadrat minus fünfundzwanzig zu faktorisieren, ist die Antwort ein Produkt: x minus fünf mal x plus fünf. Ein Ergebnis wie x gleich fünf beantwortet eine andere Frage.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x^2 - 25 = \\fc{(x - 5)(x + 5)}",
+     "x": 150,
+     "y": 320,
+     "groesse": 60,
+     "ein": 7.5
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{x = 5}: \\text{ eine andere Frage}",
+     "x": 150,
+     "y": 460,
+     "groesse": 52,
+     "ein": 10.74
+    }
+   ],
+   "dauer": 14.83
+  },
+  {
+   "name": "Vollständig",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vollständig faktorisiert ist ein Term erst, wenn sich kein Faktor mehr zerlegen lässt. Fünf x Quadrat minus zwanzig: zuerst fünf ausklammern, dann bleibt x Quadrat minus vier, und das ist x minus zwei mal x plus zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5x^2 - 20 = \\fb{5}(x^2 - 4)",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 7.27
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{5(x - 2)(x + 2)}",
+     "x": 150,
+     "y": 420,
+     "groesse": 62,
+     "ein": 8.33
+    }
+   ],
+   "dauer": 13.03
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Faktorisieren macht aus einer Summe ein Produkt. Zuerst ausklammern, dann eine binomische Formel prüfen, dann der Zweiklammersatz mit Produkt und Summe. Vollständig faktorisieren und am Schluss ausmultiplizieren, als Probe.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "1. ausklammern|2. binomische Formel rückwärts|3. Zweiklammersatz: Produkt und Summe|vollständig, dann Probe",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 14.63
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.27
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Zweiklammersatz",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "x² − 7x + 12: Welche zwei Zahlen haben das Produkt 12 und die Summe −7?",
+   "optionen": [
+    "3 und 4",
+    "−2 und −6",
+    "−3 und −4"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "3 · 4 = 12 stimmt, aber 3 + 4 = 7, nicht −7.",
+    "1": "(−2) · (−6) = 12 stimmt, aber die Summe ist −8."
+   },
+   "sprich": "x Quadrat minus sieben x plus zwölf: Welche zwei Zahlen haben das Produkt zwölf und die Summe minus sieben?",
+   "rueck_sprich": {
+    "0": "Drei mal vier ist zwölf, aber drei plus vier ist plus sieben.",
+    "1": "Minus zwei mal minus sechs ist zwölf, aber die Summe ist minus acht."
+   }
+  }
+ ]
+}
