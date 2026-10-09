@@ -31,5 +31,19 @@ Unverändert übernommen, passt erst, wenn es gebraucht wird:
 - [ ] 11 Themenseiten in `themen/` sind Gerüste — je nach `TEMPLATE.html` ausbauen.
       Die SEO-Beschreibungen in `scripts/build-seo.py` sind Platzhalter.
 - [ ] Glossar, Formelsammlung, Clips, Leitprogramme.
+
+## Leitprogramm Bruchrechnen (09.10.2026, unverlinkt)
+
+`leitprogramme/bruchrechnen.html`, gebaut mit `scripts/lp/bruchrechnen/` (README dort). Steht mit
+`noindex`, ohne Karte, Suchindex und Themenseiten-Kasten (HOWTO-leitprogramme §13/§15).
+
+- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bruchrechnen.html`, Befunde hierher.
+- [ ] 🔑 Abnahme: PDFs ansehen (hier ohne PDF-Renderer nur Text und Log geprüft) und das Bewertungspaket mit
+      einer absichtlich fehlerhaften Lösung einer KI geben.
+- [ ] Bearbeitungszeit mit 2–3 Lernenden verschiedener Stärke messen (geschätzt 195 min, BM-Vorlage §4.3).
+- [ ] Clips fehlen (Bibliothek leer): je Kapitel Einführungs- und Kontrollclip, wenn beauftragt.
+- [ ] Themenseite 1.4 ist ein Gerüst: Notation des Leitprogramms (ggT/kgV mit Strichpunkt, Hauptnenner,
+      Kehrwert, «vollständig gekürzt», keine gemischten Zahlen) dort übernehmen oder abweichend entscheiden.
+- [ ] Freischalten (alle fünf Stellen nach §13), erst nach Prüfung und Abnahme.
 - [ ] `feedback.html` sendet an dasselbe Google-Apps-Skript wie TALS Mathe — prüfen, ob
       die Rückmeldungen dort nach Site unterscheidbar sind.

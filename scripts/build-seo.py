@@ -100,6 +100,15 @@ SEITEN = {
    beschreibung='Fehler melden, Verbesserungen vorschlagen oder Rückmeldung geben zu Sek1-Mathe begreifbar — ohne Anmeldung, Name und E-Mail freiwillig.',
    themen=['Kontakt', 'Feedback']),
 
+ # ── Leitprogramme ─────────────────────────────────────────────────
+ # Bruchrechnen: unverlinkt bis zur Prüfung nach HOWTO-leitprogramme §15 (noindex, keine Karte,
+ # kein Suchindex-Eintrag, kein Kasten auf der Themenseite).
+ 'leitprogramme/bruchrechnen.html': dict(
+   typ='article', lrt='Leitprogramm', noindex=True,
+   titel='Leitprogramm Bruchrechnen — erweitern, kürzen, addieren, multiplizieren, dividieren',
+   beschreibung='Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.',
+   themen=['Mathematik', 'Bruchrechnen', 'Brüche', 'Kürzen', 'Hauptnenner', 'Kehrwert', 'Rechenreihenfolge', 'Leitprogramm', 'Sekundarstufe I']),
+
  # ── Themen ────────────────────────────────────────────────────────
  'themen/t1-1-zahlenmengen-zahlenarten.html': dict(
    beschreibung='Zahlenmengen und Zahlenarten — Themenseite im Aufbau: Einstieg, Definition, interaktive Animationen, Aufgaben mit Lösungen und Zusammenfassung für die Sekundarstufe I.',

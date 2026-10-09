@@ -1,0 +1,85 @@
+% Gesamttest «Bruchrechnen» — Quelle des PDFs (python3 scripts/build-lp-pdf.py bruchrechnen).
+% Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet
+% (scripts/lp/bruchrechnen/zahlen.py, 09.10.2026). Kein \lt/\gt — pdfLaTeX kennt sie nicht.
+% Kombinationen statt Wiederholung der Kapitelaufgaben: G2 drei Brüche, G3 Vergleichen mit Hauptnenner,
+% G4 Mal und Durch in einer Kette, G5 Sachkontext, G7/G8 Potenz bzw. Vorzeichen mit Division,
+% G9 Fehler in einer fremden Lösung (Punkt vor Strich).
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\renewcommand{\lpname}{Bruchrechnen}
+\renewcommand{\lpteilgebiet}{1.4}
+\renewcommand{\lpfuss}{Gesamttest · 24 Punkte}
+\begin{document}
+\lpkopf{Gesamttest}{%
+  \vspace{4pt}\noindent\begin{tabularx}{\linewidth}{@{}X X@{}}
+  Code (kein Name): \hrulefill & Punkte: \hrulefill\ / 24
+  \end{tabularx}}
+
+\begin{lpinfo}{Anleitung}
+\textbf{Zeit:} rund 25 Minuten. \textbf{Hilfsmittel:} keine — kein Taschenrechner.
+Schreib zu jeder Aufgabe den \textbf{Rechenweg} auf — bewertet wird der Weg. Gib Ergebnisse als
+\textbf{vollständig gekürzte Brüche} oder ganze Zahlen an, nicht als Dezimalzahl und nicht als gemischte Zahl.
+Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung scannen bzw.\ fotografieren (ohne Namen und Standort)
+und mit dem Bewertungspaket einer KI geben.
+\end{lpinfo}
+
+\lpteil{Teil A · Erweitern, Kürzen, Addieren}{Kapitel 1 und 2 · 7 Punkte}
+
+\begin{lpaufgabe}{G1}{Kürzen}{2 P}
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=1pt]
+\item Kürze vollständig: $\dfrac{84}{126}$
+\item Sind $\dfrac{14}{35}$ und $\dfrac{6}{15}$ gleich gross? Begründe.
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Drei Brüche}{3 P}
+Berechne: $\;\dfrac{7}{15} + \dfrac{5}{6} - \dfrac{1}{2}$
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G3}{Vergleichen}{2 P}
+Ordne der Grösse nach, beginne mit dem kleinsten: $\;\dfrac{5}{6}$, $\;\dfrac{7}{9}$, $\;\dfrac{3}{4}$
+\lpplatz{4}
+\end{lpaufgabe}
+
+\lpteil{Teil B · Multiplizieren und Dividieren}{Kapitel 3 · 5 Punkte}
+
+\begin{lpaufgabe}{G4}{Mal und durch}{3 P}
+Berechne: $\;\dfrac{9}{14} \cdot \dfrac{7}{12} : \dfrac{3}{8}$
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G5}{Flasche und Gläser}{2 P}
+Eine Flasche enthält $\tfrac{3}{2}$ Liter Saft.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=1pt]
+\item Wie viele Gläser zu $\tfrac{1}{4}$ Liter kann man damit füllen? Schreib die Rechnung auf.
+\item Wie viele Liter sind $\tfrac{2}{3}$ des Flascheninhalts?
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\lpteil{Teil C · Rechenreihenfolge und negative Brüche}{Kapitel 4 · 12 Punkte}
+
+\begin{lpaufgabe}{G6}{Klammer und Punkt vor Strich}{3 P}
+Berechne: $\;\dfrac{3}{4} - \dfrac{1}{2} \cdot \left(\dfrac{5}{6} - \dfrac{1}{3}\right)$
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G7}{Potenz}{3 P}
+Berechne: $\;\left(-\dfrac{2}{3}\right)^2 : \dfrac{8}{9} - 1$
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Negative Brüche}{3 P}
+Berechne: $\;-\dfrac{5}{6} + \dfrac{2}{3} : \left(-\dfrac{4}{9}\right)$
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G9}{Fehler finden}{3 P}
+Jemand rechnet:
+\[ \frac{1}{3} + \frac{1}{6} \cdot 4 = \frac{3}{6} \cdot 4 = \frac{12}{6} = 2 \]
+Welche Regel wurde verletzt? Begründe in einem Satz und rechne richtig.
+\lpplatz{5}
+\end{lpaufgabe}
+\end{document}

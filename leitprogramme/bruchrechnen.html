@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leitprogramm Bruchrechnen</title>
+<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->
+<meta name="description" content="Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.">
+<meta name="author" content="Raphael Arnold Kohler">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sek1-mathe.begreifbar.ch/leitprogramme/bruchrechnen.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sek1-Mathe begreifbar">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Leitprogramm Bruchrechnen — erweitern, kürzen, addieren, multiplizieren, dividieren">
+<meta property="og:description" content="Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.">
+<meta property="og:url" content="https://sek1-mathe.begreifbar.ch/leitprogramme/bruchrechnen.html">
+<meta property="og:image" content="https://sek1-mathe.begreifbar.ch/og-bild.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://sek1-mathe.begreifbar.ch/leitprogramme/bruchrechnen.html#inhalt",
+   "url": "https://sek1-mathe.begreifbar.ch/leitprogramme/bruchrechnen.html",
+   "name": "Leitprogramm Bruchrechnen — erweitern, kürzen, addieren, multiplizieren, dividieren",
+   "description": "Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.",
+   "inLanguage": "de-CH",
+   "isAccessibleForFree": true,
+   "license": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
+   "creator": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "publisher": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "dateModified": "2026-10-09",
+   "isPartOf": {
+    "@id": "https://sek1-mathe.begreifbar.ch/#website"
+   },
+   "about": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Mathematik"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Bruchrechnen"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Brüche"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Kürzen"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Hauptnenner"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Kehrwert"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Rechenreihenfolge"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Leitprogramm"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Sekundarstufe I"
+    }
+   ],
+   "keywords": "Mathematik, Bruchrechnen, Brüche, Kürzen, Hauptnenner, Kehrwert, Rechenreihenfolge, Leitprogramm, Sekundarstufe I",
+   "learningResourceType": "Leitprogramm",
+   "educationalLevel": "Sekundarstufe I (Schweiz)",
+   "typicalAgeRange": "12-16",
+   "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": [
+     "student",
+     "teacher"
+    ]
+   },
+   "interactivityType": "active"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sek1-mathe.begreifbar.ch/#website",
+   "url": "https://sek1-mathe.begreifbar.ch/",
+   "name": "Sek1-Mathe begreifbar"
+  }
+ ]
+}
+</script>
+<!-- SEO:ENDE -->
+<link rel="stylesheet" href="../schriften.css">
+<!-- Die Seite erbt Farben, Karten und Kopf von der Site. Reihenfolge zählt: der eigene <style> unten
+     gewinnt bei gleichem Gewicht, das Leitprogramm behält also sein Layout. -->
+<link rel="stylesheet" href="../style.css">
+<style>
+:root{
+  /* Die Palette kommt aus ../style.css — 20 Tokens, Wert fuer Wert dieselben.
+     Hier steht nur, was dort anders heisst oder fehlt. Damit kann sie nicht
+     mehr auseinanderlaufen. */
+  --karte:var(--weiss);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+    --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+    --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+    --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+    --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+    --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+    --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+    --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+    --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+  --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+  --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+  --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+  --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+  --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+  --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+  --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+  --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);
+  font-family:var(--serif);font-size:17px;line-height:1.62;
+  -webkit-text-size-adjust:100%}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.22;margin:0}
+a{color:var(--petrol)}   /* Bereichsfarbe Sek I (CLAUDE.md) */
+:focus-visible{outline:2.5px solid var(--lila-rand);outline-offset:2px;border-radius:3px}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+
+/* ---------- Gerüst ---------- */
+.huelle{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+.raster{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:1000px){
+  .raster{grid-template-columns:236px minmax(0,1fr);gap:52px;align-items:start}
+}
+.inhalt{min-width:0;max-width:70ch}
+
+/* ---------- Kopf ---------- */
+.kopf{border-bottom:1px solid var(--linie);background:var(--papier-2);
+  margin-bottom:44px;padding:0 20px}
+.kopf-innen{max-width:1180px;margin:0 auto;padding:30px 0 34px;
+  display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+.marke{font-family:var(--sans);font-size:.76rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinte-2);margin:0 0 10px}
+.kopf h1{font-size:clamp(2rem,5.2vw,2.9rem);font-weight:700;letter-spacing:-.015em}
+.kopf .unter{font-family:var(--sans);color:var(--tinte-2);margin:10px 0 0;font-size:1rem;max-width:52ch}
+.kopf-rechts{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);text-align:right;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.themenschalter{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--tinte-2);
+  background:var(--karte);border:1px solid var(--linie);border-radius:999px;
+  padding:6px 13px;cursor:pointer}
+.themenschalter:hover{color:var(--tinte);border-color:var(--tinte-2)}
+
+/* ---------- Seitenschiene ---------- */
+.schiene{font-family:var(--sans);font-size:.87rem;margin-bottom:40px}
+@media(min-width:1000px){.schiene{position:sticky;top:22px;margin-bottom:0}}
+.schiene h2{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin-bottom:12px}
+.schiene ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.schiene a{display:flex;gap:9px;align-items:baseline;padding:6px 8px;border-radius:5px;
+  text-decoration:none;color:var(--tinte);border-left:2.5px solid transparent}
+.schiene a:hover{background:var(--papier-2)}
+.schiene a.aktiv{border-left-color:var(--petrol-rand);background:var(--papier-2);font-weight:600}
+.schiene .nr{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);min-width:1.6em}
+.schiene .lekt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin:16px 0 5px;padding-left:8px}
+.fortschritt{margin-top:22px;padding-top:16px;border-top:1px solid var(--linie)}
+.balken{height:6px;background:var(--papier-2);border:1px solid var(--linie);border-radius:99px;overflow:hidden}
+.balken i{display:block;height:100%;background:var(--gruen-rand);width:0;transition:width .35s ease}
+.fortschritt p{margin:9px 0 0;font-size:.79rem;color:var(--tinte-2)}
+.fortschritt button{margin-top:10px;font-family:var(--sans);font-size:.75rem;color:var(--tinte-2);
+  background:none;border:none;padding:0;cursor:pointer;text-decoration:underline}
+
+/* ---------- Anleitung ---------- */
+.anleitung{background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:22px 26px;margin-bottom:46px;box-shadow:var(--s)}
+.anleitung summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px}
+.anleitung summary::-webkit-details-marker{display:none}
+.anleitung summary::after{content:"";flex:none;margin-left:auto;width:.5em;height:.5em;
+  border-right:2px solid var(--tinte-2);border-bottom:2px solid var(--tinte-2);
+  transform:translateY(-.15em) rotate(45deg);transition:transform .2s}
+.anleitung[open] summary::after{transform:translateY(.1em) rotate(-135deg)}
+.anleitung h2{font-size:1.12rem}
+.anleitung ol{margin:12px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.94rem;color:var(--tinte-2)}
+.anleitung li{margin:6px 0}
+.anleitung li b{color:var(--tinte)}
+
+/* ---------- Lektionsband ---------- */
+.band{display:flex;align-items:center;gap:14px;margin:56px 0 30px}
+.band:first-of-type{margin-top:8px}
+.band .strich{flex:1;height:1px;background:var(--linie)}
+.band span{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--tinte-2);white-space:nowrap}
+
+/* ---------- Kapitel ---------- */
+.kap{margin-bottom:52px;scroll-margin-top:20px}
+.kap-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.marker{font-family:var(--mono);font-size:.74rem;font-weight:700;letter-spacing:.04em;
+  padding:3px 8px;border-radius:4px;background:var(--papier-2);color:var(--tinte-2)}
+.abz{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.05em;
+  padding:3px 9px;border-radius:999px;border:1px solid}
+.abz-th{color:var(--petrol);border-color:var(--petrol-rand);background:var(--petrol-hell)}
+.abz-sf{color:var(--lila);border-color:var(--lila-rand);background:var(--lila-hell)}
+.zeit{font-family:var(--sans);font-size:.78rem;color:var(--tinte-2)}
+.kap h2{font-size:1.62rem;font-weight:700;letter-spacing:-.01em}
+.ziel{font-family:var(--sans);font-size:.95rem;color:var(--tinte-2);
+  border-left:2.5px solid var(--linie);padding-left:13px;margin:12px 0 22px}
+.kap h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:30px 0 10px}
+.kap p{margin:0 0 14px}
+
+/* ---------- Clipkarte ---------- */
+.clipkarte{margin:22px 0 26px}
+.clip-start{display:flex;width:100%;align-items:center;gap:15px;text-align:left;cursor:pointer;
+  background:var(--lila-hell);border:1px solid var(--lila-rand);border-radius:10px;
+  padding:14px 17px;font-family:var(--sans);color:var(--tinte)}
+.clip-start:hover{box-shadow:var(--sl)}
+.clip-play{flex:none;width:38px;height:38px;border-radius:50%;background:var(--lila);color:#fff;
+  display:grid;place-items:center;font-size:.9rem;padding-left:3px}
+:root[data-theme="dark"] .clip-play,
+:root:not([data-theme="light"]) .clip-play{color:#171512}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .clip-play{color:#fff}}
+.clip-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.clip-titel{font-weight:600;font-size:.97rem;line-height:1.32}
+.clip-quelle{font-size:.75rem;color:var(--tinte-2);letter-spacing:.03em}
+.clip-zeit{font-family:var(--mono);font-size:.8rem;color:var(--tinte-2);flex:none}
+@media(max-width:720px){
+}
+
+/* ---------- Merkkasten, Beispiele, Warnung ---------- */
+.merk{background:var(--blau-hell);border:1px solid var(--blau-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.merk .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--blau);margin-bottom:8px}
+.merk p:last-child{margin-bottom:0}
+.warn{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.warn .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.warn p:last-child{margin-bottom:0}
+
+table.gesetze{width:100%;border-collapse:collapse;margin:18px 0;font-size:.97rem}
+.tabhuelle{overflow-x:auto}
+table.gesetze th,table.gesetze td{border-bottom:1px solid var(--linie);padding:9px 10px;text-align:left;vertical-align:middle}
+table.gesetze th{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tinte-2)}
+table.gesetze td:first-child{font-family:var(--mono);font-size:.82rem;color:var(--tinte-2);white-space:nowrap;width:1%}
+table.gesetze td.wort{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+
+.beisp{margin:18px 0;border:1px solid var(--linie);border-radius:8px;background:var(--karte);overflow:hidden}
+.beisp .kopfz{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--tinte-2);background:var(--papier-2);
+  padding:7px 16px;border-bottom:1px solid var(--linie)}
+.beisp ul{list-style:none;margin:0;padding:12px 16px;display:flex;flex-direction:column;gap:9px}
+.beisp li{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.beisp .schritt{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2)}
+
+/* ---------- Selbsttest ---------- */
+.test{border:1.5px solid var(--gruen-rand);border-radius:11px;background:var(--karte);
+  margin:30px 0 0;overflow:hidden}
+.test-kopf{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
+  background:var(--gruen-hell);padding:11px 18px;border-bottom:1px solid var(--gruen-rand)}
+.test-kopf h3{font-family:var(--sans);font-size:.94rem;font-weight:700;color:var(--gruen);margin:0}
+.test-kopf .werkz{display:flex;gap:14px;align-items:center;font-family:var(--sans);font-size:.78rem}
+.test-kopf button{font-family:var(--sans);font-size:.78rem;background:none;border:none;
+  color:var(--gruen);cursor:pointer;text-decoration:underline;padding:0}
+.test-kopf label{display:flex;gap:6px;align-items:center;color:var(--tinte-2);cursor:pointer}
+.aufg{list-style:none;margin:0;padding:6px 18px 18px}
+.aufg>li{border-bottom:1px dotted var(--linie);padding:11px 0}
+.aufg>li:last-child{border-bottom:none;padding-bottom:2px}
+.frage{display:flex;gap:11px;align-items:baseline}
+.frage .nr{font-family:var(--mono);font-size:.83rem;font-weight:700;color:var(--gruen);
+  flex:none;min-width:2.4em}
+.frage .pkt{font-family:var(--mono);font-size:.72rem;color:var(--tinte-2);
+  flex:none;min-width:3.4em;margin-left:-4px}
+.frage .txt{flex:1;min-width:0}
+details.loes{margin:7px 0 0 calc(5.8em + 11px)}
+details.loes summary{font-family:var(--sans);font-size:.79rem;color:var(--tinte-2);
+  cursor:pointer;list-style:none;display:inline-flex;gap:6px;align-items:center;
+  border:1px solid var(--linie);border-radius:999px;padding:2px 11px}
+details.loes summary::-webkit-details-marker{display:none}
+details.loes summary:hover{border-color:var(--gruen-rand);color:var(--gruen)}
+details.loes[open] summary{color:var(--gruen);border-color:var(--gruen-rand)}
+details.loes .inhaltbox{border-left:2.5px solid var(--gruen-rand);padding:6px 0 2px 13px;margin-top:9px}
+details.loes .inhaltbox p{margin:0 0 7px}
+details.loes .inhaltbox p:last-child{margin-bottom:0}
+.komm{font-family:var(--sans);font-size:.87rem;color:var(--tinte-2)}
+
+/* ---------- Gesamttest ---------- */
+.gesamt{border:2px solid var(--tinte-2);border-radius:12px;background:var(--karte);
+  padding:0;overflow:hidden;margin-top:20px}
+.gesamt-kopf{background:var(--papier-2);padding:16px 20px;border-bottom:1px solid var(--linie)}
+.gesamt-kopf h2{font-size:1.4rem}
+.gesamt-kopf p{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2);margin:7px 0 0}
+.gesamt-teil{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinte-2);padding:18px 20px 0}
+.gesamt .aufg{padding:6px 20px 16px}
+.summe{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);white-space:nowrap}
+.bewertung{margin:0;padding:16px 20px 20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+.bewertung table{width:100%;border-collapse:collapse;margin-top:8px}
+.bewertung td{padding:5px 8px;border-bottom:1px solid var(--linie)}
+.bewertung td:first-child{font-family:var(--mono);white-space:nowrap;width:1%;color:var(--tinte)}
+
+/* ---------- Fuss ---------- */
+.fuss{margin-top:64px;padding-top:20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .huelle{padding:0 15px 70px}
+  details.loes{margin-left:0}
+}
+@media print{
+  .schiene,.themenschalter,.clip-buehne,.test-kopf .werkz{display:none}
+  .kap{break-inside:avoid}
+  details.loes{display:none}
+  body{background:#fff}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* ── Fuss im Dunkelmodus ─────────────────────────────────────────
+   Kopf und Menue kommen ohne Nachhilfe aus: style.css faerbt seine
+   Flaechen mit --weiss, und das ist oben dunkel gesetzt. Nur der Fuss
+   braucht eine Regel — er benutzt --tinte als *Flaeche*, und die kippt
+   im Dunkelmodus mit dem Text nach hell. */
+:root[data-theme="dark"] .site-footer{
+  background:var(--papier-2); color:var(--tinte-2);
+  border-top:1px solid var(--linie);
+}
+:root[data-theme="dark"] .site-footer a{ color:var(--petrol); }
+
+/* Das Lektionsband traegt `white-space:nowrap`. Auf schmalen Schirmen
+   laeuft ein laengerer Untertitel damit ueber den Rand hinaus — in der
+   Uebungspruefung derselbe Fall, dort mit derselben Zeile behoben. */
+@media(max-width:600px){ .band span{white-space:normal} }
+/* ════════ HOWTO-leitprogramme.md §6 — Fliesstext schmal, Arbeitsflaechen breit ════════
+   Vorher: .inhalt max-width 70ch (~620 px), .huelle 1180 px. Auf 1280 px blieben
+   rechts ~230 px leer. Jetzt begrenzen die Textelemente sich selbst, Beispiele,
+   Tabellen, Tests und Erkundungen nehmen die ganze Spalte, und .duo stellt zwei
+   zusammengehoerige Teile ab 1180 px nebeneinander. Quelltextreihenfolge =
+   Lesereihenfolge auf dem Handy. */
+.huelle,.kopf-innen{max-width:1440px}
+.inhalt{max-width:none}
+.kap>p,.kap>h2,.kap>h3,.ziel,.duo>div>p,.erkunden p,.erkunden ol{max-width:68ch}
+.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px;align-items:start}
+.duo>*{min-width:0}
+@media(min-width:1180px){
+  .duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .aufg.zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:34px}
+  .aufg.zwei>li:nth-last-child(2):nth-child(odd){border-bottom:none}
+}
+.duo>.anleitung{margin-bottom:24px}
+.duo>.rlp-kompetenzen{margin:0 0 24px}
+.rlp-kompetenzen .rlp-fuss{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin:8px 0 0}
+
+/* Didaktische Farben nach STYLEGUIDE §5: Rot = Fehler/Achtung, Orange = Aufgabe.
+   Die Vorlage faerbte den Haeufigen Fehler orange; hier rot, damit das Orange
+   frei ist fuer den Erkundungsauftrag. */
+.warn{background:var(--rot-hell);border-color:var(--rot-rand)}
+.warn .titel{color:var(--rot)}
+.erkunden{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.erkunden .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.erkunden ol{margin:6px 0 10px;padding-left:1.3em}
+.erkunden li{margin:4px 0}
+.erkunden p:last-child{margin-bottom:0}
+.notiz{font-family:var(--sans);font-size:.9rem;color:var(--tinte-2)}
+.ausf{font-family:var(--sans);font-size:.92rem;border-top:1px solid var(--linie);padding-top:12px;margin-top:26px}
+.knopf-link{font-family:var(--sans);font-size:.8rem;background:none;border:none;padding:0;
+  color:var(--tinte-2);text-decoration:underline;cursor:pointer}
+table.gesetze.formen td:first-child{font-family:var(--sans);font-size:.86rem;color:var(--tinte);
+  white-space:normal;width:auto;font-weight:600}
+table.gesetze.formen td:first-child .wort{font-weight:400}
+.weiter{margin-top:30px}
+.beisp .wert{flex:1;min-width:0}
+
+/* ---------- eingebettete Simulation (§8b) ---------- */
+.sim{margin:20px 0;background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:14px 16px 12px}
+.sim > svg{display:block;width:100%;max-width:420px;height:auto;margin:6px auto 10px}
+.sim-formel{font-family:var(--mono);font-size:1rem;text-align:center;padding:6px 8px;
+  background:var(--papier-2);border-radius:6px}
+.sim figcaption{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);text-align:center;margin-top:8px}
+.sl-row{display:flex;gap:10px;align-items:center;font-family:var(--sans);font-size:.9rem}
+.sl-row input[type=range]{flex:1}
+.sl-val{font-family:var(--mono);font-size:.86rem;min-width:2.6em}
+.sim .gitter{stroke:var(--linie);stroke-width:.6}
+.sim .achse{stroke:var(--tinte-2);stroke-width:1.2}
+.sim .skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+.sim .normal{fill:none;stroke:var(--tinte-2);stroke-width:1.4;stroke-dasharray:5 4;opacity:.7}
+.sim .kurve{fill:none;stroke:var(--blau);stroke-width:2.6}
+.sim .scheitel{fill:var(--tinte)}
+.sim .s-text{fill:var(--tinte);font-family:var(--sans);font-size:12px;font-weight:600}
+
+/* ════════ Fassung 2 — «zuerst sehen» (HOWTO-leitprogramme.md §4, §8) ════════ */
+.phase{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinte-2);margin:34px 0 8px;display:flex;align-items:center;gap:8px}
+.phase span{display:inline-grid;place-items:center;width:1.7em;height:1.7em;border-radius:50%;
+  background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte);font-size:.9rem;letter-spacing:0}
+.sim-knoepfe{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin:8px 0 2px;
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2)}
+.sim-knoepfe button,.formen-live button{font-family:var(--sans);font-size:.8rem;cursor:pointer;
+  background:var(--karte);color:var(--tinte);border:1px solid var(--linie);border-radius:999px;padding:4px 12px}
+.sim-knoepfe button.aktiv{background:var(--gruen-hell);border-color:var(--gruen-rand);color:var(--gruen);font-weight:700}
+.formen-live{display:flex;flex-direction:column;gap:5px}
+.formen-live button{border-radius:7px;display:flex;gap:10px;align-items:baseline;text-align:left;padding:6px 10px;
+  font-family:var(--mono);font-size:.86rem}
+.formen-live .fl-name{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;min-width:8.5em;color:var(--tinte-2)}
+.formen-live button[data-form="g"].aktiv{border-color:var(--blau-rand);background:var(--blau-hell)}
+.formen-live button[data-form="s"].aktiv{border-color:var(--gruen-rand);background:var(--gruen-hell)}
+.formen-live button[data-form="p"].aktiv{border-color:var(--orange-rand);background:var(--orange-hell)}
+.sim.treffer{border-color:var(--gruen-rand);box-shadow:0 0 0 2px var(--gruen-hell)}
+.sim .zielkurve{fill:none;stroke:var(--gruen);stroke-width:3;stroke-dasharray:7 5;opacity:.85}
+.sim .symachse{stroke:var(--tinte-2);stroke-width:1.3;stroke-dasharray:6 5}
+.p-s{fill:var(--gruen)} .p-g{fill:var(--blau)} .p-n{fill:var(--orange)} .p-geist{fill:var(--orange);opacity:.35}
+text.p-text{font-family:var(--sans);font-size:11.5px;font-weight:700}
+.sim .feld-rahmen{fill:none;stroke:var(--linie);stroke-dasharray:4 4}
+.sim .feld{fill:var(--gruen-hell);stroke:var(--gruen);stroke-width:2}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+.beisp .mini-reihe{margin:10px 16px 0}
+svg.mini{width:128px;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px}
+svg.mini.gross{width:190px}
+svg.mini .kurve{fill:none;stroke:var(--blau);stroke-width:2.2}
+svg.mini .gitter{stroke:var(--linie);stroke-width:.5}
+svg.mini .achse{stroke:var(--tinte-2);stroke-width:1}
+svg.mini .skala{font-size:8px}
+svg.mini .mini-titel{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--tinte)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} svg.mini{width:110px} }
+
+/* ---------- Üben mit Rückmeldung (Prototyp) ---------- */
+.uebung{border:1.5px solid var(--orange-rand);border-radius:11px;background:var(--karte);padding:12px 16px 14px;margin:14px 0}
+.ue-kopf{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-family:var(--sans);font-size:.8rem;margin-bottom:6px}
+.ue-titel{font-weight:700;color:var(--orange)}
+.ue-serie{color:var(--tinte-2)}
+.ue-aufgabe{margin:6px 0 10px}
+.ue-zeile{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--mono);font-size:.95rem}
+.ue-eingabe input{width:4.2em;font-family:var(--mono);font-size:.95rem;padding:4px 6px;margin:0 3px;border:1.5px solid var(--linie);
+  border-radius:6px;background:var(--papier);color:var(--tinte);text-align:center}
+.ue-eingabe input:focus{outline:none;border-color:var(--orange-rand)}
+.ue-eingabe input.falsch{border-color:var(--rot-rand)}
+.ue-zeile button,.ue-weiter{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--orange-rand);background:var(--orange-hell);color:var(--tinte)}
+.ue-zeile .ue-neu{background:none;border-color:var(--linie);color:var(--tinte-2)}
+.ue-rueck{font-family:var(--sans);font-size:.9rem;margin-top:10px;border-radius:7px}
+.ue-rueck:empty{display:none}
+.ue-rueck.richtig{background:var(--gruen-hell);border-left:4px solid var(--gruen-rand);padding:8px 12px}
+.ue-rueck.falsch{background:var(--rot-hell);border-left:4px solid var(--rot-rand);padding:8px 12px}
+.ue-rueck.hinweis{background:var(--papier-2);padding:8px 12px}
+.ue-loes{margin-top:6px} .ue-loes summary{cursor:pointer;color:var(--tinte-2)}
+.uebung .ue-bild{display:block;margin:4px 0 6px}
+
+.fahrplan{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px;font-family:var(--sans);font-size:.78rem}
+.fahrplan span{padding:3px 10px;border-radius:999px;background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte-2)}
+
+.pdf-weg{margin:14px 0 4px;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:.92rem}
+.pdf-schritt{display:flex;gap:12px;align-items:flex-start}
+.pdf-schritt .nr{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:grid;place-items:center;
+  background:var(--karte);border:1px solid var(--linie);font-weight:700}
+.pdf-knoepfe{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.pdf-knopf{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--petrol-hell);border:1px solid var(--petrol-rand);
+  color:var(--tinte);text-decoration:none;font-weight:600}
+.pdf-knopf:hover{box-shadow:var(--sl)}
+.pdf-link{font-size:.85rem}
+
+
+/* ════════ Bruchrechnen (09.10.2026) — Kapitelmuster ohne Clips ════════
+   Grundgerüst (Leiste, Übungen, Festhalten, PDF-Weg) wie in den Leitprogrammen von TALS Mathe.
+   Neu: Bruchstreifen, Flächen-/Messmodell, Schrittwähler, HTML-Brüche, Tipps in Stufen.
+   Farben: erster Bruch blau, zweiter Bruch orange, Ergebnis grün, Fehler rot. */
+.sim-gross{max-width:680px;margin:10px auto 6px}
+.sim-gross > svg{max-width:520px}
+.leiste{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 10px;padding:9px 12px;border-radius:9px;
+  background:var(--orange-hell);border:1px solid var(--orange-rand);font-family:var(--sans);font-size:.92rem}
+.leiste .ls-nr{font-family:var(--mono);font-size:.78rem;color:var(--orange);font-weight:700}
+.leiste .ls-text{flex:1 1 260px;min-width:0}
+.leiste .ls-ok{color:var(--gruen);font-weight:700;font-size:1.1rem;min-width:1em}
+.leiste .ls-weiter,.leiste .ls-neu{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--linie);background:var(--karte);color:var(--tinte-2)}
+.leiste.geloest{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.leiste.geloest .ls-weiter{border-color:var(--gruen-rand);color:var(--tinte);font-weight:700}
+.leiste.fertig{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.kompetenzen ul{margin:10px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.92rem}
+.kompetenzen li{margin:5px 0}
+.kompetenzen .rlp-quelle{font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);margin:8px 0 0}
+.kompetenzen .ohm{font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--orange-hell);border:1px solid var(--orange-rand);white-space:nowrap}
+.sim-schalter{display:flex;gap:7px;align-items:center;justify-content:center;font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);margin:2px 0 8px;cursor:pointer}
+.festhalten{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px}
+@media(min-width:1180px){.festhalten{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.sim-formel{line-height:1.9;font-family:var(--sans);font-size:.95rem}
+.sim-wahl{font-family:var(--sans);font-size:.88rem;padding:4px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte)}
+.sl-row{flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.sl-grp{display:flex;gap:8px;align-items:center;flex:1 1 200px;min-width:0}
+.sl-grp input[type=range]{flex:1;min-width:90px}
+.sl-grp.akz-blau input{accent-color:var(--blau)} .sl-grp.akz-orange input{accent-color:var(--orange)} .sl-grp.akz-gruen input{accent-color:var(--gruen)}
+.sl-grp .var{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);white-space:nowrap}
+
+/* HTML-Bruch (Bilder und Schrittwähler ohne MathJax) */
+.bz{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.05;font-family:var(--serif);margin:0 .08em;font-variant-numeric:lining-nums}
+.bz-z{padding:0 .15em;border-bottom:1.4px solid currentColor}
+.bz-n{padding:0 .15em}
+.bz-g{font-family:var(--serif)}
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+
+/* Streifen und Flächenmodell */
+.sim svg .zelle,svg.mini-bruch .zelle{stroke:var(--tinte-2);stroke-width:.8}
+.zelle.leer{fill:var(--karte)}
+.zelle.f1{fill:var(--blau-hell);stroke:var(--blau)}
+.zelle.f2{fill:var(--orange-hell);stroke:var(--orange)}
+.zelle.f2b{fill:var(--orange-hell);stroke:var(--orange);opacity:.7}
+.zelle.f2.rest{fill:none;stroke:var(--orange);stroke-dasharray:4 3}
+.zelle.f3{fill:var(--gruen-hell);stroke:var(--gruen)}
+.zelle.f4{fill:var(--rot-hell);stroke:var(--rot)}
+.zelle.weg{fill:var(--papier-2);stroke:var(--orange);stroke-dasharray:3 3}
+.rahmen{fill:none;stroke:var(--tinte);stroke-width:1.6}
+.rahmen.duenn{stroke-width:1;stroke:var(--tinte-2)}
+.treffer-rahmen{fill:none;stroke:var(--gruen);stroke-width:2.5;rx:4}
+.teilung{stroke:var(--tinte-2);stroke-width:.9;stroke-dasharray:2 3}
+.teilung.schief{stroke:var(--rot);opacity:.7}
+.hilfslinie{stroke:var(--tinte-2);stroke-width:1.4;stroke-dasharray:6 4}
+.mass{stroke-width:3;stroke-linecap:round} .mass.f1{stroke:var(--blau)} .mass.f2{stroke:var(--orange)}
+.st-name{font-family:var(--sans);font-size:12px;font-weight:700;fill:var(--tinte-2)}
+.st-name.blau{fill:var(--blau)} .st-name.orange{fill:var(--orange)} .st-name.falsch{fill:var(--rot)}
+.st-frage{font-family:var(--sans);font-size:11.5px;fill:var(--tinte-2)}
+.st-zahl{font-family:var(--sans);font-size:11px;font-weight:700;fill:var(--tinte)}
+.sim .achse{stroke:var(--tinte-2);stroke-width:1.2}
+.sim .skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+svg.mini-bruch{width:220px;max-width:100%;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px;display:block}
+svg.mini-bruch[data-flaeche]{width:152px}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} }
+
+/* Schrittwähler: Zeilen wie im Heft, Teilrechnung rechts daneben */
+.schrittwaehler{max-width:760px;margin:10px auto 6px}
+.sw-verlauf{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:6px 26px;padding:12px 14px;
+  border:1px solid var(--linie);border-radius:9px;background:var(--karte);overflow-x:auto;font-size:1.08rem}
+.sw-zeile{display:contents}
+.sw-term{white-space:nowrap;color:var(--tinte-2)}
+.sw-zeile.aktuell .sw-term{color:var(--tinte)}
+.sw-notiz{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);align-self:center;white-space:nowrap}
+.sw-op{font-family:var(--sans);font-size:1rem;font-weight:700;cursor:pointer;min-width:1.9em;min-height:1.9em;border-radius:7px;
+  border:1.5px solid var(--orange-rand);background:var(--orange-hell);color:var(--tinte);padding:0 .3em;margin:0 .1em;vertical-align:middle}
+sup .sw-op{font-size:.75rem;min-width:1.6em;min-height:1.6em}
+.sw-op:hover,.sw-op:focus-visible{border-color:var(--orange);outline:none}
+.sw-op.aktiv{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.sw-op-st{padding:0 .25em}
+.sw-kl{padding:0 .05em}
+.sw-erg{color:var(--gruen)}
+.sw-frage{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2);margin:10px 2px 6px}
+.sw-feld{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:1.05rem}
+.sw-feld input{width:6.5em;font-family:var(--mono);font-size:.95rem;padding:4px 6px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte)}
+.sw-feld input:focus{outline:none;border-color:var(--orange-rand)}
+.sw-pruefen,.sw-uebernehmen,.sw-neu{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;border:1px solid var(--orange-rand);background:var(--karte);color:var(--tinte)}
+.sw-werkzeug{display:flex;justify-content:flex-end;margin-top:8px}
+.sw-neu{border-color:var(--linie);color:var(--tinte-2)}
+.sw-rueck{font-family:var(--sans);font-size:.9rem;margin-top:10px;border-radius:7px}
+.sw-rueck:empty{display:none}
+.sw-rueck.richtig{background:var(--gruen-hell);border-left:4px solid var(--gruen-rand);padding:8px 12px}
+.sw-rueck.falsch{background:var(--rot-hell);border-left:4px solid var(--rot-rand);padding:8px 12px}
+.sw-rueck.hinweis{background:var(--papier-2);padding:8px 12px}
+.sw-rueck .sw-uebernehmen{margin-left:6px}
+
+/* Übungen: Bruchfeld breiter, Tipps in Stufen */
+.ue-eingabe input.bruch{width:6.5em}
+.ue-zeile .ue-tipp{background:none;border-color:var(--blau-rand);color:var(--blau)}
+.ue-zeile .ue-tipp:disabled{opacity:.5;cursor:default}
+.ue-tipps:empty{display:none}
+.ue-tipps{margin-top:8px;padding:6px 12px;border-left:3px solid var(--blau-rand);background:var(--blau-hell);border-radius:0 6px 6px 0;font-family:var(--sans);font-size:.88rem}
+.ue-stufe{margin:4px 0}
+
+/* Beispiel mit Rechenweg */
+.weg{margin:10px 0 4px;padding-left:0;list-style:none;font-size:1rem}
+.weg li{margin:4px 0}
+.weg .warum{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin-left:.6em}
+.merk ol{padding-left:1.4em;margin:6px 0 10px}
+.merk ol.weg{padding-left:0}
+.merk h4{font-family:var(--sans);font-size:.9rem;margin:12px 0 4px}
+.vertiefung{border:1.5px dashed var(--lila-rand);border-radius:11px;padding:4px 18px 14px;margin-top:30px;background:var(--karte)}
+.vertiefung h2{font-size:1.25rem;margin:14px 0 4px}
+.vertiefung .aufg{padding:6px 0 0}
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+<!-- Leitprogramm Bruchrechnen, Version 1.0 (Probe, 09.10.2026). Gebaut aus scripts/lp/bruchrechnen/seite.py —
+     Änderungen dort, nicht in dieser Datei. Grundlagen: HOWTO-leitprogramme.md (Kapitelmuster) und
+     ~/HOWTO-TODO-BM-Vorkurs-LP01-02.md, Abschnitt 4 (LP 01 Bruchrechnen), für die Sek I umgesetzt.
+
+     Themenseite: 1.4 «Rechnen in ℚ» (Vorwissen 1.1–1.3). Die Themenseiten sind am 09.10.2026 noch Gerüste;
+     Notation darum nach STYLEGUIDE.md und CLAUDE.md: Dezimalpunkt, ggT/kgV mit Strichpunkt, Kehrwert,
+     Hauptnenner, «vollständig gekürzt», negative Brüche mit Minus vor dem Bruch, Ergebnisse als
+     (unechter) Bruch statt gemischter Zahl.
+
+     Kompetenzen — eigene Formulierung, ohne Lehrplan-Nummern (CLAUDE.md: keine erfundenen Lehrplan-Stellen):
+       K1  Brüche erweitern, vollständig kürzen und vergleichen
+       K2  Brüche addieren und subtrahieren (Hauptnenner)
+       K3  Brüche multiplizieren und dividieren (Kehrwert, vorher kürzen)
+       K4  Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge berechnen,
+           Ergebnis vollständig gekürzt, Schritte begründen und Fehler finden
+     Alles ohne Taschenrechner.
+
+     Kompetenzmatrix (Kompetenz | Kapitel | Simulation | Übungen | Kapitelaufgaben | Gesamttest):
+       K1 | 1 | Sim 1 | erweitern, kuerzen      | 1a–1f | G1, G3
+       K2 | 2 | Sim 2 | hauptnenner, addsub     | 2a–2f | G2, G3
+       K3 | 3 | Sim 3 | mal, durch              | 3a–3f | G4, G5
+       K4 | 4 | Sim 4 | reihenfolge, vorzeichen | 4a–4f | G6–G9
+
+     Planung (Kapitel | Lernziel | Erkundung | Beispiel | Häufiger Fehler | min):
+       0 | Vorwissen          | –                          | –                    | –                               | 10
+       1 | erweitern/kürzen   | Bruchstreifen nachbauen    | 12/18 = 2/3          | Summanden kürzen; addieren      | 35
+       2 | addieren           | gemeinsame Unterteilung    | 5/12 + 7/18 = 29/36  | Nenner addieren (1/2+1/3 ≠ 2/5) | 40
+       3 | mal/durch          | Flächenmodell, Messen      | 4/9 · 3/8 = 1/6      | Kehrwert vom falschen Bruch     | 40
+       4 | Reihenfolge        | Schrittwähler              | Kette mit Klammer    | Minus vor Klammer; links→rechts | 45
+       Gesamttest (PDF) 25 · Summe 195 min ≈ 4.3 Lektionen: vier Kapitel zu je einer Lektion, dazu
+       Vorwissen und Gesamttest. Vertiefung V1–V3 freiwillig, nicht eingerechnet.
+
+     Aus der BM-Vorlage übernommen: Kompetenzen «Das kannst du danach», Vorwissen mit Verweisen,
+     Erkundung mit Entscheidung statt Lesen, Fehlerbeispiel mit Diagnosefrage je Kapitel (1d, 2e, 3d, 4e),
+     Feedback nach Fehlertyp, Tipps in drei Stufen (Impuls → nächster Schritt → Lösungsweg),
+     «vollständig gekürzt» getrennt bewertet, Vertiefung getrennt vom Pflichtpfad.
+     Bewusst nicht übernommen: Teams-/Flipped-Classroom-Ablauf, Kernpfad für die erste Doppellektion,
+     Prüfungsanker der BM-Aufnahmeprüfung, Dezimalkomma als Alternative, Lehrpersonenmaterial.
+
+     Clips: keine. Die Clip-Bibliothek von Sek1-Mathe ist leer; Clips zu bauen war nicht Teil des Auftrags
+     (HOWTO-leitprogramme §7: «Fehlt ein Clip: melden, nicht ohne Auftrag bauen»). Ersatz: Phase ① ist die
+     Erkundung mit Aufgabenleiste. Clipkarten können später vor ① eingesetzt werden.
+
+     Farben: erster Bruch blau, zweiter Bruch orange, Ergebnis grün, Fehler rot; Bereichsfarbe Petrol.
+     Gesamttest und Bewertungspaket nur als PDF (downloads/leitprogramme/bruchrechnen/*.tex). -->
+<header class="kopf">
+  <div class="kopf-innen">
+    <div>
+      <p class="marke">Sek1-Mathe begreifbar · Leitprogramm</p>
+      <h1>Bruchrechnen</h1>
+      <p class="unter">Tüfteln, festhalten, üben. Vier Kapitel zu je einer Lektion, dazu Vorwissen und Gesamttest.</p>
+    </div>
+    <div class="kopf-rechts">
+      <button class="themenschalter" type="button" id="themenschalter">Dunkel / Hell</button>
+      <span>Arithmetik/Algebra 1.4</span>
+    </div>
+  </div>
+</header>
+
+<div class="huelle">
+<div class="raster">
+
+  <nav class="schiene" aria-label="Kapitelnavigation">
+    <h2 id="ablauf">Ablauf</h2>
+    <p class="lekt">Vorab</p>
+    <ol>
+      <li><a href="#k0"><span class="nr">0</span><span>Vorwissen</span></a></li>
+    </ol>
+    <p class="lekt">Kapitel</p>
+    <ol>
+      <li><a href="#k1"><span class="nr">1</span><span>Erweitern, Kürzen</span></a></li>
+      <li><a href="#k2"><span class="nr">2</span><span>Addieren</span></a></li>
+      <li><a href="#k3"><span class="nr">3</span><span>Mal und durch</span></a></li>
+      <li><a href="#k4"><span class="nr">4</span><span>Reihenfolge</span></a></li>
+    </ol>
+    <p class="lekt">Abschluss</p>
+    <ol>
+      <li><a href="#gesamttest"><span class="nr">✓</span><span>Gesamttest</span></a></li>
+      <li><a href="#vertiefung"><span class="nr">★</span><span>Vertiefung</span></a></li>
+    </ol>
+    <div class="fortschritt">
+      <div class="balken"><i id="balken-fuellung"></i></div>
+      <p id="fortschritt-text">0 von 5 Aufgabenblöcken bearbeitet</p>
+      <button type="button" id="fortschritt-reset">zurücksetzen</button>
+    </div>
+  </nav>
+
+  <main class="inhalt">
+
+    <div class="duo">
+      <details class="anleitung">
+        <summary><h2 id="so-arbeitest-du">So arbeitest du</h2></summary>
+        <ol>
+          <li><b>① Tüfteln:</b> Löse die Aufgaben in der orangen Leiste über dem Bild. Sie zeigt ✓, sobald es stimmt. Überspringen geht immer.</li>
+          <li><b>② Festhalten:</b> Lies die Regel und den häufigen Fehler — am besten schreibst du beides ins Heft.</li>
+          <li><b>③ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen.</li>
+          <li><b>④ Aufgaben</b> auf Papier mit Rechenweg, dann Lösung aufklappen und abhaken.</li>
+          <li>Zum Schluss der <b>Gesamttest</b> auf Papier. Alles ohne Taschenrechner.</li>
+        </ol>
+      </details>
+      <details class="anleitung kompetenzen">
+        <summary><h2 id="kompetenzen">Kompetenzen</h2></summary>
+        <p class="rlp-quelle">Das kannst du danach — alles <span class="ohm">ohne Taschenrechner</span>:</p>
+        <ul>
+          <li><b>K1</b> Brüche erweitern, vollständig kürzen und der Grösse nach vergleichen — Kapitel 1</li>
+          <li><b>K2</b> Brüche addieren und subtrahieren, mit dem Hauptnenner — Kapitel 2</li>
+          <li><b>K3</b> Brüche multiplizieren und dividieren, mit dem Kehrwert und Kürzen vor dem Ausrechnen — Kapitel 3</li>
+          <li><b>K4</b> Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge berechnen, jeden Schritt begründen und Fehler in fremden Lösungen finden — Kapitel 4</li>
+        </ul>
+        <p class="rlp-quelle">Nicht hier, sondern auf der <a href="../themen/t1-4-rechnen-in-q.html">Themenseite 1.4</a>: Brüche und Dezimalzahlen umwandeln, periodische Dezimalzahlen, Doppelbrüche.</p>
+      </details>
+    </div>
+
+    <section class="kap" id="k0">
+      <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen · 1.1 · 1.2 · 1.3</span><span class="zeit">≈ 10 min</span></div>
+      <h2 id="vorwissen">Vorwissen</h2>
+      <p class="ziel">Teiler und Vielfache, Rechnen mit negativen Zahlen, Punkt vor Strich, Potenzen. Wenn das wackelt: <a href="../themen/t1-1-zahlenmengen-zahlenarten.html">1.1 Zahlenmengen und Zahlenarten</a>, <a href="../themen/t1-2-rechnen-in-z-potenzen.html">1.2 Rechnen in ℤ, Potenzen</a> und <a href="../themen/t1-3-uebergang-z-q.html">1.3 Übergang zu ℚ</a>.</p>
+<div class="test" data-test="t0">
+        <div class="test-kopf">
+          <h3>Vortest <span class="summe">· 10 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">0a</span><span class="pkt">(2 P)</span><span class="txt">Bestimme den grössten gemeinsamen Teiler von \(18\) und \(24\) und das kleinste gemeinsame Vielfache von \(4\) und \(6\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\text{ggT}(18;\ 24) = 6\); \(\text{kgV}(4;\ 6) = 12\).</p><p class="komm">ggT braucht Kapitel 1 (Kürzen), kgV Kapitel 2 (Hauptnenner).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0b</span><span class="pkt">(2 P)</span><span class="txt">Berechne: \((-2) \cdot 3\); \(\;(-12) : (-4)\); \(\;-5 + 8\); \(\;3 - 7\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(-6\); \(3\); \(3\); \(-4\).</p><p class="komm">Dieselben Vorzeichenregeln gelten in Kapitel 4 für Brüche.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0c</span><span class="pkt">(2 P)</span><span class="txt">Berechne: \(12 : 3 \cdot 2\) und \(2 + 3 \cdot 4\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(12 : 3 \cdot 2 = 4 \cdot 2 = 8\) (von links nach rechts); \(2 + 3 \cdot 4 = 2 + 12 = 14\) (Punkt vor Strich).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0d</span><span class="pkt">(2 P)</span><span class="txt">Welcher Anteil des Streifens ist gefärbt? Schreib \(0.75\) als Bruch.</span></div>
+            <div class="mini-reihe"><svg class="mini-bruch" data-streifen="8,3" aria-label="Streifen mit 8 Teilen, davon 3 gefärbt"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{3}{8}\); \(0.75 = \tfrac{75}{100} = \tfrac{3}{4}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0e</span><span class="pkt">(2 P)</span><span class="txt">Berechne: \(2^3\); \(\;(-3)^2\); \(\;-3^2\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(8\); \(9\); \(-9\).</p><p class="komm">Bei \(-3^2\) gehört das Quadrat nur zur \(3\) — Potenz vor Strich.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="komm">Weniger als 7 von 10 Punkten: zuerst die verlinkten Themenseiten, dann Kapitel 1.</p>
+    </section>
+    <section class="kap" id="k1">
+      <div class="kap-meta"><span class="marker">Kapitel 1</span><span class="abz abz-th">1.4 · K1</span><span class="zeit">≈ 35 min</span></div>
+      <h2 id="erweitern-kuerzen">Erweitern, Kürzen, Vergleichen</h2>
+      <p class="ziel">Du erweiterst und kürzt Brüche, kürzt vollständig mit dem grössten gemeinsamen Teiler und vergleichst Brüche, indem du sie auf denselben Nenner bringst.</p>
+
+      <p class="phase"><span>①</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim1" aria-label="Bruchstreifen: denselben Anteil mit anderem Nenner darstellen">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg viewBox="0 0 340 142" role="img" aria-label="Zwei Bruchstreifen übereinander: oben der feste Anteil, unten dein Bruch"></svg>
+        <label class="sim-schalter"><input type="checkbox" checked> Hilfslinie: wo der Anteil oben endet</label>
+        <div class="sl-row">
+          <div class="sl-grp akz-orange"><label for="s1-n"><span class="var">Nenner unten</span></label><input type="range" id="s1-n" min="1" max="24" step="1" value="2"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s1-k"><span class="var">Zähler unten</span></label><input type="range" id="s1-k" min="0" max="24" step="1" value="1"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>②</span> Festhalten</p>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Erweitern, Kürzen, Vergleichen</div>
+          <p><b>Erweitern:</b> Zähler und Nenner mit derselben Zahl multiplizieren. Jedes Stück wird in gleich viele kleinere Stücke zerlegt — der Anteil bleibt gleich: \(\tfrac{3}{4} = \tfrac{3 \cdot 5}{4 \cdot 5} = \tfrac{15}{20}\).</p>
+          <p><b>Kürzen:</b> Zähler und Nenner durch dieselbe Zahl dividieren. Ein Bruch ist <b>vollständig gekürzt</b>, wenn Zähler und Nenner keinen gemeinsamen Teiler ausser \(1\) mehr haben. Am schnellsten geht es mit dem grössten gemeinsamen Teiler:</p>
+          <p>\[ \frac{12}{18} = \frac{12 : 6}{18 : 6} = \frac{2}{3} \qquad \text{denn } \text{ggT}(12;\ 18) = 6 \]</p>
+          <p><b>Vergleichen:</b> Brüche auf denselben Nenner bringen, dann zeigt der Zähler, welcher grösser ist: \(\tfrac{2}{3} = \tfrac{8}{12}\) und \(\tfrac{3}{4} = \tfrac{9}{12}\), also \(\tfrac{2}{3} \lt \tfrac{3}{4}\).</p>
+          <p>Ganze Zahlen sind auch Brüche: \(2 = \tfrac{2}{1} = \tfrac{6}{3}\). Ein Ergebnis wie \(\tfrac{7}{3}\) bleibt in diesem Leitprogramm ein Bruch — die gemischte Schreibweise liest man leicht als Produkt.</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Kürzen nur bei Faktoren, nie bei Summanden.</b> \(\tfrac{2 + 3}{2 + 5}\) ist \(\tfrac{5}{7}\), nicht \(\tfrac{3}{5}\). Zuerst ausrechnen, dann kürzen.</p>
+          <p><b>Erweitern heisst multiplizieren, nicht addieren:</b> \(\tfrac{3 + 1}{4 + 1} = \tfrac{4}{5}\) ist ein anderer Anteil als \(\tfrac{3}{4}\).</p>
+          <p><b>Nur teilweise gekürzt:</b> \(\tfrac{12}{18} = \tfrac{6}{9}\) stimmt, ist aber noch nicht fertig — \(6\) und \(9\) sind beide durch \(3\) teilbar.</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>③</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="erweitern">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Erweitern</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="kuerzen">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Vollständig kürzen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t1">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 1 <span class="summe">· 13 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">1a</span><span class="pkt">(2 P)</span><span class="txt">Erweitere \(\tfrac{5}{6}\) auf den Nenner \(24\). Kürze \(\tfrac{45}{60}\) vollständig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{5}{6} = \tfrac{5 \cdot 4}{6 \cdot 4} = \tfrac{20}{24}\). \(\text{ggT}(45;\ 60) = 15\): \(\tfrac{45}{60} = \tfrac{3}{4}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1b</span><span class="pkt">(2 P)</span><span class="txt">Welche Brüche sind gleich gross wie \(\tfrac{2}{5}\)? \(\;\tfrac{4}{10}\), \(\tfrac{6}{15}\), \(\tfrac{7}{10}\), \(\tfrac{10}{25}\), \(\tfrac{3}{6}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{4}{10}\), \(\tfrac{6}{15}\) und \(\tfrac{10}{25}\) — sie lassen sich alle auf \(\tfrac{2}{5}\) kürzen. \(\tfrac{7}{10}\) und \(\tfrac{3}{6} = \tfrac{1}{2}\) nicht.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1c</span><span class="pkt">(3 P)</span><span class="txt">Ordne der Grösse nach, beginne mit dem kleinsten: \(\;\tfrac{3}{4}\), \(\tfrac{5}{8}\), \(\tfrac{2}{3}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Gemeinsamer Nenner \(24\): \(\tfrac{3}{4} = \tfrac{18}{24}\), \(\tfrac{5}{8} = \tfrac{15}{24}\), \(\tfrac{2}{3} = \tfrac{16}{24}\). Also \(\tfrac{5}{8} \lt \tfrac{2}{3} \lt \tfrac{3}{4}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1d</span><span class="pkt">(2 P)</span><span class="txt">Lea kürzt so: «\(\tfrac{6 + 4}{6 + 9}\) — die \(6\) streiche ich oben und unten, also \(\tfrac{4}{9}\).» Was ist falsch? Rechne richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Lea kürzt Summanden. Kürzen darf man nur Faktoren. Richtig: \(\tfrac{6 + 4}{6 + 9} = \tfrac{10}{15} = \tfrac{2}{3}\) — und \(\tfrac{4}{9}\) ist kleiner als \(\tfrac{2}{3}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1e</span><span class="pkt">(2 P)</span><span class="txt">Warum ändert sich der Wert eines Bruchs beim Erweitern nicht? Erkläre mit dem Bruchstreifen.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Beim Erweitern mit \(5\) wird jedes Stück in \(5\) gleiche kleinere Stücke zerlegt. Es gibt fünfmal so viele Stücke, und fünfmal so viele davon sind gefärbt — die gefärbte Fläche bleibt dieselbe.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Welcher Anteil ist gefärbt? Gib ihn vollständig gekürzt an. Wie viele Teile wären gefärbt, wenn derselbe Streifen in \(16\) Teile geteilt wäre?</span></div>
+            <div class="mini-reihe"><svg class="mini-bruch" data-streifen="8,6" aria-label="Streifen mit 8 Teilen, davon 6 gefärbt"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(6\) von \(8\) Teilen: \(\tfrac{6}{8} = \tfrac{3}{4}\). Bei \(16\) Teilen: \(\tfrac{3}{4} = \tfrac{12}{16}\), also \(12\) Teile.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Mehr dazu: <a href="../themen/t1-4-rechnen-in-q.html">Themenseite 1.4, Rechnen in ℚ</a></p>
+    </section>
+    <section class="kap" id="k2">
+      <div class="kap-meta"><span class="marker">Kapitel 2</span><span class="abz abz-th">1.4 · K2</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="addieren">Addieren und Subtrahieren</h2>
+      <p class="ziel">Du addierst und subtrahierst Brüche, indem du sie mit dem Hauptnenner gleichnamig machst, und gibst das Ergebnis vollständig gekürzt an.</p>
+
+      <p class="phase"><span>①</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim2" aria-label="Bruchstreifen: eine gemeinsame Unterteilung für zwei Brüche finden">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg viewBox="0 0 340 200" role="img" aria-label="Zwei Bruchstreifen mit einer gemeinsamen Unterteilung, darunter das Ergebnis"></svg>
+        <label class="sim-schalter"><input type="checkbox"> roter Streifen: «Zähler plus Zähler, Nenner plus Nenner»</label>
+        <div class="sl-row">
+          <div class="sl-grp akz-gruen"><label for="s2-n"><span class="var">gemeinsame Unterteilung</span></label><input type="range" id="s2-n" min="1" max="24" step="1" value="4"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>②</span> Festhalten</p>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Addieren und Subtrahieren</div>
+          <p><b>Gleichnamige Brüche</b> (gleicher Nenner): Zähler addieren oder subtrahieren, der Nenner bleibt. Man zählt gleich grosse Stücke: \(\tfrac{3}{8} + \tfrac{1}{8} = \tfrac{4}{8} = \tfrac{1}{2}\).</p>
+          <p><b>Ungleichnamige Brüche</b> zuerst gleichnamig machen. Der kleinste gemeinsame Nenner heisst <b>Hauptnenner</b>; er ist das kleinste gemeinsame Vielfache der Nenner. Das Produkt der Nenner geht immer, ist aber oft unnötig gross.</p>
+          <ol class="weg">
+            <li>\(\text{kgV}(12;\ 18) = 36\) <span class="warum">Vielfache von 18: 18, 36 — und 36 ist durch 12 teilbar</span></li>
+            <li>\(\dfrac{5}{12} + \dfrac{7}{18} = \dfrac{15}{36} + \dfrac{14}{36}\) <span class="warum">erweitern mit 3 und mit 2</span></li>
+            <li>\(= \dfrac{29}{36}\) <span class="warum">Zähler addieren; 29 und 36 haben keinen gemeinsamen Teiler</span></li>
+          </ol>
+          <p>Mit einer ganzen Zahl: \(2 - \tfrac{3}{4} = \tfrac{8}{4} - \tfrac{3}{4} = \tfrac{5}{4}\).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Nenner addieren:</b> \(\tfrac{1}{2} + \tfrac{1}{3}\) ist nicht \(\tfrac{2}{5}\). Die Kontrolle zeigt es sofort: \(\tfrac{2}{5}\) ist kleiner als \(\tfrac{1}{2}\) — eine Summe kann nicht kleiner sein als einer ihrer positiven Summanden. Richtig: \(\tfrac{3}{6} + \tfrac{2}{6} = \tfrac{5}{6}\).</p>
+          <p><b>Am Schluss nicht kürzen:</b> \(\tfrac{1}{6} + \tfrac{1}{3} = \tfrac{1}{6} + \tfrac{2}{6} = \tfrac{3}{6}\) ist erst fertig als \(\tfrac{1}{2}\).</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>③</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="hauptnenner">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Hauptnenner finden</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="addsub">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Addieren und Subtrahieren</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t2">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 2 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">2a</span><span class="pkt">(2 P)</span><span class="txt">Berechne und kürze: \(\tfrac{3}{8} + \tfrac{1}{8}\) und \(\tfrac{7}{10} - \tfrac{3}{10}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{4}{8} = \tfrac{1}{2}\) und \(\tfrac{4}{10} = \tfrac{2}{5}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2b</span><span class="pkt">(3 P)</span><span class="txt">Berechne: \(\tfrac{3}{4} + \tfrac{5}{6}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Hauptnenner \(12\): \(\tfrac{9}{12} + \tfrac{10}{12} = \tfrac{19}{12}\). Vollständig gekürzt, denn \(19\) ist eine Primzahl.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2c</span><span class="pkt">(3 P)</span><span class="txt">Berechne: \(\tfrac{11}{12} - \tfrac{4}{9}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\text{kgV}(12;\ 9) = 36\): \(\tfrac{33}{36} - \tfrac{16}{36} = \tfrac{17}{36}\).</p><p class="komm">Mit dem Produkt \(108\) als Nenner geht es auch, aber dann muss am Schluss gekürzt werden: \(\tfrac{51}{108} = \tfrac{17}{36}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2d</span><span class="pkt">(2 P)</span><span class="txt">Berechne: \(3 - \tfrac{5}{7}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(3 = \tfrac{21}{7}\), also \(\tfrac{21}{7} - \tfrac{5}{7} = \tfrac{16}{7}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2e</span><span class="pkt">(2 P)</span><span class="txt">Tim rechnet \(\tfrac{2}{3} + \tfrac{1}{4} = \tfrac{3}{7}\). Zeige ohne Rechnung, dass das nicht stimmen kann. Rechne dann richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{3}{7}\) ist kleiner als \(\tfrac{1}{2}\), also auch kleiner als \(\tfrac{2}{3}\) allein — die Summe muss aber grösser sein als \(\tfrac{2}{3}\). Richtig: \(\tfrac{8}{12} + \tfrac{3}{12} = \tfrac{11}{12}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2f</span><span class="pkt">(2 P)</span><span class="txt">Die Streifen zeigen \(\tfrac{1}{2}\) und \(\tfrac{1}{3}\). Warum darf man bei \(\tfrac{1}{6} + \tfrac{2}{6}\) die Zähler direkt addieren, bei \(\tfrac{1}{2} + \tfrac{1}{3}\) aber nicht?</span></div>
+            <div class="mini-reihe"><svg class="mini-bruch" data-streifen="2,1;3,1" aria-label="Zwei Streifen: einer in Halbe geteilt mit einem gefärbten Teil, einer in Drittel geteilt mit einem gefärbten Teil"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Sechstel sind gleich grosse Stücke — man zählt einfach, wie viele es sind. Halbe und Drittel sind verschieden gross; erst wenn beide in Sechstel zerlegt sind (\(\tfrac{3}{6}\) und \(\tfrac{2}{6}\)), darf man zählen.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Mehr dazu: <a href="../themen/t1-4-rechnen-in-q.html">Themenseite 1.4, Rechnen in ℚ</a></p>
+    </section>
+    <section class="kap" id="k3">
+      <div class="kap-meta"><span class="marker">Kapitel 3</span><span class="abz abz-th">1.4 · K3</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="multiplizieren">Multiplizieren und Dividieren</h2>
+      <p class="ziel">Du multiplizierst Brüche, dividierst mit dem Kehrwert, kürzt vor dem Ausrechnen und erklärst beides am Bild.</p>
+
+      <p class="phase"><span>①</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim3" aria-label="Multiplizieren im Flächenmodell, Dividieren durch Messen">
+        <div class="leiste" aria-live="polite"></div>
+        <label class="sim-schalter">Modell <select class="sim-wahl" aria-label="Rechenart">
+          <option value="mal" selected>Mal: Flächenmodell</option>
+          <option value="durch">Durch: Wie oft passt es?</option>
+        </select></label>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg viewBox="0 0 340 250" role="img" aria-label="Einheitsquadrat mit zwei gefärbten Anteilen oder Streifen mit gemessenen Stücken"></svg>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s3-a"><span class="var">Zähler 1</span></label><input type="range" id="s3-a" min="1" max="8" step="1" value="1"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-blau"><label for="s3-b"><span class="var">Nenner 1</span></label><input type="range" id="s3-b" min="1" max="8" step="1" value="2"><span class="sl-val"></span></div>
+        </div>
+        <div class="sl-row">
+          <div class="sl-grp akz-orange"><label for="s3-c"><span class="var">Zähler 2</span></label><input type="range" id="s3-c" min="1" max="8" step="1" value="1"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s3-d"><span class="var">Nenner 2</span></label><input type="range" id="s3-d" min="1" max="8" step="1" value="3"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>②</span> Festhalten</p>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Multiplizieren und Dividieren</div>
+          <p><b>Multiplizieren:</b> Zähler mal Zähler, Nenner mal Nenner. Im Flächenmodell ist das Produkt das grüne Rechteck: \(\tfrac{2}{3} \cdot \tfrac{3}{4} = \tfrac{6}{12} = \tfrac{1}{2}\).</p>
+          <p><b>Vor dem Ausrechnen kürzen</b> spart Arbeit — auch über Kreuz, also Zähler des einen mit Nenner des anderen Bruchs:</p>
+          <p>\[ \frac{4}{9} \cdot \frac{3}{8} = \frac{\cancel{4}^{\,1} \cdot \cancel{3}^{\,1}}{\cancel{9}_{\,3} \cdot \cancel{8}_{\,2}} = \frac{1}{6} \]</p>
+          <p>Ganze Zahl mal Bruch: Nur der Zähler wird multipliziert, \(3 \cdot \tfrac{2}{5} = \tfrac{6}{5}\). «\(\tfrac{2}{3}\) von \(12\)» heisst \(\tfrac{2}{3} \cdot 12 = 8\).</p>
+          <p><b>Dividieren:</b> Mit dem <b>Kehrwert</b> des zweiten Bruchs multiplizieren (Zähler und Nenner vertauscht):</p>
+          <p>\[ \frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} \qquad (b,\ c,\ d \neq 0) \]</p>
+          <p>Warum: \(\tfrac{3}{4} : \tfrac{1}{8}\) fragt «Wie oft passt \(\tfrac{1}{8}\) in \(\tfrac{3}{4}\)?» — sechsmal, denn \(\tfrac{3}{4} = \tfrac{6}{8}\). Und \(\tfrac{3}{4} \cdot 8 = 6\): Teilen durch \(\tfrac{1}{8}\) ist dasselbe wie mal \(8\).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Kehrwert vom falschen Bruch:</b> Bei \(\tfrac{3}{4} : \tfrac{1}{8}\) wird \(\tfrac{1}{8}\) umgedreht. Wer \(\tfrac{4}{3} \cdot \tfrac{1}{8} = \tfrac{1}{6}\) rechnet, hat den ersten umgedreht.</p>
+          <p><b>Über Kreuz kürzen nur beim Multiplizieren.</b> Bei \(\tfrac{4}{9} + \tfrac{3}{8}\) darf man nicht über Kreuz kürzen — dort braucht es den Hauptnenner.</p>
+          <p><b>Beim Multiplizieren braucht es keinen gemeinsamen Nenner</b> — gleichnamig machen ist nur beim Addieren und Subtrahieren nötig.</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>③</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="mal">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Multiplizieren</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="durch">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Dividieren</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t3">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 3 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">3a</span><span class="pkt">(2 P)</span><span class="txt">Berechne und kürze vollständig: \(\tfrac{5}{6} \cdot \tfrac{3}{10}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Über Kreuz: \(5\) und \(10\) durch \(5\), \(3\) und \(6\) durch \(3\): \(\tfrac{1 \cdot 1}{2 \cdot 2} = \tfrac{1}{4}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3b</span><span class="pkt">(4 P)</span><span class="txt">Ganze Zahlen und Brüche: \(4 \cdot \tfrac{5}{6}\); \(\;\tfrac{2}{3}\) von \(15\); \(\;\tfrac{7}{8} : 7\); \(\;6 : \tfrac{3}{4}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{20}{6} = \tfrac{10}{3}\); \(\tfrac{2}{3} \cdot 15 = \tfrac{30}{3} = 10\); \(\tfrac{7}{8} \cdot \tfrac{1}{7} = \tfrac{1}{8}\); \(6 \cdot \tfrac{4}{3} = 8\).</p><p class="komm">Kontrolle zur letzten: \(\tfrac{3}{4}\) passt achtmal in \(6\), denn \(8 \cdot \tfrac{3}{4} = 6\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3c</span><span class="pkt">(2 P)</span><span class="txt">Berechne: \(\tfrac{3}{5} : \tfrac{9}{10}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{3}{5} \cdot \tfrac{10}{9} = \tfrac{30}{45} = \tfrac{2}{3}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3d</span><span class="pkt">(2 P)</span><span class="txt">Nora rechnet \(\tfrac{2}{5} : \tfrac{4}{7} = \tfrac{5}{2} \cdot \tfrac{4}{7} = \tfrac{20}{14} = \tfrac{10}{7}\). Finde den Fehler und rechne richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Nora hat den Kehrwert vom ersten Bruch genommen. Umgedreht wird der zweite: \(\tfrac{2}{5} \cdot \tfrac{7}{4} = \tfrac{14}{20} = \tfrac{7}{10}\).</p><p class="komm">Ihr Ergebnis \(\tfrac{10}{7}\) ist genau der Kehrwert des richtigen — ein typisches Zeichen für diesen Fehler.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3e</span><span class="pkt">(2 P)</span><span class="txt">Warum ist \(\tfrac{3}{4} \cdot \tfrac{2}{3}\) kleiner als \(\tfrac{3}{4}\), aber \(\tfrac{3}{4} : \tfrac{2}{3}\) grösser als \(\tfrac{3}{4}\)?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Mal \(\tfrac{2}{3}\) heisst: \(\tfrac{2}{3}\) davon nehmen — das ist weniger als das Ganze, \(\tfrac{1}{2}\). Durch \(\tfrac{2}{3}\) fragt, wie oft \(\tfrac{2}{3}\) hineinpasst; das Stück ist kleiner als \(\tfrac{3}{4}\), also passt es mehr als einmal: \(\tfrac{9}{8}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3f</span><span class="pkt">(2 P)</span><span class="txt">Welche Multiplikation zeigt das Flächenmodell? Lies das Ergebnis ab und kürze.</span></div>
+            <div class="mini-reihe"><svg class="mini-bruch" data-flaeche="3,4,2,5" aria-label="Quadrat: 3 von 4 Spalten blau, 2 von 5 Zeilen orange, Überlappung grün"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Blau sind \(\tfrac{3}{4}\) der Breite, orange \(\tfrac{2}{5}\) der Höhe: \(\tfrac{3}{4} \cdot \tfrac{2}{5}\). Grün sind \(6\) von \(20\) Kästchen: \(\tfrac{6}{20} = \tfrac{3}{10}\).</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Mehr dazu: <a href="../themen/t1-4-rechnen-in-q.html">Themenseite 1.4, Rechnen in ℚ</a></p>
+    </section>
+    <section class="kap" id="k4">
+      <div class="kap-meta"><span class="marker">Kapitel 4</span><span class="abz abz-th">1.4 · K4</span><span class="zeit">≈ 45 min</span></div>
+      <h2 id="reihenfolge">Rechenreihenfolge und negative Brüche</h2>
+      <p class="ziel">Du berechnest Terme mit Brüchen und negativen Zahlen in der richtigen Reihenfolge — Klammern, Potenzen, Punkt vor Strich, von links nach rechts —, schreibst jeden Schritt auf und gibst das Ergebnis vollständig gekürzt an.</p>
+
+      <p class="phase"><span>①</span> Tüfteln</p>
+      <figure class="sim schrittwaehler" id="sim4" aria-label="Schrittwähler: das Rechenzeichen wählen, das zuerst dran ist, und den Schritt ausrechnen">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sw-verlauf" aria-live="polite"></div>
+        <p class="sw-frage"></p>
+        <div class="sw-feld"></div>
+        <div class="sw-rueck" aria-live="polite"></div>
+        <div class="sw-werkzeug"><button type="button" class="sw-neu">↶ von vorn</button></div>
+      </figure>
+
+      <p class="phase"><span>②</span> Festhalten</p>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Rechenreihenfolge und Vorzeichen</div>
+          <ol>
+            <li><b>Klammern</b> zuerst, innere vor äusseren.</li>
+            <li><b>Potenzen</b>.</li>
+            <li><b>Punkt vor Strich:</b> \(\cdot\) und \(:\) vor \(+\) und \(-\).</li>
+            <li>Gleichrangiges <b>von links nach rechts</b>.</li>
+          </ol>
+          <p>Eine Rechnung, eine Kette — jeder Schritt eine Zeile:</p>
+          <p>\[ \frac{1}{2} - \frac{1}{3} \cdot \left(\frac{3}{4} - \frac{1}{4}\right) = \frac{1}{2} - \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{1}{3} \]</p>
+          <h4>Negative Brüche</h4>
+          <p>Das Minus darf vor dem Bruch, im Zähler oder im Nenner stehen: \(-\tfrac{2}{3} = \tfrac{-2}{3} = \tfrac{2}{-3}\). Gerechnet wird mit den Vorzeichenregeln aus ℤ: \(\left(-\tfrac{3}{4}\right) \cdot \left(-\tfrac{2}{9}\right) = +\tfrac{6}{36} = \tfrac{1}{6}\).</p>
+          <h4>Potenzen von Brüchen</h4>
+          <p>Zähler und Nenner werden potenziert: \(\left(\tfrac{2}{3}\right)^2 = \tfrac{4}{9}\). Auf die Klammer kommt es an: \(\left(-\tfrac{1}{2}\right)^2 = \tfrac{1}{4}\), aber \(-\left(\tfrac{1}{2}\right)^2 = -\tfrac{1}{4}\).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Minus vor der Klammer:</b> \(\tfrac{3}{4} - \left(\tfrac{1}{2} - \tfrac{1}{4}\right) = \tfrac{3}{4} - \tfrac{1}{4} = \tfrac{1}{2}\). Wer die Klammer einfach weglässt, rechnet \(\tfrac{3}{4} - \tfrac{1}{2} - \tfrac{1}{4} = 0\) — falsch. Ohne Klammer: \(\tfrac{3}{4} - \tfrac{1}{2} + \tfrac{1}{4}\).</p>
+          <p><b>Von links nach rechts</b> gilt auch für \(:\) und \(\cdot\): \(1 : \tfrac{1}{2} \cdot \tfrac{1}{2} = 2 \cdot \tfrac{1}{2} = 1\), nicht \(1 : \tfrac{1}{4} = 4\).</p>
+          <p><b>Ergebnis nicht gekürzt</b> — auch im Zwischenschritt lohnt sich das Kürzen, die Zahlen bleiben kleiner.</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>③</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="reihenfolge">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Was kommt zuerst?</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="vorzeichen">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Negative Brüche</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t4">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 4 <span class="summe">· 16 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">4a</span><span class="pkt">(3 P)</span><span class="txt">Berechne: \(\tfrac{7}{12} - \tfrac{1}{4} \cdot \tfrac{2}{3}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Punkt vor Strich: \(\tfrac{1}{4} \cdot \tfrac{2}{3} = \tfrac{2}{12} = \tfrac{1}{6}\). Dann \(\tfrac{7}{12} - \tfrac{2}{12} = \tfrac{5}{12}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4b</span><span class="pkt">(3 P)</span><span class="txt">Berechne: \(\left(\tfrac{3}{4} - \tfrac{1}{3}\right) : \tfrac{5}{6}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Klammer: \(\tfrac{9}{12} - \tfrac{4}{12} = \tfrac{5}{12}\). Dann \(\tfrac{5}{12} \cdot \tfrac{6}{5} = \tfrac{30}{60} = \tfrac{1}{2}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4c</span><span class="pkt">(3 P)</span><span class="txt">Berechne: \(-\tfrac{2}{5} + \tfrac{3}{10} \cdot \left(-\tfrac{4}{3}\right)\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Punkt vor Strich: \(\tfrac{3}{10} \cdot \left(-\tfrac{4}{3}\right) = -\tfrac{12}{30} = -\tfrac{2}{5}\). Dann \(-\tfrac{2}{5} + \left(-\tfrac{2}{5}\right) = -\tfrac{4}{5}\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4d</span><span class="pkt">(2 P)</span><span class="txt">Berechne beide und vergleiche: \(\left(-\tfrac{3}{2}\right)^2 - \tfrac{3}{4}\) und \(-\left(\tfrac{3}{2}\right)^2 + \tfrac{3}{4}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{9}{4} - \tfrac{3}{4} = \tfrac{6}{4} = \tfrac{3}{2}\) und \(-\tfrac{9}{4} + \tfrac{3}{4} = -\tfrac{6}{4} = -\tfrac{3}{2}\). Die beiden Ergebnisse sind Gegenzahlen.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4e</span><span class="pkt">(3 P)</span><span class="txt">Mia rechnet: \(\tfrac{3}{4} : \tfrac{3}{8} \cdot \tfrac{1}{2} = \tfrac{3}{4} : \tfrac{3}{16} = 4\). Welche Regel hat sie verletzt? Rechne richtig.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(:\) und \(\cdot\) sind gleichrangig — von links nach rechts. Mia hat zuerst multipliziert. Richtig: \(\tfrac{3}{4} : \tfrac{3}{8} = \tfrac{3}{4} \cdot \tfrac{8}{3} = 2\), dann \(2 \cdot \tfrac{1}{2} = 1\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Warum ist \(\left(-\tfrac{2}{3}\right)^2\) positiv, \(-\left(\tfrac{2}{3}\right)^2\) aber negativ?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\left(-\tfrac{2}{3}\right)^2 = \left(-\tfrac{2}{3}\right) \cdot \left(-\tfrac{2}{3}\right) = +\tfrac{4}{9}\): Minus mal Minus gibt Plus. Bei \(-\left(\tfrac{2}{3}\right)^2\) wird zuerst quadriert (Potenz vor Strich), das Minus kommt danach: \(-\tfrac{4}{9}\).</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Mehr dazu: <a href="../themen/t1-4-rechnen-in-q.html">Themenseite 1.4, Rechnen in ℚ</a></p>
+    </section>
+    <section class="kap" id="gesamttest">
+      <div class="gesamt">
+        <div class="gesamt-kopf">
+          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">1.4 · Kapitel 1–4</span><span class="zeit">≈ 25 min · 24 Punkte</span></div>
+          <h2 id="gesamttest-titel">Gesamttest</h2>
+          <div class="pdf-weg">
+            <div class="pdf-schritt"><span class="nr">1</span><div><b>Lösen</b> — auf Papier, mit Rechenweg, ohne Taschenrechner.<br>
+              <a class="pdf-knopf" href="../downloads/leitprogramme/bruchrechnen/gesamttest.pdf" download>⬇ Gesamttest (PDF)</a></div></div>
+            <div class="pdf-schritt"><span class="nr">2</span><div><b>Bewerten</b> — selbst mit dem Punkteraster oder mit einer KI: Lösung scannen oder fotografieren (ohne Namen und Standort). Das Paket enthält die Musterlösung: erst danach öffnen.<br>
+              <a class="pdf-knopf" href="../downloads/leitprogramme/bruchrechnen/bewertungspaket.pdf" download>⬇ Bewertungspaket (PDF)</a></div></div>
+            <div class="pdf-schritt"><span class="nr">3</span><div><b>Gezielt wiederholen</b> — nach der Tabelle unten.</div></div>
+          </div>
+        </div>
+        <div class="bewertung">
+          <b>Selbsteinschätzung</b>
+          <table>
+            <tr><td>21 – 24 P</td><td>Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals (Zuordnung unten).</td></tr>
+            <tr><td>16 – 20 P</td><td>Den schwächsten Teil nochmals: Tüfteln und Übungen des Kapitels, in dem du die meisten Punkte verloren hast.</td></tr>
+            <tr><td>10 – 15 P</td><td>Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.</td></tr>
+            <tr><td>0 – 9 P</td><td>Zurück zum Vortest und zu Kapitel 1, von dort der Reihe nach weiter.</td></tr>
+          </table>
+          <p>Aufgabe → Kapitel: G1 → 1; G2 → 2; G3 → 1 und 2; G4, G5 → 3; G6 bis G9 → 4</p>
+        </div>
+      </div>
+    </section>
+    <section class="kap" id="vertiefung">
+      <div class="vertiefung">
+        <h2 id="vertiefung-titel">Vertiefung — zum Knobeln</h2>
+        <p class="komm">Freiwillig, ohne Punkte. Für alle, die nach dem Gesamttest weiterdenken möchten.</p>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">V1</span><span class="txt">Berechne \(\tfrac{1}{2} + \tfrac{1}{4} + \tfrac{1}{8} + \tfrac{1}{16}\). Wie viel fehlt bis \(1\)? Was fehlt, wenn du so immer weiter addierst?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{8}{16} + \tfrac{4}{16} + \tfrac{2}{16} + \tfrac{1}{16} = \tfrac{15}{16}\); es fehlt \(\tfrac{1}{16}\) — genau der letzte Summand. Mit jedem weiteren Summanden halbiert sich der Rest; er wird beliebig klein, aber nie null.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">V2</span><span class="txt">Finde zwei verschiedene Stammbrüche (Zähler \(1\)), deren Summe \(\tfrac{1}{2}\) ist. Gibt es mehr als eine Möglichkeit?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{1}{3} + \tfrac{1}{6} = \tfrac{2}{6} + \tfrac{1}{6} = \tfrac{1}{2}\). Das ist die einzige Möglichkeit: Der grössere Stammbruch muss grösser als \(\tfrac{1}{4}\) und kleiner als \(\tfrac{1}{2}\) sein — es bleibt nur \(\tfrac{1}{3}\). (\(\tfrac{1}{4} + \tfrac{1}{4}\) sind nicht verschieden.)</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">V3</span><span class="txt">Welcher Bruch ist grösser: \(\tfrac{2025}{2026}\) oder \(\tfrac{2026}{2027}\)? Begründe ohne den gemeinsamen Nenner auszurechnen.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\tfrac{2025}{2026} = 1 - \tfrac{1}{2026}\) und \(\tfrac{2026}{2027} = 1 - \tfrac{1}{2027}\). Weil \(\tfrac{1}{2027}\) kleiner ist als \(\tfrac{1}{2026}\), fehlt dem zweiten Bruch weniger bis \(1\): \(\tfrac{2026}{2027}\) ist grösser.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf weiter">Weiter: <a href="../themen/t1-4-rechnen-in-q.html">Themenseite 1.4, Rechnen in ℚ</a> — dort auch, was hier bewusst fehlt: Brüche und Dezimalzahlen umwandeln, periodische Dezimalzahlen, Doppelbrüche. Anschliessend: <a href="../themen/t2-1-lineare-gleichungen.html">2.1 Lineare Gleichungen</a>, wo Brüche als Koeffizienten wiederkommen.</p>
+    </section>
+    <div class="fuss">
+      <span>Leitprogramm Bruchrechnen · Sek1-Mathe begreifbar</span>
+      <span>Raphael Arnold Kohler</span>
+    </div>
+
+  </main>
+</div>
+</div>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']], packages: {'[+]': ['cancel']} },
+    loader: { load: ['[tex]/cancel'] },
+    svg: { fontCache: 'global' },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+  };
+</script>
+<script src="../vendor/mathjax/tex-svg.js"></script>
+
+<script>
+(function(){
+  'use strict';
+  // Relativ, nicht absolut: Im Repo liegt die Datei eine Ebene tief, und die
+  // Clips sollen von hier kommen — sonst zeigt eine lokale Vorschau den Stand
+  // der Live-Site und ohne Netz gar nichts.
+  var BASIS = '../';
+
+  /* ---- Theme ---- */
+  var schalter = document.getElementById('themenschalter');
+  function themaLesen(){ try { return localStorage.getItem('lp-bruch-thema'); } catch(e){ return null; } }
+  var gespeichert = themaLesen();
+  if (gespeichert === 'dark' || gespeichert === 'light') document.documentElement.setAttribute('data-theme', gespeichert);
+  schalter.addEventListener('click', function(){
+    var jetzt = document.documentElement.getAttribute('data-theme');
+    if (!jetzt) jetzt = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var neu = jetzt === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', neu);
+    try { localStorage.setItem('lp-bruch-thema', neu); } catch(e){}
+  });
+
+  /* ---- Clip-Buehne (nach clipBuehne/clipZu von mathe.begreifbar.ch) ---- */
+
+  /* Clip-Buehne kommt aus ../mathlib.js — clipBuehne(quelle, titel).
+     Vorher stand hier eine Kopie; Scrollsperre und Fokusrueckgabe
+     sind dabei nach mathlib.js gewandert und gelten jetzt ueberall. */
+
+  document.querySelectorAll('.clipkarte').forEach(function(karte){
+    var knopf = karte.querySelector('.clip-start');
+    knopf.addEventListener('click', function(){
+      if (document.querySelector('.clip-buehne')) return;
+      clipBuehne(BASIS + karte.dataset.clip, karte.dataset.titel || 'Clip');
+    });
+  });
+
+  /* ---- Lösungen: alle auf/zu ---- */
+  document.querySelectorAll('.alle-loesungen').forEach(function(knopf){
+    knopf.addEventListener('click', function(){
+      var test = knopf.closest('.test') || knopf.closest('.gesamt');
+      var alle = test.querySelectorAll('details.loes');
+      var oeffnen = Array.prototype.some.call(alle, function(d){ return !d.open; });
+      alle.forEach(function(d){ d.open = oeffnen; });
+      knopf.textContent = oeffnen ? 'Lösungen zuklappen' : 'alle Lösungen';
+    });
+  });
+
+  /* ---- Fortschritt ---- */
+  var tests = Array.prototype.slice.call(document.querySelectorAll('.test'));
+  var fuellung = document.getElementById('balken-fuellung');
+  var text = document.getElementById('fortschritt-text');
+  function standLesen(){
+    try { return JSON.parse(localStorage.getItem('lp-bruch-stand') || '{}'); } catch(e){ return {}; }
+  }
+  function standSchreiben(s){ try { localStorage.setItem('lp-bruch-stand', JSON.stringify(s)); } catch(e){} }
+  function zeichnen(){
+    var fertig = tests.filter(function(t){ return t.querySelector('.erledigt').checked; }).length;
+    fuellung.style.width = (fertig / tests.length * 100) + '%';
+    text.textContent = fertig + ' von ' + tests.length + ' Aufgabenblöcken bearbeitet';
+  }
+  var stand = standLesen();
+  tests.forEach(function(t){
+    var box = t.querySelector('.erledigt');
+    if (stand[t.dataset.test]) box.checked = true;
+    box.addEventListener('change', function(){
+      var s = standLesen();
+      s[t.dataset.test] = box.checked;
+      standSchreiben(s);
+      zeichnen();
+    });
+  });
+  zeichnen();
+  document.getElementById('fortschritt-reset').addEventListener('click', function(){
+    tests.forEach(function(t){ t.querySelector('.erledigt').checked = false; });
+    standSchreiben({});
+    zeichnen();
+  });
+
+  /* ---- aktives Kapitel in der Schiene ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.schiene a'));
+  var ziele = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if ('IntersectionObserver' in window && ziele.length){
+    var beobachter = new IntersectionObserver(function(eintraege){
+      eintraege.forEach(function(e){
+        if (!e.isIntersecting) return;
+        links.forEach(function(a){ a.classList.toggle('aktiv', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-15% 0px -70% 0px' });
+    ziele.forEach(function(z){ beobachter.observe(z); });
+  }
+})();
+
+</script>
+<script>
+/* Leitprogramm Bruchrechnen — Bruchstreifen (Sim 1, 2), Flächen- und Messmodell (Sim 3),
+   Schrittwähler für die Rechenreihenfolge (Sim 4), Übungen mit Rückmeldung, Minibilder.
+   Alles mit ganzen Zahlen gerechnet (Zähler/Nenner), nie mit Gleitkomma — ein Bruch ist
+   {z, n} mit n > 0. Eine Farbe, eine Bedeutung: blau = erster Bruch, orange = zweiter Bruch,
+   grün = Ergebnis, rot = Fehler. Zahlen mit echtem Minus; Brüche im Bild als HTML-Bruch. */
+(function(){
+  'use strict';
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(eltern, name, attr, text){
+    var e = document.createElementNS(NS, name);
+    for (var k in attr) e.setAttribute(k, attr[k]);
+    if (text != null) e.textContent = text;
+    eltern.appendChild(e); return e;
+  }
+  function setzen(e){ if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([e]).catch(function(){}); }
+  function zufall(l){ return l[Math.floor(Math.random() * l.length)]; }
+  function zufallG(a, b){ return a + Math.floor(Math.random() * (b - a + 1)); }
+  function mz(n){ return (n < 0 ? '−' : '') + Math.abs(n); }           // echtes Minus
+
+  /* ---------- Bruchrechnung, exakt ---------- */
+  function ggT(a, b){ a = Math.abs(a); b = Math.abs(b); while (b){ var t = a % b; a = b; b = t; } return a; }
+  function kgV(a, b){ return a / ggT(a, b) * b; }
+  function B(z, n){
+    if (n === undefined) n = 1;
+    if (n < 0){ z = -z; n = -n; }
+    var g = ggT(z, n) || 1; return { z: z / g, n: n / g };
+  }
+  function plus(x, y){ return B(x.z * y.n + y.z * x.n, x.n * y.n); }
+  function minus(x, y){ return B(x.z * y.n - y.z * x.n, x.n * y.n); }
+  function mal(x, y){ return B(x.z * y.z, x.n * y.n); }
+  function durch(x, y){ return B(x.z * y.n, x.n * y.z); }
+  function hoch(x, e){ var r = B(1); for (var i = 0; i < e; i++) r = mal(r, x); return r; }
+  function rechne(o, x, y){ return o === '+' ? plus(x, y) : o === '−' ? minus(x, y) : o === '·' ? mal(x, y) : o === ':' ? durch(x, y) : hoch(x, y); }
+  function gleich(x, y){ return x.z * y.n === y.z * x.n; }
+  function txt(b){ return b.n === 1 ? String(b.z) : b.z + '/' + b.n; }   // so tippt man es ein
+
+  /* Bruch als LaTeX; kl: negative Zahl in Klammern (nach einem Rechenzeichen). */
+  function tb(b, kl, gross){
+    var f = gross ? '\\dfrac' : '\\tfrac';
+    var s = b.n === 1 ? String(Math.abs(b.z)) : f + '{' + Math.abs(b.z) + '}{' + b.n + '}';
+    if (b.z < 0) s = '-' + s;
+    return b.z < 0 && kl ? '\\left(' + s + '\\right)' : s;
+  }
+  /* Bruch als HTML (ohne MathJax: Bilder und Schrittwähler setzen sich sofort). */
+  function hb(b, kl){
+    var a = Math.abs(b.z);
+    var inner = b.n === 1 ? '<span class="bz-g">' + a + '</span>'
+      : '<span class="bz" role="img" aria-label="' + mz(b.z) + ' durch ' + b.n + '"><span class="bz-z" aria-hidden="true">' + a + '</span><span class="bz-n" aria-hidden="true">' + b.n + '</span></span>';
+    var s = (b.z < 0 ? '−' : '') + inner;
+    return b.z < 0 && kl ? '(' + s + ')' : s;
+  }
+
+  /* ---------- Eingabe lesen ----------
+     «3/4», «-3/4», «−3/4», «(-3)/4», «3/-4», «-(3/4)», ganze Zahlen «5», «-2».
+     Dezimalzahlen werden verstanden (gleicher Wert → «als Bruch angeben»), gemischte Zahlen
+     («2 1/3») erkannt und abgelehnt — sie liest man leicht als Produkt. Die rohe Eingabe bleibt
+     erhalten (z, n ungekürzt), damit «noch nicht vollständig gekürzt» erkannt wird. */
+  function bruchLesen(s){
+    s = String(s == null ? '' : s).trim().replace(/[\u2212\u2013]/g, '-');
+    if (!s) return { leer: true };
+    if (/^-?\d+\s+\d+\s*\/\s*\d+$/.test(s)) return { gemischt: true };
+    var komma = /\d,\d/.test(s);
+    s = s.replace(/\s+/g, '').replace(/(\d),(\d)/g, '$1.$2').replace(/^\+/, '');
+    var m, z, n, strich = false, dez = false;
+    if ((m = s.match(/^-\((\d+)\/(\d+)\)$/))){ z = -(+m[1]); n = +m[2]; strich = true; }
+    else if ((m = s.match(/^\(?([+-]?\d+)\)?\/\(?([+-]?\d+)\)?$/))){ z = +m[1]; n = +m[2]; strich = true; }
+    else if (/^-?\d+$/.test(s)){ z = +s; n = 1; }
+    else if ((m = s.match(/^(-?)(\d*)\.(\d+)$/))){ n = Math.pow(10, m[3].length); z = (+(m[2] || 0) * n + (+m[3])) * (m[1] ? -1 : 1); dez = true; }
+    else return { kaputt: true };
+    if (n === 0) return { kaputt: true, null: true };
+    if (n < 0){ z = -z; n = -n; }
+    return { z: z, n: n, strich: strich, dez: dez, komma: komma };
+  }
+  function gekuerzt(r){ return ggT(r.z, r.n) === 1 && !(r.strich && r.n === 1); }
+
+  /* ---------- Aufgabenleiste (wie in den anderen Leitprogrammen) ----------
+     Eine Aufgabe nach der anderen; ✓ sobald der Zustand stimmt. «überspringen» geht immer. */
+  function Leiste(fig, aufgaben, sim){
+    var box = fig.querySelector('.leiste'); if (!box) return function(){};
+    var n = aufgaben.length, i = 0, erledigt = {};
+    box.innerHTML = '<span class="ls-nr"></span><span class="ls-text"></span><span class="ls-ok" aria-live="polite"></span><button type="button" class="ls-weiter"></button><button type="button" class="ls-neu" hidden>von vorn</button>';
+    var nr = box.querySelector('.ls-nr'), tx = box.querySelector('.ls-text'), ok = box.querySelector('.ls-ok'),
+        bt = box.querySelector('.ls-weiter'), bv = box.querySelector('.ls-neu');
+    function anzahl(){ var k = 0; for (var j = 0; j < n; j++) if (erledigt[j]) k++; return k; }
+    function offen(ab){ for (var j = ab; j < n; j++) if (!erledigt[j]) return j; return n; }
+    function zeigen(){
+      if (i >= n){
+        var k = anzahl();
+        ok.textContent = ''; box.classList.remove('geloest');
+        if (k === n){ nr.textContent = '✓'; tx.innerHTML = 'Alle ' + n + ' Aufgaben gelöst — weiter mit «Festhalten».'; bt.textContent = 'nochmals'; bv.hidden = true; box.classList.add('fertig'); }
+        else { nr.textContent = k + '/' + n; tx.innerHTML = k + ' von ' + n + ' gelöst, ' + (n - k) + ' übersprungen.'; bt.textContent = 'zu den offenen ▶'; bv.hidden = false; box.classList.remove('fertig'); }
+        if (sim.ende) sim.ende();
+        return;
+      }
+      box.classList.remove('fertig'); bv.hidden = true;
+      nr.textContent = (i + 1) + '/' + n; tx.innerHTML = aufgaben[i].text; setzen(tx);
+      if (aufgaben[i].setup) aufgaben[i].setup(sim);
+      if (sim.zeichnen) sim.zeichnen();
+      pruefen();
+    }
+    function pruefen(){
+      if (i >= n) return;
+      var gut = !!aufgaben[i].ok(sim.zustand());
+      if (gut) erledigt[i] = true;
+      ok.textContent = erledigt[i] ? '✓' : '';
+      bt.textContent = erledigt[i] ? 'Nächste ▶' : 'überspringen';
+      box.classList.toggle('geloest', !!erledigt[i]);
+    }
+    // Beim Wechsel alles auf den Startwert, sonst erfüllt der Endzustand der vorigen Aufgabe die
+    // nächste schon (HOWTO §15).
+    function gehe(j){
+      i = j;
+      fig.querySelectorAll('input[type=range]').forEach(function(inp){ inp.value = inp.defaultValue; });
+      fig.querySelectorAll('.sim-schalter input').forEach(function(inp){ inp.checked = inp.defaultChecked; });
+      fig.querySelectorAll('select.sim-wahl').forEach(function(s){ s.value = s.querySelector('option[selected]').value; });
+      if (sim.aufraeumen) sim.aufraeumen(); zeigen(); if (sim.zeichnen) sim.zeichnen();
+    }
+    bt.addEventListener('click', function(){
+      if (i >= n){ if (anzahl() === n){ erledigt = {}; gehe(0); } else gehe(offen(0)); }
+      else gehe(offen(i + 1));
+    });
+    bv.addEventListener('click', function(){ erledigt = {}; gehe(0); });
+    setTimeout(zeigen, 0);
+    return pruefen;
+  }
+  function wert(fig, id){ return +fig.querySelector('#' + id).value; }
+  function zeigeWert(fig, id){ var i = fig.querySelector('#' + id); var v = i.parentNode.querySelector('.sl-val'); if (v) v.textContent = i.value; }
+
+  /* Ein Streifen (Rechteck aus n gleichen Teilen, die ersten k gefärbt). */
+  function streifen(g, x, y, w, h, n, k, cls, ab){
+    var dx = w / n;
+    for (var j = 0; j < n; j++){
+      el(g, 'rect', { x: x + j * dx, y: y, width: dx, height: h, 'class': (j >= (ab || 0) && j < k ? 'zelle ' + cls : 'zelle leer') });
+    }
+    el(g, 'rect', { x: x, y: y, width: w, height: h, 'class': 'rahmen' });
+  }
+
+  /* ════════ Sim 1 — Erweitern und Kürzen am Bruchstreifen ════════
+     Unterschied zur Themenseite (dort noch keine Animation, Stand 09.10.2026): Hier ist der obere
+     Streifen fest (Ziel), der untere wird mit Nenner und Zähler nachgebaut; die gestrichelte
+     Hilfslinie zeigt, wo der Ziel-Anteil endet. */
+  (function(){
+    var fig = document.getElementById('sim1'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
+    var hilfe = fig.querySelector('.sim-schalter input');
+    var S = { a: 3, b: 4 };
+    var X0 = 20, W = 300;
+    function korrigiere(){                     // Zähler höchstens Nenner — vor dem Zeichnen
+      var kn = fig.querySelector('#s1-k'), n = wert(fig, 's1-n');
+      kn.max = n; if (+kn.value > n) kn.value = n;
+    }
+    function zustand(){ return { a: S.a, b: S.b, n: wert(fig, 's1-n'), k: wert(fig, 's1-k') }; }
+    function zeichnen(){
+      korrigiere();
+      var Z = zustand(); zeigeWert(fig, 's1-n'); zeigeWert(fig, 's1-k');
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      el(svg, 'text', { x: X0, y: 16, 'class': 'st-name' }, 'oben');
+      streifen(svg, X0, 22, W, 34, Z.b, Z.a, 'f1');
+      el(svg, 'text', { x: X0, y: 86, 'class': 'st-name' }, 'unten');
+      streifen(svg, X0, 92, W, 34, Z.n, Z.k, 'f2');
+      var gl = Z.k * Z.b === Z.a * Z.n;
+      if (gl) el(svg, 'rect', { x: X0 - 3, y: 89, width: W + 6, height: 40, 'class': 'treffer-rahmen' });
+      if (hilfe.checked){
+        var xs = X0 + W * Z.a / Z.b;
+        el(svg, 'line', { x1: xs, y1: 18, x2: xs, y2: 134, 'class': 'hilfslinie' });
+      }
+      formel.innerHTML = 'oben ' + hb({ z: Z.a, n: Z.b }) + '; unten ' + hb({ z: Z.k, n: Z.n }) +
+        (gl ? ' <span class="ok-text">gleich gross</span>' : ' <span class="nein-text">nicht gleich gross</span>');
+      if (pr) pr();
+    }
+    var sim = { zustand: zustand, zeichnen: zeichnen };
+    var pr = null;
+    pr = Leiste(fig, [
+      { text: 'Stell unten denselben Anteil dar wie oben — aber mit dem Nenner 8.', setup: function(){ S = { a: 3, b: 4 }; },
+        ok: function(z){ return z.n === 8 && z.k === 6; } },
+      { text: 'Jetzt mit dem Nenner 20. Wie viele Teile musst du färben?', setup: function(){ S = { a: 3, b: 4 }; },
+        ok: function(z){ return z.n === 20 && z.k === 15; } },
+      { text: 'Oben sind 12 von 18 Teilen gefärbt. Stell denselben Anteil mit möglichst wenigen Teilen dar.', setup: function(){ S = { a: 12, b: 18 }; },
+        ok: function(z){ return z.n === 3 && z.k === 2; } },
+      { text: 'Geht \\(\\tfrac{5}{6}\\) mit dem Nenner 4? Probier es. Stell dann den kleinsten Nenner über 6 ein, mit dem es geht.', setup: function(){ S = { a: 5, b: 6 }; },
+        ok: function(z){ return z.n === 12 && z.k === 10; } },
+      { text: 'Oben steht \\(\\tfrac{2}{3}\\). Stell unten \\(\\tfrac{3}{4}\\) dar, und zwar mit dem kleinsten Nenner, den auch \\(\\tfrac{2}{3}\\) haben kann. Welcher Bruch ist grösser?', setup: function(){ S = { a: 2, b: 3 }; },
+        ok: function(z){ return z.n === 12 && z.k === 9; } }
+    ], sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 2 — Addieren und Subtrahieren: gemeinsame Unterteilung ════════
+     Zwei Streifen, eine Unterteilung N für beide. Passt N zu beiden Nennern, erscheint das Ergebnis
+     in N-teln. Der Schalter zeigt den Fehler «Zähler plus Zähler, Nenner plus Nenner» als roten
+     Streifen — er ist kleiner als der erste Summand allein. */
+  (function(){
+    var fig = document.getElementById('sim2'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
+    var falschS = fig.querySelector('.sim-schalter input');
+    var S = { a: 1, b: 2, o: '+', c: 1, d: 3 };
+    var X0 = 44, W = 280;
+    function zustand(){ return { N: wert(fig, 's2-n'), falsch: falschS.checked, b: S.b, d: S.d }; }
+    function zeichnen(){
+      var Z = zustand(); zeigeWert(fig, 's2-n');
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      var N = Z.N, p1 = N % S.b === 0, p2 = N % S.d === 0;
+      function zeile(y, n, k, cls, passt, name){
+        el(svg, 'text', { x: 4, y: y + 22, 'class': 'st-name' }, name);
+        streifen(svg, X0, y, W, 30, n, k, cls);
+        for (var j = 1; j < N; j++){ var x = X0 + W * j / N; el(svg, 'line', { x1: x, y1: y - 4, x2: x, y2: y + 34, 'class': passt ? 'teilung' : 'teilung schief' }); }
+      }
+      zeile(14, S.b, S.a, 'f1', p1, S.a + '/' + S.b);
+      zeile(64, S.d, S.c, 'f2', p2, S.c + '/' + S.d);
+      var r = rechne(S.o, B(S.a, S.b), B(S.c, S.d));
+      var t = 'Unterteilung in ' + N + ' Teile: ' + hb({ z: S.a, n: S.b }) + ' = ' + (p1 ? hb({ z: S.a * N / S.b, n: N }) + ' <span class="ok-text">✓</span>' : '<span class="nein-text">passt nicht</span>') +
+              '; ' + hb({ z: S.c, n: S.d }) + ' = ' + (p2 ? hb({ z: S.c * N / S.d, n: N }) + ' <span class="ok-text">✓</span>' : '<span class="nein-text">passt nicht</span>');
+      if (p1 && p2){
+        var k1 = S.a * N / S.b, k2 = S.c * N / S.d;
+        el(svg, 'text', { x: 4, y: 136, 'class': 'st-name' }, S.o === '+' ? 'Summe' : 'Differenz');
+        if (S.o === '+'){ streifen(svg, X0, 114, W, 30, N, k1, 'f1'); for (var j = k1; j < k1 + k2; j++) el(svg, 'rect', { x: X0 + W * j / N, y: 114, width: W / N, height: 30, 'class': 'zelle f2' }); }
+        else { streifen(svg, X0, 114, W, 30, N, k1 - k2, 'f3'); for (var q = k1 - k2; q < k1; q++) el(svg, 'rect', { x: X0 + W * q / N, y: 114, width: W / N, height: 30, 'class': 'zelle weg' }); }
+        el(svg, 'rect', { x: X0, y: 114, width: W, height: 30, 'class': 'rahmen' });
+        var roh = { z: S.o === '+' ? k1 + k2 : k1 - k2, n: N };
+        t += '<br>' + hb({ z: k1, n: N }) + ' ' + S.o + ' ' + hb({ z: k2, n: N }) + ' = ' + hb(roh) + (gleich(roh, r) && (roh.n !== r.n) ? ' = ' + hb(r) : '');
+      } else {
+        el(svg, 'text', { x: X0 + W / 2, y: 134, 'text-anchor': 'middle', 'class': 'st-frage' }, 'Ergebnis erst, wenn beide Streifen in die Unterteilung passen');
+      }
+      if (Z.falsch){
+        el(svg, 'text', { x: 4, y: 186, 'class': 'st-name falsch' }, (S.a + S.c) + '/' + (S.b + S.d));
+        if (S.o === '+') streifen(svg, X0, 164, W, 30, S.b + S.d, S.a + S.c, 'f4');
+        else el(svg, 'text', { x: X0, y: 184, 'class': 'st-frage' }, 'Der Fehler-Streifen gehört zur Addition.');
+      }
+      formel.innerHTML = t;
+      if (pr) pr();
+    }
+    var sim = { zustand: zustand, zeichnen: zeichnen };
+    var pr = null;
+    function setze(a, b, o, c, d){ return function(){ S = { a: a, b: b, o: o, c: c, d: d }; }; }
+    pr = Leiste(fig, [
+      { text: '\\(\\tfrac{1}{2} + \\tfrac{1}{3}\\): Stell eine Unterteilung ein, in die beide Streifen genau passen.', setup: setze(1, 2, '+', 1, 3),
+        ok: function(z){ return z.N % 2 === 0 && z.N % 3 === 0; } },
+      { text: 'Und jetzt die <b>kleinste</b> Unterteilung, die für beide passt.', setup: setze(1, 2, '+', 1, 3),
+        ok: function(z){ return z.N === 6; } },
+      { text: 'Schalte den roten Streifen ein: So rechnet, wer Zähler plus Zähler und Nenner plus Nenner nimmt. Ist \\(\\tfrac{2}{5}\\) grösser als \\(\\tfrac{1}{2}\\) allein?', setup: setze(1, 2, '+', 1, 3),
+        ok: function(z){ return z.falsch; } },
+      { text: '\\(\\tfrac{3}{4} + \\tfrac{1}{6}\\): Finde die kleinste gemeinsame Unterteilung.', setup: setze(3, 4, '+', 1, 6),
+        ok: function(z){ return z.N === 12; } },
+      { text: '\\(\\tfrac{7}{8} - \\tfrac{1}{6}\\): Wieder die kleinste gemeinsame Unterteilung. Wie viele \\(\\tfrac{1}{24}\\) bleiben?', setup: setze(7, 8, '−', 1, 6),
+        ok: function(z){ return z.N === 24; } },
+      { text: '\\(\\tfrac{2}{9} + \\tfrac{1}{6}\\): Das Produkt \\(9 \\cdot 6 = 54\\) passt nicht auf den Regler. Geht es mit weniger Teilen?', setup: setze(2, 9, '+', 1, 6),
+        ok: function(z){ return z.N === 18; } }
+    ], sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 3 — Multiplizieren (Flächenmodell) und Dividieren (Messen) ════════
+     «Mal»: Im Einheitsquadrat sind a/b der Breite (blau) und c/d der Höhe (orange) gefärbt; das
+     Rechteck, das beide trifft (grün), ist das Produkt. «Durch»: Wie oft passt c/d in a/b? */
+  (function(){
+    var fig = document.getElementById('sim3'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]'), modus = fig.querySelector('select.sim-wahl');
+    function korrigiere(){
+      [['s3-a', 's3-b'], ['s3-c', 's3-d']].forEach(function(p){
+        var z = fig.querySelector('#' + p[0]), n = wert(fig, p[1]); z.max = n; if (+z.value > n) z.value = n; });
+    }
+    function zustand(){ return { m: modus.value, a: wert(fig, 's3-a'), b: wert(fig, 's3-b'), c: wert(fig, 's3-c'), d: wert(fig, 's3-d') }; }
+    function zeichnen(){
+      korrigiere();
+      var Z = zustand(); ['s3-a', 's3-b', 's3-c', 's3-d'].forEach(function(id){ zeigeWert(fig, id); });
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+      var x = { z: Z.a, n: Z.b }, y = { z: Z.c, n: Z.d }, i, j;
+      if (Z.m === 'mal'){
+        svg.setAttribute('viewBox', '0 0 340 250');
+        var X0 = 80, Y0 = 30, S = 200;
+        for (i = 0; i < Z.b; i++) for (j = 0; j < Z.d; j++){
+          var cls = (i < Z.a && j < Z.c) ? 'f3' : i < Z.a ? 'f1' : j < Z.c ? 'f2' : 'leer';
+          el(svg, 'rect', { x: X0 + S * i / Z.b, y: Y0 + S * j / Z.d, width: S / Z.b, height: S / Z.d, 'class': 'zelle ' + cls });
+        }
+        el(svg, 'rect', { x: X0, y: Y0, width: S, height: S, 'class': 'rahmen' });
+        el(svg, 'line', { x1: X0, y1: Y0 - 8, x2: X0 + S * Z.a / Z.b, y2: Y0 - 8, 'class': 'mass f1' });
+        el(svg, 'text', { x: X0 + S * Z.a / Z.b / 2, y: Y0 - 13, 'text-anchor': 'middle', 'class': 'st-name blau' }, Z.a + '/' + Z.b);
+        el(svg, 'line', { x1: X0 - 8, y1: Y0, x2: X0 - 8, y2: Y0 + S * Z.c / Z.d, 'class': 'mass f2' });
+        el(svg, 'text', { x: X0 - 13, y: Y0 + S * Z.c / Z.d / 2 + 4, 'text-anchor': 'end', 'class': 'st-name orange' }, Z.c + '/' + Z.d);
+        el(svg, 'text', { x: X0 + S + 8, y: Y0 + S, 'class': 'st-frage' }, '1');
+        var roh = { z: Z.a * Z.c, n: Z.b * Z.d }, r = mal(x, y);
+        formel.innerHTML = hb(x) + ' · ' + hb(y) + ' = ' + hb(roh) + (roh.n !== r.n ? ' = ' + hb(r) : '') +
+          ' <span class="grau">(grün: ' + roh.z + ' von ' + roh.n + ' Kästchen)</span>';
+      } else {
+        svg.setAttribute('viewBox', '0 0 340 170');
+        var A0 = 20, L = 300, q = durch(x, y), ganz = Math.floor(q.z / q.n);
+        el(svg, 'text', { x: A0, y: 18, 'class': 'st-name blau' }, Z.a + '/' + Z.b);
+        el(svg, 'rect', { x: A0, y: 24, width: L * Z.a / Z.b, height: 30, 'class': 'zelle f1' });
+        el(svg, 'rect', { x: A0, y: 24, width: L, height: 30, 'class': 'rahmen duenn' });
+        var st = L * Z.c / Z.d, k = 0;
+        for (var p = 0; p + 1e-9 < L * Z.a / Z.b; p += st, k++){
+          var breite = Math.min(st, L * Z.a / Z.b - p), voll = breite > st - 1e-9;
+          el(svg, 'rect', { x: A0 + p, y: 66, width: breite, height: 30, 'class': 'zelle ' + (voll ? (k % 2 ? 'f2' : 'f2b') : 'f2 rest') });
+          if (voll) el(svg, 'text', { x: A0 + p + breite / 2, y: 86, 'text-anchor': 'middle', 'class': 'st-zahl' }, String(k + 1));
+        }
+        el(svg, 'text', { x: A0, y: 118, 'class': 'st-name orange' }, 'Stück: ' + Z.c + '/' + Z.d);
+        for (i = 0; i <= 4; i++){ var xx = A0 + L * i / 4; el(svg, 'line', { x1: xx, y1: 128, x2: xx, y2: 134, 'class': 'achse' }); }
+        el(svg, 'line', { x1: A0, y1: 131, x2: A0 + L, y2: 131, 'class': 'achse' });
+        el(svg, 'text', { x: A0, y: 150, 'text-anchor': 'middle', 'class': 'skala' }, '0');
+        el(svg, 'text', { x: A0 + L, y: 150, 'text-anchor': 'middle', 'class': 'skala' }, '1');
+        var rest = minus(q, B(ganz));
+        formel.innerHTML = hb(x) + ' : ' + hb(y) + ' = ' + hb(x) + ' · ' + hb({ z: Z.d, n: Z.c }) + ' = ' + hb(q) +
+          ' <span class="grau">(' + (rest.z === 0 ? 'passt genau ' + ganz + '-mal' : ganz === 0 ? 'passt nicht ganz: nur ' + hb(rest) + ' des Stücks' : 'passt ' + ganz + '-mal ganz, dazu ' + hb(rest) + ' des Stücks') + ')</span>';
+      }
+      if (pr) pr();
+    }
+    var sim = { zustand: zustand, zeichnen: zeichnen };
+    var pr = null;
+    function auf(m){ return function(){ modus.value = m; }; }
+    pr = Leiste(fig, [
+      { text: '«Mal»: Stell \\(\\tfrac{2}{3} \\cdot \\tfrac{3}{4}\\) ein. Wie viele Kästchen hat das Quadrat, wie viele sind grün?', setup: auf('mal'),
+        ok: function(z){ return z.m === 'mal' && z.a === 2 && z.b === 3 && z.c === 3 && z.d === 4; } },
+      { text: 'Stell zwei Brüche kleiner als 1 ein, deren Produkt genau \\(\\tfrac{1}{4}\\) ist — aber nicht \\(\\tfrac{1}{2} \\cdot \\tfrac{1}{2}\\).', setup: auf('mal'),
+        ok: function(z){ return z.m === 'mal' && z.a < z.b && z.c < z.d && 4 * z.a * z.c === z.b * z.d && !(z.a * 2 === z.b && z.c * 2 === z.d); } },
+      { text: 'Mal einen Bruch kleiner als 1 gibt weniger. Finde trotzdem ein Produkt, das grösser als \\(\\tfrac{1}{2}\\) ist — beide Brüche kleiner als 1.', setup: auf('mal'),
+        ok: function(z){ return z.m === 'mal' && z.a < z.b && z.c < z.d && 2 * z.a * z.c > z.b * z.d; } },
+      { text: '«Durch»: Wie oft passt \\(\\tfrac{1}{8}\\) in \\(\\tfrac{3}{4}\\)? Stell \\(\\tfrac{3}{4} : \\tfrac{1}{8}\\) ein.', setup: auf('durch'),
+        ok: function(z){ return z.m === 'durch' && z.a === 3 && z.b === 4 && z.c === 1 && z.d === 8; } },
+      { text: 'Stell \\(\\tfrac{3}{4} : \\tfrac{1}{2}\\) ein. Passt \\(\\tfrac{1}{2}\\) mehr oder weniger als zweimal?', setup: auf('durch'),
+        ok: function(z){ return z.m === 'durch' && z.a === 3 && z.b === 4 && z.c === 1 && z.d === 2; } },
+      { text: 'Stell eine Division ein, deren Ergebnis genau 2 ist.', setup: auf('durch'),
+        ok: function(z){ return z.m === 'durch' && z.a * z.d === 2 * z.b * z.c; } }
+    ], sim);
+    fig.querySelectorAll('input, select').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Terme als Baum (Sim 4 und Übung «Reihenfolge») ════════
+     { t:'z', b } Zahl · { t:'op', o:'+|−|·|:', l, r } · { t:'k', x } Klammer · { t:'p', x, e } Potenz.
+     Die Klammern stehen im Baum, nicht in einer Vorrangregel: Was zuerst kommt, sagt der Baum. */
+  function Z(z, n){ return { t: 'z', b: B(z, n) }; }
+  function O(o, l, r){ return { t: 'op', o: o, l: l, r: r }; }
+  function K(x){ return { t: 'k', x: x }; }
+  function P(x, e){ return { t: 'p', x: x, e: e }; }
+  function wertVon(k){
+    if (k.t === 'z') return k.b;
+    if (k.t === 'k') return wertVon(k.x);
+    if (k.t === 'p') return hoch(wertVon(k.x), k.e);
+    return rechne(k.o, wertVon(k.l), wertVon(k.r));
+  }
+  var TEXOP = { '+': '+', '−': '-', '·': '\\cdot', ':': ':' };
+  function texVon(k, erst){
+    if (k.t === 'z') return tb(k.b, !erst);
+    if (k.t === 'k') return '\\left(' + texVon(k.x, true) + '\\right)';
+    if (k.t === 'p'){ var b = k.x.t === 'z' && (k.x.b.n !== 1 || k.x.b.z < 0) ? '\\left(' + tb(k.x.b, false) + '\\right)' : texVon(k.x, true); return b + '^{' + k.e + '}'; }
+    return texVon(k.l, erst) + ' ' + TEXOP[k.o] + ' ' + texVon(k.r, false);
+  }
+  function schluessel(k){
+    if (k.t === 'z') return txt(k.b);
+    if (k.t === 'k') return '(' + schluessel(k.x) + ')';
+    if (k.t === 'p') return schluessel(k.x) + '^' + k.e;
+    return schluessel(k.l) + k.o + schluessel(k.r);
+  }
+
+  /* ════════ Sim 4 — Schrittwähler: Was kommt zuerst? ════════
+     Die Lernenden tippen auf das Rechenzeichen, das zuerst dran ist, und rechnen diesen Schritt
+     selbst aus. Falsche Wahl → Rückmeldung zur Regel (Klammer, Potenz, Punkt vor Strich, von links
+     nach rechts); falsches Teilergebnis → Rückmeldung zum Fehlertyp; nach zwei Fehlversuchen steht
+     das Teilergebnis da. Jede Zeile bleibt stehen wie im Heft. */
+  (function(){
+    var fig = document.getElementById('sim4'); if (!fig) return;
+    var verl = fig.querySelector('.sw-verlauf'), frage = fig.querySelector('.sw-frage'), feld = fig.querySelector('.sw-feld'), rueck = fig.querySelector('.sw-rueck');
+    var AUFG = [
+      function(){ return O('+', Z(1, 4), O('·', Z(2, 3), Z(3, 8))); },
+      function(){ return O('−', Z(5, 6), K(O(':', Z(1, 4), Z(3, 2)))); },
+      function(){ return O('·', O(':', Z(2, 3), Z(4, 9)), Z(1, 2)); },
+      function(){ return O('−', P(Z(-2, 3), 2), O('·', Z(1, 3), Z(1, 2))); },
+      function(){ return O('−', Z(-3, 4), O(':', K(O('−', Z(1, 2), Z(5, 4))), Z(3))); }
+    ];
+    var baum, zeilen, gewaehlt, versuche, nextId;
+    function ids(k){ if (k.t !== 'z'){ k.id = nextId++; ['l', 'r', 'x'].forEach(function(s){ if (k[s]) ids(k[s]); }); } }
+    function bereit(k){ return (k.t === 'op' && k.l.t === 'z' && k.r.t === 'z') || (k.t === 'p' && k.x.t === 'z'); }
+    function html(k, erst){
+      if (k.t === 'z') return hb(k.b, !erst);
+      if (k.t === 'k') return '<span class="sw-kl">(</span>' + html(k.x, true) + '<span class="sw-kl">)</span>';
+      if (k.t === 'p'){
+        var basis = k.x.t === 'z' ? '(' + hb(k.x.b) + ')' : html(k.x, true);
+        return basis + '<sup><button type="button" class="sw-op' + (gewaehlt === k ? ' aktiv' : '') + '" data-knoten="' + k.id + '" aria-label="hoch ' + k.e + '">' + k.e + '</button></sup>';
+      }
+      return html(k.l, erst) + ' <button type="button" class="sw-op' + (gewaehlt === k ? ' aktiv' : '') + '" data-knoten="' + k.id + '" aria-label="Rechenzeichen ' + k.o + '">' + k.o + '</button> ' + html(k.r, false);
+    }
+    function htmlStatisch(k, erst){ return html(k, erst).replace(/<button[^>]*>([^<]*)<\/button>/g, '<span class="sw-op-st">$1</span>'); }
+    function finde(k, id){ if (k.id === id) return k; var r = null; ['l', 'r', 'x'].forEach(function(s){ if (!r && k[s]) r = finde(k[s], id); }); return r; }
+    function ersetze(k, alt, neu){
+      if (k === alt) return neu;
+      ['l', 'r', 'x'].forEach(function(s){ if (k[s]) k[s] = ersetze(k[s], alt, neu); });
+      if (k.t === 'k' && k.x.t === 'z') return k.x;            // Klammer um eine Zahl fällt weg
+      return k;
+    }
+    function meldung(cls, h){ rueck.className = 'sw-rueck ' + cls; rueck.innerHTML = h; }
+    function zeichnen(){
+      var h = '';
+      zeilen.forEach(function(z, i){ h += '<div class="sw-zeile"><span class="sw-term">' + (i ? '= ' : '') + z.term + '</span><span class="sw-notiz">' + (z.notiz || '') + '</span></div>'; });
+      var fertig = baum.t === 'z';
+      h += '<div class="sw-zeile aktuell"><span class="sw-term">' + (zeilen.length ? '= ' : '') + (fertig ? '<b class="sw-erg">' + hb(baum.b) + '</b>' : html(baum, true)) + '</span><span class="sw-notiz"></span></div>';
+      verl.innerHTML = h;
+      verl.querySelectorAll('.sw-op').forEach(function(b){ b.addEventListener('click', function(){ waehle(+b.dataset.knoten); }); });
+      if (fertig){ frage.textContent = 'Fertig — das Ergebnis ist vollständig gekürzt.'; feld.innerHTML = ''; }
+      else if (!gewaehlt){ frage.textContent = 'Tippe auf das Rechenzeichen, das zuerst dran ist.'; feld.innerHTML = ''; }
+      if (pr) pr();
+    }
+    function warum(k){
+      var kinder = k.t === 'p' ? [k.x] : [k.l, k.r];
+      if (kinder.some(function(c){ return c.t === 'k'; })) return 'Zuerst die <b>Klammer</b> ausrechnen.';
+      if (kinder.some(function(c){ return c.t === 'p'; })) return 'Zuerst die <b>Potenz</b> ausrechnen.';
+      var c = kinder.filter(function(c){ return c.t === 'op'; })[0];
+      if ((k.o === '+' || k.o === '−') && (c.o === '·' || c.o === ':')) return '<b>Punkt vor Strich:</b> Zuerst \u00ab' + c.o + '\u00bb, dann \u00ab' + k.o + '\u00bb.';
+      return 'Gleichrangige Rechenarten <b>von links nach rechts</b>: Zuerst das \u00ab' + c.o + '\u00bb links.';
+    }
+    function waehle(id){
+      var k = finde(baum, id); if (!k) return;
+      if (!bereit(k)){ meldung('falsch', warum(k)); return; }
+      gewaehlt = k; versuche = 0; meldung('', '');
+      var links = k.t === 'p' ? '(' + hb(k.x.b) + ')<sup>' + k.e + '</sup>' : hb(k.l.b) + ' ' + k.o + ' ' + hb(k.r.b, true);
+      frage.textContent = 'Richtig gewählt. Rechne diesen Schritt aus (zum Beispiel 3/4 oder -2/3):';
+      feld.innerHTML = '<span class="sw-schritt">' + links + ' =</span> <input type="text" autocomplete="off" aria-label="Teilergebnis"> <button type="button" class="sw-pruefen">Prüfen</button>';
+      var inp = feld.querySelector('input');
+      feld.querySelector('.sw-pruefen').addEventListener('click', schritt);
+      inp.addEventListener('keydown', function(ev){ if (ev.key === 'Enter') schritt(); });
+      zeichnen(); setTimeout(function(){ try { inp.focus({ preventScroll: true }); } catch(e){} }, 0);
+    }
+    function schrittFehler(k, e){
+      var r = k.t === 'p' ? hoch(k.x.b, k.e) : rechne(k.o, k.l.b, k.r.b);
+      var x = k.t === 'p' ? k.x.b : k.l.b, y = k.t === 'p' ? null : k.r.b;
+      if (gleich(e, { z: -r.z, n: r.n })) return 'Vorzeichen prüfen' + (k.o === '·' || k.o === ':' || k.t === 'p' ? ': Minus mal Minus gibt Plus, Minus mal Plus gibt Minus.' : '.');
+      if (k.t === 'p'){ if (e.n === x.n && e.z === x.z * x.z) return 'Auch den Nenner quadrieren: \\(\\left(\\tfrac{a}{b}\\right)^2 = \\tfrac{a^2}{b^2}\\).';
+        return 'Quadrieren heisst: den Bruch mit sich selbst multiplizieren.'; }
+      if ((k.o === '+' || k.o === '−') && x.n !== y.n && e.n === x.n + y.n) return 'Nenner nicht addieren — zuerst <b>gleichnamig</b> machen, dann die Zähler verrechnen.';
+      if (k.o === '·' && gleich(e, durch(x, y))) return 'Das wäre geteilt. Mal: Zähler mal Zähler, Nenner mal Nenner.';
+      if (k.o === ':' && gleich(e, mal(x, y))) return '<b>Kehrwert</b> vergessen: Durch einen Bruch teilen heisst mit seinem Kehrwert multiplizieren.';
+      if (k.o === ':' && gleich(e, durch(y, x))) return 'Kehrwert vom <b>zweiten</b> Bruch nehmen, nicht vom ersten.';
+      if (k.o === '−' && gleich(e, minus(y, x))) return 'Reihenfolge: Rechne «links minus rechts».';
+      return k.o === '+' || k.o === '−' ? 'Gleichnamig machen, dann die Zähler verrechnen. Rechne nochmals nach.' : 'Rechne nochmals nach.';
+    }
+    function uebernehmen(r, roh){
+      var k = gewaehlt;
+      var notiz = (k.t === 'p' ? '(' + hb(k.x.b) + ')<sup>' + k.e + '</sup>' : hb(k.l.b) + ' ' + k.o + ' ' + hb(k.r.b, true)) + ' = ' + (roh && roh.n !== r.n ? hb(roh) + ' = ' : '') + hb(r);
+      zeilen.push({ term: htmlStatisch(baum, true), notiz: notiz });
+      baum = ersetze(baum, k, { t: 'z', b: r });
+      gewaehlt = null; zeichnen();
+    }
+    function schritt(){
+      var k = gewaehlt; if (!k) return;
+      var inp = feld.querySelector('input'), e = bruchLesen(inp.value);
+      if (e.leer){ meldung('hinweis', 'Gib das Teilergebnis ein, zum Beispiel <code>3/4</code>.'); return; }
+      if (e.gemischt){ meldung('hinweis', 'Schreib es als Bruch, zum Beispiel <code>7/3</code> statt «2 1/3».'); return; }
+      if (e.kaputt){ meldung('hinweis', 'Brüche wie <code>3/4</code> oder <code>-2/3</code>, ganze Zahlen wie <code>2</code>.'); return; }
+      var r = k.t === 'p' ? hoch(k.x.b, k.e) : rechne(k.o, k.l.b, k.r.b);
+      if (gleich(e, r) && !e.dez){
+        meldung('richtig', '✓' + (gekuerzt(e) ? '' : ' Stimmt — gekürzt: ' + hb(r) + '.'));
+        uebernehmen(r, { z: e.z, n: e.n }); return;
+      }
+      if (gleich(e, r)){ meldung('hinweis', 'Gleicher Wert — gib ihn als Bruch an.'); return; }
+      versuche++;
+      if (versuche >= 2){
+        meldung('falsch', schrittFehler(k, e) + ' <button type="button" class="sw-uebernehmen">Teilergebnis ' + txt(r).replace('-', '−') + ' übernehmen</button>');
+        rueck.querySelector('.sw-uebernehmen').addEventListener('click', function(){ meldung('', ''); uebernehmen(r, null); });
+      } else meldung('falsch', schrittFehler(k, e));
+      setzen(rueck);
+    }
+    var aktuell = 0;
+    function laden(i){ aktuell = i; nextId = 1; baum = AUFG[i](); ids(baum); zeilen = []; gewaehlt = null; meldung('', ''); feld.innerHTML = ''; }
+    var sim = { zustand: function(){ return { fertig: baum.t === 'z', i: aktuell }; }, zeichnen: zeichnen,
+                aufraeumen: function(){ laden(aktuell); } };
+    fig.__AUFG = AUFG;                                       // Testhaken (scripts/lp/bruchrechnen/pruef-schritte.mjs)
+    fig.__soll = function(){ var k = gewaehlt; return k ? txt(k.t === 'p' ? hoch(k.x.b, k.e) : rechne(k.o, k.l.b, k.r.b)) : null; };
+    fig.__ergebnis = function(){ return baum.t === 'z' ? txt(baum.b) : null; };
+    var pr = null;
+    laden(0);
+    pr = Leiste(fig, AUFG.map(function(f, i){
+      var t = f();
+      return { text: 'Berechne \\(' + texVon(t, true) + '\\).', setup: function(){ laden(i); }, ok: function(z){ return z.fertig && z.i === i; } };
+    }), sim);
+    fig.querySelector('.sw-neu').addEventListener('click', function(){ laden(aktuell); zeichnen(); });
+    zeichnen();
+  })();
+
+  /* ════════ Übungen mit Rückmeldung ════════
+     Jede Aufgabe würfelt neue Zahlen. Bruchfelder (Name beginnt mit «b») werden exakt verglichen:
+     gleicher Wert, aber nicht vollständig gekürzt → eigener Hinweis, kein Fehlversuch; gleicher Wert
+     als Dezimalzahl → «als Bruch angeben». Hinweise in drei Stufen über «💡 Tipp»: Impuls →
+     nächster Schritt → Lösungsweg. Die Lösung erscheint ausserdem nach dem zweiten Fehlversuch.
+     Nichts wird gespeichert. Testhaken: box.__aufgabe, box.__typ (pruef-uebungen.mjs). */
+  (function(){
+    var ALLE = document.querySelectorAll('.uebung[data-typ]'); if (!ALLE.length) return;
+    function bz(b){ return b.n === 1 ? String(b.z) : b.z + '/' + b.n; }
+    function echt(n, max){ var z; do { z = zufallG(1, max || n - 1); } while (ggT(z, n) !== 1); return z; }
+    function F(z, n){ return B(z, n); }
+    function gT(b, gross){ return tb(b, false, gross); }
+    function chain(arr){ return arr.join(' = '); }
+
+    /* Feste Aufgaben des Leitprogramms (Simulationen, Festhalten, Kapitelaufgaben, Vortest, Gesamttest,
+       Vertiefung): Kein Wurf darf eine davon stellen. Schlüssel je Typ, kommutative Rechnungen sortiert. */
+    var SPERRE = [
+      // erweitern: er|a/b|N
+      'er|3/4|8', 'er|3/4|20', 'er|5/6|24', 'er|2/3|12', 'er|5/6|12', 'er|3/4|12', 'er|1/2|6', 'er|1/3|6',
+      // kürzen: kz|Z/N
+      'kz|12/18', 'kz|45/60', 'kz|84/126', 'kz|6/8', 'kz|10/15', 'kz|14/35', 'kz|6/15', 'kz|8/12', 'kz|9/12', 'kz|6/12', 'kz|15/20', 'kz|4/10', 'kz|10/25', 'kz|3/6',
+      // hauptnenner: hn|b|d (sortiert)
+      'hn|2|3', 'hn|4|6', 'hn|6|8', 'hn|6|9', 'hn|12|18', 'hn|4|8', 'hn|9|12', 'hn|3|4', 'hn|6|15',
+      // addieren/subtrahieren: as|o|x|y
+      'as|+|1/2|1/3', 'as|+|1/6|3/4', 'as|−|7/8|1/6', 'as|+|1/6|2/9', 'as|+|5/12|7/18', 'as|+|1/3|1/6', 'as|+|3/4|5/6', 'as|−|11/12|4/9',
+      'as|+|1/4|2/3', 'as|+|1/8|3/8', 'as|−|7/10|3/10', 'as|+|5/6|7/15', 'as|−|3|5/7', 'as|−|2|3/4', 'as|−|9/10|1/2', 'as|+|1/2|1/4',
+      // mal: ml|x|y (sortiert)
+      'ml|2/3|3/4', 'ml|3/8|4/9', 'ml|3/10|5/6', 'ml|2/5|3/4', 'ml|7/12|9/14', 'ml|4|5/6', 'ml|2/5|3', 'ml|12|2/3', 'ml|15|2/3', 'ml|1/2|1/3', 'ml|1/2|1/2', 'ml|1/3|1/2',
+      // durch: dv|x|y
+      'dv|3/4|1/8', 'dv|3/4|1/2', 'dv|3/5|9/10', 'dv|7/8|7', 'dv|6|3/4', 'dv|2/5|4/7', 'dv|3/4|2/3', 'dv|3/2|1/4', 'dv|1/4|3/2', 'dv|2/3|4/9', 'dv|5/12|5/6', 'dv|3/8|3/8',
+      'dv|4/9|8/9', 'dv|2/3|-4/9', 'dv|3/4|3/8',
+      // vorzeichen: vz|Term
+      'vz|-3/4·-2/9', 'vz|-2/5+-2/5', 'vz|-3/2^2', 'vz|-2/3^2',
+      // reihenfolge: rf|Term
+      'rf|1/4+2/3·3/8', 'rf|5/6−(1/4:3/2)', 'rf|2/3:4/9·1/2', 'rf|7/12−1/4·2/3', 'rf|(3/4−1/3):5/6', 'rf|3/4:3/8·1/2', 'rf|3/4−1/2·(5/6−1/3)',
+      'rf|1/3+1/6·4', 'rf|1/2−1/3·(3/4−1/4)', 'rf|3/4−(1/2−1/4)', 'rf|1:1/2·1/2', 'rf|9/14·7/12:3/8', 'rf|7/15+5/6−1/2'
+    ];
+    function gesperrt(T, A){ return T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    window.__SPERRE = SPERRE;                                  // Testhaken (pruef-schritte.mjs: Verteilung)
+    function sortiert(a, b){ return [a, b].sort().join('|'); }
+
+    var TYPEN = {
+      /* ── Kapitel 1 ─────────────────────────────────────────────── */
+      'erweitern': { felder: ['x'],
+        schl: function(A){ return 'er|' + A.a + '/' + A.b + '|' + A.N; },
+        neu: function(){
+          var b = zufallG(2, 12), a = echt(b), f = zufallG(2, 8);
+          if (b * f > 72) f = Math.max(2, Math.floor(72 / b));
+          var art = Math.random() < 0.7 ? 'z' : 'n', N = b * f;
+          return { a: a, b: b, f: f, N: N, art: art, x: art === 'z' ? a * f : N,
+            muster: '\\(\\square = \\) {x}',
+            text: art === 'z' ? 'Erweitere \\(' + gT(F(a, b), true) + '\\) auf den Nenner \\(' + N + '\\): \\(\\;' + gT(F(a, b), true) + ' = \\dfrac{\\square}{' + N + '}\\)'
+                              : 'Ergänze: \\(\\;' + gT(F(a, b), true) + ' = \\dfrac{' + a * f + '}{\\square}\\)' }; },
+        fehler: function(A){ return [[{ x: String(A.art === 'z' ? A.a + A.N - A.b : A.b + A.a * A.f - A.a) }, 'multiplizieren']]; },
+        pruefen: function(A, e){
+          var add = A.art === 'z' ? A.a + A.N - A.b : A.b + A.a * A.f - A.a;
+          if (e.x === add) return 'Erweitern heisst <b>multiplizieren</b>, nicht addieren: Zähler und Nenner mit derselben Zahl malnehmen.';
+          return A.art === 'z' ? 'Mit welcher Zahl wurde der Nenner \\(' + A.b + '\\) multipliziert, damit \\(' + A.N + '\\) herauskommt? Mit derselben Zahl auch den Zähler.'
+                               : 'Mit welcher Zahl wurde der Zähler \\(' + A.a + '\\) multipliziert? Mit derselben Zahl auch den Nenner.'; },
+        tipps: function(A){ return ['Der Wert bleibt gleich, wenn du Zähler <b>und</b> Nenner mit derselben Zahl multiplizierst.',
+          A.art === 'z' ? '\\(' + A.b + ' \\cdot \\square = ' + A.N + '\\), also ist der Faktor \\(' + A.f + '\\).' : '\\(' + A.a + ' \\cdot \\square = ' + A.a * A.f + '\\), also ist der Faktor \\(' + A.f + '\\).']; },
+        loesung: function(A){ return gT(F(A.a, A.b), true) + ' = \\dfrac{' + A.a + ' \\cdot ' + A.f + '}{' + A.b + ' \\cdot ' + A.f + '} = \\dfrac{' + A.a * A.f + '}{' + A.N + '}'; } },
+
+      'kuerzen': { felder: ['b'],
+        schl: function(A){ return 'kz|' + A.Z + '/' + A.N; },
+        eingabe: function(A){ return { b: bz(A.r) }; },
+        neu: function(){
+          var q = zufallG(2, 12), p; do { p = zufallG(1, 2 * q); } while (ggT(p, q) !== 1 || p === q);
+          var g = Math.random() < 0.8 ? zufall([4, 6, 8, 9, 10, 12, 14, 15, 16, 18]) : zufall([2, 3, 5, 7]);
+          while (p * g > 150 || q * g > 150) g = Math.max(2, g - 2);
+          var Zz = p * g, N = q * g;
+          return { p: p, q: q, g: g, Z: Zz, N: N, r: B(p, q), muster: '\\(\\dfrac{' + Zz + '}{' + N + '} = \\) {b}',
+            text: 'Kürze vollständig.' }; },
+        fehler: function(A){
+          var f = [[{ b: (A.p + 1) + '/' + A.q }, null]];
+          for (var d = 2; d < A.g; d++) if (A.g % d === 0){ f.push([{ b: (A.Z / d) + '/' + (A.N / d) }, 'gekürzt']); break; }
+          return f; },
+        pruefen: function(A, e){
+          if (e.b.n < A.N && e.b.z < A.Z && e.b.n - e.b.z === A.N - A.Z) return 'Kürzen heisst <b>dividieren</b>: Zähler und Nenner durch dieselbe Zahl teilen, nicht etwas abziehen.';
+          return 'Der Wert hat sich verändert. Teile Zähler und Nenner durch <b>dieselbe</b> Zahl.'; },
+        tipps: function(A){ return ['Suche eine Zahl, durch die \\(' + A.Z + '\\) und \\(' + A.N + '\\) beide teilbar sind — am besten die grösste.',
+          'Der grösste gemeinsame Teiler ist \\(\\text{ggT}(' + A.Z + ';\\ ' + A.N + ') = ' + A.g + '\\).']; },
+        loesung: function(A){ return '\\dfrac{' + A.Z + '}{' + A.N + '} = \\dfrac{' + A.Z + ' : ' + A.g + '}{' + A.N + ' : ' + A.g + '} = ' + gT(A.r, true); } },
+
+      /* ── Kapitel 2 ─────────────────────────────────────────────── */
+      'hauptnenner': { felder: ['h'],
+        schl: function(A){ return 'hn|' + Math.min(A.b, A.d) + '|' + Math.max(A.b, A.d); },
+        neu: function(){
+          var b, d, h;
+          do { b = zufallG(2, 15); d = zufallG(2, 18); h = kgV(b, d); }
+          while (b === d || h > 72 || b % d === 0 || d % b === 0 && Math.random() < 0.6 || (h === b * d && Math.random() < 0.65));
+          var a = echt(b), c = echt(d);
+          return { a: a, b: b, c: c, d: d, h: h, muster: 'Hauptnenner: {h}',
+            text: 'Bestimme den Hauptnenner von \\(' + gT(F(a, b), true) + '\\) und \\(' + gT(F(c, d), true) + '\\).' }; },
+        fehler: function(A){ var f = [[{ h: String(A.h + 1) }, 'aufgehen']]; if (A.b * A.d !== A.h) f.push([{ h: String(A.b * A.d) }, 'kleinste']); return f; },
+        pruefen: function(A, e){
+          if (e.h > 0 && e.h % A.b === 0 && e.h % A.d === 0) return 'Ein gemeinsamer Nenner ist \\(' + e.h + '\\) schon — aber nicht der <b>kleinste</b>. Gesucht ist das kleinste gemeinsame Vielfache.';
+          return '\\(' + e.h + '\\) geht nicht: Beide Nenner \\(' + A.b + '\\) und \\(' + A.d + '\\) müssen im Hauptnenner <b>aufgehen</b>.'; },
+        tipps: function(A){ var m = Math.max(A.b, A.d), k = Math.min(A.b, A.d), v = [];
+          for (var i = 1; i <= 5; i++) v.push(m * i);
+          return ['Zähle die Vielfachen des grösseren Nenners auf, bis eines durch den kleineren teilbar ist.',
+            'Vielfache von \\(' + m + '\\): \\(' + v.join(';\\ ') + ';\\ \\ldots\\) — welches ist durch \\(' + k + '\\) teilbar?']; },
+        loesung: function(A){ return '\\text{kgV}(' + A.b + ';\\ ' + A.d + ') = ' + A.h; } },
+
+      'addsub': { felder: ['b'],
+        schl: function(A){ var x = bz(A.x), y = bz(A.y); return 'as|' + A.o + '|' + (A.o === '+' ? sortiert(x, y) : x + '|' + y); },
+        eingabe: function(A){ return { b: bz(A.r) }; },
+        neu: function(){
+          var o = Math.random() < 0.5 ? '+' : '−', x, y, r, h;
+          for (;;){
+            if (Math.random() < 0.12){ x = B(zufallG(1, 4)); var d0 = zufallG(2, 9); y = B(echt(d0), d0); }
+            else { var b = zufallG(2, 12), d = zufallG(2, 12); if (b === d && Math.random() < 0.7) continue; x = B(echt(b, Math.min(b * 2, 20)), b); y = B(echt(d, Math.min(d * 2, 20)), d); }
+            if (o === '−' && !(x.z * y.n > y.z * x.n)){ var t = x; x = y; y = t; }
+            r = rechne(o, x, y); h = kgV(x.n, y.n);
+            if (!gleich(x, y) && h <= 48 && r.z > 0 && Math.abs(r.z) <= 60) break;
+          }
+          return { x: x, y: y, o: o, r: r, h: h, muster: '\\(' + gT(x, true) + ' ' + TEXOP[o] + ' ' + gT(y, true) + ' = \\) {b}',
+            text: 'Berechne und kürze vollständig.' }; },
+        falsche: function(A){
+          var f = [], x = A.x, y = A.y, s = A.o === '+' ? 1 : -1;
+          if (x.n !== y.n && x.n + s * y.n > 0) f.push([{ z: x.z + s * y.z, n: x.n + s * y.n }, 'gleichnamig']);
+          if (A.o === '−') f.push([minus(y, x), 'Reihenfolge']);
+          if (x.n !== y.n) f.push([{ z: x.z + s * y.z, n: A.h }, 'Zähler']);
+          // Fallen derselbe falsche Wert aus zwei Fehlern, zählt die erste Diagnose (1 − 5/9: «−4/9»).
+          return f.filter(function(p, i){ return p[0].z !== 0 && !gleich(p[0], A.r) && !f.slice(0, i).some(function(q){ return gleich(q[0], p[0]); }); }); },
+        fehler: function(A){
+          var f = TYPEN.addsub.falsche(A).map(function(p){ return [{ b: bz(p[0]) }, p[1]]; });
+          if (A.r.n * 2 <= 96) f.push([{ b: (A.r.z * 2) + '/' + (A.r.n * 2) }, 'gekürzt']);
+          return f; },
+        pruefen: function(A, e){
+          var f = TYPEN.addsub.falsche(A);
+          for (var i = 0; i < f.length; i++) if (gleich(e.b, f[i][0])){
+            if (f[i][1] === 'gleichnamig') return 'Zähler plus Zähler und Nenner plus Nenner geht nicht: Die Stücke sind verschieden gross. Zuerst <b>gleichnamig</b> machen.';
+            if (f[i][1] === 'Zähler') return 'Der Hauptnenner \\(' + A.h + '\\) stimmt. Beim Erweitern wird aber auch der <b>Zähler</b> multipliziert.';
+            if (f[i][1] === 'Reihenfolge') return 'Vorzeichen falsch: Rechne «erster Bruch minus zweiter» — die <b>Reihenfolge</b> zählt beim Subtrahieren.';
+          }
+          return 'Erweitere beide Brüche auf den Hauptnenner \\(' + A.h + '\\), verrechne die Zähler und kürze. Rechne nochmals nach.'; },
+        tipps: function(A){ return ['Zuerst gleichnamig machen: Der Hauptnenner ist das kgV der Nenner.',
+          'Hauptnenner \\(' + A.h + '\\): \\(' + gT(A.x) + ' = \\tfrac{' + A.x.z * A.h / A.x.n + '}{' + A.h + '}\\) und \\(' + gT(A.y) + ' = \\tfrac{' + A.y.z * A.h / A.y.n + '}{' + A.h + '}\\).']; },
+        loesung: function(A){
+          var z1 = A.x.z * A.h / A.x.n, z2 = A.y.z * A.h / A.y.n, roh = A.o === '+' ? z1 + z2 : z1 - z2;
+          var k = [gT(A.x) + ' ' + TEXOP[A.o] + ' ' + gT(A.y), '\\tfrac{' + z1 + '}{' + A.h + '} ' + TEXOP[A.o] + ' \\tfrac{' + z2 + '}{' + A.h + '}', '\\tfrac{' + roh + '}{' + A.h + '}'];
+          if (A.r.n !== A.h) k.push(gT(A.r));
+          return chain(k); } },
+
+      /* ── Kapitel 3 ─────────────────────────────────────────────── */
+      'mal': { felder: ['b'],
+        schl: function(A){ return 'ml|' + sortiert(bz(A.x), bz(A.y)); },
+        eingabe: function(A){ return { b: bz(A.r) }; },
+        neu: function(){
+          var x, y, r;
+          for (;;){
+            if (Math.random() < 0.2){ x = B(zufallG(2, 9)); var d = zufallG(3, 12); y = B(echt(d), d); if (Math.random() < 0.5){ var t = x; x = y; y = t; } }
+            else {
+              var b = zufallG(2, 12), dd = zufallG(2, 12);
+              x = B(echt(b, Math.min(2 * b, 15)), b); y = B(echt(dd, Math.min(2 * dd, 15)), dd);
+              if (Math.random() < 0.7 && ggT(x.z, y.n) === 1 && ggT(y.z, x.n) === 1) continue;   // meist mit Kürzen über Kreuz
+            }
+            r = mal(x, y);
+            if (r.n <= 60 && r.z <= 60 && !(r.n === 1 && r.z === 1) && !(x.n === 1 && y.n === 1)) break;
+          }
+          return { x: x, y: y, r: r, muster: '\\(' + gT(x, true) + ' \\cdot ' + gT(y, true) + ' = \\) {b}',
+            text: 'Berechne und kürze vollständig.' }; },
+        falsche: function(A){
+          var f = [[durch(A.x, A.y), 'geteilt']];
+          if (A.x.n === 1) f.push([{ z: A.x.z * A.y.z, n: A.x.z * A.y.n }, 'Nur den Zähler']);
+          if (A.y.n === 1) f.push([{ z: A.x.z * A.y.z, n: A.x.n * A.y.z }, 'Nur den Zähler']);
+          return f.filter(function(p){ return !gleich(p[0], A.r); }); },
+        fehler: function(A){
+          var f = TYPEN.mal.falsche(A).map(function(p){ return [{ b: p[0].z + '/' + p[0].n }, p[1]]; });
+          var rz = A.x.z * A.y.z, rn = A.x.n * A.y.n;
+          if (ggT(rz, rn) > 1) f.push([{ b: rz + '/' + rn }, 'gekürzt']);
+          return f; },
+        pruefen: function(A, e){
+          var f = TYPEN.mal.falsche(A);
+          for (var i = 0; i < f.length; i++) if (gleich(e.b, f[i][0])){
+            if (f[i][1] === 'geteilt') return 'Das wäre <b>geteilt</b> (über Kreuz multipliziert). Mal: Zähler mal Zähler, Nenner mal Nenner.';
+            return 'Nur den Zähler mit der ganzen Zahl multiplizieren: \\(n \\cdot \\tfrac{a}{b} = \\tfrac{n \\cdot a}{b}\\). Wer auch den Nenner mitnimmt, hat nur erweitert.';
+          }
+          return 'Zähler mal Zähler, Nenner mal Nenner — und kürzen. Rechne nochmals nach.'; },
+        tipps: function(A){
+          var g1 = ggT(A.x.z, A.y.n), g2 = ggT(A.y.z, A.x.n);
+          return ['Zähler mal Zähler, Nenner mal Nenner. Kürze am besten <b>vor</b> dem Ausrechnen.',
+            g1 > 1 || g2 > 1 ? 'Über Kreuz kürzen: ' + (g1 > 1 ? '\\(' + A.x.z + '\\) und \\(' + A.y.n + '\\) durch \\(' + g1 + '\\)' : '') + (g1 > 1 && g2 > 1 ? '; ' : '') + (g2 > 1 ? '\\(' + A.y.z + '\\) und \\(' + A.x.n + '\\) durch \\(' + g2 + '\\)' : '') + '.'
+                             : 'Hier lässt sich nicht über Kreuz kürzen: \\(\\tfrac{' + A.x.z + ' \\cdot ' + A.y.z + '}{' + A.x.n + ' \\cdot ' + A.y.n + '}\\) ausrechnen und am Schluss kürzen.']; },
+        loesung: function(A){
+          var k = [gT(A.x) + ' \\cdot ' + gT(A.y), '\\tfrac{' + A.x.z + ' \\cdot ' + A.y.z + '}{' + A.x.n + ' \\cdot ' + A.y.n + '}', '\\tfrac{' + A.x.z * A.y.z + '}{' + A.x.n * A.y.n + '}'];
+          if (A.r.n !== A.x.n * A.y.n) k.push(gT(A.r));
+          return chain(k); } },
+
+      'durch': { felder: ['b'],
+        schl: function(A){ return 'dv|' + bz(A.x) + '|' + bz(A.y); },
+        eingabe: function(A){ return { b: bz(A.r) }; },
+        neu: function(){
+          var x, y, r, art = Math.random();
+          do {
+            if (art < 0.15){ x = B(zufallG(2, 9)); var d = zufallG(2, 10); y = B(echt(d, Math.min(2 * d, 12)), d); }
+            else if (art < 0.3){ var b = zufallG(2, 12); x = B(echt(b, Math.min(2 * b, 15)), b); y = B(zufallG(2, 6)); }
+            else { var b2 = zufallG(2, 12), d2 = zufallG(2, 12); x = B(echt(b2, Math.min(2 * b2, 15)), b2); y = B(echt(d2, Math.min(2 * d2, 15)), d2); }
+            r = durch(x, y);
+          } while (gleich(x, y) || y.z === y.n || r.n > 60 || r.z > 60 || x.z === x.n || gleich(mal(x, y), r) || gleich(durch(y, x), mal(x, y)));
+          return { x: x, y: y, r: r, muster: '\\(' + gT(x, true) + ' : ' + gT(y, true) + ' = \\) {b}',
+            text: 'Berechne und kürze vollständig.' }; },
+        falsche: function(A){
+          return [[mal(A.x, A.y), 'Kehrwert'], [durch(A.y, A.x), 'zweiten']].filter(function(p){ return !gleich(p[0], A.r); }); },
+        fehler: function(A){ return TYPEN.durch.falsche(A).map(function(p){ return [{ b: bz(p[0]) }, p[1]]; }); },
+        pruefen: function(A, e){
+          var f = TYPEN.durch.falsche(A);
+          for (var i = 0; i < f.length; i++) if (gleich(e.b, f[i][0]))
+            return f[i][1] === 'Kehrwert' ? '<b>Kehrwert</b> vergessen: Durch einen Bruch teilen heisst mit seinem Kehrwert multiplizieren.'
+                                          : 'Den Kehrwert vom <b>zweiten</b> Bruch nehmen (dem, durch den du teilst), nicht vom ersten.';
+          return 'Mit dem Kehrwert des zweiten Bruchs multiplizieren, dann kürzen. Rechne nochmals nach.'; },
+        tipps: function(A){ var k = B(A.y.n, A.y.z);
+          return ['Teilen durch einen Bruch heisst: mit seinem <b>Kehrwert</b> multiplizieren.',
+            'Der Kehrwert von \\(' + gT(A.y) + '\\) ist \\(' + gT(k) + '\\): Rechne \\(' + gT(A.x) + ' \\cdot ' + gT(k) + '\\).']; },
+        loesung: function(A){ var k = B(A.y.n, A.y.z), roh = { z: A.x.z * k.z, n: A.x.n * k.n };
+          var c = [gT(A.x) + ' : ' + gT(A.y), gT(A.x) + ' \\cdot ' + gT(k), roh.n === 1 ? String(roh.z) : '\\tfrac{' + roh.z + '}{' + roh.n + '}'];
+          if (roh.n !== A.r.n) c.push(gT(A.r));
+          return chain(c); } },
+
+      /* ── Kapitel 4 ─────────────────────────────────────────────── */
+      'reihenfolge': { felder: ['b'],
+        schl: function(A){ return 'rf|' + schluessel(A.t); },
+        eingabe: function(A){ return { b: bz(A.r) }; },
+        neu: function(){
+          var NN = [2, 3, 4, 5, 6, 8, 9, 10, 12];
+          function q(){ var n = zufall(NN); return Z(echt(n, Math.min(n + 2, 2 * n - 1)), n); }
+          var t, r, w, regel, form;
+          for (var v = 0; v < 400; v++){
+            form = zufallG(1, 6);
+            var x = q(), y = q(), z = q(), s = zufall(['+', '−']), p = zufall(['·', ':']), s2 = zufall(['+', '−']);
+            if (form === 1){ t = O(s, x, O(p, y, z)); w = rechne(p, rechne(s, x.b, y.b), z.b); regel = 'Punkt vor Strich'; }
+            else if (form === 2){ t = O(s, O(p, x, y), z); w = rechne(p, x.b, rechne(s, y.b, z.b)); regel = 'Punkt vor Strich'; }
+            else if (form === 3){ t = O(p, K(O(s, x, y)), z); w = rechne(s, x.b, rechne(p, y.b, z.b)); regel = 'Klammer'; }
+            else if (form === 4){ t = O('−', x, K(O(s2, y, z)));                 // Fehler: Minus nur aufs erste Glied
+              w = rechne(s2, minus(x.b, y.b), z.b); regel = 'Minus vor der Klammer'; }
+            else if (form === 5){ t = O('·', O(':', x, y), z); w = durch(x.b, mal(y.b, z.b)); regel = 'links nach rechts'; }
+            else { t = O('+', O('−', x, y), z); w = minus(x.b, plus(y.b, z.b)); regel = 'links nach rechts'; }
+            r = wertVon(t);
+            if (r.n > 36 || Math.abs(r.z) > 40 || r.z === 0 || w.n === 0 || gleich(w, r) || w.n > 200) continue;
+            if (SPERRE.indexOf('rf|' + schluessel(t)) >= 0) continue;
+            break;
+          }
+          return { t: t, r: r, w: w, regel: regel, muster: '\\(' + texVon(t, true) + ' = \\) {b}',
+            text: 'Berechne in der richtigen Reihenfolge und kürze vollständig.' }; },
+        fehler: function(A){ return [[{ b: bz(A.w) }, A.regel === 'Minus vor der Klammer' ? 'Minus' : A.regel === 'Klammer' ? 'Klammer' : A.regel]]; },
+        pruefen: function(A, e){
+          if (gleich(e.b, A.w)){
+            if (A.regel === 'Punkt vor Strich') return '<b>Punkt vor Strich:</b> Zuerst · oder :, dann + oder −.';
+            if (A.regel === 'Klammer') return 'Die <b>Klammer</b> kommt zuerst — auch vor Punkt vor Strich.';
+            if (A.regel === 'Minus vor der Klammer') return '<b>Minus</b> vor der Klammer: Rechne die Klammer zuerst aus — oder dreh beim Weglassen beide Vorzeichen in der Klammer.';
+            return 'Gleichrangige Rechenarten <b>von links nach rechts</b>.';
+          }
+          return 'Arbeite Schritt für Schritt: Klammer, Potenz, Punkt vor Strich, sonst von links nach rechts. Rechne nochmals nach.'; },
+        tipps: function(A){ return ['Was kommt zuerst? Klammern, dann Potenzen, dann Punkt vor Strich, sonst von links nach rechts.',
+          'Hier gilt besonders: ' + (A.regel === 'Minus vor der Klammer' ? 'zuerst die Klammer ausrechnen.' : A.regel === 'Klammer' ? 'die Klammer zuerst.' : A.regel === 'Punkt vor Strich' ? 'Punkt vor Strich.' : 'von links nach rechts.')]; },
+        loesung: function(A){
+          var k = [texVon(A.t, true)], t = JSON.parse(JSON.stringify(A.t));
+          function schritt(n){                                  // innerster bereiter Knoten, links zuerst
+            if (n.t === 'z') return null;
+            if (n.t === 'k'){ var s0 = schritt(n.x); if (s0) return s0; return null; }
+            var a = schritt(n.l); if (a) return a;
+            var b = schritt(n.r); if (b) return b;
+            return n.l.t === 'z' && n.r.t === 'z' ? n : null;
+          }
+          function ers(n, alt, neu){ if (n === alt) return neu; ['l', 'r', 'x'].forEach(function(s){ if (n[s]) n[s] = ers(n[s], alt, neu); }); if (n.t === 'k' && n.x.t === 'z') return n.x; return n; }
+          for (var i = 0; i < 6 && t.t !== 'z'; i++){
+            var s = schritt(t); if (!s) break;
+            t = ers(t, s, { t: 'z', b: rechne(s.o, s.l.b, s.r.b) });
+            k.push(texVon(t, true));
+          }
+          return chain(k); } },
+
+      'vorzeichen': { felder: ['b'],
+        schl: function(A){ return 'vz|' + A.k; },
+        eingabe: function(A){ return { b: bz(A.r) }; },
+        neu: function(){
+          var NN = [2, 3, 4, 5, 6, 8, 9, 10];
+          function q(){ var n = zufall(NN); return B(echt(n, Math.min(n + 2, 2 * n - 1)), n); }
+          var x, y, art, r, w, tex, k, msg;
+          for (var v = 0; v < 400; v++){
+            x = q(); y = q(); art = zufallG(1, 5);
+            if (art === 1){ var sx = zufall([-1, 1]), sy = sx === 1 ? -1 : zufall([-1, 1]); x = B(sx * x.z, x.n); y = B(sy * y.z, y.n);
+              r = mal(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' \\cdot ' + tb(y, true); k = txt(x) + '·' + txt(y); msg = 'mal'; }
+            else if (art === 2){ var sx2 = zufall([-1, 1]), sy2 = sx2 === 1 ? -1 : zufall([-1, 1]); x = B(sx2 * x.z, x.n); y = B(sy2 * y.z, y.n);
+              r = durch(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' : ' + tb(y, true); k = txt(x) + ':' + txt(y); msg = 'mal'; }
+            else if (art === 3){ x = B(-x.z, x.n); r = plus(x, y); w = B(-r.z, r.n); tex = tb(x, false) + ' + ' + tb(y, false); k = txt(x) + '+' + txt(y); msg = 'plus'; }
+            else if (art === 4){ r = minus(x, B(-y.z, y.n)); w = minus(x, y); tex = tb(x, false) + ' - ' + tb(B(-y.z, y.n), true); k = txt(x) + '−-' + txt(y); msg = 'minusminus'; }
+            else { x = B(-x.z, x.n); r = hoch(x, 2); w = B(-r.z, r.n); tex = '\\left(' + tb(x, false) + '\\right)^2'; k = txt(x) + '^2'; msg = 'quadrat'; }
+            if (r.z === 0 || gleich(r, w) || r.n > 60 || Math.abs(r.z) > 60) continue;
+            if (SPERRE.indexOf('vz|' + k) >= 0) continue;
+            break;
+          }
+          return { x: x, y: y, art: art, r: r, w: w, k: k, msg: msg, tex: tex, muster: '\\(' + tex + ' = \\) {b}',
+            text: 'Berechne und kürze vollständig.' }; },
+        fehler: function(A){ return [[{ b: bz(A.w) }, A.msg === 'minusminus' ? 'Minus' : 'Vorzeichen']]; },
+        pruefen: function(A, e){
+          if (gleich(e.b, A.w)){
+            if (A.msg === 'minusminus') return '<b>Minus</b> einer negativen Zahl heisst plus: \\(a - (-b) = a + b\\).';
+            if (A.msg === 'quadrat') return '<b>Vorzeichen:</b> Das Quadrat einer negativen Zahl ist positiv — Minus mal Minus gibt Plus.';
+            if (A.msg === 'plus') return '<b>Vorzeichen:</b> Bei verschiedenen Vorzeichen gewinnt das der Zahl mit dem grösseren Betrag.';
+            return '<b>Vorzeichen:</b> Gleiche Vorzeichen geben Plus, verschiedene Minus — wie in ℤ.';
+          }
+          return 'Zuerst das Vorzeichen bestimmen, dann mit den Beträgen rechnen und kürzen.'; },
+        tipps: function(A){ return ['Rechne mit den Beträgen wie mit positiven Brüchen und bestimme das Vorzeichen getrennt — nach den Regeln aus ℤ.',
+          A.msg === 'minusminus' ? 'Aus «minus minus» wird plus: \\(' + tb(A.x) + ' + ' + tb(A.y) + '\\).' : A.msg === 'plus' ? 'Gleichnamig machen; das Ergebnis hat das Vorzeichen der Zahl mit dem grösseren Betrag.' : A.msg === 'quadrat' ? 'Quadrat: mit sich selbst multiplizieren — Minus mal Minus.' : 'Vorzeichen des Ergebnisses: ' + (A.r.z > 0 ? 'plus' : 'minus') + '.']; },
+        loesung: function(A){ return A.tex + (A.msg === 'minusminus' ? ' = ' + tb(A.x) + ' + ' + tb(A.y) : '') + ' = ' + tb(A.r); } }
+    };
+    window.__TYPEN = TYPEN;
+
+    ALLE.forEach(function(box){
+      var T = TYPEN[box.dataset.typ]; if (!T) return;
+      var A, serie = 0, versuche = 0, geloest = false, stufe = 0;
+      var auf = box.querySelector('.ue-aufgabe'), ein = box.querySelector('.ue-eingabe'), rueck = box.querySelector('.ue-rueck'),
+          zaehler = box.querySelector('.ue-serie'), tippK = box.querySelector('.ue-tipp'), tippBox = box.querySelector('.ue-tipps');
+      function neu(){
+        A = T.neu();
+        for (var v = 0; v < 60 && gesperrt(T, A); v++) A = T.neu();
+        versuche = 0; geloest = false; stufe = 0; box.__aufgabe = A; box.__typ = T;   // Testhaken (.claude/tools/pruef-uebungen.mjs)
+        auf.innerHTML = A.text;
+        var html = A.muster || T.muster;
+        T.felder.forEach(function(f){
+          html = html.replace('{' + f + '}', '<input type="text" inputmode="text" autocomplete="off" aria-label="' + (f[0] === 'b' ? 'Ergebnis als Bruch' : 'Zahl') + '" data-f="' + f + '"' + (f[0] === 'b' ? ' class="bruch" placeholder="z. B. 3/4"' : '') + '>');
+        });
+        ein.innerHTML = html; rueck.className = 'ue-rueck'; rueck.innerHTML = '';
+        tippBox.innerHTML = ''; tippK.textContent = '💡 Tipp'; tippK.disabled = false;
+        setzen(auf); setzen(ein);
+      }
+      function tipp(){
+        var t = T.tipps(A);
+        if (stufe < t.length) tippBox.innerHTML += '<p class="ue-stufe"><b>' + (stufe === 0 ? 'Impuls' : 'Nächster Schritt') + ':</b> ' + t[stufe] + '</p>';
+        else tippBox.innerHTML += '<p class="ue-stufe"><b>Lösungsweg:</b> \\(' + T.loesung(A) + '\\)</p>';
+        stufe++;
+        if (stufe > t.length){ tippK.disabled = true; tippK.textContent = '💡 alle Tipps'; } else tippK.textContent = '💡 Tipp ' + (stufe + 1) + '/' + (t.length + 1);
+        setzen(tippBox);
+      }
+      function hinweis(h){ rueck.className = 'ue-rueck hinweis'; rueck.innerHTML = h; setzen(rueck); }
+      function pruefen(){
+        if (geloest) return;
+        var e = {}, komma = false;
+        var felder = ein.querySelectorAll('input');
+        for (var i = 0; i < felder.length; i++){
+          var inp = felder[i], r = bruchLesen(inp.value), f = inp.dataset.f;
+          inp.classList.remove('falsch');
+          if (r.leer) return hinweis('Fülle das Feld aus.');
+          if (r.gemischt) return hinweis('Schreib das Ergebnis als Bruch, zum Beispiel <code>7/3</code> statt «2 1/3» — gemischte Zahlen liest man leicht als Produkt.');
+          if (r.kaputt){ inp.classList.add('falsch'); return hinweis(r.null ? 'Durch \\(0\\) teilen geht nicht.' : f[0] === 'b' ? 'Brüche wie <code>3/4</code> oder <code>-2/3</code>, ganze Zahlen wie <code>5</code>.' : 'Gib eine ganze Zahl ein.'); }
+          if (r.komma) komma = true;
+          if (f[0] === 'b'){
+            if (gleich(r, A.r)){
+              if (r.dez) return hinweis('Gleicher Wert — gib das Ergebnis aber als <b>Bruch</b> an.');
+              if (!gekuerzt(r)) return hinweis(r.n === 1 ? 'Richtig gerechnet — schreib ganze Zahlen ohne Nenner: <code>' + r.z + '</code> statt <code>' + r.z + '/1</code>.'
+                : 'Richtiger Wert, aber noch nicht vollständig <b>gekürzt</b>: \\(' + Math.abs(r.z) + '\\) und \\(' + r.n + '\\) sind beide durch \\(' + ggT(r.z, r.n) + '\\) teilbar.');
+            }
+            e[f] = r;
+          } else {
+            if (r.n !== 1 || r.dez){ inp.classList.add('falsch'); return hinweis('Gesucht ist eine ganze Zahl.'); }
+            e[f] = r.z;
+          }
+        }
+        versuche++;
+        var ok = T.felder.every(function(f){ return f[0] === 'b' ? gleich(e[f], A.r) : e[f] === A[f]; });
+        if (ok){
+          serie = versuche === 1 && stufe === 0 ? serie + 1 : 0; geloest = true;
+          rueck.className = 'ue-rueck richtig';
+          rueck.innerHTML = '✓ Richtig' + (komma ? ' (Hier schreibt man den Dezimalpunkt.)' : '') + ' <button type="button" class="ue-weiter">Nächste</button>';
+          rueck.querySelector('.ue-weiter').addEventListener('click', neu);
+        } else {
+          serie = 0; rueck.className = 'ue-rueck falsch';
+          rueck.innerHTML = T.pruefen(A, e) + (versuche >= 2 ? ' <details class="ue-loes"><summary>Lösung</summary>\\(' + T.loesung(A) + '\\)</details>' : '');
+        }
+        zaehler.textContent = serie + ' in Folge' + (serie >= 3 ? ' ✓' : '');
+        setzen(rueck);
+      }
+      box.querySelector('.ue-pruefen').addEventListener('click', pruefen);
+      box.querySelector('.ue-neu').addEventListener('click', neu);
+      tippK.addEventListener('click', tipp);
+      ein.addEventListener('keydown', function(ev){ if (ev.key === 'Enter') pruefen(); });
+      neu();
+    });
+  })();
+
+  /* ---------- Minibilder zu den Aufgaben ----------
+     <svg class="mini-bruch" data-streifen="n,k;n,k"> Streifen (k von n gefärbt, mehrere übereinander)
+     <svg class="mini-bruch" data-flaeche="a,b,c,d">   Flächenmodell a/b · c/d */
+  document.querySelectorAll('svg.mini-bruch').forEach(function(svg){
+    var i, j;
+    if (svg.dataset.streifen){
+      var teile = svg.dataset.streifen.split(';');
+      svg.setAttribute('viewBox', '0 0 220 ' + (teile.length * 34 + 4));
+      teile.forEach(function(t, z){ var p = t.split(',').map(Number); streifen(svg, 6, 6 + z * 34, 208, 24, p[0], p[1], z ? 'f2' : 'f1'); });
+      svg.setAttribute('role', 'img');
+    } else if (svg.dataset.flaeche){
+      var q = svg.dataset.flaeche.split(',').map(Number), a = q[0], b = q[1], c = q[2], d = q[3], S = 140;
+      svg.setAttribute('viewBox', '0 0 152 152'); svg.setAttribute('role', 'img');
+      for (i = 0; i < b; i++) for (j = 0; j < d; j++)
+        el(svg, 'rect', { x: 6 + S * i / b, y: 6 + S * j / d, width: S / b, height: S / d, 'class': 'zelle ' + ((i < a && j < c) ? 'f3' : i < a ? 'f1' : j < c ? 'f2' : 'leer') });
+      el(svg, 'rect', { x: 6, y: 6, width: S, height: S, 'class': 'rahmen' });
+    }
+  });
+})();
+</script>
+
+
+<footer class="site-footer">
+  <p><strong>Sek1-Mathe begreifbar</strong> — Lernmaterial Mathematik für die Sekundarstufe I</p>
+  <p>Leitprogramm · Bruchrechnen</p>
+  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+  <p><a href="../feedback.html">Kontakt &amp; Feedback</a> · <a href="../rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
+  <p>Keine Cookies · Kein Tracking · Version 1.0 (Probe) · Stand 9. Oktober 2026</p>
+</footer>
+
+<script src="../mathlib.js"></script>
+<script src="../nav.js"></script>
+<script src="../suche.js"></script>
+<script>buildNav({ id: 'leitprogramme' });</script>
+</body>
+</html>
