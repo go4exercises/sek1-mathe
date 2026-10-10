@@ -3,12 +3,50 @@
 `leitprogramme/darstellungen.html`, gebaut mit `scripts/lp/darstellungen/` (README dort), nach
 `~/TODO-BM-Vorkurs-LP03-15.md` §3 (LP 05, Lineare Funktionen II: Darstellungswechsel).
 
-- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/darstellungen.html`.
+- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/darstellungen.html` (Abschnitt unten).
 - [x] Registriert (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Zeichnung G5).
 - [ ] 🔑 Hörprobe der acht Clips `dar-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
       «Geraden» (Whisper: «Graden»), «geknickt» (Whisper: «geknippt»), «y» als «Ypsilon», «antiproportional».
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
+## Prüfung `darstellungen` (10.10.2026)
+
+Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `739cec9`. HOCH-Befunde
+an der Quelle nachgeprüft und bestätigt. Legende wie oben; Neuvertonung nötig: 🔊.
+
+Rechenfehler: keine — alle Zahlen von Seite, Clips und PDFs samt Fehlerwerten nachgerechnet.
+Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Fragebilder, Leistenziele, Zufallsübungen (Eindeutigkeit von
+`deuten` und `art`, Dreiecksungleichung, gedrehte Rechtecke), Punktesummen, TikZ-Bilder, Datenschutz, Konventionen, TALS-Anker.
+
+### HOCH
+- [ ] 🔊 **«Gleiche Differenzen → linear» ohne Bedingung** (Festhalten 4, Clip antiproportional «Erkennen»/«Merke», Kontrollclip «Merke»):
+      G7 B und 4a B sind linear mit ungleichen Differenzen. «Trifft beide Achsen» gilt nur verlängert.
+- [ ] **Festhalten 4 «x verdoppeln: y wird um gleich viel kleiner»** mehrdeutig (12 − x: −1, −2, −4).
+- [ ] 🔊 **Clip summe «Gerade»:** Das Rechteck wird bei «x länger» kürzer (Stützpunkte gegen den Ton); ganze Gerade statt Strecke.
+- [ ] **Clip antiproportional «Vorhersage»:** (20 | 1.5) und «v · 2 ⇒ t : 2» schon beim Erscheinen der Frage im Bild.
+- [ ] **Raster:** G3 Ansatz-Zeile gegen Fehlerfall; G1(d) als (E) trotz Abhängigkeit von (a); G5 Zeilen (c)/(d) bei Teilaufgaben (a)–(c).
+- [ ] **Wiederholungen im Gesamttest:** G6 = 3e und Clip-Fehlerbild (0, 10, 20, 50); G8a = Kontrollclip K4F4 (x + y = 10, x = 2 und 4).
+
+### MITTEL
+- [ ] G5 «bis voll» (steigend mit Obergrenze) nirgends geübt; Tipp `bereich` «endet bei y = 0» verallgemeinert falsch.
+- [ ] `art`: ungleiche x-Schritte verraten «antiproportional» (98 %); Diagnose bei falscher Richtung (steigend/fallend) bestätigt nur Linearität.
+- [ ] Sperrliste ohne `be|`, `sk|`, `ar|`, `de|`: Akku 100/8 = Sim 3 (6 %), G7 A, 4a A, Kontrollclip-Werte, 1a als Zufallsübung.
+- [ ] 1c: Sachgraph als ganze Gerade ins Negative, ohne Einheiten, abzulesender Punkt am unbeschrifteten Rand.
+- [ ] 4e wiederholt Festhalten (Umfang 24, 6 × 6); K4F3/K4F4/K4F1 wiederholen V3, Kurz wiederholt, 4d, G7.
+- [ ] Ungeübt im Test: b = 7.5 (G4a), Steigung −1.5 bei Anzahlen deuten (G4b), Division durch 0.3 (G1d), Treppe selbst formulieren (§3).
+- [ ] 🔊 Rückmeldungen verraten die Lösung (K1F5, Vorhersage Velo, K2F2); K4F1 angezeigt ≠ gesprochen; K3F4 «Schritte zu 4 und 8».
+- [ ] 🔊 Clip achsen: «33 : 8» ohne die 8 zu nennen; Clip summe «Preise» erklärt x und y nicht, Anker «@Drei» zu früh.
+- [ ] «Schritt» doppeldeutig (x + 1 gegen Tabellensprung); Sim 3 Variablen (t/Höhe gegen x/y, «1 · x»); 3c(c) Lift unklar; 3d ohne 8 Häuschen.
+- [ ] Festhalten 2 ohne \(c \neq 0\); Vertiefungslink Kapitel 4 (Modellieren) passt nicht.
+
+### NIEDRIG
+- [ ] Tipp `tabelle` bei x₀ = 0, `skala` «=» statt «≈», `aufloesen` «durch 1» und Probe bei x = 2 zufällig gleich, `art` ASCII-Minus,
+      `deuten` Kerze «die Zahl 3» bei −3x, `bereich` Hefte ohne «nur ganze Zahlen».
+- [ ] Sim 1 Leiste 5 «Graph:»; Sim 2 Strecke bis zu den Achsen, Beschriftung bei U = 40 verdeckt; 3a «leer» bei der Kerze.
+- [ ] PDF: G1(b) ohne gedruckte Tabelle, Gedankenstrich neben Formel (G4c), unklarer Satz G4(c), G6(b)-Lösung ungenau, 0 im Musterbild G5.
+- [ ] Clips: gestrichelte ganze Gerade nicht als falsch markiert (achsen), zweites Rechteck orange, Punkte decken Achsenzahlen,
+      Hilfsgerade bis x < 0; Definitionsbereich auch «Definitionsmenge» nennen; Vortest-Hinweis ohne Link auf LP 4.
 
 ## Leitprogramm Lineare Funktionen (10.10.2026)
 
