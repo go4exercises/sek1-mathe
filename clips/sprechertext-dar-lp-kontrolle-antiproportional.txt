@@ -1,0 +1,6 @@
+0.40	Eins mal achtzehn, zwei mal neun, drei mal sechs, sechs mal drei: Das Produkt ist immer achtzehn. Antiproportional.
+8.81	Bei jedem Schritt wird y um drei kleiner: gleiche Differenzen. Linear fallend.
+14.78	Doppelt so viele Personen brauchen halb so lange: drei Stunden. Vier mal sechs gibt vierundzwanzig, acht mal drei auch.
+22.70	y gleich zehn minus x. Bei x gleich zwei ist y acht, bei x gleich vier ist y sechs. Nicht halbiert.
+31.01	Zwei mal sechs und vier mal vier haben beide den Umfang sechzehn, aber die Flächen zwölf und sechzehn. Das widerlegt die Aussage.
+39.32	Zum Mitnehmen: Differenzen gleich, dann linear. Produkte gleich, dann antiproportional. Für ein Gegenbeispiel brauchst du zwei wirklich verschiedene Fälle.

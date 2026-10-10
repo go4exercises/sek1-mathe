@@ -117,6 +117,11 @@ SEITEN = {
    titel='Leitprogramm Bruchterme, Gleichungen und Formeln — kürzen, Hauptnenner, Gleichungen lösen, Formeln umstellen',
    beschreibung='Leitprogramm Sekundarstufe I: Bruchterme kürzen und berechnen, lineare Gleichungen mit Klammern und Brüchen lösen, Lösungsmenge und Probe, Formeln umstellen — mit Übungen.',
    themen=['Mathematik', 'Bruchterme', 'Kürzen', 'Hauptnenner', 'Lineare Gleichungen', 'Lösungsmenge', 'Formeln umstellen', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/darstellungen.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Darstellungen wechseln — Text, Gleichung, Tabelle und Graph, Definitionsbereich, antiproportional',
+   beschreibung='Leitprogramm Sekundarstufe I, lineare Funktionen II: zwischen Text, Gleichung, Wertetabelle und Graph wechseln, konstanter Umfang, Definitionsbereich und Achsen, linear fallend oder antiproportional — mit Übungen.',
+   themen=['Mathematik', 'Lineare Funktionen', 'Darstellungswechsel', 'Wertetabelle', 'Definitionsbereich', 'Achsen', 'Antiproportional', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/lineare-funktionen.html': dict(
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Lineare Funktionen — Anfangswert, Steigung, Geraden zeichnen, Gleichung aufstellen',

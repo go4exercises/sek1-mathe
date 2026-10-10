@@ -1,0 +1,379 @@
+:root{
+  /* Die Palette kommt aus ../style.css — 20 Tokens, Wert fuer Wert dieselben.
+     Hier steht nur, was dort anders heisst oder fehlt. Damit kann sie nicht
+     mehr auseinanderlaufen. */
+  --karte:var(--weiss);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+    --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+    --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+    --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+    --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+    --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+    --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+    --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+    --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+  --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+  --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+  --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+  --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+  --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+  --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+  --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+  --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);
+  font-family:var(--serif);font-size:17px;line-height:1.62;
+  -webkit-text-size-adjust:100%}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.22;margin:0}
+a{color:var(--petrol)}   /* Bereichsfarbe Sek I (CLAUDE.md) */
+:focus-visible{outline:2.5px solid var(--lila-rand);outline-offset:2px;border-radius:3px}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+
+/* ---------- Gerüst ---------- */
+.huelle{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+.raster{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:1000px){
+  .raster{grid-template-columns:236px minmax(0,1fr);gap:52px;align-items:start}
+}
+.inhalt{min-width:0;max-width:70ch}
+
+/* ---------- Kopf ---------- */
+.kopf{border-bottom:1px solid var(--linie);background:var(--papier-2);
+  margin-bottom:44px;padding:0 20px}
+.kopf-innen{max-width:1180px;margin:0 auto;padding:30px 0 34px;
+  display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+.marke{font-family:var(--sans);font-size:.76rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinte-2);margin:0 0 10px}
+.kopf h1{font-size:clamp(2rem,5.2vw,2.9rem);font-weight:700;letter-spacing:-.015em}
+.kopf .unter{font-family:var(--sans);color:var(--tinte-2);margin:10px 0 0;font-size:1rem;max-width:52ch}
+.kopf-rechts{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);text-align:right;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.themenschalter{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--tinte-2);
+  background:var(--karte);border:1px solid var(--linie);border-radius:999px;
+  padding:6px 13px;cursor:pointer}
+.themenschalter:hover{color:var(--tinte);border-color:var(--tinte-2)}
+
+/* ---------- Seitenschiene ---------- */
+.schiene{font-family:var(--sans);font-size:.87rem;margin-bottom:40px}
+@media(min-width:1000px){.schiene{position:sticky;top:22px;margin-bottom:0}}
+.schiene h2{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin-bottom:12px}
+.schiene ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.schiene a{display:flex;gap:9px;align-items:baseline;padding:6px 8px;border-radius:5px;
+  text-decoration:none;color:var(--tinte);border-left:2.5px solid transparent}
+.schiene a:hover{background:var(--papier-2)}
+.schiene a.aktiv{border-left-color:var(--petrol-rand);background:var(--papier-2);font-weight:600}
+.schiene .nr{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);min-width:1.6em}
+.schiene .lekt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin:16px 0 5px;padding-left:8px}
+.fortschritt{margin-top:22px;padding-top:16px;border-top:1px solid var(--linie)}
+.balken{height:6px;background:var(--papier-2);border:1px solid var(--linie);border-radius:99px;overflow:hidden}
+.balken i{display:block;height:100%;background:var(--gruen-rand);width:0;transition:width .35s ease}
+.fortschritt p{margin:9px 0 0;font-size:.79rem;color:var(--tinte-2)}
+.fortschritt button{margin-top:10px;font-family:var(--sans);font-size:.75rem;color:var(--tinte-2);
+  background:none;border:none;padding:0;cursor:pointer;text-decoration:underline}
+
+/* ---------- Anleitung ---------- */
+.anleitung{background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:22px 26px;margin-bottom:46px;box-shadow:var(--s)}
+.anleitung summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px}
+.anleitung summary::-webkit-details-marker{display:none}
+.anleitung summary::after{content:"";flex:none;margin-left:auto;width:.5em;height:.5em;
+  border-right:2px solid var(--tinte-2);border-bottom:2px solid var(--tinte-2);
+  transform:translateY(-.15em) rotate(45deg);transition:transform .2s}
+.anleitung[open] summary::after{transform:translateY(.1em) rotate(-135deg)}
+.anleitung h2{font-size:1.12rem}
+.anleitung ol{margin:12px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.94rem;color:var(--tinte-2)}
+.anleitung li{margin:6px 0}
+.anleitung li b{color:var(--tinte)}
+
+/* ---------- Lektionsband ---------- */
+.band{display:flex;align-items:center;gap:14px;margin:56px 0 30px}
+.band:first-of-type{margin-top:8px}
+.band .strich{flex:1;height:1px;background:var(--linie)}
+.band span{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--tinte-2);white-space:nowrap}
+
+/* ---------- Kapitel ---------- */
+.kap{margin-bottom:52px;scroll-margin-top:20px}
+.kap-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.marker{font-family:var(--mono);font-size:.74rem;font-weight:700;letter-spacing:.04em;
+  padding:3px 8px;border-radius:4px;background:var(--papier-2);color:var(--tinte-2)}
+.abz{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.05em;
+  padding:3px 9px;border-radius:999px;border:1px solid}
+.abz-th{color:var(--petrol);border-color:var(--petrol-rand);background:var(--petrol-hell)}
+.abz-sf{color:var(--lila);border-color:var(--lila-rand);background:var(--lila-hell)}
+.zeit{font-family:var(--sans);font-size:.78rem;color:var(--tinte-2)}
+.kap h2{font-size:1.62rem;font-weight:700;letter-spacing:-.01em}
+.ziel{font-family:var(--sans);font-size:.95rem;color:var(--tinte-2);
+  border-left:2.5px solid var(--linie);padding-left:13px;margin:12px 0 22px}
+.kap h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:30px 0 10px}
+.kap p{margin:0 0 14px}
+
+/* ---------- Clipkarte ---------- */
+.clipkarte{margin:22px 0 26px}
+.clip-start{display:flex;width:100%;align-items:center;gap:15px;text-align:left;cursor:pointer;
+  background:var(--lila-hell);border:1px solid var(--lila-rand);border-radius:10px;
+  padding:14px 17px;font-family:var(--sans);color:var(--tinte)}
+.clip-start:hover{box-shadow:var(--sl)}
+.clip-play{flex:none;width:38px;height:38px;border-radius:50%;background:var(--lila);color:#fff;
+  display:grid;place-items:center;font-size:.9rem;padding-left:3px}
+:root[data-theme="dark"] .clip-play,
+:root:not([data-theme="light"]) .clip-play{color:#171512}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .clip-play{color:#fff}}
+.clip-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.clip-titel{font-weight:600;font-size:.97rem;line-height:1.32}
+.clip-quelle{font-size:.75rem;color:var(--tinte-2);letter-spacing:.03em}
+.clip-zeit{font-family:var(--mono);font-size:.8rem;color:var(--tinte-2);flex:none}
+@media(max-width:720px){
+}
+
+/* ---------- Merkkasten, Beispiele, Warnung ---------- */
+.merk{background:var(--blau-hell);border:1px solid var(--blau-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.merk .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--blau);margin-bottom:8px}
+.merk p:last-child{margin-bottom:0}
+.warn{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.warn .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.warn p:last-child{margin-bottom:0}
+
+table.gesetze{width:100%;border-collapse:collapse;margin:18px 0;font-size:.97rem}
+.tabhuelle{overflow-x:auto}
+table.gesetze th,table.gesetze td{border-bottom:1px solid var(--linie);padding:9px 10px;text-align:left;vertical-align:middle}
+table.gesetze th{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tinte-2)}
+table.gesetze td:first-child{font-family:var(--mono);font-size:.82rem;color:var(--tinte-2);white-space:nowrap;width:1%}
+table.gesetze td.wort{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+
+.beisp{margin:18px 0;border:1px solid var(--linie);border-radius:8px;background:var(--karte);overflow:hidden}
+.beisp .kopfz{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--tinte-2);background:var(--papier-2);
+  padding:7px 16px;border-bottom:1px solid var(--linie)}
+.beisp ul{list-style:none;margin:0;padding:12px 16px;display:flex;flex-direction:column;gap:9px}
+.beisp li{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.beisp .schritt{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2)}
+
+/* ---------- Selbsttest ---------- */
+.test{border:1.5px solid var(--gruen-rand);border-radius:11px;background:var(--karte);
+  margin:30px 0 0;overflow:hidden}
+.test-kopf{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
+  background:var(--gruen-hell);padding:11px 18px;border-bottom:1px solid var(--gruen-rand)}
+.test-kopf h3{font-family:var(--sans);font-size:.94rem;font-weight:700;color:var(--gruen);margin:0}
+.test-kopf .werkz{display:flex;gap:14px;align-items:center;font-family:var(--sans);font-size:.78rem}
+.test-kopf button{font-family:var(--sans);font-size:.78rem;background:none;border:none;
+  color:var(--gruen);cursor:pointer;text-decoration:underline;padding:0}
+.test-kopf label{display:flex;gap:6px;align-items:center;color:var(--tinte-2);cursor:pointer}
+.aufg{list-style:none;margin:0;padding:6px 18px 18px}
+.aufg>li{border-bottom:1px dotted var(--linie);padding:11px 0}
+.aufg>li:last-child{border-bottom:none;padding-bottom:2px}
+.frage{display:flex;gap:11px;align-items:baseline}
+.frage .nr{font-family:var(--mono);font-size:.83rem;font-weight:700;color:var(--gruen);
+  flex:none;min-width:2.4em}
+.frage .pkt{font-family:var(--mono);font-size:.72rem;color:var(--tinte-2);
+  flex:none;min-width:3.4em;margin-left:-4px}
+.frage .txt{flex:1;min-width:0}
+details.loes{margin:7px 0 0 calc(5.8em + 11px)}
+details.loes summary{font-family:var(--sans);font-size:.79rem;color:var(--tinte-2);
+  cursor:pointer;list-style:none;display:inline-flex;gap:6px;align-items:center;
+  border:1px solid var(--linie);border-radius:999px;padding:2px 11px}
+details.loes summary::-webkit-details-marker{display:none}
+details.loes summary:hover{border-color:var(--gruen-rand);color:var(--gruen)}
+details.loes[open] summary{color:var(--gruen);border-color:var(--gruen-rand)}
+details.loes .inhaltbox{border-left:2.5px solid var(--gruen-rand);padding:6px 0 2px 13px;margin-top:9px}
+details.loes .inhaltbox p{margin:0 0 7px}
+details.loes .inhaltbox p:last-child{margin-bottom:0}
+.komm{font-family:var(--sans);font-size:.87rem;color:var(--tinte-2)}
+
+/* ---------- Gesamttest ---------- */
+.gesamt{border:2px solid var(--tinte-2);border-radius:12px;background:var(--karte);
+  padding:0;overflow:hidden;margin-top:20px}
+.gesamt-kopf{background:var(--papier-2);padding:16px 20px;border-bottom:1px solid var(--linie)}
+.gesamt-kopf h2{font-size:1.4rem}
+.gesamt-kopf p{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2);margin:7px 0 0}
+.gesamt-teil{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinte-2);padding:18px 20px 0}
+.gesamt .aufg{padding:6px 20px 16px}
+.summe{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);white-space:nowrap}
+.bewertung{margin:0;padding:16px 20px 20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+.bewertung table{width:100%;border-collapse:collapse;margin-top:8px}
+.bewertung td{padding:5px 8px;border-bottom:1px solid var(--linie)}
+.bewertung td:first-child{font-family:var(--mono);white-space:nowrap;width:1%;color:var(--tinte)}
+
+/* ---------- Fuss ---------- */
+.fuss{margin-top:64px;padding-top:20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .huelle{padding:0 15px 70px}
+  details.loes{margin-left:0}
+}
+@media print{
+  .schiene,.themenschalter,.clip-buehne,.test-kopf .werkz{display:none}
+  .kap{break-inside:avoid}
+  details.loes{display:none}
+  body{background:#fff}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* ── Fuss im Dunkelmodus ─────────────────────────────────────────
+   Kopf und Menue kommen ohne Nachhilfe aus: style.css faerbt seine
+   Flaechen mit --weiss, und das ist oben dunkel gesetzt. Nur der Fuss
+   braucht eine Regel — er benutzt --tinte als *Flaeche*, und die kippt
+   im Dunkelmodus mit dem Text nach hell. */
+:root[data-theme="dark"] .site-footer{
+  background:var(--papier-2); color:var(--tinte-2);
+  border-top:1px solid var(--linie);
+}
+:root[data-theme="dark"] .site-footer a{ color:var(--petrol); }
+
+/* Das Lektionsband traegt `white-space:nowrap`. Auf schmalen Schirmen
+   laeuft ein laengerer Untertitel damit ueber den Rand hinaus — in der
+   Uebungspruefung derselbe Fall, dort mit derselben Zeile behoben. */
+@media(max-width:600px){ .band span{white-space:normal} }
+/* ════════ HOWTO-leitprogramme.md §6 — Fliesstext schmal, Arbeitsflaechen breit ════════
+   Vorher: .inhalt max-width 70ch (~620 px), .huelle 1180 px. Auf 1280 px blieben
+   rechts ~230 px leer. Jetzt begrenzen die Textelemente sich selbst, Beispiele,
+   Tabellen, Tests und Erkundungen nehmen die ganze Spalte, und .duo stellt zwei
+   zusammengehoerige Teile ab 1180 px nebeneinander. Quelltextreihenfolge =
+   Lesereihenfolge auf dem Handy. */
+.huelle,.kopf-innen{max-width:1440px}
+.inhalt{max-width:none}
+.kap>p,.kap>h2,.kap>h3,.ziel,.duo>div>p,.erkunden p,.erkunden ol{max-width:68ch}
+.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px;align-items:start}
+.duo>*{min-width:0}
+@media(min-width:1180px){
+  .duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .aufg.zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:34px}
+  .aufg.zwei>li:nth-last-child(2):nth-child(odd){border-bottom:none}
+}
+.duo>.anleitung{margin-bottom:24px}
+.duo>.rlp-kompetenzen{margin:0 0 24px}
+.rlp-kompetenzen .rlp-fuss{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin:8px 0 0}
+
+/* Didaktische Farben nach STYLEGUIDE §5: Rot = Fehler/Achtung, Orange = Aufgabe.
+   Die Vorlage faerbte den Haeufigen Fehler orange; hier rot, damit das Orange
+   frei ist fuer den Erkundungsauftrag. */
+.warn{background:var(--rot-hell);border-color:var(--rot-rand)}
+.warn .titel{color:var(--rot)}
+.erkunden{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.erkunden .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.erkunden ol{margin:6px 0 10px;padding-left:1.3em}
+.erkunden li{margin:4px 0}
+.erkunden p:last-child{margin-bottom:0}
+.notiz{font-family:var(--sans);font-size:.9rem;color:var(--tinte-2)}
+.ausf{font-family:var(--sans);font-size:.92rem;border-top:1px solid var(--linie);padding-top:12px;margin-top:26px}
+.knopf-link{font-family:var(--sans);font-size:.8rem;background:none;border:none;padding:0;
+  color:var(--tinte-2);text-decoration:underline;cursor:pointer}
+table.gesetze.formen td:first-child{font-family:var(--sans);font-size:.86rem;color:var(--tinte);
+  white-space:normal;width:auto;font-weight:600}
+table.gesetze.formen td:first-child .wort{font-weight:400}
+.weiter{margin-top:30px}
+.beisp .wert{flex:1;min-width:0}
+
+/* ---------- eingebettete Simulation (§8b) ---------- */
+.sim{margin:20px 0;background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:14px 16px 12px}
+.sim > svg{display:block;width:100%;max-width:420px;height:auto;margin:6px auto 10px}
+.sim-formel{font-family:var(--mono);font-size:1rem;text-align:center;padding:6px 8px;
+  background:var(--papier-2);border-radius:6px}
+.sim figcaption{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);text-align:center;margin-top:8px}
+.sl-row{display:flex;gap:10px;align-items:center;font-family:var(--sans);font-size:.9rem}
+.sl-row input[type=range]{flex:1}
+.sl-val{font-family:var(--mono);font-size:.86rem;min-width:2.6em}
+.sim .gitter{stroke:var(--linie);stroke-width:.6}
+.sim .achse{stroke:var(--tinte-2);stroke-width:1.2}
+.sim .skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+.sim .normal{fill:none;stroke:var(--tinte-2);stroke-width:1.4;stroke-dasharray:5 4;opacity:.7}
+.sim .kurve{fill:none;stroke:var(--blau);stroke-width:2.6}
+.sim .scheitel{fill:var(--tinte)}
+.sim .s-text{fill:var(--tinte);font-family:var(--sans);font-size:12px;font-weight:600}
+
+/* ════════ Fassung 2 — «zuerst sehen» (HOWTO-leitprogramme.md §4, §8) ════════ */
+.phase{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinte-2);margin:34px 0 8px;display:flex;align-items:center;gap:8px}
+.phase span{display:inline-grid;place-items:center;width:1.7em;height:1.7em;border-radius:50%;
+  background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte);font-size:.9rem;letter-spacing:0}
+.sim-knoepfe{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin:8px 0 2px;
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2)}
+.sim-knoepfe button,.formen-live button{font-family:var(--sans);font-size:.8rem;cursor:pointer;
+  background:var(--karte);color:var(--tinte);border:1px solid var(--linie);border-radius:999px;padding:4px 12px}
+.sim-knoepfe button.aktiv{background:var(--gruen-hell);border-color:var(--gruen-rand);color:var(--gruen);font-weight:700}
+.formen-live{display:flex;flex-direction:column;gap:5px}
+.formen-live button{border-radius:7px;display:flex;gap:10px;align-items:baseline;text-align:left;padding:6px 10px;
+  font-family:var(--mono);font-size:.86rem}
+.formen-live .fl-name{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;min-width:8.5em;color:var(--tinte-2)}
+.formen-live button[data-form="g"].aktiv{border-color:var(--blau-rand);background:var(--blau-hell)}
+.formen-live button[data-form="s"].aktiv{border-color:var(--gruen-rand);background:var(--gruen-hell)}
+.formen-live button[data-form="p"].aktiv{border-color:var(--orange-rand);background:var(--orange-hell)}
+.sim.treffer{border-color:var(--gruen-rand);box-shadow:0 0 0 2px var(--gruen-hell)}
+.sim .zielkurve{fill:none;stroke:var(--gruen);stroke-width:3;stroke-dasharray:7 5;opacity:.85}
+.sim .symachse{stroke:var(--tinte-2);stroke-width:1.3;stroke-dasharray:6 5}
+.p-s{fill:var(--gruen)} .p-g{fill:var(--blau)} .p-n{fill:var(--orange)} .p-geist{fill:var(--orange);opacity:.35}
+text.p-text{font-family:var(--sans);font-size:11.5px;font-weight:700}
+.sim .feld-rahmen{fill:none;stroke:var(--linie);stroke-dasharray:4 4}
+.sim .feld{fill:var(--gruen-hell);stroke:var(--gruen);stroke-width:2}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+.beisp .mini-reihe{margin:10px 16px 0}
+svg.mini{width:128px;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px}
+svg.mini.gross{width:190px}
+svg.mini .kurve{fill:none;stroke:var(--blau);stroke-width:2.2}
+svg.mini .gitter{stroke:var(--linie);stroke-width:.5}
+svg.mini .achse{stroke:var(--tinte-2);stroke-width:1}
+svg.mini .skala{font-size:8px}
+svg.mini .mini-titel{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--tinte)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} svg.mini{width:110px} }
+
+/* ---------- Üben mit Rückmeldung (Prototyp) ---------- */
+.uebung{border:1.5px solid var(--orange-rand);border-radius:11px;background:var(--karte);padding:12px 16px 14px;margin:14px 0}
+.ue-kopf{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-family:var(--sans);font-size:.8rem;margin-bottom:6px}
+.ue-titel{font-weight:700;color:var(--orange)}
+.ue-serie{color:var(--tinte-2)}
+.ue-aufgabe{margin:6px 0 10px}
+.ue-zeile{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--mono);font-size:.95rem}
+.ue-eingabe input{width:4.2em;font-family:var(--mono);font-size:.95rem;padding:4px 6px;margin:0 3px;border:1.5px solid var(--linie);
+  border-radius:6px;background:var(--papier);color:var(--tinte);text-align:center}
+.ue-eingabe input:focus{outline:none;border-color:var(--orange-rand)}
+.ue-eingabe input.falsch{border-color:var(--rot-rand)}
+.ue-zeile button,.ue-weiter{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--orange-rand);background:var(--orange-hell);color:var(--tinte)}
+.ue-zeile .ue-neu{background:none;border-color:var(--linie);color:var(--tinte-2)}
+.ue-rueck{font-family:var(--sans);font-size:.9rem;margin-top:10px;border-radius:7px}
+.ue-rueck:empty{display:none}
+.ue-rueck.richtig{background:var(--gruen-hell);border-left:4px solid var(--gruen-rand);padding:8px 12px}
+.ue-rueck.falsch{background:var(--rot-hell);border-left:4px solid var(--rot-rand);padding:8px 12px}
+.ue-rueck.hinweis{background:var(--papier-2);padding:8px 12px}
+.ue-loes{margin-top:6px} .ue-loes summary{cursor:pointer;color:var(--tinte-2)}
+.uebung .ue-bild{display:block;margin:4px 0 6px}
+
+.fahrplan{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px;font-family:var(--sans);font-size:.78rem}
+.fahrplan span{padding:3px 10px;border-radius:999px;background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte-2)}
+
+.pdf-weg{margin:14px 0 4px;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:.92rem}
+.pdf-schritt{display:flex;gap:12px;align-items:flex-start}
+.pdf-schritt .nr{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:grid;place-items:center;
+  background:var(--karte);border:1px solid var(--linie);font-weight:700}
+.pdf-knoepfe{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.pdf-knopf{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--petrol-hell);border:1px solid var(--petrol-rand);
+  color:var(--tinte);text-decoration:none;font-weight:600}
+.pdf-knopf:hover{box-shadow:var(--sl)}
+.pdf-link{font-size:.85rem}
+

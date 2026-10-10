@@ -1,3 +1,15 @@
+## Leitprogramm Darstellungen wechseln (10.10.2026)
+
+`leitprogramme/darstellungen.html`, gebaut mit `scripts/lp/darstellungen/` (README dort), nach
+`~/TODO-BM-Vorkurs-LP03-15.md` §3 (LP 05, Lineare Funktionen II: Darstellungswechsel).
+
+- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/darstellungen.html`.
+- [x] Registriert (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex).
+- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Zeichnung G5).
+- [ ] 🔑 Hörprobe der acht Clips `dar-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+      «Geraden» (Whisper: «Graden»), «geknickt» (Whisper: «geknippt»), «y» als «Ypsilon», «antiproportional».
+- [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
 ## Leitprogramm Lineare Funktionen (10.10.2026)
 
 `leitprogramme/lineare-funktionen.html`, gebaut mit `scripts/lp/lineare-funktionen/` (README dort), nach

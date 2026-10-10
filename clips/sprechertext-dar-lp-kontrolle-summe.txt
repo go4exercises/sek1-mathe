@@ -1,0 +1,6 @@
+0.40	Zwei x plus zwei y gleich dreissig, durch zwei: x plus y gleich fünfzehn. Also y gleich fünfzehn minus x.
+9.25	y gleich fünfzehn minus vier, also elf Zentimeter. Probe: zwei mal vier plus zwei mal elf gibt dreissig.
+17.44	Minus zwei x auf beiden Seiten: y gleich minus zwei x plus zehn.
+23.35	Durch drei: x plus y gleich sieben. Also y gleich sieben minus x.
+29.12	Zwei Seiten x und eine Seite y: Zwei x plus y gleich vierzig. Mit x gleich zwölf bleibt für y vierzig minus vierundzwanzig, also sechzehn Meter.
+40.26	Zum Mitnehmen: Zähl genau, wie oft jede Seite vorkommt. Dann zuerst den x-Teil abziehen und durch die Zahl vor dem y teilen.

@@ -1,0 +1,267 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zur festen Summe",
+ "dateiname": "dar-lp-kontrolle-summe",
+ "kurzbeschrieb": "Fünf Fragen: Rechteck mit Umfang 30 cm als Gleichung und für x = 4, 2x + y = 10 und 3x + 3y = 21 nach y, Zaun an einer Mauer 2x + y = 40.",
+ "schlagworte": [
+  "Umfang",
+  "nach y auflösen",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Darstellungen wechseln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-darstellungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms darstellungen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwei x plus zwei y gleich dreissig, durch zwei: x plus y gleich fünfzehn. Also y gleich fünfzehn minus x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + 2y = 30 \\;\\Rightarrow\\; \\fc{y = 15 - x}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.85
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "y gleich fünfzehn minus vier, also elf Zentimeter. Probe: zwei mal vier plus zwei mal elf gibt dreissig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = 15 - 4 = \\fc{11}",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 4 + 2 \\cdot 11 = 30",
+     "x": 150,
+     "y": 420,
+     "groesse": 50,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.19
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Minus zwei x auf beiden Seiten: y gleich minus zwei x plus zehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + y = 10 \\;\\Rightarrow\\; \\fc{y = -2x + 10}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.91
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Durch drei: x plus y gleich sieben. Also y gleich sieben minus x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3x + 3y = 21 \\;\\Rightarrow\\; x + y = 7 \\;\\Rightarrow\\; \\fc{y = 7 - x}",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.77
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwei Seiten x und eine Seite y: Zwei x plus y gleich vierzig. Mit x gleich zwölf bleibt für y vierzig minus vierundzwanzig, also sechzehn Meter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + y = 40",
+     "x": 150,
+     "y": 280,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "y = 40 - 2 \\cdot 12 = \\fc{16}",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 11.14
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zähl genau, wie oft jede Seite vorkommt. Dann zuerst den x-Teil abziehen und durch die Zahl vor dem y teilen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Wie oft kommt jede Seite vor?|x-Teil weg, dann teilen|Probe mit Zahlen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.56
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Rechteck hat den Umfang 30 cm. Welche Gleichung verbindet die Seiten x und y?",
+   "optionen": [
+    "y = 15 − x",
+    "y = 30 − x",
+    "y = 30 − 2x"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Im Umfang kommt jede Seite zweimal vor.",
+    "2": "Nach dem Abziehen von 2x steht noch 2y da: Durch 2 teilen."
+   },
+   "sprich": "Ein Rechteck hat den Umfang dreissig Zentimeter. Welche Gleichung verbindet die Seiten x und y?",
+   "rueck_sprich": {
+    "1": "Im Umfang kommt jede Seite zweimal vor.",
+    "2": "Nach dem Abziehen von zwei x steht noch zwei y da: Durch zwei teilen."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Umfang 30 cm, x = 4 cm. Wie lang ist y?",
+   "optionen": [
+    "22 cm",
+    "11 cm",
+    "26 cm"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Probe: 2 · 4 + 2 · 26 ist viel mehr als 30.",
+    "0": "Du hast 30 − 2 · 4 gerechnet. Dann steht da noch 2y = 22."
+   },
+   "sprich": "Umfang dreissig Zentimeter, x gleich vier Zentimeter. Wie lang ist y?",
+   "rueck_sprich": {
+    "2": "Probe: zwei mal vier plus zwei mal sechsundzwanzig ist viel mehr als dreissig.",
+    "0": "Du hast dreissig minus zwei mal vier gerechnet. Dann steht da noch zwei y gleich zweiundzwanzig."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse nach y auf: 2x + y = 10.",
+   "optionen": [
+    "y = −2x + 10",
+    "y = 2x + 10",
+    "y = −2x + 5"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Wechselt 2x die Seite, wird daraus −2x.",
+    "2": "Vor dem y steht keine Zahl: Hier wird nicht geteilt."
+   },
+   "sprich": "Löse nach y auf: zwei x plus y gleich zehn.",
+   "rueck_sprich": {
+    "1": "Wechselt zwei x die Seite, wird daraus minus zwei x.",
+    "2": "Vor dem y steht keine Zahl: Hier wird nicht geteilt."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse nach y auf: 3x + 3y = 21.",
+   "optionen": [
+    "y = 7 − 3x",
+    "y = 7 − x",
+    "y = 21 − x"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die 21 muss auch durch 3 geteilt werden.",
+    "0": "Durch 3 teilen gilt für alle Glieder, auch für 3x."
+   },
+   "sprich": "Löse nach y auf: drei x plus drei y gleich einundzwanzig.",
+   "rueck_sprich": {
+    "2": "Die einundzwanzig muss auch durch drei geteilt werden.",
+    "0": "Durch drei teilen gilt für alle Glieder, auch für drei x."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Mit 40 m Zaun wird an einer Mauer ein Rechteck abgesteckt: zwei Seiten x, eine Seite y. Wie lang ist y für x = 12 m?",
+   "optionen": [
+    "8 m",
+    "28 m",
+    "16 m"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Die Seite y kommt nur einmal vor, an der Mauer braucht es keinen Zaun.",
+    "1": "Die Seite x kommt zweimal vor."
+   },
+   "sprich": "Mit vierzig Metern Zaun wird an einer Mauer ein Rechteck abgesteckt: zwei Seiten x, eine Seite y. Wie lang ist y für x gleich zwölf Meter?",
+   "rueck_sprich": {
+    "0": "Die Seite y kommt nur einmal vor, an der Mauer braucht es keinen Zaun.",
+    "1": "Die Seite x kommt zweimal vor."
+   }
+  }
+ ]
+}

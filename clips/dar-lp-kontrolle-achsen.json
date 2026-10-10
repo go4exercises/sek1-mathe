@@ -1,0 +1,261 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zu Bereich und Achsen",
+ "dateiname": "dar-lp-kontrolle-achsen",
+ "kurzbeschrieb": "Fünf Fragen: Bereich einer Kerze (18 cm, 3 cm pro Stunde), Pizzas als Punkte, Einteilung für Werte bis 170 auf 9 Häuschen, Achse 0, 1, 2, 4, 8 in gleichen Abständen, Wertebereich eines Tanks (60 l, 4 l pro Minute).",
+ "schlagworte": [
+  "Definitionsbereich",
+  "Skala",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Darstellungen wechseln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-darstellungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms darstellungen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Leer ist die Kerze bei achtzehn durch drei, also nach sechs Stunden. Der Bereich geht von null bis sechs Stunden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "18 - 3x = 0 \\;\\Rightarrow\\; x = 6",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{0 \\le x \\le 6}",
+     "x": 150,
+     "y": 420,
+     "groesse": 58,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.19
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Pizzas gibt es nur ganz. Darum einzelne Punkte.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Anzahl: einzelne Punkte",
+     "x": 150,
+     "y": 330,
+     "groesse": 46,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 3.88
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Hundertsiebzig durch neun gibt etwa achtzehn Komma neun. Die nächste bequeme Zahl ist zwanzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "170 : 9 \\approx 18.9 \\;\\to\\; \\fc{20}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.67
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Abstände sind gleich, aber sie stehen für eins, eins, zwei und vier. Die Skala ist nicht gleichmässig.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "gleiche Abstände, verschiedene Schritte",
+     "x": 150,
+     "y": 330,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.12
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Am Anfang sind sechzig Liter drin, am Schluss null. Der Wertebereich geht von null bis sechzig Liter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fc{0 \\le y \\le 60}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.9
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Der Bereich endet, wo die Grösse aufhört. Anzahlen werden Punkte. Und jede Achse braucht eine gleichmässige, bequeme Einteilung.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Bereich: bis die Grösse aufhört|Anzahlen: Punkte|gleichmässig und bequem einteilen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.86
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Kerze ist 18 cm hoch und wird pro Stunde 3 cm kürzer. Welche Zeiten x sind sinnvoll?",
+   "optionen": [
+    "0 bis 6 h",
+    "0 bis 18 h",
+    "0 bis 54 h"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Nach 18 h wäre die Kerze 18 − 54 cm hoch. Wann ist sie leer?",
+    "2": "Teilen, nicht multiplizieren: Wie oft passen 3 cm in 18 cm?"
+   },
+   "sprich": "Eine Kerze ist achtzehn Zentimeter hoch und wird pro Stunde drei Zentimeter kürzer. Welche Zeiten x sind sinnvoll?",
+   "rueck_sprich": {
+    "1": "Nach achtzehn Stunden wäre die Kerze achtzehn minus vierundfünfzig Zentimeter hoch. Wann ist sie leer?",
+    "2": "Teilen, nicht multiplizieren: Wie oft passen drei Zentimeter in achtzehn Zentimeter?"
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Kosten für x Pizzas: Wie sieht der Graph aus?",
+   "optionen": [
+    "einzelne Punkte",
+    "eine Strecke",
+    "eine ganze Gerade"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Gibt es 2.5 Pizzas zu kaufen?",
+    "2": "Gibt es −1 Pizza? Und 2.5 Pizzas?"
+   },
+   "sprich": "Kosten für x Pizzas: Wie sieht der Graph aus?",
+   "rueck_sprich": {
+    "1": "Gibt es zwei Komma fünf Pizzas zu kaufen?",
+    "2": "Gibt es minus eine Pizza? Und zwei Komma fünf Pizzas?"
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Werte bis 170, die Achse hat 9 Häuschen. Wie viel soll ein Häuschen bedeuten?",
+   "optionen": [
+    "20",
+    "10",
+    "18.9"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "9 Häuschen zu 10 reichen nur bis 90.",
+    "2": "Das reicht knapp, ist aber keine bequeme Zahl zum Ablesen."
+   },
+   "sprich": "Werte bis hundertsiebzig, die Achse hat neun Häuschen. Wie viel soll ein Häuschen bedeuten?",
+   "rueck_sprich": {
+    "1": "Neun Häuschen zu zehn reichen nur bis neunzig.",
+    "2": "Das reicht knapp, ist aber keine bequeme Zahl zum Ablesen."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Achse zeigt 0, 1, 2, 4, 8 in gleichen Abständen. Was stimmt?",
+   "optionen": [
+    "Die Abstände stehen für verschiedene Schritte.",
+    "Alles in Ordnung, die Zahlen werden grösser.",
+    "Es fehlt nur die 3."
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Von 2 bis 4 ist ein grösserer Schritt als von 1 bis 2, im Bild aber gleich weit.",
+    "2": "Auch mit der 3 wären die Schritte zu 4 und 8 zu gross."
+   },
+   "sprich": "Eine Achse zeigt null, eins, zwei, vier, acht in gleichen Abständen. Was stimmt?",
+   "rueck_sprich": {
+    "1": "Von zwei bis vier ist ein grösserer Schritt als von eins bis zwei, im Bild aber gleich weit.",
+    "2": "Auch mit der Drei wären die Schritte zu vier und acht zu gross."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Tank mit 60 l verliert 4 l pro Minute. Welche Werte nimmt der Inhalt y an?",
+   "optionen": [
+    "0 bis 15 l",
+    "4 bis 60 l",
+    "0 bis 60 l"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "15 sind die Minuten bis leer, nicht die Liter.",
+    "1": "Am Schluss ist der Tank ganz leer."
+   },
+   "sprich": "Ein Tank mit sechzig Litern verliert vier Liter pro Minute. Welche Werte nimmt der Inhalt y an?",
+   "rueck_sprich": {
+    "0": "Fünfzehn sind die Minuten bis leer, nicht die Liter.",
+    "1": "Am Schluss ist der Tank ganz leer."
+   }
+  }
+ ]
+}

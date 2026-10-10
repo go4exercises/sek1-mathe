@@ -1,0 +1,99 @@
+
+/* ════════ Darstellungen wechseln (10.10.2026) — Kapitelmuster wie Bruchrechnen, Gerüst aus Lineare Funktionen ════════
+   Grundgerüst (Leiste, Übungen, Festhalten, PDF-Weg) wie in den Leitprogrammen von TALS Mathe.
+   Neu gegenüber Lineare Funktionen: Rechteckbild (Sim 2), Kurve y = P/x (Sim 4), Auswahlfeld in den Übungen.
+   Farben: Gerade und m blau, b orange, antiproportionale Kurve Tinte, Treffer grün, Fehler rot. */
+.sim-gross{max-width:680px;margin:10px auto 6px}
+.sim-gross > svg{max-width:520px}
+.leiste{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 10px;padding:9px 12px;border-radius:9px;
+  background:var(--orange-hell);border:1px solid var(--orange-rand);font-family:var(--sans);font-size:.92rem}
+.leiste .ls-nr{font-family:var(--mono);font-size:.78rem;color:var(--orange);font-weight:700}
+.leiste .ls-text{flex:1 1 260px;min-width:0}
+.leiste .ls-ok{color:var(--gruen);font-weight:700;font-size:1.1rem;min-width:1em}
+.leiste .ls-weiter,.leiste .ls-neu{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--linie);background:var(--karte);color:var(--tinte-2)}
+.leiste.geloest{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.leiste.geloest .ls-weiter{border-color:var(--gruen-rand);color:var(--tinte);font-weight:700}
+.leiste.fertig{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.kompetenzen ul{margin:10px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.92rem}
+.kompetenzen li{margin:5px 0}
+.kompetenzen .rlp-quelle{font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);margin:8px 0 0}
+.kompetenzen .ohm{font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--orange-hell);border:1px solid var(--orange-rand);white-space:nowrap}
+.sim-schalter{display:flex;gap:7px;align-items:center;justify-content:center;font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);margin:2px 0 8px;cursor:pointer}
+.festhalten{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px}
+@media(min-width:1180px){.festhalten{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.sim-formel{line-height:1.9;font-family:var(--sans);font-size:.95rem}
+.sim-wahl{font-family:var(--sans);font-size:.88rem;padding:4px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte)}
+.sl-row{flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.sl-grp{display:flex;gap:8px;align-items:center;flex:1 1 200px;min-width:0}
+.sl-grp input[type=range]{flex:1;min-width:90px}
+.sl-grp.akz-blau input{accent-color:var(--blau)} .sl-grp.akz-orange input{accent-color:var(--orange)} .sl-grp.akz-gruen input{accent-color:var(--gruen)} .sl-grp.akz-grau input{accent-color:var(--tinte-2)}
+.sl-grp .var{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);white-space:nowrap}
+
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+
+/* Koordinatensystem */
+.sim svg,.uebung svg,svg.mini-gerade,svg.leer-gitter{overflow:visible}
+.gitter{stroke:var(--linie);stroke-width:.6}
+.achse{stroke:var(--tinte-2);stroke-width:1.2}
+.pfeil{fill:var(--tinte-2)}
+.skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+.achsname{fill:var(--tinte);font-family:var(--serif);font-style:italic;font-size:12px;stroke:var(--karte);stroke-width:4px;paint-order:stroke}
+.linie{fill:none;stroke-width:2.6;stroke-linecap:round}
+.linie.blau{stroke:var(--blau)} .linie.orange{stroke:var(--orange)} .linie.grau{stroke:var(--tinte-2);stroke-width:1.4}
+.linie.gestrichelt{stroke-dasharray:5 4}
+.pkt{fill:var(--tinte);stroke:var(--karte);stroke-width:1.5}
+.pkt.orange{fill:var(--orange)} .pkt.gruen{fill:var(--gruen)} .pkt.rot{fill:var(--rot)}
+.pkt.ziel{fill:var(--karte);stroke:var(--gruen);stroke-width:2.2}
+.p-text{font-family:var(--sans);font-size:11px;font-weight:700;fill:var(--tinte);stroke:var(--karte);stroke-width:3px;paint-order:stroke}
+.p-text.orange{fill:var(--orange)} .p-text.gruen{fill:var(--gruen)} .p-text.pkt{fill:var(--tinte)} .p-text.rot{fill:var(--rot)}
+.dreieck{stroke:var(--tinte-2);stroke-width:2.2;stroke-dasharray:4 3}
+.dreieck.hyp{stroke:var(--rot);stroke-dasharray:2 3;stroke-width:1.6} .dreieck.hyp.ok{stroke:var(--gruen);stroke-dasharray:none}
+.sim-gross > svg{max-width:440px}
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+table.wt{border-collapse:collapse;margin:8px auto;font-family:var(--sans);font-size:.92rem;font-variant-numeric:tabular-nums}
+table.wt th,table.wt td{border:1px solid var(--linie);padding:4px 10px;text-align:center}
+table.wt th{background:var(--papier-2);color:var(--tinte-2)}
+table.wt td.dif{border:none;color:var(--blau);font-size:.8rem;transform:translateX(-50%)}
+svg.mini-gerade{width:200px;max-width:100%;height:auto;display:block;background:var(--karte);border:1px solid var(--linie);border-radius:6px;margin:6px 0}
+svg.leer-gitter{width:280px;max-width:100%;height:auto;display:block;background:var(--karte);border:1px solid var(--linie);border-radius:6px}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px}
+.klick-feld{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+svg.klick-gitter{width:300px;max-width:100%;height:auto;cursor:crosshair;background:var(--karte);border:1px solid var(--linie);border-radius:6px;touch-action:manipulation}
+.klick-info{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2)}
+.sl-grp .sl-val{min-width:5.2em}
+
+/* Übungen: Termfeld breit, Tipps in Stufen */
+.ue-eingabe input.term{width:13em;max-width:100%;font-family:var(--mono)}
+.ue-zeile .ue-tipp{background:none;border-color:var(--blau-rand);color:var(--blau)}
+.ue-zeile .ue-tipp:disabled{opacity:.5;cursor:default}
+.ue-tipps:empty{display:none}
+.ue-tipps{margin-top:8px;padding:6px 12px;border-left:3px solid var(--blau-rand);background:var(--blau-hell);border-radius:0 6px 6px 0;font-family:var(--sans);font-size:.88rem}
+.ue-stufe{margin:4px 0}
+
+/* Beispiel mit Rechenweg */
+.weg{margin:10px 0 4px;padding-left:0;list-style:none;font-size:1rem}
+.weg li{margin:4px 0}
+.weg .warum{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin-left:.6em}
+.merk ol{padding-left:1.4em;margin:6px 0 10px}
+.merk ol.weg{padding-left:0}
+.merk h4{font-family:var(--sans);font-size:.9rem;margin:12px 0 4px}
+.vertiefung{border:1.5px dashed var(--lila-rand);border-radius:11px;padding:4px 18px 14px;margin-top:30px;background:var(--karte)}
+.vertiefung h2{font-size:1.25rem;margin:14px 0 4px}
+.vertiefung .aufg{padding:6px 0 0}
+/* Vorwissen: «Kurz wiederholt» (Prüfung 09.10.2026: statt Verweis auf noch leere Themenseiten) */
+.kap > details.anleitung{margin:6px 0 18px;padding:14px 20px}
+.kap > details.anleitung h3{margin:0;font-size:1rem}
+.kurz{margin:10px 0 0;padding-left:1.2em;font-size:.95rem}
+.kurz li{margin:6px 0}
+/* Darstellungen wechseln */
+.linie.tinte{stroke:var(--tinte)} .pkt.blau{fill:var(--blau)}
+table.wt td.an{background:var(--gruen-hell);font-weight:700}
+b.orange{color:var(--orange)} b.blau{color:var(--blau)} span.blau{color:var(--blau)}
+.sim-paar{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:flex-end}
+.sim-paar svg.rechteck-bild{width:200px;max-width:45%;height:auto}
+.sim-paar svg.graf{width:300px;max-width:100%;height:auto}
+.rechteck{fill:var(--blau-hell);stroke:var(--blau);stroke-width:2}
+.sim-satz{font-family:var(--sans);font-size:.9rem;text-align:center;margin:4px 0 8px}
+select.ue-wahl{font-family:var(--sans);font-size:.9rem;padding:5px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte);max-width:100%;white-space:normal}
+.sl-grp.akz-grau input[type=range]{accent-color:var(--tinte-2)}

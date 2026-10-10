@@ -1,0 +1,8 @@
+0.40	Eine Velotour ist dreissig Kilometer lang. Du fährst mit fünfzehn Kilometern pro Stunde. Der Restweg ist s gleich dreissig minus fünfzehn t. Er fällt linear: Jede Stunde fünfzehn Kilometer weniger.
+13.28	Andere Frage: Wie lange dauert die ganze Tour bei anderem Tempo? Bei zehn Kilometern pro Stunde drei Stunden, bei fünfzehn zwei, bei dreissig eine Stunde. Das Produkt v mal t ist immer dreissig.
+27.10	Doppelt so schnell heisst halb so lang: von zehn auf zwanzig Kilometer pro Stunde, von drei auf eins Komma fünf Stunden. Das ist antiproportional.
+38.58	Beim Restweg ist das anders. Nach einer halben Stunde sind es noch zweiundzwanzig Komma fünf Kilometer, nach einer Stunde fünfzehn. Doppelte Zeit heisst nicht halber Restweg. Linear fallend ist nicht antiproportional.
+51.58	So erkennst du es. Linear heisst: gleiche Differenzen, der Graph ist eine Gerade und trifft beide Achsen. Antiproportional heisst: gleiche Produkte, der Graph ist eine Kurve und trifft keine Achse.
+63.64	Auch beim Rechteck. Bleibt der Umfang gleich, ist es linear fallend. Bleibt die Fläche gleich, ist es antiproportional. Und Achtung: Bei gleichem Umfang ist die Fläche nicht gleich. Zwei mal zehn gibt zwanzig, sechs mal sechs gibt sechsunddreissig.
+78.67	Zum Mitnehmen: Fällt y, wenn x wächst, prüfe Differenzen und Produkte. Gleiche Differenzen: linear fallend. Gleiche Produkte: antiproportional. Und ein Gegenbeispiel genügt, um eine falsche Aussage zu widerlegen.
+93.09	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

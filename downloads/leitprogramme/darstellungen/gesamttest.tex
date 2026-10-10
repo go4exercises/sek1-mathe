@@ -1,0 +1,124 @@
+% Gesamttest «Darstellungen wechseln» (Lineare Funktionen II) — Quelle des PDFs (python3 scripts/build-lp-pdf.py darstellungen).
+% Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/darstellungen/zahlen.py).
+% Vorgabe ~/TODO-BM-Vorkurs-LP03-15.md §3: Text ↔ Term ↔ Tabelle ↔ Graph ↔ Aussage (G1, G2), konstanter Gesamtwert (G3, G4),
+% Definitionsbereich, Skalierung und Einheit (G5, G6), linear fallend ≠ antiproportional und Falsch-Aussagen mit Gegenbeispiel (G7, G8).
+% 25 Punkte, rund 30 Minuten.
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\usepackage{ds-gitter}
+\renewcommand{\lpname}{Darstellungen wechseln}
+\renewcommand{\lpteilgebiet}{Funktionen ·}
+\renewcommand{\lpfuss}{Gesamttest · 25 Punkte}
+\begin{document}
+\lpkopf{Gesamttest}{%
+  \vspace{4pt}\noindent\begin{tabularx}{\linewidth}{@{}X X@{}}
+  Code (kein Name): \hrulefill & Punkte: \hrulefill\ / 25
+  \end{tabularx}}
+
+\begin{lpinfo}{Anleitung}
+\textbf{Zeit:} rund 30 Minuten. \textbf{Hilfsmittel:} Lineal, kein Taschenrechner.
+Schreib zu jeder Aufgabe den \textbf{Rechenweg} oder eine \textbf{Begründung} auf; bewertet wird der Weg. Zeichne direkt in die Netze.
+Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt diesem Blatt scannen bzw.\ fotografieren
+(ohne Namen und Standort) und mit dem Bewertungspaket einer KI geben.
+\end{lpinfo}
+
+\lpteil{Teil A · Vier Darstellungen}{Kapitel 1 · 7 Punkte}
+
+\begin{lpaufgabe}{G1}{E-Scooter}{4 P}
+Ein E-Scooter kostet $1.50$ Fr. fürs Entsperren und $0.30$ Fr. pro Fahrminute ($x$: Minuten, $y$: Kosten in Fr.).
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Schreib die Gleichung.
+\item Fülle die Tabelle für $x = 0$, $10$ und $20$.
+\item Was bedeutet der Punkt $(20 \mid 7.5)$? Antworte in einem Satz.
+\item Wie lange kannst du für $9$ Fr. fahren?
+\end{enumerate}
+\lpplatz{6}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Tabelle}{3 P}
+Die Tabelle gehört zu einer linearen Funktion. Bestimme ihre Gleichung $y = m \cdot x + b$.
+\[ \begin{array}{c|ccc} x & 3 & 5 & 9 \\ \hline y & 17 & 25 & 41 \end{array} \]
+\lpplatz{4}
+\end{lpaufgabe}
+
+\lpteil{Teil B · Wenn die Summe gleich bleibt}{Kapitel 2 · 6 Punkte}
+
+\begin{lpaufgabe}{G3}{Rechteck}{3 P}
+Ein Rechteck hat den Umfang $36$ cm, die Seiten heissen $x$ und $y$.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Schreib $y$ in Abhängigkeit von $x$, mit Rechenweg.
+\item Wie lang ist $y$ für $x = 7.5$ cm?
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G4}{Kino-Gutschein}{3 P}
+Ein Gutschein über $60$ Fr. wird ganz ausgegeben: Erwachsene zahlen $12$ Fr., Kinder $8$ Fr. Für $x$ Erwachsene und $y$ Kinder gilt $12x + 8y = 60$.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Löse nach $y$ auf.
+\item Was bedeutet die Steigung in dieser Situation?
+\item Welche Paare $(x \mid y)$ sind möglich?
+\end{enumerate}
+\lpplatz{5}
+\end{lpaufgabe}
+
+\lpteil{Teil C · Sinnvolle Werte, saubere Achsen}{Kapitel 3 · 6 Punkte}
+
+\begin{lpaufgabe}{G5}{Pool}{4 P}
+In einem Pool stehen $40$ cm Wasser. Pro Stunde steigt das Wasser um $15$ cm, bis der Pool mit $160$ cm voll ist.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Schreib die Gleichung (Zeit $x$ in Stunden, Höhe $y$ in cm) und den sinnvollen Bereich für $x$.
+\item Welche Werte nimmt $y$ an?
+\item Zeichne den Graphen ins Netz: Achsen mit Grösse, Einheit und Einteilung.
+\end{enumerate}
+
+\smallskip
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+\leernetz{12}{12}{}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+\lpplatz{6}
+\end{minipage}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G6}{Achse}{2 P}
+Lea zeichnet $y = 10x$ für $x = 0, 1, 2, 5, 10$. Die $y$-Achse beschriftet sie so wie im Bild.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Was ist an der $y$-Achse falsch?
+\item Warum sieht der Graph geknickt aus, obwohl $y = 10x$ eine Gerade ist?
+\end{enumerate}
+
+\smallskip
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}
+\begin{tikzpicture}[x=5mm,y=8mm,font=\scriptsize]
+  \draw[->,line width=0.6pt] (0,0) -- (10.8,0) node[right] {$x$};
+  \draw[->,line width=0.6pt] (0,0) -- (0,4.6) node[above] {$y$};
+  \foreach \i in {0,2,...,10} \node[below] at (\i,0) {$\i$};
+  \foreach \w [count=\k from 0] in {0,10,20,50,100} {\draw (-0.12,\k) -- (0.12,\k); \node[left] at (0,\k) {$\w$};}
+  \draw[lpblau,line width=1pt] (0,0) -- (1,1) -- (2,2) -- (5,3) -- (10,4);
+  \foreach \p in {(0,0),(1,1),(2,2),(5,3),(10,4)} \fill \p circle (1.8pt);
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.55\linewidth}\vspace{0pt}
+\lpplatz{4}
+\end{minipage}
+\end{lpaufgabe}
+
+\lpteil{Teil D · Linear fallend oder antiproportional?}{Kapitel 4 · 6 Punkte}
+
+\begin{lpaufgabe}{G7}{Zwei Tabellen}{3 P}
+Welche Tabelle ist linear fallend, welche antiproportional? Begründe mit einer Rechnung. Gib zur linearen die Gleichung an.
+\[ \text{A: } \begin{array}{c|cccc} x & 1 & 2 & 3 & 6 \\ \hline y & 30 & 15 & 10 & 5 \end{array} \qquad
+   \text{B: } \begin{array}{c|cccc} x & 1 & 2 & 3 & 6 \\ \hline y & 25 & 20 & 15 & 0 \end{array} \]
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Aussagen prüfen}{3 P}
+Rechtecke mit dem Umfang $20$ cm, Seiten $x$ und $y$. Stimmt die Aussage? Begründe mit Zahlen.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item «Verdoppelt man die Seite $x$, halbiert sich die Seite $y$.» Prüfe mit $x = 2$ und $x = 4$.
+\item «Alle diese Rechtecke haben denselben Flächeninhalt.»
+\end{enumerate}
+\lpplatz{5}
+\end{lpaufgabe}
+\end{document}

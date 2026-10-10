@@ -1,0 +1,1025 @@
+{
+ "titel": "Funktionen sehen: Sinnvolle Werte, saubere Achsen",
+ "dateiname": "dar-lp-achsen",
+ "kurzbeschrieb": "Treppe 2h + a = 63 → a = 63 − 2h; Definitionsbereich 15 ≤ h ≤ 20, Endpunkte (15 | 33) und (20 | 23); Achsen mit Grösse, Einheit, Einteilung 5 cm; nur die Strecke; Anzahlen als Punkte; Fehler: ungleichmässige Skala, ganze Gerade, fehlende Einheit.",
+ "schlagworte": [
+  "Definitionsbereich",
+  "Achsen",
+  "Skala",
+  "Sachgraph"
+ ],
+ "themenbereich": "Funktionen · Darstellungen wechseln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-darstellungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms darstellungen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Treppe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Für bequeme Treppen gibt es eine Schrittregel: zwei mal die Stufenhöhe h plus die Auftrittsbreite a gibt dreiundsechzig Zentimeter. Nach a aufgelöst: a gleich dreiundsechzig minus zwei h.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2h + a = 63",
+     "x": 150,
+     "y": 280,
+     "groesse": 60,
+     "ein": 2.4
+    },
+    {
+     "typ": "formel",
+     "text": "a = 63 - 2h",
+     "x": 150,
+     "y": 400,
+     "groesse": 60,
+     "ein": 8.18
+    },
+    {
+     "typ": "notiz",
+     "text": "h: Stufenhöhe · a: Auftrittsbreite (cm)",
+     "x": 150,
+     "y": 540,
+     "groesse": 40,
+     "farbe": "blau",
+     "ein": 3.92
+    }
+   ],
+   "dauer": 11.96
+  },
+  {
+   "name": "Bereich",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sinnvoll sind hier Stufen von fünfzehn bis zwanzig Zentimetern. Das ist der Definitionsbereich. An seinen Enden rechnest du a aus: bei fünfzehn dreiunddreissig, bei zwanzig dreiundzwanzig Zentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "15 \\le h \\le 20",
+     "x": 150,
+     "y": 280,
+     "groesse": 60,
+     "ein": 0.52
+    },
+    {
+     "typ": "notiz",
+     "text": "Definitionsbereich",
+     "x": 150,
+     "y": 400,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 4.6
+    },
+    {
+     "typ": "formel",
+     "text": "h = 15: \\; a = 33 \\qquad h = 20: \\; a = 23",
+     "x": 150,
+     "y": 520,
+     "groesse": 48,
+     "ein": 6.22
+    }
+   ],
+   "dauer": 12.26
+  },
+  {
+   "name": "Achsen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt die Achsen. Nach rechts die Stufenhöhe h in Zentimetern, nach oben die Auftrittsbreite a in Zentimetern. Die Werte gehen bis dreiunddreissig. Ein Häuschen für fünf Zentimeter passt gut.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Achse: Grösse und Einheit|gleichmässige Einteilung",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.02
+    },
+    {
+     "typ": "formel",
+     "text": "33 : 8 \\approx 4.1 \\;\\to\\; 5",
+     "x": 150,
+     "y": 470,
+     "groesse": 50,
+     "ein": 8.64
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.02,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      26
+     ],
+     "ybereich": [
+      -3,
+      42
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       35,
+       "35"
+      ],
+      [
+       40,
+       "40"
+      ]
+     ],
+     "xname": "h [cm]",
+     "yname": "a [cm]"
+    }
+   ],
+   "dauer": 12.23
+  },
+  {
+   "name": "Strecke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Du zeichnest nur die Strecke zwischen den beiden Endpunkten. Stufen dazwischen, etwa siebzehn Komma fünf Zentimeter, gibt es auch. Ausserhalb des Bereichs hat der Graph keinen Sinn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "a = 63 - 2h, \\quad 15 \\le h \\le 20",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 0.05
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 15,
+       "y": 33,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(15 | 33)",
+       "beschriftung_bei": [
+        15.8,
+        36
+       ]
+      },
+      {
+       "x": 20,
+       "y": 23,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(20 | 23)",
+       "beschriftung_bei": [
+        20.8,
+        26
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      26
+     ],
+     "ybereich": [
+      -3,
+      42
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       35,
+       "35"
+      ],
+      [
+       40,
+       "40"
+      ]
+     ],
+     "xname": "h [cm]",
+     "yname": "a [cm]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.79,
+     "geraden": [
+      {
+       "m": -2,
+       "q": 63,
+       "farbe": 5,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      26
+     ],
+     "ybereich": [
+      -3,
+      42
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       35,
+       "35"
+      ],
+      [
+       40,
+       "40"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "h [cm]",
+     "yname": "a [cm]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.69,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      26
+     ],
+     "ybereich": [
+      -3,
+      42
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       25,
+       "25"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       35,
+       "35"
+      ],
+      [
+       40,
+       "40"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "h [cm]",
+     "yname": "a [cm]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        15,
+        33
+       ],
+       "bis": [
+        20,
+        23
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 10.82
+  },
+  {
+   "name": "Punkte",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Anders bei Anzahlen. Bei der Kletterhalle gibt es nur ganze Eintritte. Dort zeichnest du einzelne Punkte.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Längen, Zeiten: Strecke|Anzahlen: einzelne Punkte",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 0.99
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.03,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 40,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 46,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 52,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 58,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 64,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 5,
+       "y": 70,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 6,
+       "y": 76,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 7,
+       "y": 82,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 8,
+       "y": 88,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 9,
+       "y": 94,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 10,
+       "y": 100,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 6.77
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: eine ungleichmässige Skala. Stehen null, zehn, zwanzig und fünfzig in gleichen Abständen, sieht eine Gerade geknickt aus. Und ohne Einheit an der Achse weiss niemand, was gemeint ist.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "0, 10, 20, 50 in gleichen Abständen",
+     "x": 150,
+     "y": 300,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 1.96
+    },
+    {
+     "typ": "notiz",
+     "text": "y = x sieht geknickt aus",
+     "x": 150,
+     "y": 420,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 7.48
+    },
+    {
+     "typ": "notiz",
+     "text": "Einheit an jede Achse",
+     "x": 150,
+     "y": 540,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 9.46
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.96,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      7
+     ],
+     "ybereich": [
+      -1,
+      5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        6.2,
+        0
+       ],
+       "farbe": 5,
+       "dicke": 3
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        0,
+        4.2
+       ],
+       "farbe": 5,
+       "dicke": 3
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.35,
+        -0.12
+       ],
+       "text": "0",
+       "farbe": 4,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.35,
+        0.88
+       ],
+       "text": "10",
+       "farbe": 4,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.35,
+        1.88
+       ],
+       "text": "20",
+       "farbe": 4,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.35,
+        2.88
+       ],
+       "text": "50",
+       "farbe": 4,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0,
+        -0.55
+       ],
+       "text": "0",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1,
+        -0.55
+       ],
+       "text": "10",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2,
+        -0.55
+       ],
+       "text": "20",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -0.55
+       ],
+       "text": "30",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4,
+        -0.55
+       ],
+       "text": "40",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        -0.55
+       ],
+       "text": "50",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1,
+        1
+       ],
+       "farbe": 4,
+       "dicke": 4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        1
+       ],
+       "bis": [
+        2,
+        2
+       ],
+       "farbe": 4,
+       "dicke": 4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        2
+       ],
+       "bis": [
+        5,
+        3
+       ],
+       "farbe": 4,
+       "dicke": 4
+      }
+     ]
+    }
+   ],
+   "dauer": 12.74
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zuerst den sinnvollen Bereich aus dem Text holen und die Endpunkte rechnen. Dann Achsen mit Grösse, Einheit und gleichmässiger Einteilung. Längen und Zeiten werden eine Strecke, Anzahlen einzelne Punkte.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Bereich und Endpunkte|Achsen: Grösse, Einheit, gleichmässig|Strecke oder Punkte",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.79
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.27
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Strecke",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was zeichnest du für a = 63 − 2h mit 15 ≤ h ≤ 20?",
+   "optionen": [
+    "nur die beiden Endpunkte",
+    "die Strecke von h = 15 bis h = 20",
+    "die ganze Gerade"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Was hiesse h = 30 cm? Ausserhalb des Bereichs hat der Graph keinen Sinn.",
+    "0": "Gibt es Stufen mit 17.5 cm? Dann gehören auch die Werte dazwischen dazu."
+   },
+   "sprich": "Was zeichnest du für a gleich dreiundsechzig minus zwei h, mit h von fünfzehn bis zwanzig?",
+   "rueck_sprich": {
+    "2": "Was hiesse h gleich dreissig Zentimeter? Ausserhalb des Bereichs hat der Graph keinen Sinn.",
+    "0": "Gibt es Stufen mit siebzehn Komma fünf Zentimetern? Dann gehören auch die Werte dazwischen dazu."
+   }
+  }
+ ]
+}

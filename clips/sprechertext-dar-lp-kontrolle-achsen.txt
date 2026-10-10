@@ -1,0 +1,6 @@
+0.40	Leer ist die Kerze bei achtzehn durch drei, also nach sechs Stunden. Der Bereich geht von null bis sechs Stunden.
+7.59	Pizzas gibt es nur ganz. Darum einzelne Punkte.
+11.47	Hundertsiebzig durch neun gibt etwa achtzehn Komma neun. Die nächste bequeme Zahl ist zwanzig.
+18.14	Die Abstände sind gleich, aber sie stehen für eins, eins, zwei und vier. Die Skala ist nicht gleichmässig.
+25.26	Am Anfang sind sechzig Liter drin, am Schluss null. Der Wertebereich geht von null bis sechzig Liter.
+32.16	Zum Mitnehmen: Der Bereich endet, wo die Grösse aufhört. Anzahlen werden Punkte. Und jede Achse braucht eine gleichmässige, bequeme Einteilung.

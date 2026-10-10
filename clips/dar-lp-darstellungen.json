@@ -1,0 +1,1369 @@
+{
+ "titel": "Funktionen sehen: Vier Darstellungen",
+ "dateiname": "dar-lp-darstellungen",
+ "kurzbeschrieb": "Kletterhalle: 40 Fr. Jahresbeitrag und 6 Fr. pro Eintritt als Text, Gleichung y = 6x + 40, Tabelle und Graph aus Punkten; der Punkt (5 | 70) in Worten; rückwärts 100 Fr. → 10 Eintritte; Tabelle mit Schritt 2 → m = 12/2 = 6; Fehler m = 12.",
+ "schlagworte": [
+  "Darstellung",
+  "Wertetabelle",
+  "Graph",
+  "Gleichung",
+  "deuten"
+ ],
+ "themenbereich": "Funktionen · Darstellungen wechseln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-darstellungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 1,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms darstellungen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Situation",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "In einer Kletterhalle zahlst du vierzig Franken Jahresbeitrag und dazu sechs Franken für jeden Eintritt. Das kannst du auf vier Arten zeigen: als Text, als Gleichung, als Tabelle und als Graph.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Text: 40 Fr. im Jahr,|dazu 6 Fr. pro Eintritt",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 0.9
+    },
+    {
+     "typ": "notiz",
+     "text": "Text · Gleichung · Tabelle · Graph",
+     "x": 150,
+     "y": 470,
+     "groesse": 40,
+     "farbe": "blau",
+     "ein": 6.94
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 12.04
+  },
+  {
+   "name": "Gleichung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "x ist die Anzahl Eintritte, y sind die Kosten in Franken. Zu den vierzig Franken kommen x mal sechs Franken: y gleich sechs x plus vierzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{6}x + \\fb{40}",
+     "x": 150,
+     "y": 300,
+     "groesse": 72,
+     "ein": 7.4
+    },
+    {
+     "typ": "notiz",
+     "text": "x: Anzahl Eintritte|y: Kosten in Fr.",
+     "x": 150,
+     "y": 450,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 0.3
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 11.31
+  },
+  {
+   "name": "Tabelle",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "In der Tabelle setzt du null, eins, zwei, drei und vier ein. Bei jedem Eintritt mehr kommen sechs Franken dazu. Im Graphen wird jedes Wertepaar ein Punkt.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{6}x + \\fb{40}",
+     "x": 150,
+     "y": 260,
+     "groesse": 56,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{c|ccccc} x & 0 & 1 & 2 & 3 & 4 \\\\ \\hline y & 40 & 46 & 52 & 58 & 64 \\end{array}",
+     "x": 150,
+     "y": 380,
+     "groesse": 50,
+     "ein": 0.85
+    },
+    {
+     "typ": "notiz",
+     "text": "+ 6 pro Eintritt",
+     "x": 150,
+     "y": 560,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 4.31
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.19,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 40,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 46,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 52,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 58,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 64,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 11.06
+  },
+  {
+   "name": "Punkte",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Weil es nur ganze Eintritte gibt, zeichnest du einzelne Punkte und keine durchgezogene Linie. Sie liegen auf einer Geraden.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "nur ganze Eintritte:|einzelne Punkte",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 1.17
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 40,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 46,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 52,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 58,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 64,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 5,
+       "y": 70,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 6,
+       "y": 76,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 7,
+       "y": 82,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 8,
+       "y": 88,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 9,
+       "y": 94,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 10,
+       "y": 100,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.75,
+     "geraden": [
+      {
+       "m": 6,
+       "q": 40,
+       "farbe": 5,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 10.11
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der Punkt fünf, siebzig heisst: Fünf Eintritte kosten zusammen siebzig Franken. Der y-Wert ist das Ganze, nicht der Preis eines Eintritts.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(5 \\mid 70)",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "6 \\cdot 5 + 40 = \\fc{70}",
+     "x": 150,
+     "y": 430,
+     "groesse": 56,
+     "ein": 3.54
+    },
+    {
+     "typ": "notiz",
+     "text": "5 Eintritte kosten zusammen 70 Fr.",
+     "x": 150,
+     "y": 560,
+     "groesse": 42,
+     "farbe": "gruen",
+     "ein": 3.54
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 40,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 46,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 52,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 58,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 64,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 5,
+       "y": 70,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 6,
+       "y": 76,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 7,
+       "y": 82,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 8,
+       "y": 88,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 9,
+       "y": 94,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 10,
+       "y": 100,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 5,
+       "y": 70,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "(5 | 70)",
+       "beschriftung_bei": [
+        4.6,
+        80
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 9.32
+  },
+  {
+   "name": "Rückwärts",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Umgekehrt: Wie viele Eintritte bekommst du für hundert Franken? Sechs x plus vierzig gleich hundert, sechs x gleich sechzig, also x gleich zehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "6x + 40 = 100",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 4.12
+    },
+    {
+     "typ": "formel",
+     "text": "6x = 60 \\qquad \\fc{x = 10}",
+     "x": 150,
+     "y": 400,
+     "groesse": 58,
+     "ein": 8.1
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 40,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 46,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 52,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 58,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 64,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 5,
+       "y": 70,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 6,
+       "y": 76,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 7,
+       "y": 82,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 8,
+       "y": 88,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 9,
+       "y": 94,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 10,
+       "y": 100,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.1,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 100,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "(10 | 100)",
+       "beschriftung_bei": [
+        9.6,
+        108
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.6,
+      11
+     ],
+     "ybereich": [
+      -8,
+      115
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Eintritte]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 10.99
+  },
+  {
+   "name": "Schritt",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Beginnt eine Tabelle nicht bei null, rechnest du zuerst m. Hier springt x um zwei und y um zwölf. m ist zwölf durch zwei, also sechs. Dann ein Wertepaar einsetzen: zweiundfünfzig gleich sechs mal zwei plus b, also b gleich vierzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{c|ccc} x & 2 & 4 & 6 \\\\ \\hline y & 52 & 64 & 76 \\end{array}",
+     "x": 150,
+     "y": 240,
+     "groesse": 50,
+     "ein": 0.3
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{\\Delta y}{\\Delta x} = \\dfrac{12}{2} = \\fa{6}",
+     "x": 150,
+     "y": 420,
+     "groesse": 52,
+     "ein": 4.11
+    },
+    {
+     "typ": "formel",
+     "text": "52 = 6 \\cdot 2 + b \\quad \\Rightarrow \\quad \\fb{b = 40}",
+     "x": 150,
+     "y": 600,
+     "groesse": 50,
+     "ein": 9.93
+    }
+   ],
+   "dauer": 15.18
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: die zwölf als Steigung nehmen. Die zwölf gehört aber zu zwei Schritten. Und der Punkt fünf, siebzig heisst nicht, dass ein Eintritt siebzig Franken kostet.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{m = 12}",
+     "x": 150,
+     "y": 300,
+     "groesse": 62,
+     "ein": 2.49
+    },
+    {
+     "typ": "notiz",
+     "text": "12 gehört zu 2 Schritten: m = 6",
+     "x": 150,
+     "y": 430,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 3.83
+    },
+    {
+     "typ": "notiz",
+     "text": "(5 ∣ 70): nicht «ein Eintritt kostet 70 Fr.»",
+     "x": 150,
+     "y": 560,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 5.71
+    }
+   ],
+   "dauer": 10.78
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Text, Gleichung, Tabelle und Graph zeigen dieselbe Situation. In der Tabelle ist m gleich delta y durch delta x, auch wenn x in grösseren Schritten springt. Und ein Punkt sagt: Bei diesem x ist das Ganze so gross.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "vier Darstellungen, eine Situation|m = Δy / Δx, auch bei grossen Schritten|Punkt: bei diesem x so viel insgesamt",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 14.26
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.44
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was bedeutet der Punkt (5 | 70)?",
+   "optionen": [
+    "Für 5 Fr. gibt es 70 Eintritte.",
+    "5 Eintritte kosten zusammen 70 Fr.",
+    "Ein Eintritt kostet 70 Fr."
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Der y-Wert ist das Ganze bei x = 5, nicht der Preis pro Eintritt.",
+    "0": "Im Punkt steht zuerst x, die Anzahl Eintritte, dann y, die Kosten."
+   },
+   "sprich": "Was bedeutet der Punkt fünf, siebzig?",
+   "rueck_sprich": {
+    "2": "Der y-Wert ist das Ganze bei x gleich fünf, nicht der Preis pro Eintritt.",
+    "0": "Im Punkt steht zuerst x, die Anzahl Eintritte, dann y, die Kosten."
+   }
+  }
+ ]
+}

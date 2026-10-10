@@ -1,0 +1,980 @@
+{
+ "titel": "Funktionen sehen: Linear fallend oder antiproportional?",
+ "dateiname": "dar-lp-antiproportional",
+ "kurzbeschrieb": "Velotour 30 km: Restweg s = 30 − 15t (linear fallend, Gerade) und Fahrzeit t = 30/v (antiproportional, Kurve); doppelt so schnell, halb so lang; doppelte Zeit heisst nicht halber Restweg; Erkennen an Differenzen und Produkten; Rechteck: Umfang gegen Fläche.",
+ "schlagworte": [
+  "antiproportional",
+  "linear fallend",
+  "Produkt",
+  "Gegenbeispiel"
+ ],
+ "themenbereich": "Funktionen · Darstellungen wechseln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-darstellungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms darstellungen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Restweg",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Velotour ist dreissig Kilometer lang. Du fährst mit fünfzehn Kilometern pro Stunde. Der Restweg ist s gleich dreissig minus fünfzehn t. Er fällt linear: Jede Stunde fünfzehn Kilometer weniger.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "s = 30 - 15t",
+     "x": 150,
+     "y": 280,
+     "groesse": 62,
+     "ein": 5.56
+    },
+    {
+     "typ": "notiz",
+     "text": "jede Stunde − 15 km",
+     "x": 150,
+     "y": 420,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 9.18
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.15,
+      3.2
+     ],
+     "ybereich": [
+      -3,
+      34
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.56,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.15,
+      3.2
+     ],
+     "ybereich": [
+      -3,
+      34
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        30
+       ],
+       "bis": [
+        2,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 12.88
+  },
+  {
+   "name": "Fahrzeit",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Andere Frage: Wie lange dauert die ganze Tour bei anderem Tempo? Bei zehn Kilometern pro Stunde drei Stunden, bei fünfzehn zwei, bei dreissig eine Stunde. Das Produkt v mal t ist immer dreissig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{c|cccc} v & 10 & 15 & 20 & 30 \\\\ \\hline t & 3 & 2 & 1.5 & 1 \\end{array}",
+     "x": 150,
+     "y": 260,
+     "groesse": 46,
+     "ein": 3.32
+    },
+    {
+     "typ": "formel",
+     "text": "v \\cdot t = 30 \\qquad t = \\dfrac{30}{v}",
+     "x": 150,
+     "y": 460,
+     "groesse": 50,
+     "ein": 9.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.32,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 3,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 15,
+       "y": 2,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 20,
+       "y": 1.5,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 30,
+       "y": 1,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      33
+     ],
+     "ybereich": [
+      -0.3,
+      3.6
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "xname": "v [km/h]",
+     "yname": "t [h]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      33
+     ],
+     "ybereich": [
+      -0.3,
+      3.6
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "30/x",
+       "farbe": 5,
+       "von": 8.6,
+       "bis": 33
+      }
+     ],
+     "xname": "v [km/h]",
+     "yname": "t [h]"
+    }
+   ],
+   "dauer": 13.82
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Doppelt so schnell heisst halb so lang: von zehn auf zwanzig Kilometer pro Stunde, von drei auf eins Komma fünf Stunden. Das ist antiproportional.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "v \\cdot 2 \\;\\Rightarrow\\; t : 2",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "antiproportional",
+     "x": 150,
+     "y": 430,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 7.48
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 3,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(10 | 3)",
+       "beschriftung_bei": [
+        10.997,
+        2.783
+       ]
+      },
+      {
+       "x": 20,
+       "y": 1.5,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(20 | 1.5)",
+       "beschriftung_bei": [
+        21,
+        2.05
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      33
+     ],
+     "ybereich": [
+      -0.3,
+      3.6
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "xname": "v [km/h]",
+     "yname": "t [h]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      33
+     ],
+     "ybereich": [
+      -0.3,
+      3.6
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "30/x",
+       "farbe": 5,
+       "von": 8.6,
+       "bis": 33
+      }
+     ],
+     "xname": "v [km/h]",
+     "yname": "t [h]"
+    }
+   ],
+   "dauer": 11.48
+  },
+  {
+   "name": "Vergleich",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Beim Restweg ist das anders. Nach einer halben Stunde sind es noch zweiundzwanzig Komma fünf Kilometer, nach einer Stunde fünfzehn. Doppelte Zeit heisst nicht halber Restweg. Linear fallend ist nicht antiproportional.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "t = 0.5: \\; s = 22.5 \\qquad t = 1: \\; s = 15",
+     "x": 150,
+     "y": 280,
+     "groesse": 48,
+     "ein": 2.54
+    },
+    {
+     "typ": "formel",
+     "text": "\\fd{15 \\neq 22.5 : 2}",
+     "x": 150,
+     "y": 400,
+     "groesse": 54,
+     "ein": 7.18
+    },
+    {
+     "typ": "notiz",
+     "text": "linear fallend ≠ antiproportional",
+     "x": 150,
+     "y": 530,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 9.62
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0.5,
+       "y": 22.5,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(0.5 | 22.5)",
+       "beschriftung_bei": [
+        0.62,
+        25.5
+       ]
+      },
+      {
+       "x": 1,
+       "y": 15,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(1 | 15)",
+       "beschriftung_bei": [
+        1.12,
+        18
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.15,
+      3.2
+     ],
+     "ybereich": [
+      -3,
+      34
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.15,
+      3.2
+     ],
+     "ybereich": [
+      -3,
+      34
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        30
+       ],
+       "bis": [
+        2,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 13.0
+  },
+  {
+   "name": "Erkennen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "So erkennst du es. Linear heisst: gleiche Differenzen, der Graph ist eine Gerade und trifft beide Achsen. Antiproportional heisst: gleiche Produkte, der Graph ist eine Kurve und trifft keine Achse.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "linear: gleiche Differenzen,|Gerade, trifft die Achsen",
+     "x": 150,
+     "y": 280,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 1.46
+    },
+    {
+     "typ": "notiz",
+     "text": "antiproportional: gleiche Produkte,|Kurve, trifft keine Achse",
+     "x": 150,
+     "y": 450,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 6.64
+    }
+   ],
+   "dauer": 12.06
+  },
+  {
+   "name": "Rechteck",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Auch beim Rechteck. Bleibt der Umfang gleich, ist es linear fallend. Bleibt die Fläche gleich, ist es antiproportional. Und Achtung: Bei gleichem Umfang ist die Fläche nicht gleich. Zwei mal zehn gibt zwanzig, sechs mal sechs gibt sechsunddreissig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x + y = 12: \\text{ linear fallend}",
+     "x": 150,
+     "y": 260,
+     "groesse": 46,
+     "ein": 1.8
+    },
+    {
+     "typ": "formel",
+     "text": "x \\cdot y = 36: \\text{ antiproportional}",
+     "x": 150,
+     "y": 360,
+     "groesse": 46,
+     "ein": 4.56
+    },
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 10 = 20 \\neq 6 \\cdot 6 = 36",
+     "x": 150,
+     "y": 480,
+     "groesse": 46,
+     "ein": 7.4
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.4,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [cm]",
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         10
+        ],
+        [
+         0,
+         10
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         6
+        ],
+        [
+         0,
+         6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.15
+      }
+     ]
+    }
+   ],
+   "dauer": 15.03
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Fällt y, wenn x wächst, prüfe Differenzen und Produkte. Gleiche Differenzen: linear fallend. Gleiche Produkte: antiproportional. Und ein Gegenbeispiel genügt, um eine falsche Aussage zu widerlegen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "gleiche Differenzen: linear|gleiche Produkte: antiproportional|ein Gegenbeispiel widerlegt",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 14.42
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.41
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Du fährst die 30 km doppelt so schnell. Wie lange dauert die Tour?",
+   "optionen": [
+    "eine Stunde weniger",
+    "gleich lang",
+    "halb so lang"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Prüf mit der Tabelle: Von 10 auf 20 km/h wird es 3 h zu 1.5 h.",
+    "1": "In der gleichen Zeit kommst du doppelt so weit."
+   },
+   "sprich": "Du fährst die dreissig Kilometer doppelt so schnell. Wie lange dauert die Tour?",
+   "rueck_sprich": {
+    "0": "Prüf mit der Tabelle: Von zehn auf zwanzig Kilometer pro Stunde wird es drei Stunden zu eins Komma fünf Stunden.",
+    "1": "In der gleichen Zeit kommst du doppelt so weit."
+   }
+  }
+ ]
+}

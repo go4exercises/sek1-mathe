@@ -1,0 +1,10 @@
+0.40	In einer Kletterhalle zahlst du vierzig Franken Jahresbeitrag und dazu sechs Franken für jeden Eintritt. Das kannst du auf vier Arten zeigen: als Text, als Gleichung, als Tabelle und als Graph.
+12.44	x ist die Anzahl Eintritte, y sind die Kosten in Franken. Zu den vierzig Franken kommen x mal sechs Franken: y gleich sechs x plus vierzig.
+23.75	In der Tabelle setzt du null, eins, zwei, drei und vier ein. Bei jedem Eintritt mehr kommen sechs Franken dazu. Im Graphen wird jedes Wertepaar ein Punkt.
+34.81	Weil es nur ganze Eintritte gibt, zeichnest du einzelne Punkte und keine durchgezogene Linie. Sie liegen auf einer Geraden.
+44.92	Der Punkt fünf, siebzig heisst: Fünf Eintritte kosten zusammen siebzig Franken. Der y-Wert ist das Ganze, nicht der Preis eines Eintritts.
+54.24	Umgekehrt: Wie viele Eintritte bekommst du für hundert Franken? Sechs x plus vierzig gleich hundert, sechs x gleich sechzig, also x gleich zehn.
+65.23	Beginnt eine Tabelle nicht bei null, rechnest du zuerst m. Hier springt x um zwei und y um zwölf. m ist zwölf durch zwei, also sechs. Dann ein Wertepaar einsetzen: zweiundfünfzig gleich sechs mal zwei plus b, also b gleich vierzig.
+80.41	Häufiger Fehler: die zwölf als Steigung nehmen. Die zwölf gehört aber zu zwei Schritten. Und der Punkt fünf, siebzig heisst nicht, dass ein Eintritt siebzig Franken kostet.
+91.19	Zum Mitnehmen: Text, Gleichung, Tabelle und Graph zeigen dieselbe Situation. In der Tabelle ist m gleich delta y durch delta x, auch wenn x in grösseren Schritten springt. Und ein Punkt sagt: Bei diesem x ist das Ganze so gross.
+105.45	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

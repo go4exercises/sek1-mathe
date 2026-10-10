@@ -1,0 +1,6 @@
+0.40	Fünf Franken sind fix, das ist b. Pro Film zwei Franken, das ist m. Also y gleich zwei x plus fünf.
+8.08	x springt um zwei, y um sechs. m ist sechs durch zwei, also drei.
+14.27	Der Punkt drei, elf heisst: Drei Filme kosten zusammen elf Franken.
+19.58	x springt um zwei, y fällt um vier: m ist minus zwei. Von x gleich eins zurück bis null: zehn plus zwei gibt zwölf. y gleich minus zwei x plus zwölf.
+30.99	Die null Komma fünf steht vor dem x: Pro Stunde steigt das Wasser um null Komma fünf Dezimeter. Die drei ist der Wasserstand am Anfang.
+39.35	Zum Mitnehmen: Zuerst klären, was x und was y ist. m ist die Änderung pro Schritt, b der Wert bei x gleich null, und ein Punkt sagt, wie viel es bei diesem x insgesamt ist.

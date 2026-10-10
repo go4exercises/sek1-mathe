@@ -1,0 +1,892 @@
+{
+ "titel": "Funktionen sehen: Wenn die Summe gleich bleibt",
+ "dateiname": "dar-lp-summe",
+ "kurzbeschrieb": "Rechteck mit Umfang 24 cm: 2x + 2y = 24 → x + y = 12 → y = 12 − x; die Ecke (x | y) läuft auf der Geraden, Steigung −1; Einkauf 3x + 2y = 30 → y = 15 − 1.5x; Fehler y = 24 − 2x mit Probe.",
+ "schlagworte": [
+  "Umfang",
+  "Summe",
+  "nach y auflösen",
+  "fallend"
+ ],
+ "themenbereich": "Funktionen · Darstellungen wechseln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-darstellungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 3,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms darstellungen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Rechteck",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Rechteck hat den Umfang vierundzwanzig Zentimeter. Seine Seiten heissen x und y. Wie hängen sie zusammen?",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Umfang 24 cm|Seiten x und y",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 1.66
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [cm]",
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         9
+        ],
+        [
+         0,
+         9
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.5,
+        0.45
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.45,
+        4.5
+       ],
+       "text": "y",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 7.72
+  },
+  {
+   "name": "Gleichung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jede Seite kommt zweimal vor: zwei x plus zwei y gleich vierundzwanzig. Durch zwei: x plus y gleich zwölf. Minus x: y gleich zwölf minus x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + 2y = 24 \\qquad | : 2",
+     "x": 150,
+     "y": 260,
+     "groesse": 54,
+     "ein": 0.8
+    },
+    {
+     "typ": "formel",
+     "text": "x + y = 12 \\qquad | - x",
+     "x": 150,
+     "y": 380,
+     "groesse": 54,
+     "ein": 5.36
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = 12 - x}",
+     "x": 150,
+     "y": 500,
+     "groesse": 62,
+     "ein": 8.44
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [cm]",
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         9
+        ],
+        [
+         0,
+         9
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      }
+     ]
+    }
+   ],
+   "dauer": 11.88
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Für x gleich fünf ist y gleich zwölf minus fünf, also sieben Zentimeter. Probe: zwei mal fünf plus zwei mal sieben gibt vierundzwanzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = 12 - x",
+     "x": 150,
+     "y": 260,
+     "groesse": 56,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "x = 5: \\quad y = 12 - 5 = \\fc{7}",
+     "x": 150,
+     "y": 380,
+     "groesse": 54,
+     "ein": 3.84
+    },
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 5 + 2 \\cdot 7 = 24",
+     "x": 150,
+     "y": 500,
+     "groesse": 50,
+     "ein": 5.1
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [cm]",
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         5,
+         0
+        ],
+        [
+         5,
+         7
+        ],
+        [
+         0,
+         7
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15,
+       "ein": 3.84
+      }
+     ]
+    }
+   ],
+   "dauer": 9.44
+  },
+  {
+   "name": "Gerade",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Alle Rechtecke mit diesem Umfang: Ihre obere rechte Ecke liegt auf der Geraden y gleich zwölf minus x. Wird x um eins länger, wird y um eins kürzer. Die Steigung ist minus eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{-1} \\cdot x + \\fb{12}",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 4.1
+    },
+    {
+     "typ": "notiz",
+     "text": "x + 1 cm, y − 1 cm",
+     "x": 150,
+     "y": 420,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 7.12
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [cm]",
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         10
+        ],
+        [
+         0,
+         10
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15,
+       "bewegung": [
+        [
+         0.4,
+         {}
+        ],
+        [
+         4.38,
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            10,
+            0
+           ],
+           [
+            10,
+            2
+           ],
+           [
+            0,
+            2
+           ]
+          ]
+         }
+        ],
+        [
+         6.34,
+         {}
+        ],
+        [
+         9.1,
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            4,
+            0
+           ],
+           [
+            4,
+            8
+           ],
+           [
+            0,
+            8
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.1,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -1,
+         12
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 5,
+        "dx": 1,
+        "farbe": 5,
+        "ein": 7.12
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [cm]",
+     "yname": "y [cm]"
+    }
+   ],
+   "dauer": 11.8
+  },
+  {
+   "name": "Preise",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das geht auch mit Preisen. Für dreissig Franken kaufst du Getränke zu drei Franken und Snacks zu zwei Franken. Drei x plus zwei y gleich dreissig. Minus drei x, dann durch zwei: y gleich fünfzehn minus eins Komma fünf x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3x + 2y = 30",
+     "x": 150,
+     "y": 260,
+     "groesse": 56,
+     "ein": 4.34
+    },
+    {
+     "typ": "formel",
+     "text": "2y = 30 - 3x",
+     "x": 150,
+     "y": 380,
+     "groesse": 56,
+     "ein": 9.16
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = 15 - 1.5x}",
+     "x": 150,
+     "y": 500,
+     "groesse": 60,
+     "ein": 12.04
+    }
+   ],
+   "dauer": 16.6
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: nur zwei x abziehen und nicht durch zwei teilen. y gleich vierundzwanzig minus zwei x stimmt nicht: Mit x gleich zwei wäre y gleich zwanzig, und der Umfang wäre vierundvierzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{y = 24 - 2x}",
+     "x": 150,
+     "y": 280,
+     "groesse": 62,
+     "ein": 2.08
+    },
+    {
+     "typ": "formel",
+     "text": "x = 2: \\quad 2 \\cdot 2 + 2 \\cdot 20 = \\fd{44} \\neq 24",
+     "x": 150,
+     "y": 420,
+     "groesse": 50,
+     "ein": 7.2
+    }
+   ],
+   "dauer": 11.95
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Bleibt eine Summe gleich, ist der Zusammenhang linear fallend. Löse nach y auf: zuerst den x-Teil abziehen, dann durch die Zahl vor dem y teilen. Mach die Probe mit einer Zahl.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "feste Summe: linear fallend|zuerst x-Teil weg, dann durch die Zahl vor y|Probe mit einer Zahl",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.23
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.47
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Umfang 24 cm, x = 5 cm. Wie lang ist y?",
+   "optionen": [
+    "14 cm",
+    "7 cm",
+    "19 cm"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Im Umfang kommt jede Seite zweimal vor: Rechne die Probe 2 · 5 + 2 · 19.",
+    "0": "Du hast 24 − 2 · 5 gerechnet. Dann gehört y aber zweimal dazu."
+   },
+   "sprich": "Umfang vierundzwanzig Zentimeter, x gleich fünf Zentimeter. Wie lang ist y?",
+   "rueck_sprich": {
+    "2": "Im Umfang kommt jede Seite zweimal vor: Rechne die Probe zwei mal fünf plus zwei mal neunzehn.",
+    "0": "Du hast vierundzwanzig minus zwei mal fünf gerechnet. Dann gehört y aber zweimal dazu."
+   }
+  }
+ ]
+}
