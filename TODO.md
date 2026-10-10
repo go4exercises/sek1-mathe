@@ -9,6 +9,13 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
       «Kacheln» mit langem ch (terme-lp-zusammenfassen, Sz. 2, 4, 5), «y» → «Ypsilon» in den Terme-Clips (9 Stellen, Regel `ypsilon()`
       in `scripts/lp/terme-faktorisieren/clips.py`, «y-Glieder» bleibt), «Nun stelle …» in den Fragetönen 1–4 von gleich-lp-kontrolle-formeln.
       Whisper medium schreibt «Ypsilon» weiterhin als «Epsilon» und «Kacheln» einmal als «Karre» — massgebend ist die Hörprobe.
+- [x] Zweiter Abgleich nach LP 8 und LP 9 (gegen TALS `0cc0a9f`): Code-Dateien und alle `.claude/tools` weiter gleich,
+      `build-clip-ton.py` nur mit den zwei eigenen Einträgen anders. `HOWTO-clips.md`: Abschnitt «Hörprobe über alle drei Repos»
+      übernommen, jetzt deckungsgleich.
+- [ ] 🔑 Entscheid: TALS erzeugt den Footer seit 10.10.2026 aus `build-seo.py` (FUSS-Marken, Ortszeile `ort=`, eine Version
+      für das ganze Lehrmittel, dort 2.0; STYLEGUIDE 1.16 §7, HOWTO §5). Sek1 schreibt den Footer weiter aus `seite.py`
+      (Version 1.0). Übernehmen, und wenn ja mit eigener oder gemeinsamer Version? Ebenfalls nicht übernommen:
+      STYLEGUIDE §6.6 «Simulationen und Werkzeuge» (in Sek1 keine solchen Seiten).
 
 ## Leitprogramm Abbildungen und Geraden im Koordinatensystem (10.10.2026)
 

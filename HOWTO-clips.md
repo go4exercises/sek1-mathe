@@ -1345,6 +1345,26 @@ Nach einem neuen Eintrag die betroffenen Clips ermitteln (`aussprache(text) != t
 und neu vertonen — am 27.09.2026 waren es neun (Pythagoras 7, Megahertz 1,
 achthundert 1).
 
+**Hörprobe über alle drei Repos (10.10.2026).** Die offenen Wörter aus Mathe, Sek1-Mathe
+und Physik auf einer Seite, mit Auswahlknöpfen und «Ergebnis kopieren»; Bauskript
+`~/hoerproben/2026-10-10/bauen.py` (Satz aus dem Drehbuch, «bisher» mit der Tabelle des
+jeweiligen Repos, Varianten tauschen nur das Wort; Runden als `runde<n>.py`). Daraus:
+- **In die Tabelle:** Amontons, isochor (Schweizer ch), Glycerin, stimulierte (scht),
+  Kachel/Kacheln (langes ch), «parts per million»; in `TAUSCH` «Korrektur-Glied» und
+  «Arkus-Sinus» (sonst verschluckt die Stimme den zweiten Teil) — und damit in Physik und Sek1
+  nachzuziehen.
+- **Als Sprechertext statt Tabelle:** «die Diskriminante» statt «D» (Quadratische
+  Funktionen), «y s, gleich» mit Komma (das s ging sonst verloren), «ppm, parts per
+  million,» bei der ersten Nennung (Physik), «Die Seite a ist kürzer» statt «a ist kürzer».
+- **Bewusst wie bisher:** «Komma» in Dezimalzahlen (gesprochen wird nicht «Punkt»), «ein
+  Halb», «x s», «y s», Symmetrieachse, Kathete, subtrahiert, Überstand und rund zwanzig
+  weitere (Kommentar unter der Tabelle).
+- **Fragetöne verlieren ein leises Anlaut-«sch»:** Ein Fragenton ist eine eigene, kurze
+  Piper-Äusserung; beginnt sie mit «Stelle», fehlt das «sch» — auch mit Stille davor, es
+  liegt an Piper, nicht an der Wiedergabe. In Szenen (eine Spur, Text vorher) ist es
+  hörbar (sieben Szenen mit «Stell…» angehört). Abhilfe nur für Fragetöne: ein Wort davor
+  («Nun stelle …»).
+
 ### Lizenzlage (geprüft am 30.08.2026)
 
 | | |
