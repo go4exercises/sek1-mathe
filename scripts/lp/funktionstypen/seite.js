@@ -146,7 +146,7 @@
       var k = Achsen(svg, GITTER);
       famZeichnen(k, ZIEL[0], ZIEL[1], ZIEL[2], 'linie grau gestrichelt', -7, 7);
       famZeichnen(k, Z.typ, Z.a, Z.b, 'linie blau', -7, 7);
-      formel.innerHTML = FAMNAME[Z.typ] + ': <b>' + famTxt(Z.typ, Z.a, Z.b) + '</b>';
+      formel.innerHTML = Z.a === 0 ? '<b>a = 0</b>: ' + 'es bleibt nur <b>y = ' + z(Z.b) + '</b>, eine waagrechte Gerade. Mit a = 0 gehört der Graph zu keiner Familie mehr.' : FAMNAME[Z.typ] + ': <b>' + famTxt(Z.typ, Z.a, Z.b) + '</b>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -237,7 +237,7 @@
   (function(){
     var fig = document.getElementById('sim4'); if (!fig) return;
     var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
-    var F4 = { w: 300, h: 240, rl: 26, x0: 0, x1: 3, y0: 0, y1: 36, sx: 0.5, sy: 4, xm: [0.5, 1, 1.5, 2, 2.5, 3], ym: [6, 12, 18, 24, 30, 36], xname: 't [h]', yname: '[km]', r: 4 };
+    var F4 = { w: 300, h: 240, rl: 26, x0: 0, x1: 3, y0: 0, y1: 36, sx: 0.5, sy: 4, xm: [0.5, 1, 1.5, 2, 2.5, 3], ym: [6, 12, 18, 24, 30, 36], xname: 't [h]', yname: 'Strecke [km]', r: 4 };
     function zustand(){ return { L: wertR(fig, 's4-L'), v: wertR(fig, 's4-v'), t: wertR(fig, 's4-t') }; }
     function zeichnen(){
       var Z = zustand(); zeigeWert(fig, 's4-L', Z.L + ' km'); zeigeWert(fig, 's4-v', Z.v + ' km/h'); zeigeWert(fig, 's4-t', z(Z.t) + ' h');
@@ -250,9 +250,9 @@
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, [
-      { text: '24 km mit 16 km/h. Wann ist die Hälfte geschafft? Zieh \\(t\\) dorthin.', ok: function(Z){ return Z.L === 24 && Z.v === 16 && Z.t === 0.75; } },
+      { text: '20 km mit 10 km/h. Wann ist die Hälfte geschafft? Zieh \\(t\\) dorthin.', ok: function(Z){ return Z.L === 20 && Z.v === 10 && Z.t === 1; } },
       { text: '20 km mit 8 km/h. Wann sind es noch 4 km?', ok: function(Z){ return Z.L === 20 && Z.v === 8 && Z.t === 2; } },
-      { text: '12 km mit 4 km/h. Wann sind noch 6 km übrig?', ok: function(Z){ return Z.L === 12 && Z.v === 4 && Z.t === 1.5; } },
+      { text: '14 km mit 4 km/h. Wann sind noch 6 km übrig?', ok: function(Z){ return Z.L === 14 && Z.v === 4 && Z.t === 2; } },
       { text: '30 km mit 12 km/h. Wann kommst du an?', ok: function(Z){ return Z.L === 30 && Z.v === 12 && Z.t === 2.5; } },
       { text: '18 km mit 6 km/h. Wann ist der zurückgelegte Weg doppelt so lang wie der Rest?', ok: function(Z){ return Z.L === 18 && Z.v === 6 && Z.t === 2; } }
     ], sim);
@@ -348,20 +348,20 @@
 
     /* Feste Aufgaben (Clips, Festhalten, Erkundungen, Kapitelaufgaben, Gesamttest): nie als Zufallsübung. */
     var SPERRE = [
-      'zu|g|2|-1', 'zu|q|1|-2', 'zu|w|2|0', 'zu|k|4|0', 'zu|q|-0.5|3', 'zu|g|2|1', 'zu|q|0.5|0', 'zu|k|8|0', 'zu|k|3|0', 'zu|q|1|0', 'zu|w|1|0', 'zu|k|1|0',
-      'we|k|3|6', 'we|w|2|9', 'we|q|0.5|4', 'we|w|2|4', 'we|k|4|4', 'we|k|6|4',
+      'zu|g|2|-1', 'zu|g|1|0', 'zu|q|1|-2', 'zu|w|2|0', 'zu|k|4|0', 'zu|q|-0.5|3', 'zu|g|2|1', 'zu|q|0.5|0', 'zu|k|8|0', 'zu|k|3|0', 'zu|q|1|0', 'zu|w|1|0', 'zu|k|1|0',
+      'we|k|3|6', 'we|w|2|9', 'we|q|0.5|2', 'we|q|0.5|-2', 'we|k|12|3', 'we|k|12|0.5', 'we|g|2|9', 'we|q|1|9', 'we|w|1|9', 'we|k|18|9', 'we|k|6|2', 'we|k|6|3', 'we|q|-0.5|2', 'we|q|-0.5|-2', 'we|q|0.5|4', 'we|w|2|4', 'we|k|4|4', 'we|k|6|4',
       'nw|anti|6|10', 'nw|anti|5|12', 'nw|anti|2|12', 'nw|anti|3|4', 'nw|prop|4|10', 'nw|anti|4|10',
       'te|0,0;10,800;15,800;20,1400', 'te|0,0;4,600;10,600;14,1400', 'te|0,0;10,600;15,600;25,1800',
-      're|24|16', 're|36|12', 're|12|4', 're|30|20', 're|20|8', 're|18|6'
+      're|24|16', 're|36|12', 're|12|4', 're|20|10', 're|14|4', 're|40|18', 're|30|20', 're|20|8', 're|18|6'
     ];
     function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
 
     var SIT = {
       prop: [['Ein Kilogramm Äpfel kostet {k} Fr. Preis für \\(x\\) kg.', [3, 4, 5]], ['Ein Auto fährt mit {k} km/h. Weg nach \\(x\\) Stunden.', [60, 80, 90]],
-             ['Ein Kinoeintritt kostet {k} Fr. Preis für \\(x\\) Personen.', [12, 18, 20]], ['Ein Wasserhahn liefert {k} l pro Minute. Wasser nach \\(x\\) Minuten.', [6, 8, 12]]],
-      anti: [['{k} Bonbons werden gleichmässig auf \\(x\\) Kinder verteilt. Bonbons pro Kind.', [24, 36, 48]], ['Eine Strecke von {k} km. Fahrzeit bei \\(x\\) km/h.', [120, 180, 240]],
-             ['{k} Fr. Miete werden auf \\(x\\) Personen aufgeteilt. Betrag pro Person.', [600, 900, 1200]], ['Ein Becken mit {k} l wird mit \\(x\\) gleichen Pumpen geleert. Zeit in Minuten.', [600, 900, 1200]]],
-      lin:  [['Ein Taxi kostet {b} Fr. Grundtaxe und {k} Fr. pro km. Preis für \\(x\\) km.', [2, 3, 4]], ['Ein Fitnessabo kostet {b} Fr. und {k} Fr. pro Besuch. Kosten für \\(x\\) Besuche.', [5, 6, 8]],
+             ['Eine Busfahrkarte kostet {k} Fr. Preis für \\(x\\) Karten.', [3, 4, 5]], ['Ein Wasserhahn liefert {k} l pro Minute. Wasser nach \\(x\\) Minuten.', [6, 8, 12]]],
+      anti: [['{k} Murmeln werden gleichmässig auf \\(x\\) Säckchen verteilt. Murmeln pro Säckchen.', [24, 36, 60]], ['Eine Strecke von {k} km. Fahrzeit bei \\(x\\) km/h.', [120, 180, 240]],
+             ['{k} Fr. Miete werden auf \\(x\\) Personen aufgeteilt. Betrag pro Person.', [600, 900, 1200]], ['Eine Arbeit dauert für eine Person {k} Minuten. Dauer, wenn \\(x\\) Personen gleich schnell mithelfen.', [60, 90, 120]]],
+      lin:  [['Ein Taxi kostet {b} Fr. Grundtaxe und {k} Fr. pro km. Preis für \\(x\\) km.', [2, 3, 4]], ['Ein Handyabo kostet {b} Fr. im Monat und {k} Fr. pro GB Daten. Kosten für \\(x\\) GB.', [2, 3, 4]],
              ['Eine Kerze ist {b} cm hoch und wird pro Stunde {k} cm kürzer. Höhe nach \\(x\\) Stunden.', [1, 2, 3]], ['Ein Tank enthält {b} l, pro Minute kommen {k} l dazu. Inhalt nach \\(x\\) Minuten.', [4, 5, 10]]]
     };
 
@@ -417,11 +417,12 @@
           return { art: art, text: s[0].replace('{k}', k).replace('{b}', b) + ' Welcher Zusammenhang ist das?', muster: '{w}',
                    optionen: [['prop', 'proportional'], ['anti', 'antiproportional'], ['lin', 'linear mit Anfangswert']] }; },
         richtig: function(A, e){ return e.w === A.art; },
-        fehler: function(A){ return { prop: [[{ w: 'lin' }, 'null']], anti: [[{ w: 'lin' }, 'halb']], lin: [[{ w: 'prop' }, 'Anfang']] }[A.art]; },
+        fehler: function(A){ return { prop: [[{ w: 'lin' }, 'Anfangswert']], anti: [[{ w: 'lin' }, 'Anfangswert']], lin: [[{ w: 'prop' }, 'null']] }[A.art]; },
         pruefen: function(A, e){
-          if (A.art === 'lin') return 'Hier gibt es schon bei \\(x = 0\\) einen Wert, einen <b>Anfangswert</b>. Proportional geht durch \\((0 \\mid 0)\\).';
-          if (A.art === 'anti') return 'Mach den Doppelt-Test: Wird \\(x\\) doppelt so gross, wird \\(y\\) <b>halb</b> so gross. Das Produkt bleibt gleich.';
-          return 'Für \\(x = 0\\) ist \\(y\\) hier <b>null</b>, und doppeltes \\(x\\) gibt doppeltes \\(y\\).'; },
+          if (e.w === 'lin') return 'Linear mit <b>Anfangswert</b> hiesse: Schon bei \\(x = 0\\) gibt es einen Wert, der nicht null ist. Gibt es den hier?';
+          if (e.w === 'anti') return 'Antiproportional hiesse: Doppeltes \\(x\\) gibt überall halbes \\(y\\), das Produkt bleibt gleich. Stimmt das hier?';
+          if (e.w === 'prop') return 'Proportional hiesse: Bei \\(x = 0\\) ist \\(y\\) <b>null</b>, und doppeltes \\(x\\) gibt überall doppeltes \\(y\\). Stimmt beides?';
+          return 'Wähle eine Antwort.'; },
         tipps: function(A){ return ['Doppelt-Test: Was passiert mit \\(y\\), wenn \\(x\\) doppelt so gross wird?', 'Und was ist bei \\(x = 0\\)?']; },
         loesung: function(A){ return '\\text{' + { prop: 'proportional', anti: 'antiproportional', lin: 'linear mit Anfangswert' }[A.art] + '}'; } },
 
@@ -439,8 +440,8 @@
         pruefen: function(A, e){
           if (A.art === 'anti') return 'Antiproportional: Das <b>Produkt</b> bleibt gleich, \\(' + A.x0 + ' \\cdot ' + A.y0 + ' = ' + A.x0 * A.y0 + '\\). Wird \\(x\\) grösser, wird \\(y\\) kleiner.';
           return 'Proportional: Der <b>Quotient</b> \\(y : x = ' + bWertTex(B(A.y0, A.x0)) + '\\) bleibt gleich. Wird \\(x\\) grösser, wird auch \\(y\\) grösser.'; },
-        tipps: function(A){ return [A.art === 'prop' ? 'Rechne zuerst \\(y\\) für \\(x = 1\\): \\(' + A.y0 + ' : ' + A.x0 + '\\).' : 'Rechne das Produkt \\(x \\cdot y\\) aus. Es bleibt gleich.',
-          A.art === 'prop' ? 'Dann mal \\(' + A.x1 + '\\).' : '\\(' + A.x0 * A.y0 + ' : ' + A.x1 + '\\)']; },
+        tipps: function(A){ return [A.art === 'prop' ? 'Proportional: \\(x\\) wird mal \\(\\tfrac{' + A.x1 + '}{' + A.x0 + '}\\) genommen, also auch \\(y\\).' : 'Rechne das Produkt \\(x \\cdot y\\) aus. Es bleibt gleich.',
+          A.art === 'prop' ? '\\(' + A.y0 + ' \\cdot ' + A.x1 + ' : ' + A.x0 + '\\)' : '\\(' + A.x0 * A.y0 + ' : ' + A.x1 + '\\)']; },
         loesung: function(A){ return A.art === 'prop' ? 'y = \\dfrac{' + A.y0 + '}{' + A.x0 + '} \\cdot ' + A.x1 + ' = ' + bWertTex(A.y1) : 'y = \\dfrac{' + A.x0 + ' \\cdot ' + A.y0 + '}{' + A.x1 + '} = ' + bWertTex(A.y1); } },
 
       /* ── Kapitel 3 ── */
@@ -494,7 +495,7 @@
           var v = zufall([4, 5, 6, 8, 10, 12, 15, 16, 20]), T = zufall([2, 3, 4]), L = v * T + zufall([0, v, 2 * v]), t = zufall([0.5, 1, 1.5, 2, 2.5]);
           if (t >= L / v) return TYPEN.restweg.neu();
           var zz = bMul(B(v), bDez(t));
-          return { L: L, v: v, t: t, z: zz, r: bSub(B(L), zz), text: 'Eine Velotour ist ' + L + ' km lang. Du fährst gleichmässig ' + v + ' km/h. Wie weit bist du nach ' + t + ' h gefahren, und wie weit ist es dann noch bis zum Ziel?',
+          return { L: L, v: v, t: t, z: zz, r: bSub(B(L), zz), text: (v <= 6 ? 'Eine Wanderung ist ' + L + ' km lang. Du gehst' : 'Eine Velotour ist ' + L + ' km lang. Du fährst') + ' gleichmässig ' + v + ' km/h. Wie weit bist du nach ' + t + ' h gefahren, und wie weit ist es dann noch bis zum Ziel?',
                    muster: 'zurückgelegt {z} km &nbsp; noch {r} km' }; },
         richtig: function(A, e){ return bEq(e.z, A.z) && bEq(e.r, A.r); },
         fehler: function(A){ return bEq(A.z, A.r) ? [[{ z: String(A.L), r: '0' }, 'Ziel']] : [[{ z: bWert(A.r).replace('−', '-'), r: bWert(A.z).replace('−', '-') }, 'Vertauscht']]; },
@@ -511,20 +512,25 @@
         schl: function(A){ return 'kr|' + A.art + '|' + A.L.join(';'); },
         eingabe: function(A){ return { w: A.art }; },
         neu: function(){
-          var art = zufall(['senk', 'zeit', 'faellt', 'ok']), a = zufall([4, 5, 6]), h = zufall([400, 600, 800]), L, y = art === 'faellt' ? 'zurückgelegter Weg [m]' : 'Entfernung von zu Hause [m]';
+          var art = zufall(['senk', 'zeit', 'faellt', 'ok']), a = zufall([4, 5, 6]), h = zufall([400, 600, 800]), L,
+              y = zufall(['zurückgelegter Weg [m]', 'Entfernung von zu Hause [m]']);
+          if (art === 'faellt') y = 'zurückgelegter Weg [m]';
           if (art === 'senk') L = [[0, 0], [a, h], [a, h + 400], [a + 5, h + 400]];
           else if (art === 'zeit') L = [[0, 0], [a + 4, h], [a + 2, h + 300], [a + 6, h + 400]];
           else if (art === 'faellt') L = [[0, 0], [a, h], [a + 3, h], [a + 7, h - 300]];
+          else if (y.indexOf('zurück') === 0) L = [[0, 0], [a, h], [a + 3, h], [a + 7, h + 400]];
           else L = [[0, 0], [a, h], [a + 3, h], [a + 7, 0]];
           L = L.map(function(p){ return p.map(String); });
           return { art: art, L: L, text: 'Was ist an diesem Diagramm falsch? Die \\(y\\)-Achse zeigt: <b>' + y + '</b>.'
-                   + mini('data-linie="' + L.map(function(p){ return p.join(','); }).join(';') + '" data-fenster="0,14,0,1400" data-schritte="2,200" data-xname="t [min]" data-yname="' + y.replace(' [m]', '') + '"', 'Bewegungsdiagramm'),
+                   + mini('data-linie="' + L.map(function(p){ return p.join(','); }).join(';') + '" data-fenster="0,14,0,1400" data-schritte="2,200" data-xname="t [min]" data-yname="' + y + '"', 'Bewegungsdiagramm'),
                    optionen: [['senk', 'Ein Stück ist senkrecht: Weg ohne Zeit geht nicht.'], ['zeit', 'Ein Stück läuft nach links: Die Zeit läuft nie rückwärts.'],
                               ['faellt', 'Der zurückgelegte Weg kann nicht kleiner werden.'], ['ok', 'Nichts, das Diagramm ist möglich.']], muster: '{w}' }; },
         richtig: function(A, e){ return e.w === A.art; },
-        fehler: function(A){ return [[{ w: A.art === 'ok' ? 'faellt' : 'ok' }, A.art === 'ok' ? 'Entfernung' : 'Schau']]; },
+        fehler: function(A){ return [[{ w: A.art === 'ok' ? 'faellt' : 'ok' }, A.art === 'ok' ? 'y-Achse' : 'Schau']]; },
         pruefen: function(A, e){
-          if (A.art === 'ok') return 'Die <b>Entfernung</b> von zu Hause darf kleiner werden: auf dem Rückweg. Dieses Diagramm ist möglich.';
+          if (e.w === 'faellt') return 'Lies die <b>y-Achse</b>: Welche Grösse ist dargestellt? Fällt der Graph überhaupt, und darf diese Grösse kleiner werden?';
+          if (e.w === 'senk') return 'Ist wirklich ein Stück senkrecht? Prüf, ob an einer Stelle Weg ohne Zeit dazukommt.';
+          if (e.w === 'zeit') return 'Läuft wirklich ein Stück nach links? Folge dem Graphen von links nach rechts.';
           return '<b>Schau</b> jedes Stück an: Ist es senkrecht? Läuft es nach links? Und darf die Grösse auf der \\(y\\)-Achse kleiner werden?'; },
         tipps: function(A){ return ['Die Zeit läuft nach rechts, nie zurück, und nie ohne Weg weiter: keine senkrechten Stücke.', 'Der zurückgelegte Weg kann nur wachsen oder gleich bleiben. Eine Entfernung darf auch kleiner werden.']; },
         loesung: function(A){ return '\\text{' + { senk: 'senkrechtes Stück', zeit: 'Stück nach links', faellt: 'zurückgelegter Weg fällt', ok: 'möglich' }[A.art] + '}'; } }

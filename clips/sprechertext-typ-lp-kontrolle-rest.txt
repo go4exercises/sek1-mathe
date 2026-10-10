@@ -1,6 +1,6 @@
 0.40	Nach einer halben Stunde sind zehn Kilometer gefahren. Bleiben zwanzig Kilometer.
 5.81	Die Entfernung zum Ziel wird kleiner, ihr Graph fällt. Der zurückgelegte Weg wächst.
-11.69	Die Hälfte sind fünfzehn Kilometer. Fünfzehn durch zwanzig gibt null Komma sieben fünf Stunden.
-17.75	Auch auf dem Heimweg fährst du weiter: Der zurückgelegte Weg wächst weiter. Nur die Entfernung von zu Hause wird kleiner.
-24.93	Ein Stück läuft nach links: Die Zeit liefe rückwärts. Das ist unmöglich.
-30.10	Zum Mitnehmen: Zurückgelegt plus noch entfernt ist die ganze Strecke. Der zurückgelegte Weg wächst immer, und die Zeit läuft nur nach rechts.
+11.69	Die Hälfte sind fünfzehn Kilometer. Fünfzehn durch zwölf gibt eins Komma zwei fünf Stunden.
+17.91	Zurückgelegt und noch entfernt ergeben zusammen die ganze Strecke: Dreissig minus achtzehn gibt zwölf Kilometer.
+25.11	Ein Stück läuft nach links: Die Zeit liefe rückwärts. Das ist unmöglich.
+30.28	Zum Mitnehmen: Zurückgelegter Weg und Entfernung zum Ziel ergeben zusammen die ganze Strecke. Der zurückgelegte Weg nimmt nie ab, und die Zeit läuft nur nach rechts.

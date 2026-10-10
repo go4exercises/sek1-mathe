@@ -640,6 +640,14 @@ gegen sie und darüber hinaus.
   \(\tfrac{2-1}{6} = \tfrac16\) — richtig).
 - **Eine Begründung im Raster gilt allgemein, nicht nur für die Aufgabe**: «bei Mal und Durch ändert die Reihenfolge
   nichts» stimmte für \(a \cdot b : c\), widersprach aber dem eigenen Leitprogramm bei \(a : b \cdot c\).
+- **Ein Test an einer Stelle ist keine Regel** (Funktionstypen 10.10.2026): «x doppelt, y halb: antiproportional»
+  traf auch die fallende Gerade y = −x + 6 von x = 2 zu 4. Tests «überall, an mehreren Stellen» formulieren und
+  zuerst die Form prüfen lassen; die Simulation nicht Werte zulassen, die der Regel widersprechen (b < 0).
+- **Merkmale der Grundform sagen, wofür sie gelten** (Funktionstypen 10.10.2026): «trifft keine Achse» gilt für 1/x,
+  nicht für 1/x + 2, und die Simulation liess b einstellen. «(ohne + b)» dazuschreiben, «bei b < 0 nach unten».
+- **Gleiche Wörter, verschiedene Bezugsgrössen** (Funktionstypen 10.10.2026): «fallende Entfernung = zurück» gilt für
+  die Entfernung vom Start, nicht für die zum Ziel; s war in Kapitel 3 die Entfernung, in Kapitel 4 der zurückgelegte
+  Weg. Achsen nach der Grösse benennen und den Bezug immer mitsagen.
 
 **Clips**
 - **Wortanker scharf halten** (Bruchrechnen 09.10.2026): Ein unscharfer Wortvergleich traf kürzere Nachbarwörter
@@ -703,6 +711,11 @@ gegen sie und darüber hinaus.
   gerechnet — 28 % der richtigen Rechnungen falsch).
 - **Linien aus derselben Ecke**: Ihre Treffstreifen überlappen; der nächstliegende Kandidat muss gewinnen, und
   Beschriftungen dürfen den Klick nicht schlucken. Mit echten Klicks messen, nicht nur mit `pruef-geo`.
+- **Vorhersagen: nichts davon in der Szene davor** (Funktionstypen und Bewegung 10.10.2026): Zwei Geraden, deren
+  Schnittpunkt schon im Bild steht, oder der Punkt (4 | 2) eine Szene vor der Frage «welche Gleichung durch (4 | 2)?»
+  machen aus der Vorhersage ein Ablesen. Graphen bis zur Auflösung nur bis vor den Schnitt zeichnen.
+- **Zahlenfolgen im Ton eindeutig sprechen**: «für zwei null Komma fünf, für null Komma fünf zwei» klingt wie 0.52.
+  Jede Zahl mit «für x gleich …» einleiten.
 
 **Animationen und Übungen**
 - Kein Ziel der Aufgabenleiste ist schon im Startzustand erfüllt; Ziele sind nicht die
@@ -756,6 +769,13 @@ gegen sie und darüber hinaus.
 - **Erreichbarkeit mit Maus und Finger messen** (Trig. Gleichungen 08.10.2026): Toleranz 0.3° bei Schritt 0.5°
   auf 721 Stufen in 144 px — nur ein Reglerwert trifft, auf dem Handy keiner. Toleranz gegen den ungerundeten
   Zielwert, mindestens zwei treffende Reglerwerte, pixelweise nachmessen.
+- **Ein Hinweis in der Aufgabe darf die Antwort nicht festlegen** (Funktionstypen 10.10.2026): Die Übung «Diagramm
+  prüfen» schrieb «zurückgelegter Weg» nur an die Achse, wenn die Antwort «fällt» war. Jede Beschriftung in allen
+  Antwortfällen würfeln.
+- **Rückmeldung nach der Wahl, nicht nach der Lösung**: Eine Auswahlübung antwortete auf «antiproportional» mit
+  «Proportional geht durch (0 | 0)», weil sie nach der richtigen Lösung verzweigte, und nannte sie damit.
+- **Ein Zahlenfeld heisst nie `w`** (Bewegung 10.10.2026): Im Gerüst ist `w` die Auswahlliste; ein Zahlenfeld `w`
+  bricht die Übung (`A.optionen` fehlt) und mit ihr alle folgenden auf der Seite.
 - **CSS für Bilder mit Kindselektor** (`.rahmen > svg`): `.sim-breit svg{display:block}` traf auch die
   MathJax-Formeln der Aufgabenleiste — jede Formel stand auf eigener Zeile.
 - **Was ein Übungsbild zeigen soll, in Pixeln nachrechnen**: Bei Nullstellenabstand 1 ist der
@@ -869,6 +889,8 @@ gegen sie und darüber hinaus.
   339.5°» gab 3 von 4 P). Typischen Fehler «nur der Rechnerwert» in jeder Aufgabe mit mehreren Lösungen regeln.
 - **Folgepunkte bei Konstruktionen** auf die eigene Konstruktion beziehen (S auf der Geraden durch den eigenen P),
   nicht auf eine feste Koordinate mit Toleranz.
+- **Ein Testpunkt in der Musterlösung muss trennen** (Funktionstypen 10.10.2026): (2 | 2) lag auf zwei der vier
+  Graphen; das Raster belohnte damit den Fehler «zu wenige Punkte». Testpunkte nachrechnen gegen alle Kandidaten.
 
 **Zeit:** geschätzt aus den Teilen, nicht aus der Planung übernommen (§3).
 

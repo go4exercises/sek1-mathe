@@ -148,29 +148,30 @@ fest1 = r'''      <div class="festhalten">
             <tr><td>\(y = \sqrt{x}\)</td><td>Wurzelgraph</td><td>beginnt bei \((0 \mid 0)\), nur \(x \ge 0\), wird immer flacher</td><td>\(2\)</td></tr>
             <tr><td>\(y = \dfrac{1}{x}\)</td><td>Kehrwertgraph</td><td>zwei Äste, trifft keine Achse, \(x \neq 0\)</td><td>\(\tfrac{1}{4}\)</td></tr>
           </table>
-          <p>Mit einer Zahl \(a\) davor wird der Graph gestreckt (\(a = 2\): doppelt so hoch), mit \(a \lt 0\) an der \(x\)-Achse gespiegelt. Ein \(+ b\) schiebt ihn nach oben.</p>
+          <p>Die Merkmale gelten für die Grundform ohne \(+ b\). Mit einer Zahl \(a\) davor wird der Graph gestreckt (\(a = 2\): doppelt so hoch), mit \(a \lt 0\) an der \(x\)-Achse gespiegelt. Ein \(+ b\) schiebt ihn um \(b\) nach oben, bei \(b \lt 0\) nach unten. Dann trifft zum Beispiel auch ein Kehrwertgraph eine Achse.</p>
           <p><b>Zuordnen mit Testpunkten:</b> Setz gut ablesbare \(x\)-Werte ein, zum Beispiel \(x = 0\), \(1\), \(4\) und einen negativen Wert.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Zu wenige Punkte:</b> \(y = x\) und \(y = x^2\) gehen beide durch \((0 \mid 0)\) und \((1 \mid 1)\). Erst \(x = 2\) trennt sie: \(2\) gegen \(4\).</p>
+          <p><b>Zu wenige Punkte:</b> \(y = x\) und \(y = x^2\) gehen beide durch \((0 \mid 0)\) und \((1 \mid 1)\). Ein dritter Punkt trennt sie, zum Beispiel \(x = 2\): \(2\) gegen \(4\).</p>
           <p><b>Wurzel und Kehrwert überall:</b> \(\sqrt{-4}\) gibt es nicht, und \(\dfrac{1}{0}\) auch nicht. Dort hat der Graph keinen Punkt.</p>
         </div>
       </div>'''
 auf1 = test('t1', 'Aufgaben · Kapitel 1', 14, [
-    ('1a', 3, r'Berechne für \(x = 4\): \(y = 3x\), \(y = x^2\), \(y = \sqrt{x}\), \(y = \dfrac{6}{x}\). Welche Gleichung gehört zu einer Parabel, welche zu einem Kehrwertgraphen?',
-     r'<p>\(12\), \(16\), \(2\), \(1.5\). Parabel: \(y = x^2\). Kehrwertgraph: \(y = \dfrac{6}{x}\).</p>', ''),
+    ('1a', 3, r'Berechne für \(x = 9\): \(y = 2x\), \(y = x^2\), \(y = \sqrt{x}\), \(y = \dfrac{18}{x}\). Welche Gleichung gehört zu einer Parabel, welche zu einem Kehrwertgraphen?',
+     r'<p>\(18\), \(81\), \(3\), \(2\). Parabel: \(y = x^2\). Kehrwertgraph: \(y = \dfrac{18}{x}\).</p>', ''),
     ('1b', 3, r'Fülle die Wertetabelle von \(y = 0.5x^2\) für \(x = -4, -2, 0, 2, 4\) und zeichne den Graphen. Was fällt dir auf?',
      r'<p>\(8,\ 2,\ 0,\ 2,\ 8\). Eine Parabel, symmetrisch zur \(y\)-Achse, Scheitel \((0 \mid 0)\), flacher als \(y = x^2\).</p>',
      '\n            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>'),
     ('1c', 2, r'Ein Graph geht durch \((1 \mid 3)\) und \((3 \mid 1)\) und trifft keine Achse. Welche Gleichung passt: \(y = -x + 4\), \(y = \dfrac{3}{x}\) oder \(y = 3x^2\)?',
      r'<p>\(y = \dfrac{3}{x}\): \(\tfrac{3}{1} = 3\), \(\tfrac{3}{3} = 1\), und ein Kehrwertgraph trifft keine Achse. \(y = -x + 4\) geht zwar durch beide Punkte, trifft aber die Achsen.</p>', ''),
-    ('1d', 2, r'Lea sagt: «\(y = x^2\) ist eine Gerade, denn sie geht durch \((0 \mid 0)\) und \((1 \mid 1)\).» Widerlege mit einem dritten Punkt.',
-     r'<p>\((2 \mid 4)\): Von \(x = 0\) bis \(1\) steigt \(y\) um \(1\), von \(1\) bis \(2\) um \(3\). Bei einer Geraden wäre es beide Male gleich viel.</p>', ''),
-    ('1e', 2, r'Warum hat der Graph von \(y = \sqrt{x}\) bei \(x = -4\) keinen Punkt?',
-     r'<p>Keine Zahl ergibt mit sich selbst multipliziert \(-4\): Quadrate sind nie negativ. Darum gibt es \(\sqrt{-4}\) nicht.</p>', ''),
-    ('1f', 2, r'Wie sieht der Graph von \(y = -x^2\) aus? Berechne zwei Punkte.',
-     r'<p>Eine nach unten offene Parabel mit Scheitel \((0 \mid 0)\): \((2 \mid -4)\), \((-2 \mid -4)\). Gespiegelt an der \(x\)-Achse.</p>', ''),
+    ('1d', 2, r'Fülle die Wertetabelle von \(y = \dfrac{6}{x}\) für \(x = 1, 2, 3, 6\) und skizziere den Graphen für \(x \gt 0\).',
+     r'<p>\(6,\ 3,\ 2,\ 1\). Eine fallende Kurve, die sich den Achsen nähert, sie aber nie trifft: ein Ast eines Kehrwertgraphen.</p>',
+     '\n            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>'),
+    ('1e', 2, r'Für welche \(x\) hat \(y = 2\sqrt{x}\) keinen Punkt, für welche \(y = \dfrac{5}{x}\)? Begründe.',
+     r'<p>\(y = 2\sqrt{x}\): für alle negativen \(x\), denn Quadrate sind nie negativ. \(y = \dfrac{5}{x}\): nur für \(x = 0\), denn durch null kann man nicht teilen.</p>', ''),
+    ('1f', 2, r'Wie sieht der Graph von \(y = -0.5x^2\) aus? Berechne zwei Punkte und vergleiche mit \(y = x^2\).',
+     r'<p>Eine nach unten offene Parabel mit Scheitel \((0 \mid 0)\): \((2 \mid -2)\), \((-2 \mid -2)\). Gespiegelt an der \(x\)-Achse und flacher als \(y = x^2\).</p>', ''),
 ])
 k1 = kapitel(1, 'familien', 'Vier Graphen-Familien', 40,
              r'Du erkennst Gerade, Parabel, Wurzel- und Kehrwertgraph an ihrer Form und ordnest Gleichungen mit Testpunkten zu.',
@@ -190,7 +191,7 @@ sim2 = f'''      <figure class="sim sim-gross" id="sim2" aria-label="Proportiona
         </div>
         <div class="sl-row">
           {regler('s2-k', 'k', 'blau', 0.5, 24, 1).replace('step="1"', 'step="0.5"')}
-          {regler('s2-b', 'b', 'orange', -4, 10, 0)}
+          {regler('s2-b', 'b', 'orange', 0, 10, 0)}
         </div>
         <div class="sl-row">
           {regler('s2-x', 'Doppelt-Test bei x', 'gruen', 1, 5, 1)}
@@ -204,14 +205,15 @@ fest2 = r'''      <div class="festhalten">
             <tr><th>Gleichung</th><td>\(y = k \cdot x\)</td><td>\(y = k \cdot x + b\), \(b \neq 0\)</td><td>\(y = \dfrac{k}{x}\)</td></tr>
             <tr><th>Graph</th><td>Gerade durch \((0 \mid 0)\)</td><td>Gerade, nicht durch \((0 \mid 0)\)</td><td>Kehrwertgraph</td></tr>
             <tr><th>Tabelle</th><td>\(y : x\) gleich</td><td>bei gleichen Schritten gleiche Differenzen</td><td>\(x \cdot y\) gleich</td></tr>
-            <tr><th>\(x\) doppelt</th><td>\(y\) doppelt</td><td>weder doppelt noch halb</td><td>\(y\) halb</td></tr>
+            <tr><th>\(x\) doppelt</th><td>\(y\) überall doppelt</td><td>\(y\) nicht überall doppelt oder halb</td><td>\(y\) überall halb</td></tr>
           </table>
           <p>Benzin \(1.80\) Fr. pro Liter: \(y = 1.8x\), proportional. Taxi \(6\) Fr. und \(2.50\) Fr. pro km: \(y = 2.5x + 6\), linear mit Anfangswert. \(36\) Fr. Pizza auf \(x\) Personen: \(y = \dfrac{36}{x}\), antiproportional.</p>
+          <p><b>So prüfst du:</b> zuerst die Form (Gerade durch \((0 \mid 0)\), andere Gerade oder Kehrwertgraph), dann den Doppelt-Test an mehreren Stellen. \(k\) ist der Faktor; bei einer Geraden ist er die Steigung \(m\).</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>«Steigt, also proportional»:</b> Das Taxi wird teurer, je weiter du fährst, aber \(2\) km kosten \(11\) Fr. und \(4\) km \(16\) Fr., nicht \(22\) Fr. Der Anfangswert verhindert das Verdoppeln.</p>
-          <p><b>«Fällt, also antiproportional»:</b> Eine fallende Gerade ist linear. Antiproportional heisst: Das Produkt bleibt gleich.</p>
+          <p><b>«Fällt, also antiproportional»:</b> Eine fallende Gerade ist linear. Bei \(y = -x + 6\) wird \(y\) von \(x = 2\) zu \(x = 4\) zufällig halb so gross (\(4\) und \(2\)), von \(x = 1\) zu \(x = 2\) aber nicht (\(5\) und \(4\)). Antiproportional heisst: Das Produkt bleibt überall gleich.</p>
         </div>
       </div>'''
 auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
@@ -225,7 +227,7 @@ auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
      r'<p>\(x = 2\): \(y = 10\). \(x = 4\): \(y = 16\), nicht \(20\). Wegen des Anfangswerts \(4\) verdoppelt sich \(y\) nicht.</p>', ''),
     ('2e', 2, r'Ein Graph geht durch \((4 \mid 10)\). Gib die Gleichung an, wenn der Zusammenhang (a) proportional, (b) antiproportional ist.',
      r'<p>(a) \(k = 10 : 4 = 2.5\), \(y = 2.5x\). (b) \(k = 4 \cdot 10 = 40\), \(y = \dfrac{40}{x}\).</p>', ''),
-    ('2f', 2, r'Warum geht der Graph eines proportionalen Zusammenhangs immer durch \((0 \mid 0)\)?',
+    ('2f', 2, r'Warum geht der Graph eines proportionalen Zusammenhangs wie «Preis für \(x\) kg Äpfel» immer durch \((0 \mid 0)\)?',
      r'<p>Für \(x = 0\) ist \(y = k \cdot 0 = 0\): Für null Kilogramm zahlst du nichts. Ein Anfangswert würde den Graphen nach oben schieben.</p>', ''),
 ])
 k2 = kapitel(2, 'zusammenhaenge', 'Proportional, antiproportional, linear', 40,
@@ -256,27 +258,28 @@ fest3 = r'''      <div class="festhalten">
             <li>\(15\) bis \(20\) min: \(v = \dfrac{1400 - 800}{5} = 120\) m/min <span class="warum">steiler = schneller</span></li>
           </ol>
           <p>Ein <b>Knick</b> heisst: Das Tempo ändert sich. <b>Fallend</b> heisst: Die Entfernung vom Start wird kleiner, es geht zurück. <b>Senkrecht</b> ist unmöglich: Weg ohne Zeit gibt es nicht.</p>
-          <p>Umrechnen: \(120\) m/min sind \(120 \cdot 60 = 7200\) m pro Stunde, also \(7.2\) km/h.</p>
+          <p>In der Simulation heisst eine negative Geschwindigkeit: zurück. \(-80\) m/min sind \(80\) m/min in Richtung zu Hause, der Graph fällt.</p>
+          <p>Umrechnen: \(120\) m/min sind \(120 \cdot 60 = 7200\) m pro Stunde, also \(7.2\) km/h. Umgekehrt: \(6\) km/h sind \(6000\) m in \(60\) min, also \(100\) m/min.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Graph als Landschaft gelesen:</b> Steigt der Graph, geht es nicht bergauf. Er zeigt die Entfernung, nicht die Höhe.</p>
+          <p><b>Graph als Landschaft gelesen:</b> Steigt der Graph, heisst das nicht, dass es bergauf geht. Er zeigt die Entfernung, nicht die Höhe.</p>
           <p><b>Stand statt Steigung:</b> Bei \(t = 20\) ist \(s = 1400\) m. Die Geschwindigkeit ist aber \(\dfrac{\Delta s}{\Delta t}\) im Abschnitt, hier \(120\) m/min.</p>
         </div>
       </div>'''
 auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
     ('3a', 3, r'Ein Weg-Zeit-Graph verbindet die Punkte \((0 \mid 0)\), \((4 \mid 600)\), \((10 \mid 600)\), \((14 \mid 1400)\) (\(t\) in min, \(s\) in m). Berechne die Geschwindigkeit in jedem Abschnitt und beschreibe die Bewegung.',
      r'<p>\(\dfrac{600}{4} = 150\) m/min, dann \(0\) (Pause, \(6\) min), dann \(\dfrac{800}{4} = 200\) m/min. Zügig los, warten, am Schluss noch schneller.</p>', ''),
-    ('3b', 2, r'Skizziere einen Weg-Zeit-Graphen: \(10\) min mit \(50\) m/min, \(5\) min Pause, \(5\) min mit \(100\) m/min zurück zum Start.',
+    ('3b', 2, r'Skizziere den Graphen der Entfernung von zu Hause: \(10\) min mit \(50\) m/min, \(5\) min Pause, \(5\) min mit \(100\) m/min zurück zum Start.',
      r'<p>Von \((0 \mid 0)\) bis \((10 \mid 500)\), waagrecht bis \((15 \mid 500)\), dann fallend bis \((20 \mid 0)\).</p>', ''),
     ('3c', 2, r'Zwei Velofahrer starten gleichzeitig. Im Weg-Zeit-Graphen ist der von Mia steiler als der von Tom. Was heisst das?',
      r'<p>Mia fährt schneller: Sie legt in derselben Zeit mehr Weg zurück.</p>', ''),
     ('3d', 2, r'Kai sagt zu einem steigenden Weg-Zeit-Graphen: «Hier geht es bergauf.» Was ist falsch?',
      r'<p>Der Graph zeigt die Entfernung über der Zeit, nicht die Höhe des Weges. Steigend heisst: Die Entfernung wird grösser, egal ob es bergauf oder bergab geht.</p>', ''),
-    ('3e', 2, r'Rechne um: \(120\) m/min in km/h und \(15\) km/h in m/min.',
-     r'<p>\(120 \cdot 60 = 7200\) m/h \(= 7.2\) km/h. \(15\) km/h \(= 15\,000\) m in \(60\) min \(= 250\) m/min.</p>', ''),
-    ('3f', 3, r'Warum kann ein Weg-Zeit-Graph nie senkrecht sein, und warum nie nach links laufen?',
-     r'<p>Senkrecht hiesse: Weg ohne Zeit, also unendlich schnell. Nach links hiesse: Die Zeit läuft rückwärts. Beides ist unmöglich.</p>', ''),
+    ('3e', 2, r'Rechne um: \(90\) m/min in km/h und \(12\) km/h in m/min.',
+     r'<p>\(90 \cdot 60 = 5400\) m/h \(= 5.4\) km/h. \(12\) km/h \(= 12\,000\) m in \(60\) min \(= 200\) m/min.</p>', ''),
+    ('3f', 3, r'Tim fährt \(6\) min mit \(200\) m/min von zu Hause weg, macht \(4\) min Pause und fährt dann mit \(100\) m/min zurück. Skizziere den Graphen der Entfernung von zu Hause. Wann ist er wieder zu Hause? Woran siehst du im Graphen, dass er zurück langsamer fährt?',
+     r'<p>Von \((0 \mid 0)\) bis \((6 \mid 1200)\), waagrecht bis \((10 \mid 1200)\), fallend bis \((22 \mid 0)\): \(1200 : 100 = 12\) min zurück, also nach \(22\) min zu Hause. Das fallende Stück ist flacher als das steigende.</p>', ''),
 ])
 k3 = kapitel(3, 'wegzeit', 'Weg-Zeit-Graphen lesen', 40,
              r'Du liest aus einem Weg-Zeit-Graphen Geschwindigkeiten, Pausen und Rückwege ab und wählst zu einer Beschreibung den passenden Graphen.',
@@ -313,7 +316,7 @@ fest4 = r'''      <div class="festhalten">
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>Zurückgelegt und Entfernung verwechselt:</b> Auf dem Heimweg wächst der zurückgelegte Weg weiter, die Entfernung von zu Hause wird kleiner.</p>
-          <p><b>Fallend heisst nicht langsamer:</b> Ein fallender Graph der Entfernung zeigt ein Zurückfahren, langsamer heisst flacher.</p>
+          <p><b>Fallend heisst nicht langsamer:</b> Fällt die Entfernung <b>von zu Hause</b>, fährst du zurück. Fällt die Entfernung <b>zum Ziel</b>, kommst du näher. Langsamer heisst in beiden Fällen: flacher.</p>
         </div>
       </div>'''
 auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
@@ -323,12 +326,12 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
      r'<p>\(d\) fällt, \(s\) ist proportional. Sie schneiden sich bei der Hälfte: \(12t = 18\), \(t = 1.5\) h, beide \(18\) km.</p>', ''),
     ('4c', 2, r'Wann bist du in 4a noch \(6\) km vom Ziel entfernt?',
      r'<p>\(36 - 12t = 6\), \(12t = 30\), \(t = 2.5\) h.</p>', ''),
-    ('4d', 2, r'Mia geht zum Bäcker und wieder nach Hause. Sie zeichnet die Entfernung von zu Hause: Der Graph steigt und fällt dann wieder. Ihr Freund sagt: «Fallend heisst, sie wird langsamer.» Stimmt das?',
-     r'<p>Nein. Fallend heisst: Die Entfernung von zu Hause nimmt ab, Mia geht zurück. Langsamer hiesse: flacher.</p>', ''),
+    ('4d', 2, r'Ein Graph zeigt die Entfernung zum Ziel einer Wanderung: Er fällt gleichmässig von \(15\) km auf \(0\) km in \(5\) h. Jonas sagt: «Fallend heisst, die Wanderer gehen zurück.» Stimmt das? Wie schnell gehen sie?',
+     r'<p>Nein. Die Entfernung <b>zum Ziel</b> wird kleiner, weil sie vorwärts gehen. Tempo: \(15 : 5 = 3\) km/h.</p>', ''),
     ('4e', 3, r'Lea zeichnet den zurückgelegten Weg einer Wanderung. In einem Abschnitt fällt ihr Graph, in einem anderen ist er senkrecht. Was ist an beiden Stellen falsch?',
      r'<p>Der zurückgelegte Weg kann nicht kleiner werden, auch auf dem Rückweg nicht: Fallen ist unmöglich. Senkrecht hiesse Weg ohne Zeit: ebenfalls unmöglich.</p>', ''),
-    ('4f', 2, r'Warum gilt immer: zurückgelegt plus noch entfernt gleich ganze Strecke?',
-     r'<p>Jeder Kilometer der Strecke ist entweder schon gefahren oder noch vor dir. Zusammen ergeben sie die ganze Strecke.</p>', ''),
+    ('4f', 2, r'Von einer \(40\) km langen Velotour hast du nach \(1.5\) h gleichmässig \(27\) km zurückgelegt. Wie weit ist das Ziel noch, und wie schnell fährst du?',
+     r'<p>\(40 - 27 = 13\) km, denn zurückgelegt und noch entfernt ergeben zusammen die ganze Strecke. Tempo: \(27 : 1.5 = 18\) km/h.</p>', ''),
 ])
 k4 = kapitel(4, 'rest', 'Zurückgelegt oder noch entfernt', 40,
              r'Du unterscheidest den zurückgelegten Weg von der noch verbleibenden Entfernung, beschreibst beide als Gleichung und Graph und kritisierst fehlerhafte Bewegungsdiagramme.',

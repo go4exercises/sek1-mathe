@@ -2,7 +2,7 @@
 
 Sechstes Leitprogramm (Bereich Funktionen), gebaut am 10.10.2026 im Kapitelmuster von `HOWTO-leitprogramme.md`,
 nach `~/TODO-BM-Vorkurs-LP03-15.md` §4 («Funktionstypen und Graphen interpretieren»), für die Sek I umgesetzt.
-Gerüst aus `scripts/lp/funktionstypen/`. Baut auf LP 4 und LP 5 auf.
+Gerüst aus `scripts/lp/darstellungen/`. Baut auf LP 4 und LP 5 auf.
 Kapitel: Vier Graphen-Familien · Proportional, antiproportional, linear · Weg-Zeit-Graphen lesen · Zurückgelegt oder noch
 entfernt. Alles ohne Taschenrechner. Aus der Vorlage umgesetzt: Gerade, Parabel, Wurzel- und Kehrwertgraph qualitativ und mit
 Testpunkten, proportional/antiproportional/linear mit Anfangswert, Steigung und Knicke im Weg-Zeit-Graphen, Graph zu einer

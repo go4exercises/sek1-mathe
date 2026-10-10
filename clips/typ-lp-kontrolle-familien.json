@@ -1,7 +1,7 @@
 {
  "titel": "Funktionen sehen: Kontrollfragen zu den Familien",
  "dateiname": "typ-lp-kontrolle-familien",
- "kurzbeschrieb": "Fünf Fragen: Parabel im Bild, y = 3/x für x = 6, kein Punkt bei x = −1, y = 2√x für x = 9, Form von y = −x².",
+ "kurzbeschrieb": "Fünf Fragen: Parabel y = 0.5x² im Bild, y = 3/x für x = 6, kein Punkt bei x = −1, y = 2√x für x = 9, Scheitel von y = x² + 2.",
  "schlagworte": [
   "Parabel",
   "Wurzel",
@@ -30,7 +30,7 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt vier: y gleich x Quadrat.",
+   "sprecher": "Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt zwei: y gleich null Komma fünf x Quadrat.",
    "elemente": [
     {
      "typ": "graf",
@@ -45,7 +45,7 @@
      "punkte": [
       {
        "x": -2,
-       "y": 4,
+       "y": 2,
        "farbe": 5,
        "anker": "start"
       },
@@ -57,7 +57,7 @@
       },
       {
        "x": 2,
-       "y": 4,
+       "y": 2,
        "farbe": 5,
        "anker": "start"
       }
@@ -74,7 +74,7 @@
      ],
      "kurven": [
       {
-       "formel": "x*x",
+       "formel": "0.5*x*x",
        "farbe": 1,
        "von": -4,
        "bis": 5
@@ -83,7 +83,7 @@
     },
     {
      "typ": "formel",
-     "text": "\\fc{y = x^2}",
+     "text": "\\fc{y = 0.5x^2}",
      "x": 150,
      "y": 330,
      "groesse": 66,
@@ -102,7 +102,7 @@
      "punkte": [
       {
        "x": -2,
-       "y": 4,
+       "y": 2,
        "farbe": 5,
        "anker": "start"
       },
@@ -114,7 +114,7 @@
       },
       {
        "x": 2,
-       "y": 4,
+       "y": 2,
        "farbe": 5,
        "anker": "start"
       }
@@ -131,7 +131,7 @@
      ],
      "kurven": [
       {
-       "formel": "x*x",
+       "formel": "0.5*x*x",
        "farbe": 1,
        "von": -4,
        "bis": 5
@@ -139,7 +139,7 @@
      ]
     }
    ],
-   "dauer": 7.56
+   "dauer": 8.57
   },
   {
    "name": "Frage 2",
@@ -196,7 +196,7 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Das Minus kippt die Parabel an der x-Achse: Sie ist nach unten offen, der Scheitel ist oben.",
+   "sprecher": "Plus zwei schiebt die Parabel um zwei nach oben: Der Scheitel liegt bei null, zwei.",
    "elemente": [
     {
      "typ": "graf",
@@ -222,7 +222,7 @@
     },
     {
      "typ": "formel",
-     "text": "y = -x^2",
+     "text": "y = x^2 + 2",
      "x": 150,
      "y": 300,
      "groesse": 64,
@@ -251,21 +251,57 @@
      ],
      "kurven": [
       {
-       "formel": "-x*x",
+       "formel": "x*x+2",
        "farbe": 1,
        "von": -4,
        "bis": 5
       }
      ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 2,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(0 | 2)",
+       "beschriftung_bei": [
+        0.26,
+        1.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
     }
    ],
-   "dauer": 6.2
+   "dauer": 5.6
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Form zuerst, dann Testpunkte. Wurzeln gibt es nur für x ab null, Kehrwerte nicht für null. Ein Minus davor spiegelt den Graphen.",
+   "sprecher": "Zum Mitnehmen: Form zuerst, dann Testpunkte. Wurzeln gibt es nur für x ab null, Kehrwerte nicht für null. Ein Plus b schiebt den Graphen nach oben.",
    "elemente": [
     {
      "typ": "titel",
@@ -276,7 +312,7 @@
     },
     {
      "typ": "notiz",
-     "text": "Form zuerst, dann Testpunkte|√x nur für x ≥ 0, 1/x nicht für 0|Minus davor: gespiegelt",
+     "text": "Form zuerst, dann Testpunkte|√x nur für x ≥ 0, 1/x nicht für 0|plus b: nach oben geschoben",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -284,7 +320,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 9.36
+   "dauer": 9.35
   }
  ],
  "fragen": [
@@ -294,18 +330,19 @@
    "typ": "wahl",
    "text": "Welche Gleichung gehört zum Graphen im Bild?",
    "optionen": [
-    "y = 2x",
+    "y = x²",
     "y = √x",
-    "y = x²"
+    "y = 0.5x²"
    ],
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
-    "0": "Eine Gerade wäre nicht symmetrisch zur y-Achse.",
+    "0": "Setz x = 2 ein: 2² = 4. Liegt (2 | 4) auf dem Graphen?",
     "1": "Ein Wurzelgraph hat links von der y-Achse keine Punkte."
    },
+   "sprich": "Welche Gleichung gehört zum Graphen im Bild?",
    "rueck_sprich": {
-    "0": "Eine Gerade wäre nicht symmetrisch zur y-Achse.",
+    "0": "Setz x gleich zwei ein: zwei Quadrat ist vier. Liegt dieser Punkt auf dem Graphen?",
     "1": "Ein Wurzelgraph hat links von der y-Achse keine Punkte."
    }
   },
@@ -379,22 +416,22 @@
    "szene": "Frage 5",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Wie sieht der Graph von y = −x² aus?",
+   "text": "Wo liegt der Scheitel der Parabel y = x² + 2?",
    "optionen": [
-    "Parabel, nach oben offen",
-    "fallende Gerade",
-    "Parabel, nach unten offen"
+    "bei (2 | 0)",
+    "bei (0 | 0)",
+    "bei (0 | 2)"
    ],
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
-    "0": "Setz x = 2 ein: −4. Liegt der Punkt oben oder unten?",
-    "1": "Wegen x² ist es keine Gerade."
+    "0": "Setz x = 2 ein: 2² + 2 = 6, nicht 0.",
+    "1": "Setz x = 0 ein: 0² + 2 = 2."
    },
-   "sprich": "Wie sieht der Graph von y gleich minus x Quadrat aus?",
+   "sprich": "Wo liegt der Scheitel der Parabel y gleich x Quadrat plus zwei?",
    "rueck_sprich": {
-    "0": "Setz x gleich zwei ein: minus vier. Liegt der Punkt oben oder unten?",
-    "1": "Wegen x Quadrat ist es keine Gerade."
+    "0": "Setz x gleich zwei ein: Das gibt sechs, nicht null.",
+    "1": "Setz x gleich null ein: Das gibt zwei."
    }
   }
  ]

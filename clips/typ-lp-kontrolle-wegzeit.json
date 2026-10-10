@@ -41,7 +41,19 @@
      "anim": "fade",
      "ein": 0.05,
      "geraden": [],
-     "punkte": [],
+     "punkte": [
+      {
+       "x": 5,
+       "y": 500,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(5 | 500)",
+       "beschriftung_bei": [
+        5.4,
+        430
+       ]
+      }
+     ],
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
@@ -132,7 +144,19 @@
      "anim": "fade",
      "ein": 1.0,
      "geraden": [],
-     "punkte": [],
+     "punkte": [
+      {
+       "x": 5,
+       "y": 500,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(5 | 500)",
+       "beschriftung_bei": [
+        5.4,
+        430
+       ]
+      }
+     ],
      "pfeile": true,
      "tippbar": true,
      "xbereich": [

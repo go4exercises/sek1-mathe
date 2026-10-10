@@ -1,7 +1,7 @@
 {
  "titel": "Funktionen sehen: Kontrollfragen zu den Zusammenhängen",
  "dateiname": "typ-lp-kontrolle-zusammenhaenge",
- "kurzbeschrieb": "Fünf Fragen: Kinoeintritte, Pumpen und Zeit, Fitnessabo mit Grundgebühr, Tabelle 12, 6, 3 für x = 6, y = 4x + 3 beim Verdoppeln.",
+ "kurzbeschrieb": "Fünf Fragen: Kinoeintritte, Pumpen und Zeit, Fitnessabo mit Grundgebühr, Tabelle 12, 6, 3 für x = 6, y = 5x + 2 beim Verdoppeln.",
  "schlagworte": [
   "proportional",
   "antiproportional",
@@ -101,24 +101,24 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Bei x gleich zwei ist y elf, bei x gleich vier ist y neunzehn. Nicht doppelt so viel, wegen des Anfangswerts drei.",
+   "sprecher": "Bei x gleich zwei ist y zwölf, bei x gleich vier ist y zweiundzwanzig. Nicht doppelt so viel, wegen des Anfangswerts zwei.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "x = 4: \\; 4 \\cdot 4 + 3 = \\fc{19}",
+     "text": "x = 4: \\; 5 \\cdot 4 + 2 = \\fc{22}",
      "x": 150,
      "y": 330,
      "groesse": 56,
      "ein": 1.0
     }
    ],
-   "dauer": 8.34
+   "dauer": 9.28
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Doppelt-Test und Anfangswert entscheiden. Bei antiproportional bleibt das Produkt gleich.",
+   "sprecher": "Zum Mitnehmen: Zuerst die Form, dann der Doppelt-Test an mehreren Stellen. Gibt es einen Anfangswert? Bei antiproportional bleibt das Produkt überall gleich.",
    "elemente": [
     {
      "typ": "titel",
@@ -129,7 +129,7 @@
     },
     {
      "typ": "notiz",
-     "text": "Doppelt-Test|Gibt es einen Anfangswert?|antiproportional: Produkt gleich",
+     "text": "Form, dann Doppelt-Test an mehreren Stellen|Gibt es einen Anfangswert?|antiproportional: Produkt gleich",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -137,7 +137,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 7.19
+   "dauer": 9.99
   }
  ],
  "fragen": [
@@ -221,34 +221,34 @@
    "rueck": {
     "1": "Ja.",
     "2": "Rechne das Produkt x · y. Es bleibt gleich.",
-    "0": "Zwischen 4 und 8 liegt y zwischen 6 und 3, nicht darunter."
+    "0": "3 ist der Wert bei x = 8. Bei x = 6 ist y grösser."
    },
    "sprich": "Tabelle: x zwei, vier, acht und y zwölf, sechs, drei. Wie gross ist y bei x gleich sechs?",
    "rueck_sprich": {
     "2": "Rechne das Produkt x mal y. Es bleibt gleich.",
-    "0": "Zwischen vier und acht liegt y zwischen sechs und drei, nicht darunter."
+    "0": "Drei ist der Wert bei x gleich acht. Bei x gleich sechs ist y grösser."
    }
   },
   {
    "szene": "Frage 5",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "y = 4x + 3. Bei x = 2 ist y = 11. Wie gross ist y bei x = 4?",
+   "text": "y = 5x + 2. Bei x = 2 ist y = 12. Wie gross ist y bei x = 4?",
    "optionen": [
-    "22",
     "14",
-    "19"
+    "22",
+    "24"
    ],
-   "richtig": 2,
+   "richtig": 1,
    "rueck": {
-    "2": "Ja.",
-    "0": "Der Anfangswert 3 zählt nur einmal.",
-    "1": "Setz x = 4 in die Gleichung ein."
+    "1": "Ja.",
+    "2": "Der Anfangswert 2 zählt nur einmal.",
+    "0": "Setz x = 4 in die Gleichung ein."
    },
-   "sprich": "y gleich vier x plus drei. Bei x gleich zwei ist y gleich elf. Wie gross ist y bei x gleich vier?",
+   "sprich": "y gleich fünf x plus zwei. Bei x gleich zwei ist y gleich zwölf. Wie gross ist y bei x gleich vier?",
    "rueck_sprich": {
-    "0": "Der Anfangswert drei zählt nur einmal.",
-    "1": "Setz x gleich vier in die Gleichung ein."
+    "2": "Der Anfangswert zwei zählt nur einmal.",
+    "0": "Setz x gleich vier in die Gleichung ein."
    }
   }
  ]

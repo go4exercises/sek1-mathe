@@ -1,7 +1,7 @@
 0.40	Ein Liter Benzin kostet eins Komma achtzig Franken. Zwei Liter kosten drei Franken sechzig, vier Liter sieben Franken zwanzig. Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch null, null.
 15.91	Vier Kilometer kosten sechzehn Franken, nicht zweiundzwanzig. Die Grundtaxe zählt nur einmal. Das ist linear mit Anfangswert: eine Gerade, die nicht durch null, null geht.
-27.00	Eine Pizza-Bestellung kostet sechsunddreissig Franken. Bei zwei Personen zahlt jede achtzehn Franken, bei vier Personen neun. Doppelt so viele Personen, halb so viel pro Person: antiproportional. Das Produkt bleibt sechsunddreissig, der Graph ist ein Kehrwertgraph.
-43.73	So unterscheidest du: Mach den Doppelt-Test. Wird y doppelt so gross, ist es proportional. Wird y halb so gross, antiproportional. Weder noch, und der Graph ist eine Gerade: linear mit Anfangswert.
-56.84	Häufiger Fehler: Was steigt, ist nicht automatisch proportional, das Taxi zeigt es. Und was fällt, ist nicht automatisch antiproportional: Eine fallende Gerade ist linear.
-68.12	Zum Mitnehmen: Proportional ist eine Gerade durch null, null. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich.
-81.61	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+27.00	Eine Pizza-Bestellung kostet sechsunddreissig Franken. Bei zwei Personen zahlt jede achtzehn Franken, bei vier Personen neun. Doppelt so viele Personen, halb so viel pro Person: antiproportional. Das Produkt bleibt sechsunddreissig, die Punkte liegen auf einem Kehrwertgraphen.
+42.88	So unterscheidest du: Schau zuerst die Form an. Dann verdopple x an mehreren Stellen. Wird y jedes Mal doppelt so gross, ist es proportional. Wird y jedes Mal halb so gross, antiproportional. Eine Gerade, die nicht durch null, null geht, ist linear mit Anfangswert.
+59.90	Häufiger Fehler: Was steigt, ist nicht automatisch proportional, das Taxi zeigt es. Und was fällt, ist nicht automatisch antiproportional: Eine fallende Gerade ist linear.
+71.18	Zum Mitnehmen: Proportional ist eine Gerade durch null, null. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich.
+84.67	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

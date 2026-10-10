@@ -91,7 +91,7 @@
       ]
      ],
      "xname": "t [h]",
-     "yname": "[km]"
+     "yname": "Strecke [km]"
     }
    ],
    "dauer": 7.24
@@ -160,7 +160,7 @@
       ]
      ],
      "xname": "t [h]",
-     "yname": "[km]"
+     "yname": "Strecke [km]"
     },
     {
      "typ": "graf",
@@ -214,7 +214,7 @@
      "achsen": false,
      "raster": false,
      "xname": "t [h]",
-     "yname": "[km]",
+     "yname": "Strecke [km]",
      "figuren": [
       {
        "art": "strecke",
@@ -223,11 +223,23 @@
         0
        ],
        "bis": [
-        1.5,
-        24
+        0.5,
+        8
        ],
        "farbe": 1,
        "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.55,
+        6.2
+       ],
+       "text": "s",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
       }
      ]
     }
@@ -306,7 +318,7 @@
       ]
      ],
      "xname": "t [h]",
-     "yname": "[km]",
+     "yname": "Strecke [km]",
      "figuren": [
       {
        "art": "strecke",
@@ -315,11 +327,23 @@
         0
        ],
        "bis": [
-        1.5,
-        24
+        0.5,
+        8
        ],
        "farbe": 1,
        "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.55,
+        6.2
+       ],
+       "text": "s",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
       }
      ]
     },
@@ -375,7 +399,7 @@
      "achsen": false,
      "raster": false,
      "xname": "t [h]",
-     "yname": "[km]",
+     "yname": "Strecke [km]",
      "figuren": [
       {
        "art": "strecke",
@@ -384,11 +408,23 @@
         24
        ],
        "bis": [
-        1.5,
-        0
+        0.5,
+        16
        ],
        "farbe": 2,
        "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.55,
+        17.5
+       ],
+       "text": "d",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
       }
      ]
     }
@@ -459,7 +495,7 @@
       ]
      ],
      "xname": "t [h]",
-     "yname": "[km]",
+     "yname": "Strecke [km]",
      "figuren": [
       {
        "art": "strecke",
@@ -468,8 +504,8 @@
         0
        ],
        "bis": [
-        1.5,
-        24
+        0.5,
+        8
        ],
        "farbe": 1,
        "dicke": 5
@@ -481,8 +517,8 @@
         24
        ],
        "bis": [
-        1.5,
-        0
+        0.5,
+        16
        ],
        "farbe": 2,
        "dicke": 5
@@ -553,7 +589,59 @@
      "achsen": false,
      "raster": false,
      "xname": "t [h]",
-     "yname": "[km]"
+     "yname": "Strecke [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        8
+       ],
+       "bis": [
+        1.5,
+        24
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0.5,
+        16
+       ],
+       "bis": [
+        1.5,
+        0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.4,
+        24.5
+       ],
+       "text": "s",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.4,
+        3.2
+       ],
+       "text": "d",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ]
     }
    ],
    "dauer": 10.14
@@ -630,7 +718,7 @@
       ]
      ],
      "xname": "t [h]",
-     "yname": "[km]",
+     "yname": "Strecke [km]",
      "figuren": [
       {
        "art": "strecke",
@@ -657,6 +745,30 @@
        ],
        "farbe": 2,
        "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.4,
+        24.5
+       ],
+       "text": "s",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.4,
+        3.2
+       ],
+       "text": "d",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
       }
      ]
     }

@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "Raphael Arnold Kohler"
    },
-   "dateModified": "2026-10-09",
+   "dateModified": "2026-10-10",
    "isPartOf": {
     "@id": "https://sek1-mathe.begreifbar.ch/#website"
    },
@@ -763,7 +763,7 @@ span.orange{color:var(--orange)}
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Vier Graphen-Familien</span></span>
-          <span class="clip-zeit">1:53</span>
+          <span class="clip-zeit">1:58</span>
         </button>
       </div>
 
@@ -802,12 +802,12 @@ span.orange{color:var(--orange)}
             <tr><td>\(y = \sqrt{x}\)</td><td>Wurzelgraph</td><td>beginnt bei \((0 \mid 0)\), nur \(x \ge 0\), wird immer flacher</td><td>\(2\)</td></tr>
             <tr><td>\(y = \dfrac{1}{x}\)</td><td>Kehrwertgraph</td><td>zwei Äste, trifft keine Achse, \(x \neq 0\)</td><td>\(\tfrac{1}{4}\)</td></tr>
           </table>
-          <p>Mit einer Zahl \(a\) davor wird der Graph gestreckt (\(a = 2\): doppelt so hoch), mit \(a \lt 0\) an der \(x\)-Achse gespiegelt. Ein \(+ b\) schiebt ihn nach oben.</p>
+          <p>Die Merkmale gelten für die Grundform ohne \(+ b\). Mit einer Zahl \(a\) davor wird der Graph gestreckt (\(a = 2\): doppelt so hoch), mit \(a \lt 0\) an der \(x\)-Achse gespiegelt. Ein \(+ b\) schiebt ihn um \(b\) nach oben, bei \(b \lt 0\) nach unten. Dann trifft zum Beispiel auch ein Kehrwertgraph eine Achse.</p>
           <p><b>Zuordnen mit Testpunkten:</b> Setz gut ablesbare \(x\)-Werte ein, zum Beispiel \(x = 0\), \(1\), \(4\) und einen negativen Wert.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Zu wenige Punkte:</b> \(y = x\) und \(y = x^2\) gehen beide durch \((0 \mid 0)\) und \((1 \mid 1)\). Erst \(x = 2\) trennt sie: \(2\) gegen \(4\).</p>
+          <p><b>Zu wenige Punkte:</b> \(y = x\) und \(y = x^2\) gehen beide durch \((0 \mid 0)\) und \((1 \mid 1)\). Ein dritter Punkt trennt sie, zum Beispiel \(x = 2\): \(2\) gegen \(4\).</p>
           <p><b>Wurzel und Kehrwert überall:</b> \(\sqrt{-4}\) gibt es nicht, und \(\dfrac{1}{0}\) auch nicht. Dort hat der Graph keinen Punkt.</p>
         </div>
       </div>
@@ -838,8 +838,8 @@ span.orange{color:var(--orange)}
         </div>
         <ol class="aufg">
           <li>
-            <div class="frage"><span class="nr">1a</span><span class="pkt">(3 P)</span><span class="txt">Berechne für \(x = 4\): \(y = 3x\), \(y = x^2\), \(y = \sqrt{x}\), \(y = \dfrac{6}{x}\). Welche Gleichung gehört zu einer Parabel, welche zu einem Kehrwertgraphen?</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(12\), \(16\), \(2\), \(1.5\). Parabel: \(y = x^2\). Kehrwertgraph: \(y = \dfrac{6}{x}\).</p></div></details>
+            <div class="frage"><span class="nr">1a</span><span class="pkt">(3 P)</span><span class="txt">Berechne für \(x = 9\): \(y = 2x\), \(y = x^2\), \(y = \sqrt{x}\), \(y = \dfrac{18}{x}\). Welche Gleichung gehört zu einer Parabel, welche zu einem Kehrwertgraphen?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(18\), \(81\), \(3\), \(2\). Parabel: \(y = x^2\). Kehrwertgraph: \(y = \dfrac{18}{x}\).</p></div></details>
           </li>
           <li>
             <div class="frage"><span class="nr">1b</span><span class="pkt">(3 P)</span><span class="txt">Fülle die Wertetabelle von \(y = 0.5x^2\) für \(x = -4, -2, 0, 2, 4\) und zeichne den Graphen. Was fällt dir auf?</span></div>
@@ -851,16 +851,17 @@ span.orange{color:var(--orange)}
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(y = \dfrac{3}{x}\): \(\tfrac{3}{1} = 3\), \(\tfrac{3}{3} = 1\), und ein Kehrwertgraph trifft keine Achse. \(y = -x + 4\) geht zwar durch beide Punkte, trifft aber die Achsen.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">1d</span><span class="pkt">(2 P)</span><span class="txt">Lea sagt: «\(y = x^2\) ist eine Gerade, denn sie geht durch \((0 \mid 0)\) und \((1 \mid 1)\).» Widerlege mit einem dritten Punkt.</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\((2 \mid 4)\): Von \(x = 0\) bis \(1\) steigt \(y\) um \(1\), von \(1\) bis \(2\) um \(3\). Bei einer Geraden wäre es beide Male gleich viel.</p></div></details>
+            <div class="frage"><span class="nr">1d</span><span class="pkt">(2 P)</span><span class="txt">Fülle die Wertetabelle von \(y = \dfrac{6}{x}\) für \(x = 1, 2, 3, 6\) und skizziere den Graphen für \(x \gt 0\).</span></div>
+            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(6,\ 3,\ 2,\ 1\). Eine fallende Kurve, die sich den Achsen nähert, sie aber nie trifft: ein Ast eines Kehrwertgraphen.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">1e</span><span class="pkt">(2 P)</span><span class="txt">Warum hat der Graph von \(y = \sqrt{x}\) bei \(x = -4\) keinen Punkt?</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Keine Zahl ergibt mit sich selbst multipliziert \(-4\): Quadrate sind nie negativ. Darum gibt es \(\sqrt{-4}\) nicht.</p></div></details>
+            <div class="frage"><span class="nr">1e</span><span class="pkt">(2 P)</span><span class="txt">Für welche \(x\) hat \(y = 2\sqrt{x}\) keinen Punkt, für welche \(y = \dfrac{5}{x}\)? Begründe.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(y = 2\sqrt{x}\): für alle negativen \(x\), denn Quadrate sind nie negativ. \(y = \dfrac{5}{x}\): nur für \(x = 0\), denn durch null kann man nicht teilen.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Wie sieht der Graph von \(y = -x^2\) aus? Berechne zwei Punkte.</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Eine nach unten offene Parabel mit Scheitel \((0 \mid 0)\): \((2 \mid -4)\), \((-2 \mid -4)\). Gespiegelt an der \(x\)-Achse.</p></div></details>
+            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Wie sieht der Graph von \(y = -0.5x^2\) aus? Berechne zwei Punkte und vergleiche mit \(y = x^2\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Eine nach unten offene Parabel mit Scheitel \((0 \mid 0)\): \((2 \mid -2)\), \((-2 \mid -2)\). Gespiegelt an der \(x\)-Achse und flacher als \(y = x^2\).</p></div></details>
           </li>
         </ol>
       </div>
@@ -876,7 +877,7 @@ span.orange{color:var(--orange)}
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Proportional, antiproportional, linear</span></span>
-          <span class="clip-zeit">1:27</span>
+          <span class="clip-zeit">1:30</span>
         </button>
       </div>
 
@@ -891,7 +892,7 @@ span.orange{color:var(--orange)}
         </div>
         <div class="sl-row">
           <div class="sl-grp akz-blau"><label for="s2-k"><span class="var">k</span></label><input type="range" id="s2-k" min="0.5" max="24" step="0.5" value="1"><span class="sl-val"></span></div>
-          <div class="sl-grp akz-orange"><label for="s2-b"><span class="var">b</span></label><input type="range" id="s2-b" min="-4" max="10" step="1" value="0"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s2-b"><span class="var">b</span></label><input type="range" id="s2-b" min="0" max="10" step="1" value="0"><span class="sl-val"></span></div>
         </div>
         <div class="sl-row">
           <div class="sl-grp akz-gruen"><label for="s2-x"><span class="var">Doppelt-Test bei x</span></label><input type="range" id="s2-x" min="1" max="5" step="1" value="1"><span class="sl-val"></span></div>
@@ -903,7 +904,7 @@ span.orange{color:var(--orange)}
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Kontrollfragen zu den Zusammenhängen</span></span>
-          <span class="clip-zeit">0:39</span>
+          <span class="clip-zeit">0:42</span>
         </button>
       </div>
 
@@ -916,14 +917,15 @@ span.orange{color:var(--orange)}
             <tr><th>Gleichung</th><td>\(y = k \cdot x\)</td><td>\(y = k \cdot x + b\), \(b \neq 0\)</td><td>\(y = \dfrac{k}{x}\)</td></tr>
             <tr><th>Graph</th><td>Gerade durch \((0 \mid 0)\)</td><td>Gerade, nicht durch \((0 \mid 0)\)</td><td>Kehrwertgraph</td></tr>
             <tr><th>Tabelle</th><td>\(y : x\) gleich</td><td>bei gleichen Schritten gleiche Differenzen</td><td>\(x \cdot y\) gleich</td></tr>
-            <tr><th>\(x\) doppelt</th><td>\(y\) doppelt</td><td>weder doppelt noch halb</td><td>\(y\) halb</td></tr>
+            <tr><th>\(x\) doppelt</th><td>\(y\) überall doppelt</td><td>\(y\) nicht überall doppelt oder halb</td><td>\(y\) überall halb</td></tr>
           </table>
           <p>Benzin \(1.80\) Fr. pro Liter: \(y = 1.8x\), proportional. Taxi \(6\) Fr. und \(2.50\) Fr. pro km: \(y = 2.5x + 6\), linear mit Anfangswert. \(36\) Fr. Pizza auf \(x\) Personen: \(y = \dfrac{36}{x}\), antiproportional.</p>
+          <p><b>So prüfst du:</b> zuerst die Form (Gerade durch \((0 \mid 0)\), andere Gerade oder Kehrwertgraph), dann den Doppelt-Test an mehreren Stellen. \(k\) ist der Faktor; bei einer Geraden ist er die Steigung \(m\).</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>«Steigt, also proportional»:</b> Das Taxi wird teurer, je weiter du fährst, aber \(2\) km kosten \(11\) Fr. und \(4\) km \(16\) Fr., nicht \(22\) Fr. Der Anfangswert verhindert das Verdoppeln.</p>
-          <p><b>«Fällt, also antiproportional»:</b> Eine fallende Gerade ist linear. Antiproportional heisst: Das Produkt bleibt gleich.</p>
+          <p><b>«Fällt, also antiproportional»:</b> Eine fallende Gerade ist linear. Bei \(y = -x + 6\) wird \(y\) von \(x = 2\) zu \(x = 4\) zufällig halb so gross (\(4\) und \(2\)), von \(x = 1\) zu \(x = 2\) aber nicht (\(5\) und \(4\)). Antiproportional heisst: Das Produkt bleibt überall gleich.</p>
         </div>
       </div>
 
@@ -973,7 +975,7 @@ span.orange{color:var(--orange)}
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>(a) \(k = 10 : 4 = 2.5\), \(y = 2.5x\). (b) \(k = 4 \cdot 10 = 40\), \(y = \dfrac{40}{x}\).</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">2f</span><span class="pkt">(2 P)</span><span class="txt">Warum geht der Graph eines proportionalen Zusammenhangs immer durch \((0 \mid 0)\)?</span></div>
+            <div class="frage"><span class="nr">2f</span><span class="pkt">(2 P)</span><span class="txt">Warum geht der Graph eines proportionalen Zusammenhangs wie «Preis für \(x\) kg Äpfel» immer durch \((0 \mid 0)\)?</span></div>
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Für \(x = 0\) ist \(y = k \cdot 0 = 0\): Für null Kilogramm zahlst du nichts. Ein Anfangswert würde den Graphen nach oben schieben.</p></div></details>
           </li>
         </ol>
@@ -1026,11 +1028,12 @@ span.orange{color:var(--orange)}
             <li>\(15\) bis \(20\) min: \(v = \dfrac{1400 - 800}{5} = 120\) m/min <span class="warum">steiler = schneller</span></li>
           </ol>
           <p>Ein <b>Knick</b> heisst: Das Tempo ändert sich. <b>Fallend</b> heisst: Die Entfernung vom Start wird kleiner, es geht zurück. <b>Senkrecht</b> ist unmöglich: Weg ohne Zeit gibt es nicht.</p>
-          <p>Umrechnen: \(120\) m/min sind \(120 \cdot 60 = 7200\) m pro Stunde, also \(7.2\) km/h.</p>
+          <p>In der Simulation heisst eine negative Geschwindigkeit: zurück. \(-80\) m/min sind \(80\) m/min in Richtung zu Hause, der Graph fällt.</p>
+          <p>Umrechnen: \(120\) m/min sind \(120 \cdot 60 = 7200\) m pro Stunde, also \(7.2\) km/h. Umgekehrt: \(6\) km/h sind \(6000\) m in \(60\) min, also \(100\) m/min.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Graph als Landschaft gelesen:</b> Steigt der Graph, geht es nicht bergauf. Er zeigt die Entfernung, nicht die Höhe.</p>
+          <p><b>Graph als Landschaft gelesen:</b> Steigt der Graph, heisst das nicht, dass es bergauf geht. Er zeigt die Entfernung, nicht die Höhe.</p>
           <p><b>Stand statt Steigung:</b> Bei \(t = 20\) ist \(s = 1400\) m. Die Geschwindigkeit ist aber \(\dfrac{\Delta s}{\Delta t}\) im Abschnitt, hier \(120\) m/min.</p>
         </div>
       </div>
@@ -1065,7 +1068,7 @@ span.orange{color:var(--orange)}
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{600}{4} = 150\) m/min, dann \(0\) (Pause, \(6\) min), dann \(\dfrac{800}{4} = 200\) m/min. Zügig los, warten, am Schluss noch schneller.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">3b</span><span class="pkt">(2 P)</span><span class="txt">Skizziere einen Weg-Zeit-Graphen: \(10\) min mit \(50\) m/min, \(5\) min Pause, \(5\) min mit \(100\) m/min zurück zum Start.</span></div>
+            <div class="frage"><span class="nr">3b</span><span class="pkt">(2 P)</span><span class="txt">Skizziere den Graphen der Entfernung von zu Hause: \(10\) min mit \(50\) m/min, \(5\) min Pause, \(5\) min mit \(100\) m/min zurück zum Start.</span></div>
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Von \((0 \mid 0)\) bis \((10 \mid 500)\), waagrecht bis \((15 \mid 500)\), dann fallend bis \((20 \mid 0)\).</p></div></details>
           </li>
           <li>
@@ -1077,12 +1080,12 @@ span.orange{color:var(--orange)}
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Der Graph zeigt die Entfernung über der Zeit, nicht die Höhe des Weges. Steigend heisst: Die Entfernung wird grösser, egal ob es bergauf oder bergab geht.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">3e</span><span class="pkt">(2 P)</span><span class="txt">Rechne um: \(120\) m/min in km/h und \(15\) km/h in m/min.</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(120 \cdot 60 = 7200\) m/h \(= 7.2\) km/h. \(15\) km/h \(= 15\,000\) m in \(60\) min \(= 250\) m/min.</p></div></details>
+            <div class="frage"><span class="nr">3e</span><span class="pkt">(2 P)</span><span class="txt">Rechne um: \(90\) m/min in km/h und \(12\) km/h in m/min.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(90 \cdot 60 = 5400\) m/h \(= 5.4\) km/h. \(12\) km/h \(= 12\,000\) m in \(60\) min \(= 200\) m/min.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">3f</span><span class="pkt">(3 P)</span><span class="txt">Warum kann ein Weg-Zeit-Graph nie senkrecht sein, und warum nie nach links laufen?</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Senkrecht hiesse: Weg ohne Zeit, also unendlich schnell. Nach links hiesse: Die Zeit läuft rückwärts. Beides ist unmöglich.</p></div></details>
+            <div class="frage"><span class="nr">3f</span><span class="pkt">(3 P)</span><span class="txt">Tim fährt \(6\) min mit \(200\) m/min von zu Hause weg, macht \(4\) min Pause und fährt dann mit \(100\) m/min zurück. Skizziere den Graphen der Entfernung von zu Hause. Wann ist er wieder zu Hause? Woran siehst du im Graphen, dass er zurück langsamer fährt?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Von \((0 \mid 0)\) bis \((6 \mid 1200)\), waagrecht bis \((10 \mid 1200)\), fallend bis \((22 \mid 0)\): \(1200 : 100 = 12\) min zurück, also nach \(22\) min zu Hause. Das fallende Stück ist flacher als das steigende.</p></div></details>
           </li>
         </ol>
       </div>
@@ -1121,7 +1124,7 @@ span.orange{color:var(--orange)}
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Kontrollfragen: zurückgelegt oder entfernt</span></span>
-          <span class="clip-zeit">0:38</span>
+          <span class="clip-zeit">0:39</span>
         </button>
       </div>
 
@@ -1141,7 +1144,7 @@ span.orange{color:var(--orange)}
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>Zurückgelegt und Entfernung verwechselt:</b> Auf dem Heimweg wächst der zurückgelegte Weg weiter, die Entfernung von zu Hause wird kleiner.</p>
-          <p><b>Fallend heisst nicht langsamer:</b> Ein fallender Graph der Entfernung zeigt ein Zurückfahren, langsamer heisst flacher.</p>
+          <p><b>Fallend heisst nicht langsamer:</b> Fällt die Entfernung <b>von zu Hause</b>, fährst du zurück. Fällt die Entfernung <b>zum Ziel</b>, kommst du näher. Langsamer heisst in beiden Fällen: flacher.</p>
         </div>
       </div>
 
@@ -1183,16 +1186,16 @@ span.orange{color:var(--orange)}
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(36 - 12t = 6\), \(12t = 30\), \(t = 2.5\) h.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">4d</span><span class="pkt">(2 P)</span><span class="txt">Mia geht zum Bäcker und wieder nach Hause. Sie zeichnet die Entfernung von zu Hause: Der Graph steigt und fällt dann wieder. Ihr Freund sagt: «Fallend heisst, sie wird langsamer.» Stimmt das?</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Nein. Fallend heisst: Die Entfernung von zu Hause nimmt ab, Mia geht zurück. Langsamer hiesse: flacher.</p></div></details>
+            <div class="frage"><span class="nr">4d</span><span class="pkt">(2 P)</span><span class="txt">Ein Graph zeigt die Entfernung zum Ziel einer Wanderung: Er fällt gleichmässig von \(15\) km auf \(0\) km in \(5\) h. Jonas sagt: «Fallend heisst, die Wanderer gehen zurück.» Stimmt das? Wie schnell gehen sie?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Nein. Die Entfernung <b>zum Ziel</b> wird kleiner, weil sie vorwärts gehen. Tempo: \(15 : 5 = 3\) km/h.</p></div></details>
           </li>
           <li>
             <div class="frage"><span class="nr">4e</span><span class="pkt">(3 P)</span><span class="txt">Lea zeichnet den zurückgelegten Weg einer Wanderung. In einem Abschnitt fällt ihr Graph, in einem anderen ist er senkrecht. Was ist an beiden Stellen falsch?</span></div>
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Der zurückgelegte Weg kann nicht kleiner werden, auch auf dem Rückweg nicht: Fallen ist unmöglich. Senkrecht hiesse Weg ohne Zeit: ebenfalls unmöglich.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Warum gilt immer: zurückgelegt plus noch entfernt gleich ganze Strecke?</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Jeder Kilometer der Strecke ist entweder schon gefahren oder noch vor dir. Zusammen ergeben sie die ganze Strecke.</p></div></details>
+            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Von einer \(40\) km langen Velotour hast du nach \(1.5\) h gleichmässig \(27\) km zurückgelegt. Wie weit ist das Ziel noch, und wie schnell fährst du?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(40 - 27 = 13\) km, denn zurückgelegt und noch entfernt ergeben zusammen die ganze Strecke. Tempo: \(27 : 1.5 = 18\) km/h.</p></div></details>
           </li>
         </ol>
       </div>
@@ -1502,7 +1505,7 @@ span.orange{color:var(--orange)}
       var k = Achsen(svg, GITTER);
       famZeichnen(k, ZIEL[0], ZIEL[1], ZIEL[2], 'linie grau gestrichelt', -7, 7);
       famZeichnen(k, Z.typ, Z.a, Z.b, 'linie blau', -7, 7);
-      formel.innerHTML = FAMNAME[Z.typ] + ': <b>' + famTxt(Z.typ, Z.a, Z.b) + '</b>';
+      formel.innerHTML = Z.a === 0 ? '<b>a = 0</b>: ' + 'es bleibt nur <b>y = ' + z(Z.b) + '</b>, eine waagrechte Gerade. Mit a = 0 gehört der Graph zu keiner Familie mehr.' : FAMNAME[Z.typ] + ': <b>' + famTxt(Z.typ, Z.a, Z.b) + '</b>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -1593,7 +1596,7 @@ span.orange{color:var(--orange)}
   (function(){
     var fig = document.getElementById('sim4'); if (!fig) return;
     var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
-    var F4 = { w: 300, h: 240, rl: 26, x0: 0, x1: 3, y0: 0, y1: 36, sx: 0.5, sy: 4, xm: [0.5, 1, 1.5, 2, 2.5, 3], ym: [6, 12, 18, 24, 30, 36], xname: 't [h]', yname: '[km]', r: 4 };
+    var F4 = { w: 300, h: 240, rl: 26, x0: 0, x1: 3, y0: 0, y1: 36, sx: 0.5, sy: 4, xm: [0.5, 1, 1.5, 2, 2.5, 3], ym: [6, 12, 18, 24, 30, 36], xname: 't [h]', yname: 'Strecke [km]', r: 4 };
     function zustand(){ return { L: wertR(fig, 's4-L'), v: wertR(fig, 's4-v'), t: wertR(fig, 's4-t') }; }
     function zeichnen(){
       var Z = zustand(); zeigeWert(fig, 's4-L', Z.L + ' km'); zeigeWert(fig, 's4-v', Z.v + ' km/h'); zeigeWert(fig, 's4-t', z(Z.t) + ' h');
@@ -1606,9 +1609,9 @@ span.orange{color:var(--orange)}
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, [
-      { text: '24 km mit 16 km/h. Wann ist die Hälfte geschafft? Zieh \\(t\\) dorthin.', ok: function(Z){ return Z.L === 24 && Z.v === 16 && Z.t === 0.75; } },
+      { text: '20 km mit 10 km/h. Wann ist die Hälfte geschafft? Zieh \\(t\\) dorthin.', ok: function(Z){ return Z.L === 20 && Z.v === 10 && Z.t === 1; } },
       { text: '20 km mit 8 km/h. Wann sind es noch 4 km?', ok: function(Z){ return Z.L === 20 && Z.v === 8 && Z.t === 2; } },
-      { text: '12 km mit 4 km/h. Wann sind noch 6 km übrig?', ok: function(Z){ return Z.L === 12 && Z.v === 4 && Z.t === 1.5; } },
+      { text: '14 km mit 4 km/h. Wann sind noch 6 km übrig?', ok: function(Z){ return Z.L === 14 && Z.v === 4 && Z.t === 2; } },
       { text: '30 km mit 12 km/h. Wann kommst du an?', ok: function(Z){ return Z.L === 30 && Z.v === 12 && Z.t === 2.5; } },
       { text: '18 km mit 6 km/h. Wann ist der zurückgelegte Weg doppelt so lang wie der Rest?', ok: function(Z){ return Z.L === 18 && Z.v === 6 && Z.t === 2; } }
     ], sim);
@@ -1704,20 +1707,20 @@ span.orange{color:var(--orange)}
 
     /* Feste Aufgaben (Clips, Festhalten, Erkundungen, Kapitelaufgaben, Gesamttest): nie als Zufallsübung. */
     var SPERRE = [
-      'zu|g|2|-1', 'zu|q|1|-2', 'zu|w|2|0', 'zu|k|4|0', 'zu|q|-0.5|3', 'zu|g|2|1', 'zu|q|0.5|0', 'zu|k|8|0', 'zu|k|3|0', 'zu|q|1|0', 'zu|w|1|0', 'zu|k|1|0',
-      'we|k|3|6', 'we|w|2|9', 'we|q|0.5|4', 'we|w|2|4', 'we|k|4|4', 'we|k|6|4',
+      'zu|g|2|-1', 'zu|g|1|0', 'zu|q|1|-2', 'zu|w|2|0', 'zu|k|4|0', 'zu|q|-0.5|3', 'zu|g|2|1', 'zu|q|0.5|0', 'zu|k|8|0', 'zu|k|3|0', 'zu|q|1|0', 'zu|w|1|0', 'zu|k|1|0',
+      'we|k|3|6', 'we|w|2|9', 'we|q|0.5|2', 'we|q|0.5|-2', 'we|k|12|3', 'we|k|12|0.5', 'we|g|2|9', 'we|q|1|9', 'we|w|1|9', 'we|k|18|9', 'we|k|6|2', 'we|k|6|3', 'we|q|-0.5|2', 'we|q|-0.5|-2', 'we|q|0.5|4', 'we|w|2|4', 'we|k|4|4', 'we|k|6|4',
       'nw|anti|6|10', 'nw|anti|5|12', 'nw|anti|2|12', 'nw|anti|3|4', 'nw|prop|4|10', 'nw|anti|4|10',
       'te|0,0;10,800;15,800;20,1400', 'te|0,0;4,600;10,600;14,1400', 'te|0,0;10,600;15,600;25,1800',
-      're|24|16', 're|36|12', 're|12|4', 're|30|20', 're|20|8', 're|18|6'
+      're|24|16', 're|36|12', 're|12|4', 're|20|10', 're|14|4', 're|40|18', 're|30|20', 're|20|8', 're|18|6'
     ];
     function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
 
     var SIT = {
       prop: [['Ein Kilogramm Äpfel kostet {k} Fr. Preis für \\(x\\) kg.', [3, 4, 5]], ['Ein Auto fährt mit {k} km/h. Weg nach \\(x\\) Stunden.', [60, 80, 90]],
-             ['Ein Kinoeintritt kostet {k} Fr. Preis für \\(x\\) Personen.', [12, 18, 20]], ['Ein Wasserhahn liefert {k} l pro Minute. Wasser nach \\(x\\) Minuten.', [6, 8, 12]]],
-      anti: [['{k} Bonbons werden gleichmässig auf \\(x\\) Kinder verteilt. Bonbons pro Kind.', [24, 36, 48]], ['Eine Strecke von {k} km. Fahrzeit bei \\(x\\) km/h.', [120, 180, 240]],
-             ['{k} Fr. Miete werden auf \\(x\\) Personen aufgeteilt. Betrag pro Person.', [600, 900, 1200]], ['Ein Becken mit {k} l wird mit \\(x\\) gleichen Pumpen geleert. Zeit in Minuten.', [600, 900, 1200]]],
-      lin:  [['Ein Taxi kostet {b} Fr. Grundtaxe und {k} Fr. pro km. Preis für \\(x\\) km.', [2, 3, 4]], ['Ein Fitnessabo kostet {b} Fr. und {k} Fr. pro Besuch. Kosten für \\(x\\) Besuche.', [5, 6, 8]],
+             ['Eine Busfahrkarte kostet {k} Fr. Preis für \\(x\\) Karten.', [3, 4, 5]], ['Ein Wasserhahn liefert {k} l pro Minute. Wasser nach \\(x\\) Minuten.', [6, 8, 12]]],
+      anti: [['{k} Murmeln werden gleichmässig auf \\(x\\) Säckchen verteilt. Murmeln pro Säckchen.', [24, 36, 60]], ['Eine Strecke von {k} km. Fahrzeit bei \\(x\\) km/h.', [120, 180, 240]],
+             ['{k} Fr. Miete werden auf \\(x\\) Personen aufgeteilt. Betrag pro Person.', [600, 900, 1200]], ['Eine Arbeit dauert für eine Person {k} Minuten. Dauer, wenn \\(x\\) Personen gleich schnell mithelfen.', [60, 90, 120]]],
+      lin:  [['Ein Taxi kostet {b} Fr. Grundtaxe und {k} Fr. pro km. Preis für \\(x\\) km.', [2, 3, 4]], ['Ein Handyabo kostet {b} Fr. im Monat und {k} Fr. pro GB Daten. Kosten für \\(x\\) GB.', [2, 3, 4]],
              ['Eine Kerze ist {b} cm hoch und wird pro Stunde {k} cm kürzer. Höhe nach \\(x\\) Stunden.', [1, 2, 3]], ['Ein Tank enthält {b} l, pro Minute kommen {k} l dazu. Inhalt nach \\(x\\) Minuten.', [4, 5, 10]]]
     };
 
@@ -1773,11 +1776,12 @@ span.orange{color:var(--orange)}
           return { art: art, text: s[0].replace('{k}', k).replace('{b}', b) + ' Welcher Zusammenhang ist das?', muster: '{w}',
                    optionen: [['prop', 'proportional'], ['anti', 'antiproportional'], ['lin', 'linear mit Anfangswert']] }; },
         richtig: function(A, e){ return e.w === A.art; },
-        fehler: function(A){ return { prop: [[{ w: 'lin' }, 'null']], anti: [[{ w: 'lin' }, 'halb']], lin: [[{ w: 'prop' }, 'Anfang']] }[A.art]; },
+        fehler: function(A){ return { prop: [[{ w: 'lin' }, 'Anfangswert']], anti: [[{ w: 'lin' }, 'Anfangswert']], lin: [[{ w: 'prop' }, 'null']] }[A.art]; },
         pruefen: function(A, e){
-          if (A.art === 'lin') return 'Hier gibt es schon bei \\(x = 0\\) einen Wert, einen <b>Anfangswert</b>. Proportional geht durch \\((0 \\mid 0)\\).';
-          if (A.art === 'anti') return 'Mach den Doppelt-Test: Wird \\(x\\) doppelt so gross, wird \\(y\\) <b>halb</b> so gross. Das Produkt bleibt gleich.';
-          return 'Für \\(x = 0\\) ist \\(y\\) hier <b>null</b>, und doppeltes \\(x\\) gibt doppeltes \\(y\\).'; },
+          if (e.w === 'lin') return 'Linear mit <b>Anfangswert</b> hiesse: Schon bei \\(x = 0\\) gibt es einen Wert, der nicht null ist. Gibt es den hier?';
+          if (e.w === 'anti') return 'Antiproportional hiesse: Doppeltes \\(x\\) gibt überall halbes \\(y\\), das Produkt bleibt gleich. Stimmt das hier?';
+          if (e.w === 'prop') return 'Proportional hiesse: Bei \\(x = 0\\) ist \\(y\\) <b>null</b>, und doppeltes \\(x\\) gibt überall doppeltes \\(y\\). Stimmt beides?';
+          return 'Wähle eine Antwort.'; },
         tipps: function(A){ return ['Doppelt-Test: Was passiert mit \\(y\\), wenn \\(x\\) doppelt so gross wird?', 'Und was ist bei \\(x = 0\\)?']; },
         loesung: function(A){ return '\\text{' + { prop: 'proportional', anti: 'antiproportional', lin: 'linear mit Anfangswert' }[A.art] + '}'; } },
 
@@ -1795,8 +1799,8 @@ span.orange{color:var(--orange)}
         pruefen: function(A, e){
           if (A.art === 'anti') return 'Antiproportional: Das <b>Produkt</b> bleibt gleich, \\(' + A.x0 + ' \\cdot ' + A.y0 + ' = ' + A.x0 * A.y0 + '\\). Wird \\(x\\) grösser, wird \\(y\\) kleiner.';
           return 'Proportional: Der <b>Quotient</b> \\(y : x = ' + bWertTex(B(A.y0, A.x0)) + '\\) bleibt gleich. Wird \\(x\\) grösser, wird auch \\(y\\) grösser.'; },
-        tipps: function(A){ return [A.art === 'prop' ? 'Rechne zuerst \\(y\\) für \\(x = 1\\): \\(' + A.y0 + ' : ' + A.x0 + '\\).' : 'Rechne das Produkt \\(x \\cdot y\\) aus. Es bleibt gleich.',
-          A.art === 'prop' ? 'Dann mal \\(' + A.x1 + '\\).' : '\\(' + A.x0 * A.y0 + ' : ' + A.x1 + '\\)']; },
+        tipps: function(A){ return [A.art === 'prop' ? 'Proportional: \\(x\\) wird mal \\(\\tfrac{' + A.x1 + '}{' + A.x0 + '}\\) genommen, also auch \\(y\\).' : 'Rechne das Produkt \\(x \\cdot y\\) aus. Es bleibt gleich.',
+          A.art === 'prop' ? '\\(' + A.y0 + ' \\cdot ' + A.x1 + ' : ' + A.x0 + '\\)' : '\\(' + A.x0 * A.y0 + ' : ' + A.x1 + '\\)']; },
         loesung: function(A){ return A.art === 'prop' ? 'y = \\dfrac{' + A.y0 + '}{' + A.x0 + '} \\cdot ' + A.x1 + ' = ' + bWertTex(A.y1) : 'y = \\dfrac{' + A.x0 + ' \\cdot ' + A.y0 + '}{' + A.x1 + '} = ' + bWertTex(A.y1); } },
 
       /* ── Kapitel 3 ── */
@@ -1850,7 +1854,7 @@ span.orange{color:var(--orange)}
           var v = zufall([4, 5, 6, 8, 10, 12, 15, 16, 20]), T = zufall([2, 3, 4]), L = v * T + zufall([0, v, 2 * v]), t = zufall([0.5, 1, 1.5, 2, 2.5]);
           if (t >= L / v) return TYPEN.restweg.neu();
           var zz = bMul(B(v), bDez(t));
-          return { L: L, v: v, t: t, z: zz, r: bSub(B(L), zz), text: 'Eine Velotour ist ' + L + ' km lang. Du fährst gleichmässig ' + v + ' km/h. Wie weit bist du nach ' + t + ' h gefahren, und wie weit ist es dann noch bis zum Ziel?',
+          return { L: L, v: v, t: t, z: zz, r: bSub(B(L), zz), text: (v <= 6 ? 'Eine Wanderung ist ' + L + ' km lang. Du gehst' : 'Eine Velotour ist ' + L + ' km lang. Du fährst') + ' gleichmässig ' + v + ' km/h. Wie weit bist du nach ' + t + ' h gefahren, und wie weit ist es dann noch bis zum Ziel?',
                    muster: 'zurückgelegt {z} km &nbsp; noch {r} km' }; },
         richtig: function(A, e){ return bEq(e.z, A.z) && bEq(e.r, A.r); },
         fehler: function(A){ return bEq(A.z, A.r) ? [[{ z: String(A.L), r: '0' }, 'Ziel']] : [[{ z: bWert(A.r).replace('−', '-'), r: bWert(A.z).replace('−', '-') }, 'Vertauscht']]; },
@@ -1867,20 +1871,25 @@ span.orange{color:var(--orange)}
         schl: function(A){ return 'kr|' + A.art + '|' + A.L.join(';'); },
         eingabe: function(A){ return { w: A.art }; },
         neu: function(){
-          var art = zufall(['senk', 'zeit', 'faellt', 'ok']), a = zufall([4, 5, 6]), h = zufall([400, 600, 800]), L, y = art === 'faellt' ? 'zurückgelegter Weg [m]' : 'Entfernung von zu Hause [m]';
+          var art = zufall(['senk', 'zeit', 'faellt', 'ok']), a = zufall([4, 5, 6]), h = zufall([400, 600, 800]), L,
+              y = zufall(['zurückgelegter Weg [m]', 'Entfernung von zu Hause [m]']);
+          if (art === 'faellt') y = 'zurückgelegter Weg [m]';
           if (art === 'senk') L = [[0, 0], [a, h], [a, h + 400], [a + 5, h + 400]];
           else if (art === 'zeit') L = [[0, 0], [a + 4, h], [a + 2, h + 300], [a + 6, h + 400]];
           else if (art === 'faellt') L = [[0, 0], [a, h], [a + 3, h], [a + 7, h - 300]];
+          else if (y.indexOf('zurück') === 0) L = [[0, 0], [a, h], [a + 3, h], [a + 7, h + 400]];
           else L = [[0, 0], [a, h], [a + 3, h], [a + 7, 0]];
           L = L.map(function(p){ return p.map(String); });
           return { art: art, L: L, text: 'Was ist an diesem Diagramm falsch? Die \\(y\\)-Achse zeigt: <b>' + y + '</b>.'
-                   + mini('data-linie="' + L.map(function(p){ return p.join(','); }).join(';') + '" data-fenster="0,14,0,1400" data-schritte="2,200" data-xname="t [min]" data-yname="' + y.replace(' [m]', '') + '"', 'Bewegungsdiagramm'),
+                   + mini('data-linie="' + L.map(function(p){ return p.join(','); }).join(';') + '" data-fenster="0,14,0,1400" data-schritte="2,200" data-xname="t [min]" data-yname="' + y + '"', 'Bewegungsdiagramm'),
                    optionen: [['senk', 'Ein Stück ist senkrecht: Weg ohne Zeit geht nicht.'], ['zeit', 'Ein Stück läuft nach links: Die Zeit läuft nie rückwärts.'],
                               ['faellt', 'Der zurückgelegte Weg kann nicht kleiner werden.'], ['ok', 'Nichts, das Diagramm ist möglich.']], muster: '{w}' }; },
         richtig: function(A, e){ return e.w === A.art; },
-        fehler: function(A){ return [[{ w: A.art === 'ok' ? 'faellt' : 'ok' }, A.art === 'ok' ? 'Entfernung' : 'Schau']]; },
+        fehler: function(A){ return [[{ w: A.art === 'ok' ? 'faellt' : 'ok' }, A.art === 'ok' ? 'y-Achse' : 'Schau']]; },
         pruefen: function(A, e){
-          if (A.art === 'ok') return 'Die <b>Entfernung</b> von zu Hause darf kleiner werden: auf dem Rückweg. Dieses Diagramm ist möglich.';
+          if (e.w === 'faellt') return 'Lies die <b>y-Achse</b>: Welche Grösse ist dargestellt? Fällt der Graph überhaupt, und darf diese Grösse kleiner werden?';
+          if (e.w === 'senk') return 'Ist wirklich ein Stück senkrecht? Prüf, ob an einer Stelle Weg ohne Zeit dazukommt.';
+          if (e.w === 'zeit') return 'Läuft wirklich ein Stück nach links? Folge dem Graphen von links nach rechts.';
           return '<b>Schau</b> jedes Stück an: Ist es senkrecht? Läuft es nach links? Und darf die Grösse auf der \\(y\\)-Achse kleiner werden?'; },
         tipps: function(A){ return ['Die Zeit läuft nach rechts, nie zurück, und nie ohne Weg weiter: keine senkrechten Stücke.', 'Der zurückgelegte Weg kann nur wachsen oder gleich bleiben. Eine Entfernung darf auch kleiner werden.']; },
         loesung: function(A){ return '\\text{' + { senk: 'senkrechtes Stück', zeit: 'Stück nach links', faellt: 'zurückgelegter Weg fällt', ok: 'möglich' }[A.art] + '}'; } }

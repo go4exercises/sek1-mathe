@@ -36,3 +36,12 @@ Warum: Fehler, die im Sek-I-Leitprogramm auftraten und sich in TALS genauso eins
 Was: In `HOWTO-leitprogramme.md` §15 nach dem Punkt zu `@…@` vier Punkte ergänzen (gleiche Differenzen nur bei gleichen Schritten;
 Bewegung folgt der Richtung im Ton; Zufallsübungen ohne verräterisches Muster; Sperrliste für jeden Übungstyp).
 Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15. Warum: in TALS ebenso möglich (Tabellenübungen, bewegte Figuren). Nachgezählt: 4 Punkte.
+
+## HOWTO §15: neun Fehlerklassen aus «Funktionstypen und Graphen» und «Texte, Geschwindigkeit und Begegnung» (Sek I, 10.10.2026)
+
+Was: In `HOWTO-leitprogramme.md` §15 ergänzen. Fachlich: «Ein Test an einer Stelle ist keine Regel», «Merkmale der Grundform
+sagen, wofür sie gelten», «Gleiche Wörter, verschiedene Bezugsgrössen». Clips: «Vorhersagen: nichts davon in der Szene davor»,
+«Zahlenfolgen im Ton eindeutig sprechen». Übungen: «Ein Hinweis in der Aufgabe darf die Antwort nicht festlegen», «Rückmeldung
+nach der Wahl, nicht nach der Lösung», «Ein Zahlenfeld heisst nie `w`». PDFs: «Ein Testpunkt in der Musterlösung muss trennen».
+Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15 (Wortlaut wie in der Sek-I-Fassung). Warum: alle neun Fehler sind im TALS-Gerüst
+genauso möglich (gleiche Übungslogik, gleiche Clip-Helfer). Nachgezählt: 9 Punkte.

@@ -64,36 +64,35 @@
    "name": "Frage 3",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Die Hälfte sind fünfzehn Kilometer. Fünfzehn durch zwanzig gibt null Komma sieben fünf Stunden.",
+   "sprecher": "Die Hälfte sind fünfzehn Kilometer. Fünfzehn durch zwölf gibt eins Komma zwei fünf Stunden.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "15 : 20 = \\fc{0.75}\\ \\text{h}",
+     "text": "15 : 12 = \\fc{1.25}\\ \\text{h}",
      "x": 150,
      "y": 330,
      "groesse": 58,
      "ein": 1.0
     }
    ],
-   "dauer": 6.06
+   "dauer": 6.22
   },
   {
    "name": "Frage 4",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Auch auf dem Heimweg fährst du weiter: Der zurückgelegte Weg wächst weiter. Nur die Entfernung von zu Hause wird kleiner.",
+   "sprecher": "Zurückgelegt und noch entfernt ergeben zusammen die ganze Strecke: Dreissig minus achtzehn gibt zwölf Kilometer.",
    "elemente": [
     {
-     "typ": "notiz",
-     "text": "wächst weiter",
+     "typ": "formel",
+     "text": "30 - 18 = \\fc{12}\\ \\text{km}",
      "x": 150,
      "y": 330,
-     "groesse": 50,
-     "farbe": "gruen",
+     "groesse": 58,
      "ein": 1.0
     }
    ],
-   "dauer": 7.18
+   "dauer": 7.2
   },
   {
    "name": "Frage 5",
@@ -295,7 +294,7 @@
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Zurückgelegt plus noch entfernt ist die ganze Strecke. Der zurückgelegte Weg wächst immer, und die Zeit läuft nur nach rechts.",
+   "sprecher": "Zum Mitnehmen: Zurückgelegter Weg und Entfernung zum Ziel ergeben zusammen die ganze Strecke. Der zurückgelegte Weg nimmt nie ab, und die Zeit läuft nur nach rechts.",
    "elemente": [
     {
      "typ": "titel",
@@ -306,7 +305,7 @@
     },
     {
      "typ": "notiz",
-     "text": "zurückgelegt + entfernt = ganze Strecke|zurückgelegt wächst immer|Zeit nur nach rechts",
+     "text": "zurückgelegt + noch entfernt = ganze Strecke|zurückgelegt nimmt nie ab|Zeit nur nach rechts",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -314,7 +313,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 8.43
+   "dauer": 9.92
   }
  ],
  "fragen": [
@@ -337,7 +336,7 @@
    "sprich": "Eine Tour ist dreissig Kilometer lang, du fährst zwanzig Kilometer pro Stunde. Wie weit ist es nach einer halben Stunde noch?",
    "rueck_sprich": {
     "1": "Das ist die gefahrene Strecke. Gefragt ist, was noch bleibt.",
-    "2": "Gefahren hast du zwanzig mal null Komma fünf Kilometer, nicht null Komma fünf."
+    "2": "Gefahren hast du zwanzig mal null Komma fünf Kilometer, nicht null Komma fünf Kilometer."
    }
   },
   {
@@ -365,22 +364,22 @@
    "szene": "Frage 3",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "30 km mit 20 km/h: Nach welcher Zeit ist die Hälfte gefahren?",
+   "text": "30 km mit 12 km/h: Nach welcher Zeit ist die Hälfte gefahren?",
    "optionen": [
-    "1.5 h",
     "15 h",
-    "0.75 h"
+    "1.25 h",
+    "2.5 h"
    ],
-   "richtig": 2,
+   "richtig": 1,
    "rueck": {
-    "2": "Ja.",
-    "0": "Nach 1.5 h bist du am Ziel.",
-    "1": "Die Hälfte sind 15 Kilometer, nicht 15 Stunden."
+    "1": "Ja.",
+    "2": "Nach 2.5 h bist du am Ziel.",
+    "0": "Die Hälfte sind 15 Kilometer, nicht 15 Stunden."
    },
-   "sprich": "Dreissig Kilometer mit zwanzig Kilometern pro Stunde: Nach welcher Zeit ist die Hälfte gefahren?",
+   "sprich": "Dreissig Kilometer mit zwölf Kilometern pro Stunde: Nach welcher Zeit ist die Hälfte gefahren?",
    "rueck_sprich": {
-    "0": "Nach eins Komma fünf Stunden bist du am Ziel.",
-    "1": "Die Hälfte sind fünfzehn Kilometer, nicht fünfzehn Stunden."
+    "2": "Nach zwei Komma fünf Stunden bist du am Ziel.",
+    "0": "Die Hälfte sind fünfzehn Kilometer, nicht fünfzehn Stunden."
    }
   },
   {

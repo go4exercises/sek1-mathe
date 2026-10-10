@@ -48,7 +48,7 @@
      "y": 420,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 7.74
+     "ein": 7.72
     },
     {
      "typ": "graf",
@@ -120,7 +120,7 @@
        "30"
       ]
      ],
-     "xname": "x",
+     "xname": "x [l]",
      "yname": "y [Fr.]"
     },
     {
@@ -190,7 +190,7 @@
        "bis": 5.5
       }
      ],
-     "xname": "x",
+     "xname": "x [l]",
      "yname": "y [Fr.]"
     }
    ],
@@ -216,11 +216,11 @@
      "x": 150,
      "y": 400,
      "groesse": 50,
-     "ein": 2.85
+     "ein": 2.87
     },
     {
      "typ": "notiz",
-     "text": "linear mit Anfangswert:|weder doppelt noch halb",
+     "text": "linear mit Anfangswert:|x doppelt, y nicht doppelt",
      "x": 150,
      "y": 540,
      "groesse": 42,
@@ -296,7 +296,7 @@
        "30"
       ]
      ],
-     "xname": "x",
+     "xname": "x [km]",
      "yname": "y [Fr.]"
     },
     {
@@ -309,7 +309,19 @@
      "anim": "fade",
      "ein": 6.57,
      "geraden": [],
-     "punkte": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 6,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "(0 | 6)",
+       "beschriftung_bei": [
+        0.25,
+        3.6
+       ]
+      }
+     ],
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
@@ -366,7 +378,7 @@
        "bis": 5.5
       }
      ],
-     "xname": "x",
+     "xname": "x [km]",
      "yname": "y [Fr.]"
     },
     {
@@ -377,7 +389,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.85,
+     "ein": 2.87,
      "geraden": [],
      "punkte": [
       {
@@ -440,7 +452,7 @@
      ],
      "achsen": false,
      "raster": false,
-     "xname": "x",
+     "xname": "x [km]",
      "yname": "y [Fr.]"
     }
    ],
@@ -450,7 +462,7 @@
    "name": "Pizza",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Eine Pizza-Bestellung kostet sechsunddreissig Franken. Bei zwei Personen zahlt jede achtzehn Franken, bei vier Personen neun. Doppelt so viele Personen, halb so viel pro Person: antiproportional. Das Produkt bleibt sechsunddreissig, der Graph ist ein Kehrwertgraph.",
+   "sprecher": "Eine Pizza-Bestellung kostet sechsunddreissig Franken. Bei zwei Personen zahlt jede achtzehn Franken, bei vier Personen neun. Doppelt so viele Personen, halb so viel pro Person: antiproportional. Das Produkt bleibt sechsunddreissig, die Punkte liegen auf einem Kehrwertgraphen.",
    "elemente": [
     {
      "typ": "formel",
@@ -467,7 +479,7 @@
      "y": 450,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 9.68
+     "ein": 8.64
     },
     {
      "typ": "graf",
@@ -560,9 +572,28 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 12.5,
+     "ein": 11.34,
      "geraden": [],
-     "punkte": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 36,
+       "farbe": 1,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 12,
+       "farbe": 1,
+       "anker": "start"
+      },
+      {
+       "x": 5,
+       "y": 7.2,
+       "farbe": 1,
+       "anker": "start"
+      }
+     ],
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
@@ -611,37 +642,29 @@
      ],
      "achsen": false,
      "raster": false,
-     "kurven": [
-      {
-       "formel": "36/x",
-       "farbe": 1,
-       "von": 0.95,
-       "bis": 5.5
-      }
-     ],
      "xname": "x [Personen]",
      "yname": "y [Fr.]"
     }
    ],
-   "dauer": 16.73
+   "dauer": 15.88
   },
   {
    "name": "Test",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "So unterscheidest du: Mach den Doppelt-Test. Wird y doppelt so gross, ist es proportional. Wird y halb so gross, antiproportional. Weder noch, und der Graph ist eine Gerade: linear mit Anfangswert.",
+   "sprecher": "So unterscheidest du: Schau zuerst die Form an. Dann verdopple x an mehreren Stellen. Wird y jedes Mal doppelt so gross, ist es proportional. Wird y jedes Mal halb so gross, antiproportional. Eine Gerade, die nicht durch null, null geht, ist linear mit Anfangswert.",
    "elemente": [
     {
      "typ": "notiz",
-     "text": "y doppelt: proportional|y halb: antiproportional|weder noch, Gerade: linear mit Anfangswert",
+     "text": "zuerst die Form, dann x verdoppeln:|y immer doppelt: proportional|y immer halb: antiproportional|Gerade nicht durch (0 ∣ 0): linear mit Anfangswert",
      "x": 150,
-     "y": 300,
-     "groesse": 42,
+     "y": 280,
+     "groesse": 40,
      "farbe": "blau",
-     "ein": 2.17
+     "ein": 2.52
     }
    ],
-   "dauer": 13.11
+   "dauer": 17.02
   },
   {
    "name": "Fehler",

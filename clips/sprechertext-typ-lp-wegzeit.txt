@@ -3,6 +3,6 @@
 19.57	Dann wartet sie fünf Minuten an der Ampel. Die Entfernung bleibt gleich: Der Graph ist waagrecht.
 28.31	Am Schluss rennt sie: sechshundert Meter in fünf Minuten, hundertzwanzig Meter pro Minute. Der steilste Abschnitt ist der schnellste. Wo das Tempo wechselt, hat der Graph einen Knick.
 42.14	Geht jemand zurück, wird die Entfernung von zu Hause kleiner: Der Graph fällt. Senkrecht kann er nie sein, denn Weg ohne Zeit gibt es nicht.
-50.78	Häufiger Fehler: den Graphen als Landschaft lesen. Steigt er, geht es nicht bergauf. Er zeigt die Entfernung, nicht die Höhe.
-59.32	Zum Mitnehmen: Im Weg-Zeit-Graphen ist die Steigung die Geschwindigkeit. Waagrecht ist eine Pause, fallend ein Rückweg, ein Knick ein neues Tempo.
-68.50	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+50.78	Häufiger Fehler: den Graphen als Landschaft lesen. Steigt er, heisst das nicht, dass es bergauf geht. Er zeigt die Entfernung, nicht die Höhe.
+59.82	Zum Mitnehmen: Im Weg-Zeit-Graphen ist die Steigung die Geschwindigkeit. Waagrecht ist eine Pause, fallend ein Rückweg, ein Knick ein neues Tempo.
+69.00	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
