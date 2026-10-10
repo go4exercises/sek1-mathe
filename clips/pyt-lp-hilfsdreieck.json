@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Hilfsdreiecke und Kreis",
  "dateiname": "pyt-lp-hilfsdreieck",
- "kurzbeschrieb": "Hilfsdreieck Schritt für Schritt: Rechteck 21 × 20, Diagonale 29 (Vorhersage); gleichschenkliges Dreieck Basis 16, Schenkel 17, Höhe 15; Kreis r = 10, Sehne 16, Abstand 6; Rohr Ø 50, Wasserspiegel 48, Tiefe 18; Fehler: ganze statt halbe Strecke.",
+ "kurzbeschrieb": "Hilfsdreieck Schritt für Schritt: Rechteck 21 × 20, Diagonale 29 (Vorhersage); gleichschenkliges Dreieck Basis 16, Schenkel 17, Höhe 15; Wurzel eingrenzen (√841 zwischen 25 und 30, Endziffer); Kreis r = 10, Sehne 16, Abstand 6; Rohr Ø 50, Wasserspiegel 48, Tiefe 18; Fehler: ganze statt halbe Strecke.",
  "schlagworte": [
   "Hilfsdreieck",
   "Pythagoras",
@@ -41,7 +41,7 @@
      "y": 290,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 5.46
+     "ein": 5.48
     },
     {
      "typ": "graf",
@@ -242,7 +242,7 @@
         9.4,
         11.4
        ],
-       "text": "d",
+       "text": "e",
        "farbe": 3,
        "anker": "end",
        "groesse": 38,
@@ -257,23 +257,32 @@
    "name": "Vorhersage",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Einundzwanzig Quadrat plus zwanzig Quadrat gibt vierhunderteinundvierzig plus vierhundert, also achthunderteinundvierzig. Die Wurzel ist neunundzwanzig.",
+   "sprecher": "Einundzwanzig Quadrat plus zwanzig Quadrat gibt vierhunderteinundvierzig plus vierhundert, also achthunderteinundvierzig. Die Wurzel grenzt du ein: Fünfundzwanzig Quadrat ist sechshundertfünfundzwanzig, dreissig Quadrat neunhundert. Sie endet auf eins oder neun, also einundzwanzig oder neunundzwanzig. Neunundzwanzig Quadrat ist achthunderteinundvierzig.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "d^2 = 441 + 400 = 841",
+     "text": "e^2 = 441 + 400 = 841",
      "x": 150,
-     "y": 280,
-     "groesse": 52,
-     "ein": 1.55
+     "y": 250,
+     "groesse": 50,
+     "ein": 1.67
+    },
+    {
+     "typ": "notiz",
+     "text": "25² = 625 und 30² = 900|Endziffer 1: nur 21 oder 29",
+     "x": 150,
+     "y": 350,
+     "groesse": 38,
+     "farbe": "blau",
+     "ein": 8.03
     },
     {
      "typ": "formel",
-     "text": "d = \\sqrt{841} = \\fc{29}",
+     "text": "e = \\sqrt{841} = \\fc{29}",
      "x": 150,
-     "y": 400,
-     "groesse": 56,
-     "ein": 7.47
+     "y": 480,
+     "groesse": 54,
+     "ein": 18.67
     },
     {
      "typ": "graf",
@@ -393,7 +402,7 @@
      ]
     }
    ],
-   "dauer": 9.76
+   "dauer": 21.48
   },
   {
    "name": "Gleichschenklig",
@@ -486,7 +495,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.09,
+     "ein": 5.11,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -596,6 +605,18 @@
        "anker": "start",
        "groesse": 36,
        "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        12.8,
+        8.4
+       ],
+       "text": "17",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
       }
      ]
     }
@@ -614,7 +635,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 4.79
+     "ein": 11.65
     },
     {
      "typ": "graf",
@@ -747,7 +768,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 9.39,
+     "ein": 9.41,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -792,8 +813,8 @@
          -6
         ]
        ],
-       "farbe": 3,
-       "fuellung": 0.18,
+       "farbe": 2,
+       "fuellung": 0.25,
        "dicke": 1
       },
       {
@@ -1144,6 +1165,44 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
+     "ein": 5.5,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      30
+     ],
+     "ybereich": [
+      -30,
+      30
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        -12,
+        -11.5
+       ],
+       "text": "48",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
      "ein": 6.24,
      "geraden": [],
      "punkte": [],
@@ -1282,7 +1341,7 @@
    "name": "Fehler",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Häufiger Fehler: die ganze Basis oder die ganze Sehne ins Hilfsdreieck setzen. Hinein gehört immer die Hälfte, denn Höhe und Abstand halbieren sie.",
+   "sprecher": "Häufiger Fehler: die ganze Basis oder die ganze Sehne ins Hilfsdreieck setzen. Im gleichschenkligen Dreieck und beim Kreis gehört die Hälfte hinein, denn Höhe und Abstand halbieren sie.",
    "elemente": [
     {
      "typ": "notiz",
@@ -1291,7 +1350,7 @@
      "y": 300,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 1.14
+     "ein": 1.02
     },
     {
      "typ": "notiz",
@@ -1300,10 +1359,10 @@
      "y": 420,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 7.92
+     "ein": 9.86
     }
    ],
-   "dauer": 11.32
+   "dauer": 13.35
   },
   {
    "name": "Merke",
@@ -1371,12 +1430,12 @@
    "rueck": {
     "0": "Ja.",
     "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
-    "2": "841 ist d². Zieh die Wurzel."
+    "2": "841 ist e². Zieh die Wurzel."
    },
    "sprich": "Wie lang ist die Diagonale des Rechtecks einundzwanzig mal zwanzig?",
    "rueck_sprich": {
     "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
-    "2": "Achthunderteinundvierzig ist d Quadrat. Zieh die Wurzel."
+    "2": "Achthunderteinundvierzig ist e Quadrat. Zieh die Wurzel."
    }
   }
  ]

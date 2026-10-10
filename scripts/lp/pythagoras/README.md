@@ -4,7 +4,8 @@ Achtes Leitprogramm (Bereich Geometrie), gebaut am 10.10.2026 im Kapitelmuster v
 nach `~/TODO-BM-Vorkurs-LP03-15.md` §6 («Ebene Geometrie: Flächen, Pythagoras, Ähnlichkeit»), für die Sek I umgesetzt.
 Gerüst aus `scripts/lp/bewegung/`.
 Kapitel: Grundseite und Höhe · Der Satz des Pythagoras · Hilfsdreiecke und Kreis · Ähnliche Figuren.
-Alles ohne Taschenrechner: alle Wurzeln gehen auf (pythagoreische Tripel, auch halbzahlige Vielfache). Aus der Vorlage umgesetzt:
+Alles ohne Taschenrechner: alle Wurzeln gehen auf (pythagoreische Tripel; in den Übungen jede Seite ganz bis 30, halb bis 15 oder
+mit einer Dezimale bis 3), grosse Wurzeln werden eingegrenzt (zwischen 25² und 30², Endziffer; halbe Zahlen über 7.5² = 7 · 8 + 0.25). Aus der Vorlage umgesetzt:
 Grundseite/Höhe und Zerlegen, Pythagoras mit «Hilfsdreieck zuerst finden» (im Clip Schritt für Schritt eingeblendet),
 Radius, Durchmesser, Sehne und Wasserspiegel im Rohr, ähnliche Dreiecke, Verhältnisse, Regal mit Differenzfläche,
 Fehlermodule «Höhe ≠ schräge Seite» und «Flächenfaktor ≠ Längenfaktor». Nicht umgesetzt: Teams-Ablauf, Lehrpersonenteil,
@@ -20,7 +21,7 @@ Kreissektoren.
 | `clips.py` | erzeugt die acht Drehbücher `clips/pyt-lp-*.json` (Reihe «Geometrie», `probe`); Bausteine `geo`, `dazu`, `RW`, `KR`, `segment` | **ja**, nach jeder Änderung an den Clips; danach `build-clips.py` |
 | `wortzeiten.py` | misst die Wortzeiten der vertonten Clips (faster-whisper **medium**) → `wortzeiten.json` | nach jeder (Teil-)Vertonung |
 | `zahlen.py` | rechnet jede feste Zahl nach; `w()` prüft, dass jede Wurzel aufgeht | **muss bestehen** |
-| `pruef-schritte.mjs` | Lösbarkeit der Leisten, Sim 3 bei d > r, Verteilung der Würfe je Typ | **muss bestehen** |
+| `pruef-schritte.mjs` | Lösbarkeit der Leisten, Sim 3 bei d > r, Verteilung der Würfe je Typ (hypotenuse ≥ 12, kathete ≥ 24: ohne Rechner gibt es nicht mehr Dreiecke) | **muss bestehen** |
 
 Übungsfelder heissen nie `w`: `w` ist im Gerüst die Auswahlliste. Clip-Fenster sind quadratisch (`fenster()` prüft das),
 sonst wird ein Kreis zur Ellipse. Eine eigene Hilfsfunktion darf nicht `hoehe` heissen (überdeckt den Zeilenhöhen-Helfer).
@@ -44,7 +45,7 @@ Gesprochen: Zahlwörter ausgeschrieben, «Quadrat» für die Hochzahl 2, «Wurze
 
 ## Farben — eine Farbe, eine Bedeutung
 
-blau = Figur, Grundseite, Kathete a · orange = Höhe, Abstand, Kathete b, Bildfigur · grün = Hypotenuse, Radius, Ergebnis ·
+blau = Figur, Grundseite, Kathete a · orange = Höhe, Abstand, Kathete b, Hilfsdreieck, Bildfigur · grün = Hypotenuse, Radius, Ergebnis ·
 rot = Fehler. Bereichsfarbe Petrol.
 
 ## Prüfen

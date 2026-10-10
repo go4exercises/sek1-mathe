@@ -145,7 +145,7 @@ sim1 = f'''      <figure class="sim sim-gross" id="sim1" aria-label="Dreieck ode
       </figure>'''
 FIG1 = svg('<polygon points="20,120 140,120 70,40" class="flaeche blau"/><line x1="70" y1="120" x2="70" y2="40" class="linie orange gestrichelt"/>'
            '<polyline points="79,120 79,111 70,111" class="linie grau" fill="none"/><text x="80" y="138" class="p-text blau" text-anchor="middle">g</text>'
-           '<text x="80" y="85" class="p-text orange">h</text><text x="34" y="75" class="p-text grau">schräg</text>', 'Dreieck mit Grundseite g, Höhe h und schräger Seite')
+           '<text x="80" y="85" class="p-text orange">h</text><text x="38" y="72" class="p-text grau" text-anchor="end">schräg</text>', 'Dreieck mit Grundseite g, Höhe h und schräger Seite')
 fest1 = r'''      <div class="festhalten">
         <div class="merk">
           <div class="titel">Fläche aus Grundseite und Höhe</div>
@@ -191,8 +191,8 @@ sim2 = f'''      <figure class="sim sim-gross" id="sim2" aria-label="Rechtwinkli
         <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
         <svg role="img" aria-label="Quadrate über den Katheten a und b und über der Hypotenuse c"></svg>
         <div class="sl-row">
-          {regler('s2-a', 'Kathete a', 'blau', 1, 24, 3)}
-          {regler('s2-b', 'Kathete b', 'orange', 1, 24, 4)}
+          {regler('s2-a', 'Kathete a', 'blau', 2, 24, 3)}
+          {regler('s2-b', 'Kathete b', 'orange', 2, 24, 4)}
         </div>
       </figure>'''
 FIG2 = svg('<polygon points="30,120 150,120 30,40" class="flaeche blau"/><polyline points="39,120 39,111 30,111" class="linie grau" fill="none"/>'
@@ -209,6 +209,8 @@ fest2 = r'''      <div class="festhalten">
             <li>Kathete gesucht: \(c = 10\), \(a = 6\): \(b^2 = 100 - 36 = 64\), \(b = 8\).</li>
             <li>Rechtwinklig? Gilt für die Seiten \(a^2 + b^2 = c^2\) (mit \(c\) der längsten Seite), dann ja.</li>
           </ul>
+          <p><b>Wurzel ohne Rechner eingrenzen:</b> \(\sqrt{841}\) liegt zwischen \(25\) (\(625\)) und \(30\) (\(900\)). Endziffer \(1\): nur \(21\) oder \(29\) kommen in Frage, \(29^2 = 841\). Probe durch Quadrieren.<br>
+          <b>Halbe Zahlen:</b> \(7.5^2 = 7 \cdot 8 + 0.25 = 56.25\). Umgekehrt endet \(72.25\) auf \(.25\): \(72 = 8 \cdot 9\), also \(\sqrt{72.25} = 8.5\).</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -250,13 +252,14 @@ sim3 = f'''      <figure class="sim sim-gross" id="sim3" aria-label="Kreis mit S
 FIG3 = svg('<circle cx="80" cy="75" r="60" class="linie tinte"/><line x1="32" y1="111" x2="128" y2="111" class="linie blau"/>'
            '<line x1="80" y1="75" x2="80" y2="111" class="linie orange"/><line x1="80" y1="75" x2="128" y2="111" class="linie gruen"/>'
            '<polyline points="89,111 89,102 80,102" class="linie grau" fill="none"/><circle cx="80" cy="75" r="3" class="pkt"/>'
-           '<text x="104" y="126" class="p-text blau" text-anchor="middle">s/2</text><text x="74" y="96" class="p-text orange" text-anchor="end">d</text>'
+           '<text x="104" y="104" class="p-text blau" text-anchor="middle">s/2</text><text x="74" y="96" class="p-text orange" text-anchor="end">d</text>'
            '<text x="108" y="88" class="p-text gruen">r</text>', 'Kreis mit Sehne s, Abstand d und Radius r', '0 0 170 150', 170)
 fest3 = r'''      <div class="festhalten">
         <div class="merk">
           <div class="titel">Das Hilfsdreieck finden</div>
+          <p>Im gleichschenkligen Dreieck heissen die zwei gleich langen Seiten <b>Schenkel</b>, die dritte Seite ist die <b>Basis</b>.</p>
           <ol class="weg">
-            <li>Rechten Winkel suchen oder einzeichnen (Höhe, Diagonale, Abstand). <span class="warum">wo ist 90°?</span></li>
+            <li>Skizze zeichnen, rechten Winkel suchen oder einzeichnen (Höhe, Diagonale, Abstand). <span class="warum">wo ist 90°?</span></li>
             <li>Hilfsdreieck markieren, Hypotenuse bestimmen. <span class="warum">gegenüber dem rechten Winkel</span></li>
             <li>Bekannte Längen eintragen, oft halbiert. <span class="warum">halbe Grundseite, halbe Sehne</span></li>
             <li>Pythagoras anwenden. <span class="warum">plus für c, minus für eine Kathete</span></li>
@@ -278,16 +281,16 @@ fest3 = r'''      <div class="festhalten">
 auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
     ('3a', 2, r'Ein Rechteck ist \(15\) cm lang und \(8\) cm breit. Wie lang ist seine Diagonale?',
      r'<p>\(\sqrt{225 + 64} = \sqrt{289} = 17\) cm.</p>', ''),
-    ('3b', 3, r'Ein gleichschenkliges Dreieck hat die Basis \(30\) cm und Schenkel von \(25\) cm. Berechne die Höhe und die Fläche.',
-     r'<p>Halbe Basis \(15\) cm: \(h = \sqrt{625 - 225} = \sqrt{400} = 20\) cm. Fläche \(\dfrac{30 \cdot 20}{2} = 300\) cm².</p>', ''),
+    ('3b', 3, r'Ein gleichschenkliges Dreieck hat die Basis \(30\) cm und Schenkel von \(25\) cm. Zeichne eine Skizze mit dem Hilfsdreieck und berechne die Höhe und die Fläche.',
+     r'<p>Skizze: Höhe von der Spitze senkrecht auf die Basis, Hilfsdreieck rechts davon. Halbe Basis \(15\) cm: \(h = \sqrt{625 - 225} = \sqrt{400} = 20\) cm. Fläche \(\dfrac{30 \cdot 20}{2} = 300\) cm².</p>', ''),
     ('3c', 2, r'Eine \(5\) m lange Leiter lehnt an einer senkrechten Wand. Ihr Fuss steht \(1.4\) m von der Wand entfernt. Wie hoch reicht sie?',
      r'<p>\(h^2 = 25 - 1.96 = 23.04\), \(h = 4.8\) m.</p>', ''),
     ('3d', 2, r'Ein Kreis hat den Radius \(26\) cm. Eine Sehne ist \(48\) cm lang. Wie weit ist sie vom Mittelpunkt entfernt?',
      r'<p>Halbe Sehne \(24\) cm: \(d = \sqrt{676 - 576} = \sqrt{100} = 10\) cm.</p>', ''),
-    ('3e', 3, r'Ein Rohr hat den Innendurchmesser \(34\) cm. Der Wasserspiegel ist \(30\) cm breit, das Wasser steht weniger als halb hoch. Wie tief ist das Wasser?',
+    ('3e', 3, r'Ein Rohr hat den Innendurchmesser \(34\) cm. Der Wasserspiegel ist \(30\) cm breit, das Wasser steht weniger als halb hoch. Zeichne eine Skizze mit dem Hilfsdreieck. Wie tief ist das Wasser?',
      r'<p>\(r = 17\), halbe Breite \(15\): \(d = \sqrt{289 - 225} = 8\) cm. Wassertiefe \(17 - 8 = 9\) cm.</p>', ''),
-    ('3f', 2, r'Wie weit sind die Punkte \(A(1 \mid 2)\) und \(B(7 \mid 10)\) im Koordinatensystem voneinander entfernt (Einheit cm)?',
-     r'<p>Hilfsdreieck mit den Katheten \(7 - 1 = 6\) und \(10 - 2 = 8\): \(\sqrt{36 + 64} = 10\) cm.</p>', ''),
+    ('3f', 2, r'Wie weit sind die Punkte \(A(1 \mid 1)\) und \(B(8.5 \mid 11)\) im Koordinatensystem voneinander entfernt (Einheit cm)?',
+     r'<p>Hilfsdreieck mit den Katheten \(8.5 - 1 = 7.5\) und \(11 - 1 = 10\): \(\sqrt{56.25 + 100} = \sqrt{156.25} = 12.5\) cm.</p>', ''),
 ])
 k3 = kapitel(3, 'hilfsdreieck', 'Hilfsdreiecke und Kreis', 40,
              r'Du findest in Rechteck, gleichschenkligem Dreieck und Kreis das rechtwinklige Hilfsdreieck und berechnest Diagonalen, Höhen, Sehnen und die Wassertiefe in einem Rohr.',
@@ -311,9 +314,10 @@ fest4 = r'''      <div class="festhalten">
           <p>Zwei Figuren sind <b>ähnlich</b>, wenn alle Winkel gleich sind und alle Längen mit demselben <b>Streckfaktor</b> \(k\) multipliziert werden: \(k = \dfrac{\text{Bildlänge}}{\text{Originallänge}}\).</p>
           <ul class="kurz">
             <li>Dreieck \(3, 4, 5\) mit \(k = 2\): \(6, 8, 10\).</li>
-            <li><b>Flächen</b> wachsen mit \(k^2\): Fläche \(6\) cm² wird \(6 \cdot 2^2 = 24\) cm².</li>
-            <li><b>Verhältnisse</b> (Strahlensatz): Stab \(2\) m wirft \(3\) m Schatten, der Baum \(15\) m: Baum \(\dfrac{2}{3} \cdot 15 = 10\) m.</li>
-            <li><b>Regal:</b> grosses Dreieck \(60 \times 40\) (Fläche \(1200\)), darin ein ähnliches mit \(k = \tfrac{1}{2}\): Fläche \(1200 \cdot \tfrac{1}{4} = 300\). Differenz \(900\).</li>
+            <li><b>Ähnlich erkennen:</b> Sind alle Seitenverhältnisse gleich? \(3, 4, 5\) und \(6, 8, 10\): je mal \(2\), ähnlich.</li>
+            <li><b>Flächen</b> werden mit \(k^2\) multipliziert: Fläche \(6\) cm² wird \(6 \cdot 2^2 = 24\) cm².</li>
+            <li><b>Verhältnisse</b> (Strahlensatz): Die Sonnenstrahlen sind parallel, Stab und Baum stehen senkrecht. Die Dreiecke aus Gegenstand und Schatten haben gleiche Winkel, sie sind ähnlich. Stab \(2\) m wirft \(3\) m Schatten, der Baum \(15\) m: Baum \(\dfrac{2}{3} \cdot 15 = 10\) m.</li>
+            <li><b>Regal:</b> rechtwinkliges Dreieck mit den Katheten \(60\) cm und \(40\) cm (Fläche \(\tfrac{60 \cdot 40}{2} = 1200\) cm²), darin ein ähnliches mit \(k = \tfrac{1}{2}\): Fläche \(1200 \cdot \tfrac{1}{4} = 300\) cm². Differenz \(900\) cm².</li>
           </ul>
         </div>
         <div class="warn">
@@ -333,11 +337,11 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
      r'<p>Nein. Die Fläche wird mit \(k^2 = 9\) multipliziert: \(135\) cm².</p>', ''),
     ('4e', 2, r'Ein rechtwinkliges Brett hat die Katheten \(80\) cm und \(60\) cm. In einer Ecke wird ein ähnliches Dreieck mit \(k = \tfrac{1}{4}\) ausgesägt. Wie gross ist die Restfläche?',
      r'<p>\(\dfrac{80 \cdot 60}{2} = 2400\) cm². Ausgesägt: \(2400 \cdot \tfrac{1}{16} = 150\) cm² (Katheten \(20\) und \(15\)). Rest \(2250\) cm².</p>', ''),
-    ('4f', 2, r'Eine Figur wird mit \(k = 0.5\) verkleinert. Warum ist die neue Fläche nur ein Viertel so gross?',
-     r'<p>Länge und Breite werden beide halbiert: \(0.5 \cdot 0.5 = 0.25\), also ein Viertel.</p>', ''),
+    ('4f', 2, r'Sind die Dreiecke ähnlich? (a) Seiten \(4, 6, 7\) und \(6, 9, 10.5\) cm. (b) Seiten \(2, 3, 4\) und \(4, 5, 6\) cm.',
+     r'<p>(a) \(\tfrac{6}{4} = \tfrac{9}{6} = \tfrac{10.5}{7} = 1.5\): ähnlich mit \(k = 1.5\). (b) \(\tfrac{4}{2} = 2\), aber \(\tfrac{5}{3} \neq 2\): nicht ähnlich. Nur gleich viel länger reicht nicht.</p>', ''),
 ])
 k4 = kapitel(4, 'aehnlichkeit', 'Ähnliche Figuren', 40,
-             r'Du erkennst ähnliche Figuren, berechnest Streckfaktor und fehlende Längen, nutzt Verhältnisse (Strahlensatz) und unterscheidest den Längenfaktor \(k\) vom Flächenfaktor \(k^2\).',
+             r'Du erkennst ähnliche Figuren an gleichen Seitenverhältnissen, berechnest Streckfaktor und fehlende Längen, nutzt Verhältnisse (Strahlensatz) und unterscheidest den Längenfaktor \(k\) vom Flächenfaktor \(k^2\).',
              (CLIP + 'aehnlichkeit', 'Ähnliche Figuren'), sim4,
              (CLIP + 'kontrolle-aehnlichkeit', 'Kontrollfragen zur Ähnlichkeit'), fest4,
              [uebung('aehnlich', 'Fehlende Seite'), uebung('flaechenfaktor', 'Längen- und Flächenfaktor')],
@@ -352,8 +356,8 @@ k0 = f'''
 ''' + r'''      <details class="anleitung">
         <summary><h3>Kurz wiederholt</h3></summary>
         <ul class="kurz">
-          <li><b>Rechteck:</b> Fläche Länge mal Breite, Umfang zweimal Länge plus Breite: \(5 \times 3\) cm hat \(15\) cm² und \(16\) cm.</li>
-          <li><b>Quadratzahlen und Wurzeln:</b> \(1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225\). \(\sqrt{49} = 7\), weil \(7^2 = 49\).</li>
+          <li><b>Rechteck:</b> Fläche Länge mal Breite, Umfang zweimal (Länge plus Breite): \(5 \times 3\) cm hat \(15\) cm² und \(16\) cm.</li>
+          <li><b>Quadratzahlen und Wurzeln:</b> \(1, 4, 9, \dots, 225\) und die Zehner \(20^2 = 400\), \(25^2 = 625\), \(30^2 = 900\). \(\sqrt{49} = 7\), weil \(7^2 = 49\). Auch Dezimalzahlen: \(1.4^2 = 1.96\), \(0.5^2 = 0.25\).</li>
           <li><b>Flächeneinheiten:</b> \(1\) m² \(= 100 \cdot 100\) cm² \(= 10\,000\) cm².</li>
           <li><b>Verhältnisse:</b> \(2 : 5 = 4 : 10\), beide Zahlen mal \(2\).</li>
         </ul>
@@ -512,7 +516,7 @@ oben = '''<div id="nav-root"></div>
           <li><b>① Clip</b> anschauen. Er hält einmal an und fragt nach deiner Vorhersage.</li>
           <li><b>② Tüfteln:</b> Löse die Aufgaben in der orangen Leiste über dem Bild. Sie zeigt ✓, sobald es stimmt. Überspringen geht immer.</li>
           <li><b>③ Kontrollfragen:</b> Der Clip hält an. Erst antworten. Danach <b>Festhalten</b>: Regel und häufigen Fehler ins Heft.</li>
-          <li><b>④ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen. Zahlen tippst du als <code>2</code>, <code>-1.5</code> oder Bruch <code>2/3</code>; bei Aussagen wählst du aus einer Liste.</li>
+          <li><b>④ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen. Zahlen tippst du als <code>2</code>, <code>-1.5</code> oder Bruch <code>2/3</code>.</li>
           <li><b>⑤ Aufgaben</b> auf Papier mit Rechenweg, dann Lösung aufklappen und abhaken.</li>
           <li>Zum Schluss der <b>Gesamttest</b> auf Papier, mit Lineal. Alles ohne Taschenrechner: Die Wurzeln gehen auf.</li>
         </ol>

@@ -851,9 +851,19 @@ gegen sie und darüber hinaus.
   Tabellen machten «ungleich → anti» zur Abkürzung. Jede Art mit gleichen und ungleichen Schritten würfeln.
 - **Sperrliste für jeden Übungstyp** (Darstellungen 10.10.2026): auch Typen ohne Gleichung (Bereich, Skala, Tabellenart, Deuten)
   bekommen Schlüssel; sonst kommt die Erkundung oder der Gesamttest als Zufallsübung.
+- **Sperrschlüssel nach der Sache, nicht nach der Fragerichtung** (Pythagoras 10.10.2026): Dieselbe Sehne als «gesucht s»
+  und «gesucht d», dasselbe Dreieck als Hypotenuse-, Katheten- und Diagonalenaufgabe ist eine Wiederholung. Der Schlüssel
+  beschreibt das Dreieck (Katheten klein|gross) bzw. Radius|Abstand und gilt für alle Typen, die es stellen.
+- **Kontrollfragen nur zu dem, was der Clip gezeigt hat** (Pythagoras 10.10.2026): Trapez und Umkehrung des Pythagoras
+  standen erst im Festhalten, der Kontrollclip fragte sie schon. Entweder eine Szene dazu oder die Frage weg.
+- **Ohne Taschenrechner braucht jede Wurzel ein Verfahren** (Pythagoras 10.10.2026): √841, √1369 und Übungen bis √3422
+  bei einem Vorwissen bis 15². Quadrate bis 30² und das Eingrenzen (zwischen 25² und 30², Endziffer) zeigen und üben,
+  halbe Zahlen über \(7.5^2 = 7 \cdot 8 + 0.25\); Zufallsübungen auf Seiten begrenzen, deren Quadrate so gehen.
+- **Leisten-Ziele sind keine Clip- oder Kontrollbeispiele** (Pythagoras 10.10.2026): «Fläche 24 bei k = 2» oder «c = 29»
+  in der Leiste wiederholt den Clip; die Leiste braucht eigene Ziele (13.5 cm², k = 2.25, 3.75 cm).
 - **Fragetexte eines Kontrollclips verschieden beginnen lassen**: `pruef-fragen` erkennt eine Frage
   an ihren ersten 20 Zeichen; zwei Fragen «Welche Nullstellen hat …» lassen den Durchlauf scheitern.
-- Live-Anzeigen runden nur mit «≈».
+- Live-Anzeigen runden nur mit «≈». Endliche Werte zeigen sie exakt: k² = 0.5625, nicht «0.56» (Pythagoras 10.10.2026).
 - **Die Live-Zeile verrät keine Antwort** (Planimetrie 06.10.2026): Fragt eine Aufgabe der Leiste nach einer
   Grösse, darf die Zeile über der Figur sie nicht anzeigen — auch nicht in den Aufgaben davor bei denselben
   Werten («A = 18 cm²» in A1–A4, gefragt in A5) und nicht als Faktor («k² = 6.25» bei der Frage nach der Bildfläche).

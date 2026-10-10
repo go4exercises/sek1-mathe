@@ -16,41 +16,55 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 `~/TODO-BM-Vorkurs-LP03-15.md` §6 (LP 08, Ebene Geometrie: Flächen, Pythagoras, Ähnlichkeit). Neuer Bereich «Geometrie».
 
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/pythagoras.html` (Abschnitt unten).
-- [x] Eingetragen (nav.js mit Bereich 5 «Geometrie», index.html, build-seo, Suchindex, Sitemap).
-- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 mit schräger Seite, G7 mit k statt k²).
+- [x] Freigeschaltet (nav.js mit Bereich 5 «Geometrie», index.html, build-seo, Suchindex, Sitemap); alle Befunde der Prüfung behoben.
+- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 mit schräger Seite als Höhe, G7 mit k statt k²).
 - [ ] 🔑 Hörprobe der acht Clips `pyt-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
-      «subtrahierst» (Whisper: «verbreihe»), «gleichschenkliges» (Whisper: «gleischinkliges»), «Hypotenuse», «Katheten», «Quadrat».
+      «subtrahierst» (Whisper: «verbreihe»), «gleichschenkliges» (Whisper: «gleischinkliges»), «Hypotenuse», «Katheten», «Quadrat»;
+      neu vertont: «in den Ecken» (Whisper: «Etten»), «je sechs Kästchen» (Whisper: «Hier 6»), «Flächenfaktor gleich Längenfaktor»
+      (Whisper: «Gleichlängenfaktor»), «sechsundfünfzig Komma zwei fünf» (Kontrollfragen mit halben Zahlen).
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
 
 ## Prüfung `pythagoras` (10.10.2026)
 
 Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `43d8490`. HOCH-Befunde
 an der Quelle nachgeprüft und bestätigt. Rechenfehler: ein Ablenker (22.6 statt 22.7). Neuvertonung nötig: 🔊.
+**Behoben am 10.10.2026** (alles ausser der Hörprobe): Vorwissen mit Quadraten bis 30² und Dezimalquadraten; Wurzel eingrenzen
+(Festhalten 2, Clip hilfsdreieck) und halbe Zahlen (7.5² = 7 · 8 + 0.25); Zufallsübungen nur mit Seiten ganz bis 30, halb bis 15 oder
+einer Dezimale bis 3, Leitern steil (67° bis 80°), Sperrschlüssel nach dem Dreieck über alle Typen, Sehne ohne Fragerichtung, ähnlich
+nach k; Clip flaechen mit Trapez-Szene (Diagonale zerlegt), Parallelogramm abschneiden und ansetzen, Höhe auf der Verlängerung;
+Clip pythagoras mit schrägem Quadrat (7 × 7 minus vier Dreiecke) und Umkehrung; Kontrollfragen neu (7.5/6, 7-24-26 nein, 12.5/12,
+Rechteck 7.5 × 4, r 2.5/1.5, Rohr r 6.5), Fragebild K3F4 neutral; Diagonale heisst e; Hilfsdreieck überall orange; Rohr-Breite
+angeschrieben; Ähnlichkeit mit rechten Winkeln und Begründung beim Schatten; Regal «sechzig mal vierzig durch zwei»; Sim 4 exakt
+(k² = 0.5625), Sim 1 Parallelogramm im Bild, Leisten mit eigenen Zielen (Sim 1 g 7, Sim 2 c² = 200, Sim 3 r 15/24 und Rohr r 5,
+Sim 4 13.5 cm², k 2.25, 3.75 cm); Festhalten 4 mit «ähnlich erkennen», Strahlensatz begründet, 4f «ähnlich oder nicht?»,
+3b/3e mit Skizze, 3f neu; Gesamttest neu (Trapez-Grundstück, Grundseite aus Fläche, 18-24-30 und 8-15-18, Hypotenuse erkennen,
+Basis 30/Schenkel 39, Rohr 10 cm tief, Eckregal 90/60, Schatten 1.2/0.8), Raster mit Ansatzzeilen und gleichwertigen Wegen.
+Neu vertont: Clip flaechen ganz, 15 Szenen in vier weiteren Clips, Fragetöne.
 Als korrekt geprüft: alle übrigen Zahlen, Figurenkoordinaten, rechte Winkel, Leisten, Fragebilder (ausser einem), Datenschutz.
 
 ### HOCH
-- [ ] Grosse Wurzeln ohne Verfahren: Übungen bis √3422, Clip √841, √1369, G3 √1156; Vorwissen nur bis 15². Eingrenzen zeigen,
+- [x] Grosse Wurzeln ohne Verfahren: Übungen bis √3422, Clip √841, √1369, G3 √1156; Vorwissen nur bis 15². Eingrenzen zeigen,
       Übungen auf kleinere Tripel begrenzen, Quadrate bis 30² und 1.4² ins Vorwissen.
-- [ ] Kontrollfragen fragen, was erst das Festhalten bringt: Trapez (K1F3), Umkehrung des Pythagoras (K2F4). 🔊
-- [ ] Gesamttest: G4 (Leiter) im Teil von Kapitel 2, geübt in Kapitel 3; Strahlensatz, fehlende Längen, Diagonale ungeprüft;
+- [x] Kontrollfragen fragen, was erst das Festhalten bringt: Trapez (K1F3), Umkehrung des Pythagoras (K2F4). 🔊
+- [x] Gesamttest: G4 (Leiter) im Teil von Kapitel 2, geübt in Kapitel 3; Strahlensatz, fehlende Längen, Diagonale ungeprüft;
       fast jede Aufgabe wiederholt ein Modell (Haus, 21-20-29, 9-12-15, Regal, Lea k statt k²); G6-Raster widersprüchlich.
-- [ ] Sim 4 Live-Zeile rundet ohne ≈ (k² = 0.56 statt 0.5625); Sim 1 Parallelogramm ragt aus dem Bild.
-- [ ] Clip Parallelogramm zeigt kein Rechteck (Teil nicht abgeschnitten); Regal «sechzig mal vierzig, also zwölfhundert» klingt
+- [x] Sim 4 Live-Zeile rundet ohne ≈ (k² = 0.56 statt 0.5625); Sim 1 Parallelogramm ragt aus dem Bild.
+- [x] Clip Parallelogramm zeigt kein Rechteck (Teil nicht abgeschnitten); Regal «sechzig mal vierzig, also zwölfhundert» klingt
       wie 60 · 40 = 1200; Formel in der Kreisszene 8 s zu früh; Ablenker 22.6 statt 22.7. 🔊
 
 ### MITTEL
-- [ ] Wiederholungen: Leisten-Ziele = Clip-Beispiele (Sim 4 k = 2/24, «9-mal», Sim 1 6/4, Sim 2 20-21-29); Kontrollfragen = Leisten
+- [x] Wiederholungen: Leisten-Ziele = Clip-Beispiele (Sim 4 k = 2/24, «9-mal», Sim 1 6/4, Sim 2 20-21-29); Kontrollfragen = Leisten
       (Sim 3 r 10/8, r 13/12, Sim 2 8-15-17, K2F5 6-8-10); 3f = 6-8-10; Sperrliste mit falschem ae-Schlüssel und ohne Gegenrichtung.
-- [ ] «Ähnlich erkennen» und Strahlensatz versprochen, nie geübt; Begründung der Ähnlichkeit beim Schatten fehlt.
-- [ ] Skizzen im Test verlangt, auf der Seite nie geübt; G6 massstäblich ausmessbar; G7-Figur mit mehrdeutigen Massen; G8 unrealistisch.
-- [ ] K3F4: grüne Farbe verrät die Hypotenuse; Quadrat über c lässt sich nicht «abzählen»; Scheren ohne Höhe auf der Verlängerung.
-- [ ] Leitern zu flach (3-4-5); Rückmeldungen sehne/kathete unterstellen einen Fehler.
+- [x] «Ähnlich erkennen» und Strahlensatz versprochen, nie geübt; Begründung der Ähnlichkeit beim Schatten fehlt.
+- [x] Skizzen im Test verlangt, auf der Seite nie geübt; G6 massstäblich ausmessbar; G7-Figur mit mehrdeutigen Massen; G8 unrealistisch.
+- [x] K3F4: grüne Farbe verrät die Hypotenuse; Quadrat über c lässt sich nicht «abzählen»; Scheren ohne Höhe auf der Verlängerung.
+- [x] Leitern zu flach (3-4-5); Rückmeldungen sehne/kathete unterstellen einen Fehler.
 
 ### NIEDRIG
-- [ ] Umfang «zweimal Länge plus Breite» mehrdeutig; «Flächen wachsen mit k²» bei k < 1; Regal «60 × 40» ohne Einheit;
+- [x] Umfang «zweimal Länge plus Breite» mehrdeutig; «Flächen wachsen mit k²» bei k < 1; Regal «60 × 40» ohne Einheit;
       Sim 3 d > r ohne Hinweis; Minus als Bindestrich am Regler; Beschriftungen überlappen (Sim 1, Sim 2 bei a = 1, Sim 4 bei k = 0.5,
       FIG 1, FIG 3); «Basis/Schenkel» nicht eingeführt; «Aussagen aus einer Liste» ohne Auswahlübung; Sperrlücken.
-- [ ] Clips: Merkbilder mit «·» als Trenner; Hilfsdreieck mal orange, mal grün; Hypotenuse 17 unbeschriftet; Rohr-Breite nicht angeschrieben;
+- [x] Clips: Merkbilder mit «·» als Trenner; Hilfsdreieck mal orange, mal grün; Hypotenuse 17 unbeschriftet; Rohr-Breite nicht angeschrieben;
       d doppelt belegt; Ähnlichkeit ohne Winkelzeichen; «immer» gegen «oft» die Hälfte.
 - [ ] 🔑 Hörprobe (Whisper-Vermutungen): «subtrahierst», «addierst», «Spitze», «Flächenfaktor», «Hilfsdreiecks», «unter dem Clip».
 

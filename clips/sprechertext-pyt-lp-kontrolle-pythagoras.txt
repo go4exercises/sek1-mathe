@@ -1,6 +1,6 @@
 0.40	Fünfundzwanzig plus hundertvierundvierzig gibt hundertneunundsechzig. Die Wurzel daraus ist dreizehn.
-7.05	Zweihundertneunundachtzig minus zweihundertfünfundzwanzig gibt vierundsechzig, die Wurzel ist acht.
-13.90	Die Hypotenuse liegt gegenüber dem rechten Winkel: die Seite r.
-18.56	Einundachtzig plus hundertvierundvierzig gibt zweihundertfünfundzwanzig, und das ist fünfzehn Quadrat. Das Dreieck ist rechtwinklig.
-26.68	Für eine Kathete subtrahierst du: hundert minus vierundsechzig gibt sechsunddreissig, die Kathete ist sechs Zentimeter.
-34.30	Zum Mitnehmen: Zuerst die Hypotenuse finden, gegenüber dem rechten Winkel. Für sie addierst du die Quadrate, für eine Kathete subtrahierst du.
+7.05	Sechsundfünfzig Komma zwei fünf minus sechsunddreissig gibt zwanzig Komma zwei fünf. Die Wurzel ist vier Komma fünf.
+14.88	Die Hypotenuse liegt gegenüber dem rechten Winkel: die Seite r.
+19.54	Neunundvierzig plus fünfhundertsechsundsiebzig gibt sechshundertfünfundzwanzig. Sechsundzwanzig Quadrat ist aber sechshundertsechsundsiebzig. Das Dreieck ist nicht rechtwinklig.
+30.32	Für eine Kathete subtrahierst du: hundertsechsundfünfzig Komma zwei fünf minus hundertvierundvierzig gibt zwölf Komma zwei fünf. Die Kathete ist drei Komma fünf Zentimeter.
+40.81	Zum Mitnehmen: Zuerst die Hypotenuse finden, gegenüber dem rechten Winkel. Für sie addierst du die Quadrate, für eine Kathete subtrahierst du.

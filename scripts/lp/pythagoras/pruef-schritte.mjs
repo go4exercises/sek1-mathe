@@ -29,11 +29,11 @@ const melde = (ok, t) => { console.log((ok ? '[OK]     ' : '[FEHLER] ') + t); if
 
 // ---- 1. Leisten: Reglerwerte je Aufgabe (in dieser Reihenfolge gesetzt)
 const LOES = {
-  sim1: [[['s1-typ', 'd'], ['s1-g', 8], ['s1-h', 4]], [['s1-typ', 'd'], ['s1-g', 6], ['s1-h', 4], ['s1-s', 6]], [['s1-typ', 'p'], ['s1-g', 5], ['s1-h', 4]],
+  sim1: [[['s1-typ', 'd'], ['s1-g', 8], ['s1-h', 4]], [['s1-typ', 'd'], ['s1-g', 7], ['s1-h', 4], ['s1-s', 7]], [['s1-typ', 'p'], ['s1-g', 5], ['s1-h', 4]],
          [['s1-typ', 'd'], ['s1-g', 10], ['s1-h', 3], ['s1-s', 12]], [['s1-typ', 'p'], ['s1-g', 4], ['s1-h', 6], ['s1-s', 3]]],
-  sim2: [[['s2-a', 9], ['s2-b', 12]], [['s2-a', 8], ['s2-b', 15]], [['s2-a', 12], ['s2-b', 16]], [['s2-a', 7], ['s2-b', 24]], [['s2-a', 21], ['s2-b', 20]]],
-  sim3: [[['s3-r', 13], ['s3-d', 5]], [['s3-r', 5], ['s3-d', 3]], [['s3-r', 15], ['s3-d', 12]], [['s3-r', 10], ['s3-d', 8]], [['s3-r', 13], ['s3-d', 12]]],
-  sim4: [[['s4-k', 2]], [['s4-k', 3]], [['s4-k', 1.5]], [['s4-k', 0.5]], [['s4-k', 2.5]]],
+  sim2: [[['s2-a', 9], ['s2-b', 12]], [['s2-a', 8], ['s2-b', 15]], [['s2-a', 12], ['s2-b', 16]], [['s2-a', 7], ['s2-b', 24]], [['s2-a', 10], ['s2-b', 10]]],
+  sim3: [[['s3-r', 13], ['s3-d', 5]], [['s3-r', 5], ['s3-d', 3]], [['s3-r', 15], ['s3-d', 12]], [['s3-r', 15], ['s3-d', 9]], [['s3-r', 5], ['s3-d', 4]]],
+  sim4: [[['s4-k', 1.5]], [['s4-k', 0.5]], [['s4-k', 2.25]], [['s4-k', 2.5]], [['s4-k', 0.75]]],
 };
 for (const [sim, ziele] of Object.entries(LOES)) {
   const r = await page.evaluate(([sim, ziele]) => {
@@ -72,7 +72,9 @@ const V = await page.evaluate(() => {
   }
   return aus;
 });
-for (const [name, anz, ges, max] of V) melde(ges === 0 && anz >= 30 && max < 2000, `Verteilung ${name.padEnd(14)} ${anz} verschiedene Aufgaben in 20 000 Würfen, gesperrt gestellt: ${ges}, häufigste ${max}×`);
+/* hypotenuse, kathete: ohne Rechner gibt es nur rund 25 passende Dreiecke, minus die gesperrten (Seiten ganz bis 30, halb bis 15, Dezimale bis 3) */
+const MIN = { hypotenuse: 12, kathete: 24 };
+for (const [name, anz, ges, max] of V) melde(ges === 0 && anz >= (MIN[name] || 30) && max < 20000 / Math.min(anz, 10), `Verteilung ${name.padEnd(14)} ${anz} verschiedene Aufgaben in 20 000 Würfen, gesperrt gestellt: ${ges}, häufigste ${max}×`);
 
 for (const e of jsFehler) melde(false, 'JS: ' + e);
 await browser.close(); server.close();

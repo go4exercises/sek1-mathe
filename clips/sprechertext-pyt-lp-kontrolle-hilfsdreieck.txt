@@ -1,6 +1,6 @@
-0.40	Zwölfhundertfünfundzwanzig plus hundertvierundvierzig gibt dreizehnhundertneunundsechzig. Die Wurzel ist siebenunddreissig.
-8.33	Halbe Basis neun, Schenkel fünfzehn: zweihundertfünfundzwanzig minus einundachtzig gibt hundertvierundvierzig, die Höhe ist zwölf.
-17.47	Hundertneunundsechzig minus hundertvierundvierzig gibt fünfundzwanzig. Die halbe Sehne ist fünf, die ganze zehn Zentimeter.
-25.36	Der Radius liegt gegenüber dem rechten Winkel. Er ist die Hypotenuse des Hilfsdreiecks.
-31.26	Halbe Breite sechs, Radius zehn: Der Abstand ist acht. Das Wasser ist zehn minus acht, also zwei Zentimeter tief.
-39.59	Zum Mitnehmen: Zuerst das Hilfsdreieck finden. Im Kreis ist der Radius die Hypotenuse, und die Sehne geht nur zur Hälfte hinein.
+0.40	Sechsundfünfzig Komma zwei fünf plus sechzehn gibt zweiundsiebzig Komma zwei fünf. Die Wurzel ist acht Komma fünf.
+8.06	Halbe Basis neun, Schenkel fünfzehn: zweihundertfünfundzwanzig minus einundachtzig gibt hundertvierundvierzig, die Höhe ist zwölf.
+17.20	Sechs Komma zwei fünf minus zwei Komma zwei fünf gibt vier. Die halbe Sehne ist zwei, die ganze vier Zentimeter.
+24.80	Der Radius liegt gegenüber dem rechten Winkel. Er ist die Hypotenuse des Hilfsdreiecks.
+30.70	Halbe Breite sechs, Radius sechs Komma fünf: Der Abstand ist zwei Komma fünf. Das Wasser ist sechs Komma fünf minus zwei Komma fünf, also vier Zentimeter tief.
+41.19	Zum Mitnehmen: Zuerst das Hilfsdreieck finden. Im Kreis ist der Radius die Hypotenuse, und die Sehne geht nur zur Hälfte hinein.

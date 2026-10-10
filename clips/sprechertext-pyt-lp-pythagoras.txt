@@ -1,8 +1,8 @@
 0.40	Ein rechtwinkliges Dreieck. Die Seite gegenüber dem rechten Winkel heisst Hypotenuse, sie ist die längste. Die beiden anderen Seiten heissen Katheten.
-9.59	Zeichne über jeder Seite ein Quadrat und zähle die Kästchen. Über der Kathete drei liegen neun, über der Kathete vier sechzehn. Über der Hypotenuse liegen fünfundzwanzig: genau neun plus sechzehn.
-23.06	Das gilt in jedem rechtwinkligen Dreieck: a Quadrat plus b Quadrat gleich c Quadrat. Die Quadrate der Katheten ergeben zusammen das Quadrat der Hypotenuse.
-33.10	Sechs Quadrat plus acht Quadrat gibt sechsunddreissig plus vierundsechzig, also hundert. Die Wurzel aus hundert ist zehn: Die Hypotenuse ist zehn Zentimeter lang.
-43.80	Ist eine Kathete gesucht, subtrahierst du. Hypotenuse zehn, Kathete sechs: b Quadrat gleich hundert minus sechsunddreissig, gleich vierundsechzig. b ist acht.
-54.63	Häufiger Fehler: bei der Kathete addieren. Hundert plus sechsunddreissig gibt mehr als hundert, die Kathete wäre länger als die Hypotenuse. Das ist unmöglich.
-66.25	Zum Mitnehmen: Im rechtwinkligen Dreieck gilt a Quadrat plus b Quadrat gleich c Quadrat. Für die Hypotenuse addierst du die Quadrate, für eine Kathete subtrahierst du. Am Schluss die Wurzel ziehen.
-77.79	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+9.59	Zeichne über jeder Seite ein Quadrat. Über der Kathete drei liegen neun Kästchen, über der Kathete vier sechzehn. Das Quadrat über der Hypotenuse steht schräg. Ergänze es zum Quadrat sieben mal sieben und zieh die vier Dreiecke in den Ecken ab, je sechs Kästchen: neunundvierzig minus vierundzwanzig gibt fünfundzwanzig. Genau neun plus sechzehn.
+32.26	Das gilt in jedem rechtwinkligen Dreieck: a Quadrat plus b Quadrat gleich c Quadrat. Die Quadrate der Katheten ergeben zusammen das Quadrat der Hypotenuse. Und umgekehrt: Gilt für drei Seiten a Quadrat plus b Quadrat gleich c Quadrat, dann ist das Dreieck rechtwinklig.
+48.91	Sechs Quadrat plus acht Quadrat gibt sechsunddreissig plus vierundsechzig, also hundert. Die Wurzel aus hundert ist zehn: Die Hypotenuse ist zehn Zentimeter lang.
+59.61	Ist eine Kathete gesucht, subtrahierst du. Hypotenuse zehn, Kathete sechs: b Quadrat gleich hundert minus sechsunddreissig, gleich vierundsechzig. b ist acht.
+70.44	Häufiger Fehler: bei der Kathete addieren. Hundert plus sechsunddreissig gibt mehr als hundert, die Kathete wäre länger als die Hypotenuse. Das ist unmöglich.
+82.06	Zum Mitnehmen: Im rechtwinkligen Dreieck gilt a Quadrat plus b Quadrat gleich c Quadrat. Für die Hypotenuse addierst du die Quadrate, für eine Kathete subtrahierst du. Am Schluss die Wurzel ziehen.
+93.60	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

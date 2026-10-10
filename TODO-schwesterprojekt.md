@@ -52,3 +52,12 @@ Was: In `HOWTO-leitprogramme.md` §15 ergänzen. Fachlich: «Eine Merkregel, meh
 Beispielen», «Sachsituationen auf Erlaubtheit prüfen». PDFs: «Jede Testaufgabe dem Kapitel zuordnen, das sie übt».
 Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15. Warum: Bewegungs- und Modellieraufgaben gibt es in TALS ebenso (g2-modellieren).
 Nachgezählt: 4 Punkte.
+
+## HOWTO §15: vier Fehlerklassen aus der Prüfung «Flächen, Pythagoras und Ähnlichkeit» (Sek I, 10.10.2026)
+
+Was: In `HOWTO-leitprogramme.md` §15 nach «Sperrliste für jeden Übungstyp» vier Punkte ergänzen («Sperrschlüssel nach der Sache,
+nicht nach der Fragerichtung», «Kontrollfragen nur zu dem, was der Clip gezeigt hat», «Ohne Taschenrechner braucht jede Wurzel
+ein Verfahren», «Leisten-Ziele sind keine Clip- oder Kontrollbeispiele») und den Punkt «Live-Anzeigen runden nur mit ≈» um
+«endliche Werte exakt (k² = 0.5625)» erweitern. Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15 (Wortlaut wie in der Sek-I-Fassung).
+Warum: Sperrlisten, Leisten und Kontrollclips sind im TALS-Gerüst gleich gebaut; die Wurzel-Regel betrifft TALS nur bei
+Aufgaben ohne Rechner. Nachgezählt: 4 neue Punkte, 1 erweiterter.

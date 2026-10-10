@@ -146,9 +146,9 @@
     var fig = document.getElementById('sim1'); if (!fig) return;
     var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]'), wahl = fig.querySelector('#s1-typ');
     var O = { w: 320, h: 176, rl: 4, x0: -5, x1: 15, y0: -1, y1: 10, sx: 1, sy: 1 };
-    function zustand(){ return { typ: wahl.value, g: wertR(fig, 's1-g'), h: wertR(fig, 's1-h'), s: wertR(fig, 's1-s') }; }
+    function zustand(){ var g = wertR(fig, 's1-g'), s = wertR(fig, 's1-s'); if (wahl.value === 'p') s = Math.min(s, 14 - g); return { typ: wahl.value, g: g, h: wertR(fig, 's1-h'), s: s }; }   /* Parallelogramm bleibt im Bild */
     function zeichnen(){
-      var Z = zustand(); zeigeWert(fig, 's1-g', Z.g + ' cm'); zeigeWert(fig, 's1-h', Z.h + ' cm'); zeigeWert(fig, 's1-s', Z.s + ' cm');
+      var Z = zustand(); zeigeWert(fig, 's1-g', Z.g + ' cm'); zeigeWert(fig, 's1-h', Z.h + ' cm'); zeigeWert(fig, 's1-s', mz(Z.s) + ' cm');
       var k = Geo(svg, O), A = [0, 0], Bp = [Z.g, 0], C = [Z.s, Z.h], D = [Z.g + Z.s, Z.h];
       var pk = Z.typ === 'd' ? [A, Bp, C] : [A, Bp, D, C];
       k.vieleck(pk, 'flaeche blau');
@@ -167,7 +167,7 @@
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, [
       { text: 'Dreieck mit Grundseite 8 cm und Fläche 16 cm². Stell die passende Höhe ein.', ok: function(Z){ return Z.typ === 'd' && Z.g === 8 && Z.h === 4; } },
-      { text: 'Dreieck, g = 6 cm, h = 4 cm. Schieb die Spitze, bis die rechte Seite senkrecht steht. Wie gross ist die Fläche jetzt?', ok: function(Z){ return Z.typ === 'd' && Z.g === 6 && Z.h === 4 && Z.s === 6; } },
+      { text: 'Dreieck, g = 7 cm, h = 4 cm. Schieb die Spitze, bis die rechte Seite senkrecht steht. Wie gross ist die Fläche jetzt?', ok: function(Z){ return Z.typ === 'd' && Z.g === 7 && Z.h === 4 && Z.s === 7; } },
       { text: 'Parallelogramm mit Grundseite 5 cm und Fläche 20 cm². Stell es ein.', ok: function(Z){ return Z.typ === 'p' && Z.g === 5 && Z.h === 4; } },
       { text: 'Dreieck, g = 10 cm, h = 3 cm, die Spitze liegt <b>neben</b> der Grundseite. Wo steht die Höhe jetzt?', ok: function(Z){ return Z.typ === 'd' && Z.g === 10 && Z.h === 3 && (Z.s < 0 || Z.s > 10); } },
       { text: 'Parallelogramm mit g = 4 cm, Fläche 24 cm² und um 3 cm verschobener Oberseite.', ok: function(Z){ return Z.typ === 'p' && Z.g === 4 && Z.h === 6 && Z.s === 3; } }
@@ -206,7 +206,7 @@
       { text: 'c = 17 cm, eine Kathete 8 cm. Stell die andere ein.', ok: paar(8, 15) },
       { text: 'c = 20 cm, eine Kathete 12 cm. Stell die andere ein.', ok: paar(12, 16) },
       { text: 'c = 25 cm, eine Kathete 7 cm. Stell die andere ein.', ok: paar(7, 24) },
-      { text: 'Finde ein rechtwinkliges Dreieck mit ganzzahligen Katheten und c = 29 cm.', ok: paar(20, 21) }
+      { text: 'Beide Katheten gleich lang, und das Quadrat über c soll 200 cm² gross sein.', ok: paar(10, 10) }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
     zeichnen();
@@ -217,7 +217,7 @@
   (function(){
     var fig = document.getElementById('sim3'); if (!fig) return;
     var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
-    function zustand(){ var r = wertR(fig, 's3-r'), d = Math.min(wertR(fig, 's3-d'), r); return { r: r, d: d }; }
+    function zustand(){ var r = wertR(fig, 's3-r'), d = Math.min(wertR(fig, 's3-d'), r); return { r: r, d: d, zuweit: wertR(fig, 's3-d') > r }; }
     function zeichnen(){
       var Z = zustand(), r = Z.r, d = Z.d, hs = Math.sqrt(r * r - d * d), s = 2 * hs;
       zeigeWert(fig, 's3-r', r + ' cm'); zeigeWert(fig, 's3-d', d + ' cm');
@@ -233,7 +233,7 @@
       k.punkt(0, 0, 'pkt');
       k.marke([hs / 2, -d], 's/2', 'blau', 0, 16); k.marke([0, -d / 2], 'd', 'orange', -10, 4); k.marke([hs / 2, -d / 2], 'r', 'gruen', 10, -6);
       formel.innerHTML = '(s/2)² = r² − d² = ' + r * r + ' − ' + d * d + ' = ' + (r * r - d * d) + ' &nbsp;→&nbsp; s/2 ' + ca(hs) + ', <b>Sehne s ' + ca(s) + ' cm</b>'
-        + ' &nbsp;·&nbsp; <span class="grau">Wassertiefe r − d = ' + (r - d) + ' cm</span>';
+        + ' &nbsp;·&nbsp; <span class="grau">Wassertiefe r − d = ' + (r - d) + ' cm</span>' + (Z.zuweit ? ' <span class="grau">(Der Abstand ist höchstens r.)</span>' : '');
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -241,8 +241,8 @@
       { text: 'Kreis mit r = 13 cm. Schieb die Sehne, bis sie 24 cm lang ist.', ok: function(Z){ return Z.r === 13 && Z.d === 5; } },
       { text: 'r = 5 cm, Sehne 8 cm. Wie weit ist sie vom Mittelpunkt entfernt?', ok: function(Z){ return Z.r === 5 && Z.d === 3; } },
       { text: 'r = 15 cm, Sehne 18 cm. Stell den Abstand ein.', ok: function(Z){ return Z.r === 15 && Z.d === 12; } },
-      { text: 'r = 10 cm, Abstand 8 cm. Wie lang ist die Sehne?', ok: function(Z){ return Z.r === 10 && Z.d === 8; } },
-      { text: 'Ein Rohr mit r = 13 cm, der Wasserspiegel ist 10 cm breit. Wie tief ist das Wasser?', ok: function(Z){ return Z.r === 13 && Z.d === 12; } }
+      { text: 'r = 15 cm, die Sehne soll 24 cm lang sein. Stell den Abstand ein.', ok: function(Z){ return Z.r === 15 && Z.d === 9; } },
+      { text: 'Ein Rohr mit r = 5 cm, der Wasserspiegel ist 6 cm breit. Wie tief ist das Wasser?', ok: function(Z){ return Z.r === 5 && Z.d === 4; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
     zeichnen();
@@ -254,23 +254,24 @@
     var fig = document.getElementById('sim4'); if (!fig) return;
     var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
     function zustand(){ return { k: wertR(fig, 's4-k') }; }
+    function ex(v){ return String(Math.round(v * 1e6) / 1e6); }   /* exakt: k² = 0.5625, nicht 0.56 (Prüfung 10.10.2026) */
     function zeichnen(){
-      var Z = zustand(), q = Z.k; zeigeWert(fig, 's4-k', z(q));
+      var Z = zustand(), q = Z.k; zeigeWert(fig, 's4-k', ex(q));
       var k = Geo(svg, { w: 320, h: 240, rl: 4, x0: -0.5, x1: 12.83, y0: -0.5, y1: 9.5, sx: 1, sy: 1 });
       k.vieleck([[0, 0], [4 * q, 0], [4 * q, 3 * q]], 'flaeche orange');
       k.vieleck([[0, 0], [4, 0], [4, 3]], 'flaeche blau');
-      k.marke([2 * q, 0], z(4 * q), 'orange', 0, 15); k.marke([4 * q, 1.5 * q], z(3 * q), 'orange', 14, 4); k.marke([2 * q, 1.5 * q], z(5 * q), 'orange', -14, -6);
+      k.marke([2 * q, 0], ex(4 * q), 'orange', 0, 15); k.marke([4 * q, 1.5 * q], ex(3 * q), 'orange', 14, 4); k.marke([2 * q, 1.5 * q], ex(5 * q), 'orange', -14, -6);
       k.marke([2, 0], '4', 'blau', 0, -4);
-      formel.innerHTML = 'k = ' + z(q) + ': Seiten 4, 3, 5 → <b>' + z(4 * q) + ', ' + z(3 * q) + ', ' + z(5 * q) + '</b> &nbsp;·&nbsp; Fläche 6 cm² → <b>' + z(6 * q * q) + ' cm²</b> (mal ' + z(q * q) + ' = k²)';
+      formel.innerHTML = 'k = ' + ex(q) + ': Seiten 4, 3, 5 → <b>' + ex(4 * q) + ', ' + ex(3 * q) + ', ' + ex(5 * q) + '</b> &nbsp;·&nbsp; Fläche 6 cm² → <b>' + ex(6 * q * q) + ' cm²</b> (mal ' + ex(q * q) + ' = k²)';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, [
-      { text: 'Bei welchem Streckfaktor k wird die Fläche 24 cm²?', ok: function(Z){ return Z.k === 2; } },
-      { text: 'Die Fläche soll 9-mal so gross werden. Welches k?', ok: function(Z){ return Z.k === 3; } },
-      { text: 'Die Kathete 3 cm soll 4.5 cm lang werden.', ok: function(Z){ return Z.k === 1.5; } },
+      { text: 'Bei welchem Streckfaktor k wird die Fläche 13.5 cm²?', ok: function(Z){ return Z.k === 1.5; } },
       { text: 'Die Fläche soll ein Viertel so gross werden.', ok: function(Z){ return Z.k === 0.5; } },
-      { text: 'Die Hypotenuse soll 12.5 cm lang werden.', ok: function(Z){ return Z.k === 2.5; } }
+      { text: 'Die Kathete 4 cm soll 9 cm lang werden.', ok: function(Z){ return Z.k === 2.25; } },
+      { text: 'Die Hypotenuse soll 12.5 cm lang werden.', ok: function(Z){ return Z.k === 2.5; } },
+      { text: 'Die Hypotenuse soll 3.75 cm lang werden. Wird das Dreieck grösser oder kleiner?', ok: function(Z){ return Z.k === 0.75; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
     zeichnen();
@@ -360,20 +361,25 @@
       'fl|d|6|4', 'fl|d|8|5', 'fl|p|7|4', 'fl|t|9|5|4', 'fl|d|10|3', 'fl|d|9|6', 'fl|p|12|5', 'fl|t|11|7|6', 'fl|d|12|8', 'fl|d|10|7', 'fl|p|9|4', 'fl|t|8|4|5',
       'fl|p|6|4', 'fl|t|14|8|5', 'fl|p|9|6',
       'zu|h|6|4|3', 'zu|l|8|6|3|2', 'zu|l|6|5|2|2', 'zu|h|10|6|4',
-      'hy|6|8', 'hy|3|4', 'hy|9|12', 'hy|12|16', 'hy|20|21', 'hy|15|20', 'hy|5|12', 'hy|16|30', 'hy|8|15', 'hy|7|24',
-      'ka|10|6', 'ka|17|8', 'ka|25|7', 'ka|26|10', 'ka|13|5', 'ka|41|9', 'ka|20|12', 'ka|15|9',
-      'hd|r|20|21', 'hd|r|8|15', 'hd|r|12|35', 'hd|g|16|17', 'hd|g|30|25', 'hd|g|18|15', 'hd|g|42|29', 'hd|l|6.5|2.5', 'hd|l|5|1.4',
-      'se|d|10|16', 'se|s|13|5', 'se|d|5|8', 'se|d|15|18', 'se|s|10|8', 'se|d|13|10', 'se|d|26|48', 'se|d|17|30', 'se|s|13|12', 'se|d|10|12', 'se|d|25|48', 'se|d|15|24',
-      'ae|3|4|5|2', 'ae|4|6|8|12', 'ae|5|7|9|10',
-      'ff|A|6|2', 'ff|A|10|3', 'ff|A|8|3', 'ff|k|16', 'ff|A|15|3'
+      'fl|d|8|4', 'fl|p|5|4', 'fl|d|12|5', 'fl|d|7|4', 'fl|p|4|6', 'fl|d|10|3', 'fl|d|12|7', 'fl|t|15|9|8',
+      'hd|g|16|17', 'hd|g|30|25', 'hd|g|18|15', 'hd|g|42|29', 'hd|g|30|39', 'hd|l|6.5|2.5', 'hd|l|5|1.4',
+      'se|10|6', 'se|13|5', 'se|5|3', 'se|15|12', 'se|10|8', 'se|13|12', 'se|26|10', 'se|17|8', 'se|25|7', 'se|15|9', 'se|17|15', 'se|6.5|2.5', 'se|25|15', 'se|5|4', 'se|2.5|1.5', 'se|6.5|2.5',
+      'ae|3|4|5|2', 'ae|4|6|8|1.5', 'ae|5|7|9|2', 'ae|4|6|7|1.5',
+      'ff|A|6|2', 'ff|A|6|1.5', 'ff|A|6|0.5', 'ff|A|6|2.5', 'ff|A|10|3', 'ff|A|8|3', 'ff|k|16', 'ff|k|9', 'ff|A|15|3'
     ];
-    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    /* Rechtwinklige Dreiecke (Katheten klein|gross) aus allen festen Beispielen: gelten für hypotenuse, kathete und Rechteck-Diagonale zugleich. */
+    var SPERRE_DREIECK = ['3|4', '4.5|6', '6|8', '9|12', '12|16', '15|20', '18|24', '2.5|6', '5|12', '10|24', '8|15', '7|24', '20|21', '16|30', '9|40', '12|35', '10|10', '4|7.5', '7.5|10', '3.5|12'];
+    function gesperrt(T, A){ return !!T.schl && (SPERRE.indexOf(T.schl(A)) >= 0 || (T.dreieck && SPERRE_DREIECK.indexOf(T.dreieck(A)) >= 0)); }
+    function kk(a, b){ return Math.min(a, b) + '|' + Math.max(a, b); }
+    function rd(v){ return Math.round(v * 1e6) / 1e6; }   /* Gleitkomma: 4.1 − 0.9 = 3.1999… */
     function d(v){ return bWert(bDez(v)); }
     function eing(a){ return bWert(a).replace('−', '-'); }
     var TRIPEL = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29], [9, 40, 41], [12, 35, 37]];
     function tripel(max){
       var l = [];
-      TRIPEL.forEach(function(t){ for (var f = 0.5; f * t[2] <= max; f += 0.5) if (f % 1 === 0 || t[2] <= 13) l.push([t[0] * f, t[1] * f, t[2] * f]); });
+      /* ohne Rechner (Prüfung 10.10.2026): jede Seite ganz bis 30, halb bis 15 oder mit einer Dezimale bis 3 (Quadrate bis 30² im Vorwissen) */
+      function geht(x){ return x % 1 === 0 ? x <= 30 : (x * 2) % 1 === 0 ? x <= 15 : x <= 3; }
+      TRIPEL.forEach(function(t){ for (var n = 1; n * t[2] <= 10 * max; n++){ var v = t.map(function(w){ return Math.round(w * n) / 10; }); if (v[2] > 1 && v.indexOf(1) < 0 && v.every(geht)) l.push(v);   /* 1² = 1 verrät die Wurzel nicht */ } });
       return zufall(l);
     }
 
@@ -436,68 +442,71 @@
       /* ── Kapitel 2 ── */
       'hypotenuse': { felder: ['c'],
         schl: function(A){ return 'hy|' + Math.min(A.a, A.b) + '|' + Math.max(A.a, A.b); },
+        dreieck: function(A){ return kk(A.a, A.b); },
         eingabe: function(A){ return { c: String(A.c) }; },
         neu: function(){
           var t = tripel(60), dreh = Math.random() < 0.5, a = dreh ? t[1] : t[0], b = dreh ? t[0] : t[1];
           var o = { vl: [[[[0, 0], [a, 0], [0, b]], 'flaeche blau']], re: [[[0, 0], [1, 0], [0, 1]]], tx: [[[a / 2, 0], a + ' cm', 'blau', 0, 15], [[0, b / 2], b + ' cm', 'blau', -22, 4], [[a / 2, b / 2], 'c', 'gruen', 10, -6]] };
           return { a: a, b: b, c: t[2], text: 'Wie lang ist die Hypotenuse c?' + figur(o, 'rechtwinkliges Dreieck mit Katheten ' + a + ' cm und ' + b + ' cm'), muster: 'c = {c} cm' }; },
         richtig: function(A, e){ return bEq(e.c, bDez(A.c)); },
-        fehler: function(A){ return [[{ c: String(A.a + A.b) }, 'Quadrate'], [{ c: String(A.a * A.a + A.b * A.b) }, 'Wurzel']]; },
+        fehler: function(A){ return [[{ c: String(rd(A.a + A.b)) }, 'Quadrate'], [{ c: String(rd(A.a * A.a + A.b * A.b)) }, 'Wurzel']]; },
         pruefen: function(A, e){
-          if (bEq(e.c, bDez(A.a + A.b))) return 'Die Seiten addieren sich nicht. Die <b>Quadrate</b> der Katheten ergeben das Quadrat der Hypotenuse.';
-          if (bEq(e.c, bDez(A.a * A.a + A.b * A.b))) return 'Das ist \\(c^2\\). Zieh noch die <b>Wurzel</b>.';
+          if (bEq(e.c, bDez(rd(A.a + A.b)))) return 'Die Seiten addieren sich nicht. Die <b>Quadrate</b> der Katheten ergeben das Quadrat der Hypotenuse.';
+          if (bEq(e.c, bDez(rd(A.a * A.a + A.b * A.b)))) return 'Das ist \\(c^2\\). Zieh noch die <b>Wurzel</b>.';
           return 'Rechne \\(a^2 + b^2\\) und zieh dann die Wurzel.'; },
-        tipps: function(A){ return ['\\(c^2 = ' + A.a + '^2 + ' + A.b + '^2\\)', '\\(c^2 = ' + (A.a * A.a + A.b * A.b) + '\\)']; },
-        loesung: function(A){ return 'c = \\sqrt{' + A.a + '^2 + ' + A.b + '^2} = \\sqrt{' + (A.a * A.a + A.b * A.b) + '} = ' + A.c; } },
+        tipps: function(A){ return ['\\(c^2 = ' + A.a + '^2 + ' + A.b + '^2\\)', '\\(c^2 = ' + rd(A.a * A.a + A.b * A.b) + '\\)']; },
+        loesung: function(A){ return 'c = \\sqrt{' + A.a + '^2 + ' + A.b + '^2} = \\sqrt{' + rd(A.a * A.a + A.b * A.b) + '} = ' + A.c; } },
 
       'kathete': { felder: ['b'],
-        schl: function(A){ return 'ka|' + A.c + '|' + Math.min(A.a, A.b); },
+        schl: function(A){ return 'ka|' + A.c + '|' + A.a; },
+        dreieck: function(A){ return kk(A.a, A.b); },
         eingabe: function(A){ return { b: String(A.b) }; },
         neu: function(){
           var t = tripel(60), dreh = Math.random() < 0.5, a = dreh ? t[1] : t[0], b = dreh ? t[0] : t[1], c = t[2];
           var o = { vl: [[[[0, 0], [b, 0], [0, a]], 'flaeche blau']], re: [[[0, 0], [1, 0], [0, 1]]], tx: [[[b / 2, 0], 'b', 'orange', 0, 15], [[0, a / 2], a + ' cm', 'blau', -22, 4], [[b / 2, a / 2], c + ' cm', 'gruen', 18, -6]] };
           return { a: a, b: b, c: c, text: 'Wie lang ist die Kathete b?' + figur(o, 'rechtwinkliges Dreieck mit Hypotenuse ' + c + ' cm und Kathete ' + a + ' cm'), muster: 'b = {b} cm' }; },
         richtig: function(A, e){ return bEq(e.b, bDez(A.b)); },
-        fehler: function(A){ return [[{ b: String(A.c - A.a) }, 'Quadrate'], [{ b: String(A.c * A.c - A.a * A.a) }, 'Wurzel']]; },
+        fehler: function(A){ return [[{ b: String(rd(A.c - A.a)) }, 'Quadrate'], [{ b: String(rd(A.c * A.c - A.a * A.a)) }, 'Wurzel']]; },
         pruefen: function(A, e){
-          if (bEq(e.b, bDez(A.c - A.a))) return 'Die Seiten subtrahieren sich nicht. Rechne mit den <b>Quadrate</b>n: \\(b^2 = c^2 - a^2\\).';
-          if (bEq(e.b, bDez(A.c * A.c - A.a * A.a))) return 'Das ist \\(b^2\\). Zieh noch die <b>Wurzel</b>.';
-          return 'Die Hypotenuse liegt gegenüber dem rechten Winkel. Für eine Kathete rechnest du \\(c^2 - a^2\\), nicht plus.'; },
-        tipps: function(A){ return ['\\(b^2 = c^2 - a^2\\)', '\\(b^2 = ' + A.c + '^2 - ' + A.a + '^2 = ' + (A.c * A.c - A.a * A.a) + '\\)']; },
-        loesung: function(A){ return 'b = \\sqrt{' + A.c + '^2 - ' + A.a + '^2} = \\sqrt{' + (A.c * A.c - A.a * A.a) + '} = ' + A.b; } },
+          if (bEq(e.b, bDez(rd(A.c - A.a)))) return 'Die Seiten subtrahieren sich nicht. Rechne mit den <b>Quadrate</b>n: \\(b^2 = c^2 - a^2\\).';
+          if (bEq(e.b, bDez(rd(A.c * A.c - A.a * A.a)))) return 'Das ist \\(b^2\\). Zieh noch die <b>Wurzel</b>.';
+          return 'Welche Seite liegt gegenüber dem rechten Winkel? Sie ist die Hypotenuse. Für eine Kathete rechnest du \\(c^2 - a^2\\) und ziehst die Wurzel.'; },
+        tipps: function(A){ return ['\\(b^2 = c^2 - a^2\\)', '\\(b^2 = ' + A.c + '^2 - ' + A.a + '^2 = ' + rd(A.c * A.c - A.a * A.a) + '\\)']; },
+        loesung: function(A){ return 'b = \\sqrt{' + A.c + '^2 - ' + A.a + '^2} = \\sqrt{' + rd(A.c * A.c - A.a * A.a) + '} = ' + A.b; } },
 
       /* ── Kapitel 3 ── */
       'hilfsdreieck': { felder: ['x'],
         schl: function(A){ return 'hd|' + A.art + '|' + A.p.join('|'); },
+        dreieck: function(A){ return A.art === 'r' ? kk(A.p[0], A.p[1]) : ''; },
         eingabe: function(A){ return { x: eing(A.x) }; },
         neu: function(){
-          var art = zufall(['r', 'g', 'l']), t = tripel(50), o, text, x, p, f;
-          if (art === 'r'){ p = [t[0], t[1]]; x = bDez(t[2]); f = bDez(t[0] + t[1]);
-            o = { vl: [[[[0, 0], [t[0], 0], [t[0], t[1]], [0, t[1]]], 'flaeche blau']], st: [[[0, 0], [t[0], t[1]], 'linie gruen']], tx: [[[t[0] / 2, 0], t[0] + ' cm', 'blau', 0, 15], [[t[0], t[1] / 2], t[1] + ' cm', 'blau', 22, 4], [[t[0] / 2, t[1] / 2], 'd', 'gruen', -10, -6]] };
-            text = 'Wie lang ist die Diagonale d des Rechtecks?'; }
-          else if (art === 'g'){ p = [2 * t[0], t[2]]; x = bDez(t[1]); var ww = Math.sqrt(t[2] * t[2] - 4 * t[0] * t[0]); f = ww > 0 && (ww * 10) % 1 === 0 ? bDez(ww) : B(-1);
+          var art = zufall(['r', 'g', 'l']), t = tripel(30), o, text, x, p, f;
+          if (art === 'r'){ p = [t[0], t[1]]; x = bDez(t[2]); f = bDez(rd(t[0] + t[1]));
+            o = { vl: [[[[0, 0], [t[0], 0], [t[0], t[1]], [0, t[1]]], 'flaeche blau']], st: [[[0, 0], [t[0], t[1]], 'linie gruen']], tx: [[[t[0] / 2, 0], t[0] + ' cm', 'blau', 0, 15], [[t[0], t[1] / 2], t[1] + ' cm', 'blau', 22, 4], [[t[0] / 2, t[1] / 2], 'e', 'gruen', -10, -6]] };
+            text = 'Wie lang ist die Diagonale e des Rechtecks?'; }
+          else if (art === 'g'){ p = [2 * t[0], t[2]]; x = bDez(t[1]); var ww = rd(Math.sqrt(rd(t[2] * t[2] - 4 * t[0] * t[0]))); f = ww > 0 && rd(ww * 10) % 1 === 0 ? bDez(ww) : B(-1);
             o = { vl: [[[[0, 0], [2 * t[0], 0], [t[0], t[1]]], 'flaeche blau']], st: [[[t[0], 0], [t[0], t[1]], 'linie orange gestrichelt']], re: [[[t[0], 0], [1, 0], [0, 1]]],
                   tx: [[[t[0], 0], 2 * t[0] + ' cm', 'blau', 0, 15], [[t[0] / 2, t[1] / 2], t[2] + ' cm', 'blau', -22, 0], [[t[0], t[1] / 2], 'h', 'orange', 10, 4]] };
             text = 'Ein gleichschenkliges Dreieck. Wie lang ist die Höhe h?'; }
-          else { var q = zufall([[1.5, 2, 2.5], [3, 4, 5], [1.2, 3.5, 3.7], [2.1, 2.8, 3.5], [1.8, 2.4, 3], [2.5, 6, 6.5], [0.7, 2.4, 2.5]]); p = [q[2], q[0]]; x = bDez(q[1]); f = bDez(q[2] - q[0]);
+          else { var q = zufall([[0.7, 2.4, 2.5], [1.2, 3.5, 3.7], [0.9, 4, 4.1], [1.1, 6, 6.1], [1.5, 3.6, 3.9], [1.6, 6.3, 6.5], [1, 2.4, 2.6]]);   /* steile Leitern (67° bis 80°) */ p = [q[2], q[0]]; x = bDez(q[1]); f = bDez(rd(q[2] - q[0]));
             o = { st: [[[0, 0], [0, q[1] * 1.15], 'linie tinte'], [[0, 0], [q[0] * 1.6, 0], 'linie tinte'], [[q[0], 0], [0, q[1]], 'linie blau']], re: [[[0, 0], [1, 0], [0, 1]]],
                   tx: [[[q[0] / 2, 0], d(q[0]) + ' m', 'blau', 0, 15], [[q[0] / 2, q[1] / 2], d(q[2]) + ' m', 'blau', 18, 0], [[0, q[1] / 2], 'h', 'orange', -10, 4]] };
             text = 'Eine Leiter lehnt an einer senkrechten Wand. Wie hoch reicht sie (h in m)?'; }
-          return { art: art, p: p, x: x, f: f, text: text + figur(o, { r: 'Rechteck', g: 'gleichschenkliges Dreieck', l: 'Leiter an der Wand' }[art]), muster: (art === 'r' ? 'd' : 'h') + ' = {x} ' + (art === 'l' ? 'm' : 'cm') }; },
+          return { art: art, p: p, x: x, f: f, text: text + figur(o, { r: 'Rechteck', g: 'gleichschenkliges Dreieck', l: 'Leiter an der Wand' }[art]), muster: (art === 'r' ? 'e' : 'h') + ' = {x} ' + (art === 'l' ? 'm' : 'cm') }; },
         richtig: function(A, e){ return bEq(e.x, A.x); },
         fehler: function(A){ return A.f[0] > 0 && !bEq(A.f, A.x) ? [[{ x: eing(A.f) }, A.art === 'r' ? 'Quadrate' : A.art === 'g' ? 'Hälfte' : 'Quadrate']] : []; },
         pruefen: function(A, e){
           if (A.art === 'g' && A.f[0] > 0 && bEq(e.x, A.f)) return 'Im Hilfsdreieck liegt nur die <b>Hälfte</b> der Grundseite, denn die Höhe teilt sie in der Mitte.';
           if (A.art !== 'g' && bEq(e.x, A.f)) return 'Längen addieren oder subtrahieren sich nicht. Rechne mit den <b>Quadrate</b>n.';
           return 'Such zuerst das rechtwinklige Hilfsdreieck: Wo ist der rechte Winkel, welche Seite ist die Hypotenuse?'; },
-        tipps: function(A){ return A.art === 'r' ? ['Die Diagonale ist die Hypotenuse des halben Rechtecks.', '\\(d^2 = ' + A.p[0] + '^2 + ' + A.p[1] + '^2\\)'] : A.art === 'g' ? ['Die Höhe teilt die Grundseite in zwei Hälften von je \\(' + A.p[0] / 2 + '\\) cm.', '\\(h^2 = ' + A.p[1] + '^2 - ' + A.p[0] / 2 + '^2\\)'] : ['Die Leiter ist die Hypotenuse.', '\\(h^2 = ' + d(A.p[0]) + '^2 - ' + d(A.p[1]) + '^2\\)']; },
-        loesung: function(A){ return A.art === 'r' ? 'd = \\sqrt{' + A.p[0] + '^2 + ' + A.p[1] + '^2} = ' + bWertTex(A.x) : A.art === 'g' ? 'h = \\sqrt{' + A.p[1] + '^2 - ' + A.p[0] / 2 + '^2} = ' + bWertTex(A.x) : 'h = \\sqrt{' + d(A.p[0]) + '^2 - ' + d(A.p[1]) + '^2} = ' + bWertTex(A.x); } },
+        tipps: function(A){ return A.art === 'r' ? ['Die Diagonale ist die Hypotenuse des halben Rechtecks.', '\\(e^2 = ' + A.p[0] + '^2 + ' + A.p[1] + '^2\\)'] : A.art === 'g' ? ['Die Höhe teilt die Grundseite in zwei Hälften von je \\(' + A.p[0] / 2 + '\\) cm.', '\\(h^2 = ' + A.p[1] + '^2 - ' + A.p[0] / 2 + '^2\\)'] : ['Die Leiter ist die Hypotenuse.', '\\(h^2 = ' + d(A.p[0]) + '^2 - ' + d(A.p[1]) + '^2\\)']; },
+        loesung: function(A){ return A.art === 'r' ? 'e = \\sqrt{' + A.p[0] + '^2 + ' + A.p[1] + '^2} = ' + bWertTex(A.x) : A.art === 'g' ? 'h = \\sqrt{' + A.p[1] + '^2 - ' + A.p[0] / 2 + '^2} = ' + bWertTex(A.x) : 'h = \\sqrt{' + d(A.p[0]) + '^2 - ' + d(A.p[1]) + '^2} = ' + bWertTex(A.x); } },
 
       'sehne': { felder: ['x'],
-        schl: function(A){ return 'se|' + A.ges + '|' + A.r + '|' + (A.ges === 's' ? A.dd : A.s); },
+        schl: function(A){ return 'se|' + A.r + '|' + A.dd; },   /* ohne Richtung: dasselbe Hilfsdreieck */
         eingabe: function(A){ return { x: String(A.x) }; },
         neu: function(){
-          var t = tripel(40), r = t[2], dd = t[0], hs = t[1]; if (Math.random() < 0.5){ dd = t[1]; hs = t[0]; }
+          var t = tripel(30), r = t[2], dd = t[0], hs = t[1]; if (Math.random() < 0.5){ dd = t[1]; hs = t[0]; }
           var ges = zufall(['s', 'd']), x = ges === 's' ? 2 * hs : dd;
           var o = { kr: [[[0, 0], r, 'linie tinte']], st: [[[-hs, -dd], [hs, -dd], 'linie blau'], [[0, 0], [0, -dd], 'linie orange'], [[0, 0], [hs, -dd], 'linie gruen']], re: [[[0, -dd], [1, 0], [0, 1]]],
                     tx: [[[hs / 2, -dd / 2], 'r = ' + r, 'gruen', 18, -4], [[0, -dd / 2], ges === 'd' ? 'd' : 'd = ' + dd, 'orange', -24, 4], [[0, -dd], ges === 's' ? 's' : 's = ' + 2 * hs, 'blau', 0, 16]] };
@@ -507,13 +516,13 @@
         fehler: function(A){ return A.ges === 's' ? [[{ x: String(A.s / 2) }, 'Hälfte']] : []; },
         pruefen: function(A, e){
           if (A.ges === 's' && bEq(e.x, bDez(A.s / 2))) return 'Das ist die <b>Hälfte</b> der Sehne. Das Hilfsdreieck enthält nur die halbe Sehne.';
-          return A.ges === 's' ? 'Hilfsdreieck: Radius als Hypotenuse, Abstand und halbe Sehne als Katheten.' : 'Im Hilfsdreieck steht nur die <b>halbe</b> Sehne, \\(' + A.s / 2 + '\\) cm. Der Radius ist die Hypotenuse.'; },
-        tipps: function(A){ return A.ges === 's' ? ['\\(\\left(\\tfrac{s}{2}\\right)^2 = r^2 - d^2\\)', '\\(' + A.r + '^2 - ' + A.dd + '^2 = ' + (A.r * A.r - A.dd * A.dd) + '\\)'] : ['halbe Sehne: \\(' + A.s / 2 + '\\) cm', '\\(d^2 = ' + A.r + '^2 - ' + A.s / 2 + '^2\\)']; },
+          return 'Hilfsdreieck: Der Radius ist die Hypotenuse, der Abstand und die <b>halbe</b> Sehne sind die Katheten.'; },
+        tipps: function(A){ return A.ges === 's' ? ['\\(\\left(\\tfrac{s}{2}\\right)^2 = r^2 - d^2\\)', '\\(' + A.r + '^2 - ' + A.dd + '^2 = ' + rd(A.r * A.r - A.dd * A.dd) + '\\)'] : ['halbe Sehne: \\(' + A.s / 2 + '\\) cm', '\\(d^2 = ' + A.r + '^2 - ' + A.s / 2 + '^2\\)']; },
         loesung: function(A){ return A.ges === 's' ? '\\tfrac{s}{2} = \\sqrt{' + A.r + '^2 - ' + A.dd + '^2} = ' + A.s / 2 + ', \\; s = ' + A.s : 'd = \\sqrt{' + A.r + '^2 - ' + A.s / 2 + '^2} = ' + A.dd; } },
 
       /* ── Kapitel 4 ── */
       'aehnlich': { felder: ['x'],
-        schl: function(A){ return 'ae|' + A.s.join('|') + '|' + A.bild; },
+        schl: function(A){ return 'ae|' + A.s.join('|') + '|' + A.k[0] / A.k[1]; },
         eingabe: function(A){ return { x: eing(A.x) }; },
         neu: function(){
           var s = zufall([[3, 4, 5], [4, 6, 8], [5, 7, 9], [6, 8, 9], [4, 5, 7], [2, 3, 4], [6, 9, 12]]), k = zufall([[3, 2], [2, 1], [5, 2], [3, 1], [1, 2], [4, 3]]);

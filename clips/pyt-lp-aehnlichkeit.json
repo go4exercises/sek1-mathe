@@ -85,6 +85,17 @@
        "fuellung": 0.2
       },
       {
+       "art": "rechts",
+       "bei": [
+        4,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22
+      },
+      {
        "art": "text",
        "bei": [
         2,
@@ -118,7 +129,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.32,
+     "ein": 4.16,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -152,6 +163,17 @@
        ],
        "farbe": 2,
        "fuellung": 0.1
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        8,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22
       },
       {
        "art": "text",
@@ -206,7 +228,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 2.4
+     "ein": 2.22
     },
     {
      "typ": "graf",
@@ -352,7 +374,7 @@
      "x": 150,
      "y": 300,
      "groesse": 52,
-     "ein": 0.71
+     "ein": 0.67
     },
     {
      "typ": "formel",
@@ -360,7 +382,7 @@
      "x": 150,
      "y": 420,
      "groesse": 52,
-     "ein": 7.17
+     "ein": 6.91
     }
    ],
    "dauer": 11.11
@@ -369,7 +391,7 @@
    "name": "Schatten",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Ähnliche Dreiecke helfen beim Messen. Ein zwei Meter langer Stab wirft drei Meter Schatten, ein Baum zur selben Zeit fünfzehn Meter. Die Verhältnisse sind gleich: Höhe zu Schatten ist zwei zu drei. Der Baum ist zehn Meter hoch.",
+   "sprecher": "Ähnliche Dreiecke helfen beim Messen. Ein zwei Meter langer Stab wirft drei Meter Schatten, ein Baum zur selben Zeit fünfzehn Meter. Die Sonnenstrahlen sind parallel, Stab und Baum stehen senkrecht: Die beiden Dreiecke haben gleiche Winkel, sie sind ähnlich. Also sind die Verhältnisse gleich: Höhe zu Schatten ist zwei zu drei. Der Baum ist zehn Meter hoch.",
    "elemente": [
     {
      "typ": "formel",
@@ -377,7 +399,7 @@
      "x": 150,
      "y": 300,
      "groesse": 48,
-     "ein": 7.62
+     "ein": 14.72
     },
     {
      "typ": "graf",
@@ -444,14 +466,25 @@
        "dicke": 7
       },
       {
+       "art": "rechts",
+       "bei": [
+        12,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
        "art": "text",
        "bei": [
-        12.3,
-        1
+        11.7,
+        0.9
        ],
        "text": "2 m",
        "farbe": 1,
-       "anker": "start",
+       "anker": "end",
        "groesse": 28,
        "kursiv": false
       },
@@ -489,7 +522,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.5,
+     "ein": 5.6,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -519,6 +552,17 @@
        "dicke": 9
       },
       {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
        "art": "text",
        "bei": [
         0.5,
@@ -533,13 +577,13 @@
      ]
     }
    ],
-   "dauer": 13.0
+   "dauer": 20.39
   },
   {
    "name": "Regal",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Ein dreieckiges Regalbrett ist sechzig mal vierzig Zentimeter, also zwölfhundert Quadratzentimeter. In der Ecke fehlt ein ähnliches Dreieck mit halb so langen Seiten. Seine Fläche ist ein Viertel: dreihundert. Es bleiben neunhundert.",
+   "sprecher": "Ein dreieckiges Regalbrett hat die Katheten sechzig und vierzig Zentimeter. Seine Fläche ist sechzig mal vierzig durch zwei, also zwölfhundert Quadratzentimeter. In der Ecke fehlt ein ähnliches Dreieck mit halb so langen Seiten. Seine Fläche ist ein Viertel: dreihundert. Es bleiben neunhundert.",
    "elemente": [
     {
      "typ": "formel",
@@ -547,7 +591,7 @@
      "x": 150,
      "y": 300,
      "groesse": 40,
-     "ein": 10.28
+     "ein": 13.79
     },
     {
      "typ": "graf",
@@ -593,6 +637,17 @@
        "fuellung": 0.15
       },
       {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
        "art": "text",
        "bei": [
         30,
@@ -626,7 +681,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.6,
+     "ein": 10.07,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -664,19 +719,31 @@
       {
        "art": "text",
        "bei": [
-        9,
-        5
+        15,
+        2.5
        ],
-       "text": "30 × 20",
+       "text": "30",
        "farbe": 2,
        "anker": "middle",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2,
+        12
+       ],
+       "text": "20",
+       "farbe": 2,
+       "anker": "start",
        "groesse": 28,
        "kursiv": false
       }
      ]
     }
    ],
-   "dauer": 13.33
+   "dauer": 17.24
   },
   {
    "name": "Fehler",
@@ -690,7 +757,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 1.15
+     "ein": 1.13
     },
     {
      "typ": "notiz",
@@ -699,7 +766,7 @@
      "y": 420,
      "groesse": 46,
      "farbe": "rot",
-     "ein": 7.25
+     "ein": 6.95
     }
    ],
    "dauer": 9.33
@@ -769,12 +836,12 @@
    "richtig": 0,
    "rueck": {
     "0": "Ja.",
-    "1": "Länge und Höhe werden beide verdoppelt. Was heisst das für die Fläche?",
+    "1": "Grundseite und Höhe werden beide verdoppelt. Was heisst das für die Fläche?",
     "2": "Die Fläche hat zwei Richtungen, nicht drei."
    },
    "sprich": "Alle Seiten des Dreiecks werden verdoppelt. Wie verändert sich die Fläche?",
    "rueck_sprich": {
-    "1": "Länge und Höhe werden beide verdoppelt. Was heisst das für die Fläche?",
+    "1": "Grundseite und Höhe werden beide verdoppelt. Was heisst das für die Fläche?",
     "2": "Die Fläche hat zwei Richtungen, nicht drei."
    }
   }

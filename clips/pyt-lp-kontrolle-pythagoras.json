@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Kontrollfragen zu Pythagoras",
  "dateiname": "pyt-lp-kontrolle-pythagoras",
- "kurzbeschrieb": "Fünf Fragen: Katheten 5 und 12, Hypotenuse 17 mit Kathete 15, welche Seite ist die Hypotenuse, ist 9, 12, 15 rechtwinklig, Kathete aus 10 und 8.",
+ "kurzbeschrieb": "Fünf Fragen: Katheten 5 und 12, Hypotenuse 7.5 mit Kathete 6, welche Seite ist die Hypotenuse, ist 7, 24, 26 rechtwinklig (nein), Kathete aus 12.5 und 12.",
  "schlagworte": [
   "Pythagoras",
   "Hypotenuse",
@@ -47,18 +47,18 @@
    "name": "Frage 2",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zweihundertneunundachtzig minus zweihundertfünfundzwanzig gibt vierundsechzig, die Wurzel ist acht.",
+   "sprecher": "Sechsundfünfzig Komma zwei fünf minus sechsunddreissig gibt zwanzig Komma zwei fünf. Die Wurzel ist vier Komma fünf.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\sqrt{289 - 225} = \\sqrt{64} = \\fc{8}",
+     "text": "\\sqrt{7.5^2 - 6^2} = \\sqrt{20.25} = \\fc{4.5}",
      "x": 150,
      "y": 330,
-     "groesse": 54,
+     "groesse": 52,
      "ein": 1.0
     }
    ],
-   "dauer": 6.85
+   "dauer": 7.83
   },
   {
    "name": "Frage 3",
@@ -279,35 +279,35 @@
    "name": "Frage 4",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Einundachtzig plus hundertvierundvierzig gibt zweihundertfünfundzwanzig, und das ist fünfzehn Quadrat. Das Dreieck ist rechtwinklig.",
+   "sprecher": "Neunundvierzig plus fünfhundertsechsundsiebzig gibt sechshundertfünfundzwanzig. Sechsundzwanzig Quadrat ist aber sechshundertsechsundsiebzig. Das Dreieck ist nicht rechtwinklig.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "81 + 144 = 225 = 15^2",
+     "text": "49 + 576 = 625 \\neq 676 = 26^2",
      "x": 150,
      "y": 330,
-     "groesse": 56,
+     "groesse": 54,
      "ein": 1.0
     }
    ],
-   "dauer": 8.12
+   "dauer": 10.78
   },
   {
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Für eine Kathete subtrahierst du: hundert minus vierundsechzig gibt sechsunddreissig, die Kathete ist sechs Zentimeter.",
+   "sprecher": "Für eine Kathete subtrahierst du: hundertsechsundfünfzig Komma zwei fünf minus hundertvierundvierzig gibt zwölf Komma zwei fünf. Die Kathete ist drei Komma fünf Zentimeter.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\sqrt{100 - 64} = \\fc{6}",
+     "text": "\\sqrt{156.25 - 144} = \\sqrt{12.25} = \\fc{3.5}",
      "x": 150,
      "y": 330,
-     "groesse": 56,
+     "groesse": 50,
      "ein": 1.0
     }
    ],
-   "dauer": 7.62
+   "dauer": 10.49
   },
   {
    "name": "Merke",
@@ -362,22 +362,22 @@
    "szene": "Frage 2",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Die Hypotenuse ist 17 cm, eine Kathete 15 cm. Wie lang ist die andere Kathete?",
+   "text": "Die Hypotenuse ist 7.5 cm, eine Kathete 6 cm. Wie lang ist die andere Kathete?",
    "optionen": [
-    "8 cm",
-    "2 cm",
-    "22.6 cm"
+    "9.6 cm",
+    "4.5 cm",
+    "1.5 cm"
    ],
-   "richtig": 0,
+   "richtig": 1,
    "rueck": {
-    "0": "Ja.",
-    "1": "Nicht die Seiten subtrahieren, sondern ihre Quadrate.",
-    "2": "Eine Kathete ist kürzer als die Hypotenuse. Subtrahieren statt addieren."
+    "1": "Ja.",
+    "2": "Nicht die Seiten subtrahieren, sondern ihre Quadrate.",
+    "0": "Eine Kathete ist kürzer als die Hypotenuse. Subtrahieren statt addieren."
    },
-   "sprich": "Die Hypotenuse ist siebzehn, eine Kathete fünfzehn Zentimeter lang. Wie lang ist die andere Kathete?",
+   "sprich": "Die Hypotenuse ist sieben Komma fünf, eine Kathete sechs Zentimeter lang. Wie lang ist die andere Kathete?",
    "rueck_sprich": {
-    "1": "Nicht die Seiten subtrahieren, sondern ihre Quadrate.",
-    "2": "Eine Kathete ist kürzer als die Hypotenuse. Subtrahieren statt addieren."
+    "2": "Nicht die Seiten subtrahieren, sondern ihre Quadrate.",
+    "0": "Eine Kathete ist kürzer als die Hypotenuse. Subtrahieren statt addieren."
    }
   },
   {
@@ -405,21 +405,21 @@
    "szene": "Frage 4",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Ein Dreieck hat die Seiten 9 cm, 12 cm und 15 cm. Ist es rechtwinklig?",
+   "text": "Ein Dreieck hat die Seiten 7 cm, 24 cm und 26 cm. Ist es rechtwinklig?",
    "optionen": [
-    "ja",
     "nein",
+    "ja",
     "kann man nicht sagen"
    ],
    "richtig": 0,
    "rueck": {
     "0": "Ja.",
-    "1": "Rechne 9² + 12² und vergleiche mit 15².",
+    "1": "Rechne 7² + 24² und vergleiche mit 26².",
     "2": "Mit den drei Seiten kannst du es prüfen."
    },
-   "sprich": "Ein Dreieck hat die Seiten neun, zwölf und fünfzehn Zentimeter. Ist es rechtwinklig?",
+   "sprich": "Ein Dreieck hat die Seiten sieben, vierundzwanzig und sechsundzwanzig Zentimeter. Ist es rechtwinklig?",
    "rueck_sprich": {
-    "1": "Rechne neun Quadrat plus zwölf Quadrat und vergleiche mit fünfzehn Quadrat.",
+    "1": "Rechne sieben Quadrat plus vierundzwanzig Quadrat und vergleiche mit sechsundzwanzig Quadrat.",
     "2": "Mit den drei Seiten kannst du es prüfen."
    }
   },
@@ -427,11 +427,11 @@
    "szene": "Frage 5",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Hypotenuse 10 cm, eine Kathete 8 cm: Wie lang ist die andere Kathete?",
+   "text": "Hypotenuse 12.5 cm, eine Kathete 12 cm: Wie lang ist die andere Kathete?",
    "optionen": [
-    "2 cm",
-    "6 cm",
-    "12.8 cm"
+    "0.5 cm",
+    "3.5 cm",
+    "17.3 cm"
    ],
    "richtig": 1,
    "rueck": {
@@ -439,7 +439,7 @@
     "2": "Die Kathete wäre länger als die Hypotenuse. Subtrahieren statt addieren.",
     "0": "Nicht die Seiten subtrahieren, sondern ihre Quadrate."
    },
-   "sprich": "Hypotenuse zehn, eine Kathete acht Zentimeter: Wie lang ist die andere Kathete?",
+   "sprich": "Hypotenuse zwölf Komma fünf, eine Kathete zwölf Zentimeter: Wie lang ist die andere Kathete?",
    "rueck_sprich": {
     "2": "Die Kathete wäre länger als die Hypotenuse. Subtrahieren statt addieren.",
     "0": "Nicht die Seiten subtrahieren, sondern ihre Quadrate."

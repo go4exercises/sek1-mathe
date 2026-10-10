@@ -38,9 +38,9 @@ Dieses Paket enthält die Musterlösung. Wer es vor dem Lösen liest, misst am E
 \begin{tcolorbox}[colback=lplinie!25,colframe=lplinie,boxrule=0.5pt,arc=1mm,fontupper=\small]
 Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in der Schweiz. Im Anhang findest du (1)~das Testblatt mit den Aufgaben, (2)~das Bewertungspaket zum Gesamttest «Flächen, Pythagoras und Ähnlichkeit» mit Musterlösung und Punkteraster und (3)~Bilder meiner handschriftlichen Lösung.\par\medskip
 Geh so vor:\par
-1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Rechenweg, Ergebnis mit Einheit; bei Skizzen (G4, G5, G6), welches Dreieck eingezeichnet ist und wo der rechte Winkel liegt. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Hochzahlen ($^2$), Wurzelzeichen, Dezimalpunkte und Einheiten (cm, m, cm$^2$, m$^2$).\par
+1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Rechenweg, Ergebnis mit Einheit; bei Skizzen (G5, G6, G8), welches Dreieck eingezeichnet ist und wo der rechte Winkel liegt. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Hochzahlen ($^2$), Wurzelzeichen, Dezimalpunkte und Einheiten (cm, m, cm$^2$).\par
 2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
-3. Andere richtige Wege zählen voll, zum Beispiel beim Haus ein ergänzendes statt eines zerlegenden Vorgehens, beim Regal die Fläche des kleinen Dreiecks direkt aus seinen Katheten ($30$ und $20$) statt über $k^2$. Gleichwertig: $\sqrt{576} = 24$ und $24^2 = 576$ als Probe; Brüche und Dezimalzahlen mit gleichem Wert; $30\,000$ cm$^2$ und $3$ m$^2$.\par
+3. Andere richtige Wege zählen voll, zum Beispiel beim Grundstück Zerlegen in Rechteck und zwei Dreiecke statt der Trapezformel, beim Regal die Fläche des kleinen Dreiecks direkt aus seinen Katheten ($30$ und $20$) statt über $k^2$, beim gleichschenkligen Dreieck $15 \cdot 36$ statt $\tfrac{30 \cdot 36}{2}$. Gleichwertig: $\sqrt{900} = 30$ und $30^2 = 900$ als Probe; Brüche und Dezimalzahlen mit gleichem Wert.\par
 4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «schräge Seite statt Höhe», «halbieren vergessen», «Kathete mit plus gerechnet», «ganze statt halbe Basis», «Wurzel vergessen», «Flächenfaktor k statt k²»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
 5. Gib zum Schluss eine Tabelle «Aufgabe | Punkte | Begründung», die Gesamtpunktzahl (von 25) und — nach der Selbsteinschätzung in Abschnitt 4 — welches Kapitel des Leitprogramms ich wiederholen soll. Keine Note.\par
 6. Fehlt ein Bild oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
@@ -51,87 +51,87 @@ Geh so vor:\par
 \textbf{Allgemein:} Ganze Punkte je Zeile. Ein Fehler wird nur einmal abgezogen (Folgefehler). Gleichwertige Wege zählen voll.
 In der Spalte P: \textbf{(E)}~= Ergebnispunkt, Ergebnis richtig \emph{und} Weg erkennbar, direkt aus den Angaben; ohne Zeichen = die
 Zeile bewertet den Weg, die Skizze oder die Begründung. Der ganze Test ist ohne Taschenrechner gestellt, alle Wurzeln gehen auf.
-\textbf{Einheiten:} Fehlt nur die Einheit, gibt es keinen Abzug, ausser die Zeile verlangt eine Umrechnung (G8).
+\textbf{Einheiten:} Fehlt nur die Einheit, gibt es keinen Abzug. \textbf{Ansatzzeilen} bewerten die richtige Gleichung; ein Rechenfehler danach kostet nur die Ergebniszeile.
 «Typische Fehler» nennt, welche Zeile 0 Punkte gibt, und die Punkte, die bleiben.
 \textbf{Teilrichtige Zeilen:} Verlangt eine Zeile mehrere Angaben und stimmt nur ein Teil, gibt die Zeile 0 Punkte,
 ausser die Zeile nennt ausdrücklich eine Aufteilung.
 
-\begin{lpaufgabe}{G1}{Giebelwand}{3 P}
+\begin{lpaufgabe}{G1}{Grundstück}{3 P}
 \begin{raster}
-Zerlegen & 1 & Rechteck $10 \cdot 6 = 60$ m$^2$\\
-Dreieck & 1 & $\dfrac{10 \cdot 4}{2} = 20$ m$^2$ (Höhe $4$, nicht die schräge Seite $6.4$)\\
-Summe & 1 & $60 + 20 = 80$ m$^2$. Auch als Folgepunkt aus den eigenen Teilflächen.\\
+Formel & 1 & Trapez: $A = \dfrac{a + c}{2} \cdot h$ mit den parallelen Seiten $15$ und $9$ und der Höhe $8$ (nicht $8.2$ oder $8.9$)\\
+Rechnung & 1 & $\dfrac{15 + 9}{2} \cdot 8 = 12 \cdot 8$\\
+Ergebnis & 1\E & $96$~m$^2$ (auch zerlegt: $9 \cdot 8 + \tfrac{2 \cdot 8}{2} + \tfrac{4 \cdot 8}{2} = 72 + 8 + 16 = 96$)\\
 \end{raster}
-\fehler{Dreieck mit der schrägen Seite ($\tfrac{10 \cdot 6.4}{2} = 32$, total $92$): Zeile Dreieck 0 $\to$ 2 von 3\,P.
-Dreieck nicht halbiert ($40$, total $100$): Zeile Dreieck 0 $\to$ 2 von 3\,P.}
+\fehler{Schräge Seite als Höhe: Zeile Formel 0, Rechnung als Folgepunkt $\to$ 1 von 3\,P. $(15 + 9) \cdot 8 = 192$ (nicht halbiert): Zeilen Rechnung und Ergebnis 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G2}{Trapez und Parallelogramm}{3 P}
+\begin{lpaufgabe}{G2}{Dreieck und Parallelogramm}{3 P}
 \begin{raster}
-(a) Ansatz & 1 & $\dfrac{14 + 8}{2} \cdot 5$\\
-(a) Ergebnis & 1\E & $11 \cdot 5 = 55$ cm$^2$\\
-(b) & 1\E & $9 \cdot 6 = 54$ cm$^2$; die schräge Seite $7.5$ cm wird nicht gebraucht\\
+(a) Ansatz & 1 & $\dfrac{g \cdot 7}{2} = 42$, also $7g = 84$\\
+(a) Ergebnis & 1\E & $g = 12$~cm\\
+(b) & 1\E & $9 \cdot 6 = 54$~cm$^2$; die schräge Seite $7.5$~cm wird nicht gebraucht\\
 \end{raster}
-\fehler{(a) $(14 + 8) \cdot 5 = 110$ (nicht halbiert): Zeilen (a) 0 $\to$ 1 von 3\,P. (b) $9 \cdot 7.5 = 67.5$ (schräge Seite): Zeile (b) 0 $\to$ 2 von 3\,P.}
+\fehler{(a) $42 : 7 = 6$ (Halbieren vergessen): Zeilen (a) 0 $\to$ 1 von 3\,P. (b) $9 \cdot 7.5 = 67.5$ (schräge Seite): Zeile (b) 0 $\to$ 2 von 3\,P.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G3}{Hypotenuse}{3 P}
+\begin{lpaufgabe}{G3}{Pythagoras rechnen und prüfen}{3 P}
 \begin{raster}
-(a) Ansatz & 1 & $c^2 = 16^2 + 30^2 = 256 + 900 = 1156$\\
-(a) Ergebnis & 1\E & $c = \sqrt{1156} = 34$ cm\\
-(b) & 1 & $10^2 + 24^2 = 100 + 576 = 676$, aber $25^2 = 625$: nicht rechtwinklig (Rechnung und Schluss verlangt)\\
+(a) Ansatz & 1 & $c^2 = 18^2 + 24^2 = 324 + 576 = 900$\\
+(a) Ergebnis & 1\E & $c = \sqrt{900} = 30$~cm\\
+(b) & 1 & $8^2 + 15^2 = 64 + 225 = 289$, aber $18^2 = 324$: nicht rechtwinklig (Rechnung und Schluss verlangt)\\
 \end{raster}
-\fehler{(a) $16 + 30 = 46$ (Seiten addiert): beide Zeilen (a) 0 $\to$ 1 von 3\,P. (a) Wurzel vergessen ($c = 1156$): Zeile (a) Ergebnis 0 $\to$ 2 von 3\,P.
-(b) «ja, weil $25$ die längste Seite ist» ohne Rechnung: Zeile (b) 0.}
+\fehler{(a) $18 + 24 = 42$ (Seiten addiert): Zeilen (a) 0 $\to$ 1 von 3\,P. (a) Wurzel vergessen ($c = 900$): Zeile (a) Ergebnis 0 $\to$ 2 von 3\,P.
+(b) «ja, weil $18$ die längste Seite ist» ohne Rechnung: Zeile (b) 0 $\to$ 2 von 3\,P.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G4}{Leiter}{3 P}
+\begin{lpaufgabe}{G4}{Hypotenuse erkennen}{3 P}
 \begin{raster}
-Skizze & 1 & rechtwinkliges Dreieck aus Wand, Boden und Leiter; die Leiter ($6.5$ m) ist die Hypotenuse, der rechte Winkel zwischen Wand und Boden\\
-Ansatz & 1 & $h^2 = 6.5^2 - 2.5^2 = 42.25 - 6.25 = 36$\\
-Ergebnis & 1\E & $h = 6$ m\\
+Hypotenuse & 1 & $61$~cm, denn sie liegt gegenüber dem rechten Winkel (zwischen $11$ und $x$)\\
+Ansatz & 1 & $x^2 = 61^2 - 11^2 = 3721 - 121 = 3600$\\
+Ergebnis & 1\E & $x = 60$~cm\\
 \end{raster}
-\fehler{$h^2 = 6.5^2 + 2.5^2$ (Kathete mit plus): Zeilen Ansatz und Ergebnis 0 $\to$ 1 von 3\,P. $6.5 - 2.5 = 4$ (Längen subtrahiert): Zeilen Ansatz und Ergebnis 0.}
+\fehler{$x$ als Hypotenuse ($x^2 = 61^2 + 11^2 = 3842$): Zeilen Hypotenuse, Ansatz und Ergebnis 0 $\to$ 0 von 3\,P. $61 - 11 = 50$: Zeilen Ansatz und Ergebnis 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G5}{Gleichschenkliges Dreieck}{4 P}
 \begin{raster}
-(a) Skizze & 1 & Höhe von der Spitze senkrecht auf die Basis; Hilfsdreieck mit halber Basis $21$ cm, Höhe $h$ und Schenkel $29$ cm als Hypotenuse\\
-(b) Ansatz & 1 & $h^2 = 29^2 - 21^2 = 841 - 441 = 400$\\
-(b) Ergebnis & 1\E & $h = 20$ cm\\
-(c) & 1 & $\dfrac{42 \cdot 20}{2} = 420$ cm$^2$. Auch als Folgepunkt mit der eigenen Höhe.\\
+(a) Skizze & 1 & Höhe von der Spitze senkrecht auf die Basis; Hilfsdreieck mit halber Basis $15$~cm, Höhe $h$ und Schenkel $39$~cm als Hypotenuse\\
+(b) Ansatz & 1 & $h^2 = 39^2 - 15^2 = 1521 - 225 = 1296$\\
+(b) Ergebnis & 1\E & $h = 36$~cm\\
+(c) & 1 & $\dfrac{30 \cdot 36}{2} = 540$~cm$^2$ (oder $15 \cdot 36$). Auch als Folgepunkt mit der eigenen Höhe.\\
 \end{raster}
-\fehler{Ganze Basis ins Hilfsdreieck ($29^2 - 42^2 < 0$ oder $42$ als Kathete): Zeilen (a) und (b) Ansatz 0; meist kein Ergebnis $\to$ höchstens 1 von 4\,P.
-(c) nicht halbiert ($840$): Zeile (c) 0 $\to$ 3 von 4\,P.}
+\fehler{Ganze Basis $30$ ins Hilfsdreieck ($h^2 = 1521 - 900 = 621$, keine ganze Zahl): Zeilen (a) und (b) Ansatz 0, (b) Ergebnis 0, (c) als Folgepunkt nur mit eigener Höhe $\to$ höchstens 1 von 4\,P.
+(c) nicht halbiert ($1080$): Zeile (c) 0 $\to$ 3 von 4\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Wasser im Rohr}{3 P}
 \begin{raster}
-Hilfsdreieck & 1 & Radius $15$ cm als Hypotenuse (vom Mittelpunkt zum Rand des Wasserspiegels), halbe Breite $12$ cm, Abstand $d$ senkrecht zum Spiegel\\
-Abstand & 1 & $d = \sqrt{15^2 - 12^2} = \sqrt{81} = 9$ cm. Auch als Folgepunkt mit dem eigenen Hilfsdreieck.\\
-Tiefe & 1\E & $15 - 9 = 6$ cm\\
+Abstand & 1 & Radius $25$~cm, Abstand des Wasserspiegels vom Mittelpunkt $d = 25 - 10 = 15$~cm\\
+Hilfsdreieck & 1 & Radius als Hypotenuse, $d$ und halbe Breite als Katheten: $\sqrt{25^2 - 15^2} = \sqrt{400} = 20$~cm. Auch als Folgepunkt mit dem eigenen Abstand, solange $0 < d < 25$.\\
+Breite & 1 & $2 \cdot 20 = 40$~cm. Auch als Folgepunkt aus der eigenen halben Breite.\\
 \end{raster}
-\fehler{Durchmesser $30$ als Hypotenuse ($\sqrt{900 - 144}$): Zeilen Hilfsdreieck und Abstand 0 $\to$ höchstens 1 von 3\,P.
-Ganze Breite $24$ statt $12$: Zeile Hilfsdreieck 0. Tiefe $15 + 9 = 24$ (Spiegel über der Mitte angenommen): Zeile Tiefe 0 $\to$ 2 von 3\,P.}
+\fehler{Durchmesser $50$ als Hypotenuse: Zeile Hilfsdreieck 0, Breite als Folgepunkt $\to$ 2 von 3\,P. Halbe Breite nicht verdoppelt ($20$~cm): Zeile Breite 0 $\to$ 2 von 3\,P.
+$d = 10$ (Tiefe als Abstand genommen): Zeile Abstand 0, Folgepunkte mit $d = 10$ ($2\sqrt{525}$) nur, wenn richtig angesetzt $\to$ höchstens 2 von 3\,P.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G7}{Regal}{3 P}
+\begin{lpaufgabe}{G7}{Eckregal}{3 P}
 \begin{raster}
-(a) & 1\E & $k = \dfrac{30}{90} = \dfrac{1}{3}$\\
-(b) & 1 & grosses Dreieck $\dfrac{90 \cdot 60}{2} = 2700$ cm$^2$; ausgesägt $2700 \cdot \left(\tfrac{1}{3}\right)^2 = 300$ cm$^2$ (oder Katheten $30$ und $20$: $\tfrac{30 \cdot 20}{2} = 300$)\\
-(c) & 1 & $2700 - 300 = 2400$ cm$^2$. Auch als Folgepunkt aus den eigenen Flächen.\\
+(a) & 1\E & $k = \dfrac{30}{90} = \dfrac{1}{3}$, kürzere Kathete $60 \cdot \tfrac{1}{3} = 20$~cm (beides verlangt)\\
+(b) & 1 & $\dfrac{90 \cdot 60}{2} \cdot \left(\tfrac{1}{3}\right)^2 = 2700 \cdot \tfrac{1}{9} = 300$~cm$^2$ (oder $\tfrac{30 \cdot 20}{2} = 300$)\\
+(c) & 1 & $2700 - 300 = 2400$~cm$^2$. Auch als Folgepunkt aus den eigenen Flächen.\\
 \end{raster}
-\fehler{(b) $2700 \cdot \tfrac{1}{3} = 900$ (Flächenfaktor $k$ statt $k^2$): Zeile (b) 0, (c) als Folgepunkt ($1800$) $\to$ 2 von 3\,P.}
+\fehler{(b) $2700 \cdot \tfrac{1}{3} = 900$ (Flächenfaktor $k$ statt $k^2$): Zeile (b) 0, (c) als Folgepunkt ($1800$) $\to$ 2 von 3\,P.
+$k = \tfrac{30}{60} = \tfrac{1}{2}$ (falsche Seiten zugeordnet): Zeile (a) 0, (b) und (c) als Folgepunkte ($675$, $2025$) $\to$ 2 von 3\,P.
+$k = 3$ (Kehrwert): ausgesägte Fläche grösser als das Regal, unmöglich: keine Folgepunkte $\to$ 0 von 3\,P.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G8}{Modell}{3 P}
+\begin{lpaufgabe}{G8}{Schatten}{3 P}
 \begin{raster}
-(a) & 1 & Länge \emph{und} Breite werden mal $50$ gerechnet; die Fläche wächst darum mit $50^2 = 2500$, nicht mit $50$.\\
-(b) Fläche & 1 & $12 \cdot 2500 = 30\,000$ cm$^2$\\
-(b) Umrechnung & 1 & $30\,000$ cm$^2$ $= 3$ m$^2$ (denn $1$ m$^2 = 10\,000$ cm$^2$). Auch als Folgepunkt aus der eigenen Fläche.\\
+(a) Skizze & 1 & zwei rechtwinklige Dreiecke (Stab mit Schatten, Turm mit Schatten), Sonnenstrahlen parallel; Stab entspricht Turm, Stabschatten entspricht Turmschatten\\
+(b) Ansatz & 1 & $\dfrac{h}{14} = \dfrac{1.2}{0.8}$ oder $k = \dfrac{14}{0.8} = 17.5$\\
+(b) Ergebnis & 1\E & $h = 1.5 \cdot 14 = 21$~m\\
 \end{raster}
-\fehler{(b) $600$ cm$^2$ übernommen: Zeile (b) Fläche 0, Umrechnung als Folgepunkt ($0.06$ m$^2$) $\to$ 1 oder 2 von 3\,P.
-$30\,000$ cm$^2$ $= 300$ m$^2$ (mit $100$ umgerechnet): Zeile Umrechnung 0 $\to$ 2 von 3\,P.}
+\fehler{Unterschied statt Verhältnis ($14 + 0.4 = 14.4$~m): Zeilen (b) 0 $\to$ 1 von 3\,P. Verhältnis umgekehrt ($14 \cdot \tfrac{0.8}{1.2} \approx 9.3$~m): Zeile (b) Ansatz 0, Ergebnis 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
 \needspace{12\baselineskip}

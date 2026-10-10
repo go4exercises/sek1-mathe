@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Grundseite und Höhe",
  "dateiname": "pyt-lp-flaechen",
- "kurzbeschrieb": "Dreieck g = 6, h = 4, schräge Seiten 5: Vorhersage Fläche 12 (Hälfte des Rechtecks 6 × 4); Spitze parallel verschieben, Fläche bleibt; Parallelogramm 6 · 4 = 24; Haus aus Rechteck und Dreieck 24 + 9 = 33; Fehler: schräge Seite statt Höhe.",
+ "kurzbeschrieb": "Dreieck g = 6, h = 4, schräge Seiten 5: Vorhersage Fläche 12 (Hälfte des Rechtecks 6 × 4); Spitze parallel verschieben, Fläche bleibt, Höhe auf der verlängerten Grundseite; Parallelogramm 6 · 4 = 24 (Dreieck abschneiden, Rechteck); Trapez 7 und 3, h = 4: 14 + 6 = 20; Haus aus Rechteck und Dreieck 24 + 9 = 33; Fehler: schräge Seite statt Höhe.",
  "schlagworte": [
   "Fläche",
   "Dreieck",
@@ -41,7 +41,7 @@
      "y": 300,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 1.28
+     "ein": 1.42
     },
     {
      "typ": "graf",
@@ -132,7 +132,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.16,
+     "ein": 3.2,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -188,7 +188,7 @@
      ]
     }
    ],
-   "dauer": 9.49
+   "dauer": 9.91
   },
   {
    "name": "Vorhersage",
@@ -202,7 +202,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 4.33
+     "ein": 4.53
     },
     {
      "typ": "graf",
@@ -282,7 +282,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.67,
+     "ein": 1.65,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -366,13 +366,13 @@
      ]
     }
    ],
-   "dauer": 8.92
+   "dauer": 9.28
   },
   {
    "name": "Scheren",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Schiebst du die Spitze parallel zur Grundseite, ändern sich die schrägen Seiten. Grundseite und Höhe bleiben, also bleibt auch die Fläche: zwölf Quadratzentimeter.",
+   "sprecher": "Schiebst du die Spitze parallel zur Grundseite, ändern sich die schrägen Seiten. Grundseite und Höhe bleiben, also bleibt auch die Fläche: zwölf Quadratzentimeter. Die Höhe kann dabei neben dem Dreieck liegen, auf der verlängerten Grundseite.",
    "elemente": [
     {
      "typ": "formel",
@@ -380,7 +380,7 @@
      "x": 150,
      "y": 300,
      "groesse": 60,
-     "ein": 5.75
+     "ein": 5.69
     },
     {
      "typ": "graf",
@@ -415,6 +415,20 @@
        "bis": [
         12,
         4
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        0
+       ],
+       "bis": [
+        11,
+        0
        ],
        "farbe": 5,
        "dicke": 2,
@@ -497,11 +511,77 @@
          }
         ]
        ]
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true,
+       "bewegung": [
+        [
+         1.0,
+         {
+          "von": [
+           3,
+           0
+          ],
+          "bis": [
+           3,
+           4
+          ]
+         }
+        ],
+        [
+         4.5,
+         {
+          "von": [
+           10,
+           0
+          ],
+          "bis": [
+           10,
+           4
+          ]
+         }
+        ]
+       ]
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        3,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22,
+       "aus": 1.0
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        10,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22,
+       "ein": 4.5
       }
      ]
     }
    ],
-   "dauer": 10.01
+   "dauer": 13.91
   },
   {
    "name": "Parallelogramm",
@@ -515,7 +595,7 @@
      "x": 150,
      "y": 300,
      "groesse": 54,
-     "ein": 5.32
+     "ein": 5.1
     },
     {
      "typ": "graf",
@@ -561,6 +641,31 @@
          4
         ]
        ],
+       "farbe": 5,
+       "fuellung": 0.0,
+       "gestrichelt": true,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         2,
+         4
+        ]
+       ],
        "farbe": 1,
        "fuellung": 0.15
       },
@@ -588,33 +693,7 @@
        "r2": 90,
        "farbe": 5,
        "px": 22
-      }
-     ]
-    },
-    {
-     "typ": "graf",
-     "x": 1010,
-     "y": 175,
-     "breite": 760,
-     "hoehe": 760,
-     "abstand": 0,
-     "anim": "fade",
-     "ein": 1.54,
-     "geraden": [],
-     "punkte": [],
-     "pfeile": true,
-     "tippbar": true,
-     "xbereich": [
-      -1.5,
-      12.5
-     ],
-     "ybereich": [
-      -2,
-      12
-     ],
-     "achsen": false,
-     "raster": false,
-     "figuren": [
+      },
       {
        "art": "vieleck",
        "punkte": [
@@ -678,7 +757,221 @@
      ]
     }
    ],
-   "dauer": 9.77
+   "dauer": 9.8
+  },
+  {
+   "name": "Trapez",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Beim Trapez sind zwei Seiten parallel, sieben und drei Zentimeter lang, die Höhe ist vier. Eine Diagonale zerlegt es in zwei Dreiecke: sieben mal vier durch zwei plus drei mal vier durch zwei, vierzehn plus sechs gleich zwanzig. Kurz: der Mittelwert der parallelen Seiten mal die Höhe.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{7 \\cdot 4}{2} + \\dfrac{3 \\cdot 4}{2} = 14 + 6 = 20",
+     "x": 150,
+     "y": 280,
+     "groesse": 46,
+     "ein": 8.26
+    },
+    {
+     "typ": "formel",
+     "text": "A = \\dfrac{a + c}{2} \\cdot h = 5 \\cdot 4 = \\fc{20}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 410,
+     "groesse": 48,
+     "ein": 13.28
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         7,
+         0
+        ],
+        [
+         5,
+         4
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.12
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        0
+       ],
+       "bis": [
+        2,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        2,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.5,
+        -1
+       ],
+       "text": "a = 7",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.5,
+        4.5
+       ],
+       "text": "c = 3",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.2,
+        3.4
+       ],
+       "text": "h = 4",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 28,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.2,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        5,
+        4
+       ],
+       "farbe": 5,
+       "dicke": 4
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         7,
+         0
+        ],
+        [
+         5,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.25,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         5,
+         4
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 0
+      }
+     ]
+    }
+   ],
+   "dauer": 18.11
   },
   {
    "name": "Haus",
@@ -692,7 +985,7 @@
      "x": 150,
      "y": 300,
      "groesse": 46,
-     "ein": 8.53
+     "ein": 8.41
     },
     {
      "typ": "graf",
@@ -813,7 +1106,7 @@
      ]
     }
    ],
-   "dauer": 11.81
+   "dauer": 11.68
   },
   {
    "name": "Fehler",
@@ -827,7 +1120,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 1.02
+     "ein": 0.99
     },
     {
      "typ": "notiz",
@@ -836,7 +1129,7 @@
      "y": 452,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 2.92
+     "ein": 2.83
     },
     {
      "typ": "graf",
@@ -922,13 +1215,13 @@
      ]
     }
    ],
-   "dauer": 9.29
+   "dauer": 9.04
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Dreieck gleich Grundseite mal Höhe durch zwei, Parallelogramm Grundseite mal Höhe. Die Höhe steht senkrecht auf der Grundseite. Zusammengesetzte Figuren zerlegst oder ergänzt du.",
+   "sprecher": "Zum Mitnehmen: Dreieck gleich Grundseite mal Höhe durch zwei, Parallelogramm Grundseite mal Höhe, Trapez der Mittelwert der parallelen Seiten mal die Höhe. Die Höhe steht senkrecht auf der Grundseite. Zusammengesetzte Figuren zerlegst oder ergänzt du.",
    "elemente": [
     {
      "typ": "titel",
@@ -939,7 +1232,7 @@
     },
     {
      "typ": "notiz",
-     "text": "Dreieck: g · h : 2 · Parallelogramm: g · h|Höhe senkrecht zur Grundseite|zerlegen oder ergänzen",
+     "text": "Dreieck: g · h : 2|Parallelogramm: g · h|Trapez: (a + c) : 2 · h|Höhe senkrecht zur Grundseite|zerlegen oder ergänzen",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -947,7 +1240,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 11.83
+   "dauer": 14.76
   },
   {
    "name": "Jetzt du",
@@ -972,7 +1265,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.54
+   "dauer": 6.17
   }
  ],
  "fragen": [

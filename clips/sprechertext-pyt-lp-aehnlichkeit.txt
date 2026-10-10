@@ -1,8 +1,8 @@
 0.40	Ein rechtwinkliges Dreieck mit den Seiten vier, drei und fünf. Verdoppelst du jede Seite, entsteht ein ähnliches Dreieck: acht, sechs und zehn. Die Winkel bleiben gleich, der Streckfaktor ist zwei.
 14.06	Die Fläche wird nicht doppelt, sondern viermal so gross. Das grosse Dreieck lässt sich in vier Dreiecke von der Grösse des kleinen zerlegen: sechs Quadratzentimeter werden vierundzwanzig.
 24.97	Allgemein: Längen werden mit k multipliziert, Flächen mit k Quadrat. Bei k gleich drei werden die Längen dreimal, die Flächen neunmal so gross.
-36.08	Ähnliche Dreiecke helfen beim Messen. Ein zwei Meter langer Stab wirft drei Meter Schatten, ein Baum zur selben Zeit fünfzehn Meter. Die Verhältnisse sind gleich: Höhe zu Schatten ist zwei zu drei. Der Baum ist zehn Meter hoch.
-49.08	Ein dreieckiges Regalbrett ist sechzig mal vierzig Zentimeter, also zwölfhundert Quadratzentimeter. In der Ecke fehlt ein ähnliches Dreieck mit halb so langen Seiten. Seine Fläche ist ein Viertel: dreihundert. Es bleiben neunhundert.
-62.41	Häufiger Fehler: Flächenfaktor gleich Längenfaktor. Werden die Seiten verdreifacht, wird die Fläche nicht dreimal, sondern neunmal so gross.
-71.74	Zum Mitnehmen: Ähnliche Figuren haben gleiche Winkel, alle Längen werden mit k multipliziert. Flächen werden mit k Quadrat multipliziert. Verhältnisse entsprechender Strecken sind gleich.
-82.79	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+36.08	Ähnliche Dreiecke helfen beim Messen. Ein zwei Meter langer Stab wirft drei Meter Schatten, ein Baum zur selben Zeit fünfzehn Meter. Die Sonnenstrahlen sind parallel, Stab und Baum stehen senkrecht: Die beiden Dreiecke haben gleiche Winkel, sie sind ähnlich. Also sind die Verhältnisse gleich: Höhe zu Schatten ist zwei zu drei. Der Baum ist zehn Meter hoch.
+56.47	Ein dreieckiges Regalbrett hat die Katheten sechzig und vierzig Zentimeter. Seine Fläche ist sechzig mal vierzig durch zwei, also zwölfhundert Quadratzentimeter. In der Ecke fehlt ein ähnliches Dreieck mit halb so langen Seiten. Seine Fläche ist ein Viertel: dreihundert. Es bleiben neunhundert.
+73.71	Häufiger Fehler: Flächenfaktor gleich Längenfaktor. Werden die Seiten verdreifacht, wird die Fläche nicht dreimal, sondern neunmal so gross.
+83.04	Zum Mitnehmen: Ähnliche Figuren haben gleiche Winkel, alle Längen werden mit k multipliziert. Flächen werden mit k Quadrat multipliziert. Verhältnisse entsprechender Strecken sind gleich.
+94.09	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

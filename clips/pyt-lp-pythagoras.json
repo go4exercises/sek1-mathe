@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Der Satz des Pythagoras",
  "dateiname": "pyt-lp-pythagoras",
- "kurzbeschrieb": "Rechtwinkliges Dreieck 3, 4, 5 im Karo: Katheten, Hypotenuse; Quadrate 9 + 16 = 25; a² + b² = c²; Vorhersage 6 und 8 gibt 10; Kathete c = 10, a = 6 gibt b = 8; Fehler: bei der Kathete addiert.",
+ "kurzbeschrieb": "Rechtwinkliges Dreieck 3, 4, 5 im Karo: Katheten, Hypotenuse; Quadrate 9 + 16 = 25 (schräges Quadrat: 7 × 7 minus vier Dreiecke); a² + b² = c² und Umkehrung; Vorhersage 6 und 8 gibt 10; Kathete c = 10, a = 6 gibt b = 8; Fehler: bei der Kathete addiert.",
  "schlagworte": [
   "Pythagoras",
   "Hypotenuse",
@@ -39,7 +39,7 @@
      "y": 300,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 4.06
+     "ein": 4.08
     },
     {
      "typ": "graf",
@@ -129,7 +129,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.06,
+     "ein": 4.08,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -179,15 +179,23 @@
    "name": "Quadrate",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zeichne über jeder Seite ein Quadrat und zähle die Kästchen. Über der Kathete drei liegen neun, über der Kathete vier sechzehn. Über der Hypotenuse liegen fünfundzwanzig: genau neun plus sechzehn.",
+   "sprecher": "Zeichne über jeder Seite ein Quadrat. Über der Kathete drei liegen neun Kästchen, über der Kathete vier sechzehn. Das Quadrat über der Hypotenuse steht schräg. Ergänze es zum Quadrat sieben mal sieben und zieh die vier Dreiecke in den Ecken ab, je sechs Kästchen: neunundvierzig minus vierundzwanzig gibt fünfundzwanzig. Genau neun plus sechzehn.",
    "elemente": [
+    {
+     "typ": "formel",
+     "text": "49 - 4 \\cdot 6 = \\fc{25}",
+     "x": 150,
+     "y": 280,
+     "groesse": 54,
+     "ein": 17.23
+    },
     {
      "typ": "formel",
      "text": "\\fa{9} + \\fb{16} = \\fc{25}",
      "x": 150,
-     "y": 300,
+     "y": 400,
      "groesse": 62,
-     "ein": 10.05
+     "ein": 18.45
     },
     {
      "typ": "graf",
@@ -253,7 +261,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.13,
+     "ein": 3.07,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -314,7 +322,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.71,
+     "ein": 5.43,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -375,7 +383,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.71,
+     "ein": 8.75,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -413,7 +421,190 @@
        ],
        "farbe": 3,
        "fuellung": 0.2
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.61,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         7,
+         0
+        ],
+        [
+         7,
+         7
+        ],
+        [
+         0,
+         7
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.0,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 12.43,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3,
+         0
+        ],
+        [
+         7,
+         0
+        ],
+        [
+         7,
+         3
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.25,
+       "dicke": 1
       },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         7,
+         3
+        ],
+        [
+         7,
+         7
+        ],
+        [
+         4,
+         7
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.25,
+       "dicke": 1
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4,
+         7
+        ],
+        [
+         0,
+         7
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.25,
+       "dicke": 1
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.25,
+       "dicke": 1
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 17.53,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
       {
        "art": "text",
        "bei": [
@@ -429,13 +620,13 @@
      ]
     }
    ],
-   "dauer": 13.47
+   "dauer": 22.67
   },
   {
    "name": "Satz",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Das gilt in jedem rechtwinkligen Dreieck: a Quadrat plus b Quadrat gleich c Quadrat. Die Quadrate der Katheten ergeben zusammen das Quadrat der Hypotenuse.",
+   "sprecher": "Das gilt in jedem rechtwinkligen Dreieck: a Quadrat plus b Quadrat gleich c Quadrat. Die Quadrate der Katheten ergeben zusammen das Quadrat der Hypotenuse. Und umgekehrt: Gilt für drei Seiten a Quadrat plus b Quadrat gleich c Quadrat, dann ist das Dreieck rechtwinklig.",
    "elemente": [
     {
      "typ": "formel",
@@ -443,7 +634,16 @@
      "x": 150,
      "y": 300,
      "groesse": 72,
-     "ein": 1.38
+     "ein": 1.14
+    },
+    {
+     "typ": "notiz",
+     "text": "Umgekehrt: Gilt a² + b² = c²,|ist das Dreieck rechtwinklig.",
+     "x": 150,
+     "y": 430,
+     "groesse": 40,
+     "farbe": "blau",
+     "ein": 9.68
     },
     {
      "typ": "graf",
@@ -571,7 +771,7 @@
      ]
     }
    ],
-   "dauer": 10.04
+   "dauer": 16.65
   },
   {
    "name": "Vorhersage",
@@ -585,7 +785,7 @@
      "x": 150,
      "y": 280,
      "groesse": 56,
-     "ein": 1.32
+     "ein": 1.31
     },
     {
      "typ": "formel",
@@ -593,7 +793,7 @@
      "x": 150,
      "y": 400,
      "groesse": 56,
-     "ein": 6.0
+     "ein": 5.93
     },
     {
      "typ": "graf",
@@ -683,7 +883,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.78,
+     "ein": 7.81,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -741,7 +941,7 @@
      "x": 150,
      "y": 280,
      "groesse": 48,
-     "ein": 1.98
+     "ein": 1.97
     },
     {
      "typ": "formel",
@@ -749,7 +949,7 @@
      "x": 150,
      "y": 400,
      "groesse": 54,
-     "ein": 8.12
+     "ein": 8.11
     },
     {
      "typ": "graf",
@@ -871,16 +1071,16 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 2.19
+     "ein": 2.22
     },
     {
      "typ": "notiz",
-     "text": "Kathete: minus · Hypotenuse: plus",
+     "text": "Kathete: minus|Hypotenuse: plus",
      "x": 150,
      "y": 430,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 8.35
+     "ein": 8.36
     }
    ],
    "dauer": 11.62
@@ -900,7 +1100,7 @@
     },
     {
      "typ": "notiz",
-     "text": "a² + b² = c²|Hypotenuse: plus · Kathete: minus|am Schluss die Wurzel",
+     "text": "a² + b² = c²|Hypotenuse: Quadrate addieren|Kathete: Quadrate subtrahieren|am Schluss die Wurzel",
      "x": 150,
      "y": 400,
      "groesse": 44,

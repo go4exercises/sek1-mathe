@@ -1,7 +1,7 @@
 % Gesamttest «Flächen, Pythagoras und Ähnlichkeit» — Quelle des PDFs (python3 scripts/build-lp-pdf.py pythagoras).
 % Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/pythagoras/zahlen.py).
 % Vorgabe ~/TODO-BM-Vorkurs-LP03-15.md §6: Flächen mit Grundseite und Höhe, zusammengesetzt (G1, G2), Pythagoras (G3, G4),
-% Hilfsdreieck und Wasserspiegel im Rohr (G5, G6), Regal mit ähnlichen Dreiecken und Differenzfläche, k gegen k² (G7, G8).
+% Hilfsdreieck und Wasserspiegel im Rohr (G5, G6), Regal mit ähnlichen Dreiecken, k und k², Strahlensatz am Schatten (G7, G8).
 % 25 Punkte, rund 30 Minuten. Alle Wurzeln gehen auf: ohne Taschenrechner.
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
@@ -23,98 +23,100 @@ Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt die
 
 \lpteil{Teil A · Grundseite und Höhe}{Kapitel 1 · 6 Punkte}
 
-\begin{lpaufgabe}{G1}{Giebelwand}{3 P}
-Die Giebelwand eines Hauses besteht aus einem Rechteck und einem Dreieck (Masse in m). Berechne ihre Fläche.
+\begin{lpaufgabe}{G1}{Grundstück}{3 P}
+Ein Grundstück hat die Form eines Trapezes (Masse in m, die schrägen Seiten gerundet). Berechne seine Fläche.
 \begin{center}
-\begin{tikzpicture}[x=5mm,y=5mm,font=\small]
-  \draw[lpblau,line width=1pt,fill=lpblau!8] (0,0) rectangle (10,6);
-  \draw[lpblau,line width=1pt,fill=lporange!10] (0,6) -- (10,6) -- (5,10) -- cycle;
-  \draw[lporange,line width=0.8pt,dashed] (5,6) -- (5,10);
-  \draw[line width=0.5pt] (5,6) ++(0.5,0) |- ++(-0.5,0.5);
-  \node[below] at (5,0) {10}; \node[right] at (10,3) {6}; \node[right] at (5,8) {4}; \node[above left] at (2.4,8) {6.4};
+\begin{tikzpicture}[x=4.5mm,y=4.5mm,font=\small]
+  \draw[lpblau,line width=1pt,fill=lpblau!8] (0,0) -- (15,0) -- (11,8) -- (2,8) -- cycle;
+  \draw[lporange,line width=0.8pt,dashed] (2,0) -- (2,8);
+  \draw[line width=0.5pt] (2,0) ++(0.5,0) |- ++(-0.5,0.5);
+  \node[below] at (7.5,0) {15}; \node[above] at (6.5,8) {9}; \node[right] at (2,4) {8};
+  \node[left] at (1,4) {8.2}; \node[right] at (13,4) {8.9};
 \end{tikzpicture}
 \end{center}
 \lpplatz{4}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G2}{Trapez und Parallelogramm}{3 P}
+\begin{lpaufgabe}{G2}{Dreieck und Parallelogramm}{3 P}
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Ein Trapez hat die parallelen Seiten $14$ cm und $8$ cm und die Höhe $5$ cm. Wie gross ist seine Fläche?
-\item Ein Parallelogramm hat die Grundseite $9$ cm, die Höhe $6$ cm und die schräge Seite $7.5$ cm. Wie gross ist seine Fläche?
+\item Ein Dreieck hat die Fläche $42$~cm$^2$ und die Höhe $7$~cm. Wie lang ist die zugehörige Grundseite?
+\item Ein Parallelogramm hat die Grundseite $9$~cm, die Höhe $6$~cm und die schräge Seite $7.5$~cm. Wie gross ist seine Fläche?
 \end{enumerate}
 \lpplatz{4}
 \end{lpaufgabe}
 
 \lpteil{Teil B · Satz des Pythagoras}{Kapitel 2 · 6 Punkte}
 
-\begin{lpaufgabe}{G3}{Hypotenuse}{3 P}
+\begin{lpaufgabe}{G3}{Pythagoras rechnen und prüfen}{3 P}
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Ein rechtwinkliges Dreieck hat die Katheten $16$ cm und $30$ cm. Wie lang ist die Hypotenuse?
-\item Ist ein Dreieck mit den Seiten $10$ cm, $24$ cm und $25$ cm rechtwinklig? Begründe mit einer Rechnung.
+\item Ein rechtwinkliges Dreieck hat die Katheten $18$~cm und $24$~cm. Wie lang ist die Hypotenuse?
+\item Ist ein Dreieck mit den Seiten $8$~cm, $15$~cm und $18$~cm rechtwinklig? Begründe mit einer Rechnung.
 \end{enumerate}
 \lpplatz{5}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G4}{Leiter}{3 P}
-Eine $6.5$ m lange Leiter lehnt an einer senkrechten Hauswand. Ihr Fuss steht $2.5$ m von der Wand entfernt.
-Mach eine Skizze mit dem rechtwinkligen Dreieck und berechne, wie hoch die Leiter an der Wand reicht.
-\lpplatz{6}
+\begin{lpaufgabe}{G4}{Hypotenuse erkennen}{3 P}
+Ein rechtwinkliges Dreieck hat die Seiten $11$~cm, $61$~cm und $x$. Der rechte Winkel liegt zwischen der Seite $11$~cm und der Seite $x$.
+Welche Seite ist die Hypotenuse? Berechne $x$.
+\lpplatz{5}
 \end{lpaufgabe}
 
 \lpteil{Teil C · Hilfsdreiecke und Kreis}{Kapitel 3 · 7 Punkte}
 
 \begin{lpaufgabe}{G5}{Gleichschenkliges Dreieck}{4 P}
-Ein gleichschenkliges Dreieck hat die Basis $42$ cm und zwei Schenkel von je $29$ cm.
+Ein gleichschenkliges Dreieck hat die Basis $30$~cm und zwei Schenkel von je $39$~cm.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Zeichne eine Skizze und markiere das Hilfsdreieck, mit dem du die Höhe berechnest.
 \item Berechne die Höhe.
 \item Berechne die Fläche des Dreiecks.
 \end{enumerate}
-\lpplatz{7}
+\begin{center}\begin{tikzpicture}[x=5mm,y=5mm]\draw[lplinie,line width=0.3pt,step=1] (0,0) grid (14,6);\end{tikzpicture}\end{center}
+\lpplatz{4}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Wasser im Rohr}{3 P}
-Ein Rohr hat den Innendurchmesser $30$ cm. Das Wasser steht weniger als halb hoch, sein Spiegel ist $24$ cm breit.
+Ein Rohr hat den Innendurchmesser $50$~cm. Das Wasser steht $10$~cm tief (weniger als halb hoch). Die Skizze ist nicht massstäblich.
 \begin{center}
-\begin{tikzpicture}[x=1.6mm,y=1.6mm,font=\small]
-  \fill[lpblau!18] (-12,-9) arc[start angle=216.87,end angle=323.13,radius=15] -- cycle;
-  \draw[line width=1pt] (0,0) circle[radius=15];
-  \draw[lpblau,line width=1pt] (-12,-9) -- (12,-9);
-  \fill (0,0) circle[radius=0.4]; \node[above] at (0,0) {$M$};
-  \node[above] at (0,-9) {\footnotesize $24$ cm breit};
+\begin{tikzpicture}[x=1.4mm,y=1.4mm,font=\small]
+  \fill[lpblau!18] (-16,-12) arc[start angle=216.87,end angle=323.13,radius=20] -- cycle;
+  \draw[line width=1pt] (0,0) circle[radius=20];
+  \draw[lpblau,line width=1pt] (-16,-12) -- (16,-12);
+  \fill (0,0) circle[radius=0.5]; \node[above] at (0,0) {$M$};
+  \draw[lporange,<->] (19,-12) -- (19,-20) node[midway,right] {\footnotesize $10$~cm};
 \end{tikzpicture}
 \end{center}
-Wie tief ist das Wasser? Zeichne das Hilfsdreieck ein.
+Wie breit ist der Wasserspiegel? Zeichne das Hilfsdreieck ein.
 \lpplatz{5}
 \end{lpaufgabe}
 
 \lpteil{Teil D · Ähnliche Figuren}{Kapitel 4 · 6 Punkte}
 
-\begin{lpaufgabe}{G7}{Regal}{3 P}
-Ein dreieckiges Eckregal hat die Form eines rechtwinkligen Dreiecks mit den Katheten $90$ cm und $60$ cm.
-In der Ecke beim rechten Winkel wird ein dazu ähnliches Dreieck ausgesägt, dessen längere Kathete $30$ cm lang ist.
+\begin{lpaufgabe}{G7}{Eckregal}{3 P}
+Ein Eckregal hat die Form eines rechtwinkligen Dreiecks mit den Katheten $90$~cm und $60$~cm. Für ein Rohr in der Zimmerecke wird
+beim rechten Winkel ein dazu ähnliches Dreieck ausgesägt, dessen längere Kathete $30$~cm lang ist.
 \begin{center}
-\begin{tikzpicture}[x=0.65mm,y=0.65mm,font=\small]
+\begin{tikzpicture}[x=0.6mm,y=0.6mm,font=\small]
   \draw[lpblau,line width=1pt,fill=lpblau!8] (0,0) -- (90,0) -- (0,60) -- cycle;
   \draw[lporange,line width=1pt,fill=lporange!20] (0,0) -- (30,0) -- (0,20) -- cycle;
-  \node[below] at (45,0) {$90$ cm}; \node[left] at (0,30) {$60$ cm}; \node[below] at (15,0) {\footnotesize $30$};
+  \draw[|<->|] (0,-17) -- (90,-17) node[midway,below] {$90$~cm};
+  \draw[|<->|] (-7,0) -- (-7,60) node[midway,left] {$60$~cm};
+  \draw[|<->|,lporange] (0,-5) -- (30,-5) node[midway,below] {\footnotesize $30$~cm};
 \end{tikzpicture}
 \end{center}
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Wie gross ist der Streckfaktor $k$ vom grossen zum kleinen Dreieck?
+\item Wie gross ist der Streckfaktor $k$ vom grossen zum kleinen Dreieck, und wie lang ist die kürzere Kathete des kleinen Dreiecks?
 \item Wie gross ist die Fläche des ausgesägten Dreiecks?
 \item Wie gross ist die Restfläche des Regals?
 \end{enumerate}
 \lpplatz{5}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G8}{Modell}{3 P}
-Ein Hausmodell ist im Massstab $1 : 50$ gebaut, alle Längen sind also $50$-mal kleiner als in Wirklichkeit.
-Die Grundfläche des Modells ist $12$ cm\textsuperscript{2}. Lea sagt: «Das echte Haus hat $12 \cdot 50 = 600$ cm\textsuperscript{2} Grundfläche.»
+\begin{lpaufgabe}{G8}{Schatten}{3 P}
+Ein $1.2$~m langer Stab wirft einen $0.8$~m langen Schatten. Zur gleichen Zeit wirft ein Turm einen $14$~m langen Schatten.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Erkläre Leas Fehler.
-\item Berechne die echte Grundfläche in m\textsuperscript{2}.
+\item Mach eine Skizze mit den beiden ähnlichen Dreiecken und markiere entsprechende Seiten.
+\item Berechne die Höhe des Turms.
 \end{enumerate}
-\lpplatz{5}
+\lpplatz{6}
 \end{lpaufgabe}
 \end{document}

@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Kontrollfragen zu Hilfsdreiecken",
  "dateiname": "pyt-lp-kontrolle-hilfsdreieck",
- "kurzbeschrieb": "Fünf Fragen: Diagonale Rechteck 35 × 12, Höhe Basis 18 Schenkel 15, Sehne bei r = 13 und Abstand 12, Hypotenuse im Kreis, Wassertiefe bei r = 10 und Breite 12.",
+ "kurzbeschrieb": "Fünf Fragen: Diagonale Rechteck 7.5 × 4, Höhe Basis 18 Schenkel 15, Sehne bei r = 2.5 und Abstand 1.5, Hypotenuse im Kreis, Wassertiefe bei r = 6.5 und Breite 12.",
  "schlagworte": [
   "Hilfsdreieck",
   "Kreis",
@@ -29,18 +29,18 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zwölfhundertfünfundzwanzig plus hundertvierundvierzig gibt dreizehnhundertneunundsechzig. Die Wurzel ist siebenunddreissig.",
+   "sprecher": "Sechsundfünfzig Komma zwei fünf plus sechzehn gibt zweiundsiebzig Komma zwei fünf. Die Wurzel ist acht Komma fünf.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\sqrt{35^2 + 12^2} = \\sqrt{1369} = \\fc{37}",
+     "text": "\\sqrt{7.5^2 + 4^2} = \\sqrt{72.25} = \\fc{8.5}",
      "x": 150,
      "y": 330,
      "groesse": 50,
      "ein": 1.0
     }
    ],
-   "dauer": 7.93
+   "dauer": 7.66
   },
   {
    "name": "Frage 2",
@@ -63,18 +63,18 @@
    "name": "Frage 3",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Hundertneunundsechzig minus hundertvierundvierzig gibt fünfundzwanzig. Die halbe Sehne ist fünf, die ganze zehn Zentimeter.",
+   "sprecher": "Sechs Komma zwei fünf minus zwei Komma zwei fünf gibt vier. Die halbe Sehne ist zwei, die ganze vier Zentimeter.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\tfrac{s}{2} = \\sqrt{13^2 - 12^2} = 5, \\;\\; s = \\fc{10}",
+     "text": "\\tfrac{s}{2} = \\sqrt{2.5^2 - 1.5^2} = 2, \\;\\; s = \\fc{4}",
      "x": 150,
      "y": 330,
      "groesse": 46,
      "ein": 1.0
     }
    ],
-   "dauer": 7.89
+   "dauer": 7.6
   },
   {
    "name": "Frage 4",
@@ -124,7 +124,7 @@
         8,
         -6
        ],
-       "farbe": 1,
+       "farbe": 5,
        "dicke": 5
       },
       {
@@ -137,7 +137,7 @@
         0,
         -6
        ],
-       "farbe": 2,
+       "farbe": 5,
        "dicke": 5
       },
       {
@@ -150,7 +150,7 @@
         8,
         -6
        ],
-       "farbe": 3,
+       "farbe": 5,
        "dicke": 5
       },
       {
@@ -171,7 +171,7 @@
         -8
        ],
        "text": "Sehne",
-       "farbe": 1,
+       "farbe": 5,
        "anker": "middle",
        "groesse": 30,
        "kursiv": false
@@ -183,7 +183,7 @@
         -3
        ],
        "text": "Abstand",
-       "farbe": 2,
+       "farbe": 5,
        "anker": "end",
        "groesse": 30,
        "kursiv": false
@@ -195,7 +195,7 @@
         -2
        ],
        "text": "Radius",
-       "farbe": 3,
+       "farbe": 5,
        "anker": "start",
        "groesse": 30,
        "kursiv": false
@@ -342,18 +342,18 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Halbe Breite sechs, Radius zehn: Der Abstand ist acht. Das Wasser ist zehn minus acht, also zwei Zentimeter tief.",
+   "sprecher": "Halbe Breite sechs, Radius sechs Komma fünf: Der Abstand ist zwei Komma fünf. Das Wasser ist sechs Komma fünf minus zwei Komma fünf, also vier Zentimeter tief.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "d = \\sqrt{100 - 36} = 8, \\;\\; 10 - 8 = \\fc{2}",
+     "text": "d = \\sqrt{42.25 - 36} = 2.5, \\;\\; 6.5 - 2.5 = \\fc{4}",
      "x": 150,
      "y": 330,
-     "groesse": 46,
+     "groesse": 44,
      "ein": 1.0
     }
    ],
-   "dauer": 8.33
+   "dauer": 10.49
   },
   {
    "name": "Merke",
@@ -386,22 +386,22 @@
    "szene": "Frage 1",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Wie lang ist die Diagonale eines Rechtecks 35 cm × 12 cm?",
+   "text": "Wie lang ist die Diagonale eines Rechtecks 7.5 cm × 4 cm?",
    "optionen": [
-    "37 cm",
-    "47 cm",
-    "33 cm"
+    "6.3 cm",
+    "8.5 cm",
+    "11.5 cm"
    ],
-   "richtig": 0,
+   "richtig": 1,
    "rueck": {
-    "0": "Ja.",
-    "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
-    "2": "Die Diagonale ist die Hypotenuse. Addieren statt subtrahieren."
+    "1": "Ja.",
+    "2": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
+    "0": "Die Diagonale ist die Hypotenuse. Addieren statt subtrahieren."
    },
-   "sprich": "Wie lang ist die Diagonale eines Rechtecks fünfunddreissig mal zwölf Zentimeter?",
+   "sprich": "Wie lang ist die Diagonale eines Rechtecks sieben Komma fünf mal vier Zentimeter?",
    "rueck_sprich": {
-    "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
-    "2": "Die Diagonale ist die Hypotenuse. Addieren statt subtrahieren."
+    "2": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
+    "0": "Die Diagonale ist die Hypotenuse. Addieren statt subtrahieren."
    }
   },
   {
@@ -430,11 +430,11 @@
    "szene": "Frage 3",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Ein Kreis hat den Radius 13 cm. Eine Sehne hat den Abstand 12 cm vom Mittelpunkt. Wie lang ist sie?",
+   "text": "Ein Kreis hat den Radius 2.5 cm. Eine Sehne hat den Abstand 1.5 cm vom Mittelpunkt. Wie lang ist sie?",
    "optionen": [
-    "5 cm",
+    "2 cm",
     "1 cm",
-    "10 cm"
+    "4 cm"
    ],
    "richtig": 2,
    "rueck": {
@@ -442,7 +442,7 @@
     "0": "Das ist die halbe Sehne.",
     "1": "Nicht die Längen subtrahieren, sondern ihre Quadrate."
    },
-   "sprich": "Ein Kreis hat den Radius dreizehn Zentimeter. Eine Sehne hat den Abstand zwölf vom Mittelpunkt. Wie lang ist sie?",
+   "sprich": "Ein Kreis hat den Radius zwei Komma fünf Zentimeter. Eine Sehne hat den Abstand eins Komma fünf vom Mittelpunkt. Wie lang ist sie?",
    "rueck_sprich": {
     "0": "Das ist die halbe Sehne.",
     "1": "Nicht die Längen subtrahieren, sondern ihre Quadrate."
@@ -473,11 +473,11 @@
    "szene": "Frage 5",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Ein Rohr hat den Radius 10 cm, der Wasserspiegel ist 12 cm breit, das Wasser steht unter der Mitte. Wie tief ist es?",
+   "text": "Ein Rohr hat den Radius 6.5 cm, der Wasserspiegel ist 12 cm breit, das Wasser steht unter der Mitte. Wie tief ist es?",
    "optionen": [
-    "2 cm",
-    "8 cm",
-    "18 cm"
+    "4 cm",
+    "2.5 cm",
+    "9 cm"
    ],
    "richtig": 0,
    "rueck": {
@@ -485,7 +485,7 @@
     "1": "Das ist der Abstand zur Mitte. Wie tief ist das Wasser darunter?",
     "2": "So tief wäre es, wenn der Spiegel über der Mitte läge."
    },
-   "sprich": "Ein Rohr hat den Radius zehn Zentimeter, der Wasserspiegel ist zwölf Zentimeter breit, das Wasser steht unter der Mitte. Wie tief ist es?",
+   "sprich": "Ein Rohr hat den Radius sechs Komma fünf Zentimeter, der Wasserspiegel ist zwölf Zentimeter breit, das Wasser steht unter der Mitte. Wie tief ist es?",
    "rueck_sprich": {
     "1": "Das ist der Abstand zur Mitte. Wie tief ist das Wasser darunter?",
     "2": "So tief wäre es, wenn der Spiegel über der Mitte läge."
