@@ -31,7 +31,7 @@
    "name": "Gerade",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Verschiedene Gleichungen geben verschiedene Graphen. Die einfachste kennst du: y gleich x, eine Gerade durch null, null. Wird x um eins grösser, wird auch y um eins grösser.",
+   "sprecher": "Verschiedene Gleichungen geben verschiedene Graphen. Die einfachste kennst du: y gleich x, eine Gerade durch den Nullpunkt. Wird x um eins grösser, wird auch y um eins grösser.",
    "elemente": [
     {
      "typ": "formel",
@@ -39,7 +39,7 @@
      "x": 150,
      "y": 300,
      "groesse": 72,
-     "ein": 3.36
+     "ein": 3.2
     },
     {
      "typ": "notiz",
@@ -48,7 +48,7 @@
      "y": 450,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 8.24
+     "ein": 7.94
     },
     {
      "typ": "graf",
@@ -80,7 +80,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.14,
+     "ein": 5.88,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -105,7 +105,7 @@
      ]
     }
    ],
-   "dauer": 11.42
+   "dauer": 11.85
   },
   {
    "name": "Parabel",
@@ -128,7 +128,7 @@
      "y": 450,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 6.54
+     "ein": 6.53
     },
     {
      "typ": "graf",
@@ -183,7 +183,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.54,
+     "ein": 6.53,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -214,7 +214,7 @@
    "name": "Wurzel",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "y gleich Wurzel aus x. Wurzel aus eins ist eins, Wurzel aus vier ist zwei. Der Graph beginnt bei null, null und wird immer flacher. Links von der y-Achse gibt es keine Punkte: Aus negativen Zahlen gibt es keine Wurzel.",
+   "sprecher": "y gleich Wurzel aus x. Wurzel aus eins ist eins, Wurzel aus vier ist zwei. Der Graph beginnt im Nullpunkt und wird immer flacher. Links von der y-Achse gibt es keine Punkte: Aus negativen Zahlen gibt es keine Wurzel.",
    "elemente": [
     {
      "typ": "formel",
@@ -231,7 +231,7 @@
      "y": 450,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 6.27
+     "ein": 5.9
     },
     {
      "typ": "graf",
@@ -314,7 +314,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.27,
+     "ein": 5.9,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -367,7 +367,7 @@
      ]
     }
    ],
-   "dauer": 14.73
+   "dauer": 14.17
   },
   {
    "name": "Kehrwert",
@@ -390,7 +390,7 @@
      "y": 488,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 11.02
+     "ein": 11.03
     },
     {
      "typ": "graf",
@@ -441,7 +441,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.02,
+     "ein": 11.03,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -480,7 +480,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 3.86
+     "ein": 3.85
     },
     {
      "typ": "graf",
@@ -567,7 +567,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.86,
+     "ein": 3.85,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -638,7 +638,7 @@
      "x": 150,
      "y": 300,
      "groesse": 54,
-     "ein": 2.28
+     "ein": 2.29
     },
     {
      "typ": "notiz",
@@ -647,7 +647,7 @@
      "y": 450,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 11.52
+     "ein": 11.49
     }
    ],
    "dauer": 15.05
@@ -664,7 +664,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 2.63
+     "ein": 3.1
     },
     {
      "typ": "graf",
@@ -704,7 +704,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.63,
+     "ein": 3.1,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -736,7 +736,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.11,
+     "ein": 6.12,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -776,7 +776,7 @@
      "y": 300,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 1.64
+     "ein": 1.63
     },
     {
      "typ": "formel",
@@ -784,7 +784,7 @@
      "x": 150,
      "y": 430,
      "groesse": 58,
-     "ein": 7.58
+     "ein": 7.57
     },
     {
      "typ": "graf",
@@ -843,7 +843,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.58,
+     "ein": 7.57,
      "geraden": [],
      "punkte": [
       {

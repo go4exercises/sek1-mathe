@@ -392,7 +392,7 @@ clip('familien', 1, 'Funktionen sehen: Vier Graphen-Familien',
      '(zwei Äste, keine Achse); Vorhersage (9 | 3), (16 | 4); Testpunkt x = 4; Strecken mit a; Fehler: zu wenige Punkte.',
      ['Parabel', 'Wurzel', 'Kehrwert', 'Gerade', 'Graph'], [
          sz('Gerade',
-            'Verschiedene Gleichungen geben verschiedene Graphen. Die einfachste kennst du: y gleich x, eine Gerade durch null, null. '
+            'Verschiedene Gleichungen geben verschiedene Graphen. Die einfachste kennst du: y gleich x, eine Gerade durch den Nullpunkt. '
             'Wird x um eins grösser, wird auch y um eins grösser.',
             f(r'y = x', 300, 72, ein='@einfachste'),
             n('Gerade: gleich viel mehr|bei jedem Schritt', 450, 'blau', 44, ein='@grösser'),
@@ -406,7 +406,7 @@ clip('familien', 1, 'Funktionen sehen: Vier Graphen-Familien',
             graf(W_F, punkte=[pt(2, 4, 5, '(2 | 4)'), pt(-2, 4, 5, '(−2 | 4)', [-2.3, 4.6], 'end')]),
             ueber(W_F, kurven=[kurve('x*x', -4, 5)], ein='@symmetrisch')),
          sz('Wurzel',
-            'y gleich Wurzel aus x. Wurzel aus eins ist eins, Wurzel aus vier ist zwei. Der Graph beginnt bei null, null und wird immer flacher. '
+            'y gleich Wurzel aus x. Wurzel aus eins ist eins, Wurzel aus vier ist zwei. Der Graph beginnt im Nullpunkt und wird immer flacher. '
             'Links von der y-Achse gibt es keine Punkte: Aus negativen Zahlen gibt es keine Wurzel.',
             f(r'y = \sqrt{x}', 300, 72, ein=0.3),
             n('Wurzelgraph: ab (0 ∣ 0),|immer flacher, nur x ≥ 0', 450, 'blau', 44, ein='@beginnt'),
@@ -457,7 +457,7 @@ clip('kontrolle-familien', 2, 'Funktionen sehen: Kontrollfragen zu den Familien'
      'Fünf Fragen: Parabel y = 0.5x² im Bild, y = 3/x für x = 6, kein Punkt bei x = −1, y = 2√x für x = 9, Scheitel von y = x² + 2.',
      ['Parabel', 'Wurzel', 'Kehrwert', 'Kontrollfragen'], [
          sz('Frage 1',
-            'Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt zwei: y gleich null Komma fünf x Quadrat.',
+            'Symmetrisch zur y-Achse, Scheitel im Nullpunkt, und zwei gibt zwei: y gleich null Komma fünf x Quadrat.',
             f(r'\fc{y = 0.5x^2}', 330, 66, ein=1.0),
             graf(W_F, punkte=[pt(-2, 2, 5), pt(0, 0, 5), pt(2, 2, 5)], kurven=[kurve('0.5*x*x', -4, 5)])),
          sz('Frage 2',
@@ -506,14 +506,14 @@ clip('zusammenhaenge', 3, 'Funktionen sehen: Proportional, antiproportional, lin
      ['proportional', 'antiproportional', 'linear', 'Anfangswert', 'Doppelt-Test'], [
          sz('Benzin',
             'Ein Liter Benzin kostet eins Komma achtzig Franken. Zwei Liter kosten drei Franken sechzig, vier Liter sieben Franken zwanzig. '
-            'Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch null, null.',
+            'Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch den Nullpunkt.',
             f(r'y = 1.8x', 280, 62, ein=0.3),
             n('proportional:|x doppelt, y doppelt', 420, 'blau', 44, ein='@Doppelt'),
             graf(W_P, punkte=[pt(2, 3.6, 5), pt(4, 7.2, 5)], xname='x [l]', yname='y [Fr.]'),
             ueber(W_P, kurven=[kurve('1.8*x', 0, 5.5)], ein='@Gerade', xname='x [l]', yname='y [Fr.]')),
          sz('Taxi',
             'Vier Kilometer kosten sechzehn Franken, nicht zweiundzwanzig. Die Grundtaxe zählt nur einmal. '
-            'Das ist linear mit Anfangswert: eine Gerade, die nicht durch null, null geht.',
+            'Das ist linear mit Anfangswert: eine Gerade, die nicht durch den Nullpunkt geht.',
             f(r'y = 2.5x + 6', 280, 62, ein=0.05),
             f(r'x = 4: \; 2.5 \cdot 4 + 6 = \fc{16} \neq 22', 400, 50, ein='@nicht'),
             n('linear mit Anfangswert:|x doppelt, y nicht doppelt', 540, 'blau', 42, ein='@linear'),
@@ -529,14 +529,14 @@ clip('zusammenhaenge', 3, 'Funktionen sehen: Proportional, antiproportional, lin
             ueber(W_P, punkte=[pt(1, 36, 1), pt(3, 12, 1), pt(5, 7.2, 1)], ein='@Produkt', xname='x [Personen]', yname='y [Fr.]')),
          sz('Test',
             'So unterscheidest du: Schau zuerst die Form an. Dann verdopple x an mehreren Stellen. Wird y jedes Mal doppelt so gross, ist es proportional. '
-            'Wird y jedes Mal halb so gross, antiproportional. Eine Gerade, die nicht durch null, null geht, ist linear mit Anfangswert.',
+            'Wird y jedes Mal halb so gross, antiproportional. Eine Gerade, die nicht durch den Nullpunkt geht, ist linear mit Anfangswert.',
             n('zuerst die Form, dann x verdoppeln:|y immer doppelt: proportional|y immer halb: antiproportional|Gerade nicht durch (0 ∣ 0): linear mit Anfangswert', 280, 'blau', 40, ein='@Form')),
          sz('Fehler',
             'Häufiger Fehler: Was steigt, ist nicht automatisch proportional, das Taxi zeigt es. Und was fällt, ist nicht automatisch antiproportional: '
             'Eine fallende Gerade ist linear.',
             n('steigt: nicht automatisch proportional', 300, 'rot', 42, ein='@steigt'),
             n('fällt: nicht automatisch antiproportional', 420, 'rot', 42, ein='@fällt')),
-         merke('Zum Mitnehmen: Proportional ist eine Gerade durch null, null. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. '
+         merke('Zum Mitnehmen: Proportional ist eine Gerade durch den Nullpunkt. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. '
                'Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich.',
                'proportional: Gerade durch (0 ∣ 0)|linear: Gerade mit Anfangswert|antiproportional: Kehrwertgraph'),
          jetzt_du(),

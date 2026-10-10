@@ -31,7 +31,7 @@
    "name": "Benzin",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Ein Liter Benzin kostet eins Komma achtzig Franken. Zwei Liter kosten drei Franken sechzig, vier Liter sieben Franken zwanzig. Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch null, null.",
+   "sprecher": "Ein Liter Benzin kostet eins Komma achtzig Franken. Zwei Liter kosten drei Franken sechzig, vier Liter sieben Franken zwanzig. Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch den Nullpunkt.",
    "elemente": [
     {
      "typ": "formel",
@@ -48,7 +48,7 @@
      "y": 420,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 7.72
+     "ein": 7.94
     },
     {
      "typ": "graf",
@@ -131,7 +131,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.9,
+     "ein": 12.18,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -194,13 +194,13 @@
      "yname": "y [Fr.]"
     }
    ],
-   "dauer": 15.51
+   "dauer": 15.35
   },
   {
    "name": "Taxi",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Vier Kilometer kosten sechzehn Franken, nicht zweiundzwanzig. Die Grundtaxe zählt nur einmal. Das ist linear mit Anfangswert: eine Gerade, die nicht durch null, null geht.",
+   "sprecher": "Vier Kilometer kosten sechzehn Franken, nicht zweiundzwanzig. Die Grundtaxe zählt nur einmal. Das ist linear mit Anfangswert: eine Gerade, die nicht durch den Nullpunkt geht.",
    "elemente": [
     {
      "typ": "formel",
@@ -216,7 +216,7 @@
      "x": 150,
      "y": 400,
      "groesse": 50,
-     "ein": 2.87
+     "ein": 2.83
     },
     {
      "typ": "notiz",
@@ -225,7 +225,7 @@
      "y": 540,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 6.57
+     "ein": 6.31
     },
     {
      "typ": "graf",
@@ -307,7 +307,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.57,
+     "ein": 6.31,
      "geraden": [],
      "punkte": [
       {
@@ -389,7 +389,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.87,
+     "ein": 2.83,
      "geraden": [],
      "punkte": [
       {
@@ -456,7 +456,7 @@
      "yname": "y [Fr.]"
     }
    ],
-   "dauer": 11.09
+   "dauer": 10.62
   },
   {
    "name": "Pizza",
@@ -479,7 +479,7 @@
      "y": 450,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 8.64
+     "ein": 8.65
     },
     {
      "typ": "graf",
@@ -572,7 +572,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.34,
+     "ein": 11.35,
      "geraden": [],
      "punkte": [
       {
@@ -652,7 +652,7 @@
    "name": "Test",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "So unterscheidest du: Schau zuerst die Form an. Dann verdopple x an mehreren Stellen. Wird y jedes Mal doppelt so gross, ist es proportional. Wird y jedes Mal halb so gross, antiproportional. Eine Gerade, die nicht durch null, null geht, ist linear mit Anfangswert.",
+   "sprecher": "So unterscheidest du: Schau zuerst die Form an. Dann verdopple x an mehreren Stellen. Wird y jedes Mal doppelt so gross, ist es proportional. Wird y jedes Mal halb so gross, antiproportional. Eine Gerade, die nicht durch den Nullpunkt geht, ist linear mit Anfangswert.",
    "elemente": [
     {
      "typ": "notiz",
@@ -661,10 +661,10 @@
      "y": 280,
      "groesse": 40,
      "farbe": "blau",
-     "ein": 2.52
+     "ein": 2.33
     }
    ],
-   "dauer": 17.02
+   "dauer": 16.87
   },
   {
    "name": "Fehler",
@@ -679,7 +679,7 @@
      "y": 300,
      "groesse": 42,
      "farbe": "rot",
-     "ein": 1.88
+     "ein": 1.9
     },
     {
      "typ": "notiz",
@@ -697,7 +697,7 @@
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Proportional ist eine Gerade durch null, null. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich.",
+   "sprecher": "Zum Mitnehmen: Proportional ist eine Gerade durch den Nullpunkt. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich.",
    "elemente": [
     {
      "typ": "titel",
@@ -716,7 +716,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 13.49
+   "dauer": 13.25
   },
   {
    "name": "Jetzt du",

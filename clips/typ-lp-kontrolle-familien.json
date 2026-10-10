@@ -30,7 +30,7 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt zwei: y gleich null Komma fünf x Quadrat.",
+   "sprecher": "Symmetrisch zur y-Achse, Scheitel im Nullpunkt, und zwei gibt zwei: y gleich null Komma fünf x Quadrat.",
    "elemente": [
     {
      "typ": "graf",
@@ -139,7 +139,7 @@
      ]
     }
    ],
-   "dauer": 8.57
+   "dauer": 7.98
   },
   {
    "name": "Frage 2",

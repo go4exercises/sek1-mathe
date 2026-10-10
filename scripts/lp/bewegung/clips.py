@@ -233,8 +233,14 @@ def titel(t, y=280, g=86):
     return dict(typ='titel', text=t, x=LX, y=y, groesse=g)
 
 
+def bea(t):
+    """Hörprobe 10.10.2026: «Bea» als BE-a. Nur das ganze Wort (die Tabelle träfe auch «Bearbeitung»);
+    ein Satzzeichen dahinter wandert in die Klammer, sonst verschluckt Piper es."""
+    return re.sub(r'(?<![\wäöüÄÖÜ])Bea(?![\wäöüÄÖÜ])([.,;:!?]?)', lambda m: '[[bˈeːa' + m.group(1) + ']]', t)
+
+
 def sz(name, spr, *el):
-    spr = spr.replace('Δy', 'delta y').replace('Δx', 'delta x')          # Piper liest «Δ» nicht
+    spr = bea(spr.replace('Δy', 'delta y').replace('Δx', 'delta x'))     # Piper liest «Δ» nicht
     return dict(name=name, layout='zentriert', oben=200, sprecher=spr, elemente=list(el))
 
 
@@ -246,9 +252,9 @@ def wahl(szene, text, opt, richtig, rueck, sprich=None, rueck_sprich=None, bei=0
     d = {'szene': szene, 'bei': bei, 'typ': 'wahl', 'text': text, 'optionen': opt,
          'richtig': dreh(richtig), 'rueck': {str(dreh(i)): v for i, v in rueck.items()}}
     if sprich:
-        d['sprich'] = sprich
+        d['sprich'] = bea(sprich)
     if rueck_sprich:
-        d['rueck_sprich'] = {str(dreh(i)): v for i, v in rueck_sprich.items()}
+        d['rueck_sprich'] = {str(dreh(i)): bea(v) for i, v in rueck_sprich.items()}
     return d
 
 

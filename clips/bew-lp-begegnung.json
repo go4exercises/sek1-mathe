@@ -31,7 +31,7 @@
    "name": "Lage",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zwei Velofahrerinnen sind sechsunddreissig Kilometer voneinander entfernt und fahren gleichzeitig los, aufeinander zu. Anna fährt vierzehn, Bea zehn Kilometer pro Stunde.",
+   "sprecher": "Zwei Velofahrerinnen sind sechsunddreissig Kilometer voneinander entfernt und fahren gleichzeitig los, aufeinander zu. Anna fährt vierzehn, [[bˈeːa]] zehn Kilometer pro Stunde.",
    "elemente": [
     {
      "typ": "notiz",
@@ -40,7 +40,7 @@
      "y": 300,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 0.96
+     "ein": 0.74
     },
     {
      "typ": "graf",
@@ -106,7 +106,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.14,
+     "ein": 6.88,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -179,7 +179,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.64,
+     "ein": 8.62,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -245,7 +245,7 @@
      ]
     }
    ],
-   "dauer": 10.77
+   "dauer": 10.72
   },
   {
    "name": "Annäherung",
@@ -259,7 +259,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 5.05
+     "ein": 5.06
     },
     {
      "typ": "notiz",
@@ -268,7 +268,7 @@
      "y": 420,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 5.63
+     "ein": 5.64
     },
     {
      "typ": "graf",
@@ -375,7 +375,7 @@
    "name": "Vorhersage",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Sechsunddreissig durch vierundzwanzig gibt eins Komma fünf Stunden. Dann ist Anna einundzwanzig Kilometer gefahren, Bea fünfzehn. Der Treffpunkt liegt nicht in der Mitte.",
+   "sprecher": "Sechsunddreissig durch vierundzwanzig gibt eins Komma fünf Stunden. Dann ist Anna einundzwanzig Kilometer gefahren, [[bˈeːa]] fünfzehn. Der Treffpunkt liegt nicht in der Mitte.",
    "elemente": [
     {
      "typ": "formel",
@@ -383,7 +383,7 @@
      "x": 150,
      "y": 280,
      "groesse": 54,
-     "ein": 2.33
+     "ein": 2.26
     },
     {
      "typ": "formel",
@@ -391,7 +391,7 @@
      "x": 150,
      "y": 428,
      "groesse": 50,
-     "ein": 4.35
+     "ein": 4.6
     },
     {
      "typ": "graf",
@@ -485,7 +485,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.33,
+     "ein": 2.26,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -571,7 +571,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.35,
+     "ein": 4.6,
      "geraden": [],
      "punkte": [
       {
@@ -634,13 +634,13 @@
      "yname": "Ort [km]"
     }
    ],
-   "dauer": 10.42
+   "dauer": 10.33
   },
   {
    "name": "Einholen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Anders beim Einholen. Bea startet eine Stunde früher mit zehn Kilometern pro Stunde, Anna folgt mit fünfzehn. Bea hat zehn Kilometer Vorsprung, Anna holt pro Stunde nur fünf auf: zwei Stunden nach Annas Start.",
+   "sprecher": "Anders beim Einholen. [[bˈeːa]] startet eine Stunde früher mit zehn Kilometern pro Stunde, Anna folgt mit fünfzehn. [[bˈeːa]] hat zehn Kilometer Vorsprung, Anna holt pro Stunde nur fünf auf: zwei Stunden nach Annas Start.",
    "elemente": [
     {
      "typ": "formel",
@@ -648,7 +648,7 @@
      "x": 150,
      "y": 280,
      "groesse": 50,
-     "ein": 7.99
+     "ein": 7.61
     },
     {
      "typ": "formel",
@@ -656,7 +656,7 @@
      "x": 150,
      "y": 390,
      "groesse": 50,
-     "ein": 11.17
+     "ein": 10.73
     },
     {
      "typ": "graf",
@@ -722,7 +722,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.95,
+     "ein": 2.31,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -795,7 +795,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.55,
+     "ein": 5.25,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -868,7 +868,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.39,
+     "ein": 11.03,
      "geraden": [],
      "punkte": [
       {
@@ -931,7 +931,7 @@
      "yname": "Ort [km]"
     }
    ],
-   "dauer": 15.49
+   "dauer": 15.55
   },
   {
    "name": "Rolltreppe",
@@ -945,7 +945,7 @@
      "x": 150,
      "y": 280,
      "groesse": 50,
-     "ein": 10.82
+     "ein": 10.84
     },
     {
      "typ": "formel",
@@ -997,7 +997,7 @@
      "y": 420,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 5.69
+     "ein": 5.71
     }
    ],
    "dauer": 7.8
@@ -1070,9 +1070,9 @@
     "0": "Sie fahren aufeinander zu. Die Differenz wäre richtig, wenn Anna Bea einholen müsste.",
     "1": "Wie viel näher kommen sie sich in einer Stunde?"
    },
-   "sprich": "Wann treffen sich Anna und Bea?",
+   "sprich": "Wann treffen sich Anna und [[bˈeːa?]]",
    "rueck_sprich": {
-    "0": "Sie fahren aufeinander zu. Die Differenz wäre richtig, wenn Anna Bea einholen müsste.",
+    "0": "Sie fahren aufeinander zu. Die Differenz wäre richtig, wenn Anna [[bˈeːa]] einholen müsste.",
     "1": "Wie viel näher kommen sie sich in einer Stunde?"
    }
   }

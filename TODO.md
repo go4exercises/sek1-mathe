@@ -18,8 +18,10 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bewegung.html` (Abschnitt unten).
 - [x] Freigeschaltet (nav.js mit Bereich 4 «Mathematisieren», index.html, build-seo, Suchindex, Sitemap, CLAUDE.md).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 ohne Antwortsatz, G5 mit Mittelwert).
-- [ ] 🔑 Hörprobe der acht Clips `bew-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
-      «Bea» (Whisper: «bar», «BR»), «Rappen», «addierst», «Teilen statt mal», «neun Zahlungen».
+- [x] 🔑 Hörprobe Runde 7: «Bea» als BE-a (Lautschrift über `bea()` in `scripts/lp/bewegung/clips.py`, nur das ganze Wort;
+      3 Szenen und die Fragetöne neu vertont, Whisper hört weiter «wir», «Beher»); «addierst», «Rappen», «Durchschnitt»,
+      «Teilen statt mal», «neun Zahlungen» und die drei Fragetöne bleiben wie bisher.
+- [ ] 🔑 Ganze Clips `bew-lp-*` anhören, je eine Frage absichtlich falsch beantworten.
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
 
 ## Prüfung `bewegung` (10.10.2026)
@@ -62,7 +64,7 @@ Als korrekt geprüft: alle Zahlen und Fehlerwerte, Punktsummen, Leisten auf dem 
 - [x] Clips: «Viertelauto», Doppelpunkt «x = 11:», Einblendezeiten Bea und «= 2 h», Label (1.5 | 21) weit unter dem Punkt,
       K3F5 Abschnitt 2 nicht orange, «darf man».
 - [x] PDFs: Schreibplatz G1/G5/G7, Silbentrennung in der Kopfzeile, leere Flächen im Bewertungspaket.
-- [ ] 🔑 Hörprobe (Whisper-Vermutungen): «Bea», «addierst», «s gleich v mal t», «Teilen statt mal», «neun Zahlungen», «Grundtaxe».
+- [x] 🔑 Hörprobe (Whisper-Vermutungen): erledigt in Runde 7, siehe oben.
 
 ## Leitprogramm Funktionstypen und Graphen (10.10.2026)
 
@@ -72,8 +74,9 @@ Als korrekt geprüft: alle Zahlen und Fehlerwerte, Punktsummen, Leisten auf dem 
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/funktionstypen.html` (Abschnitt unten).
 - [x] Freigeschaltet (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex, Sitemap).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Graph G6 und Skizze G8).
-- [ ] 🔑 Hörprobe der acht Clips `typ-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
-      «y» (Whisper: «Epsilon»), «Graph» (Whisper: «Graf»), «Kehrwertgraph», «Grundtaxe» (Whisper: «Grundachse»), «null, null».
+- [x] 🔑 Hörprobe Runde 7 (`~/hoerproben/2026-10-10/runde7/`): «null, null» → «durch den Nullpunkt» / «im Nullpunkt»
+      (7 Stellen, 7 Szenen neu vertont); «y», «Grundtaxe», «Kehrwertgraph», «hundertzwanzig», «liefe» bleiben wie bisher.
+- [ ] 🔑 Ganze Clips `typ-lp-*` anhören, je eine Frage absichtlich falsch beantworten.
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
 
 ## Prüfung `funktionstypen` (10.10.2026)
@@ -116,7 +119,7 @@ Als korrekt geprüft: alle Zahlen, Punktsummen, Leisten auf dem Reglerraster, Zu
 - [x] Sperrliste unvollständig (zu|g|1|0, we|q|0.5|±2, we|k|12|…); Velo mit 4 km/h in `restweg`; Tipp `neuwert` mit 10 : 3.
 - [x] Rückmeldung kontrolle-zusammenhaenge F4 «nicht darunter»; kontrolle-rest F1 «Kilometer» fehlt im Ton; Fragepunkte «vier, zwei und neun, drei».
 - [x] G6 «gleiches Tempo» → «gleichbleibendes»; G6-Buchstabe auf Graph C; KI-Auftrag «Fotos» → «Bilder»; G7 ohne Bereich; 2f ohne Kontext.
-- [ ] 🔑 Hörprobe (Vermutung Whisper): «Grundtaxe», «hundertzwanzig», «zurückgelegt plus noch entfernt».
+- [x] 🔑 Hörprobe (Vermutung Whisper): erledigt in Runde 7, siehe oben.
 
 ## Leitprogramm Darstellungen wechseln (10.10.2026)
 

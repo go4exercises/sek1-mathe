@@ -1,9 +1,9 @@
-0.40	Zwei Velofahrerinnen sind sechsunddreissig Kilometer voneinander entfernt und fahren gleichzeitig los, aufeinander zu. Anna fährt vierzehn, Bea zehn Kilometer pro Stunde.
-11.17	In jeder Stunde kommen sie sich um vierzehn plus zehn, also vierundzwanzig Kilometer näher. Bei Begegnungen addierst du die Geschwindigkeiten.
-19.79	Sechsunddreissig durch vierundzwanzig gibt eins Komma fünf Stunden. Dann ist Anna einundzwanzig Kilometer gefahren, Bea fünfzehn. Der Treffpunkt liegt nicht in der Mitte.
-30.21	Anders beim Einholen. Bea startet eine Stunde früher mit zehn Kilometern pro Stunde, Anna folgt mit fünfzehn. Bea hat zehn Kilometer Vorsprung, Anna holt pro Stunde nur fünf auf: zwei Stunden nach Annas Start.
-45.70	Anders bei einer Rolltreppe: Hier zählt deine Geschwindigkeit gegenüber dem Boden. Die Treppe ist dreissig Meter lang und fährt null Komma fünf Meter pro Sekunde. Gehst du mit einem Meter pro Sekunde mit, addieren sich die beiden: eins Komma fünf Meter pro Sekunde, du brauchst zwanzig Sekunden. Bleibst du stehen, brauchst du sechzig Sekunden.
-67.29	Das ist ein Modell: Alle fahren gleichmässig schnell und starten genau zur angegebenen Zeit. Ampeln, Steigungen und Pausen lässt das Modell weg. Ob das passt, entscheidest du bei jeder Aufgabe.
-78.83	Häufiger Fehler: beim Einholen die Geschwindigkeiten addieren. Wer hinterherfährt, holt nur den Unterschied auf.
-86.63	Zum Mitnehmen: Fahren zwei aufeinander zu, zählst du die Geschwindigkeiten zusammen. Holt der Schnellere den Langsameren ein, rechnest du schneller minus langsamer. Zeit gleich Abstand durch Annäherungsgeschwindigkeit.
-99.02	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+0.40	Zwei Velofahrerinnen sind sechsunddreissig Kilometer voneinander entfernt und fahren gleichzeitig los, aufeinander zu. Anna fährt vierzehn, [[bˈeːa]] zehn Kilometer pro Stunde.
+11.12	In jeder Stunde kommen sie sich um vierzehn plus zehn, also vierundzwanzig Kilometer näher. Bei Begegnungen addierst du die Geschwindigkeiten.
+19.74	Sechsunddreissig durch vierundzwanzig gibt eins Komma fünf Stunden. Dann ist Anna einundzwanzig Kilometer gefahren, [[bˈeːa]] fünfzehn. Der Treffpunkt liegt nicht in der Mitte.
+30.07	Anders beim Einholen. [[bˈeːa]] startet eine Stunde früher mit zehn Kilometern pro Stunde, Anna folgt mit fünfzehn. [[bˈeːa]] hat zehn Kilometer Vorsprung, Anna holt pro Stunde nur fünf auf: zwei Stunden nach Annas Start.
+45.62	Anders bei einer Rolltreppe: Hier zählt deine Geschwindigkeit gegenüber dem Boden. Die Treppe ist dreissig Meter lang und fährt null Komma fünf Meter pro Sekunde. Gehst du mit einem Meter pro Sekunde mit, addieren sich die beiden: eins Komma fünf Meter pro Sekunde, du brauchst zwanzig Sekunden. Bleibst du stehen, brauchst du sechzig Sekunden.
+67.21	Das ist ein Modell: Alle fahren gleichmässig schnell und starten genau zur angegebenen Zeit. Ampeln, Steigungen und Pausen lässt das Modell weg. Ob das passt, entscheidest du bei jeder Aufgabe.
+78.75	Häufiger Fehler: beim Einholen die Geschwindigkeiten addieren. Wer hinterherfährt, holt nur den Unterschied auf.
+86.55	Zum Mitnehmen: Fahren zwei aufeinander zu, zählst du die Geschwindigkeiten zusammen. Holt der Schnellere den Langsameren ein, rechnest du schneller minus langsamer. Zeit gleich Abstand durch Annäherungsgeschwindigkeit.
+98.94	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
