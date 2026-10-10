@@ -1,0 +1,6 @@
+0.40	Zerlege: acht x ist vier x mal zwei, zwölf x Quadrat ist vier x mal drei x. Gestrichen wird vier x. Es bleibt zwei durch drei x.
+9.89	Der Zähler ist Klammer x minus zwei mal Klammer x plus zwei. Mit dem Nenner x plus zwei gekürzt bleibt x minus zwei.
+18.21	Der Nenner ist x mal Klammer x plus fünf. Er wird null für x gleich null und für x gleich minus fünf. Der Zähler darf null sein.
+27.04	Nein. Zähler und Nenner sind Summen ohne gemeinsamen Faktor. Probe mit x gleich eins: acht Halbe, also vier, nicht sieben.
+35.84	Fünf minus x ist minus Klammer x minus fünf. Gegenzahlen geteilt ergeben minus eins.
+42.75	Zum Mitnehmen: zuerst in Faktoren zerlegen, dann nur gleiche Faktoren streichen. Verboten sind die Zahlen, für die der Nenner null wird.

@@ -1,0 +1,447 @@
+{
+ "titel": "Gleichungen sehen: Kontrollfragen zum Rechnen mit Bruchtermen",
+ "dateiname": "gleich-lp-kontrolle-rechnen",
+ "kurzbeschrieb": "Fünf Fragen: 2/x · x²/6, 4/x : 2/x², 3/x + 4/x, Hauptnenner von 1/(3x) und 1/(2x²), 1/x − 1/(x + 1).",
+ "schlagworte": [
+  "Bruchterm",
+  "Hauptnenner",
+  "Kehrwert",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Gleichungen · Bruchterme, Gleichungen und Formeln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "2 · Gleichungen",
+ "lektion": [
+  "lp-gleichungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Gleichungen sehen",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms gleichungen-formeln; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zähler mal Zähler: zwei x Quadrat. Nenner mal Nenner: sechs x. Gekürzt mit zwei x bleibt x Drittel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2 \\cdot x^2}{x \\cdot 6} = \\dfrac{2x^2}{6x} = \\fc{\\dfrac{x}{3}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "2/x · x²/6",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.28
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mit dem Kehrwert: vier durch x mal x Quadrat durch zwei. Das gibt vier x Quadrat durch zwei x, also zwei x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{4}{x} \\cdot \\dfrac{x^2}{2} = \\dfrac{4x^2}{2x} = \\fc{2x}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "4/x : 2/x²",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.35
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gleiche Nenner: Nur die Zähler werden addiert. Drei plus vier ist sieben, der Nenner x bleibt.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3 + 4}{x} = \\fc{\\dfrac{7}{x}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "3/x + 4/x",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 6.55
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der kleinste gemeinsame Nenner braucht die Zahl sechs, das kleinste gemeinsame Vielfache von drei und zwei, und x Quadrat. Also sechs x Quadrat.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\text{kgV}(3;\\ 2) = 6, \\quad x^2 \\quad \\Rightarrow \\quad \\fc{6x^2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "1/(3x)   und   1/(2x²)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.44
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gemeinsamer Nenner: x mal Klammer x plus eins. Zähler: x plus eins minus x, das ist eins. Ergebnis: eins durch x mal Klammer x plus eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{(x + 1) - x}{x(x + 1)} = \\fc{\\dfrac{1}{x(x + 1)}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "1/x − 1/(x + 1)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.35
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Beim Multiplizieren und Dividieren braucht es keinen gemeinsamen Nenner. Beim Addieren und Subtrahieren immer einen gemeinsamen Nenner.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "mal und durch: ohne gemeinsamen Nenner|plus und minus: mit dem Hauptnenner",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.87
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: 2/x · x²/6",
+   "optionen": [
+    "2x²/(6x)",
+    "2x/6",
+    "x/3"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Stimmt, ist aber noch nicht gekürzt.",
+    "1": "Stimmt, ist aber noch nicht gekürzt."
+   },
+   "sprich": "Rechne: zwei durch x mal x Quadrat durch sechs.",
+   "rueck_sprich": {
+    "0": "Stimmt, ist aber noch nicht gekürzt.",
+    "1": "Stimmt, ist aber noch nicht gekürzt."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: 4/x : 2/x²",
+   "optionen": [
+    "2x",
+    "8/x³",
+    "2/x"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Beim Dividieren wird der zweite Bruch umgedreht, nicht mit ihm multipliziert.",
+    "2": "Der Kehrwert von 2/x² ist x²/2."
+   },
+   "sprich": "Rechne: vier durch x, geteilt durch zwei durch x Quadrat.",
+   "rueck_sprich": {
+    "1": "Beim Dividieren wird der zweite Bruch umgedreht, nicht mit ihm multipliziert.",
+    "2": "Der Kehrwert von zwei durch x Quadrat ist x Quadrat durch zwei."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: 3/x + 4/x",
+   "optionen": [
+    "7/(2x)",
+    "12/x",
+    "7/x"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Bei gleichen Nennern bleibt der Nenner, nur die Zähler werden addiert.",
+    "1": "Addiert wird, nicht multipliziert."
+   },
+   "sprich": "Rechne: drei durch x plus vier durch x.",
+   "rueck_sprich": {
+    "0": "Bei gleichen Nennern bleibt der Nenner, nur die Zähler werden addiert.",
+    "1": "Addiert wird, nicht multipliziert."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Hauptnenner von 1/(3x) und 1/(2x²)?",
+   "optionen": [
+    "6x²",
+    "6x³",
+    "5x²"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "x² reicht: Darin steckt auch x.",
+    "2": "Die Zahlen werden nicht addiert: gesucht ist das kleinste gemeinsame Vielfache von 3 und 2."
+   },
+   "sprich": "Was ist der kleinste gemeinsame Nenner von eins durch drei x und eins durch zwei x Quadrat?",
+   "rueck_sprich": {
+    "1": "x Quadrat reicht: Darin steckt auch x.",
+    "2": "Die Zahlen werden nicht addiert: Gesucht ist das kleinste gemeinsame Vielfache von drei und zwei."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechne: 1/x − 1/(x + 1)",
+   "optionen": [
+    "0",
+    "−1",
+    "1/(x(x + 1))"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Die Nenner sind verschieden: Die Brüche sind nicht gleich gross.",
+    "1": "Nenner werden nicht subtrahiert. Mach zuerst gleichnamig."
+   },
+   "sprich": "Rechne: eins durch x minus eins durch Klammer x plus eins.",
+   "rueck_sprich": {
+    "0": "Die Nenner sind verschieden: Die Brüche sind nicht gleich gross.",
+    "1": "Nenner werden nicht subtrahiert. Mach zuerst gleichnamig."
+   }
+  }
+ ]
+}

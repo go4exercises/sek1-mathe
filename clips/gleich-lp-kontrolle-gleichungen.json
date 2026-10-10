@@ -1,0 +1,479 @@
+{
+ "titel": "Gleichungen sehen: Kontrollfragen zu Gleichungen",
+ "dateiname": "gleich-lp-kontrolle-gleichungen",
+ "kurzbeschrieb": "Fünf Fragen: 6x + 4 = 2x + 24, 3(x − 2) = x + 8, x/3 + x/6 = 4, 2(x + 4) = 2x + 8, x + 5 = x + 2.",
+ "schlagworte": [
+  "Gleichung",
+  "Lösungsmenge",
+  "Probe",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Gleichungen · Bruchterme, Gleichungen und Formeln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "2 · Gleichungen",
+ "lektion": [
+  "lp-gleichungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Gleichungen sehen",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms gleichungen-formeln; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Minus zwei x: vier x plus vier gleich vierundzwanzig. Minus vier: vier x gleich zwanzig. Durch vier: x gleich fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4x + 4 = 24",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "4x = 20",
+     "x": 150,
+     "y": 390,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{x = 5}",
+     "x": 150,
+     "y": 500,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "6x + 4 = 2x + 24",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.62
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zuerst die Klammer: drei x minus sechs gleich x plus acht. Minus x, plus sechs: zwei x gleich vierzehn. Also x gleich sieben.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3x - 6 = x + 8",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "2x = 14",
+     "x": 150,
+     "y": 390,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{x = 7}",
+     "x": 150,
+     "y": 500,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "3(x − 2) = x + 8",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.43
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mal sechs: zwei x plus x gleich vierundzwanzig. Drei x gleich vierundzwanzig, also x gleich acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + x = 24 \\quad \\Rightarrow \\quad \\fc{x = 8}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "x/3 + x/6 = 4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.45
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Links steht ausmultipliziert zwei x plus acht, genau wie rechts. Jede Zahl erfüllt die Gleichung: L gleich alle Zahlen.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2x + 8 = 2x + 8 \\quad \\Rightarrow \\quad \\fc{L = \\mathbb{Q}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "2(x + 4) = 2x + 8",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.25
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Minus x auf beiden Seiten: fünf gleich zwei. Das ist nie wahr. Keine Lösung, die Lösungsmenge ist leer.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5 = 2 \\quad \\Rightarrow \\quad \\fc{L = \\{\\,\\}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "x + 5 = x + 2",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 7.3
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Klammern auflösen, Brüche wegschaffen, auf beiden Seiten dasselbe tun. Fallen die x weg, entscheidet die übrige Aussage: wahr heisst alle Zahlen, falsch heisst keine Lösung.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "auf beiden Seiten dasselbe|x fallen weg: wahr → alle Zahlen|falsch → keine Lösung",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 11.45
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse: 6x + 4 = 2x + 24",
+   "optionen": [
+    "x = 7",
+    "x = 2.5",
+    "x = 5"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Mach die Probe: Mit x = 7 ist links 46, rechts 38.",
+    "1": "Mach die Probe: Mit x = 2.5 ist links 19, rechts 29."
+   },
+   "sprich": "Löse: sechs x plus vier gleich zwei x plus vierundzwanzig.",
+   "rueck_sprich": {
+    "0": "Mach die Probe: Mit x gleich sieben ist links sechsundvierzig, rechts achtunddreissig.",
+    "1": "Mach die Probe: Mit x gleich zwei Komma fünf ist links neunzehn, rechts neunundzwanzig."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse: 3(x − 2) = x + 8",
+   "optionen": [
+    "x = 1",
+    "x = 7",
+    "x = 5"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die 3 gilt für beide Glieder der Klammer: 3x − 6, nicht 3x − 2.",
+    "0": "Mach die Probe: Mit x = 1 ist links −3, rechts 9."
+   },
+   "sprich": "Löse: drei mal Klammer x minus zwei gleich x plus acht.",
+   "rueck_sprich": {
+    "2": "Die Drei gilt für beide Glieder der Klammer: drei x minus sechs, nicht drei x minus zwei.",
+    "0": "Mach die Probe: Mit x gleich eins ist links minus drei, rechts neun."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Löse: x/3 + x/6 = 4",
+   "optionen": [
+    "x = 2",
+    "x = 8",
+    "x = 36"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die Nenner werden nicht addiert: x/3 + x/6 ist nicht x/9.",
+    "0": "Mach die Probe: 2/3 + 2/6 = 1, nicht 4."
+   },
+   "sprich": "Löse: x durch drei plus x durch sechs gleich vier.",
+   "rueck_sprich": {
+    "2": "Die Nenner werden nicht addiert: x durch drei plus x durch sechs ist nicht x durch neun.",
+    "0": "Mach die Probe: zwei Drittel plus zwei Sechstel ist eins, nicht vier."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Lösungsmenge von 2(x + 4) = 2x + 8?",
+   "optionen": [
+    "keine Lösung",
+    "x = 0",
+    "alle Zahlen"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Übrig bleibt 8 = 8, und das ist wahr.",
+    "1": "x = 0 passt, aber nicht nur: Setz x = 3 ein."
+   },
+   "sprich": "Welche Lösungsmenge hat zwei mal Klammer x plus vier gleich zwei x plus acht?",
+   "rueck_sprich": {
+    "0": "Übrig bleibt acht gleich acht, und das ist wahr.",
+    "1": "x gleich null passt, aber nicht nur: Setz x gleich drei ein."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Lösungsmenge von x + 5 = x + 2?",
+   "optionen": [
+    "keine Lösung",
+    "x = 0",
+    "alle Zahlen"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Setz x = 0 ein: 5 = 2 ist falsch.",
+    "2": "Übrig bleibt 5 = 2, und das ist nie wahr."
+   },
+   "sprich": "Welche Lösungsmenge hat x plus fünf gleich x plus zwei?",
+   "rueck_sprich": {
+    "1": "Setz x gleich null ein: fünf gleich zwei ist falsch.",
+    "2": "Übrig bleibt fünf gleich zwei, und das ist nie wahr."
+   }
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+0.40	Zähler mal Zähler: zwei x Quadrat. Nenner mal Nenner: sechs x. Gekürzt mit zwei x bleibt x Drittel.
+7.68	Mit dem Kehrwert: vier durch x mal x Quadrat durch zwei. Das gibt vier x Quadrat durch zwei x, also zwei x.
+16.03	Gleiche Nenner: Nur die Zähler werden addiert. Drei plus vier ist sieben, der Nenner x bleibt.
+22.58	Der kleinste gemeinsame Nenner braucht die Zahl sechs, das kleinste gemeinsame Vielfache von drei und zwei, und x Quadrat. Also sechs x Quadrat.
+32.02	Gemeinsamer Nenner: x mal Klammer x plus eins. Zähler: x plus eins minus x, das ist eins. Ergebnis: eins durch x mal Klammer x plus eins.
+42.37	Zum Mitnehmen: Beim Multiplizieren und Dividieren braucht es keinen gemeinsamen Nenner. Beim Addieren und Subtrahieren immer einen gemeinsamen Nenner.

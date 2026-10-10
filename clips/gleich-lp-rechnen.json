@@ -1,0 +1,556 @@
+{
+ "titel": "Gleichungen sehen: Rechnen mit Bruchtermen",
+ "dateiname": "gleich-lp-rechnen",
+ "kurzbeschrieb": "Multiplizieren mit Kürzen vorher (3x/4 · 8/(9x²) = 2/(3x)), Dividieren mit dem Kehrwert, Hauptnenner aus Faktoren (1/x + 1/(2x) = 3/(2x)), 2/x − 1/(x + 1) mit Klammern, Fehler «Nenner addieren».",
+ "schlagworte": [
+  "Bruchterm",
+  "multiplizieren",
+  "dividieren",
+  "Hauptnenner",
+  "addieren"
+ ],
+ "themenbereich": "Gleichungen · Bruchterme, Gleichungen und Formeln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "2 · Gleichungen",
+ "lektion": [
+  "lp-gleichungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Gleichungen sehen",
+ "folge": 3,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms gleichungen-formeln; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Mal",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Du rechnest mit Bruchtermen wie mit Zahlenbrüchen. Beim Multiplizieren: Zähler mal Zähler, Nenner mal Nenner. Vorher kürzen: drei mit neun, vier mit acht, x mit x Quadrat. Es bleibt zwei durch drei x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3x}{4} \\cdot \\dfrac{8}{9x^2}",
+     "x": 150,
+     "y": 280,
+     "groesse": 66,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{3x \\cdot 8}{4 \\cdot 9x^2}",
+     "x": 150,
+     "y": 454,
+     "groesse": 62,
+     "ein": 3.04
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{\\fa{3}\\fc{x} \\cdot \\fb{8}}{\\fb{4} \\cdot \\fa{9}\\fc{x^2}}",
+     "x": 150,
+     "y": 620,
+     "groesse": 62,
+     "ein": 6.28
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{\\dfrac{2}{3x}}",
+     "x": 150,
+     "y": 786,
+     "groesse": 66,
+     "ein": 10.26
+    }
+   ],
+   "dauer": 14.55
+  },
+  {
+   "name": "Durch",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Dividieren heisst: mit dem Kehrwert multiplizieren. Fünf durch x geteilt durch zehn durch x Quadrat ist fünf durch x mal x Quadrat durch zehn. Gekürzt: x Halbe.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{5}{x} : \\dfrac{10}{x^2}",
+     "x": 150,
+     "y": 280,
+     "groesse": 66,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{5}{x} \\cdot \\dfrac{\\fb{x^2}}{\\fb{10}}",
+     "x": 150,
+     "y": 454,
+     "groesse": 62,
+     "ein": 1.85
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{\\dfrac{x}{2}}",
+     "x": 150,
+     "y": 620,
+     "groesse": 66,
+     "ein": 8.17
+    }
+   ],
+   "dauer": 11.13
+  },
+  {
+   "name": "Hauptnenner",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Addieren brauchen die Brüche denselben Nenner. Bei eins durch x und eins durch zwei x reicht zwei x: Er enthält jeden Faktor der beiden Nenner. Eins durch x wird zu zwei durch zwei x. Zusammen drei durch zwei x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{x} + \\dfrac{1}{2x}",
+     "x": 150,
+     "y": 280,
+     "groesse": 66,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{\\fb{2}}{\\fb{2}x} + \\dfrac{1}{2x}",
+     "x": 150,
+     "y": 454,
+     "groesse": 62,
+     "ein": 9.02
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{\\dfrac{3}{2x}}",
+     "x": 150,
+     "y": 620,
+     "groesse": 66,
+     "ein": 10.78
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        7.5
+       ],
+       "text": "Nenner 1:",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.2,
+         7.1
+        ],
+        [
+         5.2,
+         7.1
+        ],
+        [
+         5.2,
+         8.2
+        ],
+        [
+         4.2,
+         8.2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.7,
+        7.43
+       ],
+       "text": "x",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        5.9
+       ],
+       "text": "Nenner 2:",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.2,
+         5.5
+        ],
+        [
+         5.2,
+         5.5
+        ],
+        [
+         5.2,
+         6.6
+        ],
+        [
+         4.2,
+         6.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.7,
+        5.83
+       ],
+       "text": "2",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.6,
+         5.5
+        ],
+        [
+         6.6,
+         5.5
+        ],
+        [
+         6.6,
+         6.6
+        ],
+        [
+         5.6,
+         6.6
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.1,
+        5.83
+       ],
+       "text": "x",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.54,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        2.0,
+        3.9
+       ],
+       "text": "Hauptnenner:",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5.0,
+         3.5
+        ],
+        [
+         6.0,
+         3.5
+        ],
+        [
+         6.0,
+         4.6
+        ],
+        [
+         5.0,
+         4.6
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.5,
+        3.83
+       ],
+       "text": "2",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.4,
+         3.5
+        ],
+        [
+         7.4,
+         3.5
+        ],
+        [
+         7.4,
+         4.6
+        ],
+        [
+         6.4,
+         4.6
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.9,
+        3.83
+       ],
+       "text": "x",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 44,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 13.34
+  },
+  {
+   "name": "Verschiedene Nenner",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei zwei durch x minus eins durch Klammer x plus eins ist der gemeinsame Nenner x mal Klammer x plus eins. Erweitere beide Brüche. Setz die Zähler in Klammern: zwei mal Klammer x plus eins, minus x. Es bleibt x plus zwei durch x mal Klammer x plus eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{2}{x} - \\dfrac{1}{x + 1}",
+     "x": 150,
+     "y": 260,
+     "groesse": 62,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{2\\fb{(x + 1)}}{x\\fb{(x + 1)}} - \\dfrac{1 \\cdot \\fb{x}}{(x + 1)\\fb{x}}",
+     "x": 150,
+     "y": 426,
+     "groesse": 54,
+     "ein": 6.74
+    },
+    {
+     "typ": "formel",
+     "text": "= \\dfrac{2(x + 1) - x}{x(x + 1)}",
+     "x": 150,
+     "y": 605,
+     "groesse": 56,
+     "ein": 9.12
+    },
+    {
+     "typ": "formel",
+     "text": "= \\fc{\\dfrac{x + 2}{x(x + 1)}}",
+     "x": 150,
+     "y": 770,
+     "groesse": 60,
+     "ein": 12.34
+    }
+   ],
+   "dauer": 18.65
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: die Nenner addieren. Eins durch x plus ein Halb ist nicht zwei durch Klammer x plus zwei. Probe mit x gleich zwei: ein Halb plus ein Halb ist eins, aber zwei Viertel ist nur ein Halb.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{1}{x} + \\dfrac{1}{2} \\fd{\\neq \\dfrac{2}{x + 2}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 2.75
+    },
+    {
+     "typ": "formel",
+     "text": "x = 2: \\quad \\dfrac{1}{2} + \\dfrac{1}{2} = 1, \\quad \\dfrac{2}{4} = \\fd{\\dfrac{1}{2}}",
+     "x": 150,
+     "y": 461,
+     "groesse": 52,
+     "ein": 6.29
+    },
+    {
+     "typ": "formel",
+     "text": "\\text{richtig: } \\dfrac{2 + x}{2x}",
+     "x": 150,
+     "y": 604,
+     "groesse": 56,
+     "ein": 10.29
+    }
+   ],
+   "dauer": 13.33
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Mal und durch wie bei Zahlenbrüchen, vorher kürzen. Plus und minus nur mit gleichem Nenner: gemeinsamer Nenner aus allen Faktoren, Zähler in Klammern.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "mal: Zähler mal Zähler, Nenner mal Nenner|durch: mit dem Kehrwert mal|plus, minus: Hauptnenner, Zähler in Klammern",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.07
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.25
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Hauptnenner",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welcher Nenner passt für 1/x und 1/(2x)?",
+   "optionen": [
+    "2x",
+    "2x²",
+    "x + 2x"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "2x² geht auch, ist aber grösser als nötig.",
+    "2": "Nenner werden nicht addiert. Gesucht ist ein Vielfaches beider Nenner."
+   },
+   "sprich": "Welcher Nenner passt für eins durch x und eins durch zwei x?",
+   "rueck_sprich": {
+    "1": "Zwei x Quadrat geht auch, ist aber grösser als nötig.",
+    "2": "Nenner werden nicht addiert. Gesucht ist ein Vielfaches beider Nenner."
+   }
+  }
+ ]
+}

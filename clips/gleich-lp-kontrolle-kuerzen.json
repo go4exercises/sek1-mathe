@@ -1,0 +1,456 @@
+{
+ "titel": "Gleichungen sehen: Kontrollfragen zum Kürzen",
+ "dateiname": "gleich-lp-kontrolle-kuerzen",
+ "kurzbeschrieb": "Fünf Fragen: 8x/(12x²) kürzen, (x² − 4)/(x + 2), verbotene Zahlen von (x − 1)/(x(x + 5)), ist (x + 7)/(x + 1) kürzbar, (5 − x)/(x − 5).",
+ "schlagworte": [
+  "kürzen",
+  "Bruchterm",
+  "Nenner null",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Gleichungen · Bruchterme, Gleichungen und Formeln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "2 · Gleichungen",
+ "lektion": [
+  "lp-gleichungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Gleichungen sehen",
+ "folge": 2,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms gleichungen-formeln; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zerlege: acht x ist vier x mal zwei, zwölf x Quadrat ist vier x mal drei x. Gestrichen wird vier x. Es bleibt zwei durch drei x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{8x}{12x^2} = \\dfrac{\\fc{4x} \\cdot 2}{\\fc{4x} \\cdot 3x} = \\fc{\\dfrac{2}{3x}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "8x / (12x²)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 9.49
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der Zähler ist Klammer x minus zwei mal Klammer x plus zwei. Mit dem Nenner x plus zwei gekürzt bleibt x minus zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{(x - 2)\\fc{(x + 2)}}{\\fc{x + 2}} = \\fc{x - 2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(x² − 4) / (x + 2)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.32
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der Nenner ist x mal Klammer x plus fünf. Er wird null für x gleich null und für x gleich minus fünf. Der Zähler darf null sein.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x(x + 5) = 0",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{x = 0} \\;\\text{ und }\\; \\fc{x = -5}",
+     "x": 150,
+     "y": 420,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(x − 1) / (x(x + 5))",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.83
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nein. Zähler und Nenner sind Summen ohne gemeinsamen Faktor. Probe mit x gleich eins: acht Halbe, also vier, nicht sieben.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x = 1: \\quad \\dfrac{8}{2} = 4 \\neq 7",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(x + 7) / (x + 1)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 8.8
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Fünf minus x ist minus Klammer x minus fünf. Gegenzahlen geteilt ergeben minus eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{5 - x}{x - 5} = \\dfrac{-(x - 5)}{x - 5} = \\fc{-1}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.5
+       ],
+       "text": "(5 − x) / (x − 5)",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 48,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 6.91
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: zuerst in Faktoren zerlegen, dann nur gleiche Faktoren streichen. Verboten sind die Zahlen, für die der Nenner null wird.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zuerst zerlegen|nur gleiche Faktoren streichen|verboten: Nenner wird null",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.48
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Kürze vollständig: 8x/(12x²)",
+   "optionen": [
+    "2/(3x)",
+    "2x/3",
+    "8/(12x)"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Unten steht x², oben nur x: Nach dem Kürzen bleibt ein x im Nenner.",
+    "2": "Stimmt, ist aber noch nicht fertig: 8 und 12 haben den Faktor 4."
+   },
+   "sprich": "Kürze vollständig: acht x durch zwölf x Quadrat.",
+   "rueck_sprich": {
+    "1": "Unten steht x Quadrat, oben nur x: Nach dem Kürzen bleibt ein x im Nenner.",
+    "2": "Stimmt, ist aber noch nicht fertig: Acht und zwölf haben den Faktor vier."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Kürze: (x² − 4)/(x + 2)",
+   "optionen": [
+    "x − 2",
+    "x² − 2",
+    "nicht kürzbar"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Kürzen geht nur mit Faktoren: Zerlege zuerst x² − 4.",
+    "2": "x² − 4 lässt sich mit der binomischen Formel zerlegen."
+   },
+   "sprich": "Kürze: x Quadrat minus vier, durch x plus zwei.",
+   "rueck_sprich": {
+    "1": "Kürzen geht nur mit Faktoren: Zerlege zuerst x Quadrat minus vier.",
+    "2": "x Quadrat minus vier lässt sich mit der binomischen Formel zerlegen."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Zahlen sind für (x − 1)/(x(x + 5)) verboten?",
+   "optionen": [
+    "0 und 5",
+    "0 und −5",
+    "1"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Mit x = 1 wird der Zähler null, das ist erlaubt.",
+    "0": "Setz x = 5 ein: Der Nenner ist 50, nicht null."
+   },
+   "sprich": "Welche Zahlen sind für x minus eins durch x mal Klammer x plus fünf verboten?",
+   "rueck_sprich": {
+    "2": "Mit x gleich eins wird der Zähler null, das ist erlaubt.",
+    "0": "Setz x gleich fünf ein: Der Nenner ist fünfzig, nicht null."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Lässt sich (x + 7)/(x + 1) kürzen?",
+   "optionen": [
+    "Nein",
+    "Ja, es gibt 7.",
+    "Ja, es gibt x + 7."
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja, richtig: nicht kürzbar.",
+    "1": "Prüf mit x = 1: 8/2 = 4, nicht 7.",
+    "2": "Prüf mit x = 1: 8/2 = 4, nicht 8."
+   },
+   "sprich": "Lässt sich x plus sieben durch x plus eins kürzen?",
+   "rueck_sprich": {
+    "0": "Richtig: nicht kürzbar.",
+    "1": "Prüf mit x gleich eins: acht Halbe sind vier, nicht sieben.",
+    "2": "Prüf mit x gleich eins: acht Halbe sind vier, nicht acht."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was ergibt (5 − x)/(x − 5)?",
+   "optionen": [
+    "1",
+    "0",
+    "−1"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Zähler und Nenner sind Gegenzahlen, nicht gleich.",
+    "1": "Nur wenn der Zähler null ist. Setz x = 1 ein: 4/(−4)."
+   },
+   "sprich": "Was ergibt fünf minus x durch x minus fünf?",
+   "rueck_sprich": {
+    "0": "Zähler und Nenner sind Gegenzahlen, nicht gleich.",
+    "1": "Nur wenn der Zähler null ist. Setz x gleich eins ein: vier durch minus vier."
+   }
+  }
+ ]
+}

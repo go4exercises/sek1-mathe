@@ -112,6 +112,11 @@ SEITEN = {
    titel='Leitprogramm Terme und Faktorisieren — vereinfachen, ausmultiplizieren, binomische Formeln',
    beschreibung='Leitprogramm Terme und Faktorisieren, Sekundarstufe I: zusammenfassen, Klammern auflösen, Klammer mal Klammer, binomische Formeln, ausklammern, Zweiklammersatz — mit Übungen.',
    themen=['Mathematik', 'Terme', 'Klammern', 'Ausmultiplizieren', 'Binomische Formeln', 'Faktorisieren', 'Ausklammern', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/gleichungen-formeln.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Bruchterme, Gleichungen und Formeln — kürzen, Hauptnenner, Gleichungen lösen, Formeln umstellen',
+   beschreibung='Leitprogramm Sekundarstufe I: Bruchterme kürzen und berechnen, lineare Gleichungen mit Klammern und Brüchen lösen, Lösungsmenge und Probe, Formeln umstellen — mit Übungen.',
+   themen=['Mathematik', 'Bruchterme', 'Kürzen', 'Hauptnenner', 'Lineare Gleichungen', 'Lösungsmenge', 'Formeln umstellen', 'Leitprogramm', 'Sekundarstufe I']),
 
 }
 

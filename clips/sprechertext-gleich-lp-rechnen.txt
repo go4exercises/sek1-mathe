@@ -1,0 +1,7 @@
+0.40	Du rechnest mit Bruchtermen wie mit Zahlenbrüchen. Beim Multiplizieren: Zähler mal Zähler, Nenner mal Nenner. Vorher kürzen: drei mit neun, vier mit acht, x mit x Quadrat. Es bleibt zwei durch drei x.
+14.95	Dividieren heisst: mit dem Kehrwert multiplizieren. Fünf durch x geteilt durch zehn durch x Quadrat ist fünf durch x mal x Quadrat durch zehn. Gekürzt: x Halbe.
+26.08	Zum Addieren brauchen die Brüche denselben Nenner. Bei eins durch x und eins durch zwei x reicht zwei x: Er enthält jeden Faktor der beiden Nenner. Eins durch x wird zu zwei durch zwei x. Zusammen drei durch zwei x.
+39.42	Bei zwei durch x minus eins durch Klammer x plus eins ist der gemeinsame Nenner x mal Klammer x plus eins. Erweitere beide Brüche. Setz die Zähler in Klammern: zwei mal Klammer x plus eins, minus x. Es bleibt x plus zwei durch x mal Klammer x plus eins.
+58.07	Häufiger Fehler: die Nenner addieren. Eins durch x plus ein Halb ist nicht zwei durch Klammer x plus zwei. Probe mit x gleich zwei: ein Halb plus ein Halb ist eins, aber zwei Viertel ist nur ein Halb.
+71.40	Zum Mitnehmen: Mal und durch wie bei Zahlenbrüchen, vorher kürzen. Plus und minus nur mit gleichem Nenner: gemeinsamer Nenner aus allen Faktoren, Zähler in Klammern.
+81.47	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

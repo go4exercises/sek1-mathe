@@ -176,7 +176,8 @@ TAUSCH = [
     ("Tabellendichte", "Tabellen-dichte"),     # bisher «Tabellen-digge»
     ("Normdichte", "Norm-dichte"),
     ("Kommastelle", "Komma-stelle"),           # auch «…stellen»; «Nachkommastelle» steht oben
-    ("kürz", "kührz"),                         # kürzen, gekürzt, kürzbar: sonst «kratzen», «kerzen» (Whisper medium, 09.10.2026)
+    ("kürz", "kührz"),
+    ("Bruchterm", "Bruch-Term"),                # sonst «Bruchdämm» (Whisper medium, 10.10.2026); auch «Bruchterme»                         # kürzen, gekürzt, kürzbar: sonst «kratzen», «kerzen» (Whisper medium, 09.10.2026)
 ]
 VORSILBEN = r"(?:milli|mikro|nano|zenti|dezi|hekto|kilo|mega|giga)?"
 

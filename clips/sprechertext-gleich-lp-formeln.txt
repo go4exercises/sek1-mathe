@@ -1,0 +1,7 @@
+0.40	Eine Formel ist eine Gleichung mit mehreren Grössen. v gleich s durch t: Die Geschwindigkeit ist der Weg durch die Zeit. Suchst du die Zeit, stellst du die Formel nach t um.
+12.35	Mal t auf beiden Seiten: s gleich v mal t. Dann durch v: t gleich s durch v. Probe mit Zahlen: hundertzwanzig Kilometer mit sechzig Kilometern pro Stunde dauern zwei Stunden.
+24.52	Mit C wird zuerst mal eins Komma acht gerechnet, zuletzt plus zweiunddreissig. Rückwärts machst du das Letzte zuerst rückgängig: minus zweiunddreissig, dann durch eins Komma acht. Probe: zweihundertzwölf Grad Fahrenheit sind hundert Grad Celsius.
+39.35	Beim Trapez ist A gleich Klammer a plus c durch zwei, mal h. Nach h: mal zwei, dann durch die ganze Summe a plus c. Die Klammer bleibt: h gleich zwei A durch Klammer a plus c.
+52.50	Häufiger Fehler: nur durch a teilen und das c dazuzählen. Mit A gleich dreissig, a gleich fünf und c gleich sieben gibt die richtige Formel fünf. Die falsche gibt neunzehn.
+64.15	Zum Mitnehmen: Umstellen heisst rückwärts rechnen. Was zuletzt gerechnet wird, machst du zuerst rückgängig. Klammern bleiben, und erst am Schluss setzt du Zahlen mit Einheiten ein.
+74.78	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

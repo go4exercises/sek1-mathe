@@ -1,0 +1,7 @@
+0.40	Eine Gleichung ist wie eine Waage im Gleichgewicht. Links steht fünf x minus sieben, rechts zwei x plus acht. Tust du auf beiden Seiten dasselbe, bleibt sie im Gleichgewicht.
+10.75	Zieh auf beiden Seiten zwei x ab: drei x minus sieben gleich acht. Dann rechnest du plus sieben: drei x gleich fünfzehn. Und durch drei: x gleich fünf.
+20.96	Prüfe durch Einsetzen. Fünf mal fünf minus sieben ist achtzehn. Zwei mal fünf plus acht ist auch achtzehn. Die Lösungsmenge ist L gleich die Menge mit der Zahl fünf.
+31.40	Mit Brüchen: Klammer x plus eins durch drei minus Klammer x minus zwei durch vier gleich eins. Multipliziere beide Seiten mit zwölf und setz jeden Zähler in Klammern. Achtung: minus drei mal minus zwei gibt plus sechs. Es bleibt x plus zehn gleich zwölf, also x gleich zwei.
+48.56	Nicht jede Gleichung hat genau eine Lösung. Bei zwei mal Klammer x plus eins gleich zwei x plus fünf fallen die x weg, und es bleibt zwei gleich fünf: falsch für jedes x. Es gibt keine Lösung, die Lösungsmenge ist leer. Bleibt eine wahre Aussage übrig, ist jede Zahl eine Lösung.
+65.38	Zum Mitnehmen: Auf beiden Seiten dasselbe tun. Zuerst Klammern auflösen, Brüche mit einem gemeinsamen Nenner wegschaffen, dann die x auf eine Seite. Am Schluss die Probe und die Lösungsmenge.
+76.94	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

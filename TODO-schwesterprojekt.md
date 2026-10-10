@@ -16,3 +16,6 @@ Je Eintrag: was, wo, warum — nachgezählt.
       sperrten nichts), Probe nicht mit 0 oder 1, gesprochene Klammerprodukte («Klammer … mal Klammer …»), Regeln nie
       ohne ihre Bedingung. In TALS Mathe die Sperrlisten der LP-Seiten (`seite.js`, Schlüssel mit Paaren) gegen
       `T.schl` nachprüfen.
+- [ ] **`scripts/build-clip-ton.py`, Liste `TAUSCH`:** neuer Eintrag `("Bruchterm", "Bruch-Term")` (10.10.2026). Piper sprach
+      «Bruchterm(e)» als «Bruchdämm(e)» (Whisper medium, LP Bruchterme, Gleichungen und Formeln, 6 Stellen); mit Bindestrich
+      richtig. In TALS Mathe die Clips zu Bruchtermen (g1-3) nachhören und neu vertonen.

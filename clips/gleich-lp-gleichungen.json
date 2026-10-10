@@ -1,0 +1,1196 @@
+{
+ "titel": "Gleichungen sehen: Lineare Gleichungen lösen",
+ "dateiname": "gleich-lp-gleichungen",
+ "kurzbeschrieb": "Gleichung als Waage; 5x − 7 = 2x + 8 Schritt für Schritt mit Probe; Gleichung mit Brüchen bruchfrei machen ((x + 1)/3 − (x − 2)/4 = 1); drei Ausgänge: eine Lösung, keine, alle.",
+ "schlagworte": [
+  "Gleichung",
+  "Äquivalenzumformung",
+  "Waage",
+  "Probe",
+  "Lösungsmenge"
+ ],
+ "themenbereich": "Gleichungen · Bruchterme, Gleichungen und Formeln",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "2 · Gleichungen",
+ "lektion": [
+  "lp-gleichungen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-09",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Gleichungen sehen",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms gleichungen-formeln; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Waage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Gleichung ist wie eine Waage im Gleichgewicht. Links steht fünf x minus sieben, rechts zwei x plus acht. Tust du auf beiden Seiten dasselbe, bleibt sie im Gleichgewicht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5x - 7 = 2x + 8",
+     "x": 150,
+     "y": 330,
+     "groesse": 72,
+     "ein": 2.82
+    },
+    {
+     "typ": "notiz",
+     "text": "auf beiden Seiten dasselbe",
+     "x": 150,
+     "y": 480,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 6.9
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.62,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        2.0
+       ],
+       "bis": [
+        5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.4,
+         1.6
+        ],
+        [
+         5.6,
+         1.6
+        ],
+        [
+         5,
+         2.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.4,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        1.2,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.8,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.4,
+         5.6
+        ],
+        [
+         4.0,
+         5.6
+        ],
+        [
+         4.0,
+         5.75
+        ],
+        [
+         0.4,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         5.6
+        ],
+        [
+         9.6,
+         5.6
+        ],
+        [
+         9.6,
+         5.75
+        ],
+        [
+         6.0,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.2,
+        6.1
+       ],
+       "text": "5x − 7",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.8,
+        6.1
+       ],
+       "text": "2x + 8",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.35
+  },
+  {
+   "name": "Schritte",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zieh auf beiden Seiten zwei x ab: drei x minus sieben gleich acht. Dann rechnest du plus sieben: drei x gleich fünfzehn. Und durch drei: x gleich fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5x - 7 = 2x + 8 \\qquad | \\fb{-2x}",
+     "x": 150,
+     "y": 260,
+     "groesse": 56,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "3x - 7 = 8 \\qquad | \\fb{+7}",
+     "x": 150,
+     "y": 370,
+     "groesse": 56,
+     "ein": 1.07
+    },
+    {
+     "typ": "formel",
+     "text": "3x = 15 \\qquad | \\fb{: 3}",
+     "x": 150,
+     "y": 480,
+     "groesse": 56,
+     "ein": 4.75
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{x = 5}",
+     "x": 150,
+     "y": 590,
+     "groesse": 62,
+     "ein": 7.33
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        2.0
+       ],
+       "bis": [
+        5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "aus": 1.07
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.4,
+         1.6
+        ],
+        [
+         5.6,
+         1.6
+        ],
+        [
+         5,
+         2.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.4,
+       "dicke": 2,
+       "aus": 1.07
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "aus": 1.07
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        1.2,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "aus": 1.07
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.8,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "aus": 1.07
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.4,
+         5.6
+        ],
+        [
+         4.0,
+         5.6
+        ],
+        [
+         4.0,
+         5.75
+        ],
+        [
+         0.4,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "aus": 1.07
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         5.6
+        ],
+        [
+         9.6,
+         5.6
+        ],
+        [
+         9.6,
+         5.75
+        ],
+        [
+         6.0,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "aus": 1.07
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.2,
+        6.1
+       ],
+       "text": "5x − 7",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "aus": 1.07
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.8,
+        6.1
+       ],
+       "text": "2x + 8",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "aus": 1.07
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.07,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        2.0
+       ],
+       "bis": [
+        5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.4,
+         1.6
+        ],
+        [
+         5.6,
+         1.6
+        ],
+        [
+         5,
+         2.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.4,
+       "dicke": 2,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        1.2,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.8,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.4,
+         5.6
+        ],
+        [
+         4.0,
+         5.6
+        ],
+        [
+         4.0,
+         5.75
+        ],
+        [
+         0.4,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         5.6
+        ],
+        [
+         9.6,
+         5.6
+        ],
+        [
+         9.6,
+         5.75
+        ],
+        [
+         6.0,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.2,
+        6.1
+       ],
+       "text": "3x − 7",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "ein": 1.07,
+       "aus": 4.75
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.8,
+        6.1
+       ],
+       "text": "8",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "ein": 1.07,
+       "aus": 4.75
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.75,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        2.0
+       ],
+       "bis": [
+        5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.4,
+         1.6
+        ],
+        [
+         5.6,
+         1.6
+        ],
+        [
+         5,
+         2.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.4,
+       "dicke": 2,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        1.2,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.8,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.4,
+         5.6
+        ],
+        [
+         4.0,
+         5.6
+        ],
+        [
+         4.0,
+         5.75
+        ],
+        [
+         0.4,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         5.6
+        ],
+        [
+         9.6,
+         5.6
+        ],
+        [
+         9.6,
+         5.75
+        ],
+        [
+         6.0,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.2,
+        6.1
+       ],
+       "text": "3x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "ein": 4.75,
+       "aus": 7.33
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.8,
+        6.1
+       ],
+       "text": "15",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "ein": 4.75,
+       "aus": 7.33
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.33,
+     "kurven": [],
+     "geraden": [],
+     "punkte": [],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        2.0
+       ],
+       "bis": [
+        5,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "ein": 7.33
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         4.4,
+         1.6
+        ],
+        [
+         5.6,
+         1.6
+        ],
+        [
+         5,
+         2.0
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.4,
+       "dicke": 2,
+       "ein": 7.33
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.0
+       ],
+       "farbe": 5,
+       "dicke": 5,
+       "ein": 7.33
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.2,
+        5.0
+       ],
+       "bis": [
+        1.2,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 7.33
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8.8,
+        5.0
+       ],
+       "bis": [
+        8.8,
+        5.6
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "ein": 7.33
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0.4,
+         5.6
+        ],
+        [
+         4.0,
+         5.6
+        ],
+        [
+         4.0,
+         5.75
+        ],
+        [
+         0.4,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "ein": 7.33
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6.0,
+         5.6
+        ],
+        [
+         9.6,
+         5.6
+        ],
+        [
+         9.6,
+         5.75
+        ],
+        [
+         6.0,
+         5.75
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.6,
+       "dicke": 0,
+       "ein": 7.33
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.2,
+        6.1
+       ],
+       "text": "x",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "ein": 7.33
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.8,
+        6.1
+       ],
+       "text": "5",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false,
+       "ein": 7.33
+      }
+     ],
+     "pfeile": false,
+     "tippbar": true,
+     "raster": false,
+     "xbereich": [
+      0,
+      10
+     ],
+     "ybereich": [
+      0,
+      10
+     ],
+     "achsen": false
+    }
+   ],
+   "dauer": 10.21
+  },
+  {
+   "name": "Probe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Prüfe durch Einsetzen. Fünf mal fünf minus sieben ist achtzehn. Zwei mal fünf plus acht ist auch achtzehn. Die Lösungsmenge ist L gleich die Menge mit der Zahl fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5 \\cdot 5 - 7 = 18",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 1.68
+    },
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 5 + 8 = 18 \\;\\fc{\\checkmark}",
+     "x": 150,
+     "y": 410,
+     "groesse": 58,
+     "ein": 5.88
+    },
+    {
+     "typ": "formel",
+     "text": "L = \\{5\\}",
+     "x": 150,
+     "y": 540,
+     "groesse": 62,
+     "ein": 6.9
+    }
+   ],
+   "dauer": 10.44
+  },
+  {
+   "name": "Brüche",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mit Brüchen: Klammer x plus eins durch drei minus Klammer x minus zwei durch vier gleich eins. Multipliziere beide Seiten mit zwölf und setz jeden Zähler in Klammern. Achtung: minus drei mal minus zwei gibt plus sechs. Es bleibt x plus zehn gleich zwölf, also x gleich zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{x + 1}{3} - \\dfrac{x - 2}{4} = 1 \\qquad | \\fb{\\cdot 12}",
+     "x": 150,
+     "y": 250,
+     "groesse": 52,
+     "ein": 0.4
+    },
+    {
+     "typ": "formel",
+     "text": "4(x + 1) - 3(x - 2) = 12",
+     "x": 150,
+     "y": 393,
+     "groesse": 54,
+     "ein": 6.4
+    },
+    {
+     "typ": "formel",
+     "text": "4x + 4 - 3x \\fb{+ 6} = 12",
+     "x": 150,
+     "y": 492,
+     "groesse": 54,
+     "ein": 10.32
+    },
+    {
+     "typ": "formel",
+     "text": "x + 10 = 12 \\quad \\Rightarrow \\quad \\fc{x = 2}",
+     "x": 150,
+     "y": 591,
+     "groesse": 54,
+     "ein": 13.54
+    }
+   ],
+   "dauer": 17.16
+  },
+  {
+   "name": "Drei Ausgänge",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nicht jede Gleichung hat genau eine Lösung. Bei zwei mal Klammer x plus eins gleich zwei x plus fünf fallen die x weg, und es bleibt zwei gleich fünf: falsch für jedes x. Es gibt keine Lösung, die Lösungsmenge ist leer. Bleibt eine wahre Aussage übrig, ist jede Zahl eine Lösung.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2(x + 1) = 2x + 5",
+     "x": 150,
+     "y": 260,
+     "groesse": 58,
+     "ein": 2.56
+    },
+    {
+     "typ": "formel",
+     "text": "2x + 2 = 2x + 5 \\quad \\Rightarrow \\quad \\fd{2 = 5}",
+     "x": 150,
+     "y": 370,
+     "groesse": 54,
+     "ein": 5.7
+    },
+    {
+     "typ": "formel",
+     "text": "L = \\{\\,\\}",
+     "x": 150,
+     "y": 480,
+     "groesse": 58,
+     "ein": 12.1
+    },
+    {
+     "typ": "formel",
+     "text": "\\text{wahr, z. B. } 0 = 0: \\quad L = \\mathbb{Q}",
+     "x": 150,
+     "y": 600,
+     "groesse": 52,
+     "ein": 13.24
+    }
+   ],
+   "dauer": 16.82
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Auf beiden Seiten dasselbe tun. Zuerst Klammern auflösen, Brüche mit einem gemeinsamen Nenner wegschaffen, dann die x auf eine Seite. Am Schluss die Probe und die Lösungsmenge.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "auf beiden Seiten dasselbe|Klammern auflösen, Brüche wegschaffen|x auf eine Seite, dann teilen|Probe und Lösungsmenge",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 11.56
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.66
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Schritte",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was ist bei 5x − 7 = 2x + 8 ein sinnvoller erster Schritt?",
+   "optionen": [
+    "auf beiden Seiten −2x",
+    "nur links +7",
+    "beide Seiten durch x"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Was du links tust, musst du auch rechts tun, sonst kippt die Waage.",
+    "2": "Durch x teilen hilft nicht: Das x soll allein auf eine Seite."
+   },
+   "sprich": "Was ist bei fünf x minus sieben gleich zwei x plus acht ein sinnvoller erster Schritt?",
+   "rueck_sprich": {
+    "1": "Was du links tust, musst du auch rechts tun, sonst kippt die Waage.",
+    "2": "Durch x teilen hilft nicht: Das x soll allein auf eine Seite."
+   }
+  }
+ ]
+}
