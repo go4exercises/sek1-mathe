@@ -16,7 +16,7 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 `~/TODO-BM-Vorkurs-LP03-15.md` §7 (LP 09, Koordinatengeometrie: Abbildungen und Geraden). Bereich «Geometrie».
 
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/koordinaten.html` (Abschnitt unten).
-- [x] Eingetragen (nav.js, index.html Bereich «Geometrie», build-seo, Suchindex, Sitemap).
+- [x] Freigeschaltet (nav.js, index.html Bereich «Geometrie», build-seo, Suchindex, Sitemap); alle Befunde der Prüfung behoben.
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 mit P + Z, G5 vom Ursprung aus gestreckt).
 - [ ] 🔑 Hörprobe der acht Clips `koo-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
       «P Strich», «x gleich zwei», «Ursprung», «hunderteins» und «zweihunderteins» (Whisper schreibt Ziffern).
@@ -26,35 +26,44 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 
 Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `c7e4290`. HOCH-Befunde
 an der Quelle nachgeprüft und bestätigt. Rechenfehler: keine (alle Zahlen nachgerechnet). Neuvertonung nötig: 🔊.
+**Behoben am 10.10.2026** (alles ausser der Hörprobe): G8 mit y = −2x + 7, G3c an der schrägen Achse y = −x + 2 konstruiert,
+G2b und G5 neu, G6 in Häuschen, A' orange, Raster mit «Ergebnis genügt» und halbem Rechteck; 2c schräge Achse mit Gitter, 3a und 4a
+mit Zeichnung, 4a/4b/4d neu; Festhalten mit «Achse gesucht», k > 0 und 0 < k < 1, Flächenregel mit Bedingung, x_A ≠ x_B, Merksatz
+waagrecht/senkrecht, Regel «P + Z» mit Bedingung; Vorwissen mit Rechteck und Steigung; neue Clipszenen «Mitte», «Gesucht», «Faktor»,
+Fragebild K2F5 mit P(2 | 5), Fehlerbild im grösseren Fenster, Randdreiecke grau mit Massen, B blau, «P Strich» und «Achsenabschnitt b»
+im Ton, Text = Ton; `gerade2` prüft zuerst m, Sonderwerte ausgeschlossen, `achsbild` erkennt «an der Koordinatenachse», Lösungswege mit
+Schritten, Sperrschlüssel ohne Fragerichtung, Sim 4 b exakt, Bild ausserhalb mit Hinweis. Neu vertont: drei Einführungsclips ganz,
+vier Szenen, alle Fragetöne. Nicht geändert: Sim 3 Leiste 3 (Fläche 9-mal, die Live-Zeile zeigt k² als Rückmeldung), Raten bei
+`punktprobe`, Zeit des Gesamttests (Messung mit Lernenden offen), Leerraum im PDF.
 Als korrekt geprüft: alle Zahlen und Fehlerwerte, Punktsummen, Leisten auf dem Reglerraster, Fragebilder (ausser zwei), Datenschutz.
 
 ### HOCH
-- [ ] Gesamttest: G8 nennt «y = 3x − 2», die Lösung von G7; ebenso 4b die Lösung von 4a (und Vortest 0d dieselbe Gerade).
-- [ ] Kontrollclip Achsenspiegelung F5: P(2 | 7) bei y = 6.4 gezeichnet, Achse y = 3 sichtbar nicht in der Mitte. 🔊
-- [ ] Festhalten 1: «P + Z oder Z − P ist nicht das Bild» ohne Bedingung (am Ursprung ist Z − P das Bild).
-- [ ] Übung `gerade2`: bei m = ±1 meldet «m richtig, b falsch» «Bruch auf dem Kopf» (27 % der Würfe).
+- [x] Gesamttest: G8 nennt «y = 3x − 2», die Lösung von G7; ebenso 4b die Lösung von 4a (und Vortest 0d dieselbe Gerade).
+- [x] Kontrollclip Achsenspiegelung F5: P(2 | 7) bei y = 6.4 gezeichnet, Achse y = 3 sichtbar nicht in der Mitte. 🔊
+- [x] Festhalten 1: «P + Z oder Z − P ist nicht das Bild» ohne Bedingung (am Ursprung ist Z − P das Bild).
+- [x] Übung `gerade2`: bei m = ±1 meldet «m richtig, b falsch» «Bruch auf dem Kopf» (27 % der Würfe).
 
 ### MITTEL
-- [ ] «Schräge Achse konstruieren» in Ziel und Kompetenz, nur im Clip gezeigt, nie geübt oder geprüft.
-- [ ] «Achse aus Punkt und Bild», «k aus P und P'», «Zentrum als Mittelpunkt» fehlen in Festhalten bzw. Einführungsclip, gefragt
+- [x] «Schräge Achse konstruieren» in Ziel und Kompetenz, nur im Clip gezeigt, nie geübt oder geprüft.
+- [x] «Achse aus Punkt und Bild», «k aus P und P'», «Zentrum als Mittelpunkt» fehlen in Festhalten bzw. Einführungsclip, gefragt
       in Kontrollclips, Übung und G4. 🔊
-- [ ] Fläche aus Koordinaten: Randdreiecke im Clip ohne Masse und Einzelflächen, orange (= Bild); Regel ohne Bedingung «jede Ecke
+- [x] Fläche aus Koordinaten: Randdreiecke im Clip ohne Masse und Einzelflächen, orange (= Bild); Regel ohne Bedingung «jede Ecke
       auf dem Rand»; Rückmeldung «ein Dreieck ist halb so gross» (G6 halbes Rechteck 24 ungeregelt).
-- [ ] Wiederholungen: G3c = Sim 2 Leiste 4, G5 = Sim 3 Leiste 2, G2b nah an Festhalten 1, 4d = Vortest 0e; Sperrliste mit Lücken
+- [x] Wiederholungen: G3c = Sim 2 Leiste 4, G5 = Sim 3 Leiste 2, G2b nah an Festhalten 1, 4d = Vortest 0e; Sperrliste mit Lücken
       und falschem Schlüssel `zt|-5|0|-1|2`.
-- [ ] Sim 4 zeigt b gerundet ohne ≈ (1/3 · x − 0.33); «parallel» nicht eingeführt (Sim 4 Leiste 3).
-- [ ] Sonderwerte machen Fehler unsichtbar (`zentrum`/`punktbild` mit Z = (0 | 0), `achsbild` an y = x mit py = −px); `achsbild`
+- [x] Sim 4 zeigt b gerundet ohne ≈ (1/3 · x − 0.33); «parallel» nicht eingeführt (Sim 4 Leiste 3).
+- [x] Sonderwerte machen Fehler unsichtbar (`zentrum`/`punktbild` mit Z = (0 | 0), `achsbild` an y = x mit py = −px); `achsbild`
       an x = a erkennt «an der Koordinatenachse gespiegelt» nicht; Lösungswege ohne Schritte (`koordflaeche`, `gerade2`).
-- [ ] Fragen ohne `sprich`: «P im Bild» statt «P Strich» (Kontrolle Punktspiegelung F3, Achsenspiegelung F5). 🔊
-- [ ] Kapitel 3 und 4 ohne Aufgabe am Gitter, G5b verlangt Zeichnen; k zwischen 0 und 1 nie erklärt; Vorhersage Streckung abzählbar. 🔊
+- [x] Fragen ohne `sprich`: «P im Bild» statt «P Strich» (Kontrolle Punktspiegelung F3, Achsenspiegelung F5). 🔊
+- [x] Kapitel 3 und 4 ohne Aufgabe am Gitter, G5b verlangt Zeichnen; k zwischen 0 und 1 nie erklärt; Vorhersage Streckung abzählbar. 🔊
 
 ### NIEDRIG
-- [ ] «x−Achse» mit Rechenminus in `achsbild`; Tipp «(−3) nach rechts»; «Gerade x = 5» (Geraden); Bild ausserhalb ohne Hinweis
+- [x] «x−Achse» mit Rechenminus in `achsbild`; Tipp «(−3) nach rechts»; «Gerade x = 5» (Geraden); Bild ausserhalb ohne Hinweis
       (Sim 2, Sim 3); Sim 4 Leiste 4 Wortlaut; Sim 3 Leiste 3 ablesbar; Merksatz «was parallel zur Achse läuft»; k > 0, xA ≠ xB.
-- [ ] Clips: Text ≠ Ton in zwei Rückmeldungen; «viermal: k Quadrat», «minus zwei. x bleibt», «null und eins und zwei und sieben»,
+- [x] Clips: Text ≠ Ton in zwei Rückmeldungen; «viermal: k Quadrat», «minus zwei. x bleibt», «null und eins und zwei und sieben»,
       Parameter b = Punkt B im Ton; Formel/P' zu spät (Vorhersage Punktspiegelung, Diagonale); lange Stille am Szenenende;
       (7 | 4) am Rand; Rückmeldungen mit ganzer Rechnung. 🔊
-- [ ] PDFs: G6 «Einheit cm» bei 6-mm-Karo; A' in G4 blau; G3 «Ergebnis genügt»; Leerraum; Zeilen G1.
+- [x] PDFs: G6 «Einheit cm» bei 6-mm-Karo; A' in G4 blau; G3 «Ergebnis genügt»; Leerraum; Zeilen G1.
 - [ ] 🔑 Hörprobe (Whisper-Vermutungen): «Längen» («Lenin»), «ändert» («endet»).
 
 ## Leitprogramm Flächen, Pythagoras und Ähnlichkeit (10.10.2026)

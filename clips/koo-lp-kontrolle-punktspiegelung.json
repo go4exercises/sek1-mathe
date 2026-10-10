@@ -80,7 +80,7 @@
        "y": 5,
        "farbe": 1,
        "anker": "start",
-       "beschriftung": "P",
+       "beschriftung": "P(2 | 5)",
        "beschriftung_bei": [
         2.3,
         5.6
@@ -90,11 +90,11 @@
        "x": 6,
        "y": 1,
        "farbe": 2,
-       "anker": "start",
-       "beschriftung": "P'",
+       "anker": "end",
+       "beschriftung": "P'(6 | 1)",
        "beschriftung_bei": [
-        6.3,
-        1.6
+        5.7,
+        1.7
        ]
       }
      ],
@@ -185,7 +185,7 @@
        "y": 5,
        "farbe": 1,
        "anker": "start",
-       "beschriftung": "P",
+       "beschriftung": "P(2 | 5)",
        "beschriftung_bei": [
         2.3,
         5.6
@@ -195,11 +195,11 @@
        "x": 6,
        "y": 1,
        "farbe": 2,
-       "anker": "start",
-       "beschriftung": "P'",
+       "anker": "end",
+       "beschriftung": "P'(6 | 1)",
        "beschriftung_bei": [
-        6.3,
-        1.6
+        5.7,
+        1.7
        ]
       },
       {
@@ -371,13 +371,13 @@
    "richtig": 1,
    "rueck": {
     "1": "Ja.",
-    "2": "Nur ein Vorzeichen gewechselt: Das wäre eine Achsenspiegelung.",
-    "0": "Nur ein Vorzeichen gewechselt: Das wäre eine Achsenspiegelung."
+    "2": "Nur ein Vorzeichen gewechselt. Am Ursprung wechseln beide.",
+    "0": "Nur ein Vorzeichen gewechselt. Am Ursprung wechseln beide."
    },
    "sprich": "P mit drei und minus vier wird am Ursprung gespiegelt. Wo liegt P Strich?",
    "rueck_sprich": {
-    "2": "Nur ein Vorzeichen gewechselt: Das wäre eine Achsenspiegelung.",
-    "0": "Nur ein Vorzeichen gewechselt: Das wäre eine Achsenspiegelung."
+    "2": "Nur ein Vorzeichen gewechselt. Am Ursprung wechseln beide.",
+    "0": "Nur ein Vorzeichen gewechselt. Am Ursprung wechseln beide."
    }
   },
   {
@@ -418,6 +418,7 @@
     "2": "Das ist die Summe. Die Mitte ist die Summe durch 2.",
     "0": "Das ist der Weg von P nach P'. Z liegt in seiner Mitte."
    },
+   "sprich": "Wo liegt das Zentrum Z, wenn P im Bild auf P Strich fällt?",
    "rueck_sprich": {
     "2": "Das ist die Summe. Die Mitte ist die Summe durch zwei.",
     "0": "Das ist der Weg von P nach P Strich. Z liegt in seiner Mitte."
@@ -458,7 +459,7 @@
    "richtig": 0,
    "rueck": {
     "0": "Ja.",
-    "1": "Prüf: Liegt Z(1 | 0) in der Mitte von (3 | 1) und (4 | 1)?",
+    "1": "Prüf: Liegt Z in der Mitte der beiden Punkte?",
     "2": "Das ist P − Z. Rechne 2Z − P."
    },
    "sprich": "Ali spiegelt P mit drei und eins an Z mit eins und null und schreibt P Strich mit vier und eins. Stimmt das?",

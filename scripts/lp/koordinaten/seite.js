@@ -146,7 +146,7 @@
       { text: 'P(3 | 1) soll auf P\'(−1 | 5) fallen. Stell P ein und such das Zentrum Z.', ok: ist(3, 1, 1, 3) },
       { text: 'Z(0 | 0). Welcher Punkt P hat das Bild P\'(2 | −3)?', ok: ist(-2, 3, 0, 0) },
       { text: 'Z(2 | 2). Stell P so ein, dass P\' genau auf P fällt.', ok: ist(2, 2, 2, 2) },
-      { text: 'A(−4 | 1) wird auf A\'(2 | −3) gespiegelt. Wo liegt Z?', ok: ist(-4, 1, -1, -1) },
+      { text: 'A(−4 | 1) wird auf A\'(2 | −3) gespiegelt. Stell A als P ein und such Z.', ok: ist(-4, 1, -1, -1) },
       { text: 'Z(−1 | 2), das Bild ist P\'(−5 | 0). Wo liegt P?', ok: ist(3, 4, -1, 2) }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
@@ -166,12 +166,13 @@
       var q = bild(Z), k = Achsen(svg, KS), name;
       if (Z.typ === 'x') { k.strecke(-7, 0, 7, 0, 'linie gruen'); name = 'x-Achse'; }
       else if (Z.typ === 'y') { k.strecke(0, -7, 0, 7, 'linie gruen'); name = 'y-Achse'; }
-      else if (Z.typ === 'xa') { k.strecke(Z.a, -7, Z.a, 7, 'linie gruen'); name = 'Gerade x = ' + z(Z.a); }
-      else if (Z.typ === 'yb') { k.strecke(-7, Z.a, 7, Z.a, 'linie gruen'); name = 'Gerade y = ' + z(Z.a); }
-      else { k.strecke(-7, -7, 7, 7, 'linie gruen'); name = 'Gerade y = x'; }
+      else if (Z.typ === 'xa') { k.strecke(Z.a, -7, Z.a, 7, 'linie gruen'); name = 'Geraden x = ' + z(Z.a); }
+      else if (Z.typ === 'yb') { k.strecke(-7, Z.a, 7, Z.a, 'linie gruen'); name = 'Geraden y = ' + z(Z.a); }
+      else { k.strecke(-7, -7, 7, 7, 'linie gruen'); name = 'Geraden y = x'; }
       k.strecke(Z.px, Z.py, q[0], q[1], 'linie grau gestrichelt');
       k.punkt(Z.px, Z.py, 'pkt blau', 'P', 8, -8); k.punkt(q[0], q[1], 'pkt orange', "P'", 8, -8);
-      formel.innerHTML = 'Spiegelung an der ' + name + ': P' + pk(Z.px, Z.py) + " → <b>P'" + pk(q[0], q[1]) + '</b>';
+      formel.innerHTML = 'Spiegelung an der ' + name + ': P' + pk(Z.px, Z.py) + " → <b>P'" + pk(q[0], q[1]) + '</b>'
+        + (Math.abs(q[0]) > 7 || Math.abs(q[1]) > 7 ? ' <span class="grau">(ausserhalb des Bildes)</span>' : '');
       fig.querySelector('#s2-a').disabled = !(Z.typ === 'xa' || Z.typ === 'yb');
       if (pr) pr();
     }
@@ -203,7 +204,9 @@
         for (var i = 0; i < 3; i++) k.strecke(q[i][0], q[i][1], q[(i + 1) % 3][0], q[(i + 1) % 3][1], t[1]); });
       D.forEach(function(p, i){ k.punkt(p[0], p[1], 'pkt blau', N[i], -12, -6); k.punkt(B_[i][0], B_[i][1], 'pkt orange', N[i] + "'", 8, -6); });
       k.punkt(Z.zx, Z.zy, 'pkt gruen', 'Z', 8, 14);
-      formel.innerHTML = "A' = Z + k · (A − Z) = <b>" + pk(B_[0][0], B_[0][1]) + '</b> &nbsp;·&nbsp; Fläche 3 → <b>' + z(3 * Z.k * Z.k) + '</b> (mal k² = ' + z(Z.k * Z.k) + ')';
+      var raus = B_.some(function(q){ return q[0] < O.x0 || q[0] > O.x1 || q[1] < O.y0 || q[1] > O.y1; });
+      formel.innerHTML = "A' = Z + k · (A − Z) = <b>" + pk(B_[0][0], B_[0][1]) + '</b> &nbsp;·&nbsp; Fläche 3 → <b>' + z(3 * Z.k * Z.k) + '</b> (mal k² = ' + z(Z.k * Z.k) + ')'
+        + (raus ? ' <span class="grau">(Bild teilweise ausserhalb)</span>' : '');
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -224,15 +227,19 @@
     var fig = document.getElementById('sim4'); if (!fig) return;
     var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
     function zustand(){ return { ax: wertR(fig, 's4-ax'), ay: wertR(fig, 's4-ay'), bx: wertR(fig, 's4-bx'), by: wertR(fig, 's4-by') }; }
+    /* b exakt als Bruch wie m (Prüfung 10.10.2026: «− 0.33» ohne ≈) */
+    function gleichung(g){ var s = linTxt(g.m, 0);
+      if (!g.m[0]) return 'y = ' + bTxt(g.b);
+      return g.b[0] ? s + (g.b[0] > 0 ? ' + ' : ' − ') + bTxt([Math.abs(g.b[0]), g.b[1]]) : s; }
     function mb(Z){ if (Z.ax === Z.bx) return null; var m = B(Z.by - Z.ay, Z.bx - Z.ax); return { m: m, b: bSub(B(Z.ay), bMul(m, B(Z.ax))) }; }
     function zeichnen(){
       var Z = zustand(); ['s4-ax', 's4-ay', 's4-bx', 's4-by'].forEach(function(i){ zeigeWert(fig, i); });
       var k = Achsen(svg, KS), g = mb(Z);
       if (g) k.gerade(bZahl(g.m), bZahl(g.b), 'linie gruen');
       else if (Z.ay !== Z.by) k.strecke(Z.ax, -7, Z.ax, 7, 'linie gruen');
-      k.punkt(Z.ax, Z.ay, 'pkt blau', 'A', 8, -8); k.punkt(Z.bx, Z.by, 'pkt orange', 'B', 8, -8);
+      k.punkt(Z.ax, Z.ay, 'pkt blau', 'A', 8, -8); k.punkt(Z.bx, Z.by, 'pkt blau', 'B', 8, -8);
       if (!g) formel.innerHTML = Z.ay === Z.by ? 'A und B fallen zusammen: Durch einen Punkt gehen viele Geraden.' : 'Senkrechte Gerade x = ' + z(Z.ax) + ': keine Funktion, keine Steigung.';
-      else formel.innerHTML = 'm = (' + kl(Z.by) + ' − ' + kl(Z.ay) + ') : (' + kl(Z.bx) + ' − ' + kl(Z.ax) + ') = ' + bTxt(g.m) + ' &nbsp;·&nbsp; <b>' + linTxt(g.m, bZahl(g.b)) + '</b>';
+      else formel.innerHTML = 'm = (' + kl(Z.by) + ' − ' + kl(Z.ay) + ') : (' + kl(Z.bx) + ' − ' + kl(Z.ax) + ') = ' + bTxt(g.m) + ' &nbsp;·&nbsp; <b>' + gleichung(g) + '</b>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -240,8 +247,8 @@
     pr = Leiste(fig, [
       { text: 'A(0 | −2). Stell B auf die Gerade x = 4, so dass die Steigung 1.5 ist.', ok: function(Z){ return Z.ax === 0 && Z.ay === -2 && Z.bx === 4 && Z.by === 4; } },
       { text: 'Stell A und B so ein, dass beide auf y = −x + 5 liegen.', ok: gl(B(-1), B(5)) },
-      { text: 'A(1 | 1). Stell B so ein, dass die Gerade parallel zu y = 2x ist.', ok: function(Z){ return Z.ax === 1 && Z.ay === 1 && gl(B(2), B(-1))(Z); } },
-      { text: 'Stell eine waagrechte Gerade durch y = 3 ein.', ok: gl(B(0), B(3)) },
+      { text: 'A(1 | 1). Stell B so ein, dass die Gerade die Steigung 2 hat.', ok: function(Z){ return Z.ax === 1 && Z.ay === 1 && gl(B(2), B(-1))(Z); } },
+      { text: 'Stell die waagrechte Gerade y = 3 ein.', ok: gl(B(0), B(3)) },
       { text: 'A(−3 | 0). B liegt auf x = 3, die Gerade schneidet die y-Achse bei 2.', ok: function(Z){ return Z.ax === -3 && Z.ay === 0 && Z.bx === 3 && Z.by === 4; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
@@ -310,21 +317,28 @@
     var SPERRE = [
       'pb|5|3|2|1', 'pb|3|4|2|1', 'pb|4|3|1|2', 'pb|5|2|1|1', 'pb|3|-1|1|1', 'pb|1|5|-2|3', 'pb|4|1|2|3', 'pb|3|-4|0|0', 'pb|4|6|1|2',
       'pb|2|1|1|0', 'pb|5|2|1|0', 'pb|3|4|1|0', 'pb|1|2|3|3',
-      'zt|3|1|-1|5', 'zt|-4|1|2|-3', 'zt|7|2|-1|6', 'zt|2|5|6|1', 'zt|-3|4|5|0', 'zt|-5|0|-1|2',
+      'pb|2|1|0|0', 'pb|1|1|0|2', 'pb|4|1|0|2', 'pb|1|3|0|2', 'pb|3|1|1|0', 'pb|-2|6|1|2', 'pb|4|5|1|2',
+      'pb|3|1|1|3', 'pb|-2|3|0|0', 'pb|-4|1|-1|-1', 'pb|3|4|-1|2', 'pb|7|2|3|4', 'pb|2|5|4|3',
+      'zt|3|1|-1|5', 'zt|-4|1|2|-3', 'zt|7|2|-1|6', 'zt|2|5|6|1', 'zt|-3|4|5|0', 'zt|3|4|-5|0',
       'ab|3|2|x', 'ab|3|2|y', 'ab|3|2|xa|1', 'ab|3|2|d', 'ab|4|1|xa|2', 'ab|5|-1|x', 'ab|5|-1|y', 'ab|5|-1|xa|2', 'ab|5|-1|yb|2', 'ab|5|-1|d',
       'ab|4|-3|x', 'ab|4|-3|y', 'ab|4|-3|d', 'ab|-2|5|xa|3', 'ab|1|-2|yb|2', 'ab|3|5|x', 'ab|-4|1|y', 'ab|2|3|xa|5', 'ab|6|-1|d', 'ab|0|4|yb|1',
       'ab|4|-1|x', 'ab|4|-1|y', 'ab|4|-1|d', 'ab|1|-1|xa|2',
-      'af|5|1|-1|1', 'af|2|4|2|-2', 'af|-3|2|-3|-4', 'af|2|7|2|-1', 'af|-2|3|6|3',
-      'sb|1|1|0|0|2', 'sb|2|3|1|1|3', 'sb|5|3|2|1|2', 'sb|4|3|1|1|2', 'sb|2|-1|0|0|3', 'sb|3|3|1|2|2', 'sb|2|1|1|1|2',
+      'ab|5|1|xa|2', 'ab|-3|-2|y', 'ab|2|4|yb|1', 'ab|-3|2|yb|-1', 'ab|1|2|d', 'ab|4|2|d', 'ab|4|5|d', 'ab|-3|1|xa|1', 'ab|2|5|yb|2', 'ab|-2|3|xa|2',
+      'af|5|1|-1|1', 'af|2|4|2|-2', 'af|-3|2|-3|-4', 'af|2|7|2|-1', 'af|-2|3|6|3', 'af|-3|1|5|1', 'af|2|5|2|-1',
+      'sb|1|1|0|0|2', 'sb|2|3|1|1|3', 'sb|5|3|2|1|2', 'sb|4|3|1|1|2', 'sb|2|-1|0|0|3', 'sb|3|3|1|2|2', 'sb|2|1|1|1|2', 'sb|2|2|1|1|2', 'sb|4|2|1|1|2', 'sb|2|3|1|1|2', 'sb|4|1|1|1|2',
+      'sb|1|0|0|0|3', 'sb|2|0|0|0|3', 'sb|1|1|0|0|3', 'sb|1|2|0|0|3',
       'kf|1|1|5|2|2|4', 'kf|0|0|6|1|2|5', 'kf|1|1|5|1|3|4', 'kf|0|0|8|2|3|6',
-      'g2|1|3|4|9', 'g2|2|1|6|9', 'g2|-2|5|4|-1', 'g2|1|2|3|8', 'g2|0|1|2|7', 'g2|-1|-5|3|7', 'g2|1|2|5|4',
-      'pp|2|1|10|21', 'pp|2|1|50|102', 'pp|2|1|100|201', 'pp|2|-3|40|77', 'pp|2|-3|25|46', 'pp|3|-5|10|25', 'pp|2|5|20|50', 'pp|3|-2|50|148', 'pp|3|-2|-20|-61'
+      'g2|1|3|4|9', 'g2|2|1|6|9', 'g2|-2|5|4|-1', 'g2|1|2|3|8', 'g2|0|1|2|7', 'g2|-1|-5|3|7', 'g2|1|2|5|4', 'g2|0|-2|4|4', 'g2|-3|0|3|4', 'g2|1|-2|3|4', 'g2|2|1|5|10',
+      'pp|2|1|10|21', 'pp|2|1|50|102', 'pp|2|1|100|201', 'pp|2|-3|40|77', 'pp|2|-3|25|46', 'pp|3|-5|10|25', 'pp|2|5|20|50', 'pp|3|-2|50|148', 'pp|3|-2|-20|-61', 'pp|-2|5|30|-55', 'pp|-2|5|-12|30', 'pp|-2|7|40|-73', 'pp|-2|7|-15|36'
     ];
     function d(v){ return bWert(bDez(v)); }
     function eing(a){ return bWert(a).replace('−', '-'); }
-    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    /* Schlüssel ohne Fragerichtung: Bild → Original und Zentrum- bzw. Achsenfrage sperren dieselbe Sache (Prüfung 10.10.2026) */
+    function gesperrt(T, A){ var k = T.alle ? T.alle(A) : T.schl ? [T.schl(A)] : [];
+      return k.some(function(s){ return SPERRE.indexOf(s) >= 0; }); }
     function pt(x, y){ return '\\((' + mz(x).replace('−', '-') + ' \\mid ' + mz(y).replace('−', '-') + ')\\)'; }
     function ptx(x, y){ return '(' + mz(x).replace('−', '-') + ' \\mid ' + mz(y).replace('−', '-') + ')'; }
+    function schritt(d, plus, minus){ return d === 0 ? 'nicht ' + (plus === 'rechts' ? 'seitwärts' : 'hinauf oder hinunter') : Math.abs(d) + ' nach ' + (d > 0 ? plus : minus); }
     function nz2(a, b, ohne){ var r; do { r = zufallG(a, b); } while (r === ohne); return r; }
     var ACHSE = { x: 'an der x-Achse', y: 'an der y-Achse', d: 'an der Geraden y = x' };
 
@@ -332,10 +346,11 @@
       /* ── Kapitel 1 ── */
       'punktbild': { felder: ['x', 'y'],
         schl: function(A){ return 'pb|' + A.px + '|' + A.py + '|' + A.zx + '|' + A.zy; },
+        alle: function(A){ return ['pb|' + A.px + '|' + A.py + '|' + A.zx + '|' + A.zy, 'pb|' + A.qx + '|' + A.qy + '|' + A.zx + '|' + A.zy]; },
         eingabe: function(A){ return { x: String(A.qx), y: String(A.qy) }; },
         neu: function(){
           var px = nz(-6, 6), py = nz(-6, 6), zx = zufallG(-4, 4), zy = zufallG(-4, 4);
-          if ((px === zx && py === zy) || Math.abs(2 * zx - px) > 9 || Math.abs(2 * zy - py) > 9) return TYPEN.punktbild.neu();
+          if ((px === zx && py === zy) || (zx === 0 && zy === 0) || Math.abs(2 * zx - px) > 9 || Math.abs(2 * zy - py) > 9) return TYPEN.punktbild.neu();   /* Z(0 | 0): Z − P wäre zufällig richtig */
           return { px: px, py: py, zx: zx, zy: zy, qx: 2 * zx - px, qy: 2 * zy - py, text: 'Spiegle den Punkt P' + pt(px, py) + ' am Zentrum Z' + pt(zx, zy) + '.', muster: "P'( {x} | {y} )" }; },
         richtig: function(A, e){ return bEq(e.x, B(A.qx)) && bEq(e.y, B(A.qy)); },
         fehler: function(A){ var f = [];
@@ -347,15 +362,17 @@
           var summe = bEq(e.x, B(A.px + A.zx)) && bEq(e.y, B(A.py + A.zy)), diff = bEq(e.x, B(A.zx - A.px)) && bEq(e.y, B(A.zy - A.py));
           if (!summe && !diff && gx !== gy) return 'Eine Koordinate stimmt. Prüf die ' + (gx ? 'y' : 'x') + '-Koordinate: Auch sie geht von P aus über Z gleich weit weiter.';
           return 'Z ist die <b>Mitte</b> zwischen P und P\'. Geh von P bis Z und dann nochmals gleich weit: \\(P\' = 2Z - P\\).'; },
-        tipps: function(A){ return ['Von P nach Z: \\(' + kl(A.zx - A.px) + '\\) nach rechts, \\(' + kl(A.zy - A.py) + '\\) nach oben. Dasselbe nochmals ab Z.', '\\(x\' = 2 \\cdot ' + kl(A.zx) + ' - ' + kl(A.px) + '\\)']; },
+        tipps: function(A){ return ['Von P nach Z: ' + schritt(A.zx - A.px, 'rechts', 'links') + ', ' + schritt(A.zy - A.py, 'oben', 'unten') + '. Dasselbe nochmals ab Z.', '\\(x\' = 2 \\cdot ' + kl(A.zx) + ' - ' + kl(A.px) + '\\)']; },
         loesung: function(A){ return "P' = (2 \\cdot " + kl(A.zx) + ' - ' + kl(A.px) + ' \\mid 2 \\cdot ' + kl(A.zy) + ' - ' + kl(A.py) + ') = ' + ptx(A.qx, A.qy); } },
 
       'zentrum': { felder: ['x', 'y'],
         schl: function(A){ return 'zt|' + A.px + '|' + A.py + '|' + A.qx + '|' + A.qy; },
+        alle: function(A){ return ['zt|' + A.px + '|' + A.py + '|' + A.qx + '|' + A.qy, 'zt|' + A.qx + '|' + A.qy + '|' + A.px + '|' + A.py,
+                                   'pb|' + A.px + '|' + A.py + '|' + A.zx + '|' + A.zy, 'pb|' + A.qx + '|' + A.qy + '|' + A.zx + '|' + A.zy]; },
         eingabe: function(A){ return { x: String(A.zx), y: String(A.zy) }; },
         neu: function(){
           var zx = zufallG(-3, 3), zy = zufallG(-3, 3), px = nz(-6, 6), py = nz(-6, 6), qx = 2 * zx - px, qy = 2 * zy - py;
-          if (Math.abs(qx) > 7 || Math.abs(qy) > 7 || (px === qx && py === qy)) return TYPEN.zentrum.neu();
+          if (Math.abs(qx) > 7 || Math.abs(qy) > 7 || (px === qx && py === qy) || (zx === 0 && zy === 0)) return TYPEN.zentrum.neu();   /* Z(0 | 0): P + P' ohne Halbieren wäre richtig */
           return { px: px, py: py, qx: qx, qy: qy, zx: zx, zy: zy, text: 'Bei einer Punktspiegelung wird P' + pt(px, py) + ' auf P\'' + pt(qx, qy) + ' abgebildet. Wo liegt das Zentrum Z?', muster: 'Z( {x} | {y} )' }; },
         richtig: function(A, e){ return bEq(e.x, B(A.zx)) && bEq(e.y, B(A.zy)); },
         fehler: function(A){ return A.qx - A.px === A.zx && A.qy - A.py === A.zy ? [] : [[{ x: String(A.qx - A.px), y: String(A.qy - A.py) }, 'Mitte']]; },
@@ -368,27 +385,36 @@
       /* ── Kapitel 2 ── */
       'achsbild': { felder: ['x', 'y'],
         schl: function(A){ return 'ab|' + A.px + '|' + A.py + '|' + A.art + (A.art === 'xa' || A.art === 'yb' ? '|' + A.a : ''); },
+        alle: function(A){ var t = A.art + (A.art === 'xa' || A.art === 'yb' ? '|' + A.a : ''); return ['ab|' + A.px + '|' + A.py + '|' + t, 'ab|' + A.q[0] + '|' + A.q[1] + '|' + t]; },
         eingabe: function(A){ return { x: String(A.q[0]), y: String(A.q[1]) }; },
         neu: function(){
           var art = zufall(['x', 'y', 'xa', 'yb', 'd']), px = nz(-6, 6), py = nz(-6, 6), a = nz(-3, 3), q;
           q = { x: [px, -py], y: [-px, py], xa: [2 * a - px, py], yb: [px, 2 * a - py], d: [py, px] }[art];
-          if (Math.abs(q[0]) > 9 || Math.abs(q[1]) > 9 || (q[0] === px && q[1] === py)) return TYPEN.achsbild.neu();
-          var wo = art === 'xa' ? 'an der Geraden x = ' + a : art === 'yb' ? 'an der Geraden y = ' + a : ACHSE[art];
-          return { art: art, a: a, px: px, py: py, q: q, text: 'Spiegle P' + pt(px, py) + ' ' + wo.replace('-', '−') + '.', muster: "P'( {x} | {y} )" }; },
+          if (Math.abs(q[0]) > 9 || Math.abs(q[1]) > 9 || (q[0] === px && q[1] === py) || (art === 'd' && py === -px)) return TYPEN.achsbild.neu();   /* y = x mit py = −px: Punktspiegelung gäbe dasselbe */
+          var wo = art === 'xa' ? 'an der Geraden x = ' + mz(a) : art === 'yb' ? 'an der Geraden y = ' + mz(a) : ACHSE[art];
+          return { art: art, a: a, px: px, py: py, q: q, text: 'Spiegle P' + pt(px, py) + ' ' + wo + '.', muster: "P'( {x} | {y} )" }; },
         richtig: function(A, e){ return bEq(e.x, B(A.q[0])) && bEq(e.y, B(A.q[1])); },
         fehler: function(A){
           var f = { x: [-A.px, A.py], y: [A.px, -A.py], xa: [A.px, 2 * A.a - A.py], yb: [2 * A.a - A.px, A.py], d: [-A.px, -A.py] }[A.art];
-          return f[0] === A.q[0] && f[1] === A.q[1] ? [] : [[{ x: String(f[0]), y: String(f[1]) }, 'Achse']]; },
+          var l = f[0] === A.q[0] && f[1] === A.q[1] ? [] : [[{ x: String(f[0]), y: String(f[1]) }, 'Achse']];
+          var k = A.art === 'xa' ? [-A.px, A.py] : A.art === 'yb' ? [A.px, -A.py] : null;
+          if (k && !(k[0] === A.q[0] && k[1] === A.q[1]) && !(k[0] === f[0] && k[1] === f[1])) l.push([{ x: String(k[0]), y: String(k[1]) }, 'Koordinatenachse']);
+          return l; },
         pruefen: function(A, e){
           var gx = bEq(e.x, B(A.q[0])), gy = bEq(e.y, B(A.q[1]));
+          if (A.art === 'xa' && bEq(e.x, B(-A.px)) && bEq(e.y, B(A.py))) return 'Das wäre an der y-Achse gespiegelt, nicht an der <b>Koordinatenachse</b>, sondern an x = ' + mz(A.a) + ': Miss den Abstand von P zu dieser Geraden.';
+          if (A.art === 'yb' && bEq(e.x, B(A.px)) && bEq(e.y, B(-A.py))) return 'Das wäre an der x-Achse gespiegelt, nicht an der <b>Koordinatenachse</b>, sondern an y = ' + mz(A.a) + ': Miss den Abstand von P zu dieser Geraden.';
           if (A.art === 'd') return 'An der <b>Achse</b> y = x tauschen x und y ihre Plätze. Keine Vorzeichen ändern.';
           return 'Welche Koordinate ändert sich? Bei einer waagrechten <b>Achse</b> ändert sich y, bei einer senkrechten x. Die andere bleibt.' + (gx !== gy ? ' Eine Koordinate stimmt schon.' : ''); },
         tipps: function(A){ return [A.art === 'x' || A.art === 'yb' ? 'Die Achse ist waagrecht: x bleibt gleich.' : A.art === 'd' ? 'An y = x werden die Koordinaten vertauscht.' : 'Die Achse ist senkrecht: y bleibt gleich.',
           A.art === 'xa' ? 'P ist ' + Math.abs(A.px - A.a) + ' von der Achse entfernt. Gleich weit auf die andere Seite.' : A.art === 'yb' ? 'P ist ' + Math.abs(A.py - A.a) + ' von der Achse entfernt. Gleich weit auf die andere Seite.' : 'Gleicher Abstand zur Achse, auf der anderen Seite.']; },
-        loesung: function(A){ return "P' = " + ptx(A.q[0], A.q[1]); } },
+        loesung: function(A){ return A.art === 'xa' ? "x' = 2 \\cdot " + kl(A.a) + ' - ' + kl(A.px) + ' = ' + mz(A.q[0]).replace('−', '-') + ", \\; P' = " + ptx(A.q[0], A.q[1])
+          : A.art === 'yb' ? "y' = 2 \\cdot " + kl(A.a) + ' - ' + kl(A.py) + ' = ' + mz(A.q[1]).replace('−', '-') + ", \\; P' = " + ptx(A.q[0], A.q[1]) : "P' = " + ptx(A.q[0], A.q[1]); } },
 
       'achsefinden': { felder: ['w', 'a'],
         schl: function(A){ return 'af|' + A.px + '|' + A.py + '|' + A.qx + '|' + A.qy; },
+        alle: function(A){ var t = A.art === 'x' ? (A.a === 0 ? 'y' : 'xa|' + A.a) : (A.a === 0 ? 'x' : 'yb|' + A.a);
+          return ['af|' + A.px + '|' + A.py + '|' + A.qx + '|' + A.qy, 'af|' + A.qx + '|' + A.qy + '|' + A.px + '|' + A.py, 'ab|' + A.px + '|' + A.py + '|' + t, 'ab|' + A.qx + '|' + A.qy + '|' + t]; },
         eingabe: function(A){ return { w: A.art, a: String(A.a) }; },
         neu: function(){
           var art = zufall(['x', 'y']), a = zufallG(-3, 3), px = nz(-6, 6), py = nz(-6, 6), qx = px, qy = py;
@@ -430,19 +456,21 @@
           var P1 = [x0, y0], P2 = [x0 + w, y0 + v], P3 = [x0 + u, y0 + h];
           var F = B(Math.abs(P1[0] * (P2[1] - P3[1]) + P2[0] * (P3[1] - P1[1]) + P3[0] * (P1[1] - P2[1])), 2);
           if (F[1] > 2) return TYPEN.koordflaeche.neu();
-          return { p: [P1[0], P1[1], P2[0], P2[1], P3[0], P3[1]], w: w, h: h, F: F, R: w * h,
-                   text: 'Wie gross ist die Fläche des Dreiecks mit den Ecken A' + pt(P1[0], P1[1]) + ', B' + pt(P2[0], P2[1]) + ' und C' + pt(P3[0], P3[1]) + '? (Einheit: Kästchen)', muster: 'A = {A}' }; },
+          return { p: [P1[0], P1[1], P2[0], P2[1], P3[0], P3[1]], w: w, h: h, F: F, R: w * h, rand: [[w, v], [w - u, h - v], [u, h]],
+                   text: 'Wie gross ist die Fläche des Dreiecks mit den Ecken A' + pt(P1[0], P1[1]) + ', B' + pt(P2[0], P2[1]) + ' und C' + pt(P3[0], P3[1]) + '?', muster: 'A = {A}' }; },
         richtig: function(A, e){ return bEq(e.A, A.F); },
         fehler: function(A){ return [[{ A: String(A.R) }, 'abziehen']]; },
         pruefen: function(A, e){
           if (bEq(e.A, B(A.R))) return 'Das ist das ganze umschliessende Rechteck. Die drei rechtwinkligen Dreiecke rundherum musst du noch <b>abziehen</b>.';
           return 'Zeichne das kleinste Rechteck um das Dreieck. Rechteck minus die drei rechtwinkligen Randdreiecke.'; },
         tipps: function(A){ return ['Umschliessendes Rechteck: \\(' + A.w + ' \\cdot ' + A.h + ' = ' + A.R + '\\)', 'Die drei Randdreiecke haben je die Hälfte von Breite mal Höhe.']; },
-        loesung: function(A){ return A.R + ' - \\text{Randdreiecke} = ' + bWertTex(A.F); } },
+        loesung: function(A){ return A.w + ' \\cdot ' + A.h + ' - ' + A.rand.map(function(t){ return '\\tfrac{' + t[0] + ' \\cdot ' + t[1] + '}{2}'; }).join(' - ') + ' = ' + A.R + ' - '
+          + A.rand.map(function(t){ return d(t[0] * t[1] / 2); }).join(' - ') + ' = ' + bWertTex(A.F); } },
 
       /* ── Kapitel 4 ── */
       'gerade2': { felder: ['m', 'b'],
         schl: function(A){ return 'g2|' + A.ax + '|' + A.ay + '|' + A.bx + '|' + A.by; },
+        alle: function(A){ return ['g2|' + A.ax + '|' + A.ay + '|' + A.bx + '|' + A.by, 'g2|' + A.bx + '|' + A.by + '|' + A.ax + '|' + A.ay]; },
         eingabe: function(A){ return { m: eing(A.m), b: eing(A.b) }; },
         neu: function(){
           var m = zufall([[1, 1], [2, 1], [3, 1], [-1, 1], [-2, 1], [1, 2], [-1, 2], [3, 2], [-3, 1], [2, 3]]), b = nz(-6, 6), ax = zufallG(-4, 3), dx = m[1] * zufallG(1, 2);
@@ -452,11 +480,11 @@
         richtig: function(A, e){ return bEq(e.m, A.m) && bEq(e.b, A.b); },
         fehler: function(A){ var f = B(A.bx - A.ax, A.by - A.ay); return A.by === A.ay || bEq(f, A.m) ? [] : [[{ m: eing(f), b: eing(bSub(B(A.ay), bMul(f, B(A.ax)))) }, 'Kopf']]; },
         pruefen: function(A, e){
-          if (A.by !== A.ay && bEq(e.m, B(A.bx - A.ax, A.by - A.ay))) return 'Der Bruch steht auf dem Kopf: \\(m = \\dfrac{\\Delta y}{\\Delta x}\\), Unterschied der y-Werte durch Unterschied der x-Werte.';
+          if (A.by !== A.ay && !bEq(A.m, B(A.bx - A.ax, A.by - A.ay)) && bEq(e.m, B(A.bx - A.ax, A.by - A.ay))) return 'Der Bruch steht auf dem Kopf: \\(m = \\dfrac{\\Delta y}{\\Delta x}\\), Unterschied der y-Werte durch Unterschied der x-Werte.';
           if (bEq(e.m, A.m)) return 'm stimmt. Für b setzt du einen Punkt ein: \\(' + A.ay + ' = ' + bTex(A.m) + ' \\cdot ' + kl(A.ax) + ' + b\\).';
           return 'Steigung: \\(m = \\dfrac{\\Delta y}{\\Delta x}\\). Dann einen Punkt einsetzen und nach b auflösen.'; },
         tipps: function(A){ return ['\\(m = \\dfrac{' + A.by + ' - ' + kl(A.ay) + '}{' + A.bx + ' - ' + kl(A.ax) + '}\\)', 'A einsetzen: \\(' + A.ay + ' = m \\cdot ' + kl(A.ax) + ' + b\\)']; },
-        loesung: function(A){ return 'm = ' + bTex(A.m) + ', \\quad b = ' + bTex(A.b) + ', \\quad y = ' + linTex(A.m, A.b[0]); } },
+        loesung: function(A){ return 'm = \\dfrac{' + A.by + ' - ' + kl(A.ay) + '}{' + A.bx + ' - ' + kl(A.ax) + '} = ' + bTex(A.m) + ', \\quad ' + A.ay + ' = ' + bTex(A.m) + ' \\cdot ' + kl(A.ax) + ' + b \\;\\Rightarrow\\; b = ' + bTex(A.b) + ', \\quad y = ' + linTex(A.m, A.b[0]); } },
 
       'punktprobe': { felder: ['w'],
         schl: function(A){ return 'pp|' + A.m + '|' + A.b + '|' + A.x + '|' + A.y; },

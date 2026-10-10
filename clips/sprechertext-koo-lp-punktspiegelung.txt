@@ -1,7 +1,8 @@
 0.40	Spiegle den Punkt P mit fünf und drei am Zentrum Z mit zwei und eins. Von P nach Z gehst du drei nach links und zwei nach unten. Geh denselben Weg ab Z nochmals: Du landest bei P Strich mit minus eins und minus eins.
-16.07	Z liegt genau in der Mitte zwischen P und P Strich. Darum gilt für jede Koordinate: P Strich gleich zwei mal Z minus P. Zwei mal zwei minus fünf gibt minus eins, zwei mal eins minus drei gibt minus eins.
-30.44	Q mit drei und vier, Zentrum zwei und eins: Zwei mal zwei minus drei gibt eins, zwei mal eins minus vier gibt minus zwei. Q Strich liegt bei eins und minus zwei.
-43.85	Eine Figur spiegelst du Ecke für Ecke. Am Ursprung wechseln bei jeder Ecke beide Vorzeichen. Das Bild ist um hundertachtzig Grad gedreht: Längen, Winkel und Fläche bleiben gleich.
-54.52	Häufiger Fehler: P und Z einfach addieren. Fünf plus zwei und drei plus eins gibt sieben und vier. Dann liegt Z aber nicht in der Mitte. Prüf immer: Ist Z die Mitte zwischen P und P Strich?
-68.25	Zum Mitnehmen: Bei der Punktspiegelung liegt das Zentrum in der Mitte zwischen Punkt und Bild. Rechne für jede Koordinate zwei mal Z minus P.
-77.11	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+14.49	Z liegt genau in der Mitte zwischen P und P Strich. Darum gilt für jede Koordinate: P Strich gleich zwei mal Z minus P. Zwei mal zwei minus fünf gibt minus eins, zwei mal eins minus drei gibt minus eins.
+28.73	Q mit drei und vier, Zentrum zwei und eins: Zwei mal zwei minus drei gibt eins, zwei mal eins minus vier gibt minus zwei. Q Strich liegt bei eins und minus zwei.
+40.15	Kennst du P und P Strich, findest du das Zentrum als Mitte: Addiere je die beiden Koordinaten und teile durch zwei. P mit fünf und drei, P Strich mit minus eins und minus eins: Fünf plus minus eins durch zwei gibt zwei, drei plus minus eins durch zwei gibt eins. Das Zentrum liegt bei zwei und eins.
+63.51	Eine Figur spiegelst du Ecke für Ecke. Am Ursprung wechseln bei jeder Ecke beide Vorzeichen. Das Bild ist um hundertachtzig Grad gedreht: Längen, Winkel und Fläche bleiben gleich.
+74.40	Häufiger Fehler: P und Z einfach addieren. Fünf plus zwei und drei plus eins gibt sieben und vier. Dann liegt Z aber nicht in der Mitte. Prüf immer: Ist Z die Mitte zwischen P und P Strich?
+87.22	Zum Mitnehmen: Bei der Punktspiegelung liegt das Zentrum in der Mitte zwischen Punkt und Bild. Rechne für jede Koordinate zwei mal Z minus P.
+96.01	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

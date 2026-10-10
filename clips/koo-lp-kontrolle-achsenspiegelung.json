@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Kontrollfragen zur Achsenspiegelung",
  "dateiname": "koo-lp-kontrolle-achsenspiegelung",
- "kurzbeschrieb": "Fünf Fragen: P(−4 | 1) an der y-Achse, P(2 | 3) an x = 5, P(6 | −1) an y = x, P(0 | 4) an y = 1, Achse aus (2 | 7) und (2 | −1).",
+ "kurzbeschrieb": "Fünf Fragen: P(−4 | 1) an der y-Achse, P(2 | 3) an x = 5, P(6 | −1) an y = x, P(0 | 4) an y = 1, Achse aus (2 | 5) und (2 | −1).",
  "schlagworte": [
   "Achsenspiegelung",
   "Kontrollfragen"
@@ -96,7 +96,7 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Nur y ändert sich, die Achse ist waagrecht. Sie liegt in der Mitte von sieben und minus eins: y gleich drei.",
+   "sprecher": "Nur y ändert sich, die Achse ist waagrecht. Sie liegt in der Mitte von fünf und minus eins: y gleich zwei.",
    "elemente": [
     {
      "typ": "graf",
@@ -111,13 +111,13 @@
      "punkte": [
       {
        "x": 2,
-       "y": 6.4,
+       "y": 5,
        "farbe": 1,
        "anker": "start",
-       "beschriftung": "P(2 | 7)",
+       "beschriftung": "P(2 | 5)",
        "beschriftung_bei": [
         2.4,
-        6.0
+        5.6
        ]
       },
       {
@@ -197,7 +197,7 @@
     },
     {
      "typ": "formel",
-     "text": "y = \\dfrac{7 + (-1)}{2} = \\fc{3}",
+     "text": "y = \\dfrac{5 + (-1)}{2} = \\fc{2}",
      "x": 150,
      "y": 330,
      "groesse": 50,
@@ -216,13 +216,13 @@
      "punkte": [
       {
        "x": 2,
-       "y": 6.4,
+       "y": 5,
        "farbe": 1,
        "anker": "start",
-       "beschriftung": "P(2 | 7)",
+       "beschriftung": "P(2 | 5)",
        "beschriftung_bei": [
         2.4,
-        6.0
+        5.6
        ]
       },
       {
@@ -304,11 +304,11 @@
        "art": "strecke",
        "von": [
         -7,
-        3
+        2
        ],
        "bis": [
         7,
-        3
+        2
        ],
        "farbe": 3,
        "dicke": 6
@@ -316,7 +316,7 @@
      ]
     }
    ],
-   "dauer": 8.03
+   "dauer": 8.22
   },
   {
    "name": "Merke",
@@ -425,12 +425,12 @@
    "rueck": {
     "1": "Ja.",
     "2": "Das wäre an der x-Achse. Die Achse liegt bei y = 1.",
-    "0": "P ist 3 über der Achse. Das Bild liegt 3 darunter."
+    "0": "Das Bild liegt gleich weit unter der Achse wie P darüber."
    },
    "sprich": "Wohin kommt P mit null und vier an der Geraden y gleich eins?",
    "rueck_sprich": {
     "2": "Das wäre an der x-Achse. Die Achse liegt bei y gleich eins.",
-    "0": "P ist drei über der Achse. Das Bild liegt drei darunter."
+    "0": "Das Bild liegt gleich weit unter der Achse wie P darüber."
    }
   },
   {
@@ -440,18 +440,19 @@
    "text": "Welche Gerade ist die Spiegelachse für P und P' im Bild?",
    "optionen": [
     "x = 2",
-    "y = 4",
-    "y = 3"
+    "y = 3",
+    "y = 2"
    ],
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
     "0": "P und P' liegen beide auf x = 2. Die Achse steht senkrecht auf ihrer Verbindung.",
-    "1": "Die Achse liegt in der Mitte von 7 und −1."
+    "1": "Das ist die halbe Differenz. Die Achse liegt in der Mitte von 5 und −1."
    },
+   "sprich": "Welche Gerade ist die Spiegelachse für P und P Strich im Bild?",
    "rueck_sprich": {
     "0": "P und P Strich liegen beide auf x gleich zwei. Die Achse steht senkrecht auf ihrer Verbindung.",
-    "1": "Die Achse liegt in der Mitte von sieben und minus eins."
+    "1": "Das ist die halbe Differenz. Die Achse liegt in der Mitte von fünf und minus eins."
    }
   }
  ]

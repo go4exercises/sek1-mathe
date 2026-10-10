@@ -1,7 +1,8 @@
 0.40	Strecke das Dreieck vom Ursprung aus mit dem Faktor zwei. Jeder Weg vom Ursprung zu einer Ecke wird doppelt so lang. Ist der Ursprung das Zentrum, heisst das einfach: alle Koordinaten mal zwei.
-15.16	Das kleine Dreieck hat die Fläche eins, das Bild die Fläche vier. Breite und Höhe sind beide doppelt so gross, die Fläche also viermal: k Quadrat.
-27.21	Liegt das Zentrum nicht im Ursprung, streckst du den Weg ab Z. Z mit eins und eins, k gleich drei, P mit zwei und drei: Der Weg ist eins und zwei, mal drei gibt drei und sechs. Ab Z abgetragen: vier und sieben.
-45.12	Die Fläche eines Dreiecks aus Koordinaten: Zeichne das kleinste Rechteck darum, hier vier mal drei. Zieh die drei rechtwinkligen Randdreiecke ab: zwei, eins Komma fünf und drei. Es bleiben fünf Komma fünf.
-59.42	Häufiger Fehler: das Zentrum vergessen und einfach mal drei rechnen. Zwei mal drei und drei mal drei gibt sechs und neun. Das stimmt nur, wenn das Zentrum im Ursprung liegt.
-73.38	Zum Mitnehmen: Bei einer Streckung wird der Weg vom Zentrum zu jedem Punkt mit k multipliziert. Längen werden mal k, Flächen mal k Quadrat. Flächen aus Koordinaten: Rechteck darum, Randdreiecke abziehen.
-85.95	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+12.22	Das kleine Dreieck hat die Fläche eins, das Bild die Fläche vier. Breite und Höhe sind beide doppelt so gross, die Fläche also viermal so gross. Das ist k Quadrat.
+24.20	Liegt das Zentrum nicht im Ursprung, streckst du den Weg ab Z. Z mit eins und eins, k gleich drei, P mit zwei und drei: Der Weg ist eins und zwei, mal drei gibt drei und sechs. Ab Z abgetragen: vier und sieben.
+38.19	Kennst du P und das Bild P Strich, findest du k: Teile den Weg ab Z zum Bild durch den Weg ab Z zum Punkt. Vom Ursprung aus fällt P mit zwei und eins auf P Strich mit fünf und zwei Komma fünf. Fünf durch zwei gibt zwei Komma fünf, also ist k gleich zwei Komma fünf. Ist k kleiner als eins, wird die Figur kleiner.
+64.13	Die Fläche eines Dreiecks aus Koordinaten: Zeichne das kleinste Rechteck darum, hier vier mal drei. Zieh die drei rechtwinkligen Randdreiecke ab: zwei, eins Komma fünf und drei. Es bleiben fünf Komma fünf.
+77.19	Häufiger Fehler: das Zentrum vergessen und einfach mal drei rechnen. Zwei mal drei und drei mal drei gibt sechs und neun. Das stimmt nur, wenn das Zentrum im Ursprung liegt.
+89.23	Zum Mitnehmen: Bei einer Streckung wird der Weg vom Zentrum zu jedem Punkt mit k multipliziert. Längen werden mal k, Flächen mal k Quadrat. Flächen aus Koordinaten: Rechteck darum, Randdreiecke abziehen.
+101.82	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

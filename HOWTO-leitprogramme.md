@@ -859,6 +859,15 @@ gegen sie und darüber hinaus.
 - **Ohne Taschenrechner braucht jede Wurzel ein Verfahren** (Pythagoras 10.10.2026): √841, √1369 und Übungen bis √3422
   bei einem Vorwissen bis 15². Quadrate bis 30² und das Eingrenzen (zwischen 25² und 30², Endziffer) zeigen und üben,
   halbe Zahlen über \(7.5^2 = 7 \cdot 8 + 0.25\); Zufallsübungen auf Seiten begrenzen, deren Quadrate so gehen.
+- **Eine Diagnose prüft zuerst, ob der Fehlerwert die Lösung sein kann** (Koordinaten 10.10.2026): Bei m = ±1 ist Δx : Δy = m;
+  die Meldung «Bruch auf dem Kopf» traf dort die richtige Steigung. Ebenso Sonderwerte, die den gelehrten Fehler richtig machen
+  (Z im Ursprung: Z − P = 2Z − P; P an y = x mit y = −x): im Generator ausschliessen.
+- **Umkehraufgaben brauchen eine eigene Zeile und Szene** (Koordinaten 10.10.2026): Zentrum, Achse oder Faktor aus Punkt und Bild
+  waren nur vorwärts gezeigt, aber in Kontrollclip, Übung und Test gefragt.
+- **Ein Fragebild zeichnet, was es anschreibt** (Koordinaten 10.10.2026): «P(2 | 7)» bei y = 6.4 gezeichnet, damit die Achse
+  sichtbar nicht in der Mitte. Punkte am Fensterrand: Fenster vergrössern, nicht den Punkt verschieben.
+- **Parameter und Punkt nicht gleich sprechen** (Koordinaten 10.10.2026): «b» (Achsenabschnitt) und «B» (Punkt) klingen gleich;
+  im Ton «den Achsenabschnitt b» sagen.
 - **Leisten-Ziele sind keine Clip- oder Kontrollbeispiele** (Pythagoras 10.10.2026): «Fläche 24 bei k = 2» oder «c = 29»
   in der Leiste wiederholt den Clip; die Leiste braucht eigene Ziele (13.5 cm², k = 2.25, 3.75 cm).
 - **Fragetexte eines Kontrollclips verschieden beginnen lassen**: `pruef-fragen` erkennt eine Frage
@@ -907,6 +916,8 @@ gegen sie und darüber hinaus.
   nicht auf eine feste Koordinate mit Toleranz.
 - **Ein Testpunkt in der Musterlösung muss trennen** (Funktionstypen 10.10.2026): (2 | 2) lag auf zwei der vier
   Graphen; das Raster belohnte damit den Fehler «zu wenige Punkte». Testpunkte nachrechnen gegen alle Kandidaten.
+- **Keine Testaufgabe nennt die Lösung einer anderen** (Koordinaten 10.10.2026): G8 «Gegeben ist y = 3x − 2» stand unter G7,
+  die genau diese Gerade verlangte. Auch Kapitelaufgaben (4b gab 4a preis) gegenseitig prüfen.
 - **Jede Testaufgabe dem Kapitel zuordnen, das sie übt** (Bewegung 10.10.2026): Eine Plausibilitätsaufgabe stand im Teil
   «Abschnitte»; die Selbsteinschätzung schickte dann ins falsche Kapitel. Jedes Kapitelziel (auch «Einholen», «Modellannahme»)
   im Test prüfen oder die Kompetenzbox ehrlich machen.

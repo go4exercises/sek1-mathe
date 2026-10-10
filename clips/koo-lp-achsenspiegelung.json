@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Achsenspiegelung",
  "dateiname": "koo-lp-achsenspiegelung",
- "kurzbeschrieb": "P(3 | 2) an der x-Achse (3 | −2), an der y-Achse (−3 | 2), an x = 1 (−1 | 2); Vorhersage Q(4 | 1) an x = 2 → (0 | 1); an y = x Koordinaten tauschen (2 | 3); schräge Achse: senkrecht, gleicher Abstand; Fehler: falsche Koordinate.",
+ "kurzbeschrieb": "P(3 | 2) an der x-Achse (3 | −2), an der y-Achse (−3 | 2), an x = 1 (−1 | 2); Vorhersage Q(4 | 1) an x = 2 → (0 | 1); Achse gesucht: Mitte von P(−4 | −2) und P'(2 | −2), x = −1; an y = x Koordinaten tauschen (5 | 1) → (1 | 5); schräge Achse x + y = 4 konstruiert; Fehler: falsche Koordinate.",
  "schlagworte": [
   "Achsenspiegelung",
   "Spiegelachse",
@@ -29,7 +29,7 @@
    "name": "xAchse",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Spiegle P mit drei und zwei an der x-Achse. P liegt zwei über der Achse, also liegt das Bild zwei darunter: drei und minus zwei. x bleibt, nur das Vorzeichen von y wechselt.",
+   "sprecher": "Spiegle P mit drei und zwei an der x-Achse. P liegt zwei über der Achse, also liegt das Bild zwei darunter: drei und minus zwei. Die x-Koordinate bleibt, nur das Vorzeichen von y wechselt.",
    "elemente": [
     {
      "typ": "formel",
@@ -37,7 +37,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 8.22
+     "ein": 9.58
     },
     {
      "typ": "graf",
@@ -148,7 +148,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.16,
+     "ein": 6.44,
      "geraden": [],
      "punkte": [
       {
@@ -245,7 +245,7 @@
      ]
     }
    ],
-   "dauer": 13.0
+   "dauer": 13.56
   },
   {
    "name": "yAchse",
@@ -259,7 +259,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 1.8
+     "ein": 1.94
     },
     {
      "typ": "graf",
@@ -467,7 +467,7 @@
      ]
     }
    ],
-   "dauer": 8.55
+   "dauer": 8.76
   },
   {
    "name": "Parallele",
@@ -481,7 +481,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 7.33
+     "ein": 7.18
     },
     {
      "typ": "formel",
@@ -489,7 +489,7 @@
      "x": 150,
      "y": 420,
      "groesse": 50,
-     "ein": 10.37
+     "ein": 10.48
     },
     {
      "typ": "graf",
@@ -600,7 +600,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.13,
+     "ein": 5.06,
      "geraden": [],
      "punkte": [
       {
@@ -697,7 +697,7 @@
      ]
     }
    ],
-   "dauer": 16.25
+   "dauer": 14.81
   },
   {
    "name": "Vorhersage",
@@ -711,7 +711,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 4.34
+     "ein": 4.13
     },
     {
      "typ": "graf",
@@ -822,7 +822,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.34,
+     "ein": 4.13,
      "geraden": [],
      "punkte": [
       {
@@ -919,21 +919,21 @@
      ]
     }
    ],
-   "dauer": 8.41
+   "dauer": 7.79
   },
   {
-   "name": "Diagonale",
+   "name": "Gesucht",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "An der Geraden y gleich x tauschen die Koordinaten ihre Plätze. Aus drei und zwei wird zwei und drei. Die Verbindung steht wieder senkrecht auf der Achse.",
+   "sprecher": "Kennst du P und P Strich, findest du die Achse: Sie geht durch die Mitte der beiden Punkte und steht senkrecht auf ihrer Verbindung. P mit minus vier und minus zwei, P Strich mit zwei und minus zwei: Die Mitte von minus vier und zwei ist minus eins. Die Achse ist die Gerade x gleich minus eins.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "(x \\mid y) \\to (y \\mid x)",
+     "text": "\\dfrac{-4 + 2}{2} = -1 \\;\\Rightarrow\\; \\fc{x = -1}",
      "x": 150,
      "y": 300,
-     "groesse": 56,
-     "ein": 2.23
+     "groesse": 50,
+     "ein": 11.82
     },
     {
      "typ": "graf",
@@ -947,14 +947,246 @@
      "geraden": [],
      "punkte": [
       {
-       "x": 3,
-       "y": 2,
+       "x": -4,
+       "y": -2,
+       "farbe": 1,
+       "anker": "end",
+       "beschriftung": "P",
+       "beschriftung_bei": [
+        -4.3,
+        -1.4
+       ]
+      },
+      {
+       "x": 2,
+       "y": -2,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "P'",
+       "beschriftung_bei": [
+        2.3,
+        -1.4
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        -4,
+        -2
+       ],
+       "bis": [
+        2,
+        -2
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 14.82,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        -1,
+        -7
+       ],
+       "bis": [
+        -1,
+        7
+       ],
+       "farbe": 3,
+       "dicke": 6
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        -1,
+        -2
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      }
+     ]
+    }
+   ],
+   "dauer": 22.63
+  },
+  {
+   "name": "Diagonale",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "An der Geraden y gleich x tauschen die Koordinaten ihre Plätze. Aus fünf und eins wird eins und fünf. Die Verbindung steht wieder senkrecht auf der Achse.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "(x \\mid y) \\to (y \\mid x)",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 2.17
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 5,
+       "y": 1,
        "farbe": 1,
        "anker": "start",
        "beschriftung": "P",
        "beschriftung_bei": [
-        3.4,
-        1.6
+        5.4,
+        0.5
        ]
       }
      ],
@@ -1044,18 +1276,18 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.01,
+     "ein": 5.25,
      "geraden": [],
      "punkte": [
       {
-       "x": 2,
-       "y": 3,
+       "x": 1,
+       "y": 5,
        "farbe": 2,
        "anker": "end",
        "beschriftung": "P'",
        "beschriftung_bei": [
-        1.7,
-        3.6
+        0.7,
+        5.6
        ]
       }
      ],
@@ -1127,12 +1359,12 @@
       {
        "art": "strecke",
        "von": [
-        3,
-        2
+        5,
+        1
        ],
        "bis": [
-        2,
-        3
+        1,
+        5
        ],
        "farbe": 5,
        "dicke": 3,
@@ -1141,8 +1373,8 @@
       {
        "art": "rechts",
        "bei": [
-        2.5,
-        2.5
+        3,
+        3
        ],
        "r1": 45,
        "r2": 135,
@@ -1152,7 +1384,7 @@
      ]
     }
    ],
-   "dauer": 12.12
+   "dauer": 9.45
   },
   {
    "name": "Schraeg",
@@ -1167,7 +1399,7 @@
      "y": 300,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 2.09
+     "ein": 1.86
     },
     {
      "typ": "graf",
@@ -1278,7 +1510,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.07,
+     "ein": 3.82,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -1381,7 +1613,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.87,
+     "ein": 7.78,
      "geraden": [],
      "punkte": [
       {
@@ -1478,13 +1710,13 @@
      ]
     }
    ],
-   "dauer": 9.52
+   "dauer": 10.47
   },
   {
    "name": "Fehler",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Häufiger Fehler: die falsche Koordinate ändern. An der x-Achse bleibt x gleich, es ändert sich nur y. Was parallel zur Achse läuft, bleibt.",
+   "sprecher": "Häufiger Fehler: die falsche Koordinate ändern. An der x-Achse bleibt x gleich, es ändert sich nur y.",
    "elemente": [
     {
      "typ": "formel",
@@ -1492,7 +1724,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 1.11
+     "ein": 0.99
     },
     {
      "typ": "notiz",
@@ -1501,10 +1733,10 @@
      "y": 430,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 2.97
+     "ein": 2.75
     }
    ],
-   "dauer": 10.02
+   "dauer": 8.59
   },
   {
    "name": "Merke",
@@ -1529,7 +1761,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 12.97
+   "dauer": 13.53
   },
   {
    "name": "Jetzt du",
@@ -1554,7 +1786,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.37
+   "dauer": 6.32
   }
  ],
  "fragen": [

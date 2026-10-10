@@ -153,7 +153,7 @@
     "2": "Der Bruch steht auf dem Kopf: Δy durch Δx.",
     "0": "Das ist nur Δy. Teile noch durch Δx."
    },
-   "sprich": "Welche Steigung hat die Gerade durch null und eins und zwei und sieben?",
+   "sprich": "Welche Steigung hat die Gerade durch den Punkt null und eins und den Punkt zwei und sieben?",
    "rueck_sprich": {
     "2": "Der Bruch steht auf dem Kopf: delta y durch delta x.",
     "0": "Das ist nur delta y. Teile noch durch delta x."
@@ -199,7 +199,7 @@
    },
    "sprich": "Liegt der Punkt zehn und fünfundzwanzig auf y gleich drei x minus fünf?",
    "rueck_sprich": {
-    "0": "Setz x gleich zehn ein und vergleiche.",
+    "0": "Setz x gleich zehn ein und vergleiche mit fünfundzwanzig.",
     "1": "Einsetzen genügt."
    }
   },
@@ -207,22 +207,22 @@
    "szene": "Frage 4",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Punktprobe: (20 | 50) und y = 2x + 5. Liegt der Punkt darauf?",
+   "text": "Punktprobe: Liegt (20 | 50) auf y = 2x + 5?",
    "optionen": [
-    "kann man ohne Zeichnung nicht sagen",
     "nein",
-    "ja"
+    "ja",
+    "kann man ohne Zeichnung nicht sagen"
    ],
-   "richtig": 1,
+   "richtig": 0,
    "rueck": {
-    "1": "Ja.",
-    "2": "Rechne 2 · 20 + 5 nach.",
-    "0": "Einsetzen genügt."
+    "0": "Ja.",
+    "1": "Rechne 2 · 20 + 5 nach.",
+    "2": "Einsetzen genügt."
    },
-   "sprich": "Punktprobe: zwanzig und fünfzig und y gleich zwei x plus fünf. Liegt der Punkt darauf?",
+   "sprich": "Punktprobe: Liegt der Punkt zwanzig und fünfzig auf y gleich zwei x plus fünf?",
    "rueck_sprich": {
-    "2": "Rechne zwei mal zwanzig plus fünf nach.",
-    "0": "Einsetzen genügt."
+    "1": "Rechne zwei mal zwanzig plus fünf nach.",
+    "2": "Einsetzen genügt."
    }
   },
   {

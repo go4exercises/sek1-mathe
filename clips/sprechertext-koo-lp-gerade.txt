@@ -1,7 +1,7 @@
 0.40	Eine Gerade geht durch A mit eins und drei und B mit vier und neun. Von A nach B geht es drei nach rechts und sechs nach oben. Die Steigung ist sechs durch drei, also zwei.
-14.37	Für b setzt du einen Punkt ein, zum Beispiel A: drei gleich zwei mal eins plus b, also ist b gleich eins. Die Gleichung heisst y gleich zwei x plus eins.
-26.29	Liegt Q mit hundert und zweihunderteins auf der Geraden? Einsetzen: zwei mal hundert plus eins gibt zweihunderteins. Die Gleichung stimmt, Q liegt darauf, auch wenn er weit ausserhalb jeder Zeichnung ist.
-38.36	Und D mit fünfzig und hundertzwei? Zwei mal fünfzig plus eins gibt hunderteins, nicht hundertzwei. D liegt knapp daneben. Ablesen hätte das nie gezeigt, nur das Einsetzen.
-51.53	Häufiger Fehler: den Bruch auf den Kopf stellen. Drei durch sechs gibt ein Halb, nicht zwei. Die Steigung ist immer y-Unterschied durch x-Unterschied.
-61.32	Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied. Dann einen Punkt einsetzen und b bestimmen. Ob ein Punkt auf der Geraden liegt, entscheidet das Einsetzen.
-71.80	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+11.62	Für den Achsenabschnitt b setzt du einen Punkt ein, zum Beispiel A: drei gleich zwei mal eins plus b. Der Achsenabschnitt ist eins. Die Gleichung heisst y gleich zwei x plus eins.
+24.35	Liegt Q mit hundert und zweihunderteins auf der Geraden? Einsetzen: zwei mal hundert plus eins gibt zweihunderteins. Die Gleichung stimmt, Q liegt darauf, auch wenn er weit ausserhalb jeder Zeichnung ist.
+36.42	Und D mit fünfzig und hundertzwei? Zwei mal fünfzig plus eins gibt hunderteins, nicht hundertzwei. D liegt knapp daneben. Ablesen hätte das nie gezeigt, nur das Einsetzen.
+49.59	Häufiger Fehler: den Bruch auf den Kopf stellen. Drei durch sechs gibt ein Halb, nicht zwei. Die Steigung ist immer y-Unterschied durch x-Unterschied.
+59.38	Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied. Dann einen Punkt einsetzen und den Achsenabschnitt b bestimmen. Ob ein Punkt auf der Geraden liegt, entscheidet das Einsetzen.
+70.49	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

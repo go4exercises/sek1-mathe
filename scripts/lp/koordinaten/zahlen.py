@@ -73,6 +73,7 @@ soll('0e', gerade(P(1, 2), P(3, 8))[0], 3)
 # ---- Kapitel 1 · Punktspiegelung
 soll('Clip1', punkt(P(5, 3), P(2, 1)), P(-1, -1)); falsch('Clip1 P+Z', (F(7), F(4)), P(-1, -1))
 soll('Clip1 Vorhersage', punkt(P(3, 4), P(2, 1)), P(1, -2))
+soll('Clip1 Mitte', zentrum(P(5, 3), P(-1, -1)), P(2, 1))
 soll('Clip1 Dreieck', [punkt(p, P(0, 0)) for p in (P(1, 1), P(4, 1), P(2, 3))], [P(-1, -1), P(-4, -1), P(-2, -3)])
 soll('Fest1', [punkt(P(4, 3), P(1, 2)), [punkt(p, P(0, 0)) for p in (P(2, 1), P(5, 1), P(4, 4))]], [P(-2, 1), [P(-2, -1), P(-5, -1), P(-4, -4)]])
 soll('Sim1', [zentrum(P(3, 1), P(-1, 5)), punkt(P(2, -3), P(0, 0)), zentrum(P(-4, 1), P(2, -3)), punkt(P(-5, 0), P(-1, 2))],
@@ -93,7 +94,17 @@ soll('Fest2', [achse(P(5, -1), 'x'), achse(P(5, -1), 'y'), achse(P(5, -1), 'xa',
 soll('Sim2', [(F(5) + F(-1)) / 2, achse(P(3, -2), 'y'), (F(4) + F(-2)) / 2, achse(P(-1, 4), 'd'), (F(2) + F(-4)) / 2], [2, P(-3, -2), 1, P(4, -1), -1])
 soll('2a', [achse(P(4, -3), 'x'), achse(P(4, -3), 'y'), achse(P(4, -3), 'd')], [P(4, 3), P(-4, -3), P(-3, 4)])
 soll('2b', achse(P(-2, 5), 'xa', 3), P(8, 5))
-soll('2c', achse(P(1, -2), 'yb', 2), P(1, 6))
+def schraeg(P_, c):
+    """Spiegelung an der Geraden x + y = c (y = −x + c)"""
+    return (c - P_[1], c - P_[0])
+
+
+soll('2c', [schraeg(P(4, 3), 3), ((4 + 0) / F(2), (3 - 1) / F(2))], [P(0, -1), P(2, 1)])               # Fusspunkt (2|1) liegt auf x + y = 3
+soll('Fest2 Achse gesucht', (F(-3) + 5) / 2, 1)
+soll('Clip2 schräg', schraeg(P(5, 3), 4), P(1, -1))
+soll('Clip2 Achse gesucht', (F(-4) + 2) / 2, -1)
+soll('Clip2 Diagonale', achse(P(5, 1), 'd'), P(1, 5))
+soll('K2F5', (F(5) + (-1)) / 2, 2)
 soll('2d', [achse(p, 'd') for p in (P(1, 2), P(4, 2), P(4, 5))], [P(2, 1), P(2, 4), P(5, 4)])
 soll('2e', achse(P(3, 5), 'x'), P(3, -5)); falsch('2e Lea', P(-3, 5), P(3, -5))
 soll('K2', [achse(P(-4, 1), 'y'), achse(P(2, 3), 'xa', 5), achse(P(6, -1), 'd'), achse(P(0, 4), 'yb', 1), (F(7) + F(-1)) / 2],
@@ -102,12 +113,13 @@ soll('K2', [achse(P(-4, 1), 'y'), achse(P(2, 3), 'xa', 5), achse(P(6, -1), 'd'),
 # ---- Kapitel 3 · Zentrische Streckung und Flächen
 soll('Clip3', [[streck(p, P(0, 0), 2) for p in (P(1, 1), P(3, 1), P(1, 2))], flaeche(P(1, 1), P(3, 1), P(1, 2)), flaeche(P(2, 2), P(6, 2), P(2, 4))],
      [[P(2, 2), P(6, 2), P(2, 4)], 1, 4])
+soll('Clip3 Faktor', [F(5, 2), F(5, 2) / 1, streck(P(2, 1), P(0, 0), F(5, 2))], [F(5, 2), F(5, 2), (F(5), F(5, 2))])
 soll('Clip3 Z', streck(P(2, 3), P(1, 1), 3), P(4, 7)); falsch('Clip3 ohne Z', (F(6), F(9)), P(4, 7))
 soll('Clip3 Vorhersage', 2 * 1 * 2 ** 2, 8)
 soll('Clip3 Fläche', [4 * 3 - F(4 * 1, 2) - F(1 * 3, 2) - F(3 * 2, 2), flaeche(P(1, 1), P(5, 2), P(2, 4))], [F(11, 2), F(11, 2)])
 soll('Sim3', [streck(P(2, 1), P(0, 0), 2), streck(P(2, 1), P(1, 1), 2), 9, F(1, 2)], [P(4, 2), P(3, 1), 9, F(1, 2)])
-soll('3a', [[streck(p, P(0, 0), 3) for p in (P(1, 0), P(3, 0), P(1, 2))], flaeche(P(1, 0), P(3, 0), P(1, 2)), flaeche(P(3, 0), P(9, 0), P(3, 6))],
-     [[P(3, 0), P(9, 0), P(3, 6)], 2, 18])
+soll('3a', [[streck(p, P(0, 0), 3) for p in (P(1, 0), P(2, 0), P(1, 1))], flaeche(P(1, 0), P(2, 0), P(1, 1)), flaeche(P(3, 0), P(6, 0), P(3, 3))],
+     [[P(3, 0), P(6, 0), P(3, 3)], F(1, 2), F(9, 2)])
 soll('3b', streck(P(5, 3), P(2, 1), 2), P(8, 5))
 soll('3c', [6 * 5 - F(6 * 1, 2) - F(4 * 4, 2) - F(2 * 5, 2), flaeche(P(0, 0), P(6, 1), P(2, 5))], [14, 14])
 soll('3d', streck(P(4, 3), P(1, 1), 2), P(7, 5)); falsch('3d Ben', P(8, 6), P(7, 5))
@@ -120,24 +132,26 @@ soll('Clip4', gerade(P(1, 3), P(4, 9)), (2, 1))
 soll('Clip4 Proben', [auf(2, 1, P(10, 21)), auf(2, 1, P(50, 102)), auf(2, 1, P(100, 201))], [True, False, True])
 falsch('Clip4 Δx/Δy', F(3, 6), 2)
 soll('Sim4', [gerade(P(0, -2), P(4, 4)), gerade(P(-3, 0), P(3, 4))], [(F(3, 2), -2), (F(2, 3), 2)])
-soll('4a', gerade(P(2, 1), P(6, 9)), (2, -3))
-soll('4b', [auf(2, -3, P(40, 77)), auf(2, -3, P(25, 46))], [True, False])
+soll('4a', gerade(P(1, -2), P(3, 4)), (3, -5))
+soll('4b', [auf(-2, 5, P(30, -55)), auf(-2, 5, P(-12, 30)), -2 * -12 + 5], [True, False, 29])
 soll('4c', gerade(P(-2, 5), P(4, -1)), (-1, 3))
-soll('4d', gerade(P(1, 2), P(3, 8))[0], 3); falsch('4d Mia', F(2, 6), 3)
+soll('4d', gerade(P(2, 1), P(5, 10))[0], 3); falsch('4d Mia', F(3, 9), 3)
 soll('4e', [punkt(P(1, 2), P(3, 3)), gerade(P(1, 2), P(5, 4)), auf(F(1, 2), F(3, 2), P(3, 3))], [P(5, 4), (F(1, 2), F(3, 2)), True])
 soll('K4', [gerade(P(0, 1), P(2, 7))[0], 4 - 2 * 3, auf(3, -5, P(10, 25)), auf(2, 5, P(20, 50))], [3, -2, True, False])
 soll('K4F5', gerade(P(1, 1), P(2, 5))[0], 4); falsch('K4F5 Δx/Δy', F(1, 4), 4)
 
 # ---- Gesamttest
 soll('G1', [punkt(p, P(1, 0)) for p in (P(2, 1), P(5, 2), P(3, 4))], [P(0, -1), P(-3, -2), P(-1, -4)])
-soll('G2', [zentrum(P(-3, 4), P(5, 0)), punkt(P(4, 5), P(1, 2))], [P(1, 2), P(-2, -1)]); falsch('G2b Q + Z', P(5, 7), P(-2, -1))
-soll('G3', [achse(P(4, -1), 'x'), achse(P(4, -1), 'y'), achse(P(4, -1), 'd')], [P(4, 1), P(-4, -1), P(-1, 4)])
+soll('G2', [zentrum(P(-3, 4), P(5, 0)), punkt(P(-2, 6), P(1, 2))], [P(1, 2), P(4, -2)]); falsch('G2b Q + Z', P(-1, 8), P(4, -2))
+soll('G3', [achse(P(4, -1), 'x'), achse(P(4, -1), 'y'), schraeg(P(4, -1), 2), (F(4 + 3, 2), F(-1 - 2, 2))], [P(4, 1), P(-4, -1), P(3, -2), (F(7, 2), F(-3, 2))])
 soll('G4', [(F(-2) + 6) / 2, achse(P(1, -1), 'xa', 2)], [2, P(3, -1)])
-soll('G5', [[streck(p, P(1, 1), 2) for p in (P(2, 1), P(4, 1), P(2, 3))], flaeche(P(2, 1), P(4, 1), P(2, 3)), flaeche(P(3, 1), P(7, 1), P(3, 5))],
-     [[P(3, 1), P(7, 1), P(3, 5)], 2, 8])
+soll('G5', [[streck(p, P(1, 1), 2) for p in (P(2, 2), P(4, 2), P(2, 3))], flaeche(P(2, 2), P(4, 2), P(2, 3)), flaeche(P(3, 3), P(7, 3), P(3, 5))],
+     [[P(3, 3), P(7, 3), P(3, 5)], 1, 4])
+soll('G5 ohne Zentrum', [streck(p, P(0, 0), 2) for p in (P(2, 2), P(4, 2), P(2, 3))], [P(4, 4), P(8, 4), P(4, 6)])
+soll('G6 halbes Rechteck', F(8 * 6, 2), 24)
 soll('G6', [8 * 6 - F(8 * 2, 2) - F(5 * 4, 2) - F(3 * 6, 2), flaeche(P(0, 0), P(8, 2), P(3, 6))], [21, 21])
 soll('G7', gerade(P(-1, -5), P(3, 7)), (3, -2))
-soll('G8', [auf(3, -2, P(50, 148)), auf(3, -2, P(-20, -61)), 3 * (-20) - 2], [True, False, -62])
+soll('G8', [auf(-2, 7, P(40, -73)), auf(-2, 7, P(-15, 36)), -2 * (-15) + 7], [True, False, 37])
 
 # ---- Vertiefung
 soll('V1 zweimal punktgespiegelt', punkt(punkt(P(2, 1), P(0, 0)), P(3, 0)), P(8, 1))     # = Verschiebung um 2 · (3|0)

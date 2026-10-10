@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Zentrische Streckung und Flächen",
  "dateiname": "koo-lp-streckung",
- "kurzbeschrieb": "Dreieck (1 | 1), (3 | 1), (1 | 2) mit Z(0 | 0), k = 2: Koordinaten mal 2; Vorhersage Fläche 1 → 4; Zentrum Z(1 | 1), k = 3: P(2 | 3) → (4 | 7); Fläche aus Koordinaten: Rechteck minus Randdreiecke, 5.5; Fehler: Zentrum vergessen.",
+ "kurzbeschrieb": "Dreieck (1 | 1), (3 | 1), (1 | 2) mit Z(0 | 0), k = 2: Koordinaten mal 2; Vorhersage Fläche 1 → 4; Zentrum Z(1 | 1), k = 3: P(2 | 3) → (4 | 7); k aus P(2 | 1) und P'(5 | 2.5): 2.5, k < 1 verkleinert; Fläche aus Koordinaten: Rechteck minus Randdreiecke, 5.5; Fehler: Zentrum vergessen.",
  "schlagworte": [
   "zentrische Streckung",
   "Streckfaktor",
@@ -38,7 +38,7 @@
      "x": 150,
      "y": 300,
      "groesse": 46,
-     "ein": 9.22
+     "ein": 9.14
     },
     {
      "typ": "graf",
@@ -155,7 +155,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.34,
+     "ein": 5.44,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -273,13 +273,13 @@
      ]
     }
    ],
-   "dauer": 14.76
+   "dauer": 11.82
   },
   {
    "name": "Vorhersage",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Das kleine Dreieck hat die Fläche eins, das Bild die Fläche vier. Breite und Höhe sind beide doppelt so gross, die Fläche also viermal: k Quadrat.",
+   "sprecher": "Das kleine Dreieck hat die Fläche eins, das Bild die Fläche vier. Breite und Höhe sind beide doppelt so gross, die Fläche also viermal so gross. Das ist k Quadrat.",
    "elemente": [
     {
      "typ": "formel",
@@ -287,7 +287,7 @@
      "x": 150,
      "y": 300,
      "groesse": 60,
-     "ein": 6.94
+     "ein": 6.74
     },
     {
      "typ": "graf",
@@ -379,25 +379,6 @@
        "art": "vieleck",
        "punkte": [
         [
-         2,
-         2
-        ],
-        [
-         6,
-         2
-        ],
-        [
-         2,
-         4
-        ]
-       ],
-       "farbe": 2,
-       "fuellung": 0.12
-      },
-      {
-       "art": "vieleck",
-       "punkte": [
-        [
          1,
          1
         ],
@@ -414,9 +395,106 @@
        "fuellung": 0.3
       }
      ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.64,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2,
+         2
+        ],
+        [
+         6,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.12
+      }
+     ]
     }
    ],
-   "dauer": 12.05
+   "dauer": 11.98
   },
   {
    "name": "Zentrum",
@@ -430,7 +508,7 @@
      "x": 150,
      "y": 280,
      "groesse": 52,
-     "ein": 3.13
+     "ein": 3.16
     },
     {
      "typ": "formel",
@@ -438,7 +516,7 @@
      "x": 150,
      "y": 400,
      "groesse": 52,
-     "ein": 11.05
+     "ein": 11.36
     },
     {
      "typ": "graf",
@@ -544,7 +622,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.05,
+     "ein": 11.36,
      "geraden": [],
      "punkte": [
       {
@@ -625,7 +703,249 @@
      ]
     }
    ],
-   "dauer": 17.91
+   "dauer": 13.99
+  },
+  {
+   "name": "Faktor",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Kennst du P und das Bild P Strich, findest du k: Teile den Weg ab Z zum Bild durch den Weg ab Z zum Punkt. Vom Ursprung aus fällt P mit zwei und eins auf P Strich mit fünf und zwei Komma fünf. Fünf durch zwei gibt zwei Komma fünf, also ist k gleich zwei Komma fünf. Ist k kleiner als eins, wird die Figur kleiner.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "k = \\dfrac{5}{2} = \\dfrac{2.5}{1} = \\fc{2.5}",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 3.51
+    },
+    {
+     "typ": "notiz",
+     "text": "0 < k < 1: Das Bild wird kleiner.",
+     "x": 150,
+     "y": 420,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 16.51
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 0,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "Z",
+       "beschriftung_bei": [
+        -0.4,
+        -0.8
+       ]
+      },
+      {
+       "x": 2,
+       "y": 1,
+       "farbe": 1,
+       "anker": "end",
+       "beschriftung": "P",
+       "beschriftung_bei": [
+        2.0,
+        1.6
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        2,
+        1
+       ],
+       "farbe": 1,
+       "dicke": 4
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.39,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 5,
+       "y": 2.5,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "P'",
+       "beschriftung_bei": [
+        5.3,
+        3.0
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        1
+       ],
+       "bis": [
+        5,
+        2.5
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 25.94
   },
   {
    "name": "Flaeche",
@@ -639,7 +959,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 10.46
+     "ein": 10.45
     },
     {
      "typ": "graf",
@@ -744,7 +1064,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.86,
+     "ein": 3.79,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -847,7 +1167,109 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.46,
+     "ein": 4.53,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        3,
+        0.4
+       ],
+       "text": "4",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.4,
+        2.5
+       ],
+       "text": "3",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.15,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -931,7 +1353,7 @@
          2
         ]
        ],
-       "farbe": 2,
+       "farbe": 5,
        "fuellung": 0.2,
        "dicke": 2
       },
@@ -951,7 +1373,7 @@
          4
         ]
        ],
-       "farbe": 2,
+       "farbe": 5,
        "fuellung": 0.2,
        "dicke": 2
       },
@@ -971,14 +1393,50 @@
          1
         ]
        ],
-       "farbe": 2,
+       "farbe": 5,
        "fuellung": 0.2,
        "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.9,
+        1.25
+       ],
+       "text": "2",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.1,
+        3.35
+       ],
+       "text": "3",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.3,
+        3.0
+       ],
+       "text": "1.5",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
       }
      ]
     }
    ],
-   "dauer": 14.3
+   "dauer": 13.06
   },
   {
    "name": "Fehler",
@@ -992,7 +1450,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 2.26
+     "ein": 2.35
     },
     {
      "typ": "notiz",
@@ -1001,7 +1459,7 @@
      "y": 430,
      "groesse": 42,
      "farbe": "rot",
-     "ein": 9.44
+     "ein": 9.59
     },
     {
      "typ": "graf",
@@ -1119,7 +1577,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.36,
+     "ein": 4.49,
      "geraden": [],
      "punkte": [
       {
@@ -1200,7 +1658,7 @@
      ]
     }
    ],
-   "dauer": 13.96
+   "dauer": 12.04
   },
   {
    "name": "Merke",
@@ -1225,7 +1683,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 12.57
+   "dauer": 12.59
   },
   {
    "name": "Jetzt du",
@@ -1250,7 +1708,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.17
+   "dauer": 6.37
   }
  ],
  "fragen": [

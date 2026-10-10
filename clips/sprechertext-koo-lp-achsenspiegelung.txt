@@ -1,9 +1,10 @@
-0.40	Spiegle P mit drei und zwei an der x-Achse. P liegt zwei über der Achse, also liegt das Bild zwei darunter: drei und minus zwei. x bleibt, nur das Vorzeichen von y wechselt.
-13.40	An der y-Achse ist es umgekehrt: y bleibt, x wechselt das Vorzeichen. P Strich liegt bei minus drei und zwei.
-21.95	Die Achse kann auch die Gerade x gleich eins sein. P ist zwei rechts davon, das Bild zwei links davon: minus eins und zwei. Gerechnet: zwei mal eins minus drei. Genauso an einer waagrechten Achse y gleich b: Dann ändert sich nur y.
-38.20	Q mit vier und eins liegt zwei rechts der Achse x gleich zwei. Das Bild liegt zwei links davon, bei null und eins.
-46.61	An der Geraden y gleich x tauschen die Koordinaten ihre Plätze. Aus drei und zwei wird zwei und drei. Die Verbindung steht wieder senkrecht auf der Achse.
-58.73	Bei einer anderen schrägen Achse konstruierst du: Zeichne durch P die Senkrechte zur Achse, miss den Abstand und trag ihn auf der anderen Seite gleich weit ab.
-68.25	Häufiger Fehler: die falsche Koordinate ändern. An der x-Achse bleibt x gleich, es ändert sich nur y. Was parallel zur Achse läuft, bleibt.
-78.27	Zum Mitnehmen: Punkt und Bild liegen gleich weit von der Achse, ihre Verbindung steht senkrecht darauf. An einer waagrechten Achse ändert sich y, an einer senkrechten x, an y gleich x tauschen die Koordinaten.
-91.24	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+0.40	Spiegle P mit drei und zwei an der x-Achse. P liegt zwei über der Achse, also liegt das Bild zwei darunter: drei und minus zwei. Die x-Koordinate bleibt, nur das Vorzeichen von y wechselt.
+13.96	An der y-Achse ist es umgekehrt: y bleibt, x wechselt das Vorzeichen. P Strich liegt bei minus drei und zwei.
+22.72	Die Achse kann auch die Gerade x gleich eins sein. P ist zwei rechts davon, das Bild zwei links davon: minus eins und zwei. Gerechnet: zwei mal eins minus drei. Genauso an einer waagrechten Achse y gleich b: Dann ändert sich nur y.
+37.53	Q mit vier und eins liegt zwei rechts der Achse x gleich zwei. Das Bild liegt zwei links davon, bei null und eins.
+45.32	Kennst du P und P Strich, findest du die Achse: Sie geht durch die Mitte der beiden Punkte und steht senkrecht auf ihrer Verbindung. P mit minus vier und minus zwei, P Strich mit zwei und minus zwei: Die Mitte von minus vier und zwei ist minus eins. Die Achse ist die Gerade x gleich minus eins.
+67.95	An der Geraden y gleich x tauschen die Koordinaten ihre Plätze. Aus fünf und eins wird eins und fünf. Die Verbindung steht wieder senkrecht auf der Achse.
+77.40	Bei einer anderen schrägen Achse konstruierst du: Zeichne durch P die Senkrechte zur Achse, miss den Abstand und trag ihn auf der anderen Seite gleich weit ab.
+87.87	Häufiger Fehler: die falsche Koordinate ändern. An der x-Achse bleibt x gleich, es ändert sich nur y.
+96.46	Zum Mitnehmen: Punkt und Bild liegen gleich weit von der Achse, ihre Verbindung steht senkrecht darauf. An einer waagrechten Achse ändert sich y, an einer senkrechten x, an y gleich x tauschen die Koordinaten.
+109.99	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

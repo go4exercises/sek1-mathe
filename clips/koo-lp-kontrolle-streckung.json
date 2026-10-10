@@ -288,7 +288,7 @@
         3,
         4
        ],
-       "farbe": 2,
+       "farbe": 5,
        "dicke": 3,
        "gestrichelt": true
       }
@@ -420,13 +420,13 @@
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
-    "0": "Das ist das Rechteck. Ein Dreieck ist halb so gross.",
-    "1": "Grundseite 4, Höhe 3, dann halbieren."
+    "0": "Das ist das ganze Rechteck um das Dreieck. Welcher Teil davon gehört zum Dreieck?",
+    "1": "Eine Fläche entsteht durch Multiplizieren, nicht durch Addieren."
    },
    "sprich": "Das Dreieck im Bild hat die Ecken eins und eins, fünf und eins, drei und vier. Wie gross ist die Fläche?",
    "rueck_sprich": {
-    "0": "Das ist das Rechteck. Ein Dreieck ist halb so gross.",
-    "1": "Grundseite vier, Höhe drei, dann halbieren."
+    "0": "Das ist das ganze Rechteck um das Dreieck. Welcher Teil davon gehört zum Dreieck?",
+    "1": "Eine Fläche entsteht durch Multiplizieren, nicht durch Addieren."
    }
   },
   {

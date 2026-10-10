@@ -39,7 +39,7 @@ Dieses Paket enthält die Musterlösung. Wer es vor dem Lösen liest, misst am E
 \begin{tcolorbox}[colback=lplinie!25,colframe=lplinie,boxrule=0.5pt,arc=1mm,fontupper=\small]
 Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in der Schweiz. Im Anhang findest du (1)~das Testblatt mit den Aufgaben, (2)~das Bewertungspaket zum Gesamttest «Abbildungen und Geraden im Koordinatensystem» mit Musterlösung und Punkteraster und (3)~Bilder meiner handschriftlichen Lösung.\par\medskip
 Geh so vor:\par
-1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Rechenweg, Koordinaten, Ergebnis; bei Zeichnungen (G1, G4, G5, G6), welche Punkte wo eingezeichnet sind. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Vorzeichen, die Reihenfolge der Koordinaten $(x \mid y)$ und Dezimalpunkte.\par
+1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Rechenweg, Koordinaten, Ergebnis; bei Zeichnungen und Konstruktionen (G1, G3, G4, G5, G6), welche Punkte und Linien wo eingezeichnet sind. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Vorzeichen, die Reihenfolge der Koordinaten $(x \mid y)$ und Dezimalpunkte.\par
 2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Rechnung und Zeichnung werden getrennt bewertet: Zeichne ich meine eigenen (falschen) Bildpunkte richtig ein, gibt es den Zeichnungspunkt. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
 3. Andere richtige Wege zählen voll, zum Beispiel das Bild durch Abzählen im Gitter statt mit $2Z - P$, die Fläche in G6 mit einer anderen Zerlegung, $b$ in G7 mit dem Punkt $B$ statt $A$. Gleichwertig: $y = 3x - 2$ und $y = 3 \cdot x + (-2)$; Brüche und Dezimalzahlen mit gleichem Wert.\par
 4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «$P + Z$ statt $2Z - P$», «falsche Koordinate geändert», «Zentrum vergessen», «Fläche mal k statt k²», «$\Delta x : \Delta y$ statt $\Delta y : \Delta x$», «Vorzeichenfehler»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
@@ -70,18 +70,18 @@ ausser die Zeile nennt ausdrücklich eine Aufteilung.
 \begin{raster}
 (a) Ansatz & 1 & $Z$ ist der Mittelpunkt von $P$ und $P'$: $Z = \left(\tfrac{-3 + 5}{2} \;\middle|\; \tfrac{4 + 0}{2}\right)$\\
 (a) Ergebnis & 1\E & $Z(1 \mid 2)$\\
-(b) & 1 & $Q' = 2Z - Q = (2 - 4 \mid 4 - 5) = (-2 \mid -1)$; als Folgepunkt mit dem eigenen $Z$\\
+(b) & 1 & $Q' = 2Z - Q = (2 - (-2) \mid 4 - 6) = (4 \mid -2)$; als Folgepunkt mit dem eigenen $Z$\\
 \end{raster}
-\fehler{Halbe Differenz $\tfrac{P' - P}{2} = (4 \mid -2)$ statt Mittelpunkt: Zeilen (a) 0, (b) als Folgepunkt $\to$ 1 von 3\,P. (b) $Q + Z = (5 \mid 7)$: Zeile (b) 0 $\to$ 2 von 3\,P.}
+\fehler{Halbe Differenz $\tfrac{P' - P}{2} = (4 \mid -2)$ statt Mittelpunkt: Zeilen (a) 0, (b) als Folgepunkt $\to$ 1 von 3\,P. (b) $Q + Z = (-1 \mid 8)$: Zeile (b) 0 $\to$ 2 von 3\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G3}{Drei Achsen}{3 P}
 \begin{raster}
 (a) $x$-Achse & 1\E & $(4 \mid 1)$: nur $y$ wechselt das Vorzeichen\\
 (b) $y$-Achse & 1\E & $(-4 \mid -1)$: nur $x$ wechselt das Vorzeichen\\
-(c) $y = x$ & 1\E & $(-1 \mid 4)$: die Koordinaten tauschen\\
+(c) $y = -x + 2$ & 1 & $(3 \mid -2)$, konstruiert: Senkrechte durch $P$ trifft die Achse in $(3.5 \mid -1.5)$, gleich weit dahinter. Abgelesen genügt, wenn die Senkrechte erkennbar ist; Probe: Die Mitte von $P$ und $P'$ liegt auf der Achse\\
 \end{raster}
-\fehler{(a) und (b) vertauscht ($(-4 \mid -1)$ an der $x$-Achse): Zeilen (a) und (b) 0 $\to$ 1 von 3\,P. (c) $(1 \mid -4)$ (getauscht und Vorzeichen gewechselt, das ist die Spiegelung an $y = -x$): Zeile (c) 0.}
+\fehler{Bei (a) und (b) genügt das Ergebnis, ein Weg ist nicht verlangt. (a) und (b) vertauscht ($(-4 \mid -1)$ an der $x$-Achse): Zeilen (a) und (b) 0 $\to$ 1 von 3\,P. (c) nur getauscht ($(-1 \mid 4)$, das wäre an $y = x$): Zeile (c) 0.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G4}{Achse gesucht}{3 P}
@@ -95,21 +95,21 @@ ausser die Zeile nennt ausdrücklich eine Aufteilung.
 
 \begin{lpaufgabe}{G5}{Dreieck strecken}{4 P}
 \begin{raster}
-(a) Weg & 1 & Weg vom Zentrum mal $k$: $P' = Z + 2 \cdot (P - Z)$, zum Beispiel $A' = (1 + 2 \cdot 1 \mid 1 + 2 \cdot 0)$\\
-(a) Ergebnis & 1\E & $A'(3 \mid 1)$, $B'(7 \mid 1)$, $C'(3 \mid 5)$ (alle drei richtig)\\
+(a) Weg & 1 & Weg vom Zentrum mal $k$: $P' = Z + 2 \cdot (P - Z)$, zum Beispiel $A' = (1 + 2 \cdot 1 \mid 1 + 2 \cdot 1)$\\
+(a) Ergebnis & 1\E & $A'(3 \mid 3)$, $B'(7 \mid 3)$, $C'(3 \mid 5)$ (alle drei richtig)\\
 (b) Zeichnung & 1 & die eigenen drei Bildpunkte richtig eingezeichnet und verbunden\\
-(c) Flächen & 1 & $\tfrac{2 \cdot 2}{2} = 2$ und $\tfrac{4 \cdot 4}{2} = 8$~cm$^2$ (oder Einheitsquadrate); Faktor $4 = k^2$. Als Folgepunkt mit den eigenen Bildpunkten, wenn das Bild ähnlich ist\\
+(c) Flächen & 1 & $\tfrac{2 \cdot 1}{2} = 1$ und $\tfrac{4 \cdot 2}{2} = 4$ Häuschen; Faktor $4 = k^2$. Als Folgepunkt mit den eigenen Bildpunkten, wenn das Bild ähnlich ist\\
 \end{raster}
-\fehler{Zentrum vergessen, vom Ursprung aus gestreckt ($(4 \mid 2)$, $(8 \mid 2)$, $(4 \mid 6)$): Zeilen (a) 0, (b) und (c) als Folgepunkte $\to$ 2 von 4\,P. Faktor $2$ statt $4$ für die Fläche: Zeile (c) 0.}
+\fehler{Zentrum vergessen, vom Ursprung aus gestreckt ($(4 \mid 4)$, $(8 \mid 4)$, $(4 \mid 6)$): Zeilen (a) 0, (b) und (c) als Folgepunkte $\to$ 2 von 4\,P. Faktor $2$ statt $4$ für die Fläche: Zeile (c) 0.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Fläche aus Koordinaten}{3 P}
 \begin{raster}
 Rechteck & 1 & umschliessendes Rechteck $8 \cdot 6 = 48$ (in der Zeichnung erkennbar)\\
 Dreiecke & 1 & drei rechtwinklige Randdreiecke $\tfrac{8 \cdot 2}{2} = 8$, $\tfrac{5 \cdot 4}{2} = 10$, $\tfrac{3 \cdot 6}{2} = 9$\\
-Ergebnis & 1\E & $48 - 8 - 10 - 9 = 21$~cm$^2$\\
+Ergebnis & 1\E & $48 - 8 - 10 - 9 = 21$ Häuschen\\
 \end{raster}
-\fehler{Randdreiecke nicht halbiert ($48 - 16 - 20 - 18 = -6$): Zeilen Dreiecke und Ergebnis 0 $\to$ 1 von 3\,P (eine negative Fläche hätte auffallen müssen). Nur das Rechteck ($48$): Zeilen Dreiecke und Ergebnis 0 $\to$ 1 von 3\,P.}
+\fehler{Randdreiecke nicht halbiert ($48 - 16 - 20 - 18 = -6$): Zeilen Dreiecke und Ergebnis 0 $\to$ 1 von 3\,P (eine negative Fläche hätte auffallen müssen). Nur das Rechteck ($48$) oder sein halber Inhalt ($24$, «ein Dreieck ist das halbe Rechteck» gilt hier nicht): Zeilen Dreiecke und Ergebnis 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G7}{Geradengleichung}{3 P}
@@ -123,11 +123,11 @@ Gleichung & 1\E & $y = 3 \cdot x - 2$\\
 
 \begin{lpaufgabe}{G8}{Punktprobe}{3 P}
 \begin{raster}
-(a) & 1 & $3 \cdot 50 - 2 = 148$: Die Gleichung stimmt, $P$ liegt auf der Geraden (Rechnung und Schluss)\\
-(b) & 1 & $3 \cdot (-20) - 2 = -62 \neq -61$: $Q$ liegt nicht auf der Geraden (Rechnung und Schluss)\\
-(c) & 1\E & $(-20 \mid -62)$\\
+(a) & 1 & $-2 \cdot 40 + 7 = -73$: Die Gleichung stimmt, $P$ liegt auf der Geraden (Rechnung und Schluss)\\
+(b) & 1 & $-2 \cdot (-15) + 7 = 37 \neq 36$: $Q$ liegt nicht auf der Geraden (Rechnung und Schluss)\\
+(c) & 1\E & $(-15 \mid 37)$\\
 \end{raster}
-\fehler{Schluss ohne Rechnung («sieht so aus», abgelesen): Zeile 0. (b) $-60 + 2 = -58$ (Vorzeichen): Zeile (b) 0, (c) $(-20 \mid -58)$: Zeile (c) 0 $\to$ 1 von 3\,P.}
+\fehler{Schluss ohne Rechnung («sieht so aus», abgelesen): Zeile 0. (b) $-2 \cdot (-15) = -30$, also $-23$ (Vorzeichen): Zeile (b) 0, (c) $(-15 \mid -23)$: Zeile (c) 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
 \needspace{12\baselineskip}

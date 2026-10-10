@@ -1,7 +1,7 @@
 {
  "titel": "Geometrie: Punktspiegelung",
  "dateiname": "koo-lp-punktspiegelung",
- "kurzbeschrieb": "P(5 | 3) am Zentrum Z(2 | 1): Weg von P nach Z nochmals gehen, P'(−1 | −1); Formel P' = 2Z − P; Vorhersage Q(3 | 4) → (1 | −2); Dreieck am Ursprung: beide Vorzeichen wechseln, Drehung um 180°; Fehler: P + Z.",
+ "kurzbeschrieb": "P(5 | 3) am Zentrum Z(2 | 1): Weg von P nach Z nochmals gehen, P'(−1 | −1); Formel P' = 2Z − P; Vorhersage Q(3 | 4) → (1 | −2); Zentrum gesucht: Mitte von P und P'; Dreieck am Ursprung: beide Vorzeichen wechseln, Drehung um 180°; Fehler: P + Z.",
  "schlagworte": [
   "Punktspiegelung",
   "Zentrum",
@@ -39,7 +39,7 @@
      "y": 300,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 8.98
+     "ein": 8.96
     },
     {
      "typ": "graf",
@@ -147,7 +147,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.84,
+     "ein": 6.72,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -239,7 +239,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 9.7,
+     "ein": 9.72,
      "geraden": [],
      "punkte": [
       {
@@ -336,7 +336,7 @@
      ]
     }
    ],
-   "dauer": 15.67
+   "dauer": 14.09
   },
   {
    "name": "Formel",
@@ -350,7 +350,7 @@
      "x": 150,
      "y": 280,
      "groesse": 64,
-     "ein": 3.97
+     "ein": 3.83
     },
     {
      "typ": "formel",
@@ -358,7 +358,7 @@
      "x": 150,
      "y": 400,
      "groesse": 48,
-     "ein": 6.55
+     "ein": 6.71
     },
     {
      "typ": "graf",
@@ -485,7 +485,7 @@
      ]
     }
    ],
-   "dauer": 14.37
+   "dauer": 14.24
   },
   {
    "name": "Vorhersage",
@@ -499,7 +499,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 8.82
+     "ein": 2.39
     },
     {
      "typ": "graf",
@@ -607,7 +607,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.82,
+     "ein": 8.33,
      "geraden": [],
      "punkte": [
       {
@@ -704,7 +704,226 @@
      ]
     }
    ],
-   "dauer": 13.41
+   "dauer": 11.42
+  },
+  {
+   "name": "Mitte",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Kennst du P und P Strich, findest du das Zentrum als Mitte: Addiere je die beiden Koordinaten und teile durch zwei. P mit fünf und drei, P Strich mit minus eins und minus eins: Fünf plus minus eins durch zwei gibt zwei, drei plus minus eins durch zwei gibt eins. Das Zentrum liegt bei zwei und eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "Z = \\left(\\dfrac{5 + (-1)}{2} \\;\\middle|\\; \\dfrac{3 + (-1)}{2}\\right) = \\fc{(2 \\mid 1)}",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "ein": 3.91
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 5,
+       "y": 3,
+       "farbe": 1,
+       "anker": "start",
+       "beschriftung": "P",
+       "beschriftung_bei": [
+        5.3,
+        3.6
+       ]
+      },
+      {
+       "x": -1,
+       "y": -1,
+       "farbe": 2,
+       "anker": "end",
+       "beschriftung": "P'",
+       "beschriftung_bei": [
+        -1.3,
+        -1.7
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        3
+       ],
+       "bis": [
+        -1,
+        -1
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 15.91,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 1,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "Z",
+       "beschriftung_bei": [
+        2.3,
+        0.4
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": []
+    }
+   ],
+   "dauer": 23.36
   },
   {
    "name": "Figur",
@@ -719,7 +938,7 @@
      "y": 300,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 2.59
+     "ein": 2.67
     },
     {
      "typ": "graf",
@@ -824,7 +1043,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.29,
+     "ein": 4.45,
      "geraden": [],
      "punkte": [
       {
@@ -954,7 +1173,7 @@
      ]
     }
    ],
-   "dauer": 10.67
+   "dauer": 10.89
   },
   {
    "name": "Fehler",
@@ -968,7 +1187,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 2.66
+     "ein": 2.8
     },
     {
      "typ": "notiz",
@@ -1016,26 +1235,14 @@
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
-      -7,
-      7
+      -2,
+      10
      ],
      "ybereich": [
-      -7,
-      7
+      -2,
+      10
      ],
      "xteilung": [
-      [
-       -6,
-       "−6"
-      ],
-      [
-       -4,
-       "−4"
-      ],
-      [
-       -2,
-       "−2"
-      ],
       [
        2,
        "2"
@@ -1047,22 +1254,14 @@
       [
        6,
        "6"
+      ],
+      [
+       8,
+       "8"
       ]
      ],
      "yteilung": [
       [
-       -6,
-       "−6"
-      ],
-      [
-       -4,
-       "−4"
-      ],
-      [
-       -2,
-       "−2"
-      ],
-      [
        2,
        "2"
       ],
@@ -1073,6 +1272,10 @@
       [
        6,
        "6"
+      ],
+      [
+       8,
+       "8"
       ]
      ],
      "figuren": []
@@ -1085,7 +1288,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.74,
+     "ein": 5.98,
      "geraden": [],
      "punkte": [
       {
@@ -1103,26 +1306,14 @@
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
-      -7,
-      7
+      -2,
+      10
      ],
      "ybereich": [
-      -7,
-      7
+      -2,
+      10
      ],
      "xteilung": [
-      [
-       -6,
-       "−6"
-      ],
-      [
-       -4,
-       "−4"
-      ],
-      [
-       -2,
-       "−2"
-      ],
       [
        2,
        "2"
@@ -1134,22 +1325,14 @@
       [
        6,
        "6"
+      ],
+      [
+       8,
+       "8"
       ]
      ],
      "yteilung": [
       [
-       -6,
-       "−6"
-      ],
-      [
-       -4,
-       "−4"
-      ],
-      [
-       -2,
-       "−2"
-      ],
-      [
        2,
        "2"
       ],
@@ -1160,6 +1343,10 @@
       [
        6,
        "6"
+      ],
+      [
+       8,
+       "8"
       ]
      ],
      "achsen": false,
@@ -1167,7 +1354,7 @@
      "figuren": []
     }
    ],
-   "dauer": 13.73
+   "dauer": 12.82
   },
   {
    "name": "Merke",
@@ -1192,7 +1379,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 8.86
+   "dauer": 8.79
   },
   {
    "name": "Jetzt du",
@@ -1217,7 +1404,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.25
+   "dauer": 6.34
   }
  ],
  "fragen": [

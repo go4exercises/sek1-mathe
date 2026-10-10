@@ -36,14 +36,14 @@ Das Dreieck $A(2 \mid 1)$, $B(5 \mid 2)$, $C(3 \mid 4)$ wird am Punkt $Z(1 \mid 
   \foreach \p/\n/\a in {{(2,1)}/A/below right, {(5,2)}/B/right, {(3,4)}/C/above} {\fill[lpblau] \p circle (2pt); \node[\a,lpblau] at \p {$\n$};}
   \fill[lpgruen] (1,0) circle (2.4pt); \node[above left,lpgruen] at (1,0) {$Z$};}
 \end{center}
-\lpplatz{3}
+\lpplatz{5}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G2}{Zentrum gesucht}{3 P}
 Bei einer Punktspiegelung wird $P(-3 \mid 4)$ auf $P'(5 \mid 0)$ abgebildet.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Berechne das Zentrum $Z$.
-\item Wohin wird bei derselben Spiegelung der Punkt $Q(4 \mid 5)$ abgebildet?
+\item Wohin wird bei derselben Spiegelung der Punkt $Q(-2 \mid 6)$ abgebildet?
 \end{enumerate}
 \lpplatz{5}
 \end{lpaufgabe}
@@ -51,14 +51,14 @@ Bei einer Punktspiegelung wird $P(-3 \mid 4)$ auf $P'(5 \mid 0)$ abgebildet.
 \lpteil{Teil B · Achsenspiegelung}{Kapitel 2 · 6 Punkte}
 
 \begin{lpaufgabe}{G3}{Drei Achsen}{3 P}
-Spiegle den Punkt $P(4 \mid -1)$ (a) an der $x$-Achse, (b) an der $y$-Achse, (c) an der Geraden $y = x$.
-Gib jeweils die Koordinaten des Bildpunkts an. Du darfst das Gitter benützen.
+Spiegle den Punkt $P(4 \mid -1)$ (a) an der $x$-Achse, (b) an der $y$-Achse, (c) an der Geraden $y = -x + 2$ (konstruiere im Gitter
+mit dem Geodreieck). Gib jeweils die Koordinaten des Bildpunkts an.
 \begin{center}
 \gitter{-5}{5}{-5}{5}{%
-  \draw[lpgruen,line width=0.8pt,dashed] (-5,-5) -- (5,5) node[above right] {$y = x$};
+  \draw[lpgruen,line width=0.8pt,dashed] (-3,5) -- (5,-3) node[below right] {$y = -x + 2$};
   \fill[lpblau] (4,-1) circle (2pt); \node[below right,lpblau] at (4,-1) {$P$};}
 \end{center}
-\lpplatz{2}
+\lpplatz{3}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G4}{Achse gesucht}{3 P}
@@ -70,7 +70,8 @@ Bei einer Achsenspiegelung wird $A(-2 \mid 3)$ auf $A'(6 \mid 3)$ abgebildet.
 \end{enumerate}
 \begin{center}
 \gitter{-3}{7}{-3}{4}{%
-  \foreach \p/\n in {{(-2,3)}/A, {(6,3)}/A'} {\fill[lpblau] \p circle (2pt); \node[above,lpblau] at \p {$\n$};}}
+  \fill[lpblau] (-2,3) circle (2pt); \node[above,lpblau] at (-2,3) {$A$};
+  \fill[lporange] (6,3) circle (2pt); \node[above,lporange] at (6,3) {$A'$};}
 \end{center}
 \lpplatz{3}
 \end{lpaufgabe}
@@ -79,7 +80,7 @@ Bei einer Achsenspiegelung wird $A(-2 \mid 3)$ auf $A'(6 \mid 3)$ abgebildet.
 \lpteil{Teil C · Zentrische Streckung}{Kapitel 3 · 7 Punkte}
 
 \begin{lpaufgabe}{G5}{Dreieck strecken}{4 P}
-Das Dreieck $A(2 \mid 1)$, $B(4 \mid 1)$, $C(2 \mid 3)$ wird vom Zentrum $Z(1 \mid 1)$ aus mit dem Faktor $k = 2$ gestreckt.
+Das Dreieck $A(2 \mid 2)$, $B(4 \mid 2)$, $C(2 \mid 3)$ wird vom Zentrum $Z(1 \mid 1)$ aus mit dem Faktor $k = 2$ gestreckt.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Berechne die Koordinaten von $A'$, $B'$ und $C'$.
 \item Zeichne das Bilddreieck ins Gitter.
@@ -87,15 +88,15 @@ Das Dreieck $A(2 \mid 1)$, $B(4 \mid 1)$, $C(2 \mid 3)$ wird vom Zentrum $Z(1 \m
 \end{enumerate}
 \begin{center}
 \gitter{0}{8}{0}{6}{%
-  \draw[lpblau,line width=1pt,fill=lpblau!10] (2,1) -- (4,1) -- (2,3) -- cycle;
-  \foreach \p/\n/\a in {{(2,1)}/A/below, {(4,1)}/B/below, {(2,3)}/C/left} {\fill[lpblau] \p circle (2pt); \node[\a,lpblau] at \p {$\n$};}
+  \draw[lpblau,line width=1pt,fill=lpblau!10] (2,2) -- (4,2) -- (2,3) -- cycle;
+  \foreach \p/\n/\a in {{(2,2)}/A/below, {(4,2)}/B/below, {(2,3)}/C/left} {\fill[lpblau] \p circle (2pt); \node[\a,lpblau] at \p {$\n$};}
   \fill[lpgruen] (1,1) circle (2.4pt); \node[left,lpgruen] at (1,1) {$Z$};}
 \end{center}
 \lpplatz{4}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Fläche aus Koordinaten}{3 P}
-Berechne die Fläche des Dreiecks $D(0 \mid 0)$, $E(8 \mid 2)$, $F(3 \mid 6)$ (Einheit cm). Zeig deinen Weg in der Zeichnung.
+Berechne die Fläche des Dreiecks $D(0 \mid 0)$, $E(8 \mid 2)$, $F(3 \mid 6)$ (Einheit: ein Häuschen). Zeig deinen Weg in der Zeichnung.
 \begin{center}
 \gitter{0}{8}{0}{6}{%
   \draw[lpblau,line width=1pt,fill=lpblau!10] (0,0) -- (8,2) -- (3,6) -- cycle;
@@ -112,11 +113,11 @@ Eine Gerade geht durch $A(-1 \mid -5)$ und $B(3 \mid 7)$. Bestimme ihre Gleichun
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G8}{Punktprobe}{3 P}
-Gegeben ist die Gerade $y = 3 \cdot x - 2$.
+Gegeben ist die Gerade $y = -2 \cdot x + 7$.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Liegt der Punkt $P(50 \mid 148)$ auf der Geraden? Begründe mit einer Rechnung.
-\item Liegt der Punkt $Q(-20 \mid -61)$ auf der Geraden? Begründe mit einer Rechnung.
-\item Welcher Punkt der Geraden hat die $x$-Koordinate $-20$?
+\item Liegt der Punkt $P(40 \mid -73)$ auf der Geraden? Begründe mit einer Rechnung.
+\item Liegt der Punkt $Q(-15 \mid 36)$ auf der Geraden? Begründe mit einer Rechnung.
+\item Welcher Punkt der Geraden hat die $x$-Koordinate $-15$?
 \end{enumerate}
 \lpplatz{5}
 \end{lpaufgabe}

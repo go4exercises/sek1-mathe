@@ -61,3 +61,11 @@ ein Verfahren», «Leisten-Ziele sind keine Clip- oder Kontrollbeispiele») und 
 «endliche Werte exakt (k² = 0.5625)» erweitern. Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15 (Wortlaut wie in der Sek-I-Fassung).
 Warum: Sperrlisten, Leisten und Kontrollclips sind im TALS-Gerüst gleich gebaut; die Wurzel-Regel betrifft TALS nur bei
 Aufgaben ohne Rechner. Nachgezählt: 4 neue Punkte, 1 erweiterter.
+
+## HOWTO §15: fünf Fehlerklassen aus der Prüfung «Abbildungen und Geraden im Koordinatensystem» (Sek I, 10.10.2026)
+
+Was: In `HOWTO-leitprogramme.md` §15 ergänzen: «Eine Diagnose prüft zuerst, ob der Fehlerwert die Lösung sein kann»,
+«Umkehraufgaben brauchen eine eigene Zeile und Szene», «Ein Fragebild zeichnet, was es anschreibt», «Parameter und Punkt nicht
+gleich sprechen» (vor «Leisten-Ziele …») und «Keine Testaufgabe nennt die Lösung einer anderen» (vor «Jede Testaufgabe dem Kapitel
+zuordnen …»). Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15 (Wortlaut wie in der Sek-I-Fassung). Warum: Diagnosen, Fragebilder und
+Gesamttests sind in TALS gleich gebaut. Nachgezählt: 5 Punkte.

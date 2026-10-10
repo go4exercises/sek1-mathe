@@ -8,7 +8,8 @@ Aus der Vorlage umgesetzt: Koordinaten im Raster, P' = 2Z − P komponentenweise
 den Koordinatenachsen, an Parallelen und an y = x (gleicher senkrechter Abstand), Achse aus Punkt und Bild, Streckung mit Zentrum
 und Faktor k, Fläche aus Koordinaten (umschliessendes Rechteck), Flächenfaktor k², Gerade aus zwei Punkten, Punktprobe durch
 Einsetzen auch weit ausserhalb jeder Zeichnung. Rechenweg und Zeichnung im Test getrennt bewertbar.
-Nicht umgesetzt: Teams-Ablauf, Lehrpersonenteil, Drehungen, Abbildungsverkettung (nur als Vertiefung V1).
+Nicht umgesetzt: Teams-Ablauf, Lehrpersonenteil, Drehungen, Abbildungsverkettung (nur als Vertiefung V1), Fläche zusammengesetzter
+Figuren aus Koordinaten (nur Dreiecke, deren Ecken auf dem umschliessenden Rechteck liegen).
 
 | Datei | Zweck | laufen lassen? |
 |---|---|---|

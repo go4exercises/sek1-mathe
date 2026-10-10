@@ -153,7 +153,7 @@ fest1 = r'''      <div class="festhalten">
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Addiert statt gespiegelt:</b> \(P + Z\) oder \(Z - P\) ist nicht das Bild. Probe: Liegt \(Z\) in der Mitte zwischen \(P\) und \(P'\)?</p>
+          <p><b>Addiert statt gespiegelt:</b> \(P + Z\) oder \(Z - P\) ist nicht die Rechnung für das Bild, auch wenn es manchmal zufällig passt (am Ursprung ist \(Z - P = -P\)). Rechne \(2Z - P\). Probe: Liegt \(Z\) in der Mitte zwischen \(P\) und \(P'\)?</p>
           <p><b>Nur eine Koordinate:</b> Beide Koordinaten werden gespiegelt, jede für sich.</p>
         </div>
       </div>'''
@@ -206,11 +206,12 @@ fest2 = r'''      <div class="festhalten">
             <tr><td>\(y = b\)</td><td>\((x \mid 2b - y)\)</td><td>\(y = 2\): \((5 \mid 5)\)</td></tr>
             <tr><td>\(y = x\)</td><td>\((y \mid x)\)</td><td>\((-1 \mid 5)\)</td></tr>
           </table>
-          <p><b>Schräge Achse:</b> Senkrechte zur Achse durch \(P\) zeichnen, Abstand bis zur Achse messen und auf der anderen Seite gleich weit abtragen. An \(y = x\) heisst das: Koordinaten tauschen.</p>
+          <p><b>Schräge Achse:</b> Senkrechte zur Achse durch \(P\) zeichnen (Geodreieck), Abstand bis zur Achse messen und auf der anderen Seite gleich weit abtragen. An \(y = x\) heisst das: Koordinaten tauschen.</p>
+          <p><b>Achse gesucht:</b> Sie geht durch die Mitte von \(P\) und \(P'\) und steht senkrecht auf der Verbindung. \(P(-3 \mid 1)\), \(P'(5 \mid 1)\): Mitte \(\tfrac{-3 + 5}{2} = 1\), Achse \(x = 1\).</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
-          <p><b>Falsche Koordinate:</b> An der x-Achse ändert sich y, nicht x. Merke: Was parallel zur Achse läuft, bleibt gleich.</p>
+          <p><b>Falsche Koordinate:</b> An der x-Achse ändert sich y, nicht x. Merke: An einer waagrechten Achse (x-Achse, \(y = b\)) bleibt x, an einer senkrechten (y-Achse, \(x = a\)) bleibt y.</p>
           <p><b>Am Ursprung statt an der Achse:</b> Beide Vorzeichen zu ändern ist eine Punktspiegelung, keine Achsenspiegelung.</p>
         </div>
       </div>'''
@@ -219,8 +220,9 @@ auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
      r'<p>\((4 \mid 3)\), \((-4 \mid -3)\), \((-3 \mid 4)\).</p>', ''),
     ('2b', 2, r'Spiegle \(P(-2 \mid 5)\) an der Geraden \(x = 3\).',
      r'<p>\(P\) ist \(5\) links der Achse, das Bild \(5\) rechts: \((8 \mid 5)\). Rechnerisch \(2 \cdot 3 - (-2) = 8\).</p>', ''),
-    ('2c', 2, r'Spiegle \(P(1 \mid -2)\) an der Geraden \(y = 2\).',
-     r'<p>\(2 \cdot 2 - (-2) = 6\): \((1 \mid 6)\).</p>', ''),
+    ('2c', 2, r"Zeichne die Gerade \(y = -x + 3\) ins Gitter und konstruiere mit dem Geodreieck das Bild von \(P(4 \mid 3)\). Lies \(P'\) ab.",
+     r"<p>Senkrechte durch \(P\) trifft die Achse in \((2 \mid 1)\), gleich weit dahinter: \(P'(0 \mid -1)\). Probe: Die Mitte von \(P\) und \(P'\) ist \((2 \mid 1)\) und liegt auf der Achse.</p>",
+     '\n            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>'),
     ('2d', 3, r'Spiegle das Dreieck \(A(1 \mid 2)\), \(B(4 \mid 2)\), \(C(4 \mid 5)\) an der Geraden \(y = x\) und zeichne beide Dreiecke.',
      r"<p>\(A'(2 \mid 1)\), \(B'(2 \mid 4)\), \(C'(5 \mid 4)\): Koordinaten tauschen. Jede Verbindung \(PP'\) steht senkrecht auf \(y = x\).</p>",
      '\n            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>'),
@@ -253,12 +255,13 @@ fest3 = r'''      <div class="festhalten">
         <div class="merk">
           <div class="titel">Zentrische Streckung und Flächen</div>
           <p>Vom Zentrum \(Z\) aus wird jeder Weg zu einem Punkt mit \(k\) multipliziert:</p>
-          <p>\[ P' = Z + k \cdot (P - Z) \quad\text{für jede Koordinate einzeln} \]</p>
+          <p>\[ P' = Z + k \cdot (P - Z) \quad\text{für jede Koordinate einzeln, } k > 0 \]</p>
+          <p>\(k > 1\) vergrössert, \(0 < k < 1\) verkleinert: Bei \(k = 0.5\) ist der Weg ab \(Z\) nur noch halb so lang. Den Faktor findest du als \(k = \dfrac{\text{Weg } ZP'}{\text{Weg } ZP}\).</p>
           <ul class="kurz">
             <li>\(Z(0 \mid 0)\), \(k = 2\): \(A(1 \mid 1) \to (2 \mid 2)\), alle Koordinaten mal \(2\).</li>
             <li>\(Z(1 \mid 1)\), \(k = 3\), \(P(2 \mid 3)\): Weg \((1 \mid 2)\), mal \(3\) gibt \((3 \mid 6)\), ab \(Z\): \(P'(4 \mid 7)\).</li>
             <li>Längen \(\cdot k\), Flächen \(\cdot k^2\): Dreieck mit Fläche \(1\) wird bei \(k = 2\) zur Fläche \(4\).</li>
-            <li><b>Fläche aus Koordinaten:</b> umschliessendes Rechteck minus die rechtwinkligen Randdreiecke. \(A(1 \mid 1)\), \(B(5 \mid 2)\), \(C(2 \mid 4)\): \(4 \cdot 3 - 2 - 1.5 - 3 = 5.5\).</li>
+            <li><b>Fläche aus Koordinaten:</b> umschliessendes Rechteck minus die rechtwinkligen Randdreiecke (wenn jede Ecke auf dem Rand des Rechtecks liegt). \(A(1 \mid 1)\), \(B(5 \mid 2)\), \(C(2 \mid 4)\): \(4 \cdot 3 - 2 - 1.5 - 3 = 5.5\).</li>
           </ul>
         </div>
         <div class="warn">
@@ -268,8 +271,9 @@ fest3 = r'''      <div class="festhalten">
         </div>
       </div>'''
 auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
-    ('3a', 3, r'Strecke das Dreieck \(A(1 \mid 0)\), \(B(3 \mid 0)\), \(C(1 \mid 2)\) von \(Z(0 \mid 0)\) aus mit \(k = 3\). Vergleiche die Flächen.',
-     r"<p>\(A'(3 \mid 0)\), \(B'(9 \mid 0)\), \(C'(3 \mid 6)\). Flächen \(2\) und \(18 = 2 \cdot 3^2\).</p>", ''),
+    ('3a', 3, r'Strecke das Dreieck \(A(1 \mid 0)\), \(B(2 \mid 0)\), \(C(1 \mid 1)\) von \(Z(0 \mid 0)\) aus mit \(k = 3\). Zeichne beide Dreiecke und vergleiche die Flächen.',
+     r"<p>\(A'(3 \mid 0)\), \(B'(6 \mid 0)\), \(C'(3 \mid 3)\). Flächen \(0.5\) und \(4.5 = 0.5 \cdot 3^2\).</p>",
+     '\n            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>'),
     ('3b', 2, r'Strecke \(P(5 \mid 3)\) von \(Z(2 \mid 1)\) aus mit \(k = 2\).',
      r"<p>Weg \((3 \mid 2)\), mal \(2\): \((6 \mid 4)\), ab \(Z\): \(P'(8 \mid 5)\).</p>", ''),
     ('3c', 3, r'Berechne die Fläche des Dreiecks \(A(0 \mid 0)\), \(B(6 \mid 1)\), \(C(2 \mid 5)\).',
@@ -279,7 +283,7 @@ auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
     ('3e', 2, r'Ein Viereck mit Fläche \(5\) wird mit \(k = 4\) gestreckt. Wie gross ist die Bildfläche?',
      r'<p>\(5 \cdot 4^2 = 80\).</p>', ''),
     ('3f', 2, r'Warum wächst bei einer Streckung mit \(k\) die Fläche mit \(k^2\)?',
-     r'<p>Jede Länge wird mit \(k\) multipliziert, also Breite und Höhe. Fläche \(= k \cdot \text{Breite} \cdot k \cdot \text{Höhe}\).</p>', ''),
+     r'<p>Jede Länge wird mit \(k\) multipliziert, also Breite und Höhe. Beim Rechteck: Fläche \(= k \cdot \text{Breite} \cdot k \cdot \text{Höhe}\). Beim Dreieck kommt das \(\tfrac{1}{2}\) dazu, der Faktor \(k^2\) bleibt.</p>', ''),
 ])
 k3 = kapitel(3, 'streckung', 'Zentrische Streckung und Flächen', 40,
              r'Du streckst Punkte und Figuren von einem Zentrum aus, berechnest Bildkoordinaten, Flächen aus Koordinaten und den Flächenfaktor \(k^2\).',
@@ -298,8 +302,8 @@ sim4 = f'''      <figure class="sim sim-gross" id="sim4" aria-label="Gerade durc
           {reg('s4-ay', 'A: y', 'blau', -6, 6, -3)}
         </div>
         <div class="sl-row">
-          {reg('s4-bx', 'B: x', 'orange', -6, 6, 2)}
-          {reg('s4-by', 'B: y', 'orange', -6, 6, -1)}
+          {reg('s4-bx', 'B: x', 'blau', -6, 6, 2)}
+          {reg('s4-by', 'B: y', 'blau', -6, 6, -1)}
         </div>
       </figure>'''
 fest4 = r'''      <div class="festhalten">
@@ -310,6 +314,7 @@ fest4 = r'''      <div class="festhalten">
             <li>\(A\) einsetzen: \(3 = 2 \cdot 1 + b\), \(b = 1\) <span class="warum">nach b auflösen</span></li>
             <li>\(y = 2x + 1\), Probe mit \(B\): \(2 \cdot 4 + 1 = 9\) <span class="warum">stimmt</span></li>
           </ol>
+          <p>Das geht, solange \(x_A \neq x_B\); sonst ist die Gerade senkrecht und hat keine Gleichung \(y = m \cdot x + b\).</p>
           <p><b>Punktprobe:</b> Liegt \(C(100 \mid 201)\) auf der Geraden? Einsetzen: \(2 \cdot 100 + 1 = 201\), ja. \(D(50 \mid 102)\): \(2 \cdot 50 + 1 = 101 \neq 102\), nein. So prüfst du auch Punkte weit ausserhalb jeder Zeichnung.</p>
         </div>
         <div class="warn">
@@ -319,14 +324,15 @@ fest4 = r'''      <div class="festhalten">
         </div>
       </div>'''
 auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
-    ('4a', 3, r'Bestimme die Gleichung der Geraden durch \(A(2 \mid 1)\) und \(B(6 \mid 9)\).',
-     r'<p>\(m = \dfrac{8}{4} = 2\), \(1 = 2 \cdot 2 + b\), \(b = -3\): \(y = 2x - 3\).</p>', ''),
-    ('4b', 2, r'Liegen \(P(40 \mid 77)\) und \(Q(25 \mid 46)\) auf der Geraden \(y = 2x - 3\)?',
-     r'<p>\(2 \cdot 40 - 3 = 77\): \(P\) ja. \(2 \cdot 25 - 3 = 47 \neq 46\): \(Q\) nein.</p>', ''),
+    ('4a', 3, r'Bestimme die Gleichung der Geraden durch \(A(1 \mid -2)\) und \(B(3 \mid 4)\) und zeichne die Gerade.',
+     r'<p>\(m = \dfrac{4 - (-2)}{3 - 1} = \dfrac{6}{2} = 3\), \(-2 = 3 \cdot 1 + b\), \(b = -5\): \(y = 3x - 5\).</p>',
+     '\n            <div class="mini-reihe"><svg class="leer-gitter" aria-label="leeres Koordinatensystem zum Zeichnen"></svg></div>'),
+    ('4b', 2, r'Liegen \(P(30 \mid -55)\) und \(Q(-12 \mid 30)\) auf der Geraden \(y = -2x + 5\)?',
+     r'<p>\(-2 \cdot 30 + 5 = -55\): \(P\) ja. \(-2 \cdot (-12) + 5 = 29 \neq 30\): \(Q\) nein.</p>', ''),
     ('4c', 3, r'Bestimme die Gleichung der Geraden durch \(A(-2 \mid 5)\) und \(B(4 \mid -1)\).',
      r'<p>\(m = \dfrac{-1 - 5}{4 - (-2)} = \dfrac{-6}{6} = -1\), \(5 = -1 \cdot (-2) + b\), \(b = 3\): \(y = -x + 3\).</p>', ''),
-    ('4d', 2, r'Mia berechnet die Steigung durch \(A(1 \mid 2)\) und \(B(3 \mid 8)\) als \(\dfrac{3 - 1}{8 - 2} = \dfrac{1}{3}\). Was ist falsch?',
-     r'<p>Der Bruch steht auf dem Kopf. \(m = \dfrac{8 - 2}{3 - 1} = 3\).</p>', ''),
+    ('4d', 2, r'Mia berechnet die Steigung durch \(A(2 \mid 1)\) und \(B(5 \mid 10)\) als \(\dfrac{5 - 2}{10 - 1} = \dfrac{1}{3}\). Was ist falsch?',
+     r'<p>Der Bruch steht auf dem Kopf. \(m = \dfrac{10 - 1}{5 - 2} = \dfrac{9}{3} = 3\).</p>', ''),
     ('4e', 2, r"\(P(1 \mid 2)\) wird an \(Z(3 \mid 3)\) gespiegelt. Bestimme die Gerade durch \(P\) und \(P'\) und prüfe, ob \(Z\) darauf liegt.",
      r"<p>\(P'(5 \mid 4)\), \(m = \dfrac{2}{4} = \dfrac{1}{2}\), \(b = \dfrac{3}{2}\): \(y = \tfrac{1}{2}x + \tfrac{3}{2}\). Probe \(Z\): \(\tfrac{3}{2} + \tfrac{3}{2} = 3\), ja. Das Zentrum liegt immer auf der Geraden \(PP'\).</p>", ''),
     ('4f', 2, r'Warum genügt ein Einsetzen, um zu entscheiden, ob ein Punkt auf einer Geraden liegt?',
@@ -350,8 +356,9 @@ k0 = f'''
         <ul class="kurz">
           <li><b>Koordinaten:</b> \(P(3 \mid -2)\) heisst \(3\) nach rechts, \(2\) nach unten.</li>
           <li><b>Mittelpunkt:</b> von \((1 \mid 3)\) und \((5 \mid 7)\) ist \((3 \mid 5)\): je die Koordinaten addieren und halbieren.</li>
+          <li><b>Rechteck im Gitter:</b> Breite = Unterschied der x-Werte, Höhe = Unterschied der y-Werte. Ecken \((0 \mid 1)\) und \((4 \mid 3)\): \(4 \cdot 2 = 8\).</li>
           <li><b>Negative Zahlen:</b> \(2 \cdot (-3) - 4 = -10\), \(-(-5) = 5\).</li>
-          <li><b>Gerade:</b> \(y = m \cdot x + b\), Steigung \(m\), \(y\)-Achsenabschnitt \(b\) (Leitprogramm <a href="lineare-funktionen.html">Lineare Funktionen</a>).</li>
+          <li><b>Gerade:</b> \(y = m \cdot x + b\), Steigung \(m\), \(y\)-Achsenabschnitt \(b\) (Leitprogramm <a href="lineare-funktionen.html">Lineare Funktionen</a>). Steigung aus zwei Punkten: \(m = \dfrac{\Delta y}{\Delta x}\), von \((0 \mid 1)\) nach \((2 \mid 5)\) also \(\tfrac{4}{2} = 2\).</li>
         </ul>
       </details>
 ''' + test('t0', 'Vortest', 10, [

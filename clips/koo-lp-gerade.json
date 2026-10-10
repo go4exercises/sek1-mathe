@@ -38,7 +38,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 7.78
+     "ein": 7.96
     },
     {
      "typ": "graf",
@@ -65,7 +65,7 @@
       {
        "x": 4,
        "y": 9,
-       "farbe": 2,
+       "farbe": 1,
        "anker": "start",
        "beschriftung": "B",
        "beschriftung_bei": [
@@ -133,7 +133,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.02,
+     "ein": 6.3,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -204,13 +204,13 @@
      ]
     }
    ],
-   "dauer": 13.97
+   "dauer": 11.22
   },
   {
    "name": "Achsenabschnitt",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Für b setzt du einen Punkt ein, zum Beispiel A: drei gleich zwei mal eins plus b, also ist b gleich eins. Die Gleichung heisst y gleich zwei x plus eins.",
+   "sprecher": "Für den Achsenabschnitt b setzt du einen Punkt ein, zum Beispiel A: drei gleich zwei mal eins plus b. Der Achsenabschnitt ist eins. Die Gleichung heisst y gleich zwei x plus eins.",
    "elemente": [
     {
      "typ": "formel",
@@ -218,7 +218,7 @@
      "x": 150,
      "y": 280,
      "groesse": 50,
-     "ein": 1.01
+     "ein": 1.68
     },
     {
      "typ": "formel",
@@ -226,7 +226,7 @@
      "x": 150,
      "y": 400,
      "groesse": 60,
-     "ein": 6.91
+     "ein": 7.5
     },
     {
      "typ": "graf",
@@ -259,7 +259,7 @@
       {
        "x": 4,
        "y": 9,
-       "farbe": 2,
+       "farbe": 1,
        "anker": "start",
        "beschriftung": "B",
        "beschriftung_bei": [
@@ -320,7 +320,7 @@
      ]
     }
    ],
-   "dauer": 11.92
+   "dauer": 12.73
   },
   {
    "name": "Vorhersage",
@@ -334,7 +334,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 3.47
+     "ein": 3.69
     }
    ],
    "dauer": 12.07
@@ -360,7 +360,7 @@
      "y": 430,
      "groesse": 46,
      "farbe": "blau",
-     "ein": 10.14
+     "ein": 10.12
     }
    ],
    "dauer": 13.17
@@ -377,7 +377,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 2.51
+     "ein": 2.53
     },
     {
      "typ": "notiz",
@@ -386,7 +386,7 @@
      "y": 440,
      "groesse": 46,
      "farbe": "rot",
-     "ein": 6.85
+     "ein": 6.83
     }
    ],
    "dauer": 9.79
@@ -395,7 +395,7 @@
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied. Dann einen Punkt einsetzen und b bestimmen. Ob ein Punkt auf der Geraden liegt, entscheidet das Einsetzen.",
+   "sprecher": "Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied. Dann einen Punkt einsetzen und den Achsenabschnitt b bestimmen. Ob ein Punkt auf der Geraden liegt, entscheidet das Einsetzen.",
    "elemente": [
     {
      "typ": "titel",
@@ -414,7 +414,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 10.48
+   "dauer": 11.11
   },
   {
    "name": "Jetzt du",
