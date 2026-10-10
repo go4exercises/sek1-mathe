@@ -62,9 +62,9 @@ ausser die Zeile nennt ausdrücklich eine Aufteilung.
 (a) Gleichung & 1 & $y = 0.3x + 1.5$ ($1.50$ Fr. einmal, $0.30$ Fr. pro Minute)\\
 (b) Tabelle & 1 & $x = 0, 10, 20$: $y = 1.5,\ 4.5,\ 7.5$. Auch als Folgepunkt mit der eigenen Gleichung.\\
 (c) Punkt & 1 & Eine Fahrt von $20$ Minuten kostet insgesamt $7.50$ Fr. (Zeit und Gesamtpreis müssen beide vorkommen.)\\
-(d) & 1\E & $0.3x + 1.5 = 9$, $0.3x = 7.5$, $x = 25$ Minuten\\
+(d) & 1 & $0.3x + 1.5 = 9$, $0.3x = 7.5$, $x = 25$ Minuten. Auch als Folgepunkt mit der eigenen Gleichung aus (a).\\
 \end{raster}
-\fehler{$m$ und $b$ vertauscht ($y = 1.5x + 0.3$): Zeile (a) 0; (b) als Folgepunkt ($0.3$, $15.3$, $30.3$) 1.
+\fehler{$m$ und $b$ vertauscht ($y = 1.5x + 0.3$): Zeile (a) 0; (b) als Folgepunkt ($0.3$, $15.3$, $30.3$) 1; (d) als Folgepunkt ($x = 5.8$) 1 $\to$ 3 von 4\,P.
 (c) «Eine Minute kostet $7.50$ Fr.» oder «$7.50$ Minuten kosten $20$ Fr.»: Zeile (c) 0.
 (d) $9 : 0.3 = 30$ (Entsperren vergessen): Zeile (d) 0.}
 \end{lpaufgabe}
@@ -81,8 +81,8 @@ $b = 17$ (erster $y$-Wert): $b$-Zeile und Gleichungszeile 0 $\to$ 1 von 3\,P.}
 
 \begin{lpaufgabe}{G3}{Rechteck}{3 P}
 \begin{raster}
-(a) Ansatz & 1 & $2x + 2y = 36$, durch $2$: $x + y = 18$\\
-(a) Ergebnis & 1\E & $y = 18 - x$\\
+(a) Ansatz & 1 & $2x + 2y = 36$ (jede Seite zweimal)\\
+(a) Ergebnis & 1\E & durch $2$: $x + y = 18$, also $y = 18 - x$\\
 (b) & 1 & $y = 18 - 7.5 = 10.5$ cm. Auch als Folgepunkt mit der eigenen Gleichung, wenn $y > 0$.\\
 \end{raster}
 \fehler{Nicht durch $2$ geteilt ($y = 36 - 2x$): Ergebniszeile (a) 0; (b) als Folgepunkt ($21$) 1 $\to$ 2 von 3\,P.
@@ -93,7 +93,7 @@ $y = 36 - x$ (jede Seite nur einmal gezählt): Ansatz- und Ergebniszeile 0; (b) 
 \begin{raster}
 (a) & 1 & $8y = 60 - 12x$, $y = 7.5 - 1.5x$ (gleichwertig $y = -\tfrac{3}{2}x + \tfrac{15}{2}$)\\
 (b) & 1 & Für jeden Erwachsenen mehr gibt es $1.5$ Kinderbillette weniger (oder: $2$ Erwachsene mehr, $3$ Kinder weniger). Auch als Folgepunkt passend zur eigenen Steigung.\\
-(c) & 1\E & Nur ganze Anzahlen: $(1 \mid 6)$, $(3 \mid 3)$, $(5 \mid 0)$ — alle drei, keine falschen ($(0 \mid 7.5)$ ist nicht möglich). Ob $(5 \mid 0)$ «Kinder» braucht, ist egal: Es zählt auch ohne.\\
+(c) & 1\E & Nur ganze Anzahlen: $(1 \mid 6)$, $(3 \mid 3)$ und $(5 \mid 0)$. Alle drei, keine falschen ($(0 \mid 7.5)$ ist nicht möglich). $(5 \mid 0)$ zählt als Paar, auch wenn keine Kinder dabei sind.\\
 \end{raster}
 \fehler{(a) Nicht durch $8$ geteilt ($y = 60 - 12x$): Zeile (a) 0.
 (b) «Ein Kind kostet $1.5$ Fr.» oder Steigung ohne Deutung: Zeile (b) 0.
@@ -104,7 +104,7 @@ $y = 36 - x$ (jede Seite nur einmal gezählt): Ansatz- und Ergebniszeile 0; (b) 
 \begin{center}
 \leernetz{12}{9}{\draw[->,line width=0.6pt] (0,0) -- (12.5,0) node[right] {$x$ [h]};
   \draw[->,line width=0.6pt] (0,0) -- (0,9.5) node[above] {$y$ [cm]};
-  \foreach \i in {2,4,...,12} \node[below] at (\i,0) {$\i$};
+  \foreach \i in {2,4,...,12} \node[below] at (\i,0) {$\i$}; \node[below left] at (0,0) {$0$};
   \foreach \j/\w in {2/40,4/80,6/120,8/160} \node[left] at (0,\j) {$\w$};
   \draw[lpblau,line width=1.2pt] (0,2) -- (8,8);
   \fill[lporange] (0,2) circle (2.4pt); \fill[lpgruen] (8,8) circle (2.4pt);}
@@ -113,19 +113,19 @@ $y = 36 - x$ (jede Seite nur einmal gezählt): Ansatz- und Ergebniszeile 0; (b) 
 (a) & 1 & $y = 15x + 40$; voll bei $15x + 40 = 160$, $x = 8$: $0 \le x \le 8$ Stunden\\
 (b) & 1 & $40 \le y \le 160$ cm. Auch als Folgepunkt mit dem eigenen Bereich aus (a).\\
 (c) Achsen & 1 & Beide Achsen mit Grösse und Einheit ($x$ in h, $y$ in cm) und gleichmässiger Einteilung, die bis $8$ h und $160$ cm reicht (z.\,B.\ $1$ Häuschen $= 1$ h und $1$ Häuschen $= 20$ cm wie im Bild).\\
-(d) Strecke & 1 & Strecke von $(0 \mid 40)$ bis $(8 \mid 160)$, nicht darüber hinaus. Mit eigenen Endpunkten aus (a) als Folgepunkt.\\
+(c) Strecke & 1 & Strecke von $(0 \mid 40)$ bis $(8 \mid 160)$, nicht darüber hinaus. Mit eigenen Endpunkten aus (a) als Folgepunkt.\\
 \end{raster}
-\fehler{Ganze Gerade über $x = 8$ hinaus: Zeile (d) 0.
-Achse ohne Einheit oder mit ungleichmässiger Einteilung: Zeile (c) 0.
-Bereich $0 \le x \le 160$ oder $0 \le x \le 10.\overline{6}$ ($160 : 15$, Anfangswasser vergessen): Zeile (a) 0; (d) als Folgepunkt nur mit passender Strecke.}
+\fehler{Ganze Gerade über $x = 8$ hinaus: Zeile «(c) Strecke» 0.
+Achse ohne Einheit oder mit ungleichmässiger Einteilung: Zeile «(c) Achsen» 0.
+Bereich $0 \le x \le 160$ oder $0 \le x \le 10.\overline{6}$ ($160 : 15$, Anfangswasser vergessen): Zeile (a) 0; «(c) Strecke» als Folgepunkt nur mit passender Strecke.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Achse}{2 P}
 \begin{raster}
-(a) & 1 & Die Abstände sind gleich, stehen aber für verschiedene Schritte ($10$, $10$, $30$, $50$): Die Skala ist nicht gleichmässig.\\
-(b) & 1 & Bis $20$ steht ein Häuschen für $10$, danach für $30$ und $50$: Die Punkte rücken oben zusammen, die Strecken werden flacher. Mit gleichmässiger Skala lägen alle Punkte auf einer Geraden.\\
+(a) & 1 & Die Abstände sind gleich, stehen aber für verschiedene Schritte ($5$, $5$, $15$, $15$): Die Skala ist nicht gleichmässig.\\
+(b) & 1 & Ein gleich langes Stück der $y$-Achse steht unten für $5$, oben für $15$: Dieselbe Zunahme wird oben kürzer gezeichnet, darum werden die Strecken flacher. Mit gleichmässiger Skala lägen alle Punkte auf einer Geraden.\\
 \end{raster}
-\fehler{«Die $30$ und $40$ fehlen»: Das trifft den Kern nur, wenn gesagt wird, dass die Abstände nicht passen; sonst Zeile (a) 0.
+\fehler{«Die $15$ und $20$ fehlen»: zählt nur, wenn gesagt wird, dass die Abstände nicht zu den Schritten passen; sonst Zeile (a) 0.
 (b) «Weil die Funktion nicht linear ist»: Zeile (b) 0.}
 \end{lpaufgabe}
 
@@ -142,11 +142,11 @@ Nur Behauptung ohne Rechnung bei A oder B: diese Zeile 0.}
 
 \begin{lpaufgabe}{G8}{Aussagen prüfen}{3 P}
 \begin{raster}
-(a) Rechnung & 1 & $x + y = 10$: $x = 2$, $y = 8$; $x = 4$, $y = 6$\\
-(a) Urteil & 1 & Falsch: $6$ ist nicht die Hälfte von $8$. Auch als Folgepunkt passend zur eigenen Rechnung.\\
-(b) & 1 & Falsch, mit Gegenbeispiel: $2 \cdot 8 = 16$ und $4 \cdot 6 = 24$ cm² (jedes Paar mit verschiedenen Flächen zählt; ein gedrehtes Rechteck wie $2 \times 8$ und $8 \times 2$ nicht)\\
+(a) Rechnung & 1 & $x + y = 14$: $x = 3$, $y = 11$; $x = 6$, $y = 8$\\
+(a) Urteil & 1 & Falsch: $8$ ist nicht die Hälfte von $11$ ($5.5$). Auch als Folgepunkt passend zur eigenen Rechnung.\\
+(b) & 1 & Falsch, mit Gegenbeispiel: $3 \cdot 11 = 33$ und $6 \cdot 8 = 48$ cm² (jedes Paar mit verschiedenen Flächen zählt; ein gedrehtes Rechteck wie $3 \times 11$ und $11 \times 3$ nicht)\\
 \end{raster}
-\fehler{(a) $y = 20 - x$ (nicht durch $2$ geteilt): Rechnungszeile 0; Urteil als Folgepunkt 1.
+\fehler{(a) $y = 28 - x$ (nicht durch $2$ geteilt): Rechnungszeile 0; Urteil als Folgepunkt 1.
 (b) Nur «stimmt nicht» ohne Zahlen, oder ein einzelnes Beispiel, das passt: Zeile (b) 0.}
 \end{lpaufgabe}
 

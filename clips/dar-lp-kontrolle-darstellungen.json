@@ -693,12 +693,12 @@
    "rueck": {
     "0": "Ja.",
     "1": "Was am Anfang ist, sagt die Zahl ohne x.",
-    "2": "Die Zahl vor dem x ist die Änderung pro Stunde."
+    "2": "Die Zahl vor dem x ändert sich nicht mit der Zeit. Was sagt sie also?"
    },
    "sprich": "Ein Pool wird gefüllt: y gleich null Komma fünf x plus drei. Was bedeutet null Komma fünf?",
    "rueck_sprich": {
     "1": "Was am Anfang ist, sagt die Zahl ohne x.",
-    "2": "Die Zahl vor dem x ist die Änderung pro Stunde."
+    "2": "Die Zahl vor dem x ändert sich nicht mit der Zeit. Was sagt sie also?"
    }
   }
  ]

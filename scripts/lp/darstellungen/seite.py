@@ -171,11 +171,12 @@ auf1 = test('t1', 'Aufgaben · Kapitel 1', 14, [
     ('1b', 3, r'In einem Planschbecken ist nach \(x\) Minuten noch so viel Wasser (in Litern): \(x\): \(0, 5, 10\) und \(y\): \(200, 175, 150\). Stelle die Gleichung auf. Was bedeutet \(m\) hier? Wann ist das Becken leer?',
      r'<p>\(m = \dfrac{-25}{5} = -5\), \(b = 200\): \(y = -5x + 200\). Pro Minute fliessen \(5\) l ab. Leer bei \(-5x + 200 = 0\), nach \(40\) Minuten.</p>', ''),
     ('1c', 2, r'Der Graph zeigt die Parkgebühr \(y\) in Fr. für \(x\) Stunden. Schreib in Worten, wie die Gebühr berechnet wird, und die Gleichung.',
-     r'<p>Durch \((0 \mid 2)\) und \((4 \mid 6)\): \(2\) Fr. Grundgebühr, dazu \(1\) Fr. pro Stunde. \(y = x + 2\).</p>', bild('1/1,2', '0,2;4,6', 'Gerade durch (0 | 2) und (4 | 6)')),
+     r'<p>Durch \((0 \mid 2)\) und \((4 \mid 6)\): \(2\) Fr. Grundgebühr, dazu \(1\) Fr. pro Stunde. \(y = x + 2\).</p>',
+     '\n            <div class="mini-reihe"><svg class="mini-gerade" data-geraden="1/1,2" data-punkte="0,2;4,6" data-fenster="0,7,0,9" data-xname="x [h]" data-yname="y [Fr.]" aria-label="Parkgebühr: Strecke ab (0 | 2) durch (4 | 6)"></svg></div>'),
     ('1d', 2, r'Lia liest aus der Tabelle \(x\): \(2, 4, 6\) und \(y\): \(9, 15, 21\) ab: «\(m = 6\)». Was ist falsch? Gib die richtige Gleichung an.',
      r'<p>Die \(6\) gehört zu \(2\) Schritten in \(x\): \(m = \dfrac{6}{2} = 3\). \(9 = 3 \cdot 2 + b\), \(b = 3\): \(y = 3x + 3\).</p>', ''),
-    ('1e', 2, r'Ein Taxi kostet \(y = 2.5x + 6\) Franken für \(x\) Kilometer. Was bedeuten \(2.5\), \(6\) und der Punkt \((8 \mid 26)\)?',
-     r'<p>\(2.5\): Jeder Kilometer kostet \(2.50\) Fr. \(6\): Beim Einsteigen bezahlt man \(6\) Fr. \((8 \mid 26)\): Eine Fahrt über \(8\) km kostet \(26\) Fr.</p>', ''),
+    ('1e', 2, r'Ein Taxi kostet \(y = 2.5x + 6\) Franken für \(x\) Kilometer. Was bedeuten \(2.5\), \(6\) und der Punkt \((8 \mid 26)\)? Wie weit kommst du mit \(31\) Fr.?',
+     r'<p>\(2.5\): Jeder Kilometer kostet \(2.50\) Fr. \(6\): Beim Einsteigen bezahlt man \(6\) Fr. \((8 \mid 26)\): Eine Fahrt über \(8\) km kostet \(26\) Fr. Mit \(31\) Fr.: \(2.5x = 25\), \(x = 25 : 2.5 = 10\) km.</p>', ''),
     ('1f', 2, r'Warum genügen zwei Wertepaare einer Tabelle, um die Gleichung einer linearen Funktion zu finden?',
      r'<p>Durch zwei Punkte geht genau eine Gerade. Aus den beiden Paaren bekommst du \(m = \dfrac{\Delta y}{\Delta x}\), mit einem Paar dann \(b\). Ein drittes Paar ist eine gute Probe.</p>', ''),
 ])
@@ -209,7 +210,7 @@ fest2 = r'''      <div class="festhalten">
             <li>\(y = 12 - x = -x + 12\) <span class="warum">\(-x\) auf beiden Seiten</span></li>
           </ol>
           <p>Allgemein: \(y = \tfrac{U}{2} - x\). Die Steigung ist \(-1\): Wird \(x\) um \(1\) cm länger, wird \(y\) um \(1\) cm kürzer. Die Summe \(x + y\) bleibt gleich, darum <b>fällt</b> der Graph.</p>
-          <p>Jede Gleichung \(a \cdot x + c \cdot y = S\) löst du so nach \(y\) auf: zuerst \(-a \cdot x\), dann durch \(c\). Zum Beispiel \(3x + 2y = 30\): \(2y = 30 - 3x\), \(y = 15 - 1.5x\).</p>
+          <p>Jede Gleichung \(a \cdot x + c \cdot y = S\) mit \(c \neq 0\) löst du so nach \(y\) auf: zuerst \(-a \cdot x\), dann durch \(c\). Zum Beispiel \(3x + 2y = 30\): \(2y = 30 - 3x\), \(y = 15 - 1.5x\).</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -226,8 +227,8 @@ auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
      r'<p>\(2x + y = 30\), \(y = 30 - 2x\). Für \(x = 10\): \(y = 10\) (gleichseitig). Für \(x = 12\): \(y = 6\).</p>', ''),
     ('2d', 2, r'Ben schreibt für ein Rechteck mit Umfang \(40\) cm: \(y = 40 - 2x\). Prüfe mit \(x = 5\) und korrigiere.',
      r'<p>Mit \(x = 5\) gäbe es \(y = 30\) und den Umfang \(2 \cdot 5 + 2 \cdot 30 = 70\). Ben hat nur \(2x\) abgezogen, aber nicht durch \(2\) geteilt. Richtig: \(y = 20 - x\).</p>', ''),
-    ('2e', 2, r'Du hast \(24\) Fr. für Hefte (\(3\) Fr.) und Stifte (\(2\) Fr.) und gibst alles aus. Schreib die Anzahl Stifte \(y\) in Abhängigkeit der Anzahl Hefte \(x\). Welche Paare sind möglich?',
-     r'<p>\(3x + 2y = 24\), \(y = 12 - 1.5x\). Nur ganze Anzahlen: \((0 \mid 12)\), \((2 \mid 9)\), \((4 \mid 6)\), \((6 \mid 3)\), \((8 \mid 0)\).</p>', ''),
+    ('2e', 2, r'Du hast \(24\) Fr. für Hefte (\(3\) Fr.) und Stifte (\(2\) Fr.) und gibst alles aus. Schreib die Anzahl Stifte \(y\) in Abhängigkeit der Anzahl Hefte \(x\). Was bedeutet die Steigung? Welche Paare sind möglich?',
+     r'<p>\(3x + 2y = 24\), \(y = 12 - 1.5x\). Steigung \(-1.5\): Ein Heft mehr heisst \(1.5\) Stifte weniger, also \(2\) Hefte mehr, \(3\) Stifte weniger. Nur ganze Anzahlen: \((0 \mid 12)\), \((2 \mid 9)\), \((4 \mid 6)\), \((6 \mid 3)\), \((8 \mid 0)\).</p>', ''),
     ('2f', 2, r'Warum hat \(y\) bei \(x + y = S\) immer die Steigung \(-1\), egal wie gross \(S\) ist?',
      r'<p>Die Summe bleibt gleich: Was \(x\) dazubekommt, verliert \(y\). Wird \(x\) um \(1\) grösser, wird \(y\) um \(1\) kleiner. \(S\) verschiebt die Gerade nur.</p>', ''),
 ])
@@ -257,7 +258,7 @@ fest3 = r'''      <div class="festhalten">
           <div class="titel">Ein Graph zum Sachverhalt</div>
           <p>Treppe: \(2h + a = 63\) (in cm, \(h\) Stufenhöhe, \(a\) Auftrittsbreite), also \(a = 63 - 2h\). Erlaubt seien Stufen von \(15\) bis \(20\) cm.</p>
           <ol class="weg">
-            <li><b>Definitionsbereich</b> aus dem Text: \(15 \le h \le 20\) <span class="warum">nur sinnvolle Werte</span></li>
+            <li><b>Definitionsbereich</b> (auch Definitionsmenge) aus dem Text: \(15 \le h \le 20\) <span class="warum">nur sinnvolle Werte</span></li>
             <li><b>Endpunkte</b> rechnen: \(h = 15\): \(a = 33\); \(h = 20\): \(a = 23\) <span class="warum">Wertebereich \(23 \le a \le 33\)</span></li>
             <li><b>Achsen</b>: Grösse und Einheit, gleichmässige Skala, bequeme Einteilung <span class="warum">grösster Wert : Häuschen, aufrunden auf 1, 2, 5, 10, 20, 25, 50, …</span></li>
             <li><b>Zeichnen</b>: eine Strecke zwischen den Endpunkten <span class="warum">Längen gibt es auch dazwischen</span></li>
@@ -271,13 +272,13 @@ fest3 = r'''      <div class="festhalten">
         </div>
       </div>'''
 auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
-    ('3a', 3, r'Eine Kerze ist \(20\) cm hoch und wird pro Stunde \(2.5\) cm kürzer. Gib die Gleichung, den Definitionsbereich und den Wertebereich an.',
-     r'<p>\(y = 20 - 2.5x\). Leer bei \(20 - 2.5x = 0\), \(x = 8\): \(0 \le x \le 8\) Stunden, \(0 \le y \le 20\) cm.</p>', ''),
+    ('3a', 3, r'Treppenregel \(2h + a = 63\) (in cm). Löse nach \(h\) auf. Eine Treppe soll Auftrittsbreiten \(a\) von \(25\) bis \(31\) cm haben: Welche Stufenhöhen gehören dazu? Gib Definitions- und Wertebereich an.',
+     r'<p>\(2h = 63 - a\), \(h = \dfrac{63 - a}{2}\). \(a = 25\): \(h = 19\); \(a = 31\): \(h = 16\). Definitionsbereich \(25 \le a \le 31\), Wertebereich \(16 \le h \le 19\) cm. Je breiter der Auftritt, desto niedriger die Stufe.</p>', ''),
     ('3b', 2, r'Wie viel soll ein Häuschen bedeuten? (a) Werte bis \(450\), \(9\) Häuschen. (b) Werte bis \(70\), \(8\) Häuschen.',
      r'<p>(a) \(450 : 9 = 50\), also \(50\). (b) \(70 : 8 = 8.75\), aufgerundet auf die bequeme Zahl \(10\).</p>', ''),
-    ('3c', 2, r'Strecke oder einzelne Punkte? (a) Preis einer Taxifahrt nach \(x\) km. (b) Kosten für \(x\) Konzerttickets. (c) Personen in einem Lift mit \(x\) Kindern und \(y\) Erwachsenen bei \(8\) Plätzen. (d) Wasser in einer Wanne nach \(x\) Minuten.',
+    ('3c', 2, r'Strecke oder einzelne Punkte? (a) Preis einer Taxifahrt nach \(x\) km. (b) Kosten für \(x\) Konzerttickets. (c) Ein Lift ist mit \(8\) Personen voll: Erwachsene \(y\) in Abhängigkeit der Kinder \(x\). (d) Wasser in einer Wanne nach \(x\) Minuten.',
      r'<p>(a) Strecke. (b) Punkte. (c) Punkte (nur ganze Personen). (d) Strecke.</p>', ''),
-    ('3d', 3, r'Ein Taxi kostet \(6\) Fr. Grundtaxe und \(3\) Fr. pro km, für Fahrten bis \(10\) km. Zeichne den Graphen auf Häuschenpapier: Achsen mit Grösse, Einheit und Einteilung.',
+    ('3d', 3, r'Ein Taxi kostet \(6\) Fr. Grundtaxe und \(3\) Fr. pro km, für Fahrten bis \(10\) km. Zeichne den Graphen auf Häuschenpapier, die \(y\)-Achse hat \(8\) Häuschen: Achsen mit Grösse, Einheit und Einteilung.',
      r'<p>\(y = 3x + 6\), Endpunkte \((0 \mid 6)\) und \((10 \mid 36)\). Zum Beispiel \(x\)-Achse «Strecke [km]», \(1\) Häuschen \(= 1\) km; \(y\)-Achse «Preis [Fr.]», \(1\) Häuschen \(= 5\) Fr. (\(36 : 8 = 4.5\), bequem \(5\)). Strecke von \((0 \mid 6)\) bis \((10 \mid 36)\).</p>', ''),
     ('3e', 2, r'Mia beschriftet die \(y\)-Achse in gleichen Abständen mit \(0, 10, 20, 50, 100\). Was ist falsch, und was sieht man dann im Graphen?',
      r'<p>Die Abstände stehen für verschiedene Schritte (\(10\), \(10\), \(30\), \(50\)). Die Skala ist nicht gleichmässig: Eine Gerade sieht geknickt aus, und Steigungen kann man nicht vergleichen.</p>', ''),
@@ -310,9 +311,9 @@ fest4 = r'''      <div class="festhalten">
           <table class="wt vergleich">
             <tr><th></th><th>Summe gleich: \(x + y = S\)</th><th>Produkt gleich: \(x \cdot y = P\)</th></tr>
             <tr><th>Name</th><td>linear fallend, \(y = S - x\)</td><td>antiproportional, \(y = \dfrac{P}{x}\)</td></tr>
-            <tr><th>Tabelle</th><td>gleiche Differenzen</td><td>gleiche Produkte</td></tr>
-            <tr><th>\(x\) verdoppeln</th><td>\(y\) wird um gleich viel kleiner</td><td>\(y\) wird halbiert</td></tr>
-            <tr><th>Graph</th><td>Gerade, trifft beide Achsen</td><td>Kurve, trifft keine Achse</td></tr>
+            <tr><th>Tabelle</th><td>\(\Delta y : \Delta x\) gleich; bei gleichen Schritten in \(x\) also gleiche Differenzen</td><td>gleiche Produkte</td></tr>
+            <tr><th>\(x\) verdoppeln</th><td>\(y\) wird um so viel kleiner, wie \(x\) grösser wird, nicht halbiert</td><td>\(y\) wird halbiert</td></tr>
+            <tr><th>Graph</th><td>fallende Gerade; verlängert trifft sie beide Achsen</td><td>Kurve, trifft keine Achse</td></tr>
           </table>
           <p>Velo, \(30\) km: Der Restweg bei \(15\) km/h ist \(s = 30 - 15t\), linear fallend. Die Fahrzeit bei \(v\) km/h ist \(t = \dfrac{30}{v}\), antiproportional: doppelt so schnell, halb so lang.</p>
           <p><b>Aussagen prüfen:</b> Ein Gegenbeispiel genügt, um eine Aussage zu widerlegen. Ein Beispiel, das passt, beweist sie nicht.</p>
@@ -332,8 +333,8 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
      r'<p>\(s = 120 - 60t\), linear fallend. Nach \(1.5\) h: \(120 - 90 = 30\) km.</p>', ''),
     ('4d', 2, r'Behauptung: «Wenn \(y\) kleiner wird, während \(x\) wächst, ist der Zusammenhang antiproportional.» Widerlege sie mit einem Gegenbeispiel.',
      r'<p>Zum Beispiel \(y = 10 - x\): \(x = 1\), \(y = 9\), Produkt \(9\); \(x = 2\), \(y = 8\), Produkt \(16\). Das Produkt bleibt nicht gleich.</p>', ''),
-    ('4e', 2, r'Rechtecke mit der Fläche \(36\) cm² und Rechtecke mit dem Umfang \(24\) cm: Berechne \(y\) für \(x = 3, 6, 9\) cm. Welcher Zusammenhang ist linear?',
-     r'<p>Fläche \(36\): \(y = \dfrac{36}{x}\): \(12, 6, 4\), antiproportional. Umfang \(24\): \(y = 12 - x\): \(9, 6, 3\), linear fallend.</p>', ''),
+    ('4e', 2, r'Rechtecke mit der Fläche \(24\) cm² und Rechtecke mit dem Umfang \(20\) cm: Berechne \(y\) für \(x = 2, 4, 6\) cm. Welcher Zusammenhang ist linear?',
+     r'<p>Fläche \(24\): \(y = \dfrac{24}{x}\): \(12, 6, 4\), antiproportional. Umfang \(20\): \(y = 10 - x\): \(8, 6, 4\), linear fallend.</p>', ''),
     ('4f', 2, r'Warum trifft der Graph von \(y = \dfrac{12}{x}\) die \(x\)-Achse nie?',
      r'<p>Für \(y = 0\) müsste \(x \cdot 0 = 12\) sein. Das geht nicht: Ein Bruch mit Zähler \(12\) ist nie null. Je grösser \(x\), desto näher kommt die Kurve der Achse, ohne sie zu treffen.</p>', ''),
 ])
@@ -342,7 +343,7 @@ k4 = kapitel(4, 'antiproportional', 'Linear fallend oder antiproportional?', 40,
              (CLIP + 'antiproportional', 'Linear fallend oder antiproportional?'), sim4,
              (CLIP + 'kontrolle-antiproportional', 'Kontrollfragen: linear oder antiproportional'), fest4,
              [uebung('art', 'Welcher Zusammenhang?'), uebung('gegenbeispiel', 'Gegenbeispiel finden')],
-             auf4, V_MOD, komp='K4')
+             auf4, V_GRAPH, komp='K4')
 
 # ------------------------------------------------------------------ Vorwissen
 k0 = f'''
@@ -353,7 +354,7 @@ k0 = f'''
 ''' + r'''      <details class="anleitung">
         <summary><h3>Kurz wiederholt</h3></summary>
         <ul class="kurz">
-          <li><b>Lineare Funktion:</b> \(y = m \cdot x + b\) mit Anfangswert \(b\) (bei \(x = 0\)) und Änderung \(m\) pro Schritt.</li>
+          <li><b>Lineare Funktion:</b> \(y = m \cdot x + b\) mit Anfangswert \(b\) (bei \(x = 0\)) und Änderung \(m\), wenn \(x\) um \(1\) grösser wird.</li>
           <li><b>Nach \(y\) auflösen:</b> \(x + y = 25\) gibt \(y = 25 - x\).</li>
           <li><b>Proportional:</b> \(y : x\) bleibt gleich (\(1, 2, 3\) Stück kosten \(4, 8, 12\) Fr.). <b>Antiproportional</b> (umgekehrt proportional): \(x \cdot y\) bleibt gleich (\(2\) Personen brauchen \(6\) h, \(4\) Personen \(3\) h).</li>
           <li><b>Zeiten:</b> \(1\) h \(= 60\) min, also \(30\) min \(= 0.5\) h.</li>
@@ -371,7 +372,7 @@ k0 = f'''
     ('0e', 2, r'Schreib in Stunden: \(2\) h \(30\) min und \(90\) min.',
      r'<p>\(2.5\) h und \(1.5\) h.</p>', ''),
 ]) + '''
-      <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen und die Lösungen nachrechnen; lineare Funktionen übst du im Leitprogramm «Lineare Funktionen».</p>
+      <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen und die Lösungen nachrechnen; lineare Funktionen übst du im Leitprogramm <a href="lineare-funktionen.html">Lineare Funktionen</a>.</p>
     </section>'''
 
 # ------------------------------------------------------------------ Gesamttest (nur PDF)

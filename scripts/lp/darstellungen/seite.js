@@ -134,21 +134,21 @@
       for (var t = 0; t <= 5; t++){ h += '<td' + (t === Z.x ? ' class="an"' : '') + '>' + t + '</td>'; w += '<td' + (t === Z.x ? ' class="an"' : '') + '>' + z(Z.m * t + Z.b) + '</td>'; }
       tab.innerHTML = h + '</tr>' + w + '</tr><tr><th></th><td></td>' + [1, 2, 3, 4, 5].map(function(){ return '<td class="dif">' + (Z.m >= 0 ? '+' : '−') + Math.abs(Z.m) + '</td>'; }).join('') + '</tr>';
       formel.innerHTML = linTxt(Z.m, Z.b);
-      satz.innerHTML = 'Am Anfang (x = 0) ist y = <b class="orange">' + z(Z.b) + '</b>. Bei jedem Schritt nach rechts ' + (Z.m ? 'ändert sich y um <b class="blau">' + (Z.m > 0 ? '+' : '−') + Math.abs(Z.m) + '</b>' : 'bleibt y gleich') + '. '
+      satz.innerHTML = 'Am Anfang (x = 0) ist y = <b class="orange">' + z(Z.b) + '</b>. Wird x um 1 grösser, ' + (Z.m ? 'ändert sich y um <b class="blau">' + (Z.m > 0 ? '+' : '−') + Math.abs(Z.m) + '</b>' : 'bleibt y gleich') + '. '
         + '<span class="grau">Der Punkt (' + Z.x + ' | ' + z(yx) + ') sagt: Bei x = ' + Z.x + ' ist y = ' + z(yx) + '.</span>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, [
-      { text: 'Text: «Am Anfang 20, bei jedem Schritt 5 dazu.» Stell \\(b\\) und \\(m\\) passend ein.',
+      { text: 'Text: «Am Anfang 20, wird \\(x\\) um 1 grösser, kommen 5 dazu.» Stell \\(b\\) und \\(m\\) passend ein.',
         ok: function(Z){ return Z.b === 20 && Z.m === 5; } },
       { text: 'Tabelle: \\(x\\): 0, 1, 2 und \\(y\\): 30, 27, 24. Stell die passende Gerade ein.',
         ok: function(Z){ return Z.b === 30 && Z.m === -3; } },
       { text: 'Tabelle: \\(x\\): 2, 4, 6 und \\(y\\): 18, 26, 34. Achtung, die Schritte sind 2 breit.',
         ok: function(Z){ return Z.b === 10 && Z.m === 4; } },
-      { text: 'Aussage: «Bei \\(x = 4\\) ist \\(y = 42\\), pro Schritt kommen 7 dazu.» Stell die Gerade ein und zieh \\(x\\) auf 4.',
+      { text: 'Aussage: «Bei \\(x = 4\\) ist \\(y = 42\\), und pro 1 in \\(x\\) kommen 7 dazu.» Stell die Gerade ein und zieh \\(x\\) auf 4.',
         ok: function(Z){ return Z.b === 14 && Z.m === 7 && Z.x === 4; } },
-      { text: 'Graph: Die Gerade geht durch \\((2 \\mid 35)\\) und \\((6 \\mid 15)\\). Stell sie ein.',
+      { text: 'Zwei Punkte: Die Gerade geht durch \\((2 \\mid 35)\\) und \\((6 \\mid 15)\\). Stell sie ein.',
         ok: function(Z){ return Z.b === 45 && Z.m === -5; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
@@ -167,8 +167,9 @@
       var Z = zustand(); zeigeWert(fig, 's2-U', Z.U + ' cm'); zeigeWert(fig, 's2-x', z(Z.x) + ' cm');
       var k = Achsen(svg, F2);
       k.strecke(0, Z.U / 2, Z.U / 2, 0, 'linie blau');
+      k.punkt(0, Z.U / 2, 'pkt leer'); k.punkt(Z.U / 2, 0, 'pkt leer');   /* Ränder: x = 0 oder y = 0 ist kein Rechteck */
       var geht = Z.y > 0;
-      if (geht) k.punkt(Z.x, Z.y, 'pkt gruen', '(' + z(Z.x) + ' | ' + z(Z.y) + ')', 8, -8);
+      if (geht) k.punkt(Z.x, Z.y, 'pkt gruen', '(' + z(Z.x) + ' | ' + z(Z.y) + ')', Z.x > 14 ? -8 : 8, Z.y > 15 ? 16 : -8, Z.x > 14 ? 'end' : 'start');
       while (bild.firstChild) bild.removeChild(bild.firstChild);
       bild.setAttribute('viewBox', '0 0 220 220');
       if (geht){
@@ -199,15 +200,15 @@
      der Bereich von … bis … und ob der Graph eine Strecke ist oder aus einzelnen Punkten besteht. */
   var SIT3 = [
     { text: 'Eine Kerze ist 30 cm hoch und brennt pro Stunde 2.5 cm ab. Zeichne den sinnvollen Teil des Graphen.',
-      m: -2.5, b: 30, art: 'strecke', von: 0, bis: 12, F: { y1: 32, sy: 4, ym: [8, 16, 24, 32], xname: 't [h]', yname: 'Höhe [cm]' } },
+      m: -2.5, b: 30, art: 'strecke', von: 0, bis: 12, F: { y1: 32, sy: 4, ym: [8, 16, 24, 32], xname: 'x [h]', yname: 'y [cm]' } },
     { text: 'Eine 10er-Karte fürs Kino: Nach \\(x\\) Besuchen sind noch \\(y = 10 - x\\) Eintritte übrig.',
-      m: -1, b: 10, art: 'punkte', von: 0, bis: 10, F: { y1: 12, sy: 2, ym: [2, 4, 6, 8, 10, 12], xname: 'Besuche', yname: 'übrig' } },
+      m: -1, b: 10, art: 'punkte', von: 0, bis: 10, F: { y1: 12, sy: 2, ym: [2, 4, 6, 8, 10, 12], xname: 'x [Besuche]', yname: 'y [Eintritte]' } },
     { text: 'Ein Tank enthält 120 l, eine Pumpe holt 8 l pro Minute heraus.',
-      m: -8, b: 120, art: 'strecke', von: 0, bis: 15, F: { y1: 128, sy: 16, ym: [32, 64, 96, 128], xname: 't [min]', yname: 'V [l]' } },
+      m: -8, b: 120, art: 'strecke', von: 0, bis: 15, F: { y1: 128, sy: 16, ym: [32, 64, 96, 128], xname: 'x [min]', yname: 'y [l]' } },
     { text: 'Du hast 18 Fr. für Glace, eine Kugel kostet 2 Fr. Nach \\(x\\) Kugeln bleiben \\(y = 18 - 2x\\) Franken.',
-      m: -2, b: 18, art: 'punkte', von: 0, bis: 9, F: { y1: 20, sy: 2, ym: [4, 8, 12, 16, 20], xname: 'Kugeln', yname: 'Fr.' } },
-    { text: 'Ein Handyakku zeigt 100 % und verliert beim Spielen 8 Prozentpunkte pro Stunde.',
-      m: -8, b: 100, art: 'strecke', von: 0, bis: 12.5, F: { y1: 100, sy: 10, ym: [20, 40, 60, 80, 100], xname: 't [h]', yname: 'Akku [%]' } }
+      m: -2, b: 18, art: 'punkte', von: 0, bis: 9, F: { y1: 20, sy: 2, ym: [4, 8, 12, 16, 20], xname: 'x [Kugeln]', yname: 'y [Fr.]' } },
+    { text: 'Ein Regenfass enthält 20 l und fasst 80 l. Pro Minute kommen 4 l dazu, bis es voll ist: \\(y = 4x + 20\\).',
+      m: 4, b: 20, art: 'strecke', von: 0, bis: 15, F: { y1: 96, sy: 16, ym: [16, 32, 48, 64, 80, 96], xname: 'x [min]', yname: 'y [l]' } }
   ];
   (function(){
     var fig = document.getElementById('sim3'); if (!fig) return;
@@ -222,9 +223,9 @@
       k.gerade(S.m, S.b, 'linie grau gestrichelt');
       if (Z.art === 'strecke'){ k.strecke(a, f(a), c, f(c), 'linie blau'); k.punkt(a, f(a), 'pkt'); k.punkt(c, f(c), 'pkt'); }
       else for (var x = Math.ceil(a); x <= c + 1e-9; x++) k.punkt(x, f(x), 'pkt blau');
-      var neg = f(c) < -1e-9;
-      formel.innerHTML = 'y = ' + z(S.b) + ' − ' + z(-S.m) + ' · x &nbsp;·&nbsp; von x = ' + z(a) + ' bis x = ' + z(c) + ': y von ' + z(f(a)) + ' bis ' + z(f(c))
-        + (neg ? ' <span class="nein-text">— negativ: geht das?</span>' : '');
+      var neg = f(c) < -1e-9, voll = S.m > 0 && f(c) > 80 + 1e-9;
+      formel.innerHTML = linTxt(S.m, S.b) + ' &nbsp;·&nbsp; von x = ' + z(a) + ' bis x = ' + z(c) + ': y von ' + z(f(a)) + ' bis ' + z(f(c))
+        + (neg ? ' <span class="nein-text">(negativ: Geht das?)</span>' : voll ? ' <span class="nein-text">(mehr als 80 l: Geht das?)</span>' : '');
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -275,8 +276,12 @@
 
   /* ---------- Minibilder: <svg class="mini-gerade" data-geraden="m,b;m,b" data-punkte="x,y;x,y"> ---------- */
   function miniBild(svg, geraden, punkte){
-    var k = Achsen(svg, { w: 180, h: 180, rl: 14, x0: -6, x1: 6, y0: -6, y1: 6, xm: [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5], ym: [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5], r: 3.5 });   /* jede ganze Zahl beschriftet: abzulesende Werte (Prüfung 10.10.2026) */
-    geraden.forEach(function(g, i){ k.gerade(g[0], g[1], 'linie ' + (i ? 'orange' : 'blau')); });
+    var d = svg.dataset, sach = !!d.fenster;
+    var o = { w: 180, h: 180, rl: 14, x0: -6, x1: 6, y0: -6, y1: 6, xm: [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5], ym: [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5], r: 3.5 };   /* jede ganze Zahl beschriftet */
+    if (sach){ var f = d.fenster.split(',').map(Number), ganz = function(a, b){ var l = []; for (var i = Math.max(1, a); i <= b; i++) l.push(i); return l; };
+      o.x0 = f[0]; o.x1 = f[1]; o.y0 = f[2]; o.y1 = f[3]; o.xm = ganz(f[0], f[1]); o.ym = ganz(f[2], f[3]); o.xname = d.xname; o.yname = d.yname; }
+    var k = Achsen(svg, o);
+    geraden.forEach(function(g, i){ k.gerade(g[0], g[1], 'linie ' + (i ? 'orange' : 'blau'), sach ? 0 : null); });   /* Sachgraph: erst ab x = 0 */
     punkte.forEach(function(p){ k.punkt(p[0], p[1], 'pkt'); });
     return k;
   }
@@ -352,7 +357,11 @@
       'ln|5/2|6/1', 'ln|-1/1|12/1', 'ln|-3/2|15/1', 'ln|-3/1|21/1', 'ln|-2/1|8/1', 'ln|-2/1|30/1', 'ln|-1/1|20/1', 'ln|-3/2|12/1', 'ln|2/1|5/1',
       'ln|3/1|7/1', 'ln|-2/1|12/1', 'ln|1/2|3/1', 'ln|-1/1|15/1', 'ln|-2/1|10/1', 'ln|-1/1|7/1', 'ln|-2/1|40/1', 'ln|3/10|3/2', 'ln|4/1|5/1',
       'ln|-1/1|18/1', 'ln|-3/2|15/2', 'ln|15/1|40/1', 'ln|-5/1|30/1', 'ln|-3/1|21/1', 'ln|3/1|6/1', 'ln|-1/1|10/1',
-      'um|R|24', 'um|R|30', 'um|R|36', 'um|R|20', 'um|R|40', 'um|D|30', 'um|Z|40', 'ge|16', 'ge|20', 'ge|24'
+      'um|R|24', 'um|R|30', 'um|R|36', 'um|R|20', 'um|R|40', 'um|D|30', 'um|Z|40', 'ge|16', 'ge|20', 'ge|24',
+      'be|0|30|2.5|0', 'be|0|18|3|0', 'be|0|20|2.5|0', 'be|1|60|4|0', 'be|1|120|8|0', 'be|1|60|4|0', 'be|4|160|15|40', 'be|4|80|4|20',
+      'sk|170|9', 'sk|450|9', 'sk|70|8', 'sk|180|9',
+      'ar|18,9,6,3', 'ar|16,8,4,2', 'ar|20,10,5,4', 'ar|18,15,9,6', 'ar|2,4,8,10', 'ar|30,15,10,5', 'ar|25,20,15,0', 'ar|12,9,6,3',
+      'de|3|4|15|P', 'de|3|4|15|M', 'de|3|4|15|B', 'ge|28', 'ge|30'
     ];
     function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
 
@@ -412,7 +421,7 @@
                                                                               : 'Setz ein Wertepaar ein: \\(' + A.ys[0] + ' = m \\cdot ' + kl(A.xs[0]) + ' + b\\).');
           return t.join(' '); },
         tipps: function(A){ return ['Zuerst \\(m\\): Wie viel ändert sich \\(y\\) von Spalte zu Spalte, und wie viel \\(x\\)?',
-          '\\(m = \\dfrac{' + (A.ys[1] - A.ys[0]) + '}{' + A.d + '}\\). Dann von \\(x = ' + A.xs[0] + '\\) zurück bis \\(x = 0\\).']; },
+          '\\(m = \\dfrac{' + (A.ys[1] - A.ys[0]) + '}{' + A.d + '}\\). ' + (A.xs[0] ? 'Dann von \\(x = ' + A.xs[0] + '\\) zurück bis \\(x = 0\\).' : 'Und \\(b\\) steht schon in der Tabelle, bei \\(x = 0\\).')]; },
         loesung: function(A){ return 'm = \\dfrac{' + (A.ys[1] - A.ys[0]) + '}{' + A.d + '} = ' + A.m + ', \\quad b = ' + A.ys[0] + ' - ' + kl(A.m) + ' \\cdot ' + A.xs[0] + ' = ' + A.b; } },
 
       'deuten': { felder: ['w'],
@@ -424,7 +433,7 @@
           var x = zufallG(2, D.fallend ? Math.floor((b - 1) / m) : 9), y = (D.fallend ? -m : m) * x + b, frage, o;
           if (m === b || x === y || y === m || y === b) return TYPEN.deuten.neu();
           if (art === 'P'){ frage = 'Was bedeutet der Punkt \\((' + x + ' \\mid ' + y + ')\\)?'; o = [['r', D.P(x, y)], ['v', D.Pv(x, y)], ['e', D.Pe(x, y)]]; }
-          else if (art === 'M'){ frage = 'Was bedeutet die Zahl \\(' + m + '\\) in der Gleichung?'; o = [['r', D.M(m)], ['g', D.Mg(m)], ['a', D.Mb(m)]]; }
+          else if (art === 'M'){ frage = 'Was bedeutet die Zahl \\(' + (D.fallend ? '-' : '') + m + '\\) in der Gleichung?'; o = [['r', D.M(m)], ['g', D.Mg(m)], ['a', D.Mb(m)]]; }
           else { frage = 'Was bedeutet die Zahl \\(' + b + '\\) in der Gleichung?'; o = [['r', D.Bk(b)], ['s', D.Bm(b)], ['x', D.Bx(b)]]; }
           return { k: k, m: m, b: b, x: x, y: y, art: art, optionen: mischen(o), text: D.t(B(m), b) + ' ' + frage, muster: '{w}' }; },
         richtig: function(A, e){ return e.w === 'r'; },
@@ -449,9 +458,10 @@
         schl: function(A){ return lnSchl(A.mm, B(A.b)); },
         eingabe: function(A){ return { m: bTxt(A.mm).replace('−', '-'), b: String(A.b) }; },
         neu: function(){
-          var a = zufallG(1, 6), c = zufall([1, 2, 2, 3, 4, 5]), b = zufallG(2, 12);
+          var a = zufallG(1, 6), c = zufall([1, 2, 2, 3, 4, 5]), b = zufallG(2, 12), halb = c % 2 === 0 && Math.random() < 0.35;   /* auch b = 7.5 (Gesamttest G4) */
           if (a === c && c === 1) return TYPEN.aufloesen.neu();
-          return { a: a, c: c, S: c * b, b: b, mm: B(-a, c),
+          var S = c * b + (halb ? c / 2 : 0); b = S / c;
+          return { a: a, c: c, S: S, b: b, mm: B(-a, c),
                    text: 'Löse nach \\(y\\) auf: \\(' + (a === 1 ? '' : a) + 'x + ' + (c === 1 ? '' : c) + 'y = ' + (c * b) + '\\). Schreib als \\(y = m \\cdot x + b\\).',
                    muster: '\\(m = \\) {m} &nbsp; \\(b = \\) {b}' }; },
         richtig: function(A, e){ return bEq(e.m, A.mm) && bEq(e.b, B(A.b)); },
@@ -460,8 +470,9 @@
         pruefen: function(A, e){
           if (A.c > 1 && bEq(e.b, B(A.S))) return 'Nach \\(' + A.c + 'y = \\dots\\) teilst du <b>durch ' + A.c + '</b>, und zwar beide Glieder rechts.';
           if (bEq(e.m, B(A.a, A.c))) return '<b>Vorzeichen</b>: \\(' + (A.a === 1 ? '' : A.a) + 'x\\) wechselt die Seite, also \\(-' + (A.a === 1 ? '' : A.a) + 'x\\).';
-          var p = bAdd(bMul(e.m, B(2)), e.b), soll = B(A.S - 2 * A.a, A.c);
-          return 'Probe mit \\(x = 2\\): Aus der Gleichung folgt \\(y = ' + zt(soll) + '\\), deine Gerade gibt \\(' + zt(p) + '\\). Zuerst \\(-' + (A.a === 1 ? '' : A.a) + 'x\\) auf beiden Seiten, dann durch \\(' + A.c + '\\).'; },
+          var xp = [2, 3, 1, 4].filter(function(x){ return !bEq(bAdd(bMul(e.m, B(x)), e.b), B(A.S - x * A.a, A.c)); })[0] || 2;
+          var p = bAdd(bMul(e.m, B(xp)), e.b), soll = B(A.S - xp * A.a, A.c);
+          return 'Probe mit \\(x = ' + xp + '\\): Aus der Gleichung folgt \\(y = ' + zt(soll) + '\\), deine Gerade gibt \\(' + zt(p) + '\\). Zuerst \\(-' + (A.a === 1 ? '' : A.a) + 'x\\) auf beiden Seiten' + (A.c > 1 ? ', dann durch \\(' + A.c + '\\).' : '.'); },
         tipps: function(A){ return ['Bring \\(' + (A.a === 1 ? '' : A.a) + 'x\\) auf die rechte Seite' + (A.c > 1 ? ', dann teile durch \\(' + A.c + '\\).' : '.'),
           '\\(' + (A.c === 1 ? '' : A.c) + 'y = ' + A.S + ' - ' + (A.a === 1 ? '' : A.a) + 'x\\)']; },
         loesung: function(A){ return (A.c === 1 ? '' : A.c) + 'y = ' + A.S + ' - ' + (A.a === 1 ? '' : A.a) + 'x' + (A.c > 1 ? ' \\;\\Rightarrow\\; y = ' + A.b + ' - ' + zt(B(A.a, A.c)) + 'x' : '') + ', \\quad m = ' + zt(A.mm) + ', \\; b = ' + A.b; } },
@@ -500,26 +511,36 @@
 
       /* ── Kapitel 3 ── */
       'bereich': { felder: ['von', 'bis'],
-        schl: function(A){ return 'be|' + A.k + '|' + A.L + '|' + A.r; },
+        schl: function(A){ return 'be|' + A.k + '|' + A.L + '|' + A.r + '|' + A.a; },
         eingabe: function(A){ return { von: '0', bis: bWert(A.ende).replace('−', '-') }; },
         neu: function(){
-          var k = zufallG(0, 3), r, L, text;
-          if (k === 0){ r = zufall([2, 2.5, 3, 4, 5]); L = r * zufall([4, 5, 6, 8, 10]); text = 'Eine Kerze ist ' + L + ' cm hoch und wird pro Stunde ' + r + ' cm kürzer: \\(y = ' + L + ' - ' + r + 'x\\) (\\(x\\) in Stunden).'; }
-          else if (k === 1){ r = zufall([4, 5, 6, 8, 10]); L = r * zufall([10, 12, 15, 20, 25]); text = 'Ein Tank enthält ' + L + ' l, pro Minute fliessen ' + r + ' l ab: \\(y = ' + L + ' - ' + r + 'x\\) (\\(x\\) in Minuten).'; }
-          else if (k === 2){ r = zufall([5, 8, 10, 20]); L = 100; text = 'Ein Akku zeigt 100 % und verliert pro Stunde ' + r + ' Prozentpunkte: \\(y = 100 - ' + r + 'x\\) (\\(x\\) in Stunden).'; }
-          else { r = zufall([2, 3, 4, 5]); L = r * zufall([6, 7, 8, 9, 10]); text = 'Du hast ' + L + ' Fr., ein Heft kostet ' + r + ' Fr. Nach \\(x\\) Heften bleiben \\(y = ' + L + ' - ' + r + 'x\\) Franken.'; }
-          var ende = bDiv(bDez(L), bDez(r));
-          return { k: k, r: r, L: L, ende: ende, text: text + ' Welche Werte von \\(x\\) sind sinnvoll?', muster: 'von \\(x = \\) {von} &nbsp; bis \\(x = \\) {bis}' }; },
+          /* fallend bis 0 (Kerze, Tank, Akku, Geld) oder steigend bis voll (Becken): Der Bereich endet, wo die Situation aufhört. */
+          var k = zufallG(0, 4), r, L, a = 0, text;
+          if (k === 0){ r = zufall([1.5, 2, 2.5, 3]); L = r * zufall([4, 6, 8, 10, 12]); text = 'Eine Kerze ist ' + L + ' cm hoch und wird pro Stunde ' + r + ' cm kürzer: \\(y = ' + L + ' - ' + r + 'x\\) (\\(x\\) in Stunden).'; }
+          else if (k === 1){ r = zufall([4, 5, 6, 10]); L = r * zufall([10, 12, 20, 25]); text = 'Ein Tank enthält ' + L + ' l, pro Minute fliessen ' + r + ' l ab: \\(y = ' + L + ' - ' + r + 'x\\) (\\(x\\) in Minuten).'; }
+          else if (k === 2){ r = zufall([5, 10, 20]); L = 100; text = 'Ein Akku zeigt 100 % und verliert pro Stunde ' + r + ' Prozentpunkte: \\(y = 100 - ' + r + 'x\\) (\\(x\\) in Stunden).'; }
+          else if (k === 3){ r = zufall([2, 3, 4, 5]); L = r * zufall([6, 7, 8, 9, 10]); text = 'Du hast ' + L + ' Fr., ein Heft kostet ' + r + ' Fr. Nach \\(x\\) Heften bleiben \\(y = ' + L + ' - ' + r + 'x\\) Franken.'; }
+          else { r = zufall([5, 10, 15, 20]); a = zufall([10, 20, 30, 40]); L = a + r * zufall([4, 5, 6, 8, 10]);
+            text = 'In einem Becken stehen ' + a + ' cm Wasser. Pro Stunde steigt es um ' + r + ' cm, bis das Becken mit ' + L + ' cm voll ist: \\(y = ' + r + 'x + ' + a + '\\).'; }
+          var ende = bDiv(bSub(bDez(L), B(a)), bDez(r));
+          return { k: k, r: r, L: L, a: a, ende: ende, text: text + ' Welche Werte von \\(x\\) sind sinnvoll?', muster: 'von \\(x = \\) {von} &nbsp; bis \\(x = \\) {bis}' }; },
         richtig: function(A, e){ return bEq(e.von, B(0)) && bEq(e.bis, A.ende); },
-        fehler: function(A){ return [[{ von: '0', bis: String(A.L) }, 'teilen'], [{ von: '0', bis: bWert(bMul(bDez(A.L), bDez(A.r))).replace('−', '-') }, 'teilen'], [{ von: '-1', bis: bWert(A.ende).replace('−', '-') }, 'Anfang']]; },
+        fehler: function(A){ var f = [[{ von: '-1', bis: bWert(A.ende).replace('−', '-') }, 'Anfang']];
+          if (A.k === 4) f.push([{ von: '0', bis: bWert(bDiv(bDez(A.L), bDez(A.r))).replace('−', '-') }, 'schon']);
+          else f.push([{ von: '0', bis: String(A.L) }, 'teilen'], [{ von: '0', bis: bWert(bMul(bDez(A.L), bDez(A.r))).replace('−', '-') }, 'teilen']);
+          return f; },
         pruefen: function(A, e){
           var t = [];
           if (!bEq(e.von, B(0))) t.push(bZahl(e.von) < 0 ? 'Vor dem <b>Anfang</b> gibt es nichts: Der Bereich beginnt bei \\(x = 0\\).' : 'Schon bei \\(x = 0\\) ist die Situation sinnvoll: Das ist der <b>Anfang</b>.');
-          if (!bEq(e.bis, A.ende)) t.push(bEq(e.bis, bDez(A.L)) || bEq(e.bis, bMul(bDez(A.L), bDez(A.r))) ? 'Bis \\(y = 0\\): \\(' + A.L + ' - ' + A.r + 'x = 0\\). Dazu <b>teilen</b>: \\(x = ' + A.L + ' : ' + A.r + '\\).'
-            : 'Wann ist nichts mehr übrig? Setz \\(y = 0\\) und löse nach \\(x\\) auf.');
+          if (!bEq(e.bis, A.ende)){
+            if (A.k === 4) t.push(bEq(e.bis, bDiv(bDez(A.L), bDez(A.r))) ? 'Es steht <b>schon</b> Wasser im Becken: Bis voll fehlen nur \\(' + A.L + ' - ' + A.a + '\\) cm.' : 'Wann ist das Becken voll? Setz \\(y = ' + A.L + '\\) und löse nach \\(x\\) auf.');
+            else t.push(bEq(e.bis, bDez(A.L)) || bEq(e.bis, bMul(bDez(A.L), bDez(A.r))) ? 'Bis \\(y = 0\\): \\(' + A.L + ' - ' + A.r + 'x = 0\\). Dazu <b>teilen</b>: \\(x = ' + A.L + ' : ' + A.r + '\\).'
+              : 'Wann ist nichts mehr übrig? Setz \\(y = 0\\) und löse nach \\(x\\) auf.');
+          }
           return t.join(' '); },
-        tipps: function(A){ return ['Der Bereich beginnt beim Anfang \\(x = 0\\) und endet, wenn \\(y = 0\\) ist.', '\\(' + A.L + ' - ' + A.r + 'x = 0\\)']; },
-        loesung: function(A){ return '0 \\le x \\le ' + A.L + ' : ' + A.r + ' = ' + bWertTex(A.ende); } },
+        tipps: function(A){ return ['Der Bereich beginnt beim Anfang \\(x = 0\\) und endet dort, wo die Situation aufhört: ' + (A.k === 4 ? 'wenn das Becken voll ist.' : 'wenn nichts mehr übrig ist.'),
+          A.k === 4 ? '\\(' + A.r + 'x + ' + A.a + ' = ' + A.L + '\\)' : '\\(' + A.L + ' - ' + A.r + 'x = 0\\)']; },
+        loesung: function(A){ return '0 \\le x \\le ' + (A.k === 4 ? '(' + A.L + ' - ' + A.a + ') : ' + A.r : A.L + ' : ' + A.r) + ' = ' + bWertTex(A.ende) + (A.k === 3 ? '\\text{, nur ganze Zahlen}' : ''); } },
 
       'skala': { felder: ['k'],
         schl: function(A){ return 'sk|' + A.M + '|' + A.n; },
@@ -538,7 +559,7 @@
           if (w * A.n >= A.M * 4) return 'Ein ' + A.n + '-Häuschen-Bild reicht dann bis ' + z(w * A.n) + ': Die Werte füllen nur einen kleinen Teil. Ein <b>Häuschen</b> soll weniger bedeuten.';
           if ([1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500].indexOf(w) < 0) return 'Das reicht, ist aber keine <b>bequeme</b> Zahl zum Ablesen. Runde auf die nächste bequeme Zahl auf.';
           return 'Das geht, aber eine kleinere bequeme Zahl reicht auch, und das Bild wird grösser.'; },
-        tipps: function(A){ return ['Teile den grössten Wert durch die Anzahl Häuschen.', A.M + ' : ' + A.n + ' = ' + z(A.M / A.n) + '. Runde auf eine bequeme Zahl auf.']; },
+        tipps: function(A){ return ['Teile den grössten Wert durch die Anzahl Häuschen.', A.M + ' : ' + A.n + (A.M % A.n ? ' ≈ ' : ' = ') + z(A.M / A.n) + '. Runde auf eine bequeme Zahl auf.']; },
         loesung: function(A){ return A.M + ' : ' + A.n + ' = ' + bWertTex(B(A.M, A.n)) + ' \\;\\Rightarrow\\; ' + A.k; } },
 
       /* ── Kapitel 4 ── */
@@ -547,9 +568,12 @@
         eingabe: function(A){ return { w: A.art }; },
         neu: function(){
           var art = zufall(['steigend', 'fallend', 'prop', 'anti', 'anti', 'keines']), xs, ys, P;
-          if (art === 'anti'){ P = zufall([12, 18, 20, 24, 30, 36, 48, 60]); var t = []; for (var d = 1; d <= P; d++) if (P % d === 0) t.push(d);
-            xs = mischen(t).slice(0, 4).sort(function(a, b){ return a - b; }); ys = xs.map(function(x){ return P / x; }); }
+          /* Die x-Schritte verraten nichts: gleich oder ungleich bei jeder Art (Prüfung 10.10.2026) */
+          if (art === 'anti'){ P = zufall([12, 18, 20, 24, 30, 36, 48, 60, 120]); var t = []; for (var d = 1; d <= P; d++) if (P % d === 0) t.push(d);
+            var reihen = [1, 2, 3].map(function(x0){ return [x0, x0 + 1, x0 + 2, x0 + 3]; }).filter(function(r){ return r.every(function(x){ return P % x === 0; }); });
+            xs = reihen.length && Math.random() < 0.5 ? zufall(reihen) : mischen(t).slice(0, 4).sort(function(a, b){ return a - b; }); ys = xs.map(function(x){ return P / x; }); }
           else { var s = zufall([1, 2]), x0 = zufallG(0, 2); xs = [0, 1, 2, 3].map(function(i){ return x0 + s * i; });
+            if (art !== 'keines' && Math.random() < 0.5) xs = mischen([0, 1, 2, 3, 4, 5, 6, 7, 8]).slice(0, 4).sort(function(a, b){ return a - b; });
             var k = zufallG(2, 6), c = zufallG(3, 20);
             ys = xs.map(function(x){ return art === 'steigend' ? k * x + c : art === 'fallend' ? 6 * k + 20 - k * x : art === 'prop' ? k * x : x * x + c; });
             if (art === 'prop' && xs[0] === 0) return TYPEN.art.neu(); }
@@ -559,14 +583,16 @@
         fehler: function(A){ return { anti: [[{ w: 'fallend' }, 'Differenzen']], fallend: [[{ w: 'anti' }, 'Produkt']], prop: [[{ w: 'steigend' }, 'Quotient']],
                                       steigend: [[{ w: 'prop' }, 'Quotient']], keines: [[{ w: 'steigend' }, 'Differenzen']] }[A.art]; },
         pruefen: function(A, e){
-          var d = A.ys.slice(1).map(function(v, i){ return v - A.ys[i]; }), p = A.xs.map(function(x, i){ return x * A.ys[i]; });
-          var info = ' Die <b>Differenzen</b> der \\(y\\)-Werte: ' + d.join(', ') + (A.xs[1] - A.xs[0] !== 1 ? ' (Schritt in \\(x\\): ' + (A.xs[1] - A.xs[0]) + ')' : '') + '. Die <b>Produkte</b> \\(x \\cdot y\\): ' + p.join(', ') + '.';
+          var q = A.ys.slice(1).map(function(v, i){ return bWert(B(v - A.ys[i], A.xs[i + 1] - A.xs[i])); }), p = A.xs.map(function(x, i){ return mz(x * A.ys[i]); });
+          var info = ' Die <b>Differenzen</b> \\(\\Delta y : \\Delta x\\) von Spalte zu Spalte: ' + q.join(', ') + '. Die <b>Produkte</b> \\(x \\cdot y\\): ' + p.join(', ') + '.';
+          if ((e.w === 'fallend' && A.art === 'steigend') || (e.w === 'steigend' && A.art === 'fallend')) return 'Linear stimmt, aber die Richtung nicht: Die <b>Differenzen</b> sind ' + (A.art === 'steigend' ? 'positiv, \\(y\\) wächst.' : 'negativ, \\(y\\) fällt.') + info;
+          if (e.w === 'keines' && A.art === 'prop') return 'Rechne den <b>Quotienten</b> \\(y : x\\): Er bleibt gleich.' + info;
           if (e.w === 'anti') return 'Antiproportional heisst: Das <b>Produkt</b> \\(x \\cdot y\\) bleibt gleich.' + info;
           if (e.w === 'prop') return 'Proportional heisst: Der <b>Quotient</b> \\(y : x\\) bleibt gleich, die Gerade geht durch \\((0 \\mid 0)\\).' + info;
           if (e.w === 'steigend' && A.art === 'prop') return 'Linear steigt es schon, und zusätzlich bleibt der <b>Quotient</b> \\(y : x\\) gleich.' + info;
-          if (e.w === 'fallend' || e.w === 'steigend') return 'Linear heisst: Bei gleichen Schritten in \\(x\\) sind die <b>Differenzen</b> der \\(y\\)-Werte gleich.' + info;
+          if (e.w === 'fallend' || e.w === 'steigend') return 'Linear heisst: \\(\\Delta y : \\Delta x\\) bleibt gleich; bei gleichen Schritten in \\(x\\) also gleiche <b>Differenzen</b>.' + info;
           return 'Prüfe zuerst die Differenzen, dann die Produkte.' + info; },
-        tipps: function(A){ return ['Rechne die Differenzen der \\(y\\)-Werte und die Produkte \\(x \\cdot y\\).', 'Gleiche Differenzen: linear. Gleiche Produkte: antiproportional. Gleicher Quotient \\(y : x\\): proportional.']; },
+        tipps: function(A){ return ['Rechne \\(\\Delta y : \\Delta x\\) von Spalte zu Spalte und die Produkte \\(x \\cdot y\\).', '\\(\\Delta y : \\Delta x\\) gleich: linear. Produkte gleich: antiproportional. Quotient \\(y : x\\) gleich: proportional.']; },
         loesung: function(A){ return '\\text{' + { steigend: 'linear steigend', fallend: 'linear fallend', prop: 'proportional', anti: 'antiproportional', keines: 'keines davon' }[A.art] + '}'; } },
 
       'gegenbeispiel': { felder: ['x1', 'x2'],

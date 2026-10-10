@@ -81,7 +81,7 @@ gerade('1a Handy', 4, 15, [(0, 15), (1, 19), (2, 23), (3, 27), (6, 39)])
 soll('1b Planschbecken', tabelle([0, 5, 10], [200, 175, 150]), (-1 * 5, 200)); soll('1b leer', F(200, 5), 40)
 gerade('1c Parkieren', 1, 2, [(0, 2), (4, 6)])
 soll('1d Lia', tabelle([2, 4, 6], [9, 15, 21]), (3, 3)); falsch('1d Lia m = 6', 15 - 9, 3)
-gerade('1e Taxi', F(5, 2), 6, [(8, 26)])
+gerade('1e Taxi', F(5, 2), 6, [(8, 26), (10, 31)])
 
 # ---- Kapitel 2: Summe bleibt gleich
 soll('Clip2 Rechteck U = 24', summe(2, 2, 24), (-1, 12)); soll('Clip2 Vorhersage x = 5', [12 - 5, 24 - 5, 24 - 2 * 5], [7, 19, 14])
@@ -101,7 +101,7 @@ soll('2e ganzzahlig', [(x, y(F(-3, 2), 12, x)) for x in range(0, 9) if y(F(-3, 2
 # ---- Kapitel 3: Sinnvolle Werte, saubere Achsen
 gerade('Clip3 Treppe a = 63 − 2h', -2, 63, [(15, 33), (20, 23), (18, 27)])
 soll('Sim3 Bereiche', [F(30, F(5, 2)), F(120, 8), F(18, 2), F(100, 8)], [12, 15, 9, F(25, 2)])
-soll('3a Kerze', [F(20, F(5, 2)), y(F(-5, 2), 20, 8)], [8, 0])
+soll('3a Treppe h = (63 − a)/2', [F(63 - 25, 2), F(63 - 31, 2)], [19, 16])
 soll('3b Skala', [F(450, 9), F(70, 8)], [50, F(35, 4)])          # 8.75 → bequem 10
 gerade('3d Taxi', 3, 6, [(0, 6), (10, 36)])
 
@@ -118,7 +118,9 @@ soll('4a B Gleichung', tabelle([1, 2, 4, 5], [18, 15, 9, 6]), (-3, 21))
 soll('4b', [F(120, v) for v in (40, 60, 80)], [3, 2, F(3, 2)])
 soll('4c', y(-60, 120, F(3, 2)), 30)
 soll('4d Gegenbeispiel y = 10 − x', [9 * 1, 8 * 2], [9, 16])
-soll('4e', [[F(36, x) for x in (3, 6, 9)], [12 - x for x in (3, 6, 9)]], [[12, 6, 4], [9, 6, 3]])
+soll('4e', [[F(24, x) for x in (2, 4, 6)], [10 - x for x in (2, 4, 6)]], [[12, 6, 4], [8, 6, 4]])
+
+soll('Sim3 Regenfass', F(80 - 20, 4), 15)
 
 # ---- Vertiefung
 soll('V1 Flächen', [x * (10 - x) for x in range(1, 10)], [9, 16, 21, 24, 25, 24, 21, 16, 9])
@@ -143,7 +145,9 @@ soll('G4 ganzzahlig', [(x, y(F(-3, 2), F(15, 2), x)) for x in range(0, 6) if y(F
 gerade('G5 Pool', 15, 40, [(0, 40), (8, 160)])
 soll('G7', [art([1, 2, 3, 6], [30, 15, 10, 5]), art([1, 2, 3, 6], [25, 20, 15, 0]), tabelle([1, 2, 3, 6], [25, 20, 15, 0])],
      ['antiproportional', 'linear fallend', (-5, 30)])
-soll('G8a', [10 - 2, 10 - 4, F(10 - 2, 2)], [8, 6, 4]); soll('G8b', [2 * 8, 4 * 6], [16, 24])
+soll('G8a Umfang 28', [14 - 3, 14 - 6, F(14 - 3, 2)], [11, 8, F(11, 2)]); soll('G8b', [3 * 11, 6 * 8], [33, 48])
+soll('G6 y = 5x', [5 * x for x in (0, 1, 2, 5, 8)], [0, 5, 10, 25, 40]); soll('G6 Schritte', [5 - 0, 10 - 5, 25 - 10, 40 - 25], [5, 5, 15, 15])
+soll('G1 Folgefehler vertauscht', F(9 - F(3, 10), F(3, 2)), F(29, 5))
 soll('Punkte', 4 + 3 + 3 + 3 + 4 + 2 + 3 + 3, 25)
 
 print('\n' + ('ALLE ZAHLEN STIMMEN' if not fehler else f'{fehler} ABWEICHUNG(EN)'))

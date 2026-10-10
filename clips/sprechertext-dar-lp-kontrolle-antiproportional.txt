@@ -1,6 +1,6 @@
-0.40	Eins mal achtzehn, zwei mal neun, drei mal sechs, sechs mal drei: Das Produkt ist immer achtzehn. Antiproportional.
-8.81	Bei jedem Schritt wird y um drei kleiner: gleiche Differenzen. Linear fallend.
-14.78	Doppelt so viele Personen brauchen halb so lange: drei Stunden. Vier mal sechs gibt vierundzwanzig, acht mal drei auch.
-22.70	y gleich zehn minus x. Bei x gleich zwei ist y acht, bei x gleich vier ist y sechs. Nicht halbiert.
-31.01	Zwei mal sechs und vier mal vier haben beide den Umfang sechzehn, aber die Flächen zwölf und sechzehn. Das widerlegt die Aussage.
-39.32	Zum Mitnehmen: Differenzen gleich, dann linear. Produkte gleich, dann antiproportional. Für ein Gegenbeispiel brauchst du zwei wirklich verschiedene Fälle.
+0.40	Eins mal sechzehn, zwei mal acht, vier mal vier, acht mal zwei: Das Produkt ist immer sechzehn. Antiproportional.
+8.80	x wächst immer um eins, und y wird jedes Mal um drei kleiner: gleiche Differenzen bei gleichen Schritten. Linear fallend.
+17.31	Doppelt so viele Pumpen brauchen halb so lange: vier Stunden. Drei mal acht gibt vierundzwanzig, sechs mal vier auch.
+25.21	y gleich neun minus x. Bei x gleich zwei ist y sieben, bei x gleich vier ist y fünf. Nicht halbiert.
+33.82	Zwei mal sechs und vier mal vier haben beide den Umfang sechzehn, aber die Flächen zwölf und sechzehn. Das widerlegt die Aussage.
+42.13	Zum Mitnehmen: Wächst x in gleichen Schritten und sind die Differenzen gleich, ist es linear. Sind die Produkte gleich, ist es antiproportional. Für ein Gegenbeispiel brauchst du zwei wirklich verschiedene Fälle.

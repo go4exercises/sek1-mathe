@@ -189,12 +189,12 @@
    "rueck": {
     "1": "Ja.",
     "2": "Probe: 2 · 4 + 2 · 26 ist viel mehr als 30.",
-    "0": "Du hast 30 − 2 · 4 gerechnet. Dann steht da noch 2y = 22."
+    "0": "Du hast 30 − 2 · 4 gerechnet. Was steht dann noch links vom Gleichheitszeichen?"
    },
    "sprich": "Umfang dreissig Zentimeter, x gleich vier Zentimeter. Wie lang ist y?",
    "rueck_sprich": {
     "2": "Probe: zwei mal vier plus zwei mal sechsundzwanzig ist viel mehr als dreissig.",
-    "0": "Du hast dreissig minus zwei mal vier gerechnet. Dann steht da noch zwei y gleich zweiundzwanzig."
+    "0": "Du hast dreissig minus zwei mal vier gerechnet. Was steht dann noch links vom Gleichheitszeichen?"
    }
   },
   {

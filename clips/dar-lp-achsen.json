@@ -98,7 +98,7 @@
    "name": "Achsen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Jetzt die Achsen. Nach rechts die Stufenhöhe h in Zentimetern, nach oben die Auftrittsbreite a in Zentimetern. Die Werte gehen bis dreiunddreissig. Ein Häuschen für fünf Zentimeter passt gut.",
+   "sprecher": "Jetzt die Achsen. Nach rechts die Stufenhöhe h in Zentimetern, nach oben die Auftrittsbreite a in Zentimetern. Die Werte gehen bis dreiunddreissig, nach oben hast du acht Häuschen. Dreiunddreissig durch acht ist etwa vier Komma eins: Ein Häuschen für fünf Zentimeter passt.",
    "elemente": [
     {
      "typ": "notiz",
@@ -115,7 +115,7 @@
      "x": 150,
      "y": 470,
      "groesse": 50,
-     "ein": 8.64
+     "ein": 9.58
     },
     {
      "typ": "graf",
@@ -206,7 +206,7 @@
      "yname": "a [cm]"
     }
    ],
-   "dauer": 12.23
+   "dauer": 16.0
   },
   {
    "name": "Strecke",
@@ -341,12 +341,12 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.79,
+     "ein": 7.76,
      "geraden": [
       {
        "m": -2,
        "q": 63,
-       "farbe": 5,
+       "farbe": 4,
        "gestrichelt": true,
        "dicke": 3
       }
@@ -439,7 +439,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.69,
+     "ein": 1.68,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -552,7 +552,7 @@
      "y": 300,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 0.99
+     "ein": 0.98
     },
     {
      "typ": "graf",
@@ -562,7 +562,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.03,
+     "ein": 2.04,
      "geraden": [],
      "punkte": [
       {
@@ -713,7 +713,7 @@
      "y": 300,
      "groesse": 42,
      "farbe": "rot",
-     "ein": 1.96
+     "ein": 1.97
     },
     {
      "typ": "notiz",
@@ -722,7 +722,7 @@
      "y": 420,
      "groesse": 42,
      "farbe": "rot",
-     "ein": 7.48
+     "ein": 7.47
     },
     {
      "typ": "notiz",
@@ -731,7 +731,7 @@
      "y": 540,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 9.46
+     "ein": 9.47
     },
     {
      "typ": "graf",
@@ -741,7 +741,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.96,
+     "ein": 1.97,
      "geraden": [],
      "punkte": [],
      "pfeile": true,

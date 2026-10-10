@@ -30,3 +30,9 @@ Was: In `HOWTO-leitprogramme.md` §15 nach «Probe nicht an einer Nullstelle ein
 (Hilfsfunktion nur einmal definieren; Probe mit abweichendem Punkt; Sachgraphen enden bei 0; «Probe mit dem nicht
 eingesetzten Punkt»; `@…@` im Clip ist Mathematik, «|» trennt Notizzeilen). Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15.
 Warum: Fehler, die im Sek-I-Leitprogramm auftraten und sich in TALS genauso einschleichen können. Nachgezählt: 5 Punkte.
+
+## HOWTO §15: vier Fehlerklassen aus der Prüfung «Darstellungen wechseln» (Sek I, 10.10.2026)
+
+Was: In `HOWTO-leitprogramme.md` §15 nach dem Punkt zu `@…@` vier Punkte ergänzen (gleiche Differenzen nur bei gleichen Schritten;
+Bewegung folgt der Richtung im Ton; Zufallsübungen ohne verräterisches Muster; Sperrliste für jeden Übungstyp).
+Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15. Warum: in TALS ebenso möglich (Tabellenübungen, bewegte Figuren). Nachgezählt: 4 Punkte.

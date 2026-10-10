@@ -618,15 +618,7 @@
      "abstand": 0,
      "anim": "fade",
      "ein": 5.75,
-     "geraden": [
-      {
-       "m": 6,
-       "q": 40,
-       "farbe": 5,
-       "gestrichelt": true,
-       "dicke": 3
-      }
-     ],
+     "geraden": [],
      "punkte": [],
      "pfeile": true,
      "tippbar": true,
@@ -693,7 +685,23 @@
      "achsen": false,
      "raster": false,
      "xname": "x [Eintritte]",
-     "yname": "y [Fr.]"
+     "yname": "y [Fr.]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        40
+       ],
+       "bis": [
+        10.5,
+        103
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
     }
    ],
    "dauer": 10.11

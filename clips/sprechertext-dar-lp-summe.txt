@@ -2,7 +2,7 @@
 8.12	Jede Seite kommt zweimal vor: zwei x plus zwei y gleich vierundzwanzig. Durch zwei: x plus y gleich zwölf. Minus x: y gleich zwölf minus x.
 20.00	Für x gleich fünf ist y gleich zwölf minus fünf, also sieben Zentimeter. Probe: zwei mal fünf plus zwei mal sieben gibt vierundzwanzig.
 29.44	Alle Rechtecke mit diesem Umfang: Ihre obere rechte Ecke liegt auf der Geraden y gleich zwölf minus x. Wird x um eins länger, wird y um eins kürzer. Die Steigung ist minus eins.
-41.24	Das geht auch mit Preisen. Für dreissig Franken kaufst du Getränke zu drei Franken und Snacks zu zwei Franken. Drei x plus zwei y gleich dreissig. Minus drei x, dann durch zwei: y gleich fünfzehn minus eins Komma fünf x.
-57.84	Häufiger Fehler: nur zwei x abziehen und nicht durch zwei teilen. y gleich vierundzwanzig minus zwei x stimmt nicht: Mit x gleich zwei wäre y gleich zwanzig, und der Umfang wäre vierundvierzig.
-69.79	Zum Mitnehmen: Bleibt eine Summe gleich, ist der Zusammenhang linear fallend. Löse nach y auf: zuerst den x-Teil abziehen, dann durch die Zahl vor dem y teilen. Mach die Probe mit einer Zahl.
-82.02	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+41.24	Das geht auch mit Preisen. Für dreissig Franken kaufst du x Getränke zu drei Franken und y Snacks zu zwei Franken. Drei x plus zwei y gleich dreissig. Minus drei x, dann durch zwei: y gleich fünfzehn minus eins Komma fünf x.
+58.56	Häufiger Fehler: nur zwei x abziehen und nicht durch zwei teilen. y gleich vierundzwanzig minus zwei x stimmt nicht: Mit x gleich zwei wäre y gleich zwanzig, und der Umfang wäre vierundvierzig.
+70.51	Zum Mitnehmen: Bleibt eine Summe gleich, ist der Zusammenhang linear fallend. Löse nach y auf: zuerst den x-Teil abziehen, dann durch die Zahl vor dem y teilen. Mach die Probe mit einer Zahl.
+82.74	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

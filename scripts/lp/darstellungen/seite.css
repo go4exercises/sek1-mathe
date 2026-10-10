@@ -97,3 +97,4 @@ b.orange{color:var(--orange)} b.blau{color:var(--blau)} span.blau{color:var(--bl
 .sim-satz{font-family:var(--sans);font-size:.9rem;text-align:center;margin:4px 0 8px}
 select.ue-wahl{font-family:var(--sans);font-size:.9rem;padding:5px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte);max-width:100%;white-space:normal}
 .sl-grp.akz-grau input[type=range]{accent-color:var(--tinte-2)}
+.pkt.leer{fill:var(--karte);stroke:var(--blau);stroke-width:1.6}

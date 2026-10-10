@@ -817,6 +817,14 @@ gegen sie und darüber hinaus.
   eingesetzt hast» verlangen.
 - **Im Clip setzt `@…@` Mathematik**: Leerzeichen und Einheiten darin verschwinden («200l»); die Einheit ausserhalb setzen und
   «l» in Handschrift als «Liter» ausschreiben (sieht sonst wie «/» aus). In Notizen trennt «|» die Zeilen: «(0 ∣ b)» mit ∣ (U+2223).
+- **«Gleiche Differenzen» nur bei gleichen Schritten** (Darstellungen 10.10.2026): Eine Tabelle mit x = 1, 2, 3, 6 ist linear,
+  obwohl die Differenzen −5, −5, −15 sind. Regel immer als «Δy : Δx gleich» oder mit «bei gleichen Schritten in x».
+- **Eine Bewegung folgt der Richtung im Ton** (Darstellungen 10.10.2026): «x wird länger» bei einem Rechteck, das gerade kürzer
+  wird, weil der nächste Stützpunkt zufällig links liegt. Jeden Stützpunkt gegen das Wort prüfen, auf dem er liegt.
+- **Zufallsübungen ohne verräterisches Muster** (Darstellungen 10.10.2026): Ungleiche x-Schritte nur bei antiproportionalen
+  Tabellen machten «ungleich → anti» zur Abkürzung. Jede Art mit gleichen und ungleichen Schritten würfeln.
+- **Sperrliste für jeden Übungstyp** (Darstellungen 10.10.2026): auch Typen ohne Gleichung (Bereich, Skala, Tabellenart, Deuten)
+  bekommen Schlüssel; sonst kommt die Erkundung oder der Gesamttest als Zufallsübung.
 - **Fragetexte eines Kontrollclips verschieden beginnen lassen**: `pruef-fragen` erkennt eine Frage
   an ihren ersten 20 Zeichen; zwei Fragen «Welche Nullstellen hat …» lassen den Durchlauf scheitern.
 - Live-Anzeigen runden nur mit «≈».

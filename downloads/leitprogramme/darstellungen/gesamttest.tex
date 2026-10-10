@@ -2,7 +2,8 @@
 % Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/darstellungen/zahlen.py).
 % Vorgabe ~/TODO-BM-Vorkurs-LP03-15.md §3: Text ↔ Term ↔ Tabelle ↔ Graph ↔ Aussage (G1, G2), konstanter Gesamtwert (G3, G4),
 % Definitionsbereich, Skalierung und Einheit (G5, G6), linear fallend ≠ antiproportional und Falsch-Aussagen mit Gegenbeispiel (G7, G8).
-% 25 Punkte, rund 30 Minuten.
+% 25 Punkte, rund 30 Minuten. Nach der Prüfung vom 10.10.2026: G1(b) mit Tabelle, G6 mit eigener Skala (nicht 3e), G8 mit
+% Umfang 28 cm (nicht Kontrollclip), Raster G1/G3/G5 eindeutig.
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
 \usepackage{ds-gitter}
@@ -28,7 +29,7 @@ Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt die
 Ein E-Scooter kostet $1.50$ Fr. fürs Entsperren und $0.30$ Fr. pro Fahrminute ($x$: Minuten, $y$: Kosten in Fr.).
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Schreib die Gleichung.
-\item Fülle die Tabelle für $x = 0$, $10$ und $20$.
+\item Fülle die Tabelle aus: \quad $\begin{array}{c|ccc} x & 0 & 10 & 20 \\ \hline y & \phantom{00.0} & \phantom{00.0} & \phantom{00.0} \end{array}$
 \item Was bedeutet der Punkt $(20 \mid 7.5)$? Antworte in einem Satz.
 \item Wie lange kannst du für $9$ Fr. fahren?
 \end{enumerate}
@@ -82,10 +83,10 @@ In einem Pool stehen $40$ cm Wasser. Pro Stunde steigt das Wasser um $15$ cm, bi
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G6}{Achse}{2 P}
-Lea zeichnet $y = 10x$ für $x = 0, 1, 2, 5, 10$. Die $y$-Achse beschriftet sie so wie im Bild.
+Lea zeichnet $y = 5x$ für $x = 0, 1, 2, 5, 8$. Die $y$-Achse beschriftet sie so wie im Bild.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Was ist an der $y$-Achse falsch?
-\item Warum sieht der Graph geknickt aus, obwohl $y = 10x$ eine Gerade ist?
+\item Warum sieht der Graph geknickt aus, obwohl $y = 5x$ eine Gerade ist?
 \end{enumerate}
 
 \smallskip
@@ -94,9 +95,9 @@ Lea zeichnet $y = 10x$ für $x = 0, 1, 2, 5, 10$. Die $y$-Achse beschriftet sie 
   \draw[->,line width=0.6pt] (0,0) -- (10.8,0) node[right] {$x$};
   \draw[->,line width=0.6pt] (0,0) -- (0,4.6) node[above] {$y$};
   \foreach \i in {0,2,...,10} \node[below] at (\i,0) {$\i$};
-  \foreach \w [count=\k from 0] in {0,10,20,50,100} {\draw (-0.12,\k) -- (0.12,\k); \node[left] at (0,\k) {$\w$};}
-  \draw[lpblau,line width=1pt] (0,0) -- (1,1) -- (2,2) -- (5,3) -- (10,4);
-  \foreach \p in {(0,0),(1,1),(2,2),(5,3),(10,4)} \fill \p circle (1.8pt);
+  \foreach \w [count=\k from 0] in {0,5,10,25,40} {\draw (-0.12,\k) -- (0.12,\k); \node[left] at (0,\k) {$\w$};}
+  \draw[lpblau,line width=1pt] (0,0) -- (1,1) -- (2,2) -- (5,3) -- (8,4);
+  \foreach \p in {(0,0),(1,1),(2,2),(5,3),(8,4)} \fill \p circle (1.8pt);
 \end{tikzpicture}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.55\linewidth}\vspace{0pt}
@@ -114,9 +115,9 @@ Welche Tabelle ist linear fallend, welche antiproportional? Begründe mit einer 
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G8}{Aussagen prüfen}{3 P}
-Rechtecke mit dem Umfang $20$ cm, Seiten $x$ und $y$. Stimmt die Aussage? Begründe mit Zahlen.
+Rechtecke mit dem Umfang $28$ cm, Seiten $x$ und $y$. Stimmt die Aussage? Begründe mit Zahlen.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item «Verdoppelt man die Seite $x$, halbiert sich die Seite $y$.» Prüfe mit $x = 2$ und $x = 4$.
+\item «Verdoppelt man die Seite $x$, halbiert sich die Seite $y$.» Prüfe mit $x = 3$ und $x = 6$.
 \item «Alle diese Rechtecke haben denselben Flächeninhalt.»
 \end{enumerate}
 \lpplatz{5}

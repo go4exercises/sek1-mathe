@@ -365,7 +365,7 @@
      "x": 150,
      "y": 300,
      "groesse": 60,
-     "ein": 0.3
+     "ein": 1.38
     },
     {
      "typ": "notiz",
@@ -374,7 +374,7 @@
      "y": 430,
      "groesse": 46,
      "farbe": "blau",
-     "ein": 7.48
+     "ein": 7.46
     },
     {
      "typ": "graf",
@@ -396,17 +396,6 @@
        "beschriftung_bei": [
         10.997,
         2.783
-       ]
-      },
-      {
-       "x": 20,
-       "y": 1.5,
-       "farbe": 3,
-       "anker": "start",
-       "beschriftung": "(20 | 1.5)",
-       "beschriftung_bei": [
-        21,
-        2.05
        ]
       }
      ],
@@ -520,6 +509,76 @@
      ],
      "xname": "v [km/h]",
      "yname": "t [h]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.38,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 20,
+       "y": 1.5,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(20 | 1.5)",
+       "beschriftung_bei": [
+        21,
+        2.05
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      33
+     ],
+     "ybereich": [
+      -0.3,
+      3.6
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "v [km/h]",
+     "yname": "t [h]"
     }
    ],
    "dauer": 11.48
@@ -544,7 +603,7 @@
      "x": 150,
      "y": 400,
      "groesse": 54,
-     "ein": 7.18
+     "ein": 7.2
     },
     {
      "typ": "notiz",
@@ -553,7 +612,7 @@
      "y": 530,
      "groesse": 42,
      "farbe": "rot",
-     "ein": 9.62
+     "ein": 9.64
     },
     {
      "typ": "graf",
@@ -714,16 +773,16 @@
    "name": "Erkennen",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "So erkennst du es. Linear heisst: gleiche Differenzen, der Graph ist eine Gerade und trifft beide Achsen. Antiproportional heisst: gleiche Produkte, der Graph ist eine Kurve und trifft keine Achse.",
+   "sprecher": "So erkennst du es. Linear heisst: Wächst x in gleichen Schritten, sind die Differenzen gleich. Der Graph ist eine Gerade, verlängert trifft sie beide Achsen. Antiproportional heisst: gleiche Produkte, der Graph ist eine Kurve und trifft keine Achse.",
    "elemente": [
     {
      "typ": "notiz",
-     "text": "linear: gleiche Differenzen,|Gerade, trifft die Achsen",
+     "text": "linear: gleiche Schritte, gleiche Differenzen,|Gerade, verlängert trifft sie die Achsen",
      "x": 150,
      "y": 280,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 1.46
+     "ein": 1.66
     },
     {
      "typ": "notiz",
@@ -732,10 +791,10 @@
      "y": 450,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 6.64
+     "ein": 9.36
     }
    ],
-   "dauer": 12.06
+   "dauer": 14.84
   },
   {
    "name": "Rechteck",
@@ -765,7 +824,7 @@
      "x": 150,
      "y": 480,
      "groesse": 46,
-     "ein": 7.4
+     "ein": 7.42
     },
     {
      "typ": "graf",
@@ -775,7 +834,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.4,
+     "ein": 7.42,
      "geraden": [],
      "punkte": [],
      "pfeile": true,
@@ -894,7 +953,7 @@
          6
         ]
        ],
-       "farbe": 2,
+       "farbe": 5,
        "fuellung": 0.15
       }
      ]
@@ -906,7 +965,7 @@
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Fällt y, wenn x wächst, prüfe Differenzen und Produkte. Gleiche Differenzen: linear fallend. Gleiche Produkte: antiproportional. Und ein Gegenbeispiel genügt, um eine falsche Aussage zu widerlegen.",
+   "sprecher": "Zum Mitnehmen: Fällt y, wenn x wächst, prüfe Differenzen und Produkte. Gleiche Differenzen bei gleichen Schritten: linear fallend. Gleiche Produkte: antiproportional. Und ein Gegenbeispiel genügt, um eine falsche Aussage zu widerlegen.",
    "elemente": [
     {
      "typ": "titel",
@@ -917,7 +976,7 @@
     },
     {
      "typ": "notiz",
-     "text": "gleiche Differenzen: linear|gleiche Produkte: antiproportional|ein Gegenbeispiel widerlegt",
+     "text": "gleiche Schritte, gleiche Differenzen: linear|gleiche Produkte: antiproportional|ein Gegenbeispiel widerlegt",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -925,7 +984,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 14.42
+   "dauer": 14.85
   },
   {
    "name": "Jetzt du",
@@ -967,12 +1026,12 @@
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
-    "0": "Prüf mit der Tabelle: Von 10 auf 20 km/h wird es 3 h zu 1.5 h.",
+    "0": "Prüf mit der Tabelle: Wie lange dauert es bei 10 km/h, wie lange bei 20 km/h?",
     "1": "In der gleichen Zeit kommst du doppelt so weit."
    },
    "sprich": "Du fährst die dreissig Kilometer doppelt so schnell. Wie lange dauert die Tour?",
    "rueck_sprich": {
-    "0": "Prüf mit der Tabelle: Von zehn auf zwanzig Kilometer pro Stunde wird es drei Stunden zu eins Komma fünf Stunden.",
+    "0": "Prüf mit der Tabelle: Wie lange dauert es bei zehn Kilometern pro Stunde, wie lange bei zwanzig?",
     "1": "In der gleichen Zeit kommst du doppelt so weit."
    }
   }

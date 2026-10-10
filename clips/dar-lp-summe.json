@@ -347,7 +347,7 @@
      "x": 150,
      "y": 500,
      "groesse": 50,
-     "ein": 5.1
+     "ein": 5.08
     },
     {
      "typ": "graf",
@@ -621,7 +621,26 @@
         ],
         [
          6.34,
-         {}
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            5,
+            0
+           ],
+           [
+            5,
+            7
+           ],
+           [
+            0,
+            7
+           ]
+          ]
+         }
         ],
         [
          9.1,
@@ -632,16 +651,16 @@
             0
            ],
            [
-            4,
+            6,
             0
            ],
            [
-            4,
-            8
+            6,
+            6
            ],
            [
             0,
-            8
+            6
            ]
           ]
          }
@@ -659,24 +678,7 @@
      "abstand": 0,
      "anim": "fade",
      "ein": 4.1,
-     "geraden": [
-      {
-       "bewegung": [
-        [
-         0,
-         -1,
-         12
-        ]
-       ],
-       "farbe": 1,
-       "dreieck": {
-        "x": 5,
-        "dx": 1,
-        "farbe": 5,
-        "ein": 7.12
-       }
-      }
-     ],
+     "geraden": [],
      "punkte": [],
      "pfeile": true,
      "tippbar": true,
@@ -751,7 +753,162 @@
      "achsen": false,
      "raster": false,
      "xname": "x [cm]",
-     "yname": "y [cm]"
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        12
+       ],
+       "bis": [
+        12,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 4
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.12,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -1,
+      14
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [cm]",
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        5,
+        7
+       ],
+       "bis": [
+        6,
+        7
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        7
+       ],
+       "bis": [
+        6,
+        6
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.5,
+        7.35
+       ],
+       "text": "Δx = 1",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 26,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.25,
+        6.3
+       ],
+       "text": "Δy = −1",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 26,
+       "kursiv": false
+      }
+     ]
     }
    ],
    "dauer": 11.8
@@ -760,7 +917,7 @@
    "name": "Preise",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Das geht auch mit Preisen. Für dreissig Franken kaufst du Getränke zu drei Franken und Snacks zu zwei Franken. Drei x plus zwei y gleich dreissig. Minus drei x, dann durch zwei: y gleich fünfzehn minus eins Komma fünf x.",
+   "sprecher": "Das geht auch mit Preisen. Für dreissig Franken kaufst du x Getränke zu drei Franken und y Snacks zu zwei Franken. Drei x plus zwei y gleich dreissig. Minus drei x, dann durch zwei: y gleich fünfzehn minus eins Komma fünf x.",
    "elemente": [
     {
      "typ": "formel",
@@ -768,7 +925,7 @@
      "x": 150,
      "y": 260,
      "groesse": 56,
-     "ein": 4.34
+     "ein": 7.52
     },
     {
      "typ": "formel",
@@ -776,7 +933,7 @@
      "x": 150,
      "y": 380,
      "groesse": 56,
-     "ein": 9.16
+     "ein": 9.64
     },
     {
      "typ": "formel",
@@ -784,10 +941,10 @@
      "x": 150,
      "y": 500,
      "groesse": 60,
-     "ein": 12.04
+     "ein": 12.56
     }
    ],
-   "dauer": 16.6
+   "dauer": 17.32
   },
   {
    "name": "Fehler",
@@ -801,7 +958,7 @@
      "x": 150,
      "y": 280,
      "groesse": 62,
-     "ein": 2.08
+     "ein": 2.06
     },
     {
      "typ": "formel",

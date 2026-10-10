@@ -1,8 +1,8 @@
 0.40	Für bequeme Treppen gibt es eine Schrittregel: zwei mal die Stufenhöhe h plus die Auftrittsbreite a gibt dreiundsechzig Zentimeter. Nach a aufgelöst: a gleich dreiundsechzig minus zwei h.
 12.36	Sinnvoll sind hier Stufen von fünfzehn bis zwanzig Zentimetern. Das ist der Definitionsbereich. An seinen Enden rechnest du a aus: bei fünfzehn dreiunddreissig, bei zwanzig dreiundzwanzig Zentimeter.
-24.62	Jetzt die Achsen. Nach rechts die Stufenhöhe h in Zentimetern, nach oben die Auftrittsbreite a in Zentimetern. Die Werte gehen bis dreiunddreissig. Ein Häuschen für fünf Zentimeter passt gut.
-36.85	Du zeichnest nur die Strecke zwischen den beiden Endpunkten. Stufen dazwischen, etwa siebzehn Komma fünf Zentimeter, gibt es auch. Ausserhalb des Bereichs hat der Graph keinen Sinn.
-47.67	Anders bei Anzahlen. Bei der Kletterhalle gibt es nur ganze Eintritte. Dort zeichnest du einzelne Punkte.
-54.44	Häufiger Fehler: eine ungleichmässige Skala. Stehen null, zehn, zwanzig und fünfzig in gleichen Abständen, sieht eine Gerade geknickt aus. Und ohne Einheit an der Achse weiss niemand, was gemeint ist.
-67.18	Zum Mitnehmen: Zuerst den sinnvollen Bereich aus dem Text holen und die Endpunkte rechnen. Dann Achsen mit Grösse, Einheit und gleichmässiger Einteilung. Längen und Zeiten werden eine Strecke, Anzahlen einzelne Punkte.
-79.97	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+24.62	Jetzt die Achsen. Nach rechts die Stufenhöhe h in Zentimetern, nach oben die Auftrittsbreite a in Zentimetern. Die Werte gehen bis dreiunddreissig, nach oben hast du acht Häuschen. Dreiunddreissig durch acht ist etwa vier Komma eins: Ein Häuschen für fünf Zentimeter passt.
+40.62	Du zeichnest nur die Strecke zwischen den beiden Endpunkten. Stufen dazwischen, etwa siebzehn Komma fünf Zentimeter, gibt es auch. Ausserhalb des Bereichs hat der Graph keinen Sinn.
+51.44	Anders bei Anzahlen. Bei der Kletterhalle gibt es nur ganze Eintritte. Dort zeichnest du einzelne Punkte.
+58.21	Häufiger Fehler: eine ungleichmässige Skala. Stehen null, zehn, zwanzig und fünfzig in gleichen Abständen, sieht eine Gerade geknickt aus. Und ohne Einheit an der Achse weiss niemand, was gemeint ist.
+70.95	Zum Mitnehmen: Zuerst den sinnvollen Bereich aus dem Text holen und die Endpunkte rechnen. Dann Achsen mit Grösse, Einheit und gleichmässiger Einteilung. Längen und Zeiten werden eine Strecke, Anzahlen einzelne Punkte.
+83.74	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

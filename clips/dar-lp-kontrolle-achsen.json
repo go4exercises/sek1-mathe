@@ -227,12 +227,12 @@
    "rueck": {
     "0": "Ja.",
     "1": "Von 2 bis 4 ist ein grösserer Schritt als von 1 bis 2, im Bild aber gleich weit.",
-    "2": "Auch mit der 3 wären die Schritte zu 4 und 8 zu gross."
+    "2": "Auch mit der 3 wäre der Schritt von 4 nach 8 zu gross."
    },
    "sprich": "Eine Achse zeigt null, eins, zwei, vier, acht in gleichen Abständen. Was stimmt?",
    "rueck_sprich": {
     "1": "Von zwei bis vier ist ein grösserer Schritt als von eins bis zwei, im Bild aber gleich weit.",
-    "2": "Auch mit der Drei wären die Schritte zu vier und acht zu gross."
+    "2": "Auch mit der Drei wäre der Schritt von vier nach acht zu gross."
    }
   },
   {

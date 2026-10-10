@@ -1,7 +1,7 @@
 {
  "titel": "Funktionen sehen: Kontrollfragen linear oder antiproportional",
  "dateiname": "dar-lp-kontrolle-antiproportional",
- "kurzbeschrieb": "Fünf Fragen: Tabelle 18, 9, 6, 3 (Produkt 18), Tabelle 12, 9, 6, 3 (Differenz 3), 4 Personen 6 h → 8 Personen, x + y = 10 bei x von 2 auf 4, Gegenbeispiel zu «gleicher Umfang, gleiche Fläche» bei Umfang 16 cm.",
+ "kurzbeschrieb": "Fünf Fragen: Tabelle 16, 8, 4, 2 (Produkt 16), Tabelle 12, 9, 6, 3 (Differenz −3), 3 Pumpen 8 h → 6 Pumpen, x + y = 9 bei x von 2 auf 4, Gegenbeispiel zu «gleicher Umfang, gleiche Fläche» bei Umfang 16 cm.",
  "schlagworte": [
   "antiproportional",
   "linear fallend",
@@ -30,11 +30,11 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Eins mal achtzehn, zwei mal neun, drei mal sechs, sechs mal drei: Das Produkt ist immer achtzehn. Antiproportional.",
+   "sprecher": "Eins mal sechzehn, zwei mal acht, vier mal vier, acht mal zwei: Das Produkt ist immer sechzehn. Antiproportional.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\begin{array}{c|cccc} x & 1 & 2 & 3 & 6 \\\\ \\hline y & 18 & 9 & 6 & 3 \\end{array}",
+     "text": "\\begin{array}{c|cccc} x & 1 & 2 & 4 & 8 \\\\ \\hline y & 16 & 8 & 4 & 2 \\end{array}",
      "x": 150,
      "y": 260,
      "groesse": 46,
@@ -42,20 +42,20 @@
     },
     {
      "typ": "formel",
-     "text": "x \\cdot y = \\fc{18}",
+     "text": "x \\cdot y = \\fc{16}",
      "x": 150,
      "y": 440,
      "groesse": 56,
      "ein": 1.0
     }
    ],
-   "dauer": 8.41
+   "dauer": 8.4
   },
   {
    "name": "Frage 2",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Bei jedem Schritt wird y um drei kleiner: gleiche Differenzen. Linear fallend.",
+   "sprecher": "x wächst immer um eins, und y wird jedes Mal um drei kleiner: gleiche Differenzen bei gleichen Schritten. Linear fallend.",
    "elemente": [
     {
      "typ": "formel",
@@ -74,41 +74,41 @@
      "ein": 1.0
     }
    ],
-   "dauer": 5.97
+   "dauer": 8.51
   },
   {
    "name": "Frage 3",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Doppelt so viele Personen brauchen halb so lange: drei Stunden. Vier mal sechs gibt vierundzwanzig, acht mal drei auch.",
+   "sprecher": "Doppelt so viele Pumpen brauchen halb so lange: vier Stunden. Drei mal acht gibt vierundzwanzig, sechs mal vier auch.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "4 \\cdot 6 = 24 = 8 \\cdot \\fc{3}",
+     "text": "3 \\cdot 8 = 24 = 6 \\cdot \\fc{4}",
      "x": 150,
      "y": 330,
      "groesse": 56,
      "ein": 1.0
     }
    ],
-   "dauer": 7.92
+   "dauer": 7.9
   },
   {
    "name": "Frage 4",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "y gleich zehn minus x. Bei x gleich zwei ist y acht, bei x gleich vier ist y sechs. Nicht halbiert.",
+   "sprecher": "y gleich neun minus x. Bei x gleich zwei ist y sieben, bei x gleich vier ist y fünf. Nicht halbiert.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "x = 2: \\; y = 8 \\qquad x = 4: \\; y = \\fc{6}",
+     "text": "x = 2: \\; y = 7 \\qquad x = 4: \\; y = \\fc{5}",
      "x": 150,
      "y": 330,
      "groesse": 50,
      "ein": 1.0
     }
    ],
-   "dauer": 8.31
+   "dauer": 8.61
   },
   {
    "name": "Frage 5",
@@ -335,7 +335,7 @@
          4
         ]
        ],
-       "farbe": 2,
+       "farbe": 5,
        "fuellung": 0.15
       }
      ]
@@ -347,7 +347,7 @@
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Differenzen gleich, dann linear. Produkte gleich, dann antiproportional. Für ein Gegenbeispiel brauchst du zwei wirklich verschiedene Fälle.",
+   "sprecher": "Zum Mitnehmen: Wächst x in gleichen Schritten und sind die Differenzen gleich, ist es linear. Sind die Produkte gleich, ist es antiproportional. Für ein Gegenbeispiel brauchst du zwei wirklich verschiedene Fälle.",
    "elemente": [
     {
      "typ": "titel",
@@ -358,7 +358,7 @@
     },
     {
      "typ": "notiz",
-     "text": "Differenzen gleich: linear|Produkte gleich: antiproportional|Gegenbeispiel: zwei verschiedene Fälle",
+     "text": "gleiche Schritte, gleiche Differenzen: linear|gleiche Produkte: antiproportional|Gegenbeispiel: zwei verschiedene Fälle",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -366,7 +366,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 9.69
+   "dauer": 11.79
   }
  ],
  "fragen": [
@@ -374,22 +374,22 @@
    "szene": "Frage 1",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Tabelle: x: 1, 2, 3, 6 und y: 18, 9, 6, 3. Welcher Zusammenhang?",
+   "text": "Tabelle: x: 1, 2, 4, 8 und y: 16, 8, 4, 2. Welcher Zusammenhang?",
    "optionen": [
-    "antiproportional",
     "linear fallend",
-    "proportional"
+    "proportional",
+    "antiproportional"
    ],
-   "richtig": 0,
+   "richtig": 2,
    "rueck": {
-    "0": "Ja.",
-    "1": "Die Differenzen sind −9, −3, −3 bei verschiedenen Schritten: Rechne die Produkte x · y.",
-    "2": "Proportional hiesse: y wächst mit x."
+    "2": "Ja.",
+    "0": "Rechne die Produkte x · y.",
+    "1": "Proportional hiesse: y wächst mit x."
    },
-   "sprich": "Tabelle: x eins, zwei, drei, sechs und y achtzehn, neun, sechs, drei. Welcher Zusammenhang?",
+   "sprich": "Tabelle: x eins, zwei, vier, acht und y sechzehn, acht, vier, zwei. Welcher Zusammenhang?",
    "rueck_sprich": {
-    "1": "Rechne die Produkte x mal y.",
-    "2": "Proportional hiesse: y wächst mit x."
+    "0": "Rechne die Produkte x mal y.",
+    "1": "Proportional hiesse: y wächst mit x."
    }
   },
   {
@@ -418,44 +418,44 @@
    "szene": "Frage 3",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "4 Personen streichen einen Zaun in 6 h. Wie lange brauchen 8 gleich schnelle Personen?",
+   "text": "3 gleich starke Pumpen leeren ein Becken in 8 h. Wie lange brauchen 6 solche Pumpen?",
    "optionen": [
-    "2 h",
-    "3 h",
-    "12 h"
+    "16 h",
+    "5 h",
+    "4 h"
    ],
-   "richtig": 1,
+   "richtig": 2,
    "rueck": {
-    "1": "Ja.",
-    "2": "Mehr Personen arbeiten schneller, nicht langsamer.",
-    "0": "Prüf das Produkt: 4 · 6 und 8 · 2."
+    "2": "Ja.",
+    "0": "Mehr Pumpen schaffen es schneller, nicht langsamer.",
+    "1": "Prüf das Produkt: 3 · 8 und 6 · 5."
    },
-   "sprich": "Vier Personen streichen einen Zaun in sechs Stunden. Wie lange brauchen acht gleich schnelle Personen?",
+   "sprich": "Drei gleich starke Pumpen leeren ein Becken in acht Stunden. Wie lange brauchen sechs solche Pumpen?",
    "rueck_sprich": {
-    "2": "Mehr Personen arbeiten schneller, nicht langsamer.",
-    "0": "Prüf das Produkt: vier mal sechs und acht mal zwei."
+    "0": "Mehr Pumpen schaffen es schneller, nicht langsamer.",
+    "1": "Prüf das Produkt: drei mal acht und sechs mal fünf."
    }
   },
   {
    "szene": "Frage 4",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "x + y = 10. Bei x = 2 ist y = 8. Wie gross ist y bei x = 4?",
+   "text": "x + y = 9. Bei x = 2 ist y = 7. Wie gross ist y bei x = 4?",
    "optionen": [
-    "12",
-    "6",
-    "4"
+    "5",
+    "3.5",
+    "11"
    ],
-   "richtig": 1,
+   "richtig": 0,
    "rueck": {
-    "1": "Ja.",
-    "2": "Halbieren gilt bei gleichem Produkt. Hier bleibt die Summe gleich.",
-    "0": "Prüf die Summe: 4 + 12 ist nicht 10."
+    "0": "Ja.",
+    "1": "Halbieren gilt bei gleichem Produkt. Hier bleibt die Summe gleich.",
+    "2": "Prüf die Summe: 4 + 11 ist nicht 9."
    },
-   "sprich": "x plus y gleich zehn. Bei x gleich zwei ist y gleich acht. Wie gross ist y bei x gleich vier?",
+   "sprich": "x plus y gleich neun. Bei x gleich zwei ist y gleich sieben. Wie gross ist y bei x gleich vier?",
    "rueck_sprich": {
-    "2": "Halbieren gilt bei gleichem Produkt. Hier bleibt die Summe gleich.",
-    "0": "Prüf die Summe: vier plus zwölf ist nicht zehn."
+    "1": "Halbieren gilt bei gleichem Produkt. Hier bleibt die Summe gleich.",
+    "2": "Prüf die Summe: vier plus elf ist nicht neun."
    }
   },
   {
