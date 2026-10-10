@@ -96,7 +96,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.62
+   "dauer": 9.26
   },
   {
    "name": "Frage 2",
@@ -168,7 +168,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.43
+   "dauer": 8.56
   },
   {
    "name": "Frage 3",
@@ -224,7 +224,7 @@
      "achsen": false
     }
    ],
-   "dauer": 7.45
+   "dauer": 6.83
   },
   {
    "name": "Frage 4",
@@ -280,7 +280,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.25
+   "dauer": 7.9
   },
   {
    "name": "Frage 5",
@@ -336,7 +336,7 @@
      "achsen": false
     }
    ],
-   "dauer": 7.3
+   "dauer": 7.42
   },
   {
    "name": "Merke",
@@ -361,7 +361,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 11.45
+   "dauer": 11.89
   }
  ],
  "fragen": [
@@ -444,12 +444,12 @@
    "richtig": 2,
    "rueck": {
     "2": "Ja.",
-    "0": "Übrig bleibt 8 = 8, und das ist wahr.",
+    "0": "Setz eine Zahl ein, etwa x = 3: Stimmt die Gleichung?",
     "1": "x = 0 passt, aber nicht nur: Setz x = 3 ein."
    },
    "sprich": "Welche Lösungsmenge hat zwei mal Klammer x plus vier gleich zwei x plus acht?",
    "rueck_sprich": {
-    "0": "Übrig bleibt acht gleich acht, und das ist wahr.",
+    "0": "Setz eine Zahl ein, etwa x gleich drei: Stimmt die Gleichung?",
     "1": "x gleich null passt, aber nicht nur: Setz x gleich drei ein."
    }
   },
@@ -466,13 +466,13 @@
    "richtig": 0,
    "rueck": {
     "0": "Ja.",
-    "1": "Setz x = 0 ein: 5 = 2 ist falsch.",
-    "2": "Übrig bleibt 5 = 2, und das ist nie wahr."
+    "1": "Setz x = 0 ein: Stimmt die Gleichung?",
+    "2": "Setz eine Zahl ein, etwa x = 1: Stimmt die Gleichung?"
    },
    "sprich": "Welche Lösungsmenge hat x plus fünf gleich x plus zwei?",
    "rueck_sprich": {
-    "1": "Setz x gleich null ein: fünf gleich zwei ist falsch.",
-    "2": "Übrig bleibt fünf gleich zwei, und das ist nie wahr."
+    "1": "Setz x gleich null ein: Stimmt die Gleichung?",
+    "2": "Setz eine Zahl ein, etwa x gleich eins: Stimmt die Gleichung?"
    }
   }
  ]

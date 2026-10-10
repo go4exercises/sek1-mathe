@@ -7,7 +7,7 @@
 \renewcommand{\lpteilgebiet}{Gleichungen ·}
 \renewcommand{\lpfuss}{Bewertungspaket}
 \newcolumntype{P}{>{\centering\arraybackslash}p{10mm}}
-\newenvironment{raster}{\par\smallskip\noindent\renewcommand{\arraystretch}{1.15}\linespread{1.35}\selectfont\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
+\newenvironment{raster}{\par\smallskip\noindent\renewcommand{\arraystretch}{1.6}\linespread{1.35}\selectfont\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
   \small\textsc{Teilschritt} & \small\textsc{P} & \small\textsc{Musterlösung}\\\midrule}{\bottomrule\endtabularx\par}
 \newcommand{\fehler}[1]{\par\smallskip{\small\textcolor{lprot}{\bfseries Typische Fehler:} #1}}
 \newcommand{\E}{\,{\footnotesize\bfseries\color{lpgruen}(E)}}
@@ -40,7 +40,7 @@ Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in de
 Geh so vor:\par
 1. Schreib zu jeder Aufgabe G1 bis G9 zuerst ab, was du in meiner Lösung liest — Rechenweg und Ergebnis. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Minuszeichen, Hochzahlen und Klammern.\par
 2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
-3. Andere richtige Lösungswege zählen voll, zum Beispiel eine andere Reihenfolge der Umformungen, ein anderer gemeinsamer Nenner oder Zahlen erst eingesetzt und dann umgeformt (G8) — \textbf{ausser} die Aufgabe verlangt ein Verfahren ausdrücklich: G4 die Probe, G7(a) und G8 die umgestellte Formel. Gleichwertig: $\tfrac{x - 5}{3}$ und $\tfrac{1}{3}(x - 5)$; $L = \{4\}$ und «$x = 4$»; $L = \mathbb{Q}$ und «alle Zahlen». Ein Bruchterm zählt nur \textbf{vollständig gekürzt} und auf \textbf{einem Bruchstrich}.\par
+3. Andere richtige Lösungswege zählen voll, zum Beispiel eine andere Reihenfolge der Umformungen oder ein anderer gemeinsamer Nenner — \textbf{ausser} die Aufgabe verlangt ein Verfahren ausdrücklich: G4 die Probe, G7(a) und G8 die umgestellte Formel (wer zuerst Zahlen einsetzt, erhält die Formelzeilen nicht). In Teil A zählt ein Bruchterm nur \textbf{vollständig gekürzt} und auf \textbf{einem Bruchstrich}; $\tfrac{x - 5}{3}$ und $\tfrac{1}{3}(x - 5)$ sind dort gleichwertig. In Teil C zählt jede gleichwertige, nach der gesuchten Grösse aufgelöste Form. Gleichwertig: $L = \{4\}$ und «$x = 4$»; $L = \mathbb{Q}$, $L = \mathbb{R}$ und «alle Zahlen».\par
 4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «Summanden gekürzt», «Nenner addiert», «Minus vor dem Bruch», «Umkehrung verwechselt»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
 5. Gib zum Schluss eine Tabelle «Aufgabe | Punkte | Begründung», die Gesamtpunktzahl (von 25) und — nach der Selbsteinschätzung in Abschnitt 4 — welches Kapitel des Leitprogramms ich wiederholen soll. Keine Note.\par
 6. Fehlt ein Foto oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
@@ -62,38 +62,37 @@ Zerlegen & 1 & Zähler $(x - 5)^2$ (binomische Formel), Nenner $3(x - 5)$ (auskl
 Ergebnis & 1\E & $\dfrac{(x - 5)^2}{3(x - 5)} = \dfrac{x - 5}{3}$\\
 Nicht erlaubt & 1 & $x = 5$ (Nenner $3x - 15 = 0$)\\
 \end{raster}
-\fehler{Summanden gekürzt (z.\,B. $\tfrac{x^2 + 25}{3x}$ oder $\tfrac{x}{3} - \ldots$): Zerlege- und Ergebniszeile 0; die nicht erlaubte Zahl gibt ihren Punkt $\to$ 1 von 3\,P.
+\fehler{Summanden gekürzt (z.\,B. $\tfrac{x^2 + 25}{3x}$, weil $-10x$ gegen $-15$ «weggekürzt» wurde): Zerlege- und Ergebniszeile 0; die nicht erlaubte Zahl gibt ihren Punkt $\to$ 1 von 3\,P.
 $x = -5$ statt $x = 5$: Zeile «nicht erlaubt» 0 $\to$ 2 von 3\,P.
 Richtig zerlegt, aber nicht gekürzt: Ergebniszeile 0 $\to$ 2 von 3\,P (mit richtiger Zahl).}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G2}{Addieren}{3 P}
+\begin{lpaufgabe}{G2}{Rechnen}{4 P}
 \begin{raster}
-Hauptnenner & 1 & $x(x - 1)$ (jeder andere gemeinsame Nenner zählt, wenn er richtig verwendet wird)\\
-Erweitern & 1 & $\dfrac{3(x - 1) + 2x}{x(x - 1)}$\\
-Ergebnis & 1\E & $\dfrac{5x - 3}{x(x - 1)}$ (gleichwertig: $\dfrac{5x - 3}{x^2 - x}$)\\
+(a) Kehrwert & 1 & $\tfrac{x^2 - 4}{3x} \cdot \tfrac{6x^2}{x + 2} = \tfrac{(x - 2)(x + 2) \cdot 6x^2}{3x \cdot (x + 2)}$\\
+(a) Ergebnis & 1\E & $2x(x - 2)$ (gleichwertig: $2x^2 - 4x$)\\
+(b) Erweitern & 1 & Hauptnenner $x(x - 1)$, Zähler $3(x - 1) + 2x$ (jeder gemeinsame Nenner zählt, wenn richtig verwendet)\\
+(b) Ergebnis & 1\E & $\tfrac{5x - 3}{x(x - 1)}$ (gleichwertig: $\tfrac{5x - 3}{x^2 - x}$)\\
 \end{raster}
-\fehler{Nenner addiert ($\tfrac{5}{2x - 1}$): alle Zeilen 0.
-Zähler nicht erweitert ($\tfrac{5}{x(x - 1)}$): Erweitern- und Ergebniszeile 0 $\to$ 1 von 3\,P.
-$3(x - 1) = 3x - 1$: Erweitern- und Ergebniszeile 0 $\to$ 1 von 3\,P.}
+\fehler{(a) Kehrwert vergessen ($\tfrac{x^2 - 4}{3x} \cdot \tfrac{x + 2}{6x^2}$): beide Zeilen (a) 0. Richtig gekürzt bis $\tfrac{6x^2(x - 2)}{3x}$, nicht fertig: Ergebniszeile (a) 0.
+(b) Nenner addiert ($\tfrac{5}{2x - 1}$): beide Zeilen (b) 0.
+(b) Zähler nicht erweitert ($\tfrac{5}{x(x - 1)}$): beide Zeilen (b) 0.
+(b) Erweitert richtig hingeschrieben, dann $3(x - 1) = 3x - 1$: nur Ergebniszeile (b) 0.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G3}{Fehler finden}{3 P}
+\begin{lpaufgabe}{G3}{Fehler finden}{2 P}
 \begin{raster}
-Probe & 1 & Mit $x = 1$: links $\dfrac{10}{4} = 2.5$, rechts $1 + 3 = 4$. Nicht gleich.\\
-Fehler & 1 & Gekürzt wurde, als ob $x^2 + 9 = (x + 3)^2$ wäre, oder es wurden Summanden gekürzt; Kürzen geht nur mit gemeinsamen Faktoren.\\
-Kürzbar? & 1 & Nein: $x^2 + 9$ lässt sich nicht in Faktoren zerlegen; es gibt keinen gemeinsamen Faktor mit $x + 3$.\\
+Probe & 1 & Mit $x = 1$: links $\tfrac{10}{4} = 2.5$, rechts $1 + 3 = 4$. Nicht gleich.\\
+Kürzbar? & 1 & Nein. Begründung, eine genügt: Für $x = -3$ ist der Zähler $9 + 9 = 18$, nicht 0, also ist $x + 3$ kein Faktor des Zählers; oder: $x^2 + 9$ ist eine Summe, gestrichen werden darf nur ein gemeinsamer Faktor.\\
 \end{raster}
-\fehler{Nur «falsch» ohne Probe und ohne Grund: 0 von 3\,P.
-«Man darf nicht kürzen» ohne Hinweis auf Faktoren/Summanden: Fehlerzeile 0.
-$x^2 + 9 = (x + 3)(x - 3)$ behauptet: Zeilen «Fehler» und «kürzbar?» 0 $\to$ höchstens 1 von 3\,P.}
+\fehler{Nur «falsch» ohne Probe: Probezeile 0. «Ja, mit $x + 3$» oder $x^2 + 9 = (x + 3)(x - 3)$: Zeile «kürzbar?» 0.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G4}{Klammern}{3 P}
 \begin{raster}
 Klammer & 1 & $7x - 3x + 6 = 2x + 14$: Das Minus vor der Klammer dreht beide Vorzeichen.\\
 Lösung & 1\E & $4x + 6 = 2x + 14$, $2x = 8$, $x = 4$; $L = \{4\}$\\
-Probe & 1 & $28 - 3 \cdot 2 = 22$ und $8 + 14 = 22$. Die Probe zählt auch als Folgepunkt, wenn sie mit dem eigenen Wert richtig gerechnet ist und den Fehler zeigt.\\
+Probe & 1 & In der ursprünglichen Gleichung: $28 - 3 \cdot 2 = 22$ und $8 + 14 = 22$. Die Probe zählt auch als Folgepunkt, wenn sie mit dem eigenen Wert richtig in die ursprüngliche Gleichung eingesetzt ist und den Fehler zeigt.\\
 \end{raster}
 \fehler{$-3(x - 2) = -3x - 6$: Klammer- und Lösungszeile 0 ($x = 10$); Probe richtig gerechnet $\to$ 1 von 3\,P.
 Probe fehlt: Probezeile 0 $\to$ höchstens 2 von 3\,P.}
@@ -112,7 +111,7 @@ Minus vor dem Bruch nur beim ersten Glied ($- 2x - 2$, $x = 17$): Klammer- und L
 \begin{lpaufgabe}{G6}{Lösungsmenge}{2 P}
 \begin{raster}
 Umformen & 1 & $4x - 4 + 6 = 4x + 2$, also $4x + 2 = 4x + 2$; die $x$ fallen weg, es bleibt $2 = 2$.\\
-Lösungsmenge & 1\E & Wahr für jedes $x$: $L = \mathbb{Q}$ (alle Zahlen).\\
+Lösungsmenge & 1\E & Wahr für jedes $x$: $L = \mathbb{Q}$ (gleichwertig: «alle Zahlen», $L = \mathbb{R}$, «unendlich viele Lösungen»).\\
 \end{raster}
 \fehler{«$L = \{\,\}$» oder «$x = 0$»: Lösungsmengenzeile 0 $\to$ 1 von 2\,P, wenn richtig umgeformt.}
 \end{lpaufgabe}
@@ -134,7 +133,7 @@ Formel & 1 & $p = \dfrac{100 Z}{K \cdot t}$ (durch das ganze Produkt $K \cdot t$
 Wert & 1\E & $p = \dfrac{100 \cdot 150}{2000 \cdot 3} = \dfrac{15000}{6000} = 2.5$ (Prozent)\\
 \end{raster}
 \fehler{$p = \tfrac{100Z}{K} \cdot t$ (nur durch $K$ geteilt): Formelzeile 0; Wert $22.5$ gibt 0 $\to$ 1 von 3\,P.
-Zuerst Zahlen eingesetzt und dann richtig nach $p$ aufgelöst: gleichwertig, volle Punkte.}
+Zuerst Zahlen eingesetzt und dann nach $p$ aufgelöst: Umstellen- und Formelzeile 0, ein richtiger Wert 2.5 gibt die Wertzeile $\to$ 1 von 3\,P (verlangt war die Formel).}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G9}{Fehler finden}{2 P}

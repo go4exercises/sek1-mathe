@@ -1,7 +1,7 @@
 # Bauskripte: Leitprogramm Bruchterme, Gleichungen und Formeln
 
 Drittes Leitprogramm (Bereich Gleichungen), gebaut am 10.10.2026 im Kapitelmuster von `HOWTO-leitprogramme.md`,
-nach `~/TODO-BM-Vorkurs-LP03-15.md` §1 (LP 03), für die Sek I umgesetzt. Gerüst aus `scripts/lp/gleichungen-formeln/`.
+nach `~/TODO-BM-Vorkurs-LP03-15.md` §1 (LP 03), für die Sek I umgesetzt. Gerüst aus `scripts/lp/terme-faktorisieren/`.
 Kapitel: Bruchterme kürzen · Rechnen mit Bruchtermen · Lineare Gleichungen lösen · Formeln umstellen. Alles ohne
 Taschenrechner. Je Kapitel ① Einführungsclip (mit einer Vorhersagefrage) → ② Erkundung mit Aufgabenleiste →
 ③ Kontrollclip (fünf Fragen) → Festhalten → ④ Üben → ⑤ Aufgaben. Aus der Vorlage umgesetzt: Fehlermodul «Kürzen von
@@ -64,6 +64,6 @@ node .claude/tools/pruef-uebungen.mjs leitprogramme/gleichungen-formeln.html 300
 node .claude/tools/pruef-formelsatz.mjs leitprogramme/gleichungen-formeln.html 60
 node .claude/tools/pruef-leiste.mjs leitprogramme/gleichungen-formeln.html
 node scripts/lp/gleichungen-formeln/pruef-schritte.mjs
-node .claude/tools/pruef-fragen.mjs gleich-lp-zusammenfassen gleich-lp-kontrolle-zusammenfassen …   # alle acht
+node .claude/tools/pruef-fragen.mjs gleich-lp-kuerzen gleich-lp-kontrolle-kuerzen gleich-lp-rechnen gleich-lp-kontrolle-rechnen gleich-lp-gleichungen gleich-lp-kontrolle-gleichungen gleich-lp-formeln gleich-lp-kontrolle-formeln
 node .claude/tools/render-check.mjs leitprogramme/gleichungen-formeln.html
 ```

@@ -32,7 +32,7 @@ const LOES = {
   sim1: [{ paare: true }, { paare: true }, { paare: true }, { paare: true }, { fertig: true }],
   sim2: [{ 's2-k': 6, 's2-e': 1 }, { 's2-k': 3, 's2-e': 2 }, { 's2-k': 1, 's2-e': 1, p: true }, { 's2-k': 1, 's2-e': 0, p: true, q: true }, { 's2-k': 12, 's2-e': 1 }],
   sim3: [{ 's3-k': -1, 's3-m': -3, t: 3 }, { 's3-k': -3, 's3-m': 2, t: 4 }, { 's3-k': -2, 's3-m': 0, t: 3 }, { 's3-k': -3 }, { 's3-k': 2, 's3-m': 9, t: 3 }],
-  sim4: [{ ops: [': v'] }, { ops: [': I'] }, { ops: ['+ 5', ': 4'] }, { ops: ['· 2', ': b'] }, { ops: [': 2', '− a'] }],
+  sim4: [{ ops: [': m'] }, { ops: [': I'] }, { ops: ['+ 5', ': 4'] }, { ops: [': b', '· 2'] }, { ops: ['· 2', '− 3'] }],   // A4 in der anderen gültigen Reihenfolge
 };
 for (const [sim, ziele] of Object.entries(LOES)) {
   const r = await page.evaluate(([sim, ziele]) => {
@@ -69,6 +69,14 @@ melde(await page.evaluate(() => { const fig = document.getElementById('sim1'); f
   const o = fig.querySelector('.chip.zaehler'), text = o.textContent; o.click();     // Chips werden nach jedem Klick neu gezeichnet
   const u = [...fig.querySelectorAll('.chip.nenner')].find(c => c.textContent !== text); u.click();
   return /verschiedene Faktoren/.test(fig.textContent) && !fig.querySelector('.chip.weg'); }), 'sim1: ungleiche Faktoren lassen sich nicht streichen');
+
+// Prüfung 10.10.2026: «1/0» ist keine Formel, und der Lösungsweg «gl» nennt den echten Faktor
+melde(await page.evaluate(() => { const T = window.__TYPEN.umstellen; for (let i = 0; i < 50; i++) { const A = T.neu();
+  for (const s of ['1/0', '0/0', '2/0']) { const r = window.__term.termLesen(s, A.F.g, A.F.z); if (!r.kaputt && T.richtig(A, { f: r })) return false; } } return true; }),
+  'Umstellen: 1/0, 0/0, 2/0 werden nicht als richtig gewertet');
+melde(await page.evaluate(() => { const T = window.__TYPEN.bruchgleichung; for (let i = 0; i < 400; i++) { const A = T.neu(); if (A.art !== 'gl') continue;
+  const p = A.k[0], q = A.k[1], hn = A.hn, l = T.loesung(A); const erw = (hn / q === 1 ? '' : String(hn / q)) + '(';
+  if (l.indexOf('\\cdot ' + hn) < 0 || l.indexOf('= ' + erw) < 0) return false; } return true; }), 'Bruchgleichung gl: Lösungsweg multipliziert mit dem Hauptnenner');
 
 // ---- 2. Eingabe
 const E = await page.evaluate(() => {

@@ -50,7 +50,7 @@
      "ein": 6.62
     }
    ],
-   "dauer": 11.95
+   "dauer": 9.99
   },
   {
    "name": "Umstellen",
@@ -72,7 +72,7 @@
      "x": 150,
      "y": 421,
      "groesse": 60,
-     "ein": 0.61
+     "ein": 0.51
     },
     {
      "typ": "formel",
@@ -80,7 +80,7 @@
      "x": 150,
      "y": 528,
      "groesse": 66,
-     "ein": 3.69
+     "ein": 3.47
     },
     {
      "typ": "formel",
@@ -88,10 +88,10 @@
      "x": 150,
      "y": 702,
      "groesse": 52,
-     "ein": 6.31
+     "ein": 5.85
     }
    ],
-   "dauer": 12.17
+   "dauer": 11.72
   },
   {
    "name": "Rückwärts",
@@ -113,7 +113,7 @@
      "x": 150,
      "y": 380,
      "groesse": 58,
-     "ein": 7.66
+     "ein": 7.53
     },
     {
      "typ": "formel",
@@ -121,7 +121,7 @@
      "x": 150,
      "y": 510,
      "groesse": 62,
-     "ein": 8.76
+     "ein": 8.63
     },
     {
      "typ": "formel",
@@ -129,7 +129,7 @@
      "x": 150,
      "y": 676,
      "groesse": 54,
-     "ein": 10.22
+     "ein": 10.43
     },
     {
      "typ": "graf",
@@ -360,7 +360,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.04,
+     "ein": 4.61,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -385,8 +385,8 @@
          4.9
         ]
        ],
-       "farbe": 3,
-       "fuellung": 0.15,
+       "farbe": 5,
+       "fuellung": 0,
        "dicke": 2
       },
       {
@@ -531,8 +531,8 @@
          4.9
         ]
        ],
-       "farbe": 5,
-       "fuellung": 0,
+       "farbe": 3,
+       "fuellung": 0.15,
        "dicke": 2
       },
       {
@@ -580,7 +580,7 @@
    "name": "Trapez",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Beim Trapez ist A gleich Klammer a plus c durch zwei, mal h. Nach h: mal zwei, dann durch die ganze Summe a plus c. Die Klammer bleibt: h gleich zwei A durch Klammer a plus c.",
+   "sprecher": "Beim Trapez ist A gleich Klammer a plus c durch zwei, mal h. Nach h: mal zwei, dann durch die ganze Summe a plus c. Der Bruchstrich gilt für die ganze Summe: h gleich zwei A durch Klammer a plus c.",
    "elemente": [
     {
      "typ": "formel",
@@ -596,7 +596,7 @@
      "x": 150,
      "y": 412,
      "groesse": 56,
-     "ein": 5.39
+     "ein": 5.42
     },
     {
      "typ": "formel",
@@ -604,10 +604,10 @@
      "x": 150,
      "y": 520,
      "groesse": 62,
-     "ein": 8.07
+     "ein": 7.94
     }
    ],
-   "dauer": 13.15
+   "dauer": 12.99
   },
   {
    "name": "Fehler",
@@ -621,7 +621,7 @@
      "x": 150,
      "y": 300,
      "groesse": 62,
-     "ein": 0.98
+     "ein": 0.99
     },
     {
      "typ": "formel",
@@ -629,10 +629,10 @@
      "x": 150,
      "y": 466,
      "groesse": 54,
-     "ein": 7.42
+     "ein": 7.49
     }
    ],
-   "dauer": 11.65
+   "dauer": 11.11
   },
   {
    "name": "Merke",
@@ -657,7 +657,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 10.63
+   "dauer": 11.03
   },
   {
    "name": "Jetzt du",
@@ -682,7 +682,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 5.99
+   "dauer": 6.06
   }
  ],
  "fragen": [

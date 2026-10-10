@@ -1,6 +1,6 @@
 0.40	Minus zwei x: vier x plus vier gleich vierundzwanzig. Minus vier: vier x gleich zwanzig. Durch vier: x gleich fünf.
-9.02	Zuerst die Klammer: drei x minus sechs gleich x plus acht. Minus x, plus sechs: zwei x gleich vierzehn. Also x gleich sieben.
-17.45	Mal sechs: zwei x plus x gleich vierundzwanzig. Drei x gleich vierundzwanzig, also x gleich acht.
-24.90	Links steht ausmultipliziert zwei x plus acht, genau wie rechts. Jede Zahl erfüllt die Gleichung: L gleich alle Zahlen.
-33.15	Minus x auf beiden Seiten: fünf gleich zwei. Das ist nie wahr. Keine Lösung, die Lösungsmenge ist leer.
-40.45	Zum Mitnehmen: Klammern auflösen, Brüche wegschaffen, auf beiden Seiten dasselbe tun. Fallen die x weg, entscheidet die übrige Aussage: wahr heisst alle Zahlen, falsch heisst keine Lösung.
+9.66	Zuerst die Klammer: drei x minus sechs gleich x plus acht. Minus x, plus sechs: zwei x gleich vierzehn. Also x gleich sieben.
+18.22	Mal sechs: zwei x plus x gleich vierundzwanzig. Drei x gleich vierundzwanzig, also x gleich acht.
+25.05	Links steht ausmultipliziert zwei x plus acht, genau wie rechts. Jede Zahl erfüllt die Gleichung: L gleich alle Zahlen.
+32.95	Minus x auf beiden Seiten: fünf gleich zwei. Das ist nie wahr. Keine Lösung, die Lösungsmenge ist leer.
+40.37	Zum Mitnehmen: Klammern auflösen, Brüche wegschaffen, auf beiden Seiten dasselbe tun. Fallen die x weg, entscheidet die übrige Aussage: wahr heisst alle Zahlen, falsch heisst keine Lösung.

@@ -3,7 +3,8 @@
 `leitprogramme/gleichungen-formeln.html`, gebaut mit `scripts/lp/gleichungen-formeln/` (README dort), nach
 `~/TODO-BM-Vorkurs-LP03-15.md` §1 (LP 03).
 
-- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/gleichungen-formeln.html` (Abschnitt unten).
+- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/gleichungen-formeln.html` (Abschnitt unten, behoben).
+- [x] Freigeschaltet (nav.js, index.html, build-seo ohne noindex, Suchindex, Sitemap).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben.
 - [ ] 🔑 Hörprobe der acht Clips `gleich-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
       «Bruch-Term» (`TAUSCH`), «Zerlege», «Nenner», Fragestart («Kürze», «Rechne», «Stelle»), «y», «A» gegen «a».
@@ -14,41 +15,46 @@
 Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `3fade4e`. HOCH-Befunde
 an der Quelle nachgeprüft und bestätigt. Legende wie oben; Neuvertonung nötig: 🔊.
 
+**Behoben am 10.10.2026** (alles ausser der Hörprobe): Lösungsweg «gl», `formelGleich` mit Mindestzahl definierter Stellen,
+Erkundung 4 über die Probe, Gesamttest G2 mit Division (4 P) und G3 (2 P), Raster G8/G2/Bruchstrich-Regel, 4f Kerze statt Treppe,
+Übung «Handy-Abo» statt Treppe, Bedingungen nach dem Kürzen, Kontrollfragen K1F1, K2F5, K4F4, K4F5 neu, Sperrliste normiert,
+alle acht Clips neu vertont. HOWTO §15 um fünf Fehlerklassen ergänzt (auch in TODO-schwesterprojekt).
+
 Rechenfehler: keine — alle Zahlen von Seite, Clips und PDFs samt Fehlerwerten nachgerechnet (`zahlen.py` 134 × ok).
 Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Fragebilder der Kontrollclips, Leistenziele, Eingabe
 (Schreibweisen, gekürzt, ein Bruchstrich, Mengen, Zahlen), Diagnosen, Punktesummen, Datenschutz, Konventionen.
 
 ### HOCH
-- [ ] **Lösungsweg `bruchgleichung`/gl** multipliziert mit p·q, schreibt «· Hauptnenner» (11 % der Würfe, z. B. Paar 2/6).
-- [ ] **`formelGleich`** wertet `1/0`, `0/0`, `F/(a-a)` als richtig (keine endliche Stelle → «gleich»).
-- [ ] 🔊 **Kontrollclip Kürzen F5, Rückmeldung zu «0»:** «Nur wenn der Zähler null ist» — der Bruch ist nie 0.
-- [ ] 🔊 **Clip Rechnen, Vorhersagefrage:** «2x²» gilt als falsch, obwohl die Rückmeldung «geht auch» sagt.
-- [ ] **K2 «multiplizieren, dividieren»** weder in 2a–2f (Division) noch im Gesamttest geprüft.
-- [ ] **G7 wiederholt 4f** (Treppe nach h) und den Übungstyp `formelwert/treppe`; Kopfkommentar behauptet das Gegenteil.
-- [ ] **G8 Raster widersprüchlich:** «Zahlen zuerst eingesetzt: volle Punkte» gegen Pflichtzeile «Formel».
+- [x] **Lösungsweg `bruchgleichung`/gl** multipliziert mit p·q, schreibt «· Hauptnenner» (11 % der Würfe, z. B. Paar 2/6).
+- [x] **`formelGleich`** wertet `1/0`, `0/0`, `F/(a-a)` als richtig (keine endliche Stelle → «gleich»).
+- [x] 🔊 **Kontrollclip Kürzen F5, Rückmeldung zu «0»:** «Nur wenn der Zähler null ist» — der Bruch ist nie 0.
+- [x] 🔊 **Clip Rechnen, Vorhersagefrage:** «2x²» gilt als falsch, obwohl die Rückmeldung «geht auch» sagt.
+- [x] **K2 «multiplizieren, dividieren»** weder in 2a–2f (Division) noch im Gesamttest geprüft.
+- [x] **G7 wiederholt 4f** (Treppe nach h) und den Übungstyp `formelwert/treppe`; Kopfkommentar behauptet das Gegenteil.
+- [x] **G8 Raster widersprüchlich:** «Zahlen zuerst eingesetzt: volle Punkte» gegen Pflichtzeile «Formel».
 
 ### MITTEL
-- [ ] Erkundung 4, Aufgabe 4: «: b, dann · 2» ist richtig (Probe stimmt), Leiste gibt kein ✓.
-- [ ] G3 verlangt «x² + 9 lässt sich nicht zerlegen» — nirgends eingeführt.
-- [ ] Bedingungen fehlen nach dem Kürzen (Festhalten x ≠ −2, Gegenzahlen x ≠ 3, 1f x ≠ 2, Clip-Zerlegen x ≠ −3).
-- [ ] Wiederholungen: Sim 4.1 = Clip/Festhalten (s = v·t nach t), Sim 4.5/K4F4/4d dreimal u = 2(l + b), K1F1 gleiches Ergebnis
+- [x] Erkundung 4, Aufgabe 4: «: b, dann · 2» ist richtig (Probe stimmt), Leiste gibt kein ✓.
+- [x] G3 verlangt «x² + 9 lässt sich nicht zerlegen» — nirgends eingeführt.
+- [x] Bedingungen fehlen nach dem Kürzen (Festhalten x ≠ −2, Gegenzahlen x ≠ 3, 1f x ≠ 2, Clip-Zerlegen x ≠ −3).
+- [x] Wiederholungen: Sim 4.1 = Clip/Festhalten (s = v·t nach t), Sim 4.5/K4F4/4d dreimal u = 2(l + b), K1F1 gleiches Ergebnis
       wie Festhalten, K2F5 ≈ Festhalten und V1, K4F5 ≈ Clip (km/h), `formelwert/treppe` = 4f.
-- [ ] Sperrliste: K2F4-Schlüssel fehlt, vertauschte Seiten (3c gespiegelt, gl links/rechts) nicht normiert.
-- [ ] Zweiklammersatz in Übungen gebraucht, nirgends vorgeführt (Vortest, «Kurz wiederholt»).
-- [ ] 🔊 Clip Gleichungen «Schritte»: «| −2x» steht beim Erscheinen der Frage schon im Bild.
-- [ ] 🔊 Bild-Ton: Clip Kürzen «Faktoren» (2/3 zu früh), «Zerlegen» (Zerlegung zu spät), Rechnen «Fehler» (richtig nicht gesprochen).
-- [ ] 🔊 Rückmeldungen verraten die Lösung (K3F4, K3F5); «Klammer bleibt» bei 2A/(a + c) passt nicht zum Bild (Clip, Festhalten).
-- [ ] Raster: Regel «ein Bruchstrich» gegen 1/3(x − 5) und Teil C; G2-Fehler in falscher Zeile; Einheiten im Ziel, nicht geprüft.
+- [x] Sperrliste: K2F4-Schlüssel fehlt, vertauschte Seiten (3c gespiegelt, gl links/rechts) nicht normiert.
+- [x] Zweiklammersatz in Übungen gebraucht, nirgends vorgeführt (Vortest, «Kurz wiederholt»).
+- [x] 🔊 Clip Gleichungen «Schritte»: «| −2x» steht beim Erscheinen der Frage schon im Bild.
+- [x] 🔊 Bild-Ton: Clip Kürzen «Faktoren» (2/3 zu früh), «Zerlegen» (Zerlegung zu spät), Rechnen «Fehler» (richtig nicht gesprochen).
+- [x] 🔊 Rückmeldungen verraten die Lösung (K3F4, K3F5); «Klammer bleibt» bei 2A/(a + c) passt nicht zum Bild (Clip, Festhalten).
+- [x] Raster: Regel «ein Bruchstrich» gegen 1/3(x − 5) und Teil C; G2-Fehler in falscher Zeile; Einheiten im Ziel, nicht geprüft.
 
 ### NIEDRIG
-- [ ] Sim 1 «nicht erlaubt: x ≠ …» (doppelte Verneinung), Probe x = 2 bei x(x − 2) zeigt 0 = 0; Sim 2 Reglerfarben.
-- [ ] `kuerzen/lin` Tipp «1(x − 8)»; `ausschluss` Vorzeichen-Hinweis bei jedem Fehler; `0.5x-1.5` als «nicht gekürzt».
-- [ ] Grosse Zahlen in `gleichung` (bis ±144) und `bruchgleichung` (bis 120).
-- [ ] 🔊 «ein Halb» gehört als «1,5»; Brüche gesprochen ohne Klammer um den Zähler; «verboten» statt «nicht erlaubt».
-- [ ] Clip Rechnen «Mal»: Farbpaare gegen Zähler/Nenner-Farben; Rechenkette: Startkasten F grün.
-- [ ] K2F1 «Rechne» ohne «kürze»; K2F5 Rückmeldung zu −1 passt nicht zum Fehler.
-- [ ] G8 «Jahreszins»; PDF-Zeilen eng (G2, G7, G8, G9); G1-Fehlerbeispiele vage; G4/G6 Schreibweisen; README-Verweise.
-- [ ] Aussprache (Hörprobe): siehe oben.
+- [x] Sim 1 «nicht erlaubt: x ≠ …» (doppelte Verneinung), Probe x = 2 bei x(x − 2) zeigt 0 = 0; Sim 2 Reglerfarben.
+- [x] `kuerzen/lin` Tipp «1(x − 8)»; `ausschluss` Vorzeichen-Hinweis bei jedem Fehler; `0.5x-1.5` als «nicht gekürzt».
+- [x] Grosse Zahlen in `gleichung` (bis ±144) und `bruchgleichung` (bis 120).
+- [x] 🔊 «ein Halb» gehört als «1,5»; Brüche gesprochen ohne Klammer um den Zähler; «verboten» statt «nicht erlaubt».
+- [x] Clip Rechnen «Mal»: Farbpaare gegen Zähler/Nenner-Farben; Rechenkette: Startkasten F grün.
+- [x] K2F1 «Rechne» ohne «kürze»; K2F5 Rückmeldung zu −1 passt nicht zum Fehler.
+- [x] G8 «Jahreszins»; PDF-Zeilen eng (G2, G7, G8, G9); G1-Fehlerbeispiele vage; G4/G6 Schreibweisen; README-Verweise.
+- [ ] Aussprache (Hörprobe): siehe oben; dazu «a» (Whisper: «ab») im Clip Formeln, Szene Trapez.
 
 # TODO — Sek1-Mathe begreifbar
 

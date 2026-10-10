@@ -19,3 +19,7 @@ Je Eintrag: was, wo, warum — nachgezählt.
 - [ ] **`scripts/build-clip-ton.py`, Liste `TAUSCH`:** neuer Eintrag `("Bruchterm", "Bruch-Term")` (10.10.2026). Piper sprach
       «Bruchterm(e)» als «Bruchdämm(e)» (Whisper medium, LP Bruchterme, Gleichungen und Formeln, 6 Stellen); mit Bindestrich
       richtig. In TALS Mathe die Clips zu Bruchtermen (g1-3) nachhören und neu vertonen.
+- [ ] **`HOWTO-leitprogramme.md` §15 Prüfliste:** fünf neue Punkte aus der Prüfung des LP Bruchterme, Gleichungen und Formeln
+      (10.10.2026): Gleichwertigkeit an Zufallsstellen mit Mindestzahl definierter Stellen, Lösungsweg mit dem echten Faktor,
+      «geht auch»-Optionen, Erkundungen über das Ergebnis statt Reihenfolge prüfen, Probe nicht an einer Nullstelle.
+      In TALS Mathe die Formel-Übungen (Formeln umstellen) auf `1/0` als Eingabe prüfen.

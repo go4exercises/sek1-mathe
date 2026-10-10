@@ -1,7 +1,7 @@
-0.40	Ein Bruchterm hat eine Variable im Nenner. Der Nenner darf nie null werden. Bei fünf durch Klammer x minus drei ist darum x gleich drei verboten: Dann stünde unten null.
-11.72	Kürzen kennst du von Zahlenbrüchen. Zerlege Zähler und Nenner in Faktoren: zwölf ist zwei mal sechs, achtzehn ist drei mal sechs. Der gleiche Faktor sechs wird gestrichen. Es bleiben zwei Drittel.
-23.80	Bei x Quadrat minus neun durch zwei x plus sechs siehst du zuerst nichts zum Kürzen. Zerlege den Zähler mit der binomischen Formel: Klammer x minus drei mal Klammer x plus drei. Im Nenner klammerst du zwei aus. Jetzt steht oben und unten der Faktor x plus drei. Es bleibt x minus drei durch zwei.
-42.43	Bei x plus drei durch x plus fünf ist x ein Summand, kein Faktor. Wer das x streicht, erhält drei Fünftel. Probe mit x gleich eins: vier Sechstel, also zwei Drittel. Das ist nicht drei Fünftel. Dieser Bruch lässt sich nicht kürzen.
-57.87	Achtung bei Gegenzahlen: drei minus x ist minus Klammer x minus drei. Darum gibt x minus drei durch drei minus x genau minus eins.
-67.05	Zum Mitnehmen: Der Nenner darf nie null sein. Gekürzt werden nur Faktoren, nie Summanden. Darum zuerst Zähler und Nenner zerlegen, dann gleiche Faktoren streichen.
-77.34	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.
+0.40	Ein Bruchterm hat eine Variable im Nenner. Der Nenner darf nie null werden. Bei fünf durch Klammer x minus drei ist darum x gleich drei nicht erlaubt: Dann stünde unten null.
+15.44	Kürzen kennst du von Zahlenbrüchen. Zerlege Zähler und Nenner in Faktoren: zwölf ist zwei mal sechs, achtzehn ist drei mal sechs. Der gleiche Faktor sechs wird gestrichen. Es bleiben zwei Drittel.
+28.28	Bei x Quadrat minus neun durch zwei x plus sechs siehst du zuerst nichts zum Kürzen. Zerlege den Zähler mit der binomischen Formel: Klammer x minus drei mal Klammer x plus drei. Im Nenner klammerst du zwei aus. Jetzt steht oben und unten der Faktor x plus drei. Es bleibt x minus drei durch zwei, für x ungleich minus drei.
+50.97	Bei Klammer x plus drei durch Klammer x plus fünf ist x ein Summand, kein Faktor. Wer das x streicht, erhält drei Fünftel. Probe mit x gleich eins: vier Sechstel, also zwei Drittel. Das ist nicht drei Fünftel. Dieser Bruch lässt sich nicht kürzen.
+70.64	Achtung bei Gegenzahlen: drei minus x ist minus Klammer x minus drei. Darum gibt x minus drei durch drei minus x genau minus eins.
+79.72	Zum Mitnehmen: Der Nenner darf nie null sein. Gekürzt werden nur Faktoren, nie Summanden. Darum zuerst Zähler und Nenner zerlegen, dann gleiche Faktoren streichen.
+89.95	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

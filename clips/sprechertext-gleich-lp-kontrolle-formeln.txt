@@ -1,6 +1,6 @@
 0.40	Durch R auf beiden Seiten: I gleich U durch R.
-4.56	Durch a auf beiden Seiten: b gleich A durch a.
-8.47	Zuerst minus sechs, dann durch drei: x gleich Klammer y minus sechs durch drei.
-14.31	Zuerst durch zwei, dann minus b: a gleich P halbe minus b.
-19.60	Umgestellt: t gleich s durch v. Hundertfünfzig durch sechzig gibt zwei Komma fünf Stunden.
-26.04	Zum Mitnehmen: Rückwärts rechnen, das Letzte zuerst. Klammern behalten. Und mit einer Probe in Zahlen siehst du sofort, ob die Formel stimmt.
+4.64	Durch a auf beiden Seiten: b gleich A durch a.
+8.79	Zuerst minus sechs, dann durch drei: x gleich Klammer y minus sechs durch drei.
+14.83	Zuerst mal zwei, dann minus b: a gleich zwei M minus b.
+20.06	Umgestellt: t gleich s durch v. Fünfundvierzig durch dreissig gibt eins Komma fünf Stunden.
+26.38	Zum Mitnehmen: Rückwärts rechnen, das Letzte zuerst. Klammern behalten. Und mit einer Probe in Zahlen siehst du sofort, ob die Formel stimmt.

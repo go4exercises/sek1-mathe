@@ -139,8 +139,9 @@ fest1 = r'''      <div class="festhalten">
             <li>\(\dfrac{x^2 - 9}{2x + 6} = \dfrac{(x - 3)(x + 3)}{2(x + 3)}\) <span class="warum">Zähler: binomische Formel; Nenner: \(2\) ausklammern</span></li>
             <li>\(= \dfrac{x - 3}{2}\) <span class="warum">\((x + 3)\) gestrichen; \(x \neq -3\)</span></li>
           </ol>
-          <p>Weitere Beispiele: \(\dfrac{6x}{9x^2} = \dfrac{3x \cdot 2}{3x \cdot 3x} = \dfrac{2}{3x}\) und \(\dfrac{x^2 + 4x + 4}{x^2 - 4} = \dfrac{(x + 2)^2}{(x + 2)(x - 2)} = \dfrac{x + 2}{x - 2}\).</p>
-          <p><b>Gegenzahlen:</b> \(3 - x = -(x - 3)\). Darum ist \(\dfrac{x - 3}{3 - x} = -1\).</p>
+          <p>Weitere Beispiele: \(\dfrac{6x}{9x^2} = \dfrac{3x \cdot 2}{3x \cdot 3x} = \dfrac{2}{3x}\) für \(x \neq 0\), und \(\dfrac{x^2 + 4x + 4}{x^2 - 4} = \dfrac{(x + 2)^2}{(x + 2)(x - 2)} = \dfrac{x + 2}{x - 2}\) für \(x \neq 2\) und \(x \neq -2\). Die Bedingungen kommen aus dem <b>ursprünglichen</b> Nenner: \(x = -2\) bleibt verboten, auch wenn der Faktor \(x + 2\) gestrichen ist.</p>
+          <p><b>Gegenzahlen:</b> \(3 - x = -(x - 3)\). Darum ist \(\dfrac{x - 3}{3 - x} = -1\) für \(x \neq 3\).</p>
+          <p><b>Ist das ein Faktor?</b> Steht unten \(x + 1\), dann müsste der Zähler für \(x = -1\) null sein. Bei \(\dfrac{x^2 + 1}{x + 1}\) gibt der Zähler für \(x = -1\) aber \(2\): Der Bruch lässt sich nicht kürzen.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -159,7 +160,7 @@ auf1 = test('t1', 'Aufgaben · Kapitel 1', 14, [
      r'<p>Mit \(x = 1\): \(\dfrac{7}{3}\), nicht \(3\). Nina hat Summanden gekürzt. Zähler und Nenner haben keinen gemeinsamen Faktor; der Bruch lässt sich nicht kürzen.</p>', ''),
     ('1e', 2, r'Für welche Zahlen ist \(\dfrac{x + 1}{x^2 - 4x}\) nicht definiert?',
      r'<p>\(x^2 - 4x = x(x - 4)\) ist \(0\) für \(x = 0\) und für \(x = 4\). Diese beiden Zahlen sind nicht erlaubt.</p>', ''),
-    ('1f', 2, r'Warum ist \(\dfrac{2 - x}{x - 2} = -1\)? Erkläre und prüfe mit \(x = 5\).',
+    ('1f', 2, r'Warum ist \(\dfrac{2 - x}{x - 2} = -1\) für \(x \neq 2\)? Erkläre und prüfe mit \(x = 5\).',
      r'<p>\(2 - x = -(x - 2)\): Zähler und Nenner sind Gegenzahlen, ihr Quotient ist \(-1\). Mit \(x = 5\): \(\dfrac{-3}{3} = -1\).</p>', ''),
 ])
 k1 = kapitel(1, 'kuerzen', 'Bruchterme kürzen', 40,
@@ -176,7 +177,7 @@ sim2 = f'''      <figure class="sim sim-gross" id="sim2" aria-label="Hauptnenner
         <table class="hn-tab" aria-label="Erweitern auf den gewählten Nenner"></table>
         <div class="sl-row">
           {regler('s2-k', 'Zahl', 'orange', 1, 12, 1)}
-          {regler('s2-e', 'Hochzahl von x', 'blau', 0, 3, 0)}
+          {regler('s2-e', 'Hochzahl von x', 'orange', 0, 3, 0)}
         </div>
         <div class="sim-schalter reihe"><label><input type="checkbox" id="s2-p"> Faktor \\(x + 1\\)</label><label><input type="checkbox" id="s2-q"> Faktor \\(x - 1\\)</label></div>
       </figure>'''
@@ -200,9 +201,9 @@ fest2 = r'''      <div class="festhalten">
         </div>
       </div>'''
 auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
-    ('2a', 2, r'Multipliziere und kürze: \(\dfrac{2x}{3} \cdot \dfrac{9}{4x^2}\)',
-     r'<p>\(\dfrac{2x \cdot 9}{3 \cdot 4x^2} = \dfrac{18x}{12x^2} = \dfrac{3}{2x}\).</p>', ''),
-    ('2b', 3, r'Multipliziere und kürze: \(\dfrac{x^2 - 1}{x} \cdot \dfrac{3x}{x + 1}\)',
+    ('2a', 3, r'Multipliziere und kürze: \(\dfrac{2x}{3} \cdot \dfrac{9}{4x^2}\). Dividiere: \(\dfrac{6}{x} : \dfrac{3}{x^2}\)',
+     r'<p>\(\dfrac{2x \cdot 9}{3 \cdot 4x^2} = \dfrac{18x}{12x^2} = \dfrac{3}{2x}\). Mit dem Kehrwert: \(\dfrac{6}{x} \cdot \dfrac{x^2}{3} = \dfrac{6x^2}{3x} = 2x\) (\(x \neq 0\)).</p>', ''),
+    ('2b', 2, r'Multipliziere und kürze: \(\dfrac{x^2 - 1}{x} \cdot \dfrac{3x}{x + 1}\)',
      r'<p>\(\dfrac{(x - 1)(x + 1) \cdot 3x}{x \cdot (x + 1)} = 3(x - 1)\), für \(x \neq 0\) und \(x \neq -1\).</p>', ''),
     ('2c', 2, r'Addiere: \(\dfrac{3}{2a} + \dfrac{5}{6a}\)',
      r'<p>Hauptnenner \(6a\): \(\dfrac{9}{6a} + \dfrac{5}{6a} = \dfrac{14}{6a} = \dfrac{7}{3a}\).</p>', ''),
@@ -293,7 +294,7 @@ fest4 = r'''      <div class="festhalten">
             <li>\(F - 32 = 1.8 \cdot C\) <span class="warum">\(-32\) auf beiden Seiten</span></li>
             <li>\(C = \dfrac{F - 32}{1.8}\) <span class="warum">\(: 1.8\); Probe: \(F = 212\) gibt \(C = 100\)</span></li>
           </ol>
-          <p>Trapez: \(A = \dfrac{a + c}{2} \cdot h\) gibt \(h = \dfrac{2A}{a + c}\). Die Klammer um \(a + c\) bleibt: Geteilt wird durch die ganze Summe.</p>
+          <p>Trapez: \(A = \dfrac{a + c}{2} \cdot h\) gibt \(h = \dfrac{2A}{a + c}\). Geteilt wird durch die ganze Summe \(a + c\); auf einer Zeile geschrieben braucht sie Klammern: \(h = 2A : (a + c)\).</p>
           <p><b>Einsetzen</b> erst nach dem Umstellen, mit passenden Einheiten: \(s\) in km und \(v\) in km/h gibt \(t\) in h.</p>
         </div>
         <div class="warn">
@@ -313,11 +314,11 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 15, [
      r'<p>Durch \(2\): \(\dfrac{u}{2} = l + b\), dann \(-l\): \(b = \dfrac{u}{2} - l\). Mit Zahlen: \(b = 12 - 7 = 5\) cm.</p>', ''),
     ('4e', 3, r'Max stellt \(V = a \cdot b \cdot h\) nach \(h\) um und schreibt \(h = V - a \cdot b\). Prüfe mit \(a = 3\), \(b = 4\), \(h = 5\) und stelle richtig um.',
      r'<p>Mit diesen Zahlen ist \(V = 60\). Max erhält \(60 - 12 = 48\), nicht \(5\). Rückgängig gemacht wird ein «mal», also durch: \(h = \dfrac{V}{a \cdot b}\), Probe \(\dfrac{60}{12} = 5\).</p>', ''),
-    ('4f', 2, r'Treppe: Schrittmassregel \(2h + a = 63\) (in cm, \(h\) Stufenhöhe, \(a\) Auftrittsbreite). Wie breit ist der Auftritt bei \(h = 18\) cm? Warum rechnest du beim Umstellen nach \(h\) zuerst \(-a\) und dann \(: 2\)?',
-     r'<p>\(a = 63 - 2 \cdot 18 = 27\) cm. Mit \(h\) wird zuerst \(\cdot 2\) gerechnet, zuletzt \(+a\). Rückwärts macht man das Letzte zuerst rückgängig: \(2h = 63 - a\), dann \(h = \dfrac{63 - a}{2}\).</p>', ''),
+    ('4f', 2, r'Eine Kerze ist \(20\) cm lang und brennt pro Stunde \(0.5\) cm ab: \(L = 20 - 0.5 \cdot t\) (\(L\) in cm, \(t\) in h). Stelle nach \(t\) um. Nach wie vielen Stunden ist sie noch \(12\) cm lang?',
+     r'<p>\(L - 20 = -0.5 \cdot t\), also \(t = \dfrac{20 - L}{0.5} = 2(20 - L)\). Mit \(L = 12\): \(t = 16\) h. Probe: \(20 - 0.5 \cdot 16 = 12\).</p>', ''),
 ])
 k4 = kapitel(4, 'formeln', 'Formeln umstellen', 40,
-             r'Du stellst Formeln nach einer gesuchten Grösse um, rechnest dabei rückwärts in der richtigen Reihenfolge und setzt erst danach Zahlen mit Einheiten ein.',
+             r'Du stellst Formeln nach einer gesuchten Grösse um, rechnest dabei rückwärts in der richtigen Reihenfolge und setzt erst danach Zahlen ein.',
              (CLIP + 'formeln', 'Formeln umstellen'), sim4,
              (CLIP + 'kontrolle-formeln', 'Kontrollfragen zu Formeln'), fest4,
              [uebung('umstellen', 'Umstellen'), uebung('formelwert', 'Umstellen und berechnen')],
@@ -332,15 +333,15 @@ k0 = f'''
 ''' + r'''      <details class="anleitung">
         <summary><h3>Kurz wiederholt</h3></summary>
         <ul class="kurz">
-          <li><b>Faktorisieren:</b> gemeinsamen Faktor ausklammern, \(6x + 9 = 3(2x + 3)\); binomische Formeln rückwärts, \(x^2 - 1 = (x - 1)(x + 1)\); Zweiklammersatz.</li>
+          <li><b>Faktorisieren:</b> gemeinsamen Faktor ausklammern, \(6x + 9 = 3(2x + 3)\); binomische Formeln rückwärts, \(x^2 - 1 = (x - 1)(x + 1)\); Zweiklammersatz, \(x^2 + 2x - 15 = (x + 5)(x - 3)\): zwei Zahlen mit Produkt \(-15\) und Summe \(2\).</li>
           <li><b>Brüche kürzen:</b> Zähler und Nenner durch dieselbe Zahl teilen, \(\dfrac{10}{15} = \dfrac{2}{3}\).</li>
           <li><b>Gleichung umformen:</b> auf beiden Seiten dasselbe tun. \(x + 4 = 9\) gibt mit \(-4\): \(x = 5\).</li>
           <li><b>Einsetzen:</b> Für \(a = 2\) ist \(3a - 1 = 5\).</li>
         </ul>
       </details>
 ''' + test('t0', 'Vortest', 10, [
-    ('0a', 2, r'Faktorisiere: \(4x - 12\) und \(x^2 - 49\)',
-     r'<p>\(4(x - 3)\) und \((x - 7)(x + 7)\).</p><p class="komm">Faktorisieren braucht Kapitel 1 und 2.</p>', ''),
+    ('0a', 2, r'Faktorisiere: \(4x - 12\) und \(x^2 - x - 12\)',
+     r'<p>\(4(x - 3)\) und \((x - 4)(x + 3)\), denn \(-4 \cdot 3 = -12\) und \(-4 + 3 = -1\).</p><p class="komm">Faktorisieren braucht Kapitel 1 und 2.</p>', ''),
     ('0b', 2, r'Kürze: \(\dfrac{18}{24}\) und \(\dfrac{3 \cdot 5}{5 \cdot 7}\)',
      r'<p>\(\dfrac{3}{4}\) und \(\dfrac{3}{7}\).</p>', ''),
     ('0c', 2, r'Für welche Zahl \(x\) wird der Nenner von \(\dfrac{5}{x - 4}\) gleich \(0\)?',

@@ -1,7 +1,8 @@
 % Gesamttest «Bruchterme, Gleichungen und Formeln» — Quelle des PDFs (python3 scripts/build-lp-pdf.py gleichungen-formeln).
 % Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/gleichungen-formeln/zahlen.py).
 % Selbstcheck nach ~/TODO-BM-Vorkurs-LP03-15.md: Bruchterm, Gleichung, Formel (Treppenmodell als Prüfungsanker).
-% 25 Punkte, rund 30 Minuten. Keine Aufgabe wiederholt ein Beispiel aus Clip, Festhalten, Erkundung oder Kapitelaufgaben.
+% 25 Punkte, rund 30 Minuten. Nach der Prüfung vom 10.10.2026: G2 mit Division (K2 ganz geprüft), G3 2 P; Kapitelaufgabe 4f und
+% die Übung «Treppe» ersetzt, damit G7 nichts wiederholt.
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
 \renewcommand{\lpname}{Bruchterme, Gleichungen und Formeln}
@@ -28,14 +29,17 @@ Kürze vollständig: $\;\dfrac{x^2 - 10x + 25}{3x - 15}$. Welche Zahl darf $x$ n
 \lpplatz{5}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G2}{Addieren}{3 P}
-Berechne und schreib das Ergebnis auf einen Bruchstrich: $\;\dfrac{3}{x} + \dfrac{2}{x - 1}$
-\lpplatz{5}
+\begin{lpaufgabe}{G2}{Rechnen}{4 P}
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=4pt]
+\item Dividiere und kürze vollständig: $\;\dfrac{x^2 - 4}{3x} : \dfrac{x + 2}{6x^2}$
+\item Addiere und schreib das Ergebnis auf einen Bruchstrich: $\;\dfrac{3}{x} + \dfrac{2}{x - 1}$
+\end{enumerate}
+\lpplatz{7}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G3}{Fehler finden}{3 P}
-Jemand kürzt: $\;\dfrac{x^2 + 9}{x + 3} = x + 3$. Zeige mit $x = 1$, dass das nicht stimmt, und erkläre den Fehler.
-Lässt sich der Bruch überhaupt kürzen?
+\begin{lpaufgabe}{G3}{Fehler finden}{2 P}
+Jemand kürzt: $\;\dfrac{x^2 + 9}{x + 3} = x + 3$. Zeige mit $x = 1$, dass das nicht stimmt.
+Lässt sich der Bruch überhaupt kürzen? Begründe.
 \lpplatz{5}
 \end{lpaufgabe}
 
@@ -68,7 +72,7 @@ Für bequeme Treppen gilt die Schrittmassregel $\;2h + a = 63\;$ (in cm; $h$ Stu
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G8}{Zins}{3 P}
-Für den Jahreszins gilt $\;Z = \dfrac{K \cdot p \cdot t}{100}\;$ ($K$ Kapital in Fr., $p$ Zinssatz in Prozent, $t$ Jahre, $Z$ Zins in Fr.).
+Für den Zins ohne Zinseszins gilt $\;Z = \dfrac{K \cdot p \cdot t}{100}\;$ ($K$ Kapital in Fr., $p$ Zinssatz in Prozent, $t$ Jahre, $Z$ Zins in Fr.).
 Stelle nach $p$ um. Welcher Zinssatz bringt auf $2000$ Fr. in $3$ Jahren $150$ Fr. Zins?
 \lpplatz{5}
 \end{lpaufgabe}

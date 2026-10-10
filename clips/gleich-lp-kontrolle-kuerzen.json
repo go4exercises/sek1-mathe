@@ -1,7 +1,7 @@
 {
  "titel": "Gleichungen sehen: Kontrollfragen zum Kürzen",
  "dateiname": "gleich-lp-kontrolle-kuerzen",
- "kurzbeschrieb": "Fünf Fragen: 8x/(12x²) kürzen, (x² − 4)/(x + 2), verbotene Zahlen von (x − 1)/(x(x + 5)), ist (x + 7)/(x + 1) kürzbar, (5 − x)/(x − 5).",
+ "kurzbeschrieb": "Fünf Fragen: 9x/(12x²) kürzen, (x² − 4)/(x + 2), verbotene Zahlen von (x − 1)/(x(x + 5)), ist (x + 7)/(x + 1) kürzbar, (5 − x)/(x − 5).",
  "schlagworte": [
   "kürzen",
   "Bruchterm",
@@ -30,11 +30,11 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zerlege: acht x ist vier x mal zwei, zwölf x Quadrat ist vier x mal drei x. Gestrichen wird vier x. Es bleibt zwei durch drei x.",
+   "sprecher": "Zerlege: neun x ist drei x mal drei, zwölf x Quadrat ist drei x mal vier x. Gestrichen wird drei x. Es bleibt drei durch vier x, für x ungleich null.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\dfrac{8x}{12x^2} = \\dfrac{\\fc{4x} \\cdot 2}{\\fc{4x} \\cdot 3x} = \\fc{\\dfrac{2}{3x}}",
+     "text": "\\dfrac{9x}{12x^2} = \\dfrac{\\fc{3x} \\cdot 3}{\\fc{3x} \\cdot 4x} = \\fc{\\dfrac{3}{4x}}",
      "x": 150,
      "y": 330,
      "groesse": 62,
@@ -59,7 +59,7 @@
         5,
         5.5
        ],
-       "text": "8x / (12x²)",
+       "text": "9x / (12x²)",
        "farbe": 5,
        "anker": "middle",
        "groesse": 48,
@@ -80,13 +80,13 @@
      "achsen": false
     }
    ],
-   "dauer": 9.49
+   "dauer": 10.41
   },
   {
    "name": "Frage 2",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Der Zähler ist Klammer x minus zwei mal Klammer x plus zwei. Mit dem Nenner x plus zwei gekürzt bleibt x minus zwei.",
+   "sprecher": "Der Zähler ist Klammer x minus zwei mal Klammer x plus zwei. Mit dem Nenner x plus zwei gekürzt bleibt x minus zwei, für x ungleich minus zwei.",
    "elemente": [
     {
      "typ": "formel",
@@ -136,7 +136,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.32
+   "dauer": 10.1
   },
   {
    "name": "Frage 3",
@@ -200,7 +200,7 @@
      "achsen": false
     }
    ],
-   "dauer": 8.83
+   "dauer": 8.6
   },
   {
    "name": "Frage 4",
@@ -256,13 +256,13 @@
      "achsen": false
     }
    ],
-   "dauer": 8.8
+   "dauer": 8.47
   },
   {
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Fünf minus x ist minus Klammer x minus fünf. Gegenzahlen geteilt ergeben minus eins.",
+   "sprecher": "Fünf minus x ist minus Klammer x minus fünf. Gegenzahlen geteilt ergeben minus eins, für x ungleich fünf.",
    "elemente": [
     {
      "typ": "formel",
@@ -312,13 +312,13 @@
      "achsen": false
     }
    ],
-   "dauer": 6.91
+   "dauer": 7.89
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: zuerst in Faktoren zerlegen, dann nur gleiche Faktoren streichen. Verboten sind die Zahlen, für die der Nenner null wird.",
+   "sprecher": "Zum Mitnehmen: zuerst in Faktoren zerlegen, dann nur gleiche Faktoren streichen. Nicht erlaubt sind die Zahlen, für die der Nenner null wird.",
    "elemente": [
     {
      "typ": "titel",
@@ -329,7 +329,7 @@
     },
     {
      "typ": "notiz",
-     "text": "zuerst zerlegen|nur gleiche Faktoren streichen|verboten: Nenner wird null",
+     "text": "zuerst zerlegen|nur gleiche Faktoren streichen|nicht erlaubt: Nenner wird null",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -337,7 +337,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 8.48
+   "dauer": 8.53
   }
  ],
  "fragen": [
@@ -345,22 +345,22 @@
    "szene": "Frage 1",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Kürze vollständig: 8x/(12x²)",
+   "text": "Kürze vollständig: 9x/(12x²)",
    "optionen": [
-    "2/(3x)",
-    "2x/3",
-    "8/(12x)"
+    "9/(12x)",
+    "3/(4x)",
+    "3x/4"
    ],
-   "richtig": 0,
+   "richtig": 1,
    "rueck": {
-    "0": "Ja.",
-    "1": "Unten steht x², oben nur x: Nach dem Kürzen bleibt ein x im Nenner.",
-    "2": "Stimmt, ist aber noch nicht fertig: 8 und 12 haben den Faktor 4."
+    "1": "Ja.",
+    "2": "Unten steht x², oben nur x: Nach dem Kürzen bleibt ein x im Nenner.",
+    "0": "Stimmt, ist aber noch nicht fertig: 9 und 12 haben den Faktor 3."
    },
-   "sprich": "Kürze vollständig: acht x durch zwölf x Quadrat.",
+   "sprich": "Kürze vollständig: neun x durch zwölf x Quadrat.",
    "rueck_sprich": {
-    "1": "Unten steht x Quadrat, oben nur x: Nach dem Kürzen bleibt ein x im Nenner.",
-    "2": "Stimmt, ist aber noch nicht fertig: Acht und zwölf haben den Faktor vier."
+    "2": "Unten steht x Quadrat, oben nur x: Nach dem Kürzen bleibt ein x im Nenner.",
+    "0": "Stimmt, ist aber noch nicht fertig: Neun und zwölf haben den Faktor drei."
    }
   },
   {
@@ -389,22 +389,22 @@
    "szene": "Frage 3",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Welche Zahlen sind für (x − 1)/(x(x + 5)) verboten?",
+   "text": "Welche Zahlen sind für (x − 1)/(x(x + 5)) nicht erlaubt?",
    "optionen": [
-    "0 und 5",
     "0 und −5",
-    "1"
+    "1",
+    "0 und 5"
    ],
-   "richtig": 1,
+   "richtig": 0,
    "rueck": {
-    "1": "Ja.",
-    "2": "Mit x = 1 wird der Zähler null, das ist erlaubt.",
-    "0": "Setz x = 5 ein: Der Nenner ist 50, nicht null."
+    "0": "Ja.",
+    "1": "Mit x = 1 wird der Zähler null, das ist erlaubt.",
+    "2": "Setz x = 5 ein: Der Nenner ist 50, nicht null."
    },
-   "sprich": "Welche Zahlen sind für x minus eins durch x mal Klammer x plus fünf verboten?",
+   "sprich": "Welche Zahlen sind für Klammer x minus eins durch x mal Klammer x plus fünf nicht erlaubt?",
    "rueck_sprich": {
-    "2": "Mit x gleich eins wird der Zähler null, das ist erlaubt.",
-    "0": "Setz x gleich fünf ein: Der Nenner ist fünfzig, nicht null."
+    "1": "Mit x gleich eins wird der Zähler null, das ist erlaubt.",
+    "2": "Setz x gleich fünf ein: Der Nenner ist fünfzig, nicht null."
    }
   },
   {
@@ -423,7 +423,7 @@
     "1": "Prüf mit x = 1: 8/2 = 4, nicht 7.",
     "2": "Prüf mit x = 1: 8/2 = 4, nicht 8."
    },
-   "sprich": "Lässt sich x plus sieben durch x plus eins kürzen?",
+   "sprich": "Lässt sich Klammer x plus sieben durch Klammer x plus eins kürzen?",
    "rueck_sprich": {
     "0": "Richtig: nicht kürzbar.",
     "1": "Prüf mit x gleich eins: acht Halbe sind vier, nicht sieben.",
@@ -444,12 +444,12 @@
    "rueck": {
     "2": "Ja.",
     "0": "Zähler und Nenner sind Gegenzahlen, nicht gleich.",
-    "1": "Nur wenn der Zähler null ist. Setz x = 1 ein: 4/(−4)."
+    "1": "Der Zähler ist nur für x = 5 null, und dann ist auch der Nenner null. Setz eine erlaubte Zahl ein, etwa x = 7."
    },
    "sprich": "Was ergibt fünf minus x durch x minus fünf?",
    "rueck_sprich": {
     "0": "Zähler und Nenner sind Gegenzahlen, nicht gleich.",
-    "1": "Nur wenn der Zähler null ist. Setz x gleich eins ein: vier durch minus vier."
+    "1": "Der Zähler ist nur für x gleich fünf null, und dann ist auch der Nenner null. Setz eine erlaubte Zahl ein, etwa x gleich sieben."
    }
   }
  ]

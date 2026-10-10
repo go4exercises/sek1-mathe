@@ -205,13 +205,16 @@
   }
   /* Formeln vergleichen: an 8 Zufallsstellen (positive Werte) gleich, relativ 1e-9 */
   function formelGleich(k, f, namen){
-    for (var j = 0; j < 8; j++){
+    var gut = 0;                         // mindestens 5 Stellen, an denen beide definiert sind (sonst «1/0» = richtig)
+    for (var j = 0; j < 12; j++){
       var w = {}; for (var q = 0; q < namen.length; q++) w[namen[q]] = 1 + Math.round(Math.random() * 80) / 9;
       var a = zahlwert(k, w), b = f(w);
-      if (!isFinite(a) || !isFinite(b)) continue;
+      if (!isFinite(b)) continue;
+      if (!isFinite(a)) return false;
       if (Math.abs(a - b) > 1e-9 * Math.max(1, Math.abs(b))) return false;
+      gut++;
     }
-    return true;
+    return gut >= 5;
   }
   /* Lösungsmenge: «{}», «{ }», «leer», «keine» → leer; «Q», «ℚ», «alle» → alle; «5», «{5}», «x=5», «7/3» → Zahl */
   function mengeLesen(s){
@@ -281,15 +284,15 @@
     var fig = document.getElementById('sim1'); if (!fig) return;
     var feld = fig.querySelector('.kuerz-feld'), formel = fig.querySelector('[data-rolle="formel"]'), knopf = fig.querySelector('.kuerz-fertig');
     var AUFG = [
-      { z: ['2', '3', 'x'], n: ['3', '5', 'x'], text: 'Kürze \\(\\dfrac{6x}{15x}\\). Tipp oben einen Faktor an, dann den gleichen unten.', ex: 'x ≠ 0' },
-      { z: ['2', '2', '(x + 1)'], n: ['2', '3', '(x + 1)'], text: 'Kürze \\(\\dfrac{4(x + 1)}{6(x + 1)}\\) vollständig.', ex: 'x ≠ −1' },
-      { z: ['x', '(x − 2)'], n: ['3', 'x'], text: 'Kürze \\(\\dfrac{x(x - 2)}{3x}\\). Darf das \\(x\\) in der Klammer mit?', ex: 'x ≠ 0' },
-      { z: ['(x + 1)', '(x − 1)'], n: ['(x − 1)', '(x + 4)'], text: 'Kürze \\(\\dfrac{(x + 1)(x - 1)}{(x - 1)(x + 4)}\\).', ex: 'x ≠ 1 und x ≠ −4' },
-      { z: ['(x + 2)'], n: ['(x + 6)'], text: 'Und \\(\\dfrac{x + 2}{x + 6}\\)? Wenn nichts geht, drück «nichts mehr zu kürzen».', ex: 'x ≠ −6' }
+      { z: ['2', '3', 'x'], n: ['3', '5', 'x'], text: 'Kürze \\(\\dfrac{6x}{15x}\\). Tipp oben einen Faktor an, dann den gleichen unten.', ex: 'x = 0' },
+      { z: ['2', '2', '(x + 1)'], n: ['2', '3', '(x + 1)'], text: 'Kürze \\(\\dfrac{4(x + 1)}{6(x + 1)}\\) vollständig.', ex: 'x = −1' },
+      { z: ['x', '(x − 2)'], n: ['3', 'x'], text: 'Kürze \\(\\dfrac{x(x - 2)}{3x}\\). Darf das \\(x\\) in der Klammer mit?', ex: 'x = 0' },
+      { z: ['(x + 1)', '(x − 1)'], n: ['(x − 1)', '(x + 4)'], text: 'Kürze \\(\\dfrac{(x + 1)(x - 1)}{(x - 1)(x + 4)}\\).', ex: 'x = 1 und x = −4' },
+      { z: ['(x + 2)'], n: ['(x + 6)'], text: 'Und \\(\\dfrac{x + 2}{x + 6}\\)? Wenn nichts geht, drück «nichts mehr zu kürzen».', ex: 'x = −6' }
     ];
     var S = null, wahl = null, meldung = '';
-    function wert(f){ if (/^\d+$/.test(f)) return B(+f); var m = f.replace(/[()\s]/g, '').replace('−', '-'); if (m === 'x') return B(2);
-      var t = m.match(/^x([+-]\d+)$/); return B(2 + +t[1]); }
+    function wert(f){ if (/^\d+$/.test(f)) return B(+f); var m = f.replace(/[()\s]/g, '').replace('−', '-'); if (m === 'x') return B(3);
+      var t = m.match(/^x([+-]\d+)$/); return B(3 + +t[1]); }
     function produkt(l){ return l.reduce(function(p, f){ return bMul(p, wert(f)); }, B(1)); }
     function offen(){ var zl = [], k = 0;
       S.z.forEach(function(f, i){ if (!S.zw[i]) zl.push(f); });
@@ -307,7 +310,7 @@
       feld.innerHTML = h + '</div>';
       var zr = S.z.filter(function(f, i){ return !S.zw[i]; }), nr = S.n.filter(function(f, j){ return !S.nw[j]; });
       var bleibt = (zr.length ? zr.join(' · ') : '1') + ' / ' + (nr.length ? nr.join(' · ') : '1');
-      formel.innerHTML = 'jetzt: ' + bleibt + ' <span class="grau">(Probe mit x = 2: vorher ' + bTxt(bDiv(produkt(S.z), produkt(S.n))) + ', jetzt ' +
+      formel.innerHTML = 'jetzt: ' + bleibt + ' <span class="grau">(Probe mit x = 3: vorher ' + bTxt(bDiv(produkt(S.z), produkt(S.n))) + ', jetzt ' +
         bTxt(bDiv(produkt(zr), produkt(nr))) + ')</span><br><span class="grau">nicht erlaubt: ' + S.ex + '</span>' + (meldung ? '<br><span class="nein-text">' + meldung + '</span>' : '');
       if (pr) pr();
     }
@@ -435,18 +438,25 @@
     var fig = document.getElementById('sim4'); if (!fig) return;
     var vor = fig.querySelector('.kette-vor'), rueck = fig.querySelector('.kette-rueck'), knoepfe = fig.querySelector('.kette-knoepfe'), formel = fig.querySelector('[data-rolle="formel"]');
     var AUFG = [
-      { f: 's = v \\cdot t', nach: 't', erg: 's', vor: ['· v'], soll: [': v'], knoepfe: [': v', '· v', '− v'], w: { v: 4, t: 3 }, form: function(l){ return l.length ? 's : v' : 's'; } },
+      { f: 'F = m \\cdot a', nach: 'a', erg: 'F', vor: ['· m'], soll: [': m'], knoepfe: [': m', '· m', ': a'], w: { m: 4, a: 3 } },
       { f: 'U = R \\cdot I', nach: 'R', erg: 'U', vor: ['· I'], soll: [': I'], knoepfe: [': I', '· I', ': R'], w: { R: 5, I: 2 } },
       { f: 'y = 4x - 5', nach: 'x', erg: 'y', vor: ['· 4', '− 5'], soll: ['+ 5', ': 4'], knoepfe: ['+ 5', '− 5', ': 4', '· 4'], w: { x: 3 } },
       { f: 'A = \\dfrac{a \\cdot b}{2}', nach: 'a', erg: 'A', vor: ['· b', ': 2'], soll: ['· 2', ': b'], knoepfe: ['· 2', ': 2', ': b', '· b'], w: { a: 6, b: 5 } },
-      { f: 'U = 2(a + b)', nach: 'b', erg: 'U', vor: ['+ a', '· 2'], soll: [': 2', '− a'], knoepfe: [': 2', '− a', '· 2', '+ a'], w: { a: 4, b: 3 } }
+      { f: 'y = \\dfrac{x + 3}{2}', nach: 'x', erg: 'y', vor: ['+ 3', ': 2'], soll: ['· 2', '− 3'], knoepfe: ['· 2', '− 3', ': 2', '+ 3'], w: { x: 5 } }
     ];
     var T = AUFG[0], weg = [];
     function op(x, o){                    // o: «· v», «+ 5», …; Werte aus T.w
       var z = o.split(' '), w = z[1], y = /^\d+$/.test(w) ? +w : T.w[w];
       return z[0] === '·' ? x * y : z[0] === ':' ? x / y : z[0] === '+' ? x + y : x - y;
     }
-    function zustand(){ return { weg: weg.slice(), soll: T.soll }; }
+    function rueckwaerts(){ var x = T.w[T.nach]; T.vor.forEach(function(o){ x = op(x, o); }); var y = x; weg.forEach(function(o){ y = op(y, o); }); return y; }
+    /* Gelöst, wenn die Probe stimmt und die Kette gleich lang ist wie nötig — auch in anderer gültiger Reihenfolge
+       («: b, dann · 2» bei A = a·b/2; Prüfung 10.10.2026). Die Probe läuft mit zwei Zahlensätzen. */
+    function zustand(){
+      var ok = weg.length === T.soll.length && Math.abs(rueckwaerts() - T.w[T.nach]) < 1e-9;
+      if (ok){ var alt = T.w; T.w = {}; for (var k in alt) T.w[k] = alt[k] + 3; ok = Math.abs(rueckwaerts() - T.w[T.nach]) < 1e-9; T.w = alt; }
+      return { weg: weg.slice(), probe: ok };
+    }
     function zeichnen(){
       var start = T.w[T.nach], x = start, h = '<span class="kt-box gesucht">' + T.nach + ' = ' + start + '</span>';
       T.vor.forEach(function(o){ x = op(x, o); h += '<span class="kt-pfeil">' + o + ' →</span><span class="kt-box">' + +x.toFixed(4) + '</span>'; });
@@ -470,7 +480,7 @@
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, AUFG.map(function(t){
       return { text: 'Stelle \\(' + t.f + '\\) nach \\(' + t.nach + '\\) um: Welche Umkehrungen, in welcher Reihenfolge?',
-        setup: function(){ T = t; weg = []; }, ok: function(z){ return z.weg.length === t.soll.length && z.weg.every(function(o, i){ return o === t.soll[i]; }); } };
+        setup: function(){ T = t; weg = []; }, ok: function(z){ return z.probe; } };
     }), sim);
     zeichnen();
   })();
@@ -495,6 +505,7 @@
     }
     function formBruch(r, baum){
       if (!einBruch(baum)) return 'Gleichwertig, aber schreib das Ergebnis auf <b>einen Bruchstrich</b>.';
+      if (!hatBruch(baum)) return null;                 // ohne Bruchstrich (z. B. 0.5x − 1.5) gibt es nichts zu kürzen
       var g = gemeinsam(r.r);
       if (g) return 'Gleichwertig, aber noch nicht vollständig <b>gekürzt</b>: Zähler und Nenner haben noch den gemeinsamen Faktor \\(' + (g.art === 'zahl' ? g.g : pTex(g.f)) + '\\).';
       return null;
@@ -514,9 +525,18 @@
       'gl|8x-5|3x+20', 'gl|4x-12|2x+2', 'gl|2x+6|2x+6', 'gl|2x+6|2x+3', 'gl|-x+3|2x', 'gl|6x+4|2x+24', 'gl|3x-6|x+8', 'gl|2x+8|2x+8',
       'gl|x+5|x+2', 'gl|4x+6|2x+14', 'gl|4x+2|4x+2',
       'bg|kl|3|4|1|-2|1', 'bg|xx|2|3|1|10', 'bg|xx|3|6|1|4', 'bg|kl|4|6|3|-1|2',
-      'fw|taxi|6|2.5|10', 'fw|rechteck|7|5', 'fw|treppe|a|25', 'fw|weg|60|2.5', 'fw|temp|100'
+      'fw|taxi|6|2.5|10', 'fw|rechteck|7|5', 'fw|weg|60|2.5', 'fw|weg|60|2', 'fw|weg|30|1.5', 'fw|temp|100', 'pb|2x^2+3x|6x^3', 'mb|6x^2|3x',
+      'pb|2x-1|x^2-x', 'ku|9x|12x^2', 'um|Mab|b'
     ];
-    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    /* Normalform: Gleichungen unabhängig von der Seite, x/p ± x/q mit sortierten Nennern (Prüfung 10.10.2026). */
+    function norm(k){
+      var p = k.split('|');
+      if (p[0] === 'gl') return 'gl|' + [p[1], p[2]].sort().join('|');
+      if (p[0] === 'bg' && p[1] === 'xx' && p[4] === '1') return 'bg|xx|' + [+p[2], +p[3]].sort(function(a, b){ return a - b; }).join('|') + '|1|' + p[5];
+      return k;
+    }
+    SPERRE = SPERRE.map(norm);
+    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(norm(T.schl(A))) >= 0; }
 
     /* ---- Formelbank für «umstellen»: Formel, Grössen, gesuchte Grösse, Lösung, typische Fehler ---- */
     var FORMELN = [
@@ -554,7 +574,7 @@
             var c, d, a = nz(-9, 9);
             do { c = zufallG(1, 6); d = zufallG(1, 6); } while (ggT(c, d) !== 1 || c === d);
             o = R(pMul([c], lin(1, a)), pMul([d], lin(1, a))); r = R([c], [d]);
-            fak = '\\dfrac{' + c + '(' + pTex(lin(1, a)) + ')}{' + (d === 1 ? '' : d) + '(' + pTex(lin(1, a)) + ')}';
+            fak = '\\dfrac{' + (c === 1 ? '' : c) + '(' + pTex(lin(1, a)) + ')}{' + (d === 1 ? '' : d) + '(' + pTex(lin(1, a)) + ')}';
             k = [c, d, a];
           } else if (art === 'dq'){
             var b = zufallG(1, 9), kk = zufallG(1, 4), s = zufall([1, -1]);
@@ -620,7 +640,7 @@
           if (u === -A.c || v === -A.c) return 'Mit \\(x = ' + (-A.c) + '\\) wird der <b>Zähler</b> 0, und dann ist der Bruch einfach 0. Verboten ist nur ein Nenner 0.';
           var n0 = function(x){ return bZahl(pWert(A.n, B(x))); };
           var falsch = [u, v].filter(function(x){ return n0(x) !== 0; });
-          if (falsch.length) return 'Setz ein: Mit \\(x = ' + falsch[0] + '\\) ist der Nenner \\(' + n0(falsch[0]) + '\\), nicht 0. ' + (A.art !== 'qq' ? 'Achte auf das <b>Vorzeichen</b>: \\(x - 3 = 0\\) gilt für \\(x = 3\\).' : '');
+          if (falsch.length) return 'Setz ein: Mit \\(x = ' + falsch[0] + '\\) ist der Nenner \\(' + n0(falsch[0]) + '\\), nicht 0. ' + (A.w.indexOf(-falsch[0]) >= 0 ? 'Achte auf das <b>Vorzeichen</b>: \\(x - 3 = 0\\) gilt für \\(x = 3\\).' : 'Zerlege den Nenner in Faktoren.');
           return 'Es braucht zwei verschiedene Zahlen.'; },
         tipps: function(A){ return ['Der Nenner darf nicht 0 sein. Zerlege ihn in Faktoren: Ein Produkt ist 0, wenn ein Faktor 0 ist.',
           '\\(' + pTex(A.n) + ' = ' + (A.art === 'x' ? 'x(' + pTex(lin(1, -A.w[1])) + ')' : '(' + pTex(lin(1, -A.w[0])) + ')(' + pTex(lin(1, -A.w[1])) + ')') + '\\)']; },
@@ -717,13 +737,13 @@
           var art = zufall(['beid', 'beid', 'klam', 'klam', 'spez']), x0 = nz(-9, 9), a, b, c, d, k, tex, links, rechts;
           if (art === 'beid'){
             do { a = nz(-6, 9); c = nz(-6, 9); } while (a === c);
-            b = nz(-15, 15); d = (a - c) * x0 + b;
+            b = nz(-12, 12); d = (a - c) * x0 + b; if (Math.abs(d) > 40) return TYPEN.gleichung.neu();
             links = R(lin(a, b)); rechts = R(lin(c, d)); tex = pTex(lin(a, b)) + ' = ' + pTex(lin(c, d)); k = [a, b, c, d];
           } else if (art === 'klam'){
             var kk = zufallG(2, 6), m = nz(-6, 6), q = nz(-6, 6);
             a = kk - 1; b = kk * m - q;
             do { c = nz(-5, 8); } while (c === a);
-            d = (a - c) * x0 + b;
+            d = (a - c) * x0 + b; if (Math.abs(d) > 40) return TYPEN.gleichung.neu();
             links = R(lin(a, b)); rechts = R(lin(c, d)); tex = kk + '(' + pTex(lin(1, m)) + ') - (' + pTex(lin(1, q)) + ') = ' + pTex(lin(c, d)); k = [kk, m, q, c, d];
           } else {
             var aa = zufallG(2, 6), mm = nz(-6, 6), s = zufall([0, nz(-5, 5)]);
@@ -766,7 +786,7 @@
           for (s = 0; s < 400; s++){
             do { p = zufallG(2, 6); q = zufallG(2, 6); } while (p === q);
             hn = kgV(p, q);
-            if (art === 'xx'){ var t = nz(-3, 4); x0 = t * hn; var sg = zufall([1, -1]); if (sg < 0 && p > q){ var h = p; p = q; q = h; }
+            if (art === 'xx'){ var t = nz(-3, 4); x0 = t * hn; if (Math.abs(x0) > 36) continue; var sg = zufall([1, -1]); if (sg < 0 && p > q){ var h = p; p = q; q = h; }
               var r = x0 / p + sg * x0 / q; if (r === 0) continue;
               tex = '\\dfrac{x}{' + p + '} ' + (sg > 0 ? '+' : '-') + ' \\dfrac{x}{' + q + '} = ' + r; k = [p, q, sg];
               f = function(x){ return [bAdd(bDiv(x, B(p)), bMul(B(sg), bDiv(x, B(q)))), B(r)]; };
@@ -776,7 +796,7 @@
               tex = '\\dfrac{' + pTex(lin(1, a)) + '}{' + p + '} - \\dfrac{' + pTex(lin(1, b)) + '}{' + q + '} = ' + r2; k = [p, q, a, b, r2];
               f = function(x){ return [bSub(bDiv(bAdd(x, B(a)), B(p)), bDiv(bAdd(x, B(b)), B(q))), B(r2)]; };
               return { art: art, k: k, x: B(x0), f: f, tex: tex, hn: hn, muster: '\\(L = \\) {L}', text: 'Löse: \\(' + tex + '\\)' }; }
-            var a3 = nz(-6, 6), b3 = nz(-6, 6), z = p * b3 - q * a3; if (z % (q - p)) continue; x0 = z / (q - p);
+            var a3 = nz(-6, 6), b3 = nz(-6, 6), z = p * b3 - q * a3; if (z % (q - p)) continue; x0 = z / (q - p); if (Math.abs(x0) > 30) continue;
             tex = '\\dfrac{' + pTex(lin(1, a3)) + '}{' + p + '} = \\dfrac{' + pTex(lin(1, b3)) + '}{' + q + '}'; k = [p, q, a3, b3];
             f = function(x){ return [bDiv(bAdd(x, B(a3)), B(p)), bDiv(bAdd(x, B(b3)), B(q))]; };
             return { art: art, k: k, x: B(x0), f: f, tex: tex, hn: hn, muster: '\\(L = \\) {L}', text: 'Löse: \\(' + tex + '\\)' };
@@ -802,7 +822,7 @@
           var p = A.k[0], q = A.k[1], hn = A.hn, m;
           if (A.art === 'xx') m = (hn / p) + 'x ' + (A.k[2] > 0 ? '+ ' : '- ') + (hn / q) + 'x = ' + hn * A.k[3];
           else if (A.art === 'kl') m = (hn / p) + '(' + pTex(lin(1, A.k[2])) + ') - ' + (hn / q) + '(' + pTex(lin(1, A.k[3])) + ') = ' + hn * A.k[4];
-          else m = q + '(' + pTex(lin(1, A.k[2])) + ') = ' + p + '(' + pTex(lin(1, A.k[3])) + ')';
+          else m = (hn / p === 1 ? '' : hn / p) + '(' + pTex(lin(1, A.k[2])) + ') = ' + (hn / q === 1 ? '' : hn / q) + '(' + pTex(lin(1, A.k[3])) + ')';
           return A.tex + ' \\quad | \\cdot ' + hn + ' \\;\\Rightarrow\\; ' + m + ' \\;\\Rightarrow\\; L = \\{' + bTex(A.x) + '\\}'; } },
 
       /* ── Kapitel 4 ── */
@@ -850,7 +870,7 @@
         schl: function(A){ return 'fw|' + A.art + '|' + A.k.join('|'); },
         eingabe: function(A){ return { z: bWert(A.w).replace('−', '-') }; },
         neu: function(){
-          var art = zufall(['taxi', 'temp', 'ohm', 'weg', 'rechteck', 'treppe']), w, k, text, fn, einheit, falsch;
+          var art = zufall(['taxi', 'temp', 'ohm', 'weg', 'rechteck', 'abo']), w, k, text, fn, einheit, falsch;
           if (art === 'taxi'){ var g = zufall([4, 5, 6, 8]), kk = zufall([2, 2.5, 3, 3.5]), s = zufallG(3, 20), P0 = g + kk * s;
             k = [g, kk, s]; w = B(s); einheit = 'km';
             text = 'Taxi: \\(P = ' + g + ' + ' + kk + ' \\cdot s\\) (\\(P\\) in Fr., \\(s\\) in km). Wie weit kommt man für \\(P = ' + P0 + '\\) Fr.?';
@@ -872,10 +892,10 @@
             text = 'Rechteck: \\(u = 2(l + b)\\). Wie breit ist ein Rechteck mit \\(u = ' + u + '\\) cm und \\(l = ' + l + '\\) cm?';
             fn = function(x){ return bMul(B(2), bAdd(B(l), x)); }; falsch = [[B(u - 2 * l), 'Reihenfolge'], [B(u - l, 2), 'Reihenfolge']];
             return { art: art, k: k, w: w, text: text, fn: fn, falsch: falsch, gr: 'b', ziel: u, muster: '\\(b = \\) {z} cm' }; }
-          var a = zufall([23, 27, 29, 31, 33]), h = (63 - a) / 2; k = ['a', a]; w = B(h);
-          text = 'Treppe: Schrittmassregel \\(2h + a = 63\\) (cm). Wie hoch ist eine Stufe mit der Auftrittsbreite \\(a = ' + a + '\\) cm?';
-          fn = function(x){ return bAdd(bMul(B(2), x), B(a)); }; falsch = [[B(63 - a * 2), 'Reihenfolge'], [B(63 + a, 2), 'Vorzeichen'], [B(63, 2).map(function(c){ return c; }), null]];
-          return { art: 'treppe', k: k, w: w, text: text, fn: fn, falsch: falsch.slice(0, 2), gr: 'h', ziel: 63, muster: '\\(h = \\) {z} cm' }; },
+          var g = zufall([15, 20, 25, 30]), kk = zufall([0.1, 0.2, 0.5]), m = 10 * zufallG(1, 10), K = +(g + kk * m).toFixed(2); k = [g, kk, m]; w = B(m);
+          text = 'Handy-Abo: \\(K = ' + g + ' + ' + kk + ' \\cdot m\\) (\\(K\\) in Fr., \\(m\\) Gesprächsminuten). Wie viele Minuten sind es bei \\(K = ' + K + '\\) Fr.?';
+          fn = function(x){ return bAdd(B(g), bMul(bDez(kk), x)); }; falsch = [[bSub(bDiv(bDez(K), bDez(kk)), B(g)), 'Reihenfolge'], [bDiv(bAdd(bDez(K), B(g)), bDez(kk)), 'Vorzeichen']];
+          return { art: 'abo', k: k, w: w, text: text, fn: fn, falsch: falsch, gr: 'm', ziel: K, muster: '\\(m = \\) {z} min' }; },
         richtig: function(A, e){ return bEq(e.z, A.w); },
         fehler: function(A){ return A.falsch.filter(function(p){ return !bEq(p[0], A.w); }).map(function(p){ return [{ z: bWert(p[0]).replace('−', '-') }, 'Probe']; }); },
         pruefen: function(A, e){

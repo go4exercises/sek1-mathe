@@ -47,26 +47,27 @@
      "x": 150,
      "y": 454,
      "groesse": 62,
-     "ein": 3.04
+     "ein": 4.42
     },
     {
-     "typ": "formel",
-     "text": "= \\dfrac{\\fa{3}\\fc{x} \\cdot \\fb{8}}{\\fb{4} \\cdot \\fa{9}\\fc{x^2}}",
+     "typ": "notiz",
+     "text": "kürzen: @3@ mit @9@, @4@ mit @8@, @x@ mit @x^2@",
      "x": 150,
      "y": 620,
-     "groesse": 62,
-     "ein": 6.28
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 6.68
     },
     {
      "typ": "formel",
      "text": "= \\fc{\\dfrac{2}{3x}}",
      "x": 150,
-     "y": 786,
+     "y": 703,
      "groesse": 66,
-     "ein": 10.26
+     "ein": 11.12
     }
    ],
-   "dauer": 14.55
+   "dauer": 13.3
   },
   {
    "name": "Durch",
@@ -88,7 +89,7 @@
      "x": 150,
      "y": 454,
      "groesse": 62,
-     "ein": 1.85
+     "ein": 2.12
     },
     {
      "typ": "formel",
@@ -96,10 +97,10 @@
      "x": 150,
      "y": 620,
      "groesse": 66,
-     "ein": 8.17
+     "ein": 8.92
     }
    ],
-   "dauer": 11.13
+   "dauer": 10.91
   },
   {
    "name": "Hauptnenner",
@@ -121,7 +122,7 @@
      "x": 150,
      "y": 454,
      "groesse": 62,
-     "ein": 9.02
+     "ein": 9.09
     },
     {
      "typ": "formel",
@@ -129,7 +130,7 @@
      "x": 150,
      "y": 620,
      "groesse": 66,
-     "ein": 10.78
+     "ein": 10.41
     },
     {
      "typ": "graf",
@@ -298,7 +299,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.54,
+     "ein": 6.55,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -402,7 +403,7 @@
      "achsen": false
     }
    ],
-   "dauer": 13.34
+   "dauer": 13.38
   },
   {
    "name": "Verschiedene Nenner",
@@ -424,7 +425,7 @@
      "x": 150,
      "y": 426,
      "groesse": 54,
-     "ein": 6.74
+     "ein": 6.87
     },
     {
      "typ": "formel",
@@ -432,7 +433,7 @@
      "x": 150,
      "y": 605,
      "groesse": 56,
-     "ein": 9.12
+     "ein": 9.29
     },
     {
      "typ": "formel",
@@ -440,16 +441,16 @@
      "x": 150,
      "y": 770,
      "groesse": 60,
-     "ein": 12.34
+     "ein": 12.87
     }
    ],
-   "dauer": 18.65
+   "dauer": 16.55
   },
   {
    "name": "Fehler",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Häufiger Fehler: die Nenner addieren. Eins durch x plus ein Halb ist nicht zwei durch Klammer x plus zwei. Probe mit x gleich zwei: ein Halb plus ein Halb ist eins, aber zwei Viertel ist nur ein Halb.",
+   "sprecher": "Häufiger Fehler: die Nenner addieren. Eins durch x plus eins durch zwei ist nicht zwei durch Klammer x plus zwei. Probe mit x gleich zwei: eins durch zwei plus eins durch zwei ist eins, aber zwei durch vier ist nur eins durch zwei. Richtig ist Klammer zwei plus x durch zwei x.",
    "elemente": [
     {
      "typ": "formel",
@@ -457,7 +458,7 @@
      "x": 150,
      "y": 300,
      "groesse": 60,
-     "ein": 2.75
+     "ein": 2.84
     },
     {
      "typ": "formel",
@@ -465,7 +466,7 @@
      "x": 150,
      "y": 461,
      "groesse": 52,
-     "ein": 6.29
+     "ein": 7.2
     },
     {
      "typ": "formel",
@@ -473,10 +474,10 @@
      "x": 150,
      "y": 604,
      "groesse": 56,
-     "ein": 10.29
+     "ein": 13.5
     }
    ],
-   "dauer": 13.33
+   "dauer": 20.42
   },
   {
    "name": "Merke",
@@ -501,7 +502,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 10.07
+   "dauer": 10.41
   },
   {
    "name": "Jetzt du",
@@ -526,7 +527,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.25
+   "dauer": 6.16
   }
  ],
  "fragen": [
@@ -534,7 +535,7 @@
    "szene": "Hauptnenner",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Welcher Nenner passt für 1/x und 1/(2x)?",
+   "text": "Welcher Nenner ist der kleinste gemeinsame von 1/x und 1/(2x)?",
    "optionen": [
     "2x",
     "2x²",
@@ -543,12 +544,12 @@
    "richtig": 0,
    "rueck": {
     "0": "Ja.",
-    "1": "2x² geht auch, ist aber grösser als nötig.",
+    "1": "2x² ist gemeinsam, aber nicht der kleinste: 2x reicht schon.",
     "2": "Nenner werden nicht addiert. Gesucht ist ein Vielfaches beider Nenner."
    },
-   "sprich": "Welcher Nenner passt für eins durch x und eins durch zwei x?",
+   "sprich": "Welcher Nenner ist der kleinste gemeinsame von eins durch x und eins durch zwei x?",
    "rueck_sprich": {
-    "1": "Zwei x Quadrat geht auch, ist aber grösser als nötig.",
+    "1": "Zwei x Quadrat ist gemeinsam, aber nicht der kleinste: Zwei x reicht schon.",
     "2": "Nenner werden nicht addiert. Gesucht ist ein Vielfaches beider Nenner."
    }
   }

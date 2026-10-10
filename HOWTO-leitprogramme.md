@@ -795,6 +795,17 @@ gegen sie und darüber hinaus.
 - **Eine Regel mit Bedingung nie ohne die Bedingung** (Terme 10.10.2026): «Zahl am Schluss Produkt, x-Glied Summe»
   gilt nur für \((x + m)(x + n)\); «\((a + b)^2 > a^2 + b^2\)» nur für positive \(a, b\); «vollständig faktorisiert»
   heisst «mit ganzen Zahlen»; «eine Summe zweier Quadrate zerfällt nicht» ist falsch (\(4x^2 + 16\)).
+- **Gleichwertigkeit an Zufallsstellen braucht genug definierte Stellen** (Gleichungen 10.10.2026): Wer undefinierte
+  Werte überspringt, wertet `1/0` oder `F/(a-a)` als «gleich» — keine Stelle übrig heisst nicht «richtig». Eine Mindestzahl
+  endlicher Stellen verlangen und eine Eingabe, die an einer definierten Stelle undefiniert ist, ablehnen.
+- **Ein Lösungsweg nennt den Faktor, mit dem er wirklich rechnet** (Gleichungen 10.10.2026): «| · Hauptnenner», dann aber
+  mit p·q multipliziert, stimmt nur bei teilerfremden Nennern (11 % der Würfe falsch). Lösungswege mit Paaren wie 2/6, 4/6 testen.
+- **Eine Option, die die Rückmeldung «geht auch» nennt, ist nicht falsch** (Gleichungen 10.10.2026): Die Frage muss das
+  Kriterium tragen («der kleinste gemeinsame Nenner»), sonst wertet sie eine richtige Antwort als Fehler.
+- **Erkundungen prüfen über das Ergebnis, nicht über eine feste Reihenfolge** (Gleichungen 10.10.2026): «: b, dann · 2»
+  ist so richtig wie «· 2, dann : b»; die Leiste entscheidet mit der Probe (zwei Zahlensätze), nicht mit einer Liste.
+- **Probe nicht an einer Nullstelle eines Faktors** (Gleichungen 10.10.2026): Bei \(\tfrac{x(x - 2)}{3x}\) zeigt \(x = 2\)
+  «vorher 0, jetzt 0» und unterscheidet nichts.
 - **Fragetexte eines Kontrollclips verschieden beginnen lassen**: `pruef-fragen` erkennt eine Frage
   an ihren ersten 20 Zeichen; zwei Fragen «Welche Nullstellen hat …» lassen den Durchlauf scheitern.
 - Live-Anzeigen runden nur mit «≈».

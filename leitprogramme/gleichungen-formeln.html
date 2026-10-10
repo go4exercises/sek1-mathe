@@ -40,7 +40,7 @@
     "@type": "Person",
     "name": "Raphael Arnold Kohler"
    },
-   "dateModified": "2026-10-09",
+   "dateModified": "2026-10-10",
    "isPartOf": {
     "@id": "https://sek1-mathe.begreifbar.ch/#website"
    },
@@ -697,7 +697,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
       <details class="anleitung">
         <summary><h3>Kurz wiederholt</h3></summary>
         <ul class="kurz">
-          <li><b>Faktorisieren:</b> gemeinsamen Faktor ausklammern, \(6x + 9 = 3(2x + 3)\); binomische Formeln rückwärts, \(x^2 - 1 = (x - 1)(x + 1)\); Zweiklammersatz.</li>
+          <li><b>Faktorisieren:</b> gemeinsamen Faktor ausklammern, \(6x + 9 = 3(2x + 3)\); binomische Formeln rückwärts, \(x^2 - 1 = (x - 1)(x + 1)\); Zweiklammersatz, \(x^2 + 2x - 15 = (x + 5)(x - 3)\): zwei Zahlen mit Produkt \(-15\) und Summe \(2\).</li>
           <li><b>Brüche kürzen:</b> Zähler und Nenner durch dieselbe Zahl teilen, \(\dfrac{10}{15} = \dfrac{2}{3}\).</li>
           <li><b>Gleichung umformen:</b> auf beiden Seiten dasselbe tun. \(x + 4 = 9\) gibt mit \(-4\): \(x = 5\).</li>
           <li><b>Einsetzen:</b> Für \(a = 2\) ist \(3a - 1 = 5\).</li>
@@ -710,8 +710,8 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         </div>
         <ol class="aufg">
           <li>
-            <div class="frage"><span class="nr">0a</span><span class="pkt">(2 P)</span><span class="txt">Faktorisiere: \(4x - 12\) und \(x^2 - 49\)</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(4(x - 3)\) und \((x - 7)(x + 7)\).</p><p class="komm">Faktorisieren braucht Kapitel 1 und 2.</p></div></details>
+            <div class="frage"><span class="nr">0a</span><span class="pkt">(2 P)</span><span class="txt">Faktorisiere: \(4x - 12\) und \(x^2 - x - 12\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(4(x - 3)\) und \((x - 4)(x + 3)\), denn \(-4 \cdot 3 = -12\) und \(-4 + 3 = -1\).</p><p class="komm">Faktorisieren braucht Kapitel 1 und 2.</p></div></details>
           </li>
           <li>
             <div class="frage"><span class="nr">0b</span><span class="pkt">(2 P)</span><span class="txt">Kürze: \(\dfrac{18}{24}\) und \(\dfrac{3 \cdot 5}{5 \cdot 7}\)</span></div>
@@ -743,7 +743,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Bruchterme kürzen</span></span>
-          <span class="clip-zeit">1:23</span>
+          <span class="clip-zeit">1:35</span>
         </button>
       </div>
 
@@ -760,7 +760,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Kontrollfragen zum Kürzen</span></span>
-          <span class="clip-zeit">0:50</span>
+          <span class="clip-zeit">0:54</span>
         </button>
       </div>
 
@@ -774,8 +774,9 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
             <li>\(\dfrac{x^2 - 9}{2x + 6} = \dfrac{(x - 3)(x + 3)}{2(x + 3)}\) <span class="warum">Zähler: binomische Formel; Nenner: \(2\) ausklammern</span></li>
             <li>\(= \dfrac{x - 3}{2}\) <span class="warum">\((x + 3)\) gestrichen; \(x \neq -3\)</span></li>
           </ol>
-          <p>Weitere Beispiele: \(\dfrac{6x}{9x^2} = \dfrac{3x \cdot 2}{3x \cdot 3x} = \dfrac{2}{3x}\) und \(\dfrac{x^2 + 4x + 4}{x^2 - 4} = \dfrac{(x + 2)^2}{(x + 2)(x - 2)} = \dfrac{x + 2}{x - 2}\).</p>
-          <p><b>Gegenzahlen:</b> \(3 - x = -(x - 3)\). Darum ist \(\dfrac{x - 3}{3 - x} = -1\).</p>
+          <p>Weitere Beispiele: \(\dfrac{6x}{9x^2} = \dfrac{3x \cdot 2}{3x \cdot 3x} = \dfrac{2}{3x}\) für \(x \neq 0\), und \(\dfrac{x^2 + 4x + 4}{x^2 - 4} = \dfrac{(x + 2)^2}{(x + 2)(x - 2)} = \dfrac{x + 2}{x - 2}\) für \(x \neq 2\) und \(x \neq -2\). Die Bedingungen kommen aus dem <b>ursprünglichen</b> Nenner: \(x = -2\) bleibt verboten, auch wenn der Faktor \(x + 2\) gestrichen ist.</p>
+          <p><b>Gegenzahlen:</b> \(3 - x = -(x - 3)\). Darum ist \(\dfrac{x - 3}{3 - x} = -1\) für \(x \neq 3\).</p>
+          <p><b>Ist das ein Faktor?</b> Steht unten \(x + 1\), dann müsste der Zähler für \(x = -1\) null sein. Bei \(\dfrac{x^2 + 1}{x + 1}\) gibt der Zähler für \(x = -1\) aber \(2\): Der Bruch lässt sich nicht kürzen.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -830,7 +831,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x^2 - 4x = x(x - 4)\) ist \(0\) für \(x = 0\) und für \(x = 4\). Diese beiden Zahlen sind nicht erlaubt.</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Warum ist \(\dfrac{2 - x}{x - 2} = -1\)? Erkläre und prüfe mit \(x = 5\).</span></div>
+            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Warum ist \(\dfrac{2 - x}{x - 2} = -1\) für \(x \neq 2\)? Erkläre und prüfe mit \(x = 5\).</span></div>
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(2 - x = -(x - 2)\): Zähler und Nenner sind Gegenzahlen, ihr Quotient ist \(-1\). Mit \(x = 5\): \(\dfrac{-3}{3} = -1\).</p></div></details>
           </li>
         </ol>
@@ -847,7 +848,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Rechnen mit Bruchtermen</span></span>
-          <span class="clip-zeit">1:27</span>
+          <span class="clip-zeit">1:31</span>
         </button>
       </div>
 
@@ -858,7 +859,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         <table class="hn-tab" aria-label="Erweitern auf den gewählten Nenner"></table>
         <div class="sl-row">
           <div class="sl-grp akz-orange"><label for="s2-k"><span class="var">Zahl</span></label><input type="range" id="s2-k" min="1" max="12" step="1" value="1"><span class="sl-val"></span></div>
-          <div class="sl-grp akz-blau"><label for="s2-e"><span class="var">Hochzahl von x</span></label><input type="range" id="s2-e" min="0" max="3" step="1" value="0"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s2-e"><span class="var">Hochzahl von x</span></label><input type="range" id="s2-e" min="0" max="3" step="1" value="0"><span class="sl-val"></span></div>
         </div>
         <div class="sim-schalter reihe"><label><input type="checkbox" id="s2-p"> Faktor \(x + 1\)</label><label><input type="checkbox" id="s2-q"> Faktor \(x - 1\)</label></div>
       </figure>
@@ -868,7 +869,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Kontrollfragen zum Rechnen mit Bruchtermen</span></span>
-          <span class="clip-zeit">0:50</span>
+          <span class="clip-zeit">0:52</span>
         </button>
       </div>
 
@@ -919,11 +920,11 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         </div>
         <ol class="aufg">
           <li>
-            <div class="frage"><span class="nr">2a</span><span class="pkt">(2 P)</span><span class="txt">Multipliziere und kürze: \(\dfrac{2x}{3} \cdot \dfrac{9}{4x^2}\)</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{2x \cdot 9}{3 \cdot 4x^2} = \dfrac{18x}{12x^2} = \dfrac{3}{2x}\).</p></div></details>
+            <div class="frage"><span class="nr">2a</span><span class="pkt">(3 P)</span><span class="txt">Multipliziere und kürze: \(\dfrac{2x}{3} \cdot \dfrac{9}{4x^2}\). Dividiere: \(\dfrac{6}{x} : \dfrac{3}{x^2}\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{2x \cdot 9}{3 \cdot 4x^2} = \dfrac{18x}{12x^2} = \dfrac{3}{2x}\). Mit dem Kehrwert: \(\dfrac{6}{x} \cdot \dfrac{x^2}{3} = \dfrac{6x^2}{3x} = 2x\) (\(x \neq 0\)).</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">2b</span><span class="pkt">(3 P)</span><span class="txt">Multipliziere und kürze: \(\dfrac{x^2 - 1}{x} \cdot \dfrac{3x}{x + 1}\)</span></div>
+            <div class="frage"><span class="nr">2b</span><span class="pkt">(2 P)</span><span class="txt">Multipliziere und kürze: \(\dfrac{x^2 - 1}{x} \cdot \dfrac{3x}{x + 1}\)</span></div>
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{(x - 1)(x + 1) \cdot 3x}{x \cdot (x + 1)} = 3(x - 1)\), für \(x \neq 0\) und \(x \neq -1\).</p></div></details>
           </li>
           <li>
@@ -956,7 +957,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Lineare Gleichungen lösen</span></span>
-          <span class="clip-zeit">1:23</span>
+          <span class="clip-zeit">1:22</span>
         </button>
       </div>
 
@@ -1062,14 +1063,14 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
     <section class="kap" id="k4">
       <div class="kap-meta"><span class="marker">Kapitel 4</span><span class="abz abz-th">K4</span><span class="zeit">≈ 40 min</span></div>
       <h2 id="formeln">Formeln umstellen</h2>
-      <p class="ziel">Du stellst Formeln nach einer gesuchten Grösse um, rechnest dabei rückwärts in der richtigen Reihenfolge und setzt erst danach Zahlen mit Einheiten ein.</p>
+      <p class="ziel">Du stellst Formeln nach einer gesuchten Grösse um, rechnest dabei rückwärts in der richtigen Reihenfolge und setzt erst danach Zahlen ein.</p>
 
       <p class="phase"><span>①</span> Clip</p>
       <div class="clipkarte kap-clip" data-clip="clips/gleich-lp-formeln.html" data-titel="Formeln umstellen">
         <button class="clip-start" type="button">
           <span class="clip-play" aria-hidden="true">▶</span>
           <span class="clip-txt"><span class="clip-titel">Formeln umstellen</span></span>
-          <span class="clip-zeit">1:20</span>
+          <span class="clip-zeit">1:17</span>
         </button>
       </div>
 
@@ -1102,7 +1103,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
             <li>\(F - 32 = 1.8 \cdot C\) <span class="warum">\(-32\) auf beiden Seiten</span></li>
             <li>\(C = \dfrac{F - 32}{1.8}\) <span class="warum">\(: 1.8\); Probe: \(F = 212\) gibt \(C = 100\)</span></li>
           </ol>
-          <p>Trapez: \(A = \dfrac{a + c}{2} \cdot h\) gibt \(h = \dfrac{2A}{a + c}\). Die Klammer um \(a + c\) bleibt: Geteilt wird durch die ganze Summe.</p>
+          <p>Trapez: \(A = \dfrac{a + c}{2} \cdot h\) gibt \(h = \dfrac{2A}{a + c}\). Geteilt wird durch die ganze Summe \(a + c\); auf einer Zeile geschrieben braucht sie Klammern: \(h = 2A : (a + c)\).</p>
           <p><b>Einsetzen</b> erst nach dem Umstellen, mit passenden Einheiten: \(s\) in km und \(v\) in km/h gibt \(t\) in h.</p>
         </div>
         <div class="warn">
@@ -1158,8 +1159,8 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
             <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Mit diesen Zahlen ist \(V = 60\). Max erhält \(60 - 12 = 48\), nicht \(5\). Rückgängig gemacht wird ein «mal», also durch: \(h = \dfrac{V}{a \cdot b}\), Probe \(\dfrac{60}{12} = 5\).</p></div></details>
           </li>
           <li>
-            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Treppe: Schrittmassregel \(2h + a = 63\) (in cm, \(h\) Stufenhöhe, \(a\) Auftrittsbreite). Wie breit ist der Auftritt bei \(h = 18\) cm? Warum rechnest du beim Umstellen nach \(h\) zuerst \(-a\) und dann \(: 2\)?</span></div>
-            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(a = 63 - 2 \cdot 18 = 27\) cm. Mit \(h\) wird zuerst \(\cdot 2\) gerechnet, zuletzt \(+a\). Rückwärts macht man das Letzte zuerst rückgängig: \(2h = 63 - a\), dann \(h = \dfrac{63 - a}{2}\).</p></div></details>
+            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Eine Kerze ist \(20\) cm lang und brennt pro Stunde \(0.5\) cm ab: \(L = 20 - 0.5 \cdot t\) (\(L\) in cm, \(t\) in h). Stelle nach \(t\) um. Nach wie vielen Stunden ist sie noch \(12\) cm lang?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(L - 20 = -0.5 \cdot t\), also \(t = \dfrac{20 - L}{0.5} = 2(20 - L)\). Mit \(L = 12\): \(t = 16\) h. Probe: \(20 - 0.5 \cdot 16 = 12\).</p></div></details>
           </li>
         </ol>
       </div>
@@ -1528,13 +1529,16 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
   }
   /* Formeln vergleichen: an 8 Zufallsstellen (positive Werte) gleich, relativ 1e-9 */
   function formelGleich(k, f, namen){
-    for (var j = 0; j < 8; j++){
+    var gut = 0;                         // mindestens 5 Stellen, an denen beide definiert sind (sonst «1/0» = richtig)
+    for (var j = 0; j < 12; j++){
       var w = {}; for (var q = 0; q < namen.length; q++) w[namen[q]] = 1 + Math.round(Math.random() * 80) / 9;
       var a = zahlwert(k, w), b = f(w);
-      if (!isFinite(a) || !isFinite(b)) continue;
+      if (!isFinite(b)) continue;
+      if (!isFinite(a)) return false;
       if (Math.abs(a - b) > 1e-9 * Math.max(1, Math.abs(b))) return false;
+      gut++;
     }
-    return true;
+    return gut >= 5;
   }
   /* Lösungsmenge: «{}», «{ }», «leer», «keine» → leer; «Q», «ℚ», «alle» → alle; «5», «{5}», «x=5», «7/3» → Zahl */
   function mengeLesen(s){
@@ -1604,15 +1608,15 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
     var fig = document.getElementById('sim1'); if (!fig) return;
     var feld = fig.querySelector('.kuerz-feld'), formel = fig.querySelector('[data-rolle="formel"]'), knopf = fig.querySelector('.kuerz-fertig');
     var AUFG = [
-      { z: ['2', '3', 'x'], n: ['3', '5', 'x'], text: 'Kürze \\(\\dfrac{6x}{15x}\\). Tipp oben einen Faktor an, dann den gleichen unten.', ex: 'x ≠ 0' },
-      { z: ['2', '2', '(x + 1)'], n: ['2', '3', '(x + 1)'], text: 'Kürze \\(\\dfrac{4(x + 1)}{6(x + 1)}\\) vollständig.', ex: 'x ≠ −1' },
-      { z: ['x', '(x − 2)'], n: ['3', 'x'], text: 'Kürze \\(\\dfrac{x(x - 2)}{3x}\\). Darf das \\(x\\) in der Klammer mit?', ex: 'x ≠ 0' },
-      { z: ['(x + 1)', '(x − 1)'], n: ['(x − 1)', '(x + 4)'], text: 'Kürze \\(\\dfrac{(x + 1)(x - 1)}{(x - 1)(x + 4)}\\).', ex: 'x ≠ 1 und x ≠ −4' },
-      { z: ['(x + 2)'], n: ['(x + 6)'], text: 'Und \\(\\dfrac{x + 2}{x + 6}\\)? Wenn nichts geht, drück «nichts mehr zu kürzen».', ex: 'x ≠ −6' }
+      { z: ['2', '3', 'x'], n: ['3', '5', 'x'], text: 'Kürze \\(\\dfrac{6x}{15x}\\). Tipp oben einen Faktor an, dann den gleichen unten.', ex: 'x = 0' },
+      { z: ['2', '2', '(x + 1)'], n: ['2', '3', '(x + 1)'], text: 'Kürze \\(\\dfrac{4(x + 1)}{6(x + 1)}\\) vollständig.', ex: 'x = −1' },
+      { z: ['x', '(x − 2)'], n: ['3', 'x'], text: 'Kürze \\(\\dfrac{x(x - 2)}{3x}\\). Darf das \\(x\\) in der Klammer mit?', ex: 'x = 0' },
+      { z: ['(x + 1)', '(x − 1)'], n: ['(x − 1)', '(x + 4)'], text: 'Kürze \\(\\dfrac{(x + 1)(x - 1)}{(x - 1)(x + 4)}\\).', ex: 'x = 1 und x = −4' },
+      { z: ['(x + 2)'], n: ['(x + 6)'], text: 'Und \\(\\dfrac{x + 2}{x + 6}\\)? Wenn nichts geht, drück «nichts mehr zu kürzen».', ex: 'x = −6' }
     ];
     var S = null, wahl = null, meldung = '';
-    function wert(f){ if (/^\d+$/.test(f)) return B(+f); var m = f.replace(/[()\s]/g, '').replace('−', '-'); if (m === 'x') return B(2);
-      var t = m.match(/^x([+-]\d+)$/); return B(2 + +t[1]); }
+    function wert(f){ if (/^\d+$/.test(f)) return B(+f); var m = f.replace(/[()\s]/g, '').replace('−', '-'); if (m === 'x') return B(3);
+      var t = m.match(/^x([+-]\d+)$/); return B(3 + +t[1]); }
     function produkt(l){ return l.reduce(function(p, f){ return bMul(p, wert(f)); }, B(1)); }
     function offen(){ var zl = [], k = 0;
       S.z.forEach(function(f, i){ if (!S.zw[i]) zl.push(f); });
@@ -1630,7 +1634,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
       feld.innerHTML = h + '</div>';
       var zr = S.z.filter(function(f, i){ return !S.zw[i]; }), nr = S.n.filter(function(f, j){ return !S.nw[j]; });
       var bleibt = (zr.length ? zr.join(' · ') : '1') + ' / ' + (nr.length ? nr.join(' · ') : '1');
-      formel.innerHTML = 'jetzt: ' + bleibt + ' <span class="grau">(Probe mit x = 2: vorher ' + bTxt(bDiv(produkt(S.z), produkt(S.n))) + ', jetzt ' +
+      formel.innerHTML = 'jetzt: ' + bleibt + ' <span class="grau">(Probe mit x = 3: vorher ' + bTxt(bDiv(produkt(S.z), produkt(S.n))) + ', jetzt ' +
         bTxt(bDiv(produkt(zr), produkt(nr))) + ')</span><br><span class="grau">nicht erlaubt: ' + S.ex + '</span>' + (meldung ? '<br><span class="nein-text">' + meldung + '</span>' : '');
       if (pr) pr();
     }
@@ -1758,18 +1762,25 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
     var fig = document.getElementById('sim4'); if (!fig) return;
     var vor = fig.querySelector('.kette-vor'), rueck = fig.querySelector('.kette-rueck'), knoepfe = fig.querySelector('.kette-knoepfe'), formel = fig.querySelector('[data-rolle="formel"]');
     var AUFG = [
-      { f: 's = v \\cdot t', nach: 't', erg: 's', vor: ['· v'], soll: [': v'], knoepfe: [': v', '· v', '− v'], w: { v: 4, t: 3 }, form: function(l){ return l.length ? 's : v' : 's'; } },
+      { f: 'F = m \\cdot a', nach: 'a', erg: 'F', vor: ['· m'], soll: [': m'], knoepfe: [': m', '· m', ': a'], w: { m: 4, a: 3 } },
       { f: 'U = R \\cdot I', nach: 'R', erg: 'U', vor: ['· I'], soll: [': I'], knoepfe: [': I', '· I', ': R'], w: { R: 5, I: 2 } },
       { f: 'y = 4x - 5', nach: 'x', erg: 'y', vor: ['· 4', '− 5'], soll: ['+ 5', ': 4'], knoepfe: ['+ 5', '− 5', ': 4', '· 4'], w: { x: 3 } },
       { f: 'A = \\dfrac{a \\cdot b}{2}', nach: 'a', erg: 'A', vor: ['· b', ': 2'], soll: ['· 2', ': b'], knoepfe: ['· 2', ': 2', ': b', '· b'], w: { a: 6, b: 5 } },
-      { f: 'U = 2(a + b)', nach: 'b', erg: 'U', vor: ['+ a', '· 2'], soll: [': 2', '− a'], knoepfe: [': 2', '− a', '· 2', '+ a'], w: { a: 4, b: 3 } }
+      { f: 'y = \\dfrac{x + 3}{2}', nach: 'x', erg: 'y', vor: ['+ 3', ': 2'], soll: ['· 2', '− 3'], knoepfe: ['· 2', '− 3', ': 2', '+ 3'], w: { x: 5 } }
     ];
     var T = AUFG[0], weg = [];
     function op(x, o){                    // o: «· v», «+ 5», …; Werte aus T.w
       var z = o.split(' '), w = z[1], y = /^\d+$/.test(w) ? +w : T.w[w];
       return z[0] === '·' ? x * y : z[0] === ':' ? x / y : z[0] === '+' ? x + y : x - y;
     }
-    function zustand(){ return { weg: weg.slice(), soll: T.soll }; }
+    function rueckwaerts(){ var x = T.w[T.nach]; T.vor.forEach(function(o){ x = op(x, o); }); var y = x; weg.forEach(function(o){ y = op(y, o); }); return y; }
+    /* Gelöst, wenn die Probe stimmt und die Kette gleich lang ist wie nötig — auch in anderer gültiger Reihenfolge
+       («: b, dann · 2» bei A = a·b/2; Prüfung 10.10.2026). Die Probe läuft mit zwei Zahlensätzen. */
+    function zustand(){
+      var ok = weg.length === T.soll.length && Math.abs(rueckwaerts() - T.w[T.nach]) < 1e-9;
+      if (ok){ var alt = T.w; T.w = {}; for (var k in alt) T.w[k] = alt[k] + 3; ok = Math.abs(rueckwaerts() - T.w[T.nach]) < 1e-9; T.w = alt; }
+      return { weg: weg.slice(), probe: ok };
+    }
     function zeichnen(){
       var start = T.w[T.nach], x = start, h = '<span class="kt-box gesucht">' + T.nach + ' = ' + start + '</span>';
       T.vor.forEach(function(o){ x = op(x, o); h += '<span class="kt-pfeil">' + o + ' →</span><span class="kt-box">' + +x.toFixed(4) + '</span>'; });
@@ -1793,7 +1804,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, AUFG.map(function(t){
       return { text: 'Stelle \\(' + t.f + '\\) nach \\(' + t.nach + '\\) um: Welche Umkehrungen, in welcher Reihenfolge?',
-        setup: function(){ T = t; weg = []; }, ok: function(z){ return z.weg.length === t.soll.length && z.weg.every(function(o, i){ return o === t.soll[i]; }); } };
+        setup: function(){ T = t; weg = []; }, ok: function(z){ return z.probe; } };
     }), sim);
     zeichnen();
   })();
@@ -1818,6 +1829,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
     }
     function formBruch(r, baum){
       if (!einBruch(baum)) return 'Gleichwertig, aber schreib das Ergebnis auf <b>einen Bruchstrich</b>.';
+      if (!hatBruch(baum)) return null;                 // ohne Bruchstrich (z. B. 0.5x − 1.5) gibt es nichts zu kürzen
       var g = gemeinsam(r.r);
       if (g) return 'Gleichwertig, aber noch nicht vollständig <b>gekürzt</b>: Zähler und Nenner haben noch den gemeinsamen Faktor \\(' + (g.art === 'zahl' ? g.g : pTex(g.f)) + '\\).';
       return null;
@@ -1837,9 +1849,18 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
       'gl|8x-5|3x+20', 'gl|4x-12|2x+2', 'gl|2x+6|2x+6', 'gl|2x+6|2x+3', 'gl|-x+3|2x', 'gl|6x+4|2x+24', 'gl|3x-6|x+8', 'gl|2x+8|2x+8',
       'gl|x+5|x+2', 'gl|4x+6|2x+14', 'gl|4x+2|4x+2',
       'bg|kl|3|4|1|-2|1', 'bg|xx|2|3|1|10', 'bg|xx|3|6|1|4', 'bg|kl|4|6|3|-1|2',
-      'fw|taxi|6|2.5|10', 'fw|rechteck|7|5', 'fw|treppe|a|25', 'fw|weg|60|2.5', 'fw|temp|100'
+      'fw|taxi|6|2.5|10', 'fw|rechteck|7|5', 'fw|weg|60|2.5', 'fw|weg|60|2', 'fw|weg|30|1.5', 'fw|temp|100', 'pb|2x^2+3x|6x^3', 'mb|6x^2|3x',
+      'pb|2x-1|x^2-x', 'ku|9x|12x^2', 'um|Mab|b'
     ];
-    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    /* Normalform: Gleichungen unabhängig von der Seite, x/p ± x/q mit sortierten Nennern (Prüfung 10.10.2026). */
+    function norm(k){
+      var p = k.split('|');
+      if (p[0] === 'gl') return 'gl|' + [p[1], p[2]].sort().join('|');
+      if (p[0] === 'bg' && p[1] === 'xx' && p[4] === '1') return 'bg|xx|' + [+p[2], +p[3]].sort(function(a, b){ return a - b; }).join('|') + '|1|' + p[5];
+      return k;
+    }
+    SPERRE = SPERRE.map(norm);
+    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(norm(T.schl(A))) >= 0; }
 
     /* ---- Formelbank für «umstellen»: Formel, Grössen, gesuchte Grösse, Lösung, typische Fehler ---- */
     var FORMELN = [
@@ -1877,7 +1898,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
             var c, d, a = nz(-9, 9);
             do { c = zufallG(1, 6); d = zufallG(1, 6); } while (ggT(c, d) !== 1 || c === d);
             o = R(pMul([c], lin(1, a)), pMul([d], lin(1, a))); r = R([c], [d]);
-            fak = '\\dfrac{' + c + '(' + pTex(lin(1, a)) + ')}{' + (d === 1 ? '' : d) + '(' + pTex(lin(1, a)) + ')}';
+            fak = '\\dfrac{' + (c === 1 ? '' : c) + '(' + pTex(lin(1, a)) + ')}{' + (d === 1 ? '' : d) + '(' + pTex(lin(1, a)) + ')}';
             k = [c, d, a];
           } else if (art === 'dq'){
             var b = zufallG(1, 9), kk = zufallG(1, 4), s = zufall([1, -1]);
@@ -1943,7 +1964,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
           if (u === -A.c || v === -A.c) return 'Mit \\(x = ' + (-A.c) + '\\) wird der <b>Zähler</b> 0, und dann ist der Bruch einfach 0. Verboten ist nur ein Nenner 0.';
           var n0 = function(x){ return bZahl(pWert(A.n, B(x))); };
           var falsch = [u, v].filter(function(x){ return n0(x) !== 0; });
-          if (falsch.length) return 'Setz ein: Mit \\(x = ' + falsch[0] + '\\) ist der Nenner \\(' + n0(falsch[0]) + '\\), nicht 0. ' + (A.art !== 'qq' ? 'Achte auf das <b>Vorzeichen</b>: \\(x - 3 = 0\\) gilt für \\(x = 3\\).' : '');
+          if (falsch.length) return 'Setz ein: Mit \\(x = ' + falsch[0] + '\\) ist der Nenner \\(' + n0(falsch[0]) + '\\), nicht 0. ' + (A.w.indexOf(-falsch[0]) >= 0 ? 'Achte auf das <b>Vorzeichen</b>: \\(x - 3 = 0\\) gilt für \\(x = 3\\).' : 'Zerlege den Nenner in Faktoren.');
           return 'Es braucht zwei verschiedene Zahlen.'; },
         tipps: function(A){ return ['Der Nenner darf nicht 0 sein. Zerlege ihn in Faktoren: Ein Produkt ist 0, wenn ein Faktor 0 ist.',
           '\\(' + pTex(A.n) + ' = ' + (A.art === 'x' ? 'x(' + pTex(lin(1, -A.w[1])) + ')' : '(' + pTex(lin(1, -A.w[0])) + ')(' + pTex(lin(1, -A.w[1])) + ')') + '\\)']; },
@@ -2040,13 +2061,13 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
           var art = zufall(['beid', 'beid', 'klam', 'klam', 'spez']), x0 = nz(-9, 9), a, b, c, d, k, tex, links, rechts;
           if (art === 'beid'){
             do { a = nz(-6, 9); c = nz(-6, 9); } while (a === c);
-            b = nz(-15, 15); d = (a - c) * x0 + b;
+            b = nz(-12, 12); d = (a - c) * x0 + b; if (Math.abs(d) > 40) return TYPEN.gleichung.neu();
             links = R(lin(a, b)); rechts = R(lin(c, d)); tex = pTex(lin(a, b)) + ' = ' + pTex(lin(c, d)); k = [a, b, c, d];
           } else if (art === 'klam'){
             var kk = zufallG(2, 6), m = nz(-6, 6), q = nz(-6, 6);
             a = kk - 1; b = kk * m - q;
             do { c = nz(-5, 8); } while (c === a);
-            d = (a - c) * x0 + b;
+            d = (a - c) * x0 + b; if (Math.abs(d) > 40) return TYPEN.gleichung.neu();
             links = R(lin(a, b)); rechts = R(lin(c, d)); tex = kk + '(' + pTex(lin(1, m)) + ') - (' + pTex(lin(1, q)) + ') = ' + pTex(lin(c, d)); k = [kk, m, q, c, d];
           } else {
             var aa = zufallG(2, 6), mm = nz(-6, 6), s = zufall([0, nz(-5, 5)]);
@@ -2089,7 +2110,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
           for (s = 0; s < 400; s++){
             do { p = zufallG(2, 6); q = zufallG(2, 6); } while (p === q);
             hn = kgV(p, q);
-            if (art === 'xx'){ var t = nz(-3, 4); x0 = t * hn; var sg = zufall([1, -1]); if (sg < 0 && p > q){ var h = p; p = q; q = h; }
+            if (art === 'xx'){ var t = nz(-3, 4); x0 = t * hn; if (Math.abs(x0) > 36) continue; var sg = zufall([1, -1]); if (sg < 0 && p > q){ var h = p; p = q; q = h; }
               var r = x0 / p + sg * x0 / q; if (r === 0) continue;
               tex = '\\dfrac{x}{' + p + '} ' + (sg > 0 ? '+' : '-') + ' \\dfrac{x}{' + q + '} = ' + r; k = [p, q, sg];
               f = function(x){ return [bAdd(bDiv(x, B(p)), bMul(B(sg), bDiv(x, B(q)))), B(r)]; };
@@ -2099,7 +2120,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
               tex = '\\dfrac{' + pTex(lin(1, a)) + '}{' + p + '} - \\dfrac{' + pTex(lin(1, b)) + '}{' + q + '} = ' + r2; k = [p, q, a, b, r2];
               f = function(x){ return [bSub(bDiv(bAdd(x, B(a)), B(p)), bDiv(bAdd(x, B(b)), B(q))), B(r2)]; };
               return { art: art, k: k, x: B(x0), f: f, tex: tex, hn: hn, muster: '\\(L = \\) {L}', text: 'Löse: \\(' + tex + '\\)' }; }
-            var a3 = nz(-6, 6), b3 = nz(-6, 6), z = p * b3 - q * a3; if (z % (q - p)) continue; x0 = z / (q - p);
+            var a3 = nz(-6, 6), b3 = nz(-6, 6), z = p * b3 - q * a3; if (z % (q - p)) continue; x0 = z / (q - p); if (Math.abs(x0) > 30) continue;
             tex = '\\dfrac{' + pTex(lin(1, a3)) + '}{' + p + '} = \\dfrac{' + pTex(lin(1, b3)) + '}{' + q + '}'; k = [p, q, a3, b3];
             f = function(x){ return [bDiv(bAdd(x, B(a3)), B(p)), bDiv(bAdd(x, B(b3)), B(q))]; };
             return { art: art, k: k, x: B(x0), f: f, tex: tex, hn: hn, muster: '\\(L = \\) {L}', text: 'Löse: \\(' + tex + '\\)' };
@@ -2125,7 +2146,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
           var p = A.k[0], q = A.k[1], hn = A.hn, m;
           if (A.art === 'xx') m = (hn / p) + 'x ' + (A.k[2] > 0 ? '+ ' : '- ') + (hn / q) + 'x = ' + hn * A.k[3];
           else if (A.art === 'kl') m = (hn / p) + '(' + pTex(lin(1, A.k[2])) + ') - ' + (hn / q) + '(' + pTex(lin(1, A.k[3])) + ') = ' + hn * A.k[4];
-          else m = q + '(' + pTex(lin(1, A.k[2])) + ') = ' + p + '(' + pTex(lin(1, A.k[3])) + ')';
+          else m = (hn / p === 1 ? '' : hn / p) + '(' + pTex(lin(1, A.k[2])) + ') = ' + (hn / q === 1 ? '' : hn / q) + '(' + pTex(lin(1, A.k[3])) + ')';
           return A.tex + ' \\quad | \\cdot ' + hn + ' \\;\\Rightarrow\\; ' + m + ' \\;\\Rightarrow\\; L = \\{' + bTex(A.x) + '\\}'; } },
 
       /* ── Kapitel 4 ── */
@@ -2173,7 +2194,7 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
         schl: function(A){ return 'fw|' + A.art + '|' + A.k.join('|'); },
         eingabe: function(A){ return { z: bWert(A.w).replace('−', '-') }; },
         neu: function(){
-          var art = zufall(['taxi', 'temp', 'ohm', 'weg', 'rechteck', 'treppe']), w, k, text, fn, einheit, falsch;
+          var art = zufall(['taxi', 'temp', 'ohm', 'weg', 'rechteck', 'abo']), w, k, text, fn, einheit, falsch;
           if (art === 'taxi'){ var g = zufall([4, 5, 6, 8]), kk = zufall([2, 2.5, 3, 3.5]), s = zufallG(3, 20), P0 = g + kk * s;
             k = [g, kk, s]; w = B(s); einheit = 'km';
             text = 'Taxi: \\(P = ' + g + ' + ' + kk + ' \\cdot s\\) (\\(P\\) in Fr., \\(s\\) in km). Wie weit kommt man für \\(P = ' + P0 + '\\) Fr.?';
@@ -2195,10 +2216,10 @@ table.hn-tab td{border:1px solid var(--linie);padding:6px 14px;text-align:center
             text = 'Rechteck: \\(u = 2(l + b)\\). Wie breit ist ein Rechteck mit \\(u = ' + u + '\\) cm und \\(l = ' + l + '\\) cm?';
             fn = function(x){ return bMul(B(2), bAdd(B(l), x)); }; falsch = [[B(u - 2 * l), 'Reihenfolge'], [B(u - l, 2), 'Reihenfolge']];
             return { art: art, k: k, w: w, text: text, fn: fn, falsch: falsch, gr: 'b', ziel: u, muster: '\\(b = \\) {z} cm' }; }
-          var a = zufall([23, 27, 29, 31, 33]), h = (63 - a) / 2; k = ['a', a]; w = B(h);
-          text = 'Treppe: Schrittmassregel \\(2h + a = 63\\) (cm). Wie hoch ist eine Stufe mit der Auftrittsbreite \\(a = ' + a + '\\) cm?';
-          fn = function(x){ return bAdd(bMul(B(2), x), B(a)); }; falsch = [[B(63 - a * 2), 'Reihenfolge'], [B(63 + a, 2), 'Vorzeichen'], [B(63, 2).map(function(c){ return c; }), null]];
-          return { art: 'treppe', k: k, w: w, text: text, fn: fn, falsch: falsch.slice(0, 2), gr: 'h', ziel: 63, muster: '\\(h = \\) {z} cm' }; },
+          var g = zufall([15, 20, 25, 30]), kk = zufall([0.1, 0.2, 0.5]), m = 10 * zufallG(1, 10), K = +(g + kk * m).toFixed(2); k = [g, kk, m]; w = B(m);
+          text = 'Handy-Abo: \\(K = ' + g + ' + ' + kk + ' \\cdot m\\) (\\(K\\) in Fr., \\(m\\) Gesprächsminuten). Wie viele Minuten sind es bei \\(K = ' + K + '\\) Fr.?';
+          fn = function(x){ return bAdd(B(g), bMul(bDez(kk), x)); }; falsch = [[bSub(bDiv(bDez(K), bDez(kk)), B(g)), 'Reihenfolge'], [bDiv(bAdd(bDez(K), B(g)), bDez(kk)), 'Vorzeichen']];
+          return { art: 'abo', k: k, w: w, text: text, fn: fn, falsch: falsch, gr: 'm', ziel: K, muster: '\\(m = \\) {z} min' }; },
         richtig: function(A, e){ return bEq(e.z, A.w); },
         fehler: function(A){ return A.falsch.filter(function(p){ return !bEq(p[0], A.w); }).map(function(p){ return [{ z: bWert(p[0]).replace('−', '-') }, 'Probe']; }); },
         pruefen: function(A, e){

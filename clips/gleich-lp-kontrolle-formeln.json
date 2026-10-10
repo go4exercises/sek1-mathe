@@ -1,7 +1,7 @@
 {
  "titel": "Gleichungen sehen: Kontrollfragen zu Formeln",
  "dateiname": "gleich-lp-kontrolle-formeln",
- "kurzbeschrieb": "Fünf Fragen: U = R·I nach I, A = a·b nach b, y = 3x + 6 nach x, P = 2(a + b) nach a, Fahrzeit für 150 km bei 60 km/h.",
+ "kurzbeschrieb": "Fünf Fragen: U = R·I nach I, A = a·b nach b, y = 3x + 6 nach x, M = (a + b)/2 nach a, Fahrzeit für 45 km bei 30 km/h.",
  "schlagworte": [
   "Formel",
   "umstellen",
@@ -79,7 +79,7 @@
      "achsen": false
     }
    ],
-   "dauer": 4.16
+   "dauer": 4.24
   },
   {
    "name": "Frage 2",
@@ -135,7 +135,7 @@
      "achsen": false
     }
    ],
-   "dauer": 3.91
+   "dauer": 4.15
   },
   {
    "name": "Frage 3",
@@ -191,17 +191,17 @@
      "achsen": false
     }
    ],
-   "dauer": 5.84
+   "dauer": 6.04
   },
   {
    "name": "Frage 4",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zuerst durch zwei, dann minus b: a gleich P halbe minus b.",
+   "sprecher": "Zuerst mal zwei, dann minus b: a gleich zwei M minus b.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "\\dfrac{P}{2} = a + b \\qquad \\fc{a = \\dfrac{P}{2} - b}",
+     "text": "2M = a + b \\qquad \\fc{a = 2M - b}",
      "x": 150,
      "y": 330,
      "groesse": 56,
@@ -226,7 +226,7 @@
         5,
         5.5
        ],
-       "text": "P = 2(a + b)",
+       "text": "M = (a + b) / 2",
        "farbe": 5,
        "anker": "middle",
        "groesse": 48,
@@ -247,17 +247,17 @@
      "achsen": false
     }
    ],
-   "dauer": 5.29
+   "dauer": 5.23
   },
   {
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Umgestellt: t gleich s durch v. Hundertfünfzig durch sechzig gibt zwei Komma fünf Stunden.",
+   "sprecher": "Umgestellt: t gleich s durch v. Fünfundvierzig durch dreissig gibt eins Komma fünf Stunden.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "t = \\dfrac{s}{v} = \\dfrac{150}{60} = \\fc{2.5\\ \\text{h}}",
+     "text": "t = \\dfrac{s}{v} = \\dfrac{45}{30} = \\fc{1.5\\ \\text{h}}",
      "x": 150,
      "y": 330,
      "groesse": 56,
@@ -282,7 +282,7 @@
         5,
         5.5
        ],
-       "text": "s = 150 km,  v = 60 km/h",
+       "text": "s = 45 km,  v = 30 km/h",
        "farbe": 5,
        "anker": "middle",
        "groesse": 40,
@@ -303,7 +303,7 @@
      "achsen": false
     }
    ],
-   "dauer": 6.44
+   "dauer": 6.32
   },
   {
    "name": "Merke",
@@ -328,7 +328,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 8.63
+   "dauer": 8.75
   }
  ],
  "fragen": [
@@ -402,44 +402,44 @@
    "szene": "Frage 4",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Stelle P = 2(a + b) nach a um.",
+   "text": "Stelle M = (a + b)/2 nach a um.",
    "optionen": [
-    "a = P/2 − b",
-    "a = P − 2b",
-    "a = (P − b)/2"
+    "a = M/2 − b",
+    "a = 2(M − b)",
+    "a = 2M − b"
    ],
-   "richtig": 0,
+   "richtig": 2,
    "rueck": {
-    "0": "Ja.",
-    "1": "Probe mit a = 3, b = 4: P = 14, deine Formel gibt 6.",
-    "2": "Zuletzt wird · 2 gerechnet: Das machst du zuerst rückgängig."
+    "2": "Ja.",
+    "0": "Rückgängig gemacht wird «durch 2» mit «mal 2».",
+    "1": "Probe mit a = 3, b = 5: M = 4, deine Formel gibt −2."
    },
-   "sprich": "Stelle P gleich zwei mal Klammer a plus b nach a um.",
+   "sprich": "Stelle M gleich Klammer a plus b durch zwei nach a um.",
    "rueck_sprich": {
-    "1": "Probe mit a gleich drei und b gleich vier: P ist vierzehn, deine Formel gibt sechs.",
-    "2": "Zuletzt wird mal zwei gerechnet: Das machst du zuerst rückgängig."
+    "0": "Rückgängig gemacht wird durch zwei mit mal zwei.",
+    "1": "Probe mit a gleich drei und b gleich fünf: M ist vier, deine Formel gibt minus zwei."
    }
   },
   {
    "szene": "Frage 5",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Wie lange dauern 150 km bei 60 km/h?",
+   "text": "Wie lange dauern 45 km bei 30 km/h?",
    "optionen": [
-    "9000 h",
-    "0.4 h",
-    "2.5 h"
+    "2/3 h",
+    "1.5 h",
+    "1350 h"
    ],
-   "richtig": 2,
+   "richtig": 1,
    "rueck": {
-    "2": "Ja.",
-    "0": "Aus s = v·t folgt t = s/v, nicht s·v.",
-    "1": "Das ist v/s. Gesucht ist t = s/v."
+    "1": "Ja.",
+    "2": "Aus s = v·t folgt t = s/v, nicht s·v.",
+    "0": "Das ist v/s. Gesucht ist t = s/v."
    },
-   "sprich": "Wie lange dauern hundertfünfzig Kilometer bei sechzig Kilometern pro Stunde?",
+   "sprich": "Wie lange dauern fünfundvierzig Kilometer bei dreissig Kilometern pro Stunde?",
    "rueck_sprich": {
-    "0": "Aus s gleich v mal t folgt t gleich s durch v, nicht s mal v.",
-    "1": "Das ist v durch s. Gesucht ist t gleich s durch v."
+    "2": "Aus s gleich v mal t folgt t gleich s durch v, nicht s mal v.",
+    "0": "Das ist v durch s. Gesucht ist t gleich s durch v."
    }
   }
  ]

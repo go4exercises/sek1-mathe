@@ -39,7 +39,7 @@
      "x": 150,
      "y": 330,
      "groesse": 72,
-     "ein": 2.82
+     "ein": 2.76
     },
     {
      "typ": "notiz",
@@ -48,7 +48,7 @@
      "y": 480,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 6.9
+     "ein": 6.62
     },
     {
      "typ": "graf",
@@ -58,7 +58,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.62,
+     "ein": 1.58,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -222,7 +222,7 @@
      "achsen": false
     }
    ],
-   "dauer": 10.35
+   "dauer": 10.07
   },
   {
    "name": "Schritte",
@@ -232,7 +232,7 @@
    "elemente": [
     {
      "typ": "formel",
-     "text": "5x - 7 = 2x + 8 \\qquad | \\fb{-2x}",
+     "text": "5x - 7 = 2x + 8",
      "x": 150,
      "y": 260,
      "groesse": 56,
@@ -240,27 +240,27 @@
     },
     {
      "typ": "formel",
-     "text": "3x - 7 = 8 \\qquad | \\fb{+7}",
+     "text": "3x - 7 = 8 \\qquad \\fb{(-2x)}",
      "x": 150,
      "y": 370,
      "groesse": 56,
-     "ein": 1.07
+     "ein": 0.99
     },
     {
      "typ": "formel",
-     "text": "3x = 15 \\qquad | \\fb{: 3}",
+     "text": "3x = 15 \\qquad \\fb{(+7)}",
      "x": 150,
      "y": 480,
      "groesse": 56,
-     "ein": 4.75
+     "ein": 4.83
     },
     {
      "typ": "formel",
-     "text": "\\fc{x = 5}",
+     "text": "\\fc{x = 5} \\qquad \\fb{(: 3)}",
      "x": 150,
      "y": 590,
      "groesse": 62,
-     "ein": 7.33
+     "ein": 7.23
     },
     {
      "typ": "graf",
@@ -287,7 +287,7 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "vieleck",
@@ -308,7 +308,7 @@
        "farbe": 5,
        "fuellung": 0.4,
        "dicke": 2,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "strecke",
@@ -322,7 +322,7 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "strecke",
@@ -336,7 +336,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "strecke",
@@ -350,7 +350,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "vieleck",
@@ -375,7 +375,7 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "vieleck",
@@ -400,7 +400,7 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "text",
@@ -413,7 +413,7 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "aus": 1.07
+       "aus": 0.99
       },
       {
        "art": "text",
@@ -426,7 +426,7 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "aus": 1.07
+       "aus": 0.99
       }
      ],
      "pfeile": false,
@@ -450,7 +450,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.07,
+     "ein": 0.99,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -467,8 +467,8 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "vieleck",
@@ -489,8 +489,8 @@
        "farbe": 5,
        "fuellung": 0.4,
        "dicke": 2,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "strecke",
@@ -504,8 +504,8 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "strecke",
@@ -519,8 +519,8 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "strecke",
@@ -534,8 +534,8 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "vieleck",
@@ -560,8 +560,8 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "vieleck",
@@ -586,8 +586,8 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "text",
@@ -600,8 +600,8 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       },
       {
        "art": "text",
@@ -614,8 +614,8 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "ein": 1.07,
-       "aus": 4.75
+       "ein": 0.99,
+       "aus": 4.83
       }
      ],
      "pfeile": false,
@@ -639,7 +639,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.75,
+     "ein": 4.83,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -656,8 +656,8 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "vieleck",
@@ -678,8 +678,8 @@
        "farbe": 5,
        "fuellung": 0.4,
        "dicke": 2,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "strecke",
@@ -693,8 +693,8 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "strecke",
@@ -708,8 +708,8 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "strecke",
@@ -723,8 +723,8 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "vieleck",
@@ -749,8 +749,8 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "vieleck",
@@ -775,8 +775,8 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "text",
@@ -789,8 +789,8 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       },
       {
        "art": "text",
@@ -803,8 +803,8 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "ein": 4.75,
-       "aus": 7.33
+       "ein": 4.83,
+       "aus": 7.23
       }
      ],
      "pfeile": false,
@@ -828,7 +828,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.33,
+     "ein": 7.23,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -845,7 +845,7 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "vieleck",
@@ -866,7 +866,7 @@
        "farbe": 5,
        "fuellung": 0.4,
        "dicke": 2,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "strecke",
@@ -880,7 +880,7 @@
        ],
        "farbe": 5,
        "dicke": 5,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "strecke",
@@ -894,7 +894,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "strecke",
@@ -908,7 +908,7 @@
        ],
        "farbe": 5,
        "dicke": 2,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "vieleck",
@@ -933,7 +933,7 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "vieleck",
@@ -958,7 +958,7 @@
        "farbe": 5,
        "fuellung": 0.6,
        "dicke": 0,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "text",
@@ -971,7 +971,7 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "ein": 7.33
+       "ein": 7.23
       },
       {
        "art": "text",
@@ -984,7 +984,7 @@
        "anker": "middle",
        "groesse": 38,
        "kursiv": false,
-       "ein": 7.33
+       "ein": 7.23
       }
      ],
      "pfeile": false,
@@ -1001,7 +1001,7 @@
      "achsen": false
     }
    ],
-   "dauer": 10.21
+   "dauer": 10.01
   },
   {
    "name": "Probe",
@@ -1015,7 +1015,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 1.68
+     "ein": 1.74
     },
     {
      "typ": "formel",
@@ -1023,7 +1023,7 @@
      "x": 150,
      "y": 410,
      "groesse": 58,
-     "ein": 5.88
+     "ein": 6.1
     },
     {
      "typ": "formel",
@@ -1031,10 +1031,10 @@
      "x": 150,
      "y": 540,
      "groesse": 62,
-     "ein": 6.9
+     "ein": 7.1
     }
    ],
-   "dauer": 10.44
+   "dauer": 10.59
   },
   {
    "name": "Brüche",
@@ -1056,7 +1056,7 @@
      "x": 150,
      "y": 393,
      "groesse": 54,
-     "ein": 6.4
+     "ein": 6.49
     },
     {
      "typ": "formel",
@@ -1064,7 +1064,7 @@
      "x": 150,
      "y": 492,
      "groesse": 54,
-     "ein": 10.32
+     "ein": 10.55
     },
     {
      "typ": "formel",
@@ -1072,10 +1072,10 @@
      "x": 150,
      "y": 591,
      "groesse": 54,
-     "ein": 13.54
+     "ein": 13.89
     }
    ],
-   "dauer": 17.16
+   "dauer": 17.92
   },
   {
    "name": "Drei Ausgänge",
@@ -1089,7 +1089,7 @@
      "x": 150,
      "y": 260,
      "groesse": 58,
-     "ein": 2.56
+     "ein": 2.39
     },
     {
      "typ": "formel",
@@ -1097,7 +1097,7 @@
      "x": 150,
      "y": 370,
      "groesse": 54,
-     "ein": 5.7
+     "ein": 5.45
     },
     {
      "typ": "formel",
@@ -1105,7 +1105,7 @@
      "x": 150,
      "y": 480,
      "groesse": 58,
-     "ein": 12.1
+     "ein": 11.63
     },
     {
      "typ": "formel",
@@ -1113,10 +1113,10 @@
      "x": 150,
      "y": 600,
      "groesse": 52,
-     "ein": 13.24
+     "ein": 12.53
     }
    ],
-   "dauer": 16.82
+   "dauer": 16.08
   },
   {
    "name": "Merke",
@@ -1141,7 +1141,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 11.56
+   "dauer": 11.34
   },
   {
    "name": "Jetzt du",
@@ -1166,7 +1166,7 @@
      "ein": 0.6
     }
    ],
-   "dauer": 6.66
+   "dauer": 6.39
   }
  ],
  "fragen": [
