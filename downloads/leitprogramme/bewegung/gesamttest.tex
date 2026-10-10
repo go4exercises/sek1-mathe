@@ -1,12 +1,12 @@
 % Gesamttest «Texte, Geschwindigkeit und Begegnung» — Quelle des PDFs (python3 scripts/build-lp-pdf.py bewegung).
 % Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/bewegung/zahlen.py).
 % Vorgabe ~/TODO-BM-Vorkurs-LP03-15.md §5: Gleichung aus Text mit Variable und Antwortsatz (G1, G2), s = v · t und Einheiten
-% (G3, G4), Abschnitte tabellarisch und Plausibilität (G5, G6), Begegnung mit Modellannahme und Rolltreppe mit und gegen die
-% Fahrrichtung (G7, G8). 25 Punkte, rund 30 Minuten.
+% und Plausibilität (G3, G4), Abschnitte tabellarisch und am Graphen (G5, G6), Begegnung mit Modellannahme und Einholen
+% (G7, G8). 25 Punkte, rund 30 Minuten.
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
 \renewcommand{\lpname}{Texte, Geschwindigkeit und Begegnung}
-\renewcommand{\lpteilgebiet}{Mathematisieren ·}
+\renewcommand{\lpteilgebiet}{}
 \renewcommand{\lpfuss}{Gesamttest · 25 Punkte}
 \begin{document}
 \lpkopf{Gesamttest}{%
@@ -24,10 +24,10 @@ Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt die
 \lpteil{Teil A · Vom Text zur Gleichung}{Kapitel 1 · 7 Punkte}
 
 \begin{lpaufgabe}{G1}{Streaming}{4 P}
-Anbieter A verlangt $12$ Fr. im Monat und $3$ Fr. pro Film. Anbieter B verlangt $30$ Fr. im Monat, Filme inbegriffen.
+Anbieter A verlangt $9$ Fr. im Monat und $3$ Fr. pro Film. Anbieter B verlangt $30$ Fr. im Monat, Filme inbegriffen.
 Ab wie vielen Filmen im Monat ist B günstiger? Lege eine Variable fest, stelle eine Gleichung auf, löse sie, mach die Probe
 und schreib einen Antwortsatz.
-\lpplatz{6}
+\lpplatz{7}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G2}{Zahlenrätsel}{3 P}
@@ -52,7 +52,7 @@ Rechne um und schreib den Rechenweg auf.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item $54$ km/h in m/s
 \item $36$ min in Stunden (als Dezimalzahl)
-\item $4$ m/s in km/h
+\item Ein Velo fährt $5$ m/s. Wie viele km/h sind das? Ist das plausibel?
 \end{enumerate}
 \lpplatz{4}
 \end{lpaufgabe}
@@ -60,45 +60,54 @@ Rechne um und schreib den Rechenweg auf.
 \lpteil{Teil C · Fahrt in Abschnitten}{Kapitel 3 · 6 Punkte}
 
 \begin{lpaufgabe}{G5}{Bergwanderung}{4 P}
-Eine Wanderung: $6$ km mit $4$ km/h, dann $30$ min Pause, dann $4$ km steil bergauf mit $2$ km/h.
+Eine Wanderung: $9$ km mit $4.5$ km/h, dann $30$ min Pause, dann $3$ km steil bergauf mit $2$ km/h.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Erfasse die drei Abschnitte in einer Tabelle mit Geschwindigkeit, Zeit und Weg.
 \item Wie lange dauert die ganze Wanderung?
 \item Wie gross ist die Durchschnittsgeschwindigkeit der ganzen Wanderung?
-\item Nina sagt: «Im Schnitt $3$ km/h, das Mittel von $4$ und $2$.» Erkläre, warum das nicht stimmt.
+\item Nina sagt: «Im Schnitt $3.25$ km/h, das Mittel von $4.5$ und $2$.» Erkläre, warum das nicht stimmt.
 \end{enumerate}
-\lpplatz{6}
+\lpplatz{9}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G6}{Plausibel?}{2 P}
-Lea soll ausrechnen, wie lange ein Velo für $45$ km mit $15$ km/h braucht. Sie schreibt: \mbox{$45 \cdot 15 = 675$~h.}
+\begin{lpaufgabe}{G6}{Graph lesen}{2 P}
+Der Graph zeigt eine Velofahrt ($t$ in h, $s$ in km).
+\begin{center}
+\begin{tikzpicture}[x=16mm,y=1.6mm,font=\scriptsize]
+  \draw[lplinie,line width=0.3pt,xstep=0.5,ystep=6] (0,0) grid (3,30);
+  \draw[->,line width=0.6pt] (0,0) -- (3.3,0) node[right] {$t$ [h]};
+  \draw[->,line width=0.6pt] (0,0) -- (0,33) node[above] {$s$ [km]};
+  \foreach \i in {0.5,1,1.5,2,2.5,3} \node[below,inner sep=1.5pt] at (\i,0) {$\i$};
+  \foreach \j in {6,12,18,24,30} \node[left,inner sep=3pt] at (0,\j) {$\j$};
+  \draw[lpblau,line width=1.2pt] (0,0) -- (1,18) -- (1.5,18) -- (3,30);
+\end{tikzpicture}
+\end{center}
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Woran siehst du ohne Rechnen, dass das nicht stimmen kann?
-\item Rechne richtig.
+\item In welchem Abschnitt fährt die Person am schnellsten? Woran siehst du das im Graphen?
+\item Wie gross ist die Durchschnittsgeschwindigkeit der ganzen Fahrt?
 \end{enumerate}
-\lpplatz{3}
+\lpplatz{4}
 \end{lpaufgabe}
 
-\lpteil{Teil D · Begegnung und Rolltreppe}{Kapitel 4 · 6 Punkte}
+\lpteil{Teil D · Begegnung und Einholen}{Kapitel 4 · 6 Punkte}
 
 \begin{lpaufgabe}{G7}{Begegnung}{3 P}
-Zwei Dörfer liegen $45$ km auseinander. Gleichzeitig fährt Tom von Dorf A mit $16$ km/h und Sara von Dorf B mit $14$ km/h los, aufeinander zu.
+Zwei Dörfer liegen $50$ km auseinander. Gleichzeitig fährt Tom von Dorf A mit $18$ km/h und Sara von Dorf B mit $12$ km/h los, aufeinander zu.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Nach welcher Zeit treffen sie sich?
+\item Nach welcher Zeit treffen sie sich? Gib die Zeit in Stunden und Minuten an.
 \item Wie weit von Dorf A entfernt ist der Treffpunkt?
 \item Nenne eine Annahme, die du für diese Rechnung machst und die in Wirklichkeit nicht ganz stimmt.
 \end{enumerate}
-\lpplatz{5}
+\lpplatz{7}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G8}{Rolltreppe}{3 P}
-Eine Rolltreppe ist $24$ m lang und fährt $0.8$ m/s. Du gehst $1.2$ m/s schnell.
-Wie lange brauchst du für die ganze Länge,
+\begin{lpaufgabe}{G8}{Einholen}{3 P}
+Ein Lastwagen fährt mit $60$ km/h los. $30$ min später fährt ein Auto auf derselben Strasse hinterher, mit $90$ km/h.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item wenn du in Fahrrichtung mitgehst,
-\item wenn du gegen die Fahrrichtung gehst,
-\item wenn du auf der Treppe stehen bleibst?
+\item Wie gross ist der Vorsprung des Lastwagens, wenn das Auto startet?
+\item Nach welcher Zeit (ab dem Start des Autos) holt das Auto den Lastwagen ein?
+\item Wie weit vom Start entfernt ist das?
 \end{enumerate}
-\lpplatz{4}
+\lpplatz{5}
 \end{lpaufgabe}
 \end{document}

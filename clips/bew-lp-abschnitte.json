@@ -380,7 +380,7 @@
      "x": 150,
      "y": 300,
      "groesse": 56,
-     "ein": 1.52
+     "ein": 1.5
     },
     {
      "typ": "graf",
@@ -593,7 +593,7 @@
      "y": 452,
      "groesse": 44,
      "farbe": "rot",
-     "ein": 4.61
+     "ein": 4.63
     }
    ],
    "dauer": 9.68
@@ -602,7 +602,7 @@
    "name": "Steigung",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Im Weg-Zeit-Graphen ist der steilere Abschnitt der schnellere, nicht der längere. Der erste Abschnitt ist steiler als der dritte, die Pause ist waagrecht.",
+   "sprecher": "Im Weg-Zeit-Graphen ist der steilere Abschnitt der schnellere, nicht der längere. Der erste Abschnitt ist steiler als der zweite, die Pause dazwischen ist waagrecht.",
    "elemente": [
     {
      "typ": "notiz",
@@ -611,7 +611,7 @@
      "y": 300,
      "groesse": 46,
      "farbe": "blau",
-     "ein": 2.35
+     "ein": 2.33
     },
     {
      "typ": "graf",
@@ -719,7 +719,7 @@
      ]
     }
    ],
-   "dauer": 9.61
+   "dauer": 9.86
   },
   {
    "name": "Merke",

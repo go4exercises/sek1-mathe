@@ -120,7 +120,7 @@ V_MOD = tals('grundlagen/g2-modellieren.html', 'Textaufgaben modellieren')
 V_LIN = tals('grundlagen/g3-2-lineare-funktionen.html', 'Lineare Funktionen')
 
 
-HILFE = '''<p class="hilfekarte"><span>① Skizze oder Tabelle</span><i>→</i><span>② Variable mit Einheit</span><i>→</i><span>③ Beziehung</span><i>→</i><span>④ Gleichung lösen</span><i>→</i><span>⑤ Prüfung und Antwortsatz</span></p>'''
+HILFE = '''<p class="hilfekarte"><span>① gegeben, gesucht, Skizze</span><i>→</i><span>② Variable mit Einheit</span><i>→</i><span>③ Beziehung</span><i>→</i><span>④ Gleichung lösen</span><i>→</i><span>⑤ Prüfung und Antwortsatz</span></p>'''
 
 # ------------------------------------------------------------------ Kapitel 1
 sim1 = f'''      <figure class="sim sim-gross" id="sim1" aria-label="Zwei Tarife vergleichen">
@@ -137,6 +137,7 @@ fest1 = r'''      <div class="festhalten">
           ''' + HILFE + r'''
           <p>Konto A kostet \(4\) Fr. im Monat und \(0.50\) Fr. pro Zahlung, Konto B \(7\) Fr. und \(0.20\) Fr. pro Zahlung. Ab wie vielen Zahlungen ist B günstiger?</p>
           <ol class="weg">
+            <li>gegeben: Grundbeträge \(4\) und \(7\) Fr., Preise \(0.50\) und \(0.20\) Fr. pro Zahlung; gesucht: die Anzahl, ab der B billiger ist <span class="warum">markieren</span></li>
             <li>\(x\): Anzahl Zahlungen pro Monat <span class="warum">Variable mit Bedeutung</span></li>
             <li>Kosten A: \(4 + 0.5x\), Kosten B: \(7 + 0.2x\) <span class="warum">Beziehung in Franken</span></li>
             <li>\(4 + 0.5x = 7 + 0.2x\), \(0.3x = 3\), \(x = 10\) <span class="warum">gleich teuer</span></li>
@@ -148,18 +149,18 @@ fest1 = r'''      <div class="festhalten">
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>Gleichstand als Antwort:</b> Bei \(10\) Zahlungen sind beide gleich teuer. Günstiger wird B erst ab \(11\).</p>
-          <p><b>Nur eine Zahl:</b> «\(x = 10\)» beantwortet die Frage nicht. Ein Antwortsatz mit Einheit gehört dazu, und manchmal muss gerundet werden: \(10.8\) Busse heisst \(11\) Busse.</p>
+          <p><b>Nur eine Zahl:</b> «\(x = 10\)» beantwortet die Frage nicht. Ein Antwortsatz mit Einheit gehört dazu, und manchmal muss gerundet werden: \(4.2\) Busse heisst \(5\) Busse, hier wird immer aufgerundet.</p>
         </div>
       </div>'''
 auf1 = test('t1', 'Aufgaben · Kapitel 1', 14, [
     ('1a', 3, r'Velomiete A kostet \(20\) Fr. plus \(3\) Fr. pro Stunde, B kostet \(32\) Fr. plus \(1\) Fr. pro Stunde. Ab wie vielen ganzen Stunden ist B günstiger? Geh nach der Hilfekarte vor.',
      r'<p>\(x\): Stunden. \(20 + 3x = 32 + x\), \(2x = 12\), \(x = 6\): gleich teuer (\(38\) Fr.). Bei \(7\) Stunden: A \(41\) Fr., B \(39\) Fr. Ab \(7\) Stunden ist B günstiger.</p>', ''),
-    ('1b', 2, r'Drei aufeinanderfolgende ganze Zahlen haben die Summe \(72\). Welche Zahlen sind es?',
-     r'<p>\(n + (n + 1) + (n + 2) = 72\), \(3n + 3 = 72\), \(n = 23\): \(23, 24, 25\). Probe: \(72\).</p>', ''),
+    ('1b', 2, r'Drei aufeinanderfolgende <b>ungerade</b> Zahlen haben die Summe \(45\). Welche Zahlen sind es?',
+     r'<p>Ungerade Zahlen liegen \(2\) auseinander: \(n + (n + 2) + (n + 4) = 45\), \(3n + 6 = 45\), \(n = 13\): \(13,\ 15,\ 17\). Probe: \(45\).</p>', ''),
     ('1c', 2, r'Lara ist \(5\) Jahre älter als ihr Bruder. Zusammen sind sie \(41\) Jahre alt. Wie alt sind beide?',
      r'<p>Bruder \(x\), Lara \(x + 5\): \(2x + 5 = 41\), \(x = 18\). Der Bruder ist \(18\), Lara \(23\) Jahre alt.</p>', ''),
-    ('1d', 2, r'\(130\) Personen fahren mit Kleinbussen zu je \(12\) Plätzen. Wie viele Busse braucht es?',
-     r'<p>\(130 : 12 \approx 10.8\). Zehn Busse reichen nicht: Es braucht \(11\) Busse.</p>', ''),
+    ('1d', 2, r'\(75\) Personen fahren mit Kleinbussen zu je \(9\) Plätzen. Wie viele Busse braucht es?',
+     r'<p>\(75 : 9 \approx 8.3\). Acht Busse reichen nicht (nur \(72\) Plätze): Es braucht \(9\) Busse. Hier wird aufgerundet, obwohl die erste Stelle nach dem Punkt klein ist.</p>', ''),
     ('1e', 3, r'Vier Hefte und ein Lineal zu \(3\) Fr. kosten zusammen \(31\) Fr. Tim rechnet \(4x + 3 = 31\) und erhält \(x = 7\). Mach die Probe und schreib einen Antwortsatz.',
      r'<p>Probe: \(4 \cdot 7 + 3 = 31\). Antwortsatz: Ein Heft kostet \(7\) Fr.</p>', ''),
     ('1f', 2, r'Warum gehört zu jeder Lösung einer Textaufgabe ein Antwortsatz?',
@@ -192,12 +193,12 @@ fest2 = r'''      <div class="festhalten">
             <li><b>Minuten in Stunden:</b> durch \(60\): \(45\) min \(= 0.75\) h.</li>
             <li><b>km/h und m/s:</b> \(1\) m/s \(= 3.6\) km/h. \(36\) km/h \(= 36 : 3.6 = 10\) m/s.</li>
           </ul>
-          <p><b>Plausibel?</b> Ein Mensch geht etwa \(5\) km/h, ein Velo fährt \(15\) bis \(25\) km/h, ein Zug \(100\) km/h und mehr.</p>
+          <p><b>Plausibel?</b> Ein Mensch geht etwa \(5\) km/h, ein Velo fährt \(15\) bis \(25\) km/h, ein Zug \(60\) bis \(200\) km/h.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>Minuten als Stunden:</b> \(18\) km/h mal \(20\) min ist nicht \(360\) km. Zuerst \(20\) min \(= \tfrac{1}{3}\) h.</p>
-          <p><b>Komma statt Bruch:</b> \(45\) min sind nicht \(0.45\) h, sondern \(45 : 60 = 0.75\) h. Und \(1\) h \(30\) min sind \(1.5\) h, nicht \(1.30\) h.</p>
+          <p><b>Minuten hinter den Punkt geschrieben:</b> \(45\) min sind nicht \(0.45\) h, sondern \(45 : 60 = 0.75\) h. Und \(1\) h \(30\) min sind \(1.5\) h, nicht \(1.30\) h.</p>
         </div>
       </div>'''
 auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
@@ -207,8 +208,8 @@ auf2 = test('t2', 'Aufgaben · Kapitel 2', 14, [
      r'<p>\(5 \cdot 3.6 = 18\) km/h. \(90 : 3.6 = 25\) m/s.</p>', ''),
     ('2c', 2, r'Wie lange braucht ein Velo für \(12\) km mit \(15\) km/h? Gib die Zeit in Minuten an.',
      r'<p>\(t = 12 : 15 = 0.8\) h \(= 48\) min.</p>', ''),
-    ('2d', 2, r'Lia wandert \(1\) h \(30\) min mit \(4\) km/h und rechnet \(4 \cdot 1.30 = 5.2\) km. Was ist falsch?',
-     r'<p>\(1\) h \(30\) min sind \(1.5\) h, nicht \(1.30\) h. Richtig: \(4 \cdot 1.5 = 6\) km.</p>', ''),
+    ('2d', 2, r'Lia wandert \(2\) h \(15\) min mit \(4\) km/h und rechnet \(4 \cdot 2.15 = 8.6\) km. Was ist falsch?',
+     r'<p>\(15\) min sind \(15 : 60 = 0.25\) h, also \(2.25\) h, nicht \(2.15\) h. Richtig: \(4 \cdot 2.25 = 9\) km.</p>', ''),
     ('2e', 3, r'Nach einem Blitz hörst du den Donner \(3\) Sekunden später. Schall ist \(340\) m/s schnell. Wie weit ist das Gewitter entfernt? Ist die Antwort plausibel?',
      r'<p>\(s = 340 \cdot 3 = 1020\) m, also gut \(1\) km. Plausibel: Das Licht kommt fast sofort, der Schall braucht etwa \(3\) s pro km.</p>', ''),
     ('2f', 2, r'Warum teilt man durch \(3.6\), um km/h in m/s umzurechnen?',
@@ -268,8 +269,8 @@ auf3 = test('t3', 'Aufgaben · Kapitel 3', 14, [
      r'<p>\(42 : 3.5 = 12\) km/h.</p>', ''),
     ('3e', 2, r'Ben fährt \(120\) km hin mit \(60\) km/h und zurück mit \(40\) km/h. Er sagt: «Im Schnitt \(50\) km/h.» Prüfe.',
      r'<p>Hin \(2\) h, zurück \(3\) h: \(240\) km in \(5\) h, also \(48\) km/h. Ben hat die Geschwindigkeiten gemittelt.</p>', ''),
-    ('3f', 2, r'Warum zählt eine Pause zur Durchschnittsgeschwindigkeit einer Tour?',
-     r'<p>Die Tour dauert mit Pause länger, der Weg bleibt gleich. Durchschnitt heisst: Gesamtweg durch die ganze Zeit von Start bis Ziel.</p>', ''),
+    ('3f', 2, r'Ein Weg-Zeit-Graph verbindet \((0 \mid 0)\), \((2 \mid 24)\), \((3 \mid 24)\) und \((4 \mid 40)\) (\(t\) in h, \(s\) in km). In welchem Abschnitt ist die Fahrt schneller? Wie gross ist der Durchschnitt, und wie siehst du ihn im Graphen?',
+     r'<p>Erst \(24 : 2 = 12\) km/h, nach der Pause \(16 : 1 = 16\) km/h: Der letzte Abschnitt ist steiler, also schneller. Durchschnitt \(40 : 4 = 10\) km/h, die Steigung der Verbindung von \((0 \mid 0)\) nach \((4 \mid 40)\).</p>', ''),
 ])
 k3 = kapitel(3, 'abschnitte', 'Fahrt in Abschnitten', 40,
              r'Du erfasst eine Bewegung mit verschiedenen Abschnitten in einer Tabelle, berechnest Gesamtzeit und Durchschnittsgeschwindigkeit und erkennst den Fehler «Geschwindigkeiten mitteln».',
@@ -303,16 +304,17 @@ fest4 = r'''      <div class="festhalten">
         <div class="merk">
           <div class="titel">Begegnung und Einholen</div>
           <ul class="kurz">
+            <li><b>Annäherungsgeschwindigkeit:</b> um wie viel der Abstand pro Stunde kleiner wird. Dann gilt \(t = \text{Abstand} : \text{Annäherungsgeschwindigkeit}\). \(v_1\) und \(v_2\) sind die beiden Geschwindigkeiten.</li>
             <li><b>Aufeinander zu:</b> Der Abstand schrumpft mit \(v_1 + v_2\). \(36\) km, \(14\) und \(10\) km/h: \(36 : 24 = 1.5\) h. A fährt \(14 \cdot 1.5 = 21\) km.</li>
-            <li><b>Einholen:</b> Der Abstand schrumpft mit \(v_1 - v_2\). B startet \(1\) h früher mit \(10\) km/h, A folgt mit \(15\) km/h: Vorsprung \(10\) km, \(10 : 5 = 2\) h.</li>
-            <li><b>Rolltreppe</b> (\(30\) m, \(0.5\) m/s), gehen \(1\) m/s: mit der Treppe \(1.5\) m/s, \(20\) s; dagegen \(0.5\) m/s, \(60\) s.</li>
+            <li><b>Einholen:</b> Ist der Hintere schneller, schrumpft der Abstand mit schneller minus langsamer. Ist er langsamer, holt er nie auf. B startet \(1\) h früher mit \(10\) km/h, A folgt mit \(15\) km/h: Vorsprung \(10\) km, \(10 : 5 = 2\) h.</li>
+            <li><b>Rolltreppe</b> (\(30\) m, \(0.5\) m/s), gehen \(1\) m/s: Hier zählt die Geschwindigkeit gegenüber dem Boden: Du und die Treppe in derselben Richtung, \(1 + 0.5 = 1.5\) m/s, \(20\) s. Stehst du, sind es \(30 : 0.5 = 60\) s.</li>
           </ul>
-          <p><b>Modell:</b> Gleichbleibende Geschwindigkeiten, gleichzeitiger Start. Ob das stimmt, entscheidest du für jede Aufgabe.</p>
+          <p><b>Modell:</b> Gleichbleibende Geschwindigkeiten; wer später startet, lässt dem anderen einen Vorsprung. Ampeln, Steigungen und Pausen lässt das Modell weg. Ob das passt, entscheidest du für jede Aufgabe.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
           <p><b>Bei gleicher Richtung addiert:</b> Wer \(15\) km/h fährt, holt einen mit \(10\) km/h nur mit \(5\) km/h ein, nicht mit \(25\).</p>
-          <p><b>Treffpunkt in der Mitte:</b> Nur wenn beide gleich schnell sind. Sonst kommt der Schnellere weiter.</p>
+          <p><b>Treffpunkt in der Mitte:</b> Nur wenn beide gleichzeitig starten und gleich schnell sind. Sonst kommt der Schnellere weiter.</p>
         </div>
       </div>'''
 auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
@@ -324,13 +326,13 @@ auf4 = test('t4', 'Aufgaben · Kapitel 4', 14, [
      r'<p>Stehen: \(48 : 0.5 = 96\) s. Mitgehen: \(48 : 2 = 24\) s.</p>', ''),
     ('4d', 2, r'Zwei Züge sind \(450\) km voneinander entfernt und fahren mit \(80\) km/h und \(100\) km/h aufeinander zu. Wann begegnen sie sich?',
      r'<p>\(450 : 180 = 2.5\) h.</p>', ''),
-    ('4e', 2, r'Mia rechnet für «B ist \(10\) km voraus mit \(15\) km/h, A folgt mit \(20\) km/h»: \(10 : 35\) h. Was ist falsch?',
-     r'<p>Beide fahren in die gleiche Richtung: A holt nur \(20 - 15 = 5\) km/h auf. Richtig: \(10 : 5 = 2\) h.</p>', ''),
-    ('4f', 2, r'Warum treffen sich zwei gleich schnelle Velos, die aufeinander zufahren, genau in der Mitte?',
-     r'<p>Bis zum Treffen fahren beide gleich lange. Bei gleichem Tempo legen sie gleich viel zurück: je die Hälfte.</p>', ''),
+    ('4e', 2, r'Mia rechnet für «B ist \(12\) km voraus mit \(14\) km/h, A folgt mit \(18\) km/h»: \(12 : 32\) h. Was ist falsch?',
+     r'<p>Beide fahren in die gleiche Richtung: A holt nur \(18 - 14 = 4\) km/h auf. Richtig: \(12 : 4 = 3\) h.</p>', ''),
+    ('4f', 2, r'Zwei Velos starten gleichzeitig \(30\) km voneinander entfernt und fahren mit \(15\) und \(10\) km/h aufeinander zu. Die Rechnung gibt \(1.2\) h. Nenne zwei Annahmen des Modells und je einen Grund, warum es in Wirklichkeit anders dauern kann.',
+     r'<p>Zum Beispiel: gleichbleibendes Tempo (Steigungen, Gegenwind, Ampeln bremsen), genau gleichzeitiger Start (eine wartet noch), gerade Strecke von \(30\) km (Umwege). Die echte Zeit ist darum eher länger.</p>', ''),
 ])
 k4 = kapitel(4, 'begegnung', 'Begegnung und Einholen', 40,
-             r'Du löst Begegnungs- und Einholaufgaben mit der Annäherungsgeschwindigkeit, auch bei der Rolltreppe, und begründest deine Modellannahmen.',
+             r'Du löst Begegnungs- und Einholaufgaben mit der Annäherungsgeschwindigkeit, rechnest bei der Rolltreppe mit der Geschwindigkeit gegenüber dem Boden und begründest deine Modellannahmen.',
              (CLIP + 'begegnung', 'Begegnung und Einholen'), sim4,
              (CLIP + 'kontrolle-begegnung', 'Kontrollfragen zu Begegnung und Einholen'), fest4,
              [uebung('begegnung', 'Wann und wo treffen sie sich?'), uebung('einholen', 'Einholen')],
@@ -353,8 +355,8 @@ k0 = f'''
       </details>
 ''' + test('t0', 'Vortest', 10, [
     ('0a', 2, r'Wie viele Minuten sind \(0.75\) h? Wie viele Stunden sind \(90\) min?', r'<p>\(45\) min und \(1.5\) h.</p>', ''),
-    ('0b', 2, r'Löse: \(3x + 5 = 17\).', r'<p>\(3x = 12\), \(x = 4\).</p>', ''),
-    ('0c', 2, r'Ein Auto fährt \(120\) km in \(2\) h. Wie schnell? Wie lange braucht es für \(150\) km mit \(50\) km/h?', r'<p>\(60\) km/h und \(3\) h.</p>', ''),
+    ('0b', 2, r'Löse: \(4x - 3 = 21\).', r'<p>\(4x = 24\), \(x = 6\).</p>', ''),
+    ('0c', 2, r'Ein Auto fährt \(150\) km in \(3\) h. Wie schnell? Wie lange braucht es für \(100\) km mit \(50\) km/h?', r'<p>\(50\) km/h und \(2\) h.</p>', ''),
     ('0d', 2, r'Berechne \(2x + 1\) für \(x = 2.5\).', r'<p>\(6\).</p>', ''),
     ('0e', 2, r'Wie viele Meter sind \(2.4\) km? Wie viele Sekunden hat eine Stunde?', r'<p>\(2400\) m und \(3600\) s.</p>', ''),
 ]) + '''
@@ -427,7 +429,7 @@ oben = '''<div id="nav-root"></div>
        K1  Textaufgaben strukturiert übersetzen: gegeben, gesucht, Variable mit Einheit, Gleichung, Probe, Antwortsatz
        K2  Mit s = v · t, v = s / t, t = s / v rechnen, Zeiten und km/h–m/s umrechnen, Ergebnisse plausibilisieren
        K3  Mehrteilige Bewegungen in einer Tabelle erfassen, Gesamtzeit und Durchschnittsgeschwindigkeit berechnen
-       K4  Begegnung und Einholen mit der Annäherungsgeschwindigkeit lösen (auch Rolltreppe), Modellannahmen nennen
+       K4  Begegnung und Einholen mit der Annäherungsgeschwindigkeit lösen, Rolltreppe gegenüber dem Boden, Modellannahmen nennen
 
      Kompetenzmatrix (Kompetenz | Kapitel | Simulation | Übungen | Kapitelaufgaben | Gesamttest):
        K1 | 1 | Sim 1 Tarife          | tarif, raetsel           | 1a–1f | G1, G2
@@ -445,8 +447,8 @@ oben = '''<div id="nav-root"></div>
 
      Aus der Vorlage umgesetzt: gegeben/gesucht, Variable und Einheit, Gleichung aus Text (Kapitel 1, Hilfekarte
      Skizze → Variable → Beziehung → Gleichung → Prüfung, G1, G2), s = v · t in drei Formen (Kapitel 2, G3, G4),
-     Abschnitte tabellarisch (Kapitel 3, G5, G6), Annäherungsgeschwindigkeit, Begegnung zweier Velofahrer, Rolltreppe mit
-     und gegen die Fahrrichtung, Modellannahmen (Kapitel 4, G7, G8), Plausibilität in jedem Kapitel. Die drei typischen
+     Abschnitte tabellarisch (Kapitel 3, G5, G6), Annäherungsgeschwindigkeit, Begegnung zweier Velofahrer, Rolltreppe in
+     Fahrrichtung und stehend (gegen die Fahrrichtung bewusst nicht: verboten), Einholen, Modellannahmen (Kapitel 4, G7, G8), Plausibilität in jedem Kapitel. Die drei typischen
      Fehler: Zeit/Einheit (Kapitel 2), Annäherung gegen gleiche Richtung (Kapitel 4), falsche Diagrammsteigung (Kapitel 3).
      Bewusst nicht übernommen: Teams-Ablauf, Lehrpersonenteil, Prüfungsnummern.
 

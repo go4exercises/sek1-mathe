@@ -648,6 +648,12 @@ gegen sie und darüber hinaus.
 - **Gleiche Wörter, verschiedene Bezugsgrössen** (Funktionstypen 10.10.2026): «fallende Entfernung = zurück» gilt für
   die Entfernung vom Start, nicht für die zum Ziel; s war in Kapitel 3 die Entfernung, in Kapitel 4 der zurückgelegte
   Weg. Achsen nach der Grösse benennen und den Bezug immer mitsagen.
+- **Eine Merkregel, mehrere Modelle** (Bewegung 10.10.2026): «aufeinander zu addieren, gleiche Richtung subtrahieren»
+  galt für zwei Fahrzeuge; bei der Rolltreppe ist es umgekehrt (gleiche Richtung addiert, gegenüber dem Boden). Jede
+  Merkregel gegen alle Beispiele des Kapitels prüfen und Sonderfälle ausdrücklich abgrenzen.
+- **Modellannahmen passen zu allen Beispielen**: «gleichzeitiger Start» stand neben dem Einholen mit Vorsprung.
+- **Sachsituationen auf Erlaubtheit prüfen**: «gegen die Fahrrichtung der Rolltreppe gehen» ist verboten und gefährlich;
+  realistische Grössen (Rolltreppe ≤ 0.75 m/s, Velo 15–25 km/h) und Plausibilitätsregeln, die zu den eigenen Aufgaben passen.
 
 **Clips**
 - **Wortanker scharf halten** (Bruchrechnen 09.10.2026): Ein unscharfer Wortvergleich traf kürzere Nachbarwörter
@@ -891,6 +897,9 @@ gegen sie und darüber hinaus.
   nicht auf eine feste Koordinate mit Toleranz.
 - **Ein Testpunkt in der Musterlösung muss trennen** (Funktionstypen 10.10.2026): (2 | 2) lag auf zwei der vier
   Graphen; das Raster belohnte damit den Fehler «zu wenige Punkte». Testpunkte nachrechnen gegen alle Kandidaten.
+- **Jede Testaufgabe dem Kapitel zuordnen, das sie übt** (Bewegung 10.10.2026): Eine Plausibilitätsaufgabe stand im Teil
+  «Abschnitte»; die Selbsteinschätzung schickte dann ins falsche Kapitel. Jedes Kapitelziel (auch «Einholen», «Modellannahme»)
+  im Test prüfen oder die Kompetenzbox ehrlich machen.
 
 **Zeit:** geschätzt aus den Teilen, nicht aus der Planung übernommen (§3).
 

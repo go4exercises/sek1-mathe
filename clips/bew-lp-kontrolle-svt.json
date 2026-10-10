@@ -1,7 +1,7 @@
 {
  "titel": "Mathematisieren: Kontrollfragen zu s = v · t",
  "dateiname": "bew-lp-kontrolle-svt",
- "kurzbeschrieb": "Fünf Fragen: 120 km in 1.5 h, 15 min in h, 72 km/h in m/s, 30 min mit 50 km/h, 400 km mit 50 km/h.",
+ "kurzbeschrieb": "Fünf Fragen: 90 km in 1 h 15 min, 15 min in h, 108 km/h in m/s, 30 min mit 50 km/h, 400 km mit 50 km/h.",
  "schlagworte": [
   "Geschwindigkeit",
   "Einheiten",
@@ -29,18 +29,18 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Eine Stunde dreissig Minuten sind eins Komma fünf Stunden. Hundertzwanzig durch eins Komma fünf gibt achtzig Kilometer pro Stunde.",
+   "sprecher": "Eine Stunde fünfzehn Minuten sind eins Komma zwei fünf Stunden. Neunzig durch eins Komma zwei fünf gibt zweiundsiebzig Kilometer pro Stunde.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "v = \\dfrac{120}{1.5} = \\fc{80}\\ \\text{km/h}",
+     "text": "v = \\dfrac{90}{1.25} = \\fc{72}\\ \\text{km/h}",
      "x": 150,
      "y": 330,
      "groesse": 56,
      "ein": 1.0
     }
    ],
-   "dauer": 8.31
+   "dauer": 9.06
   },
   {
    "name": "Frage 2",
@@ -63,18 +63,18 @@
    "name": "Frage 3",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zweiundsiebzig durch drei Komma sechs gibt zwanzig Meter pro Sekunde.",
+   "sprecher": "Hundertacht durch drei Komma sechs gibt dreissig Meter pro Sekunde.",
    "elemente": [
     {
      "typ": "formel",
-     "text": "72 : 3.6 = \\fc{20}\\ \\text{m/s}",
+     "text": "108 : 3.6 = \\fc{30}\\ \\text{m/s}",
      "x": 150,
      "y": 330,
      "groesse": 56,
      "ein": 1.0
     }
    ],
-   "dauer": 5.19
+   "dauer": 4.9
   },
   {
    "name": "Frage 4",
@@ -114,7 +114,7 @@
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Zeiten in Stunden umrechnen, dann mit s gleich v mal t rechnen. Kilometer pro Stunde durch drei Komma sechs gibt Meter pro Sekunde.",
+   "sprecher": "Zum Mitnehmen: Zeiten in Stunden umrechnen, dann rechnen: Weg gleich Geschwindigkeit mal Zeit. Kilometer pro Stunde durch drei Komma sechs gibt Meter pro Sekunde.",
    "elemente": [
     {
      "typ": "titel",
@@ -133,7 +133,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 9.07
+   "dauer": 9.72
   }
  ],
  "fragen": [
@@ -141,22 +141,22 @@
    "szene": "Frage 1",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Ein Bus fährt 120 km in 1 h 30 min. Wie schnell fährt er im Durchschnitt?",
+   "text": "Ein Bus fährt 90 km in 1 h 15 min. Wie schnell fährt er im Durchschnitt?",
    "optionen": [
-    "92.3 km/h",
-    "120 km/h",
-    "80 km/h"
+    "90 km/h",
+    "72 km/h",
+    "78.3 km/h"
    ],
-   "richtig": 2,
+   "richtig": 1,
    "rueck": {
-    "2": "Ja.",
-    "0": "1 h 30 min sind nicht 1.30 h, sondern 1.5 h.",
-    "1": "Er braucht mehr als eine Stunde für die 120 km."
+    "1": "Ja.",
+    "2": "Ist 1 h 15 min wirklich 1.15 h?",
+    "0": "Er braucht mehr als eine Stunde für die 90 km."
    },
-   "sprich": "Ein Bus fährt hundertzwanzig Kilometer in einer Stunde und dreissig Minuten. Wie schnell fährt er im Durchschnitt?",
+   "sprich": "Ein Bus fährt neunzig Kilometer in einer Stunde und fünfzehn Minuten. Wie schnell fährt er im Durchschnitt?",
    "rueck_sprich": {
-    "0": "Eine Stunde dreissig sind nicht eins Komma drei null Stunden.",
-    "1": "Er braucht mehr als eine Stunde für die hundertzwanzig Kilometer."
+    "2": "Ist eine Stunde fünfzehn wirklich eins Komma eins fünf Stunden?",
+    "0": "Er braucht mehr als eine Stunde für die neunzig Kilometer."
    }
   },
   {
@@ -173,34 +173,34 @@
    "rueck": {
     "0": "Ja.",
     "1": "Eine Stunde hat 60 Minuten, nicht 100.",
-    "2": "Rechne 15 : 60, nicht 60 : 15."
+    "2": "4 h wären 240 Minuten. Was teilst du durch was?"
    },
    "sprich": "Wie viele Stunden sind fünfzehn Minuten?",
    "rueck_sprich": {
     "1": "Eine Stunde hat sechzig Minuten, nicht hundert.",
-    "2": "Teile fünfzehn durch sechzig, nicht umgekehrt."
+    "2": "Vier Stunden wären zweihundertvierzig Minuten. Was teilst du durch was?"
    }
   },
   {
    "szene": "Frage 3",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Ein Auto fährt 72 km/h. Wie viele m/s sind das?",
+   "text": "Ein Zug fährt 108 km/h. Wie viele m/s sind das?",
    "optionen": [
-    "72 m/s",
-    "20 m/s",
-    "259.2 m/s"
+    "30 m/s",
+    "388.8 m/s",
+    "108 m/s"
    ],
-   "richtig": 1,
+   "richtig": 0,
    "rueck": {
-    "1": "Ja.",
-    "2": "Ein Auto ist keine 259 m pro Sekunde schnell. Teilen statt mal.",
-    "0": "Meter pro Sekunde ist eine andere Einheit."
+    "0": "Ja.",
+    "1": "So schnell ist kein Zug. Teilen statt mal.",
+    "2": "Meter pro Sekunde ist eine andere Einheit."
    },
-   "sprich": "Ein Auto fährt zweiundsiebzig Kilometer pro Stunde. Wie viele Meter pro Sekunde sind das?",
+   "sprich": "Ein Zug fährt hundertacht Kilometer pro Stunde. Wie viele Meter pro Sekunde sind das?",
    "rueck_sprich": {
-    "2": "So schnell ist kein Auto. Teilen statt mal.",
-    "0": "Meter pro Sekunde ist eine andere Einheit."
+    "1": "So schnell ist kein Zug. Teilen statt mal.",
+    "2": "Meter pro Sekunde ist eine andere Einheit."
    }
   },
   {
@@ -217,12 +217,12 @@
    "rueck": {
     "0": "Ja.",
     "1": "Die Minuten müssen zuerst in Stunden.",
-    "2": "30 min sind 0.5 h, nicht 0.3 h."
+    "2": "0.3 h wären 18 Minuten, nicht 30."
    },
    "sprich": "Ein Auto fährt dreissig Minuten lang fünfzig Kilometer pro Stunde. Wie weit kommt es?",
    "rueck_sprich": {
     "1": "Die Minuten müssen zuerst in Stunden.",
-    "2": "Dreissig Minuten sind eine halbe Stunde."
+    "2": "Null Komma drei Stunden wären achtzehn Minuten, nicht dreissig."
    }
   },
   {
@@ -239,12 +239,12 @@
    "rueck": {
     "1": "Ja.",
     "2": "Zeit ist Weg durch Geschwindigkeit, nicht mal.",
-    "0": "Rechne 400 : 50, nicht 50 : 400."
+    "0": "0.125 h sind nur 7.5 Minuten. Passt das zu 400 km?"
    },
    "sprich": "Wie lange dauert eine Fahrt von vierhundert Kilometern mit fünfzig Kilometern pro Stunde?",
    "rueck_sprich": {
     "2": "Zeit ist Weg durch Geschwindigkeit, nicht mal.",
-    "0": "Teile den Weg durch die Geschwindigkeit, nicht umgekehrt."
+    "0": "Null Komma eins zwei fünf Stunden sind nur sieben Komma fünf Minuten. Passt das zu vierhundert Kilometern?"
    }
   }
  ]

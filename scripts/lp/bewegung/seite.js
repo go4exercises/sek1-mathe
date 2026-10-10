@@ -49,6 +49,7 @@
     if (text != null) e.textContent = text;
     eltern.appendChild(e); return e;
   }
+  function fr(v){ return Math.abs(v % 1) > 1e-9 ? v.toFixed(2) : String(Math.round(v)); }
   function z(n){ var r = Math.round(n * 100) / 100; if (Object.is(r, -0)) r = 0; return (r < 0 ? '−' : '') + String(Math.abs(r)); }
   function Achsen(svg, o){
     while (svg.firstChild) svg.removeChild(svg.firstChild);
@@ -128,7 +129,7 @@
       var k = Achsen(svg, o), a = T.A[0] + T.A[1] * Z.x, b = T.B[0] + T.B[1] * Z.x;
       k.gerade(T.A[1], T.A[0], 'linie blau', 0, 30); k.gerade(T.B[1], T.B[0], 'linie orange', 0, 30);
       k.strecke(Z.x, 0, Z.x, T.y1, 'linie grau gestrichelt'); k.punkt(Z.x, a, 'pkt blau'); k.punkt(Z.x, b, 'pkt orange');
-      formel.innerHTML = 'bei ' + Z.x + ' ' + T.name + ': <span class="blau">A kostet ' + z(a) + ' Fr.</span> &nbsp;·&nbsp; <span class="orange">B kostet ' + z(b) + ' Fr.</span>';
+      formel.innerHTML = 'bei ' + Z.x + ' ' + T.name + ': <span class="blau">A kostet ' + fr(a) + ' Fr.</span> &nbsp;·&nbsp; <span class="orange">B kostet ' + fr(b) + ' Fr.</span>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -155,13 +156,13 @@
       var y1 = Math.max(10, Math.ceil(Z.v * 3 / 50) * 50);
       var k = Achsen(svg, { w: 300, h: 220, rl: 30, x0: 0, x1: 180, y0: 0, y1: y1, sx: 15, sy: y1 / 10, xm: [30, 60, 90, 120, 150, 180], ym: [1, 2, 3, 4, 5].map(function(i){ return i * y1 / 5; }), xname: 't [min]', yname: 's [km]', r: 4 });
       k.strecke(0, 0, 180, Z.v * 3, 'linie blau'); k.strecke(Z.t, 0, Z.t, s, 'linie grau gestrichelt'); k.punkt(Z.t, s, 'pkt gruen', z(s) + ' km', 8, -8);
-      formel.innerHTML = 's = v · t = ' + Z.v + ' km/h · ' + Z.t + ' min = ' + Z.v + ' km/h · ' + z(Z.t / 60) + ' h = <b>' + z(s) + ' km</b>';
+      formel.innerHTML = 's = v · t = ' + Z.v + ' km/h · ' + Z.t + ' min = ' + Z.v + ' km/h · ' + Z.t + '/60 h ' + (Math.abs(s * 100 - Math.round(s * 100)) < 1e-9 ? '=' : '≈') + ' <b>' + z(s) + ' km</b>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     pr = Leiste(fig, [
       { text: 'Ein Auto fährt 60 km/h. Wie lange braucht es für 45 km? Stell beides ein.', ok: function(Z){ return Z.v === 60 && Z.t === 45; } },
-      { text: 'Ein Velo schafft 30 km in 40 Minuten. Wie schnell fährt es?', ok: function(Z){ return Z.v === 45 && Z.t === 40; } },
+      { text: 'Ein Bus schafft 30 km in 40 Minuten. Wie schnell fährt er?', ok: function(Z){ return Z.v === 45 && Z.t === 40; } },
       { text: 'Ein Zug fährt 20 Minuten mit 90 km/h. Wie weit kommt er?', ok: function(Z){ return Z.v === 90 && Z.t === 20; } },
       { text: 'Eine Läuferin läuft 10 km/h. Wie lange braucht sie für 5 km?', ok: function(Z){ return Z.v === 10 && Z.t === 30; } },
       { text: '100 km in 1 h 15 min: Wie schnell im Durchschnitt?', ok: function(Z){ return Z.v === 80 && Z.t === 75; } }
@@ -209,10 +210,11 @@
       var Z = zustand(); zeigeWert(fig, 's4-D', Z.D + ' km'); zeigeWert(fig, 's4-a', Z.a + ' km/h'); zeigeWert(fig, 's4-b', Z.b + ' km/h'); zeigeWert(fig, 's4-t', z(Z.t) + ' h');
       var nah = Z.r === 'ent' ? Z.a + Z.b : Z.a - Z.b, xa = Z.a * Z.t, xb = Z.r === 'ent' ? Z.D - Z.b * Z.t : Z.D + Z.b * Z.t, ab = xb - xa;
       var kb = Achsen(bahn, { w: 300, h: 40, rl: 20, x0: 0, x1: 120, y0: -1, y1: 1, sx: 10, sy: 2, xm: [20, 40, 60, 80, 100, 120], ym: [], xname: 'Ort [km]', yname: '', r: 6 });
-      kb.punkt(xa, 0, 'pkt blau', 'A', -4, -12); kb.punkt(xb, 0, 'pkt orange', 'B', -4, -12);
+      var am = function(x){ return Math.max(0, Math.min(120, x)); };
+      kb.punkt(am(xa), 0, 'pkt blau', 'A', -4, -12); kb.punkt(am(xb), 0, 'pkt orange', 'B', -4, -12);
       var k = Achsen(svg, { w: 300, h: 180, rl: 26, x0: 0, x1: 5, y0: 0, y1: 60, sx: 0.5, sy: 10, xm: [1, 2, 3, 4, 5], ym: [10, 20, 30, 40, 50, 60], xname: 't [h]', yname: 'Abstand [km]', r: 4 });
-      var tm = nah > 0 ? Z.D / nah : 5;
-      k.strecke(0, Z.D, Math.min(5, tm), Z.D - nah * Math.min(5, tm), 'linie blau'); k.punkt(Z.t, Math.abs(ab), 'pkt');
+      k.kurve(function(t){ return Math.abs(Z.D - nah * t); }, 0, 5, 'linie tinte');
+      if (Math.abs(ab) <= 60) k.punkt(Z.t, Math.abs(ab), 'pkt');
       formel.innerHTML = 'Abstand nach ' + z(Z.t) + ' h: <b>' + z(Math.abs(ab)) + ' km</b> <span class="grau">(A bei ' + z(xa) + ' km, B bei ' + z(xb) + ' km)</span>' + (ab < 0 ? ' <span class="nein-text">(schon vorbei)</span>' : '');
       if (pr) pr();
     }
@@ -222,7 +224,7 @@
       { text: 'B ist 20 km voraus und fährt 10 km/h, A fährt 15 km/h hinterher. Wann holt A ihn ein?', ok: function(Z){ return Z.D === 20 && Z.a === 15 && Z.b === 10 && Z.r === 'gleich' && Math.abs(Z.t - 4) < 1e-9; } },
       { text: '42 km auseinander, A 20 km/h, B 15 km/h, aufeinander zu. Wann treffen sie sich?', ok: function(Z){ return Z.D === 42 && Z.a === 20 && Z.b === 15 && Z.r === 'ent' && Math.abs(Z.t - 1.2) < 1e-9; } },
       { text: 'B ist 10 km voraus mit 15 km/h, A fährt 20 km/h. Wann holt A ihn ein?', ok: function(Z){ return Z.D === 10 && Z.a === 20 && Z.b === 15 && Z.r === 'gleich' && Math.abs(Z.t - 2) < 1e-9; } },
-      { text: 'Wieder 30 km, 12 km/h und 8 km/h aufeinander zu: Wann sind sie noch 6 km auseinander?', ok: function(Z){ return Z.D === 30 && Z.a === 12 && Z.b === 8 && Z.r === 'ent' && Math.abs(Z.t - 1.2) < 1e-9; } }
+      { text: 'Wieder 30 km, 12 km/h und 8 km/h aufeinander zu: Wann sind sie vor dem Treffen noch 6 km auseinander?', ok: function(Z){ return Z.D === 30 && Z.a === 12 && Z.b === 8 && Z.r === 'ent' && Math.abs(Z.t - 1.2) < 1e-9; } }
     ], sim);
     fig.querySelectorAll('input, select').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
     zeichnen();
@@ -306,16 +308,22 @@
       'eh|10|15|10', 'eh|20|15|10', 'eh|10|20|15', 'eh|6|20|12', 'eh|6|18|12',
       'um|h|45', 'um|h|15', 'um|h|20', 'um|ms|36', 'um|ms|72', 'um|ms|90', 'um|ms|54', 'um|kmh|5', 'um|min|0.75'
     ];
-    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    SPERRE.push('sv|s|18|20', 'sv|v|6|20', 'sv|t|6|18', 'sv|v|240|120', 'sv|s|120|120', 'sv|s|60|40', 'du|120|60|120|40', 'du|30|30|30|15', 'du|60|30|60|60',
+      'bg|50|18|12', 'eh|30|90|60', 'eh|12|18|14', 'ra|g|84', 'ta|9|3|30|0');
+    /* Vertauschte Rollen zählen als dieselbe Aufgabe (A/B, Abschnitte, Tarife) */
+    function varianten(k){ var p = k.split('|');
+      if (p[0] === 'bg') return [k, [p[0], p[1], p[3], p[2]].join('|')];
+      if (p[0] === 'ta' || p[0] === 'du') return [k, [p[0], p[3], p[4], p[1], p[2]].join('|')];
+      return [k]; }
+    function gesperrt(T, A){ return !!T.schl && varianten(T.schl(A)).some(function(k){ return SPERRE.indexOf(k) >= 0; }); }
     function d(v){ return bWert(bDez(v)); }
     function dt(v){ return bWertTex(bDez(v)); }
     function eing(a){ return bWert(a).replace('−', '-'); }
 
     var TARIF = [
-      ['Velomiete', 'Stunden', 'Stunde', 'A kostet {a1} Fr. plus {m1} Fr. pro Stunde, B {a2} Fr. plus {m2} Fr. pro Stunde.'],
-      ['Handy-Abo', 'GB', 'GB', 'A kostet {a1} Fr. im Monat plus {m1} Fr. pro GB, B {a2} Fr. plus {m2} Fr. pro GB.'],
-      ['Druckerei', 'Plakate', 'Plakat', 'A verlangt {a1} Fr. fürs Einrichten plus {m1} Fr. pro Plakat, B {a2} Fr. plus {m2} Fr. pro Plakat.'],
-      ['Schwimmbad', 'Eintritte', 'Eintritt', 'A: Jahreskarte {a1} Fr. plus {m1} Fr. pro Eintritt, B: {a2} Fr. plus {m2} Fr. pro Eintritt.']
+      ['Velomiete', 'Stunden', 'Stunde', 'A kostet {a1} Fr. plus {m1} Fr. pro Stunde, B {a2} Fr. plus {m2} Fr. pro Stunde.', 'Stunden', 10],
+      ['Handy-Abo', 'GB', 'GB', 'A kostet {a1} Fr. im Monat plus {m1} Fr. pro GB, B {a2} Fr. plus {m2} Fr. pro GB.', 'GB', 20],
+      ['Druckerei', 'Plakate', 'Plakat', 'A verlangt {a1} Fr. fürs Einrichten plus {m1} Fr. pro Plakat, B {a2} Fr. plus {m2} Fr. pro Plakat.', 'Plakaten', 20]
     ];
 
     var TYPEN = {
@@ -325,14 +333,14 @@
         eingabe: function(A){ return { x: String(A.x0), ab: String(A.x0 + 1) }; },
         neu: function(){
           var K = zufall(TARIF), m2 = zufall([0.5, 1, 1.5, 2, 3]), dm = zufall([0.5, 1, 1.5, 2]), m1 = m2 + dm, x0 = zufallG(4, 20), a1 = zufall([5, 10, 12, 15, 20]), a2 = a1 + dm * x0;
-          if (a2 % 1) return TYPEN.tarif.neu();
-          return { K: K, a1: a1, m1: m1, a2: a2, m2: m2, x0: x0, text: K[0] + ': ' + K[3].replace('{a1}', d(a1)).replace('{m1}', d(m1)).replace('{a2}', d(a2)).replace('{m2}', d(m2))
-                   + ' Bei wie vielen ' + K[1] + ' kosten beide gleich viel? Ab wie vielen ' + K[1] + ' ist B günstiger?', muster: 'gleich bei {x} &nbsp; B günstiger ab {ab}' }; },
+          if (a2 % 1 || x0 > K[5]) return TYPEN.tarif.neu();
+          return { K: K, a1: a1, m1: m1, a2: a2, m2: m2, x0: x0, text: K[0] + ': ' + K[3].replace('{a1}', fr(a1)).replace('{m1}', fr(m1)).replace('{a2}', fr(a2)).replace('{m2}', fr(m2))
+                   + ' Bei wie vielen ' + K[4] + ' kosten beide gleich viel? Ab wie vielen ' + K[4] + ' ist B günstiger?', muster: 'gleich bei {x} &nbsp; B günstiger ab {ab}' }; },
         richtig: function(A, e){ return bEq(e.x, B(A.x0)) && bEq(e.ab, B(A.x0 + 1)); },
         fehler: function(A){ return [[{ x: String(A.x0), ab: String(A.x0) }, 'gleich'], [{ x: String(A.x0 + 1), ab: String(A.x0 + 1) }, 'Gleichung']]; },
         pruefen: function(A, e){
           var t = [];
-          if (!bEq(e.x, B(A.x0))) t.push('Setz die Kosten <b>Gleichung</b>: \\(' + dt(A.a1) + ' + ' + dt(A.m1) + 'x = ' + dt(A.a2) + ' + ' + dt(A.m2) + 'x\\).');
+          if (!bEq(e.x, B(A.x0))) t.push('Setz die Kosten gleich (<b>Gleichung</b>): \\(' + dt(A.a1) + ' + ' + dt(A.m1) + 'x = ' + dt(A.a2) + ' + ' + dt(A.m2) + 'x\\).');
           if (!bEq(e.ab, B(A.x0 + 1))) t.push(bEq(e.ab, B(A.x0)) ? 'Bei \\(' + A.x0 + '\\) sind beide <b>gleich</b> teuer. Günstiger ist B erst danach.' : 'Prüf mit einer Zahl knapp über dem Gleichstand: Welches Angebot ist dann billiger?');
           return t.join(' '); },
         tipps: function(A){ return ['Variable: \\(x\\) = Anzahl ' + A.K[1] + '. Kosten A: \\(' + dt(A.a1) + ' + ' + dt(A.m1) + 'x\\), Kosten B: \\(' + dt(A.a2) + ' + ' + dt(A.m2) + 'x\\).',
@@ -343,22 +351,25 @@
         schl: function(A){ return 'ra|' + A.art + '|' + A.S + (A.art === 'a' ? '|' + A.dd : ''); },
         eingabe: function(A){ return { z: String(A.z) }; },
         neu: function(){
-          var art = zufall(['k', 'a', 'd']), n, S, dd = 0, text;
-          if (art === 'k'){ n = zufallG(8, 40); S = 3 * n + 3; text = 'Drei aufeinanderfolgende ganze Zahlen haben zusammen die Summe ' + S + '. Wie heisst die kleinste?'; }
+          var art = zufall(['k', 'g', 'a', 'd']), n, S, dd = 0, text;
+          if (art === 'g'){ n = 2 * zufallG(4, 20); S = 3 * n + 6; text = 'Drei aufeinanderfolgende <b>gerade</b> Zahlen haben zusammen die Summe ' + S + '. Wie heisst die kleinste?'; }
+          else if (art === 'k'){ n = zufallG(8, 40); S = 3 * n + 3; text = 'Drei aufeinanderfolgende ganze Zahlen haben zusammen die Summe ' + S + '. Wie heisst die kleinste?'; }
           else if (art === 'a'){ n = zufallG(8, 30); dd = zufallG(2, 9); S = 2 * n + dd; text = 'Lara ist ' + dd + ' Jahre älter als ihr Bruder. Zusammen sind sie ' + S + ' Jahre alt. Wie alt ist der Bruder?'; }
           else { n = zufallG(5, 40) * 5; S = 3 * n; text = 'Mia hat doppelt so viel Geld wie Tom, zusammen haben sie ' + S + ' Fr. Wie viel hat Tom?'; }
           return { art: art, z: n, S: S, dd: dd, text: text, muster: '{z}' }; },
         richtig: function(A, e){ return bEq(e.z, B(A.z)); },
         fehler: function(A){
           if (A.art === 'k') return [[{ z: String(A.z + 1) }, 'kleinste']];
+          if (A.art === 'g') return [[{ z: String(A.z + 1) }, 'gerade']];
           if (A.art === 'a') return A.S % 2 ? [] : [[{ z: String(A.S / 2) }, 'älter']];
           return A.S % 2 ? [] : [[{ z: String(A.S / 2) }, 'doppelt']]; },
         pruefen: function(A, e){
+          if (A.art === 'g') return bEq(e.z, B(A.z + 1)) ? 'Aufeinanderfolgende <b>gerade</b> Zahlen liegen \\(2\\) auseinander: \\(n\\), \\(n + 2\\), \\(n + 4\\). Ist deine Zahl überhaupt gerade?' : 'Nenn die kleinste Zahl \\(n\\). Die nächsten <b>geraden</b> Zahlen sind \\(n + 2\\) und \\(n + 4\\). Probe: Summe nachrechnen.';
           if (A.art === 'k') return bEq(e.z, B(A.z + 1)) ? 'Das ist die mittlere Zahl. Gesucht ist die <b>kleinste</b>: \\(n + (n + 1) + (n + 2) = ' + A.S + '\\).' : 'Nenn die kleinste Zahl \\(n\\). Die anderen sind \\(n + 1\\) und \\(n + 2\\). Probe: Summe nachrechnen.';
           if (A.art === 'a') return 'Lara ist ' + A.dd + ' Jahre <b>älter</b>: Bruder \\(x\\), Lara \\(x + ' + A.dd + '\\), zusammen \\(2x + ' + A.dd + ' = ' + A.S + '\\).';
           return 'Mia hat <b>doppelt</b> so viel: Tom \\(x\\), Mia \\(2x\\), zusammen \\(3x = ' + A.S + '\\).'; },
-        tipps: function(A){ return ['Leg fest, was \\(x\\) ist, und schreib die anderen Grössen mit \\(x\\).', A.art === 'k' ? '\\(3n + 3 = ' + A.S + '\\)' : A.art === 'a' ? '\\(2x + ' + A.dd + ' = ' + A.S + '\\)' : '\\(3x = ' + A.S + '\\)']; },
-        loesung: function(A){ return A.art === 'k' ? '3n + 3 = ' + A.S + ' \\;\\Rightarrow\\; n = ' + A.z : A.art === 'a' ? '2x + ' + A.dd + ' = ' + A.S + ' \\;\\Rightarrow\\; x = ' + A.z : '3x = ' + A.S + ' \\;\\Rightarrow\\; x = ' + A.z; } },
+        tipps: function(A){ return ['Leg fest, was \\(x\\) ist, und schreib die anderen Grössen mit \\(x\\).', A.art === 'k' ? '\\(3n + 3 = ' + A.S + '\\)' : A.art === 'g' ? '\\(3n + 6 = ' + A.S + '\\)' : A.art === 'a' ? '\\(2x + ' + A.dd + ' = ' + A.S + '\\)' : '\\(3x = ' + A.S + '\\)']; },
+        loesung: function(A){ return A.art === 'k' ? '3n + 3 = ' + A.S + ' \\;\\Rightarrow\\; n = ' + A.z : A.art === 'g' ? 'n + (n + 2) + (n + 4) = ' + A.S + ' \\;\\Rightarrow\\; n = ' + A.z : A.art === 'a' ? '2x + ' + A.dd + ' = ' + A.S + ' \\;\\Rightarrow\\; x = ' + A.z : '3x = ' + A.S + ' \\;\\Rightarrow\\; x = ' + A.z; } },
 
       /* ── Kapitel 2 ── */
       'svt': { felder: ['y'],
@@ -413,7 +424,7 @@
         schl: function(A){ return 'du|' + A.s1 + '|' + A.v1 + '|' + A.s2 + '|' + A.v2; },
         eingabe: function(A){ return { y: eing(A.w) }; },
         neu: function(){
-          var v1 = zufall([10, 12, 15, 20, 30, 40, 60, 80, 90, 120]), v2 = zufall([10, 12, 15, 20, 30, 40, 60, 80, 90, 120]), t1 = zufall([0.5, 1, 1.5, 2]), t2 = zufall([0.5, 1, 1.5, 2, 3]);
+          var KL = zufall([[10, 12, 15, 18, 20, 24, 30], [40, 50, 60, 80, 90, 100, 120]]), v1 = zufall(KL), v2 = zufall(KL), t1 = zufall([0.5, 1, 1.5, 2]), t2 = zufall([0.5, 1, 1.5, 2, 3]);
           if (v1 === v2 || t1 === t2) return TYPEN.durchschnitt.neu();
           var s1 = v1 * t1, s2 = v2 * t2, w = bDiv(bDez(s1 + s2), bDez(t1 + t2));
           if (w[1] > 2) return TYPEN.durchschnitt.neu();
@@ -453,7 +464,7 @@
         richtig: function(A, e){ return bEq(e.t, A.t) && bEq(e.x, A.x); },
         fehler: function(A){ var t2 = B(A.D, A.a - A.b); return bEq(t2, A.t) ? [] : [[{ t: eing(t2), x: eing(bMul(B(A.a), t2)) }, 'entgegen']]; },
         pruefen: function(A, e){
-          if (!bEq(e.t, A.t)) return bEq(e.t, B(A.D, A.a - A.b)) ? 'Sie fahren <b>entgegen</b>: Der Abstand schrumpft mit \\(' + A.a + ' + ' + A.b + '\\) km/h, nicht mit der Differenz.' : 'Annäherung: \\(' + A.a + ' + ' + A.b + ' = ' + (A.a + A.b) + '\\) km/h. Zeit = Abstand durch Annäherung.';
+          if (!bEq(e.t, A.t)) return bEq(e.t, B(A.D, A.a - A.b)) ? 'Sie fahren <b>entgegen</b>: Der Abstand schrumpft mit \\(' + A.a + ' + ' + A.b + '\\) km/h, nicht mit der Differenz.' : 'Um wie viele km wird der Abstand pro Stunde kleiner? Teile den Abstand durch diese Annäherungsgeschwindigkeit.';
           return 'Die Zeit stimmt. A fährt in dieser Zeit \\(' + A.a + ' \\cdot t\\) km.'; },
         tipps: function(A){ return ['Pro Stunde wird der Abstand um \\(' + A.a + ' + ' + A.b + '\\) km kleiner.', '\\(t = ' + A.D + ' : ' + (A.a + A.b) + '\\)']; },
         loesung: function(A){ return 't = \\dfrac{' + A.D + '}{' + A.a + ' + ' + A.b + '} = ' + bWertTex(A.t) + '\\ \\text{h}, \\quad ' + A.a + ' \\cdot ' + bWertTex(A.t) + ' = ' + bWertTex(A.x) + '\\ \\text{km}'; } },
@@ -462,14 +473,14 @@
         schl: function(A){ return 'eh|' + A.V + '|' + A.a + '|' + A.b; },
         eingabe: function(A){ return { t: eing(A.t) }; },
         neu: function(){
-          var b = zufall([4, 5, 6, 8, 10, 12, 15]), dv = zufall([2, 3, 4, 5, 6, 10]), a = b + dv, h = zufall([0.5, 1, 1.5, 2]), V = b * h, t = bDiv(bDez(V), B(dv));
+          var b = zufall([8, 10, 12, 15]), dv = zufall([2, 3, 4, 5, 6, 10]), a = b + dv, h = zufall([0.5, 1, 1.5, 2]), V = b * h, t = bDiv(bDez(V), B(dv));
           if (t[1] > 4 || V % 1) return TYPEN.einholen.neu();
-          return { a: a, b: b, h: h, V: V, t: t, text: 'Tom fährt mit ' + b + ' km/h los. ' + d(h) + ' h später fährt Lea auf demselben Weg hinterher, mit ' + a + ' km/h. Nach wie vielen Stunden (ab Leas Start) holt sie ihn ein?', muster: '{t} h' }; },
+          return { a: a, b: b, h: h, V: V, t: t, text: 'Tom fährt mit ' + b + ' km/h los. ' + (h * 60) + ' min später fährt Lea auf demselben Weg hinterher, mit ' + a + ' km/h. Nach wie vielen Stunden (ab Leas Start) holt sie ihn ein?', muster: '{t} h' }; },
         richtig: function(A, e){ return bEq(e.t, A.t); },
         fehler: function(A){ var t2 = bDiv(bDez(A.V), B(A.a + A.b)); return bEq(t2, A.t) ? [] : [[{ t: eing(t2) }, 'gleiche Richtung']]; },
         pruefen: function(A, e){
           if (bEq(e.t, bDiv(bDez(A.V), B(A.a + A.b)))) return 'Beide fahren in die <b>gleiche Richtung</b>: Lea holt pro Stunde nur \\(' + A.a + ' - ' + A.b + '\\) km auf.';
-          return 'Toms Vorsprung: \\(' + A.b + ' \\cdot ' + dt(A.h) + ' = ' + dt(A.V) + '\\) km. Lea holt pro Stunde \\(' + (A.a - A.b) + '\\) km auf.'; },
+          return 'Wie viele km Vorsprung hat Tom, wenn Lea startet? Und um wie viel kommt Lea ihm pro Stunde näher?'; },
         tipps: function(A){ return ['Vorsprung beim Start von Lea: \\(' + A.b + ' \\cdot ' + dt(A.h) + '\\) km.', 'Aufholen pro Stunde: \\(' + A.a + ' - ' + A.b + '\\) km.']; },
         loesung: function(A){ return '\\dfrac{' + dt(A.V) + '}{' + A.a + ' - ' + A.b + '} = ' + bWertTex(A.t) + '\\ \\text{h}'; } }
     };

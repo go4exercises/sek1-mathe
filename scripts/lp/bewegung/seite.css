@@ -41,7 +41,7 @@
 .achsname{fill:var(--tinte);font-family:var(--serif);font-style:italic;font-size:12px;stroke:var(--karte);stroke-width:4px;paint-order:stroke}
 .linie{fill:none;stroke-width:2.6;stroke-linecap:round}
 .linie.blau{stroke:var(--blau)} .linie.orange{stroke:var(--orange)} .linie.grau{stroke:var(--tinte-2);stroke-width:1.4}
-.linie.gestrichelt{stroke-dasharray:5 4}
+.linie.gestrichelt{stroke-dasharray:5 4} .linie.tinte{stroke:var(--tinte)}
 .pkt{fill:var(--tinte);stroke:var(--karte);stroke-width:1.5}
 .pkt.orange{fill:var(--orange)} .pkt.gruen{fill:var(--gruen)} .pkt.rot{fill:var(--rot)}
 .pkt.ziel{fill:var(--karte);stroke:var(--gruen);stroke-width:2.2}

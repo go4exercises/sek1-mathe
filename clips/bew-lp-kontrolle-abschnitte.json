@@ -97,7 +97,7 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Abschnitt zwei ist steiler: In einer Stunde kommen sechzig Kilometer dazu, in Abschnitt eins nur dreissig.",
+   "sprecher": "Abschnitt zwei ist steiler: In einer Stunde kommen sechzig Kilometer dazu, in Abschnitt eins sind es nur dreissig Kilometer.",
    "elemente": [
     {
      "typ": "graf",
@@ -172,7 +172,7 @@
         2,
         90
        ],
-       "farbe": 1,
+       "farbe": 2,
        "dicke": 5
       },
       {
@@ -287,19 +287,19 @@
         2,
         90
        ],
-       "farbe": 1,
+       "farbe": 2,
        "dicke": 5
       }
      ]
     }
    ],
-   "dauer": 6.73
+   "dauer": 7.41
   },
   {
    "name": "Merke",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Zum Mitnehmen: Durchschnitt ist Gesamtweg durch Gesamtzeit. Nur bei gleich langen Zeiten darf man die Geschwindigkeiten mitteln. Steiler heisst schneller.",
+   "sprecher": "Zum Mitnehmen: Durchschnitt ist Gesamtweg durch Gesamtzeit. Nur bei gleich langen Zeiten darfst du die Geschwindigkeiten mitteln. Steiler heisst schneller.",
    "elemente": [
     {
      "typ": "titel",
@@ -318,7 +318,7 @@
      "ein": 1.2
     }
    ],
-   "dauer": 8.89
+   "dauer": 9.21
   }
  ],
  "fragen": [
@@ -328,7 +328,7 @@
    "typ": "wahl",
    "text": "Je eine Stunde mit 60 km/h und mit 20 km/h. Wie gross ist der Durchschnitt?",
    "optionen": [
-    "30 km/h",
+    "20 km/h",
     "40 km/h",
     "80 km/h"
    ],
@@ -336,12 +336,12 @@
    "rueck": {
     "1": "Ja.",
     "2": "80 km ist der Weg. Wie lange hat es gedauert?",
-    "0": "Rechne den Weg aus: 60 + 20 km in 2 h."
+    "0": "20 km/h ist nur der zweite Abschnitt."
    },
    "sprich": "Je eine Stunde mit sechzig und mit zwanzig Kilometern pro Stunde. Wie gross ist der Durchschnitt?",
    "rueck_sprich": {
     "2": "Achtzig Kilometer ist der Weg. Wie lange hat es gedauert?",
-    "0": "Rechne zuerst den ganzen Weg aus."
+    "0": "Zwanzig Kilometer pro Stunde ist nur der zweite Abschnitt."
    }
   },
   {

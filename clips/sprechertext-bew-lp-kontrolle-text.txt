@@ -1,6 +1,6 @@
 0.40	Vier plus zwei x gleich dreissig. Zwei x gleich sechsundzwanzig, x gleich dreizehn Kilometer.
 6.91	Fünf plus zwei x gleich elf plus x. Also x gleich sechs: Bei sechs Stück sind beide gleich teuer.
-13.78	n plus n plus eins plus n plus zwei gleich fünfundvierzig. Drei n plus drei gleich fünfundvierzig, n gleich vierzehn. Die Zahlen sind vierzehn, fünfzehn, sechzehn.
-25.20	Die Gleichung liefert nur eine Zahl. Der Antwortsatz sagt, was sie bedeutet: Ein Heft kostet fünf Franken.
-32.86	Sechsundvierzig durch acht gibt fünf Komma sieben fünf. Fünf Autos reichen nicht: Es braucht sechs.
-39.68	Zum Mitnehmen: Variable festlegen, Gleichung aufstellen und lösen, dann prüfen: Beantwortet die Zahl die Frage, muss gerundet werden?
+13.78	Zwanzig plus acht x gleich sechzig. Acht x gleich vierzig, also x gleich fünf: Lena hat fünf Filme gesehen.
+21.62	Die Gleichung liefert nur eine Zahl. Der Antwortsatz sagt, was sie bedeutet: Ein Ticket kostet neun Franken.
+28.78	Sechsundvierzig durch acht gibt fünf Komma sieben fünf. Fünf Autos reichen nicht: Es braucht sechs.
+35.60	Zum Mitnehmen: Variable festlegen, Gleichung aufstellen und lösen, dann prüfen: Beantwortet die Zahl die Frage, muss gerundet werden?

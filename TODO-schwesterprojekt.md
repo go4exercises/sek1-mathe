@@ -45,3 +45,10 @@ sagen, wofür sie gelten», «Gleiche Wörter, verschiedene Bezugsgrössen». Cl
 nach der Wahl, nicht nach der Lösung», «Ein Zahlenfeld heisst nie `w`». PDFs: «Ein Testpunkt in der Musterlösung muss trennen».
 Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15 (Wortlaut wie in der Sek-I-Fassung). Warum: alle neun Fehler sind im TALS-Gerüst
 genauso möglich (gleiche Übungslogik, gleiche Clip-Helfer). Nachgezählt: 9 Punkte.
+
+## HOWTO §15: vier Fehlerklassen aus der Prüfung «Texte, Geschwindigkeit und Begegnung» (Sek I, 10.10.2026)
+
+Was: In `HOWTO-leitprogramme.md` §15 ergänzen. Fachlich: «Eine Merkregel, mehrere Modelle», «Modellannahmen passen zu allen
+Beispielen», «Sachsituationen auf Erlaubtheit prüfen». PDFs: «Jede Testaufgabe dem Kapitel zuordnen, das sie übt».
+Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15. Warum: Bewegungs- und Modellieraufgaben gibt es in TALS ebenso (g2-modellieren).
+Nachgezählt: 4 Punkte.

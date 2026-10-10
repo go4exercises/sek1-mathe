@@ -58,19 +58,19 @@
    "name": "Plan",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "So gehst du vor: zuerst eine Skizze oder Tabelle. Dann eine Variable mit Bedeutung, dann die Beziehung, dann die Gleichung. Am Schluss prüfst du und schreibst einen Antwortsatz.",
+   "sprecher": "So gehst du vor: Was ist gegeben, was ist gesucht? Mach eine Skizze oder Tabelle. Dann eine Variable mit Einheit, die Beziehung und die Gleichung. Am Schluss prüfst du und schreibst einen Antwortsatz.",
    "elemente": [
     {
      "typ": "notiz",
-     "text": "① Skizze oder Tabelle|② Variable mit Einheit|③ Beziehung|④ Gleichung lösen|⑤ Prüfung und Antwortsatz",
+     "text": "① gegeben, gesucht, Skizze|② Variable mit Einheit|③ Beziehung|④ Gleichung lösen|⑤ Prüfung und Antwortsatz",
      "x": 150,
      "y": 260,
      "groesse": 46,
      "farbe": "blau",
-     "ein": 2.12
+     "ein": 2.0
     }
    ],
-   "dauer": 10.45
+   "dauer": 11.63
   },
   {
    "name": "Variable",
@@ -84,7 +84,7 @@
      "x": 150,
      "y": 280,
      "groesse": 50,
-     "ein": 1.05
+     "ein": 1.07
     },
     {
      "typ": "formel",
@@ -331,7 +331,7 @@
      "x": 150,
      "y": 280,
      "groesse": 54,
-     "ein": 0.59
+     "ein": 0.57
     },
     {
      "typ": "formel",
@@ -514,7 +514,7 @@
    "elemente": [
     {
      "typ": "formel",
-     "text": "x = 11:\\ \\ \\fa{9.50} \\text{ Fr.} \\;>\\; \\fb{9.20} \\text{ Fr.}",
+     "text": "x = 11 \\;\\Rightarrow\\; \\fa{9.50} \\text{ Fr.} > \\fb{9.20} \\text{ Fr.}",
      "x": 150,
      "y": 300,
      "groesse": 50,

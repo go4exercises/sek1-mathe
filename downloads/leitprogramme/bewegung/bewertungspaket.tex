@@ -4,7 +4,7 @@
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
 \renewcommand{\lpname}{Texte, Geschwindigkeit und Begegnung}
-\renewcommand{\lpteilgebiet}{Mathematisieren ·}
+\renewcommand{\lpteilgebiet}{}
 \renewcommand{\lpfuss}{Bewertungspaket}
 \newcolumntype{P}{>{\centering\arraybackslash}p{10mm}}
 \newenvironment{raster}{\par\smallskip\noindent\renewcommand{\arraystretch}{1.6}\linespread{1.35}\selectfont\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
@@ -36,14 +36,14 @@ Dieses Paket enthält die Musterlösung. Wer es vor dem Lösen liest, misst am E
 
 \section*{2 · Auftrag an die KI}
 \begin{tcolorbox}[colback=lplinie!25,colframe=lplinie,boxrule=0.5pt,arc=1mm,fontupper=\small]
-Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in der Schweiz. Im Anhang findest du (1)~das Testblatt mit den Aufgaben, (2)~das Bewertungspaket zum Gesamttest «Texte, Geschwindigkeit und Begegnung» mit Musterlösung und Punkteraster und (3)~Fotos meiner handschriftlichen Lösung.\par\medskip
+Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in der Schweiz. Im Anhang findest du (1)~das Testblatt mit den Aufgaben, (2)~das Bewertungspaket zum Gesamttest «Texte, Geschwindigkeit und Begegnung» mit Musterlösung und Punkteraster und (3)~Bilder meiner handschriftlichen Lösung.\par\medskip
 Geh so vor:\par
 1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Variable, Gleichung, Rechenweg, Ergebnis mit Einheit und Antwortsatz; bei G5 auch die Tabelle. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Dezimalpunkte, Einheiten (h, min, s, km/h, m/s) und darauf, ob ein Antwortsatz dasteht.\par
 2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
-3. Andere richtige Wege zählen voll, zum Beispiel eine Tabelle statt einer Gleichung bei G1, eine andere Variable bei G2 (etwa die mittlere Zahl) oder ein Bruch statt einer Dezimalzahl. Gleichwertig: $0.6$ h und $\tfrac{3}{5}$ h; $1.5$ h und $1$ h $30$ min und $90$ min; $14.4$ km/h und $\tfrac{72}{5}$ km/h. Antworten in Worten zählen, wenn sie dasselbe sagen wie die Musterlösung.\par
+3. Andere richtige Wege zählen voll, zum Beispiel eine andere Variable bei G2 (etwa die mittlere Zahl), der Weg über Minuten bei G3 oder ein Bruch statt einer Dezimalzahl. Bei G1 ist eine Gleichung verlangt: Eine Tabelle allein gibt die Punkte für Lösung, Probe und Antwortsatz, nicht für die Gleichung. Gleichwertig: $0.6$ h und $\tfrac{3}{5}$ h; $\tfrac{2}{3}$ h und $0.67$ h, wenn daraus $40$ min werden; $\tfrac{5}{3}$ h und $1$ h $40$ min. Antworten in Worten zählen, wenn sie dasselbe sagen wie die Musterlösung.\par
 4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «Gleichstand statt ab wann günstiger», «Minuten als Stunden gerechnet», «1 h 30 min als 1.30 h», «Geschwindigkeiten gemittelt», «Pause vergessen», «in gleicher Richtung addiert»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
 5. Gib zum Schluss eine Tabelle «Aufgabe | Punkte | Begründung», die Gesamtpunktzahl (von 25) und — nach der Selbsteinschätzung in Abschnitt 4 — welches Kapitel des Leitprogramms ich wiederholen soll. Keine Note.\par
-6. Fehlt ein Foto oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
+6. Fehlt ein Bild oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
 \end{tcolorbox}
 
 \needspace{16\baselineskip}
@@ -52,18 +52,19 @@ Geh so vor:\par
 In der Spalte P: \textbf{(E)}~= Ergebnispunkt, Ergebnis richtig \emph{und} Weg erkennbar, direkt aus den Angaben; ohne Zeichen = die
 Zeile bewertet den Weg, die Begründung oder den Antwortsatz. Der ganze Test ist ohne Taschenrechner gestellt.
 «Typische Fehler» nennt, welche Zeile 0 Punkte gibt, und die Punkte, die bleiben.
+\textbf{Antwortsatz und Einheit:} Ein Antwortsatz wird nur in G1 bewertet. Sonst genügt das Ergebnis mit Einheit; fehlt nur die Einheit, gibt es keinen Abzug, ausser die Zeile verlangt eine Umrechnung (G3, G4, G7).
 \textbf{Teilrichtige Zeilen:} Verlangt eine Zeile mehrere Angaben und stimmt nur ein Teil, gibt die Zeile 0 Punkte,
 ausser die Zeile nennt ausdrücklich eine Aufteilung.
 
 \begin{lpaufgabe}{G1}{Streaming}{4 P}
 \begin{raster}
-Variable und Terme & 1 & $x$: Anzahl Filme pro Monat. A: $12 + 3x$, B: $30$ (Franken)\\
-Gleichung & 1 & $12 + 3x = 30$ (oder eine Tabelle, die den Gleichstand zeigt)\\
-Lösung & 1\E & $3x = 18$, $x = 6$: Bei $6$ Filmen kosten beide $30$ Fr.\\
-Probe und Antwortsatz & 1 & $x = 7$: A $33$ Fr., B $30$ Fr. \emph{Ab $7$ Filmen im Monat ist B günstiger.}\\
+Variable und Terme & 1 & $x$: Anzahl Filme pro Monat. A: $9 + 3x$, B: $30$ (Franken)\\
+Gleichung & 1 & $9 + 3x = 30$\\
+Lösung & 1\E & $3x = 21$, $x = 7$: Bei $7$ Filmen kosten beide $30$ Fr.\\
+Probe und Antwortsatz & 1 & Probe mit $x = 7$ ($9 + 21 = 30$) oder $x = 8$ (A $33$ Fr., B $30$ Fr.), beide gleichwertig. \emph{Ab $8$ Filmen im Monat ist B günstiger.}\\
 \end{raster}
-\fehler{Antwort «ab $6$ Filmen» oder nur «$x = 6$»: Zeile Probe und Antwortsatz 0 $\to$ 3 von 4\,P.
-$12x + 3 = 30$ (Grundbetrag und Preis pro Film vertauscht): Zeilen Variable und Terme, Gleichung und Lösung 0; Probe und Antwortsatz als Folgepunkt, wenn sie zur eigenen Gleichung passen.}
+\fehler{Antwort «ab $7$ Filmen» oder nur «$x = 7$»: Zeile Probe und Antwortsatz 0 $\to$ 3 von 4\,P.
+$9x + 3 = 30$ (Grundbetrag und Preis pro Film vertauscht): Zeilen Variable und Terme, Gleichung und Lösung 0; Probe und Antwortsatz als Folgepunkt, wenn sie zur eigenen Gleichung passen $\to$ 1 von 4\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G2}{Zahlenrätsel}{3 P}
@@ -78,56 +79,60 @@ Probe & 1 & $26 + 28 + 30 = 84$, alle gerade\\
 \begin{lpaufgabe}{G3}{Zugfahrt}{3 P}
 \begin{raster}
 (a) & 1\E & $1$ h $30$ min $= 1.5$ h, $v = 135 : 1.5 = 90$ km/h\\
-(b) Zeit in h & 1 & $t = 60 : 90 = \tfrac{2}{3}$ h. Auch als Folgepunkt mit der eigenen Geschwindigkeit aus (a).\\
+(b) Ansatz & 1 & $t = s : v = 60 : 90 = \tfrac{2}{3}$ h (oder über Minuten: $90$ km/h $= 1.5$ km/min, $60 : 1.5$). Auch als Folgepunkt mit der eigenen Geschwindigkeit aus (a).\\
 (b) in min & 1 & $\tfrac{2}{3} \cdot 60 = 40$ min\\
 \end{raster}
-\fehler{$1$ h $30$ min als $1.30$ h ($135 : 1.3 \approx 103.8$ km/h): Zeile (a) 0, (b) als Folgepunkte.
-$90 : 60 = 1.5$ (Bruch umgekehrt): Zeile (b) Zeit in h 0.}
+\fehler{$1$ h $30$ min als $1.30$ h ($135 : 1.3 \approx 103.8$ km/h): Zeile (a) 0; (b) Ansatz $60 : 103.8$ als Folgepunkt, der Zahlenwert ist ohne Rechner nicht verlangt $\to$ 1 oder 2 von 3\,P.
+$90 : 60 = 1.5$ (Bruch umgekehrt): Zeilen (b) 0 $\to$ 1 von 3\,P.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G4}{Einheiten}{3 P}
 \begin{raster}
 (a) & 1\E & $54 : 3.6 = 15$ m/s\\
 (b) & 1\E & $36 : 60 = 0.6$ h\\
-(c) & 1\E & $4 \cdot 3.6 = 14.4$ km/h\\
+(c) & 1 & $5 \cdot 3.6 = 18$ km/h; plausibel, ein Velo fährt etwa $15$ bis $25$ km/h. (Rechnung und Urteil verlangt.)\\
 \end{raster}
-\fehler{(a) $54 \cdot 3.6$ oder (c) $4 : 3.6$ (Richtung verwechselt): diese Zeile 0. (b) $0.36$ h (Minuten als Hundertstel): Zeile (b) 0.}
+\fehler{(a) $54 \cdot 3.6$ oder (c) $5 : 3.6$ (Richtung verwechselt): diese Zeile 0 $\to$ 2 von 3\,P. (b) $0.36$ h (Minuten als Hundertstel): Zeile (b) 0 $\to$ 2 von 3\,P.
+(c) $5 : 3.6 \approx 1.4$ km/h und «plausibel»: Zeile (c) 0, denn so langsam fährt kein Velo.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G5}{Bergwanderung}{4 P}
 \begin{raster}
-(a) Tabelle & 1 & $4$ km/h, $1.5$ h, $6$ km \;|\; Pause $0$ km/h, $0.5$ h, $0$ km \;|\; $2$ km/h, $2$ h, $4$ km\\
-(b) & 1 & $1.5 + 0.5 + 2 = 4$ h. Auch als Folgepunkt mit den eigenen Zeiten aus (a).\\
-(c) & 1\E & $10 : 4 = 2.5$ km/h (Gesamtweg durch Gesamtzeit, mit Pause)\\
-(d) & 1 & Das Mittel stimmt nur bei gleich langen Zeiten. Der langsame Teil dauert länger (2 h statt 1.5 h) und zählt darum mehr; dazu kommt die Pause.\\
+(a) Tabelle & 1 & $4.5$ km/h, $2$ h, $9$ km \;|\; Pause $0$ km/h, $0.5$ h, $0$ km \;|\; $2$ km/h, $1.5$ h, $3$ km\\
+(b) & 1 & $2 + 0.5 + 1.5 = 4$ h. Auch als Folgepunkt mit den eigenen Zeiten aus (a).\\
+(c) & 1\E & $12 : 4 = 3$ km/h (Gesamtweg durch Gesamtzeit, mit Pause)\\
+(d) & 1 & Das Mittel stimmt nur bei gleich langen Zeiten: Der langsame Teil zählt anders, und die Pause gehört zur Zeit. Nur «Pause vergessen» genannt: 0, denn auch ohne Pause wäre es nicht $3.25$ ($12 : 3.5 \approx 3.4$).\\
 \end{raster}
-\fehler{Pause vergessen ($10 : 3.5 \approx 2.9$ km/h): Zeilen (b) und (c) 0. Mittel $3$ km/h als Ergebnis von (c): Zeile (c) 0.}
+\fehler{Pause in der Tabelle, aber nicht zur Zeit gezählt ($3.5$ h, $12 : 3.5 \approx 3.4$ km/h): Zeilen (b) und (c) 0 $\to$ 2 von 4\,P.
+Pause fehlt schon in der Tabelle: Zeile (a) 0, (b) als Folgepunkt, (c) 0 $\to$ 2 von 4\,P. Mittel $3.25$ km/h als Ergebnis von (c): Zeile (c) 0.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G6}{Plausibel?}{2 P}
+\begin{lpaufgabe}{G6}{Graph lesen}{2 P}
 \begin{raster}
-(a) & 1 & $675$ h sind fast einen Monat: Für $45$ km braucht ein Velo nur wenige Stunden. (Oder: Mit $15$ km/h ist man in $3$ h schon $45$ km weit; die Einheit km·km/h ist keine Zeit.)\\
-(b) & 1\E & $t = 45 : 15 = 3$ h\\
+(a) & 1 & Im ersten Abschnitt ($0$ bis $1$ h): Dort ist der Graph am steilsten ($18$ km/h gegen $8$ km/h; von $1$ bis $1.5$ h Pause).\\
+(b) & 1\E & $30 : 3 = 10$ km/h, die Pause mitgezählt\\
 \end{raster}
-\fehler{(a) nur «falsch gerechnet» ohne Grössenvergleich: Zeile (a) 0.}
+\fehler{(a) «im letzten, weil er am längsten ist» (Länge statt Steilheit): Zeile (a) 0. (b) $30 : 2.5 = 12$ km/h (Pause weggelassen): Zeile (b) 0.}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G7}{Begegnung}{3 P}
 \begin{raster}
-(a) & 1\E & aufeinander zu: $16 + 14 = 30$ km/h, $t = 45 : 30 = 1.5$ h\\
-(b) & 1 & $16 \cdot 1.5 = 24$ km von Dorf A (Probe: Sara $14 \cdot 1.5 = 21$ km, $24 + 21 = 45$). Auch als Folgepunkt mit der eigenen Zeit aus (a).\\
-(c) & 1 & z.\,B.: Beide fahren die ganze Zeit gleich schnell; sie starten genau gleichzeitig; keine Pausen, Ampeln oder Steigungen; die Strasse ist $45$ km lang.\\
+(a) & 1\E & aufeinander zu: $18 + 12 = 30$ km/h, $t = 50 : 30 = \tfrac{5}{3}$ h $= 1$ h $40$ min\\
+(b) & 1 & $18 \cdot \tfrac{5}{3} = 30$ km von Dorf A (Probe: Sara $12 \cdot \tfrac{5}{3} = 20$ km, $30 + 20 = 50$). Auch als Folgepunkt mit der eigenen Zeit aus (a), wenn der Treffpunkt zwischen den Dörfern liegt.\\
+(c) & 1 & z.\,B.: Beide fahren die ganze Zeit gleich schnell; sie starten genau gleichzeitig; keine Pausen, Ampeln oder Steigungen; die Strasse ist $50$ km lang.\\
 \end{raster}
-\fehler{$16 - 14 = 2$ km/h ($22.5$ h, gleiche Richtung gerechnet): Zeile (a) 0, (b) als Folgepunkt. Treffpunkt in der Mitte ($22.5$ km): Zeile (b) 0.}
+\fehler{$18 - 12 = 6$ km/h ($8.3$ h, gleiche Richtung gerechnet): Zeile (a) 0; (b) 0, denn der Treffpunkt läge ausserhalb der Strecke $\to$ höchstens 1 von 3\,P.
+$\tfrac{5}{3}$ h als «$1$ h $67$ min» oder «$1.67$ h $= 1$ h $67$ min»: Zeile (a) 0. Treffpunkt in der Mitte ($25$ km): Zeile (b) 0.}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G8}{Rolltreppe}{3 P}
+\begin{lpaufgabe}{G8}{Einholen}{3 P}
 \begin{raster}
-(a) & 1\E & $1.2 + 0.8 = 2$ m/s, $24 : 2 = 12$ s\\
-(b) & 1\E & $1.2 - 0.8 = 0.4$ m/s, $24 : 0.4 = 60$ s\\
-(c) & 1\E & $24 : 0.8 = 30$ s\\
+(a) & 1\E & $60 \cdot 0.5 = 30$ km Vorsprung\\
+(b) & 1 & gleiche Richtung: $90 - 60 = 30$ km/h, $t = 30 : 30 = 1$ h nach dem Start des Autos. Auch als Folgepunkt mit dem eigenen Vorsprung aus (a).\\
+(c) & 1 & $90 \cdot 1 = 90$ km (Probe: Lastwagen $60 \cdot 1.5 = 90$ km). Auch als Folgepunkt mit der eigenen Zeit aus (b).\\
 \end{raster}
-\fehler{(b) mit $2$ m/s gerechnet ($12$ s, addiert statt subtrahiert): Zeile (b) 0 $\to$ 2 von 3\,P.}
+\fehler{$90 + 60 = 150$ km/h (wie bei einer Begegnung addiert, $t = 0.2$ h): Zeile (b) 0, (c) als Folgepunkt $\to$ 2 von 3\,P.
+Vorsprung $60 \cdot 30 = 1800$ km (Minuten nicht umgerechnet): Zeile (a) 0, (b) und (c) als Folgepunkte nur, wenn das Ergebnis geprüft und verworfen wird.}
 \end{lpaufgabe}
 
 \needspace{12\baselineskip}
