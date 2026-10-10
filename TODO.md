@@ -15,12 +15,48 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 `leitprogramme/bewegung.html`, gebaut mit `scripts/lp/bewegung/` (README dort), nach
 `~/TODO-BM-Vorkurs-LP03-15.md` §5 (LP 07, Mathematisieren: Texte, Geschwindigkeit und Begegnung). Neuer Bereich «Mathematisieren».
 
-- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bewegung.html`.
+- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bewegung.html` (Abschnitt unten).
 - [x] Eingetragen (nav.js mit Bereich 4 «Mathematisieren», index.html, build-seo, Suchindex, Sitemap, CLAUDE.md).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 ohne Antwortsatz, G5 mit Mittelwert).
 - [ ] 🔑 Hörprobe der acht Clips `bew-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
       «Bea» (Whisper: «bar», «BR»), «Rappen», Zahlen mit «Komma» in der Rolltreppen-Szene.
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
+## Prüfung `bewegung` (10.10.2026)
+
+Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `8aa214a`. HOCH-Befunde
+an der Quelle nachgeprüft und bestätigt. Rechenfehler: keine. Neuvertonung nötig: 🔊.
+Als korrekt geprüft: alle Zahlen und Fehlerwerte, Punktsummen, Leisten auf dem Reglerraster, Fragebilder ohne Antwort, Datenschutz.
+
+### HOCH
+- [ ] Rolltreppe widerspricht der Merkregel «aufeinander zu addieren, gleiche Richtung subtrahieren» (Clip begegnung, K4F5):
+      Geschwindigkeiten setzen sich gegenüber dem Boden zusammen; «gegen die Fahrrichtung» ist auf Rolltreppen verboten (G8, Festhalten). 🔊
+- [ ] Modell «gleichzeitiger Start» widerspricht dem Einholen-Beispiel (Festhalten 4, Clip Modell); Einholregel ohne Bedingung
+      (Hinterer schneller), v₁, v₂ undefiniert, «Treffpunkt in der Mitte» ohne «gleichzeitig». 🔊
+- [ ] Gesamttest: G6 (Plausibilität) im Teil Abschnitte; Einholen fehlt; G2 «gerade Zahlen» und G7c «Modellannahme» nirgends geübt;
+      G5 = Velotour aus Clip und Festhalten (gleiche Zeiten), G7 mit Zahlen aus dem Clip, G1 mit Lösung 6/7 wie 1a und K1F2.
+- [ ] Sim 4 nach der Begegnung: Punkt neben dem Graphen, Fahrzeuge ausserhalb; Sim 2 Live-Zeile rundet mit «=».
+
+### MITTEL
+- [ ] Raster: Pause-Fehler G5 doppelt abgezogen; Antwortsatz und Einheiten nur in G1 geregelt; G6(a) «ohne Rechnen» rechnet;
+      Probe mit x = 6 oder 7; Tabelle statt Gleichung; G3(b) Weg über Minuten; Folgepunkt mit unplausiblem Treffpunkt.
+- [ ] Wiederholungen: 1d (= Festhalten 10.8 Busse), 2d (= Festhalten 1.30 h), 4e (= Sim 4), K4F4/F5 (= 4b/4c), K2F1/F3, K1F4;
+      Sperrliste lässt Festhalten- und Clipbeispiele durch (falscher Schlüssel sv|s|240|120, keine Rollentausch-Normierung).
+- [ ] Keine Aufgabe am Graphen (Diagrammsteigung nur in K3F5); «gegeben, gesucht» nicht umgesetzt; «Annäherungsgeschwindigkeit» nie erklärt.
+- [ ] Plausibilitätsregel «Zug 100 km/h und mehr» widerspricht 2a (60 km/h); Velo mit 45 km/h in Sim 2; Vortest 0b/0c = «Kurz wiederholt».
+- [ ] Zufallsübungen: Velo- und Autotempo gemischt (durchschnitt), Tom «fährt» 4 km/h, Velomiete bis 20 h, Jahreskarte 5 Fr.;
+      Rückmeldungen begegnung/einholen nennen die Rechnung.
+- [ ] Clips: Abschnitte «erster steiler als dritter» bei Tabelle 1 | Pause | 2; Ton «nur null Komma fünf: sechzig Sekunden»,
+      «Abschnitt eins nur dreissig» mehrdeutig; Rückmeldungen nennen den Rechenweg; Text ≠ Ton bei mehreren Rückmeldungen;
+      K1F3 und K2F3 vor dem Festhalten nicht eingeführt; Einholzeit ohne Bezug («nach Annas Start»). 🔊
+
+### NIEDRIG
+- [ ] Dativ «Eintritte/Plakate», «Setz die Kosten Gleichung», Franken mit zwei Stellen, Warn-Titel «Komma statt Bruch»,
+      Sim-4-Graph blau, «noch 6 km» auch nach dem Treffen, «0.5 h später».
+- [ ] Clips: «Viertelauto», Doppelpunkt «x = 11:», Einblendezeiten Bea und «= 2 h», Label (1.5 | 21) weit unter dem Punkt,
+      K3F5 Abschnitt 2 nicht orange, «darf man».
+- [ ] PDFs: Schreibplatz G1/G5/G7, Silbentrennung in der Kopfzeile, leere Flächen im Bewertungspaket.
+- [ ] 🔑 Hörprobe (Whisper-Vermutungen): «Bea», «addierst», «s gleich v mal t», «Teilen statt mal», «neun Zahlungen», «Grundtaxe».
 
 ## Leitprogramm Funktionstypen und Graphen (10.10.2026)
 
