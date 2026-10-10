@@ -5,7 +5,10 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 .claude/tools ausser build-bilder.mjs. Projekteigen: style.css (Petrol), build-bilder.mjs, build-seo.py, build-suchindex.py, preflight.py.
 - [x] `build-clip-ton.py`: neue `TAUSCH`-Einträge aus der TALS-Hörprobe vom 10.10.2026 übernommen (eigene «kürz», «Bruchterm» bleiben).
 - [x] Davon betroffen: «Kacheln» in `terme-lp-zusammenfassen`, Szenen 2, 4, 5 neu vertont.
-- [ ] 🔑 Hörprobe `terme-lp-zusammenfassen` Szene «Zusammenfassen»: Whisper hört «Kacheln» dort noch als «Karre».
+- [x] Hörprobe 10.10.2026 umgesetzt (`~/hoerproben/2026-10-10/AUFTRAG-sek1.md`): Tabelle gleich wie TALS, Kommentarzeile repariert;
+      «Kacheln» mit langem ch (terme-lp-zusammenfassen, Sz. 2, 4, 5), «y» → «Ypsilon» in den Terme-Clips (9 Stellen, Regel `ypsilon()`
+      in `scripts/lp/terme-faktorisieren/clips.py`, «y-Glieder» bleibt), «Nun stelle …» in den Fragetönen 1–4 von gleich-lp-kontrolle-formeln.
+      Whisper medium schreibt «Ypsilon» weiterhin als «Epsilon» und «Kacheln» einmal als «Karre» — massgebend ist die Hörprobe.
 
 ## Leitprogramm Darstellungen wechseln (10.10.2026)
 
@@ -73,7 +76,7 @@ Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Fragebilder, Lei
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/lineare-funktionen.html` (Abschnitt unten, behoben).
 - [x] Freigeschaltet (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex, Sitemap).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Zeichnungen G4, G6, G8).
-- [ ] 🔑 Hörprobe der acht Clips `lin-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+- [x] 🔑 Hörprobe der acht Clips `lin-lp-*` (10.10.2026, Runde 5: «m», «Geraden», «delta y» bleiben wie bisher). Besonders hinhören:
       «m» (Whisper schreibt oft «n»), «Geraden» (Whisper: «Graben»), «y» als «Ypsilon», «delta y».
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 205 min).
 
@@ -140,7 +143,7 @@ TikZ-Koordinaten, Selbsteinschätzung, Datenschutz, Konventionen, TALS-Anker.
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/gleichungen-formeln.html` (Abschnitt unten, behoben).
 - [x] Freigeschaltet (nav.js, index.html, build-seo ohne noindex, Suchindex, Sitemap).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben.
-- [ ] 🔑 Hörprobe der acht Clips `gleich-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+- [x] 🔑 Hörprobe der acht Clips `gleich-lp-*` (10.10.2026, umgesetzt: «Nun stelle …»). Besonders hinhören:
       «Bruch-Term» (`TAUSCH`), «Zerlege», «Nenner», Fragestart («Kürze», «Rechne», «Stelle»), «y», «A» gegen «a».
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 210 min).
 
@@ -188,7 +191,7 @@ Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Fragebilder der 
 - [x] Clip Rechnen «Mal»: Farbpaare gegen Zähler/Nenner-Farben; Rechenkette: Startkasten F grün.
 - [x] K2F1 «Rechne» ohne «kürze»; K2F5 Rückmeldung zu −1 passt nicht zum Fehler.
 - [x] G8 «Jahreszins»; PDF-Zeilen eng (G2, G7, G8, G9); G1-Fehlerbeispiele vage; G4/G6 Schreibweisen; README-Verweise.
-- [ ] Aussprache (Hörprobe): siehe oben; dazu «a» (Whisper: «ab») im Clip Formeln, Szene Trapez.
+- [x] Aussprache (Hörprobe 10.10.2026): «gross A / klein a» bleibt wie bisher.
 
 # TODO — Sek1-Mathe begreifbar
 
@@ -351,7 +354,7 @@ nachgezählt, Bewegungen, Leistenziele erreichbar und nicht im Start erfüllt, K
 
 - [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/terme-faktorisieren.html` (Abschnitt unten, behoben).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben.
-- [ ] 🔑 Hörprobe der acht Clips `terme-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+- [x] 🔑 Hörprobe der acht Clips `terme-lp-*` (10.10.2026, umgesetzt: Kacheln, Ypsilon). Besonders hinhören:
       «Kacheln», «y», «Zweiklammersatz», «Rechteck-Schema».
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 205 min).
 - [x] Freigeschaltet (nav.js, index.html, build-seo ohne noindex, Suchindex, Sitemap).
@@ -409,5 +412,5 @@ Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Leistenziele err
 - [x] Clip Binome «Minus»: warum + b² nicht gesprochen.
 - [x] Raster-Kleinigkeiten: G2-Beispiel 2a⁴, G7 «Summe statt Produkt», G4 −16, G8 Gleichung gelöst, PDF-Umbrüche in Formeln, G9 Platz.
 - [ ] Farben: ab orange (Kap. 3) vs x-Streifen blau (Kap. 2) — bewusst (README), nicht geändert.
-- [ ] Aussprache (Hörprobe): «Kacheln» (Whisper: «Karren»; einzeln gesprochen richtig), «y» (Whisper: «Epsilon»), «Zweiklammersatz», «rückwärts».
+- [x] Aussprache (Hörprobe 10.10.2026): «Kacheln» mit langem ch, «y» → «Ypsilon»; «Zweiklammersatz», «rückwärts» bleiben.
 

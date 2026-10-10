@@ -30,7 +30,7 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Gleichartig sind vier y und zwei y, das gibt sechs y. Minus sieben plus drei gibt minus vier. Also sechs y minus vier.",
+   "sprecher": "Gleichartig sind vier Ypsilon und zwei Ypsilon, das gibt sechs Ypsilon. Minus sieben plus drei gibt minus vier. Also sechs Ypsilon minus vier.",
    "elemente": [
     {
      "typ": "formel",
@@ -480,7 +480,7 @@
      "achsen": false
     }
    ],
-   "dauer": 9.32
+   "dauer": 9.69
   },
   {
    "name": "Frage 2",
@@ -773,7 +773,7 @@
     "2": "y-Glieder und Zahlen sind nicht gleichartig. Sie bleiben getrennt.",
     "0": "Achte auf das Vorzeichen: −7 + 3 = −4."
    },
-   "sprich": "Fasse zusammen: vier y minus sieben plus zwei y plus drei.",
+   "sprich": "Fasse zusammen: vier Ypsilon minus sieben plus zwei Ypsilon plus drei.",
    "rueck_sprich": {
     "2": "y-Glieder und Zahlen sind nicht gleichartig. Sie bleiben getrennt.",
     "0": "Achte auf das Vorzeichen: minus sieben plus drei ist minus vier."

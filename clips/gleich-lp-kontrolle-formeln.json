@@ -348,7 +348,7 @@
     "1": "Rückgängig gemacht wird «mal R» mit «durch R».",
     "2": "Probe: Mit R = 2 und I = 3 ist U = 6. Deine Formel gibt 1/3."
    },
-   "sprich": "Stelle U gleich R mal I nach I um.",
+   "sprich": "Nun stelle U gleich R mal I nach I um.",
    "rueck_sprich": {
     "1": "Rückgängig gemacht wird mal R mit durch R.",
     "2": "Probe: Mit R gleich zwei und I gleich drei ist U gleich sechs. Deine Formel gibt ein Drittel."
@@ -370,7 +370,7 @@
     "0": "a und b werden multipliziert, nicht addiert: rückgängig mit «durch a».",
     "1": "Probe: Mit a = 2 und b = 5 ist A = 10. Deine Formel gibt 0.2."
    },
-   "sprich": "Stelle A gleich a mal b nach b um.",
+   "sprich": "Nun stelle die Fläche A gleich a mal b nach b um.",
    "rueck_sprich": {
     "0": "a und b werden multipliziert, nicht addiert: rückgängig mit durch a.",
     "1": "Probe: Mit a gleich zwei und b gleich fünf ist A gleich zehn. Deine Formel gibt null Komma zwei."
@@ -392,7 +392,7 @@
     "0": "Zuerst wird + 6 rückgängig gemacht, dann : 3 auf die ganze Differenz.",
     "1": "Rückgängig gemacht wird + 6 mit − 6."
    },
-   "sprich": "Stelle y gleich drei x plus sechs nach x um.",
+   "sprich": "Nun stelle y gleich drei x plus sechs nach x um.",
    "rueck_sprich": {
     "0": "Zuerst wird plus sechs rückgängig gemacht, dann durch drei auf die ganze Differenz.",
     "1": "Rückgängig gemacht wird plus sechs mit minus sechs."
@@ -414,7 +414,7 @@
     "0": "Rückgängig gemacht wird «durch 2» mit «mal 2».",
     "1": "Probe mit a = 3, b = 5: M = 4, deine Formel gibt −2."
    },
-   "sprich": "Stelle M gleich Klammer a plus b durch zwei nach a um.",
+   "sprich": "Nun stelle M gleich Klammer a plus b durch zwei nach a um.",
    "rueck_sprich": {
     "0": "Rückgängig gemacht wird durch zwei mit mal zwei.",
     "1": "Probe mit a gleich drei und b gleich fünf: M ist vier, deine Formel gibt minus zwei."

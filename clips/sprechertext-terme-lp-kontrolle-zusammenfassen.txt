@@ -1,6 +1,6 @@
-0.40	Gleichartig sind vier y und zwei y, das gibt sechs y. Minus sieben plus drei gibt minus vier. Also sechs y minus vier.
-9.72	Das Minus vor der Klammer dreht jedes Vorzeichen um: Aus drei x wird minus drei x, aus minus acht wird plus acht.
-17.61	Die Fünf wird mit beiden Gliedern multipliziert: fünf mal zwei a ist zehn a, fünf mal minus drei ist minus fünfzehn.
-25.67	Nein. Zwei x und drei x Quadrat sind nicht gleichartig, du kannst sie nicht zusammenfassen. Probe mit x gleich zwei: links vier plus zwölf, also sechzehn, rechts fünf mal acht, also vierzig.
-37.90	Klammer weg, jedes Vorzeichen umdrehen: x minus vier plus drei x. Zusammengefasst vier x minus vier.
-45.30	Zum Mitnehmen: Nur Gleichartiges zusammenfassen, die Zahl vor der Klammer mal jedes Glied, und ein Minus vor der Klammer dreht alle Vorzeichen um.
+0.40	Gleichartig sind vier Ypsilon und zwei Ypsilon, das gibt sechs Ypsilon. Minus sieben plus drei gibt minus vier. Also sechs Ypsilon minus vier.
+10.09	Das Minus vor der Klammer dreht jedes Vorzeichen um: Aus drei x wird minus drei x, aus minus acht wird plus acht.
+17.98	Die Fünf wird mit beiden Gliedern multipliziert: fünf mal zwei a ist zehn a, fünf mal minus drei ist minus fünfzehn.
+26.04	Nein. Zwei x und drei x Quadrat sind nicht gleichartig, du kannst sie nicht zusammenfassen. Probe mit x gleich zwei: links vier plus zwölf, also sechzehn, rechts fünf mal acht, also vierzig.
+38.27	Klammer weg, jedes Vorzeichen umdrehen: x minus vier plus drei x. Zusammengefasst vier x minus vier.
+45.67	Zum Mitnehmen: Nur Gleichartiges zusammenfassen, die Zahl vor der Klammer mal jedes Glied, und ein Minus vor der Klammer dreht alle Vorzeichen um.

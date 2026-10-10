@@ -188,12 +188,20 @@ def titel(t, y=280, g=86):
     return dict(typ='titel', text=t, x=LX, y=y, groesse=g)
 
 
+def ypsilon(t):
+    """Alleinstehendes «y» gesprochen als «Ypsilon»: Piper liest «y» sonst so, dass Whisper «Epsilon» hört (Hörprobe 10.10.2026).
+    Wortteile wie «y-Glieder» bleiben."""
+    return re.sub(r'(?<![\wäöüÄÖÜ-])y(?![\wäöüÄÖÜ-])', 'Ypsilon', t) if t else t
+
+
 def sz(name, spr, *el):
-    return dict(name=name, layout='zentriert', oben=200, sprecher=spr, elemente=list(el))
+    return dict(name=name, layout='zentriert', oben=200, sprecher=ypsilon(spr), elemente=list(el))
 
 
 def wahl(szene, text, opt, richtig, rueck, sprich=None, rueck_sprich=None, bei=0.3):
     """Die richtige Antwort steht nicht immer zuoberst (deterministisch gedreht, wie in den Vorbildern)."""
+    sprich = ypsilon(sprich)
+    rueck_sprich = {i: ypsilon(v) for i, v in rueck_sprich.items()} if rueck_sprich else rueck_sprich
     k = zlib.crc32((szene + '|' + text).encode('utf-8')) % len(opt)
     dreh = lambda i: (i - k) % len(opt)
     opt = [opt[(i + k) % len(opt)] for i in range(len(opt))]

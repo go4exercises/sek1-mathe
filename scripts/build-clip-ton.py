@@ -190,8 +190,8 @@ TAUSCH = [
     # Nach Hoerprobe 10.10.2026: Betonung auf dem zweiten Teil hoerbar machen
     ("Korrekturglied", "Korrektur-Glied"),     # bisher «-tur» verschluckt
     ("Arkussinus", "Arkus-Sinus"),             # bisher «Sinus» verschluckt; Arkustangens bleibt (Tabelle oben)
-    ("kürz", "kührz"),
-    ("Bruchterm", "Bruch-Term"),                # sonst «Bruchdämm» (Whisper medium, 10.10.2026); auch «Bruchterme»                         # kürzen, gekürzt, kürzbar: sonst «kratzen», «kerzen» (Whisper medium, 09.10.2026)
+    ("kürz", "kührz"),                          # kürzen, gekürzt, kürzbar: sonst «kratzen», «kerzen» (Whisper medium, 09.10.2026)
+    ("Bruchterm", "Bruch-Term"),                # sonst «Bruchdämm» (Whisper medium, 10.10.2026); auch «Bruchterme»
 ]
 VORSILBEN = r"(?:milli|mikro|nano|zenti|dezi|hekto|kilo|mega|giga)?"
 

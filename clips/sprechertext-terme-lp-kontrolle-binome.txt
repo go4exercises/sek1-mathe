@@ -1,6 +1,6 @@
 0.40	Erste Formel: x Quadrat plus zwei mal x mal neun plus neun Quadrat, also x Quadrat plus achtzehn x plus einundachtzig.
-9.26	Zweite Formel: y Quadrat minus zwölf y plus sechsunddreissig. Am Schluss steht plus, weil minus sechs mal minus sechs positiv ist.
-18.75	Dritte Formel: zwei x im Quadrat minus fünf im Quadrat, also vier x Quadrat minus fünfundzwanzig.
-25.95	Drei y mal drei y: drei mal drei ist neun, y mal y ist y Quadrat. Also neun y Quadrat.
-34.82	Einundvierzig ist vierzig plus eins. Vierzig Quadrat ist sechzehnhundert, das mittlere Glied zwei mal vierzig mal eins ist achtzig, dazu eins. Zusammen sechzehnhunderteinundachtzig.
-46.29	Zum Mitnehmen: Bei Klammer a plus b im Quadrat und Klammer a minus b im Quadrat nie das mittlere Glied vergessen. Bei Klammer a plus b mal Klammer a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.
+9.26	Zweite Formel: Ypsilon Quadrat minus zwölf Ypsilon plus sechsunddreissig. Am Schluss steht plus, weil minus sechs mal minus sechs positiv ist.
+18.68	Dritte Formel: zwei x im Quadrat minus fünf im Quadrat, also vier x Quadrat minus fünfundzwanzig.
+25.88	Drei Ypsilon mal drei Ypsilon: drei mal drei ist neun, Ypsilon mal Ypsilon ist Ypsilon Quadrat. Also neun Ypsilon Quadrat.
+34.79	Einundvierzig ist vierzig plus eins. Vierzig Quadrat ist sechzehnhundert, das mittlere Glied zwei mal vierzig mal eins ist achtzig, dazu eins. Zusammen sechzehnhunderteinundachtzig.
+46.26	Zum Mitnehmen: Bei Klammer a plus b im Quadrat und Klammer a minus b im Quadrat nie das mittlere Glied vergessen. Bei Klammer a plus b mal Klammer a minus b fällt es weg. Und eine Zahl vor der Variable wird mitquadriert.

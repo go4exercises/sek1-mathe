@@ -66,7 +66,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.18,
+     "ein": 4.16,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -471,7 +471,7 @@
      "x": 150,
      "y": 392,
      "groesse": 58,
-     "ein": 5.16
+     "ein": 5.18
     },
     {
      "typ": "formel",
@@ -479,7 +479,7 @@
      "x": 150,
      "y": 500,
      "groesse": 62,
-     "ein": 6.82
+     "ein": 6.7
     },
     {
      "typ": "formel",
@@ -497,7 +497,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.16,
+     "ein": 5.18,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -536,7 +536,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.96,
+     "ein": 5.98,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -575,7 +575,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.82,
+     "ein": 6.7,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -613,7 +613,7 @@
    "name": "Binomisch rückwärts",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Dann prüfst du, ob eine binomische Formel passt. Bei y Quadrat minus zehn y plus fünfundzwanzig ist fünfundzwanzig gleich fünf im Quadrat und zehn y gleich zwei mal y mal fünf. Also Klammer y minus fünf im Quadrat. Neun y Quadrat minus fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: Klammer drei y minus fünf mal Klammer drei y plus fünf.",
+   "sprecher": "Dann prüfst du, ob eine binomische Formel passt. Bei Ypsilon Quadrat minus zehn Ypsilon plus fünfundzwanzig ist fünfundzwanzig gleich fünf im Quadrat und zehn Ypsilon gleich zwei mal Ypsilon mal fünf. Also Klammer Ypsilon minus fünf im Quadrat. Neun Ypsilon Quadrat minus fünfundzwanzig sind zwei Quadrate mit Minus dazwischen: Klammer drei Ypsilon minus fünf mal Klammer drei Ypsilon plus fünf.",
    "elemente": [
     {
      "typ": "formel",
@@ -621,7 +621,7 @@
      "x": 150,
      "y": 280,
      "groesse": 56,
-     "ein": 3.14
+     "ein": 3.2
     },
     {
      "typ": "notiz",
@@ -630,7 +630,7 @@
      "y": 382,
      "groesse": 40,
      "farbe": "orange",
-     "ein": 7.22
+     "ein": 7.24
     },
     {
      "typ": "formel",
@@ -638,7 +638,7 @@
      "x": 150,
      "y": 462,
      "groesse": 56,
-     "ein": 11.8
+     "ein": 11.5
     },
     {
      "typ": "formel",
@@ -646,7 +646,7 @@
      "x": 150,
      "y": 580,
      "groesse": 56,
-     "ein": 14.7
+     "ein": 14.52
     },
     {
      "typ": "formel",
@@ -654,7 +654,7 @@
      "x": 150,
      "y": 682,
      "groesse": 56,
-     "ein": 18.22
+     "ein": 17.96
     },
     {
      "typ": "graf",
@@ -664,7 +664,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.7,
+     "ein": 1.74,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -703,7 +703,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 17.0,
+     "ein": 16.86,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -735,7 +735,7 @@
      "achsen": false
     }
    ],
-   "dauer": 23.68
+   "dauer": 23.71
   },
   {
    "name": "Zweiklammersatz",
@@ -766,7 +766,7 @@
      "x": 150,
      "y": 560,
      "groesse": 66,
-     "ein": 11.34
+     "ein": 11.53
     },
     {
      "typ": "graf",
@@ -776,7 +776,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 0.94,
+     "ein": 0.91,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -840,7 +840,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 3.18,
+     "ein": 3.05,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -891,7 +891,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.4,
+     "ein": 4.39,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -942,7 +942,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.44,
+     "ein": 5.43,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -993,7 +993,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 7.12,
+     "ein": 7.13,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1092,7 +1092,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 9.28,
+     "ein": 9.27,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1150,7 +1150,7 @@
      "x": 150,
      "y": 300,
      "groesse": 52,
-     "ein": 0.49
+     "ein": 0.58
     },
     {
      "typ": "formel",
@@ -1158,7 +1158,7 @@
      "x": 150,
      "y": 420,
      "groesse": 62,
-     "ein": 6.39
+     "ein": 6.4
     },
     {
      "typ": "graf",
@@ -1168,7 +1168,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 0.49,
+     "ein": 0.58,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1482,7 +1482,7 @@
      "x": 150,
      "y": 320,
      "groesse": 60,
-     "ein": 7.39
+     "ein": 7.4
     },
     {
      "typ": "formel",
@@ -1490,7 +1490,7 @@
      "x": 150,
      "y": 460,
      "groesse": 52,
-     "ein": 11.57
+     "ein": 11.6
     }
    ],
    "dauer": 15.53
@@ -1507,7 +1507,7 @@
      "x": 150,
      "y": 300,
      "groesse": 58,
-     "ein": 8.12
+     "ein": 8.13
     },
     {
      "typ": "formel",
@@ -1515,7 +1515,7 @@
      "x": 150,
      "y": 420,
      "groesse": 62,
-     "ein": 9.14
+     "ein": 9.13
     }
    ],
    "dauer": 14.71
