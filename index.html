@@ -112,17 +112,16 @@
   .lp-bereich .lp-nr { font-family: var(--mono); font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: var(--petrol-hell); color: var(--petrol); }
   .lp-raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .lp-karte { position: relative; display: flex; flex-direction: column; gap: 10px; background: var(--weiss); border: 1.5px solid var(--petrol-rand);
-    border-radius: 12px; padding: 18px 20px 16px 24px; text-decoration: none; color: inherit; box-shadow: var(--s); overflow: hidden;
-    transition: transform 0.15s, box-shadow 0.15s; }
+    border-radius: 12px; padding: 18px 20px 16px 24px; overflow: hidden; }
   .lp-karte::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--petrol); }
-  .lp-karte:hover, .lp-karte:focus-visible { transform: translateY(-2px); box-shadow: var(--sl); }
-  .lp-titel { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: var(--tinte); line-height: 1.2; }
-  .lp-kapitel { margin: 0; padding-left: 1.2em; font-family: var(--sans); font-size: 0.9rem; color: var(--tinte-2); }
-  .lp-kapitel li { margin: 2px 0; }
-  .lp-meta { display: flex; flex-wrap: wrap; gap: 6px; font-family: var(--sans); font-size: 0.76rem; }
-  .lp-meta span { padding: 2px 9px; border-radius: 999px; background: var(--petrol-hell); color: var(--petrol); border: 1px solid var(--petrol-rand); }
-  .lp-los { align-self: flex-start; font-family: var(--sans); font-size: 0.85rem; font-weight: 700; color: var(--petrol); }
-  .lp-ausblick { margin-top: 26px; font-family: var(--sans); font-size: 0.88rem; color: var(--tinte-2); text-align: center; }
+  .lp-titel { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: var(--tinte); line-height: 1.2; text-decoration: none; }
+  .lp-titel:hover, .lp-titel:focus-visible { color: var(--petrol); text-decoration: underline; text-underline-offset: 3px; }
+  .lp-kapitel { margin: 0; padding-left: 1.2em; font-family: var(--sans); font-size: 0.92rem; color: var(--tinte-2); }
+  .lp-kapitel li { margin: 3px 0; }
+  .lp-kapitel a { color: var(--tinte-2); text-decoration: none; }
+  .lp-kapitel a:hover, .lp-kapitel a:focus-visible { color: var(--petrol); text-decoration: underline; text-underline-offset: 2px; }
+  .lp-vertiefung { align-self: flex-start; margin-top: 2px; font-family: var(--sans); font-size: 0.82rem; color: var(--petrol); text-decoration: none; }
+  .lp-vertiefung:hover, .lp-vertiefung:focus-visible { text-decoration: underline; text-underline-offset: 2px; }
   @media (max-width: 600px) { .lp-raster { grid-template-columns: 1fr; } }
   .ds { background: var(--weiss); border: 1px solid var(--linie); border-radius: 10px; padding: 18px 22px; margin-top: 44px; box-shadow: var(--s); }
   .ds-t { font-family: var(--serif); font-size: 0.88rem; font-weight: 700; margin-bottom: 12px; padding-bottom: 9px; border-bottom: 1px solid var(--linie); display: flex; align-items: center; gap: 10px; }
@@ -206,46 +205,45 @@
      der dir zeigt, wo du stehst.</p>
 
 <!-- LEITPROGRAMME:ANFANG — von Hand gepflegt, nur fertige Leitprogramme. Neues Leitprogramm: Karte hier
-     (unter seinem Bereich), Eintrag in nav.js (SITE.leitprogramme, GROUPS) und in scripts/build-seo.py. -->
+     (unter seinem Bereich), Eintrag in nav.js (SITE.leitprogramme, GROUPS) und in scripts/build-seo.py.
+     Karte (Entscheid Auftraggeber 10.10.2026): Titel als Link, Kapitel als Direktlinks (#k1 …), ein Vertiefungslink
+     auf die passende Themenseite von Mathe begreifbar (neuer Tab). Kein «Starten», keine Kennzahlen. -->
   <section id="leitprogramme" aria-label="Leitprogramme">
     <h2 class="lp-bereich"><span class="lp-nr">1</span> Arithmetik/Algebra</h2>
     <div class="lp-raster">
-      <a class="lp-karte" href="leitprogramme/bruchrechnen.html">
-        <span class="lp-titel">Bruchrechnen</span>
+      <div class="lp-karte">
+        <a class="lp-titel" href="leitprogramme/bruchrechnen.html">Bruchrechnen</a>
         <ol class="lp-kapitel">
-          <li>Erweitern, Kürzen, Vergleichen</li>
-          <li>Addieren und Subtrahieren</li>
-          <li>Multiplizieren und Dividieren</li>
-          <li>Rechenreihenfolge und negative Brüche</li>
+          <li><a href="leitprogramme/bruchrechnen.html#k1">Erweitern, Kürzen, Vergleichen</a></li>
+          <li><a href="leitprogramme/bruchrechnen.html#k2">Addieren und Subtrahieren</a></li>
+          <li><a href="leitprogramme/bruchrechnen.html#k3">Multiplizieren und Dividieren</a></li>
+          <li><a href="leitprogramme/bruchrechnen.html#k4">Rechenreihenfolge und negative Brüche</a></li>
         </ol>
-        <span class="lp-meta"><span>4 Kapitel</span><span>8 Clips</span><span>≈ 5 Lektionen</span><span>ohne Taschenrechner</span></span>
-        <span class="lp-los">Starten →</span>
-      </a>
-      <a class="lp-karte" href="leitprogramme/terme-faktorisieren.html">
-        <span class="lp-titel">Terme und Faktorisieren</span>
+        <a class="lp-vertiefung" href="https://mathe.begreifbar.ch/grundlagen/g1-2-zahlen-grundoperationen.html" target="_blank" rel="noopener">Vertiefung: Zahlen und Grundoperationen ↗</a>
+      </div>
+      <div class="lp-karte">
+        <a class="lp-titel" href="leitprogramme/terme-faktorisieren.html">Terme und Faktorisieren</a>
         <ol class="lp-kapitel">
-          <li>Terme vereinfachen</li>
-          <li>Klammer mal Klammer</li>
-          <li>Binomische Formeln</li>
-          <li>Faktorisieren</li>
+          <li><a href="leitprogramme/terme-faktorisieren.html#k1">Terme vereinfachen</a></li>
+          <li><a href="leitprogramme/terme-faktorisieren.html#k2">Klammer mal Klammer</a></li>
+          <li><a href="leitprogramme/terme-faktorisieren.html#k3">Binomische Formeln</a></li>
+          <li><a href="leitprogramme/terme-faktorisieren.html#k4">Faktorisieren</a></li>
         </ol>
-        <span class="lp-meta"><span>4 Kapitel</span><span>8 Clips</span><span>≈ 5 Lektionen</span><span>ohne Taschenrechner</span></span>
-        <span class="lp-los">Starten →</span>
-      </a>
+        <a class="lp-vertiefung" href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html" target="_blank" rel="noopener">Vertiefung: Algebraische Terme ↗</a>
+      </div>
     </div>
     <h2 class="lp-bereich"><span class="lp-nr">2</span> Gleichungen</h2>
     <div class="lp-raster">
-      <a class="lp-karte" href="leitprogramme/gleichungen-formeln.html">
-        <span class="lp-titel">Bruchterme, Gleichungen und Formeln</span>
+      <div class="lp-karte">
+        <a class="lp-titel" href="leitprogramme/gleichungen-formeln.html">Bruchterme, Gleichungen und Formeln</a>
         <ol class="lp-kapitel">
-          <li>Bruchterme kürzen</li>
-          <li>Rechnen mit Bruchtermen</li>
-          <li>Lineare Gleichungen lösen</li>
-          <li>Formeln umstellen</li>
+          <li><a href="leitprogramme/gleichungen-formeln.html#k1">Bruchterme kürzen</a></li>
+          <li><a href="leitprogramme/gleichungen-formeln.html#k2">Rechnen mit Bruchtermen</a></li>
+          <li><a href="leitprogramme/gleichungen-formeln.html#k3">Lineare Gleichungen lösen</a></li>
+          <li><a href="leitprogramme/gleichungen-formeln.html#k4">Formeln umstellen</a></li>
         </ol>
-        <span class="lp-meta"><span>4 Kapitel</span><span>8 Clips</span><span>≈ 5 Lektionen</span><span>ohne Taschenrechner</span></span>
-        <span class="lp-los">Starten →</span>
-      </a>
+        <a class="lp-vertiefung" href="https://mathe.begreifbar.ch/grundlagen/g2-2a-lineare-gleichungen.html" target="_blank" rel="noopener">Vertiefung: Lineare Gleichungen ↗</a>
+      </div>
     </div>
   </section>
 <!-- LEITPROGRAMME:ENDE -->
