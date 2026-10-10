@@ -1,0 +1,6 @@
+0.40	Beide Abschnitte dauern gleich lang. Achtzig Kilometer in zwei Stunden: vierzig Kilometer pro Stunde. Hier stimmt sogar das Mittel.
+8.75	Hundertzwanzig Kilometer in vier Stunden, die Pause mitgezählt: dreissig Kilometer pro Stunde.
+15.41	Hin eine Stunde, zurück zwei Stunden. Sechzig Kilometer in drei Stunden: zwanzig Kilometer pro Stunde, nicht zweiundzwanzig Komma fünf.
+24.62	Eine halbe Stunde und noch eine halbe Stunde: zusammen eine Stunde.
+29.38	Abschnitt zwei ist steiler: In einer Stunde kommen sechzig Kilometer dazu, in Abschnitt eins nur dreissig.
+36.11	Zum Mitnehmen: Durchschnitt ist Gesamtweg durch Gesamtzeit. Nur bei gleich langen Zeiten darf man die Geschwindigkeiten mitteln. Steiler heisst schneller.

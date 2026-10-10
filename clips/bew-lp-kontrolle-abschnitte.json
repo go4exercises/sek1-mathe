@@ -1,0 +1,436 @@
+{
+ "titel": "Mathematisieren: Kontrollfragen zu Abschnitten",
+ "dateiname": "bew-lp-kontrolle-abschnitte",
+ "kurzbeschrieb": "Fünf Fragen: je 1 h mit 60 und 20 km/h, 120 km in 3 h plus 1 h Pause, 30 km hin mit 30 und zurück mit 15 km/h, Gesamtzeit 10 km mit 20 und 6 km mit 12 km/h, steilerer Abschnitt.",
+ "schlagworte": [
+  "Durchschnittsgeschwindigkeit",
+  "Abschnitte",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Beide Abschnitte dauern gleich lang. Achtzig Kilometer in zwei Stunden: vierzig Kilometer pro Stunde. Hier stimmt sogar das Mittel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{60 + 20}{2} = \\fc{40}\\ \\text{km/h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.35
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Hundertzwanzig Kilometer in vier Stunden, die Pause mitgezählt: dreissig Kilometer pro Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{120}{3 + 1} = \\fc{30}\\ \\text{km/h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.66
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Hin eine Stunde, zurück zwei Stunden. Sechzig Kilometer in drei Stunden: zwanzig Kilometer pro Stunde, nicht zweiundzwanzig Komma fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{60}{1 + 2} = \\fc{20}\\ \\text{km/h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 9.21
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine halbe Stunde und noch eine halbe Stunde: zusammen eine Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{10}{20} + \\dfrac{6}{12} = 0.5 + 0.5 = \\fc{1}\\ \\text{h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 52,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 4.76
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Abschnitt zwei ist steiler: In einer Stunde kommen sechzig Kilometer dazu, in Abschnitt eins nur dreissig.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      3.3
+     ],
+     "ybereich": [
+      -6,
+      100
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "yteilung": [
+      [
+       30,
+       "30"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       90,
+       "90"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1,
+        30
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        30
+       ],
+       "bis": [
+        2,
+        90
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.55,
+        25
+       ],
+       "text": "I",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.55,
+        70
+       ],
+       "text": "II",
+       "farbe": 5,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]"
+    },
+    {
+     "typ": "notiz",
+     "text": "II: steiler, also schneller",
+     "x": 150,
+     "y": 330,
+     "groesse": 46,
+     "farbe": "gruen",
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      3.3
+     ],
+     "ybereich": [
+      -6,
+      100
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "yteilung": [
+      [
+       30,
+       "30"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       90,
+       "90"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1,
+        30
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        30
+       ],
+       "bis": [
+        2,
+        90
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 6.73
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Durchschnitt ist Gesamtweg durch Gesamtzeit. Nur bei gleich langen Zeiten darf man die Geschwindigkeiten mitteln. Steiler heisst schneller.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Gesamtweg : Gesamtzeit|Mittel nur bei gleichen Zeiten|steiler = schneller",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.89
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Je eine Stunde mit 60 km/h und mit 20 km/h. Wie gross ist der Durchschnitt?",
+   "optionen": [
+    "30 km/h",
+    "40 km/h",
+    "80 km/h"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "80 km ist der Weg. Wie lange hat es gedauert?",
+    "0": "Rechne den Weg aus: 60 + 20 km in 2 h."
+   },
+   "sprich": "Je eine Stunde mit sechzig und mit zwanzig Kilometern pro Stunde. Wie gross ist der Durchschnitt?",
+   "rueck_sprich": {
+    "2": "Achtzig Kilometer ist der Weg. Wie lange hat es gedauert?",
+    "0": "Rechne zuerst den ganzen Weg aus."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "120 km Fahrt in 3 h, dazu 1 h Pause. Wie gross ist der Durchschnitt der Reise?",
+   "optionen": [
+    "40 km/h",
+    "120 km/h",
+    "30 km/h"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Die Pause gehört zur Reise.",
+    "1": "Die Reise dauert mehr als eine Stunde."
+   },
+   "sprich": "Hundertzwanzig Kilometer Fahrt in drei Stunden, dazu eine Stunde Pause. Wie gross ist der Durchschnitt der Reise?",
+   "rueck_sprich": {
+    "0": "Die Pause gehört zur Reise.",
+    "1": "Die Reise dauert mehr als eine Stunde."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "30 km hin mit 30 km/h, zurück mit 15 km/h. Wie gross ist der Durchschnitt?",
+   "optionen": [
+    "45 km/h",
+    "20 km/h",
+    "22.5 km/h"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das ist das Mittel. Der Rückweg dauert aber doppelt so lang.",
+    "0": "Rechne Gesamtweg durch Gesamtzeit."
+   },
+   "sprich": "Dreissig Kilometer hin mit dreissig, zurück mit fünfzehn Kilometern pro Stunde. Wie gross ist der Durchschnitt?",
+   "rueck_sprich": {
+    "2": "Das ist das Mittel. Der Rückweg dauert aber doppelt so lang.",
+    "0": "Rechne Gesamtweg durch Gesamtzeit."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "10 km mit 20 km/h, dann 6 km mit 12 km/h. Wie lange dauert das?",
+   "optionen": [
+    "1 h",
+    "16 h",
+    "0.5 h"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Zeit ist Weg durch Geschwindigkeit, je Abschnitt.",
+    "2": "Das ist erst der erste Abschnitt."
+   },
+   "sprich": "Zehn Kilometer mit zwanzig, dann sechs Kilometer mit zwölf Kilometern pro Stunde. Wie lange dauert das?",
+   "rueck_sprich": {
+    "1": "Zeit ist Weg durch Geschwindigkeit, für jeden Abschnitt.",
+    "2": "Das ist erst der erste Abschnitt."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "In welchem Abschnitt im Bild ist die Fahrt schneller?",
+   "optionen": [
+    "in Abschnitt II",
+    "in Abschnitt I",
+    "beide gleich"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Beide dauern 1 h. Wo kommt mehr Weg dazu?",
+    "2": "Vergleich die Steilheit."
+   },
+   "sprich": "In welchem Abschnitt im Bild ist die Fahrt schneller?",
+   "rueck_sprich": {
+    "1": "Beide dauern eine Stunde. Wo kommt mehr Weg dazu?",
+    "2": "Vergleich die Steilheit."
+   }
+  }
+ ]
+}

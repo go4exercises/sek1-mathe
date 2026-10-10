@@ -1,0 +1,6 @@
+0.40	Aufeinander zu addierst du: dreissig plus zwanzig gibt fünfzig Kilometer pro Stunde.
+6.24	In gleicher Richtung subtrahierst du: dreissig minus zwanzig gibt zehn Kilometer pro Stunde.
+12.19	Sechzig plus vierzig gibt hundert Kilometer pro Stunde. Hundert Kilometer schaffen sie zusammen in einer Stunde.
+19.37	Pro Stunde holt das schnellere Velo sechs Kilometer auf. Für sechs Kilometer Vorsprung braucht es eine Stunde.
+26.36	Gegen die Treppe zieht sie dich zurück: eins Komma fünf minus null Komma fünf gibt einen Meter pro Sekunde.
+33.13	Zum Mitnehmen: Aufeinander zu addieren, in gleicher Richtung subtrahieren. Dann Abstand durch diese Annäherungsgeschwindigkeit.

@@ -10,6 +10,18 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
       in `scripts/lp/terme-faktorisieren/clips.py`, «y-Glieder» bleibt), «Nun stelle …» in den Fragetönen 1–4 von gleich-lp-kontrolle-formeln.
       Whisper medium schreibt «Ypsilon» weiterhin als «Epsilon» und «Kacheln» einmal als «Karre» — massgebend ist die Hörprobe.
 
+## Leitprogramm Texte, Geschwindigkeit und Begegnung (10.10.2026)
+
+`leitprogramme/bewegung.html`, gebaut mit `scripts/lp/bewegung/` (README dort), nach
+`~/TODO-BM-Vorkurs-LP03-15.md` §5 (LP 07, Mathematisieren: Texte, Geschwindigkeit und Begegnung). Neuer Bereich «Mathematisieren».
+
+- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/bewegung.html`.
+- [x] Eingetragen (nav.js mit Bereich 4 «Mathematisieren», index.html, build-seo, Suchindex, Sitemap, CLAUDE.md).
+- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 ohne Antwortsatz, G5 mit Mittelwert).
+- [ ] 🔑 Hörprobe der acht Clips `bew-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+      «Bea» (Whisper: «bar», «BR»), «Rappen», Zahlen mit «Komma» in der Rolltreppen-Szene.
+- [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
 ## Leitprogramm Funktionstypen und Graphen (10.10.2026)
 
 `leitprogramme/funktionstypen.html`, gebaut mit `scripts/lp/funktionstypen/` (README dort), nach

@@ -1,0 +1,252 @@
+{
+ "titel": "Mathematisieren: Kontrollfragen zu Begegnung und Einholen",
+ "dateiname": "bew-lp-kontrolle-begegnung",
+ "kurzbeschrieb": "Fünf Fragen: Annäherung bei 30 und 20 km/h aufeinander zu und in gleicher Richtung, Züge 100 km mit 60 und 40 km/h, Einholen mit 6 km Vorsprung bei 18 gegen 12 km/h, Rolltreppe gegen die Fahrrichtung.",
+ "schlagworte": [
+  "Begegnung",
+  "Einholen",
+  "Rolltreppe",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Aufeinander zu addierst du: dreissig plus zwanzig gibt fünfzig Kilometer pro Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "30 + 20 = \\fc{50}\\ \\text{km/h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.84
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "In gleicher Richtung subtrahierst du: dreissig minus zwanzig gibt zehn Kilometer pro Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "30 - 20 = \\fc{10}\\ \\text{km/h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.95
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sechzig plus vierzig gibt hundert Kilometer pro Stunde. Hundert Kilometer schaffen sie zusammen in einer Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{100}{60 + 40} = \\fc{1}\\ \\text{h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.18
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Pro Stunde holt das schnellere Velo sechs Kilometer auf. Für sechs Kilometer Vorsprung braucht es eine Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{6}{18 - 12} = \\fc{1}\\ \\text{h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.99
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gegen die Treppe zieht sie dich zurück: eins Komma fünf minus null Komma fünf gibt einen Meter pro Sekunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "1.5 - 0.5 = \\fc{1}\\ \\text{m/s}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.77
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Aufeinander zu addieren, in gleicher Richtung subtrahieren. Dann Abstand durch diese Annäherungsgeschwindigkeit.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zu: addieren · gleich: subtrahieren|t = Abstand : Annäherung",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 7.59
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Zwei Velos fahren mit 30 km/h und 20 km/h aufeinander zu. Um wie viel kommen sie sich pro Stunde näher?",
+   "optionen": [
+    "25 km",
+    "50 km",
+    "10 km"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Sie fahren aufeinander zu, nicht hintereinander.",
+    "0": "Beide fahren, also kommen beide Wege zusammen."
+   },
+   "sprich": "Zwei Velos fahren mit dreissig und zwanzig Kilometern pro Stunde aufeinander zu. Um wie viel kommen sie sich pro Stunde näher?",
+   "rueck_sprich": {
+    "2": "Sie fahren aufeinander zu, nicht hintereinander.",
+    "0": "Beide fahren, also kommen beide Wege zusammen."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Velo mit 30 km/h fährt einem mit 20 km/h hinterher. Um wie viel kommt es pro Stunde näher?",
+   "optionen": [
+    "0 km",
+    "10 km",
+    "50 km"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das vordere fährt davon. Es zählt nur der Unterschied.",
+    "0": "Das hintere ist schneller, es kommt also näher."
+   },
+   "sprich": "Ein Velo mit dreissig Kilometern pro Stunde fährt einem mit zwanzig hinterher. Um wie viel kommt es pro Stunde näher?",
+   "rueck_sprich": {
+    "2": "Das vordere fährt davon. Es zählt nur der Unterschied.",
+    "0": "Das hintere ist schneller, es kommt also näher."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Zwei Züge sind 100 km auseinander und fahren mit 60 km/h und 40 km/h aufeinander zu. Wann begegnen sie sich?",
+   "optionen": [
+    "nach 5 h",
+    "nach 2.5 h",
+    "nach 1 h"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Das wäre in gleicher Richtung. Die Züge fahren aufeinander zu.",
+    "1": "Der zweite Zug fährt auch."
+   },
+   "sprich": "Zwei Züge sind hundert Kilometer auseinander und fahren mit sechzig und vierzig Kilometern pro Stunde aufeinander zu. Wann begegnen sie sich?",
+   "rueck_sprich": {
+    "0": "Das wäre in gleicher Richtung. Die Züge fahren aufeinander zu.",
+    "1": "Der zweite Zug fährt auch."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Velo hat 6 km Vorsprung und fährt 12 km/h. Ein zweites folgt mit 18 km/h. Wann holt es ein?",
+   "optionen": [
+    "nach 0.2 h",
+    "nach 0.5 h",
+    "nach 1 h"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Gleiche Richtung: Es zählt nur der Unterschied.",
+    "1": "6 : 12 benutzt nur ein Tempo. Wie viel holt das zweite pro Stunde auf?"
+   },
+   "sprich": "Ein Velo hat sechs Kilometer Vorsprung und fährt zwölf Kilometer pro Stunde. Ein zweites folgt mit achtzehn. Wann holt es ein?",
+   "rueck_sprich": {
+    "0": "Gleiche Richtung: Es zählt nur der Unterschied.",
+    "1": "Wie viel holt das zweite Velo pro Stunde auf?"
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Rolltreppe fährt 0.5 m/s. Du gehst 1.5 m/s gegen die Fahrrichtung. Wie schnell kommst du voran?",
+   "optionen": [
+    "1 m/s",
+    "2 m/s",
+    "0.5 m/s"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das wäre mit der Treppe.",
+    "2": "Du bist schneller als die Treppe."
+   },
+   "sprich": "Eine Rolltreppe fährt null Komma fünf Meter pro Sekunde. Du gehst eins Komma fünf Meter pro Sekunde gegen die Fahrrichtung. Wie schnell kommst du voran?",
+   "rueck_sprich": {
+    "1": "Das wäre mit der Treppe.",
+    "2": "Du bist schneller als die Treppe."
+   }
+  }
+ ]
+}

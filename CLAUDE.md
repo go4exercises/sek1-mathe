@@ -50,7 +50,7 @@ Begriffe nach STYLEGUIDE; Vertiefung über TALS-Links statt Verweis auf eine eig
   `lektion` auf die `id`. Neues Leitprogramm = Eintrag in `nav.js`, Karte in `index.html`
   (Block `LEITPROGRAMME:ANFANG`, unter seinem Bereich), Eintrag in `scripts/build-seo.py`
   (`SEITEN`). Nur **fertige** Leitprogramme erscheinen; geplante nicht.
-- Bereiche (Gruppierung): 1 Arithmetik/Algebra · 2 Gleichungen · 3 Funktionen · 4 Geometrie.
+- Bereiche (Gruppierung): 1 Arithmetik/Algebra · 2 Gleichungen · 3 Funktionen · 4 Mathematisieren · 5 Geometrie.
 - `index.html` — Startseite mit den Leitprogramm-Karten. `leitprogramme.html` ist nur noch
   Weiterleitung auf `index.html#leitprogramme` (noindex).
 - Clips der Leitprogramme: `clips/<präfix>-lp-*.json` (Drehbuch, Quelle), erzeugt mit

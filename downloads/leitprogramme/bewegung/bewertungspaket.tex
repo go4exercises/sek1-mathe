@@ -1,0 +1,146 @@
+% Bewertungspaket zum Gesamttest «Texte, Geschwindigkeit und Begegnung» — Quelle des PDFs (python3 scripts/build-lp-pdf.py bewegung).
+% Ganze Punkte je Teilschritt; Werte und Fehlerwerte mit python3 nachgerechnet (scripts/lp/bewegung/zahlen.py).
+% Gerüst aus dem Bewertungspaket von LP 3 (gleichungen-formeln): Auftrag an die KI, Folgefehler, (E)-Zeilen.
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\renewcommand{\lpname}{Texte, Geschwindigkeit und Begegnung}
+\renewcommand{\lpteilgebiet}{Mathematisieren ·}
+\renewcommand{\lpfuss}{Bewertungspaket}
+\newcolumntype{P}{>{\centering\arraybackslash}p{10mm}}
+\newenvironment{raster}{\par\smallskip\noindent\renewcommand{\arraystretch}{1.6}\linespread{1.35}\selectfont\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
+  \small\textsc{Teilschritt} & \small\textsc{P} & \small\textsc{Musterlösung}\\\midrule}{\bottomrule\endtabularx\par}
+\newcommand{\fehler}[1]{\par\smallskip{\small\textcolor{lprot}{\bfseries Typische Fehler:} #1}}
+\newcommand{\E}{\,{\footnotesize\bfseries\color{lpgruen}(E)}}
+\begin{document}
+\lpkopf{Bewertungspaket zum Gesamttest}{}
+
+\begin{lpachtung}{Erst lösen, dann öffnen}
+Dieses Paket enthält die Musterlösung. Wer es vor dem Lösen liest, misst am Ende nur, wie gut das Abschreiben gelingt.
+\end{lpachtung}
+
+\section*{1 · So gehst du vor}
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \textbf{Gesamttest lösen} — vollständig, mit Rechenweg, ohne dieses Paket und ohne Taschenrechner.
+\item \textbf{Selbst bewerten} mit Abschnitt~3: Zeile für Zeile vergleichen und die Punkte eintragen. Das geht ohne Hilfsmittel
+  und ist der Normalfall.
+\item \textbf{Oder bewerten lassen.} Ob du dafür eine KI nutzt und welche, entscheidest du selbst und in eigener Verantwortung —
+  je nachdem, was dir aufgrund deines Alters und deiner persönlichen Situation erlaubt ist (Altersgrenzen und
+  Nutzungsbedingungen des Anbieters, allenfalls Einverständnis deiner Eltern). Fotografiere oder scanne deine Lösung gut lesbar,
+  \textbf{ohne Namen}. Handyfotos tragen oft unsichtbar Standort, Zeit und Gerät mit (Metadaten) — lade lieber einen Scan oder ein
+  Bildschirmfoto des Fotos hoch. Lade nur deine Lösung, das Testblatt und dieses PDF hoch, keine persönlichen Daten, und füge den Auftrag aus
+  Abschnitt~2 ein.
+\item \textbf{Rückmeldung prüfen.} Stimmt, was die KI aus deiner Handschrift gelesen hat? Eine KI kann sich irren —
+  im Zweifel gilt das Raster in Abschnitt~3.
+\item \textbf{Gezielt wiederholen} nach Abschnitt~4.
+\end{enumerate}
+
+\section*{2 · Auftrag an die KI}
+\begin{tcolorbox}[colback=lplinie!25,colframe=lplinie,boxrule=0.5pt,arc=1mm,fontupper=\small]
+Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in der Schweiz. Im Anhang findest du (1)~das Testblatt mit den Aufgaben, (2)~das Bewertungspaket zum Gesamttest «Texte, Geschwindigkeit und Begegnung» mit Musterlösung und Punkteraster und (3)~Fotos meiner handschriftlichen Lösung.\par\medskip
+Geh so vor:\par
+1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Variable, Gleichung, Rechenweg, Ergebnis mit Einheit und Antwortsatz; bei G5 auch die Tabelle. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Dezimalpunkte, Einheiten (h, min, s, km/h, m/s) und darauf, ob ein Antwortsatz dasteht.\par
+2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
+3. Andere richtige Wege zählen voll, zum Beispiel eine Tabelle statt einer Gleichung bei G1, eine andere Variable bei G2 (etwa die mittlere Zahl) oder ein Bruch statt einer Dezimalzahl. Gleichwertig: $0.6$ h und $\tfrac{3}{5}$ h; $1.5$ h und $1$ h $30$ min und $90$ min; $14.4$ km/h und $\tfrac{72}{5}$ km/h. Antworten in Worten zählen, wenn sie dasselbe sagen wie die Musterlösung.\par
+4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «Gleichstand statt ab wann günstiger», «Minuten als Stunden gerechnet», «1 h 30 min als 1.30 h», «Geschwindigkeiten gemittelt», «Pause vergessen», «in gleicher Richtung addiert»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
+5. Gib zum Schluss eine Tabelle «Aufgabe | Punkte | Begründung», die Gesamtpunktzahl (von 25) und — nach der Selbsteinschätzung in Abschnitt 4 — welches Kapitel des Leitprogramms ich wiederholen soll. Keine Note.\par
+6. Fehlt ein Foto oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
+\end{tcolorbox}
+
+\needspace{16\baselineskip}
+\section*{3 · Musterlösung und Punkteraster}
+\textbf{Allgemein:} Ganze Punkte je Zeile. Ein Fehler wird nur einmal abgezogen (Folgefehler). Gleichwertige Wege zählen voll.
+In der Spalte P: \textbf{(E)}~= Ergebnispunkt, Ergebnis richtig \emph{und} Weg erkennbar, direkt aus den Angaben; ohne Zeichen = die
+Zeile bewertet den Weg, die Begründung oder den Antwortsatz. Der ganze Test ist ohne Taschenrechner gestellt.
+«Typische Fehler» nennt, welche Zeile 0 Punkte gibt, und die Punkte, die bleiben.
+\textbf{Teilrichtige Zeilen:} Verlangt eine Zeile mehrere Angaben und stimmt nur ein Teil, gibt die Zeile 0 Punkte,
+ausser die Zeile nennt ausdrücklich eine Aufteilung.
+
+\begin{lpaufgabe}{G1}{Streaming}{4 P}
+\begin{raster}
+Variable und Terme & 1 & $x$: Anzahl Filme pro Monat. A: $12 + 3x$, B: $30$ (Franken)\\
+Gleichung & 1 & $12 + 3x = 30$ (oder eine Tabelle, die den Gleichstand zeigt)\\
+Lösung & 1\E & $3x = 18$, $x = 6$: Bei $6$ Filmen kosten beide $30$ Fr.\\
+Probe und Antwortsatz & 1 & $x = 7$: A $33$ Fr., B $30$ Fr. \emph{Ab $7$ Filmen im Monat ist B günstiger.}\\
+\end{raster}
+\fehler{Antwort «ab $6$ Filmen» oder nur «$x = 6$»: Zeile Probe und Antwortsatz 0 $\to$ 3 von 4\,P.
+$12x + 3 = 30$ (Grundbetrag und Preis pro Film vertauscht): Zeilen Variable und Terme, Gleichung und Lösung 0; Probe und Antwortsatz als Folgepunkt, wenn sie zur eigenen Gleichung passen.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Zahlenrätsel}{3 P}
+\begin{raster}
+Gleichung & 1 & $n + (n + 2) + (n + 4) = 84$ (gerade Zahlen liegen $2$ auseinander)\\
+Lösung & 1\E & $3n + 6 = 84$, $3n = 78$, $n = 26$: die Zahlen $26$, $28$, $30$\\
+Probe & 1 & $26 + 28 + 30 = 84$, alle gerade\\
+\end{raster}
+\fehler{Abstand $1$ statt $2$ ($n + (n+1) + (n+2) = 84$, $n = 27$): Zeilen Gleichung und Lösung 0; Probe 1 nur, wenn sie zeigt, dass $27$ und $29$ ungerade sind.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G3}{Zugfahrt}{3 P}
+\begin{raster}
+(a) & 1\E & $1$ h $30$ min $= 1.5$ h, $v = 135 : 1.5 = 90$ km/h\\
+(b) Zeit in h & 1 & $t = 60 : 90 = \tfrac{2}{3}$ h. Auch als Folgepunkt mit der eigenen Geschwindigkeit aus (a).\\
+(b) in min & 1 & $\tfrac{2}{3} \cdot 60 = 40$ min\\
+\end{raster}
+\fehler{$1$ h $30$ min als $1.30$ h ($135 : 1.3 \approx 103.8$ km/h): Zeile (a) 0, (b) als Folgepunkte.
+$90 : 60 = 1.5$ (Bruch umgekehrt): Zeile (b) Zeit in h 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G4}{Einheiten}{3 P}
+\begin{raster}
+(a) & 1\E & $54 : 3.6 = 15$ m/s\\
+(b) & 1\E & $36 : 60 = 0.6$ h\\
+(c) & 1\E & $4 \cdot 3.6 = 14.4$ km/h\\
+\end{raster}
+\fehler{(a) $54 \cdot 3.6$ oder (c) $4 : 3.6$ (Richtung verwechselt): diese Zeile 0. (b) $0.36$ h (Minuten als Hundertstel): Zeile (b) 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G5}{Bergwanderung}{4 P}
+\begin{raster}
+(a) Tabelle & 1 & $4$ km/h, $1.5$ h, $6$ km \;|\; Pause $0$ km/h, $0.5$ h, $0$ km \;|\; $2$ km/h, $2$ h, $4$ km\\
+(b) & 1 & $1.5 + 0.5 + 2 = 4$ h. Auch als Folgepunkt mit den eigenen Zeiten aus (a).\\
+(c) & 1\E & $10 : 4 = 2.5$ km/h (Gesamtweg durch Gesamtzeit, mit Pause)\\
+(d) & 1 & Das Mittel stimmt nur bei gleich langen Zeiten. Der langsame Teil dauert länger (2 h statt 1.5 h) und zählt darum mehr; dazu kommt die Pause.\\
+\end{raster}
+\fehler{Pause vergessen ($10 : 3.5 \approx 2.9$ km/h): Zeilen (b) und (c) 0. Mittel $3$ km/h als Ergebnis von (c): Zeile (c) 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G6}{Plausibel?}{2 P}
+\begin{raster}
+(a) & 1 & $675$ h sind fast einen Monat: Für $45$ km braucht ein Velo nur wenige Stunden. (Oder: Mit $15$ km/h ist man in $3$ h schon $45$ km weit; die Einheit km·km/h ist keine Zeit.)\\
+(b) & 1\E & $t = 45 : 15 = 3$ h\\
+\end{raster}
+\fehler{(a) nur «falsch gerechnet» ohne Grössenvergleich: Zeile (a) 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G7}{Begegnung}{3 P}
+\begin{raster}
+(a) & 1\E & aufeinander zu: $16 + 14 = 30$ km/h, $t = 45 : 30 = 1.5$ h\\
+(b) & 1 & $16 \cdot 1.5 = 24$ km von Dorf A (Probe: Sara $14 \cdot 1.5 = 21$ km, $24 + 21 = 45$). Auch als Folgepunkt mit der eigenen Zeit aus (a).\\
+(c) & 1 & z.\,B.: Beide fahren die ganze Zeit gleich schnell; sie starten genau gleichzeitig; keine Pausen, Ampeln oder Steigungen; die Strasse ist $45$ km lang.\\
+\end{raster}
+\fehler{$16 - 14 = 2$ km/h ($22.5$ h, gleiche Richtung gerechnet): Zeile (a) 0, (b) als Folgepunkt. Treffpunkt in der Mitte ($22.5$ km): Zeile (b) 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Rolltreppe}{3 P}
+\begin{raster}
+(a) & 1\E & $1.2 + 0.8 = 2$ m/s, $24 : 2 = 12$ s\\
+(b) & 1\E & $1.2 - 0.8 = 0.4$ m/s, $24 : 0.4 = 60$ s\\
+(c) & 1\E & $24 : 0.8 = 30$ s\\
+\end{raster}
+\fehler{(b) mit $2$ m/s gerechnet ($12$ s, addiert statt subtrahiert): Zeile (b) 0 $\to$ 2 von 3\,P.}
+\end{lpaufgabe}
+
+\needspace{12\baselineskip}
+\section*{4 · Selbsteinschätzung}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+\textbf{22 – 25 P} & Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals.\\
+\textbf{17 – 21 P} & Den schwächsten Teil nochmals, gemessen am Anteil (Teil A 7, B 6, C 6, D 6 P): Tüfteln und Übungen des Kapitels dieses Teils.\\
+\textbf{11 – 16 P} & Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.\\
+\textbf{0 – 10 P} & Zurück zu den Kapiteln jedes Teils, in dem du weniger als die Hälfte erreicht hast; sind es alle vier, zum Vortest und zu Kapitel 1.\\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\textbf{Aufgabe $\to$ Kapitel:} G1, G2 $\to$ 1; G3, G4 $\to$ 2; G5, G6 $\to$ 3; G7, G8 $\to$ 4.
+\end{document}

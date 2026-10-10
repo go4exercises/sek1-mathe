@@ -122,6 +122,11 @@ SEITEN = {
    titel='Leitprogramm Funktionstypen und Graphen — Parabel, Wurzel, Kehrwert, proportional, Weg-Zeit-Graphen',
    beschreibung='Leitprogramm Sekundarstufe I: Gerade, Parabel, Wurzel- und Kehrwertgraph erkennen, proportional, antiproportional oder linear mit Anfangswert, Weg-Zeit-Graphen lesen, zurückgelegter Weg und Restweg — mit Übungen.',
    themen=['Mathematik', 'Funktionen', 'Parabel', 'Wurzelfunktion', 'Kehrwertfunktion', 'Proportionalität', 'Antiproportional', 'Weg-Zeit-Diagramm', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/bewegung.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Texte, Geschwindigkeit und Begegnung — Textaufgaben, s = v · t, Durchschnitt, Begegnung und Einholen',
+   beschreibung='Leitprogramm Sekundarstufe I, Mathematisieren: Textaufgaben in Gleichungen übersetzen, mit Weg, Geschwindigkeit und Zeit rechnen, Durchschnittsgeschwindigkeit, Begegnung, Einholen und Rolltreppe — mit Übungen.',
+   themen=['Mathematik', 'Textaufgaben', 'Mathematisieren', 'Geschwindigkeit', 'Weg-Zeit', 'Durchschnittsgeschwindigkeit', 'Begegnung', 'Einholen', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/darstellungen.html': dict(
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Darstellungen wechseln — Text, Gleichung, Tabelle und Graph, Definitionsbereich, antiproportional',

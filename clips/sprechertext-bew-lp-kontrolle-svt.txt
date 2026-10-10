@@ -1,0 +1,6 @@
+0.40	Eine Stunde dreissig Minuten sind eins Komma fünf Stunden. Hundertzwanzig durch eins Komma fünf gibt achtzig Kilometer pro Stunde.
+8.71	Fünfzehn durch sechzig gibt null Komma zwei fünf Stunden.
+13.01	Zweiundsiebzig durch drei Komma sechs gibt zwanzig Meter pro Sekunde.
+18.20	Dreissig Minuten sind eine halbe Stunde. Fünfzig mal null Komma fünf gibt fünfundzwanzig Kilometer.
+24.80	Vierhundert durch fünfzig gibt acht Stunden. Plausibel: Für eine so lange Strecke mit fünfzig Kilometern pro Stunde braucht es einen ganzen Arbeitstag.
+33.85	Zum Mitnehmen: Zeiten in Stunden umrechnen, dann mit s gleich v mal t rechnen. Kilometer pro Stunde durch drei Komma sechs gibt Meter pro Sekunde.

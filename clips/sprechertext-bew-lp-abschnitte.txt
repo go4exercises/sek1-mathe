@@ -1,0 +1,7 @@
+0.40	Eine Velotour: dreissig Kilometer mit zwanzig Kilometern pro Stunde, dann eine halbe Stunde Pause, dann zwanzig Kilometer bergauf mit zehn Kilometern pro Stunde.
+10.55	Für jeden Abschnitt eine Zeile. Zeit gleich Weg durch Geschwindigkeit: eins Komma fünf Stunden, die Pause null Komma fünf, dann zwei Stunden. Zusammen vier Stunden für fünfzig Kilometer.
+21.82	Durchschnitt heisst: Gesamtweg durch Gesamtzeit. Fünfzig durch vier gibt zwölf Komma fünf Kilometer pro Stunde. Im Graphen ist das die gestrichelte Verbindung von Start und Ziel.
+32.87	Häufiger Fehler: zwanzig plus zehn durch zwei gleich fünfzehn. Der langsame Abschnitt dauert länger und zählt darum mehr. Und die Pause gehört zur Zeit.
+42.55	Im Weg-Zeit-Graphen ist der steilere Abschnitt der schnellere, nicht der längere. Der erste Abschnitt ist steiler als der dritte, die Pause ist waagrecht.
+52.16	Zum Mitnehmen: Jeder Abschnitt bekommt eine Zeile. Durchschnitt ist Gesamtweg durch Gesamtzeit, mit Pausen. Geschwindigkeiten mitteln stimmt nur bei gleich langen Zeiten.
+62.33	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

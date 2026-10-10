@@ -1,0 +1,252 @@
+{
+ "titel": "Mathematisieren: Kontrollfragen zu Textaufgaben",
+ "dateiname": "bew-lp-kontrolle-text",
+ "kurzbeschrieb": "Fünf Fragen: Taxi 4 Fr. + 2 Fr./km für 30 Fr., Gleichstand 5 + 2x = 11 + x, drei Zahlen mit Summe 45, Antwortsatz, 46 Personen in Autos zu 8 Plätzen.",
+ "schlagworte": [
+  "Textaufgabe",
+  "Gleichung",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 2,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vier plus zwei x gleich dreissig. Zwei x gleich sechsundzwanzig, x gleich dreizehn Kilometer.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4 + 2x = 30 \\;\\Rightarrow\\; x = \\fc{13}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.51
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Fünf plus zwei x gleich elf plus x. Also x gleich sechs: Bei sechs Stück sind beide gleich teuer.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "5 + 2x = 11 + x \\;\\Rightarrow\\; x = \\fc{6}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.87
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "n plus n plus eins plus n plus zwei gleich fünfundvierzig. Drei n plus drei gleich fünfundvierzig, n gleich vierzehn. Die Zahlen sind vierzehn, fünfzehn, sechzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3n + 3 = 45 \\;\\Rightarrow\\; n = \\fc{14}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 11.42
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Gleichung liefert nur eine Zahl. Der Antwortsatz sagt, was sie bedeutet: Ein Heft kostet fünf Franken.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Ein Heft kostet 5 Fr.",
+     "x": 150,
+     "y": 330,
+     "groesse": 48,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.66
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sechsundvierzig durch acht gibt fünf Komma sieben fünf. Fünf Autos reichen nicht: Es braucht sechs.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "46 : 8 = 5.75 \\;\\Rightarrow\\; \\fc{6}\\ \\text{Autos}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.82
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Variable festlegen, Gleichung aufstellen und lösen, dann prüfen: Beantwortet die Zahl die Frage, muss gerundet werden?",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Variable · Gleichung · Lösung|prüfen: passt es zur Frage?|runden, wo nur Ganzes geht",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.29
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Taxi kostet 4 Fr. plus 2 Fr. pro km. Du zahlst 30 Fr. Wie viele km bist du gefahren?",
+   "optionen": [
+    "17 km",
+    "13 km",
+    "15 km"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die 4 Fr. Grundtaxe gehen zuerst weg.",
+    "0": "Die Grundtaxe wird abgezählt, nicht dazugezählt."
+   },
+   "sprich": "Ein Taxi kostet vier Franken plus zwei Franken pro Kilometer. Du zahlst dreissig Franken. Wie viele Kilometer bist du gefahren?",
+   "rueck_sprich": {
+    "2": "Die vier Franken Grundtaxe gehen zuerst weg.",
+    "0": "Die Grundtaxe wird abgezählt, nicht dazugezählt."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "A kostet 5 Fr. plus 2 Fr. pro Stück, B 11 Fr. plus 1 Fr. pro Stück. Wann sind beide gleich teuer?",
+   "optionen": [
+    "bei 2 Stück",
+    "bei 16 Stück",
+    "bei 6 Stück"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Setz 2 ein: A 9 Fr., B 13 Fr. Gleich?",
+    "1": "Setz die Terme gleich: 5 + 2x = 11 + x."
+   },
+   "sprich": "A kostet fünf Franken plus zwei Franken pro Stück, B elf Franken plus einen Franken pro Stück. Wann sind beide gleich teuer?",
+   "rueck_sprich": {
+    "0": "Setz zwei ein: A kostet neun Franken, B dreizehn. Gleich?",
+    "1": "Setz die beiden Terme gleich."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Drei aufeinanderfolgende ganze Zahlen haben die Summe 45. Wie heisst die kleinste?",
+   "optionen": [
+    "15",
+    "13",
+    "14"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "15 ist die mittlere: 14 + 15 + 16.",
+    "1": "13 + 14 + 15 = 42, zu wenig."
+   },
+   "sprich": "Drei aufeinanderfolgende ganze Zahlen haben die Summe fünfundvierzig. Wie heisst die kleinste?",
+   "rueck_sprich": {
+    "0": "Fünfzehn ist die mittlere.",
+    "1": "Dreizehn plus vierzehn plus fünfzehn ist zweiundvierzig, zu wenig."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "5 gleiche Hefte kosten 25 Fr. Jonas schreibt: «x = 5». Was fehlt?",
+   "optionen": [
+    "die Einheit km",
+    "der Antwortsatz: Ein Heft kostet 5 Fr.",
+    "nichts, x = 5 ist die Antwort"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Was bedeutet die 5? Das sagt erst ein Satz.",
+    "0": "Es geht um Franken, nicht um Kilometer."
+   },
+   "sprich": "Fünf gleiche Hefte kosten fünfundzwanzig Franken. Jonas schreibt: x gleich fünf. Was fehlt?",
+   "rueck_sprich": {
+    "2": "Was bedeutet die Fünf? Das sagt erst ein Satz.",
+    "0": "Es geht um Franken, nicht um Kilometer."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "46 Personen fahren in Autos mit je 8 Plätzen. Wie viele Autos braucht es?",
+   "optionen": [
+    "6",
+    "5",
+    "5.75"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "In 5 Autos haben nur 40 Personen Platz.",
+    "2": "Ein Viertelauto gibt es nicht."
+   },
+   "sprich": "Sechsundvierzig Personen fahren in Autos mit je acht Plätzen. Wie viele Autos braucht es?",
+   "rueck_sprich": {
+    "1": "In fünf Autos haben nur vierzig Personen Platz.",
+    "2": "Ein Viertelauto gibt es nicht."
+   }
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+% Gesamttest «Texte, Geschwindigkeit und Begegnung» — Quelle des PDFs (python3 scripts/build-lp-pdf.py bewegung).
+% Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/bewegung/zahlen.py).
+% Vorgabe ~/TODO-BM-Vorkurs-LP03-15.md §5: Gleichung aus Text mit Variable und Antwortsatz (G1, G2), s = v · t und Einheiten
+% (G3, G4), Abschnitte tabellarisch und Plausibilität (G5, G6), Begegnung mit Modellannahme und Rolltreppe mit und gegen die
+% Fahrrichtung (G7, G8). 25 Punkte, rund 30 Minuten.
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\renewcommand{\lpname}{Texte, Geschwindigkeit und Begegnung}
+\renewcommand{\lpteilgebiet}{Mathematisieren ·}
+\renewcommand{\lpfuss}{Gesamttest · 25 Punkte}
+\begin{document}
+\lpkopf{Gesamttest}{%
+  \vspace{4pt}\noindent\begin{tabularx}{\linewidth}{@{}X X@{}}
+  Code (kein Name): \hrulefill & Punkte: \hrulefill\ / 25
+  \end{tabularx}}
+
+\begin{lpinfo}{Anleitung}
+\textbf{Zeit:} rund 30 Minuten. \textbf{Hilfsmittel:} keine, kein Taschenrechner.
+Schreib zu jeder Aufgabe den \textbf{Rechenweg} mit Einheiten und, wo eine Frage gestellt ist, einen \textbf{Antwortsatz} auf; bewertet wird der Weg.
+Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt diesem Blatt scannen bzw.\ fotografieren
+(ohne Namen und Standort) und mit dem Bewertungspaket einer KI geben.
+\end{lpinfo}
+
+\lpteil{Teil A · Vom Text zur Gleichung}{Kapitel 1 · 7 Punkte}
+
+\begin{lpaufgabe}{G1}{Streaming}{4 P}
+Anbieter A verlangt $12$ Fr. im Monat und $3$ Fr. pro Film. Anbieter B verlangt $30$ Fr. im Monat, Filme inbegriffen.
+Ab wie vielen Filmen im Monat ist B günstiger? Lege eine Variable fest, stelle eine Gleichung auf, löse sie, mach die Probe
+und schreib einen Antwortsatz.
+\lpplatz{6}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Zahlenrätsel}{3 P}
+Drei aufeinanderfolgende \textbf{gerade} Zahlen haben zusammen die Summe $84$. Welche Zahlen sind es?
+Schreib die Gleichung auf und mach die Probe.
+\lpplatz{4}
+\end{lpaufgabe}
+
+\lpteil{Teil B · Weg, Geschwindigkeit, Zeit}{Kapitel 2 · 6 Punkte}
+
+\begin{lpaufgabe}{G3}{Zugfahrt}{3 P}
+Ein Zug fährt $135$ km in $1$ h $30$ min.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Wie gross ist seine Durchschnittsgeschwindigkeit?
+\item Wie lange braucht er mit dieser Geschwindigkeit für $60$ km? Gib die Zeit in Minuten an.
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G4}{Einheiten}{3 P}
+Rechne um und schreib den Rechenweg auf.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item $54$ km/h in m/s
+\item $36$ min in Stunden (als Dezimalzahl)
+\item $4$ m/s in km/h
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\lpteil{Teil C · Fahrt in Abschnitten}{Kapitel 3 · 6 Punkte}
+
+\begin{lpaufgabe}{G5}{Bergwanderung}{4 P}
+Eine Wanderung: $6$ km mit $4$ km/h, dann $30$ min Pause, dann $4$ km steil bergauf mit $2$ km/h.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Erfasse die drei Abschnitte in einer Tabelle mit Geschwindigkeit, Zeit und Weg.
+\item Wie lange dauert die ganze Wanderung?
+\item Wie gross ist die Durchschnittsgeschwindigkeit der ganzen Wanderung?
+\item Nina sagt: «Im Schnitt $3$ km/h, das Mittel von $4$ und $2$.» Erkläre, warum das nicht stimmt.
+\end{enumerate}
+\lpplatz{6}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G6}{Plausibel?}{2 P}
+Lea soll ausrechnen, wie lange ein Velo für $45$ km mit $15$ km/h braucht. Sie schreibt: \mbox{$45 \cdot 15 = 675$~h.}
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Woran siehst du ohne Rechnen, dass das nicht stimmen kann?
+\item Rechne richtig.
+\end{enumerate}
+\lpplatz{3}
+\end{lpaufgabe}
+
+\lpteil{Teil D · Begegnung und Rolltreppe}{Kapitel 4 · 6 Punkte}
+
+\begin{lpaufgabe}{G7}{Begegnung}{3 P}
+Zwei Dörfer liegen $45$ km auseinander. Gleichzeitig fährt Tom von Dorf A mit $16$ km/h und Sara von Dorf B mit $14$ km/h los, aufeinander zu.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Nach welcher Zeit treffen sie sich?
+\item Wie weit von Dorf A entfernt ist der Treffpunkt?
+\item Nenne eine Annahme, die du für diese Rechnung machst und die in Wirklichkeit nicht ganz stimmt.
+\end{enumerate}
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Rolltreppe}{3 P}
+Eine Rolltreppe ist $24$ m lang und fährt $0.8$ m/s. Du gehst $1.2$ m/s schnell.
+Wie lange brauchst du für die ganze Länge,
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item wenn du in Fahrrichtung mitgehst,
+\item wenn du gegen die Fahrrichtung gehst,
+\item wenn du auf der Treppe stehen bleibst?
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+\end{document}

@@ -1,0 +1,736 @@
+{
+ "titel": "Mathematisieren: Vom Text zur Gleichung",
+ "dateiname": "bew-lp-text",
+ "kurzbeschrieb": "Konto A 4 Fr. + 0.50 Fr. pro Zahlung, Konto B 7 Fr. + 0.20 Fr.: Hilfekarte Skizze → Variable → Beziehung → Gleichung → Prüfung; gleich teuer bei 10, Vorhersage «ab wann B günstiger», Probe mit 11, Antwortsatz; Fehler: Gleichstand als Antwort, Runden.",
+ "schlagworte": [
+  "Textaufgabe",
+  "Gleichung",
+  "Variable",
+  "Antwortsatz",
+  "Probe"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 1,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Text",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Konto A kostet vier Franken im Monat und fünfzig Rappen pro Zahlung. Konto B kostet sieben Franken und zwanzig Rappen pro Zahlung. Ab wie vielen Zahlungen ist Konto B günstiger?",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "A: 4 Fr. + 0.50 Fr. pro Zahlung|B: 7 Fr. + 0.20 Fr. pro Zahlung",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "Ab wie vielen Zahlungen|ist B günstiger?",
+     "x": 150,
+     "y": 470,
+     "groesse": 44,
+     "farbe": "orange",
+     "ein": 9.8
+    }
+   ],
+   "dauer": 14.32
+  },
+  {
+   "name": "Plan",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "So gehst du vor: zuerst eine Skizze oder Tabelle. Dann eine Variable mit Bedeutung, dann die Beziehung, dann die Gleichung. Am Schluss prüfst du und schreibst einen Antwortsatz.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "① Skizze oder Tabelle|② Variable mit Einheit|③ Beziehung|④ Gleichung lösen|⑤ Prüfung und Antwortsatz",
+     "x": 150,
+     "y": 260,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 2.12
+    }
+   ],
+   "dauer": 10.45
+  },
+  {
+   "name": "Variable",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "x ist die Anzahl Zahlungen im Monat. Konto A kostet vier plus null Komma fünf x Franken, Konto B sieben plus null Komma zwei x.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x:\\ \\text{Anzahl Zahlungen}",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 1.05
+    },
+    {
+     "typ": "formel",
+     "text": "\\fa{A = 4 + 0.5x}",
+     "x": 150,
+     "y": 400,
+     "groesse": 54,
+     "ein": 3.27
+    },
+    {
+     "typ": "formel",
+     "text": "\\fb{B = 7 + 0.2x}",
+     "x": 150,
+     "y": 500,
+     "groesse": 54,
+     "ein": 6.67
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.2,
+      21
+     ],
+     "ybereich": [
+      -0.8,
+      14
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       3,
+       "3"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       9,
+       "9"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [Zahlungen]",
+     "yname": "Kosten [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.27,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.2,
+      21
+     ],
+     "ybereich": [
+      -0.8,
+      14
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       3,
+       "3"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       9,
+       "9"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Zahlungen]",
+     "yname": "Kosten [Fr.]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        4
+       ],
+       "bis": [
+        20,
+        14.0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.67,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.2,
+      21
+     ],
+     "ybereich": [
+      -0.8,
+      14
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       3,
+       "3"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       9,
+       "9"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Zahlungen]",
+     "yname": "Kosten [Fr.]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        7
+       ],
+       "bis": [
+        20,
+        11.0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 10.64
+  },
+  {
+   "name": "Gleichung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Gleich teuer heisst: beide Terme gleich. Null Komma drei x gleich drei, also x gleich zehn. Bei zehn Zahlungen kosten beide neun Franken.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4 + 0.5x = 7 + 0.2x",
+     "x": 150,
+     "y": 280,
+     "groesse": 54,
+     "ein": 0.59
+    },
+    {
+     "typ": "formel",
+     "text": "0.3x = 3 \\;\\Rightarrow\\; x = \\fc{10}",
+     "x": 150,
+     "y": 390,
+     "groesse": 54,
+     "ein": 2.63
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.2,
+      21
+     ],
+     "ybereich": [
+      -0.8,
+      14
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       3,
+       "3"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       9,
+       "9"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [Zahlungen]",
+     "yname": "Kosten [Fr.]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        4
+       ],
+       "bis": [
+        20,
+        14.0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        7
+       ],
+       "bis": [
+        20,
+        11.0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.79,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 9,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(10 | 9)",
+       "beschriftung_bei": [
+        10.67,
+        8.178
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.2,
+      21
+     ],
+     "ybereich": [
+      -0.8,
+      14
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       3,
+       "3"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       9,
+       "9"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [Zahlungen]",
+     "yname": "Kosten [Fr.]"
+    }
+   ],
+   "dauer": 10.45
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zehn ist der Gleichstand. Die Probe mit elf zeigt: A kostet neun Franken fünfzig, B neun Franken zwanzig. Ab elf Zahlungen ist B günstiger.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x = 11:\\ \\ \\fa{9.50} \\text{ Fr.} \\;>\\; \\fb{9.20} \\text{ Fr.}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 2.34
+    },
+    {
+     "typ": "notiz",
+     "text": "Ab 11 Zahlungen ist B günstiger.",
+     "x": 150,
+     "y": 430,
+     "groesse": 44,
+     "farbe": "gruen",
+     "ein": 8.7
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 9,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(10 | 9)",
+       "beschriftung_bei": [
+        10.67,
+        8.178
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.2,
+      21
+     ],
+     "ybereich": [
+      -0.8,
+      14
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       3,
+       "3"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       9,
+       "9"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "xname": "x [Zahlungen]",
+     "yname": "Kosten [Fr.]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        4
+       ],
+       "bis": [
+        20,
+        14.0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        7
+       ],
+       "bis": [
+        20,
+        11.0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 11.91
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: x gleich zehn hinschreiben und fertig. Die Frage war, ab wann B günstiger ist. Und wo nur Ganzes geht, rundest du passend: Für zweiundsechzig Personen in Bussen mit zwölf Plätzen reichen fünf Busse nicht, es braucht sechs.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "«x = 10» beantwortet die Frage nicht",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 2.49
+    },
+    {
+     "typ": "formel",
+     "text": "62 : 12 \\approx 5.2 \\;\\Rightarrow\\; 6\\ \\text{Busse}",
+     "x": 150,
+     "y": 420,
+     "groesse": 50,
+     "ein": 9.85
+    }
+   ],
+   "dauer": 14.84
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Gib der Variablen eine Bedeutung, stell die Gleichung auf und löse sie. Dann prüfst du, ob die Zahl die Frage beantwortet, und schreibst einen Antwortsatz.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Variable mit Bedeutung · Gleichung|Probe: beantwortet es die Frage?|Antwortsatz mit Einheit",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.52
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.3
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Bei 10 Zahlungen kosten beide 9 Fr. Ab wie vielen Zahlungen ist B günstiger?",
+   "optionen": [
+    "ab 10 Zahlungen",
+    "ab 9 Zahlungen",
+    "ab 11 Zahlungen"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Bei 10 sind beide gleich teuer. Günstiger heisst: weniger.",
+    "1": "Bei 9 Zahlungen: A 8.50 Fr., B 8.80 Fr. Welches ist billiger?"
+   },
+   "sprich": "Bei zehn Zahlungen kosten beide neun Franken. Ab wie vielen Zahlungen ist B günstiger?",
+   "rueck_sprich": {
+    "0": "Bei zehn sind beide gleich teuer. Günstiger heisst: weniger.",
+    "1": "Bei neun Zahlungen kostet A acht Franken fünfzig, B acht Franken achtzig. Welches ist billiger?"
+   }
+  }
+ ]
+}

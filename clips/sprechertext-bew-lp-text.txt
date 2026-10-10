@@ -1,0 +1,8 @@
+0.40	Konto A kostet vier Franken im Monat und fünfzig Rappen pro Zahlung. Konto B kostet sieben Franken und zwanzig Rappen pro Zahlung. Ab wie vielen Zahlungen ist Konto B günstiger?
+14.72	So gehst du vor: zuerst eine Skizze oder Tabelle. Dann eine Variable mit Bedeutung, dann die Beziehung, dann die Gleichung. Am Schluss prüfst du und schreibst einen Antwortsatz.
+25.17	x ist die Anzahl Zahlungen im Monat. Konto A kostet vier plus null Komma fünf x Franken, Konto B sieben plus null Komma zwei x.
+35.81	Gleich teuer heisst: beide Terme gleich. Null Komma drei x gleich drei, also x gleich zehn. Bei zehn Zahlungen kosten beide neun Franken.
+46.26	Zehn ist der Gleichstand. Die Probe mit elf zeigt: A kostet neun Franken fünfzig, B neun Franken zwanzig. Ab elf Zahlungen ist B günstiger.
+58.17	Häufiger Fehler: x gleich zehn hinschreiben und fertig. Die Frage war, ab wann B günstiger ist. Und wo nur Ganzes geht, rundest du passend: Für zweiundsechzig Personen in Bussen mit zwölf Plätzen reichen fünf Busse nicht, es braucht sechs.
+73.01	Zum Mitnehmen: Gib der Variablen eine Bedeutung, stell die Gleichung auf und löse sie. Dann prüfst du, ob die Zahl die Frage beantwortet, und schreibst einen Antwortsatz.
+83.53	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

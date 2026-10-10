@@ -1,0 +1,251 @@
+{
+ "titel": "Mathematisieren: Kontrollfragen zu s = v · t",
+ "dateiname": "bew-lp-kontrolle-svt",
+ "kurzbeschrieb": "Fünf Fragen: 120 km in 1.5 h, 15 min in h, 72 km/h in m/s, 30 min mit 50 km/h, 400 km mit 50 km/h.",
+ "schlagworte": [
+  "Geschwindigkeit",
+  "Einheiten",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Stunde dreissig Minuten sind eins Komma fünf Stunden. Hundertzwanzig durch eins Komma fünf gibt achtzig Kilometer pro Stunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "v = \\dfrac{120}{1.5} = \\fc{80}\\ \\text{km/h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.31
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Fünfzehn durch sechzig gibt null Komma zwei fünf Stunden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{15}{60} = \\fc{0.25}\\ \\text{h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 4.3
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zweiundsiebzig durch drei Komma sechs gibt zwanzig Meter pro Sekunde.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "72 : 3.6 = \\fc{20}\\ \\text{m/s}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.19
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Dreissig Minuten sind eine halbe Stunde. Fünfzig mal null Komma fünf gibt fünfundzwanzig Kilometer.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "s = 50 \\cdot 0.5 = \\fc{25}\\ \\text{km}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.6
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vierhundert durch fünfzig gibt acht Stunden. Plausibel: Für eine so lange Strecke mit fünfzig Kilometern pro Stunde braucht es einen ganzen Arbeitstag.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "t = \\dfrac{400}{50} = \\fc{8}\\ \\text{h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 9.05
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zeiten in Stunden umrechnen, dann mit s gleich v mal t rechnen. Kilometer pro Stunde durch drei Komma sechs gibt Meter pro Sekunde.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "erst die Einheiten, dann rechnen|km/h : 3.6 = m/s",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.07
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Bus fährt 120 km in 1 h 30 min. Wie schnell fährt er im Durchschnitt?",
+   "optionen": [
+    "92.3 km/h",
+    "120 km/h",
+    "80 km/h"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "1 h 30 min sind nicht 1.30 h, sondern 1.5 h.",
+    "1": "Er braucht mehr als eine Stunde für die 120 km."
+   },
+   "sprich": "Ein Bus fährt hundertzwanzig Kilometer in einer Stunde und dreissig Minuten. Wie schnell fährt er im Durchschnitt?",
+   "rueck_sprich": {
+    "0": "Eine Stunde dreissig sind nicht eins Komma drei null Stunden.",
+    "1": "Er braucht mehr als eine Stunde für die hundertzwanzig Kilometer."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie viele Stunden sind 15 Minuten?",
+   "optionen": [
+    "0.25 h",
+    "0.15 h",
+    "4 h"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Eine Stunde hat 60 Minuten, nicht 100.",
+    "2": "Rechne 15 : 60, nicht 60 : 15."
+   },
+   "sprich": "Wie viele Stunden sind fünfzehn Minuten?",
+   "rueck_sprich": {
+    "1": "Eine Stunde hat sechzig Minuten, nicht hundert.",
+    "2": "Teile fünfzehn durch sechzig, nicht umgekehrt."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Auto fährt 72 km/h. Wie viele m/s sind das?",
+   "optionen": [
+    "72 m/s",
+    "20 m/s",
+    "259.2 m/s"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Ein Auto ist keine 259 m pro Sekunde schnell. Teilen statt mal.",
+    "0": "Meter pro Sekunde ist eine andere Einheit."
+   },
+   "sprich": "Ein Auto fährt zweiundsiebzig Kilometer pro Stunde. Wie viele Meter pro Sekunde sind das?",
+   "rueck_sprich": {
+    "2": "So schnell ist kein Auto. Teilen statt mal.",
+    "0": "Meter pro Sekunde ist eine andere Einheit."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Auto fährt 30 Minuten lang 50 km/h. Wie weit kommt es?",
+   "optionen": [
+    "25 km",
+    "1500 km",
+    "15 km"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Die Minuten müssen zuerst in Stunden.",
+    "2": "30 min sind 0.5 h, nicht 0.3 h."
+   },
+   "sprich": "Ein Auto fährt dreissig Minuten lang fünfzig Kilometer pro Stunde. Wie weit kommt es?",
+   "rueck_sprich": {
+    "1": "Die Minuten müssen zuerst in Stunden.",
+    "2": "Dreissig Minuten sind eine halbe Stunde."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie lange dauert eine Fahrt von 400 km mit 50 km/h?",
+   "optionen": [
+    "0.125 h",
+    "8 h",
+    "20000 h"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Zeit ist Weg durch Geschwindigkeit, nicht mal.",
+    "0": "Rechne 400 : 50, nicht 50 : 400."
+   },
+   "sprich": "Wie lange dauert eine Fahrt von vierhundert Kilometern mit fünfzig Kilometern pro Stunde?",
+   "rueck_sprich": {
+    "2": "Zeit ist Weg durch Geschwindigkeit, nicht mal.",
+    "0": "Teile den Weg durch die Geschwindigkeit, nicht umgekehrt."
+   }
+  }
+ ]
+}

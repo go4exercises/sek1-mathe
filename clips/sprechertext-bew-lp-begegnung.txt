@@ -1,0 +1,9 @@
+0.40	Zwei Velofahrerinnen sind sechsunddreissig Kilometer voneinander entfernt und fahren gleichzeitig los, aufeinander zu. Anna fährt vierzehn, Bea zehn Kilometer pro Stunde.
+11.17	In jeder Stunde kommen sie sich um vierzehn plus zehn, also vierundzwanzig Kilometer näher. Bei Begegnungen addierst du die Geschwindigkeiten.
+19.79	Sechsunddreissig durch vierundzwanzig gibt eins Komma fünf Stunden. Dann ist Anna einundzwanzig Kilometer gefahren, Bea fünfzehn. Der Treffpunkt liegt nicht in der Mitte.
+30.21	Anders beim Einholen. Bea startet eine Stunde früher mit zehn Kilometern pro Stunde, Anna folgt mit fünfzehn. Bea hat zehn Kilometer Vorsprung, Anna holt pro Stunde nur fünf auf: nach zwei Stunden.
+44.84	Auch eine Rolltreppe ist so eine Aufgabe. Sie ist dreissig Meter lang und fährt null Komma fünf Meter pro Sekunde, du gehst einen Meter pro Sekunde. Mit der Treppe bist du eins Komma fünf Meter pro Sekunde schnell und brauchst zwanzig Sekunden. Gegen die Treppe nur null Komma fünf: sechzig Sekunden.
+64.50	Das ist ein Modell: Alle fahren gleichmässig schnell und starten genau gleichzeitig. Ampeln, Steigungen und Pausen lässt das Modell weg. Ob das passt, entscheidest du bei jeder Aufgabe.
+75.57	Häufiger Fehler: beim Einholen die Geschwindigkeiten addieren. Wer hinterherfährt, holt nur den Unterschied auf.
+83.37	Zum Mitnehmen: Aufeinander zu addierst du die Geschwindigkeiten, in gleicher Richtung subtrahierst du sie. Zeit gleich Abstand durch Annäherungsgeschwindigkeit.
+92.38	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

@@ -1,0 +1,799 @@
+{
+ "titel": "Mathematisieren: Fahrt in Abschnitten",
+ "dateiname": "bew-lp-abschnitte",
+ "kurzbeschrieb": "Velotour 30 km mit 20 km/h, 30 min Pause, 20 km mit 10 km/h: Tabelle, Gesamtzeit 4 h, Vorhersage Durchschnitt 12.5 km/h (gestrichelte Verbindung); Fehler: Geschwindigkeiten mitteln (15), Steigung falsch lesen.",
+ "schlagworte": [
+  "Durchschnittsgeschwindigkeit",
+  "Abschnitte",
+  "Tabelle",
+  "Weg-Zeit-Graph"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Tour",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Velotour: dreissig Kilometer mit zwanzig Kilometern pro Stunde, dann eine halbe Stunde Pause, dann zwanzig Kilometer bergauf mit zehn Kilometern pro Stunde.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "30 km mit 20 km/h|30 min Pause|20 km mit 10 km/h",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 0.7
+    }
+   ],
+   "dauer": 10.15
+  },
+  {
+   "name": "Tabelle",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Für jeden Abschnitt eine Zeile. Zeit gleich Weg durch Geschwindigkeit: eins Komma fünf Stunden, die Pause null Komma fünf, dann zwei Stunden. Zusammen vier Stunden für fünfzig Kilometer.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{l|c|c} & t\\ [\\text{h}] & s\\ [\\text{km}] \\\\ \\hline \\fa{1} & \\fa{1.5} & \\fa{30} \\\\ \\text{Pause} & 0.5 & 0 \\\\ \\fb{2} & \\fb{2} & \\fb{20} \\\\ \\hline \\text{total} & 4 & 50 \\end{array}",
+     "x": 150,
+     "y": 260,
+     "groesse": 46,
+     "ein": 1.65
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.97,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        30
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.75,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        1.5,
+        30
+       ],
+       "bis": [
+        2,
+        30
+       ],
+       "farbe": 5,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.83,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        30
+       ],
+       "bis": [
+        4,
+        50
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 11.27
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Durchschnitt heisst: Gesamtweg durch Gesamtzeit. Fünfzig durch vier gibt zwölf Komma fünf Kilometer pro Stunde. Im Graphen ist das die gestrichelte Verbindung von Start und Ziel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{50\\ \\text{km}}{4\\ \\text{h}} = \\fc{12.5}\\ \\text{km/h}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.52
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        30
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.5,
+        30
+       ],
+       "bis": [
+        2,
+        30
+       ],
+       "farbe": 5,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        30
+       ],
+       "bis": [
+        4,
+        50
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.18,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        4,
+        50
+       ],
+       "farbe": 3,
+       "dicke": 4,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 11.05
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: zwanzig plus zehn durch zwei gleich fünfzehn. Der langsame Abschnitt dauert länger und zählt darum mehr. Und die Pause gehört zur Zeit.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{20 + 10}{2} = 15}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.03
+    },
+    {
+     "typ": "notiz",
+     "text": "langsamer Abschnitt dauert länger|Pause zählt zur Gesamtzeit",
+     "x": 150,
+     "y": 452,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 4.61
+    }
+   ],
+   "dauer": 9.68
+  },
+  {
+   "name": "Steigung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Im Weg-Zeit-Graphen ist der steilere Abschnitt der schnellere, nicht der längere. Der erste Abschnitt ist steiler als der dritte, die Pause ist waagrecht.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "steiler = schneller|waagrecht = Pause",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 2.35
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.5,
+      4.6
+     ],
+     "ybereich": [
+      -3,
+      58
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       50,
+       "50"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "s [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        30
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1.5,
+        30
+       ],
+       "bis": [
+        2,
+        30
+       ],
+       "farbe": 5,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        30
+       ],
+       "bis": [
+        4,
+        50
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 9.61
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Jeder Abschnitt bekommt eine Zeile. Durchschnitt ist Gesamtweg durch Gesamtzeit, mit Pausen. Geschwindigkeiten mitteln stimmt nur bei gleich langen Zeiten.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Tabelle: eine Zeile pro Abschnitt|Durchschnitt = Gesamtweg : Gesamtzeit|nicht die Geschwindigkeiten mitteln",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.17
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.38
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie gross ist die Durchschnittsgeschwindigkeit der ganzen Tour?",
+   "optionen": [
+    "14.3 km/h",
+    "12.5 km/h",
+    "15 km/h"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das ist das Mittel aus 20 und 10. Der langsame Teil dauert aber länger.",
+    "0": "So wäre es ohne Pause. Die Pause gehört zur Zeit der Tour."
+   },
+   "sprich": "Wie gross ist die Durchschnittsgeschwindigkeit der ganzen Tour?",
+   "rueck_sprich": {
+    "2": "Das ist das Mittel aus zwanzig und zehn. Der langsame Teil dauert aber länger.",
+    "0": "So wäre es ohne Pause. Die Pause gehört zur Zeit der Tour."
+   }
+  }
+ ]
+}

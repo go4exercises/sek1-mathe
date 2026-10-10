@@ -1,0 +1,8 @@
+0.40	Ein Zug fährt zweihundertvierzig Kilometer in zwei Stunden. In jeder Stunde schafft er hundertzwanzig Kilometer: Seine Geschwindigkeit ist hundertzwanzig Kilometer pro Stunde.
+11.14	Weg gleich Geschwindigkeit mal Zeit. Daraus folgen die beiden anderen Formen: Geschwindigkeit gleich Weg durch Zeit, Zeit gleich Weg durch Geschwindigkeit.
+20.64	Zwanzig Minuten sind ein Drittel Stunde. Achtzehn mal ein Drittel gibt sechs: Das Velo fährt sechs Kilometer.
+28.76	Minuten rechnest du in Stunden um, indem du durch sechzig teilst: Fünfundvierzig Minuten sind null Komma sieben fünf Stunden. Und ein Meter pro Sekunde sind drei Komma sechs Kilometer pro Stunde.
+40.73	Prüf jedes Ergebnis: Zu Fuss gehst du etwa fünf Kilometer pro Stunde, mit dem Velo fünfzehn bis fünfundzwanzig, ein Zug fährt über hundert.
+50.12	Häufiger Fehler: achtzehn mal zwanzig gleich dreihundertsechzig Kilometer. Ein Velo fährt in zwanzig Minuten nie so weit. Die Minuten müssen zuerst in Stunden.
+59.81	Zum Mitnehmen: s gleich v mal t. Die Zeit in die Einheit der Geschwindigkeit umrechnen, Minuten durch sechzig. Dann prüfen, ob das Ergebnis plausibel ist.
+70.03	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

@@ -1,0 +1,1080 @@
+{
+ "titel": "Mathematisieren: Begegnung und Einholen",
+ "dateiname": "bew-lp-begegnung",
+ "kurzbeschrieb": "Zwei Velos 36 km auseinander, 14 und 10 km/h aufeinander zu: Abstand schrumpft mit 24 km/h, Vorhersage Treffen nach 1.5 h bei 21 km; Einholen mit Vorsprung 10 km, 15 gegen 10 km/h: 2 h; Rolltreppe 30 m: mit 20 s, dagegen 60 s; Modellannahmen; Fehler: gleiche Richtung addiert.",
+ "schlagworte": [
+  "Begegnung",
+  "Einholen",
+  "Rolltreppe",
+  "Annäherungsgeschwindigkeit",
+  "Modell"
+ ],
+ "themenbereich": "Mathematisieren · Texte, Geschwindigkeit und Begegnung",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "4 · Mathematisieren",
+ "lektion": [
+  "lp-bewegung"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Mathematisieren",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms bewegung; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Lage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwei Velofahrerinnen sind sechsunddreissig Kilometer voneinander entfernt und fahren gleichzeitig los, aufeinander zu. Anna fährt vierzehn, Bea zehn Kilometer pro Stunde.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Abstand 36 km|Anna 14 km/h →   ← Bea 10 km/h",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 0.96
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "Ort [km]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.14,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1,
+        14
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.76,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        36
+       ],
+       "bis": [
+        1,
+        26
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 10.77
+  },
+  {
+   "name": "Annäherung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "In jeder Stunde kommen sie sich um vierzehn plus zehn, also vierundzwanzig Kilometer näher. Bei Begegnungen addierst du die Geschwindigkeiten.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "14 + 10 = 24\\ \\text{km/h}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 5.05
+    },
+    {
+     "typ": "notiz",
+     "text": "aufeinander zu: addieren",
+     "x": 150,
+     "y": 420,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 5.63
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1,
+        14
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        36
+       ],
+       "bis": [
+        1,
+        26
+       ],
+       "farbe": 2,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        14
+       ],
+       "bis": [
+        1,
+        26
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 8.62
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sechsunddreissig durch vierundzwanzig gibt eins Komma fünf Stunden. Dann ist Anna einundzwanzig Kilometer gefahren, Bea fünfzehn. Der Treffpunkt liegt nicht in der Mitte.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "t = \\dfrac{36}{24} = \\fc{1.5}\\ \\text{h}",
+     "x": 150,
+     "y": 280,
+     "groesse": 54,
+     "ein": 2.33
+    },
+    {
+     "typ": "formel",
+     "text": "\\fa{14 \\cdot 1.5 = 21} \\qquad \\fb{10 \\cdot 1.5 = 15}",
+     "x": 150,
+     "y": 428,
+     "groesse": 50,
+     "ein": 4.35
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1,
+        14
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        36
+       ],
+       "bis": [
+        1,
+        26
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.33,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        14
+       ],
+       "bis": [
+        2.5,
+        35
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        26
+       ],
+       "bis": [
+        2.5,
+        11
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.35,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1.5,
+       "y": 21,
+       "farbe": 3,
+       "anker": "middle",
+       "beschriftung": "(1.5 | 21)",
+       "beschriftung_bei": [
+        1.5,
+        9.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]"
+    }
+   ],
+   "dauer": 10.42
+  },
+  {
+   "name": "Einholen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Anders beim Einholen. Bea startet eine Stunde früher mit zehn Kilometern pro Stunde, Anna folgt mit fünfzehn. Bea hat zehn Kilometer Vorsprung, Anna holt pro Stunde nur fünf auf: nach zwei Stunden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\text{Vorsprung } 10\\ \\text{km}",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 8.17
+    },
+    {
+     "typ": "formel",
+     "text": "15 - 10 = 5 \\;\\Rightarrow\\; t = \\dfrac{10}{5} = \\fc{2}\\ \\text{h}",
+     "x": 150,
+     "y": 390,
+     "groesse": 50,
+     "ein": 9.11
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "Ort [km]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.11,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        10
+       ],
+       "bis": [
+        2.5,
+        35
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.49,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        2.5,
+        37.5
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 10.97,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 30,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(2 | 30)",
+       "beschriftung_bei": [
+        2.085,
+        27.556
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.3,
+      2.65
+     ],
+     "ybereich": [
+      -2,
+      42
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ],
+      [
+       2,
+       "2"
+      ]
+     ],
+     "yteilung": [
+      [
+       12,
+       "12"
+      ],
+      [
+       24,
+       "24"
+      ],
+      [
+       36,
+       "36"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "Ort [km]"
+    }
+   ],
+   "dauer": 14.63
+  },
+  {
+   "name": "Rolltreppe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Auch eine Rolltreppe ist so eine Aufgabe. Sie ist dreissig Meter lang und fährt null Komma fünf Meter pro Sekunde, du gehst einen Meter pro Sekunde. Mit der Treppe bist du eins Komma fünf Meter pro Sekunde schnell und brauchst zwanzig Sekunden. Gegen die Treppe nur null Komma fünf: sechzig Sekunden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\text{mit: } \\dfrac{30}{1 + 0.5} = \\fc{20}\\ \\text{s}",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 8.34
+    },
+    {
+     "typ": "formel",
+     "text": "\\text{gegen: } \\dfrac{30}{1 - 0.5} = \\fc{60}\\ \\text{s}",
+     "x": 150,
+     "y": 420,
+     "groesse": 50,
+     "ein": 13.54
+    }
+   ],
+   "dauer": 19.66
+  },
+  {
+   "name": "Modell",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das ist ein Modell: Alle fahren gleichmässig schnell und starten genau gleichzeitig. Ampeln, Steigungen und Pausen lässt das Modell weg. Ob das passt, entscheidest du bei jeder Aufgabe.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Modell: gleichmässig schnell,|gleichzeitiger Start|Ampeln, Steigungen, Pausen weggelassen",
+     "x": 150,
+     "y": 300,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 1.18
+    }
+   ],
+   "dauer": 11.07
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: beim Einholen die Geschwindigkeiten addieren. Wer hinterherfährt, holt nur den Unterschied auf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{15 + 10 = 25}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 3.37
+    },
+    {
+     "typ": "notiz",
+     "text": "gleiche Richtung: subtrahieren",
+     "x": 150,
+     "y": 420,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 5.69
+    }
+   ],
+   "dauer": 7.8
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Aufeinander zu addierst du die Geschwindigkeiten, in gleicher Richtung subtrahierst du sie. Zeit gleich Abstand durch Annäherungsgeschwindigkeit.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "aufeinander zu: v₁ + v₂|gleiche Richtung: v₁ − v₂|t = Abstand : Annäherung",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.01
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.23
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wann treffen sich Anna und Bea?",
+   "optionen": [
+    "nach 9 h",
+    "nach 3 h",
+    "nach 1.5 h"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Sie fahren aufeinander zu. 14 − 10 wäre richtig, wenn Anna Bea einholen müsste.",
+    "1": "36 : 12 nimmt an, dass beide 12 km/h fahren. Wie viel näher kommen sie sich pro Stunde?"
+   },
+   "sprich": "Wann treffen sich Anna und Bea?",
+   "rueck_sprich": {
+    "0": "Sie fahren aufeinander zu. Die Differenz wäre richtig, wenn Anna Bea einholen müsste.",
+    "1": "Wie viel näher kommen sie sich in einer Stunde?"
+   }
+  }
+ ]
+}
