@@ -418,13 +418,44 @@
       {
        "x": 6,
        "y": 3,
-       "farbe": 3,
+       "farbe": 5,
        "anker": "end",
        "beschriftung": "P(6 | 3)",
        "beschriftung_bei": [
         5.8,
         3.5
        ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.45,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 6,
+       "y": 3,
+       "farbe": 3,
+       "anker": "start"
       }
      ],
      "pfeile": true,
@@ -642,7 +673,7 @@
     },
     {
      "typ": "notiz",
-     "text": "Start: (0 ∣ b)|Steigungsdreieck: nach rechts, hinauf oder hinunter|verbinden und verlängern|Punktprobe: einsetzen",
+     "text": "Start: (0 ∣ b)|Steigungsdreieck: nach rechts, hinauf oder hinunter|verbinden und verlängern|Punktprobe: einsetzen; Nullstelle: y = 0",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -693,7 +724,7 @@
    "rueck": {
     "1": "Ja.",
     "2": "Du bist 2 nach rechts und 3 hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.",
-    "0": "3 nach rechts und 2 hinauf stimmt, aber von (0 | −1) aus, nicht von (0 | 0)."
+    "0": "3 nach rechts und 2 hinauf stimmt, aber von (0 | −1) aus, nicht vom Ursprung."
    },
    "sprich": "Von null, minus eins aus mit der Steigung zwei Drittel: Zu welchem Punkt kommst du?",
    "rueck_sprich": {

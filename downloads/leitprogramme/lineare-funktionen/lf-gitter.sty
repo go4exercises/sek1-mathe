@@ -5,7 +5,7 @@
   \draw[->,line width=0.6pt] (#1,0) -- (#2+0.5,0) node[right] {$x$};
   \draw[->,line width=0.6pt] (0,#3) -- (0,#4+0.5) node[above] {$y$};
   \foreach \i in {#1,...,#2} {\ifnum\i=0\else\node[below,inner sep=1.5pt] at (\i,0) {$\i$};\fi}
-  \foreach \j in {#3,...,#4} {\ifnum\j=0\else\node[left,inner sep=1.5pt] at (0,\j) {$\j$};\fi}
+  \foreach \j in {#3,...,#4} {\ifnum\j=0\else\node[left,inner sep=3pt] at (0,\j) {$\j$};\fi}
   \node[below left,inner sep=1.5pt] at (0,0) {$0$};
   #5
 \end{tikzpicture}}
@@ -15,6 +15,6 @@
   \draw[->,line width=0.6pt] (0,0) -- (#1+0.6,0) node[right] {$t$ [min]};
   \draw[->,line width=0.6pt] (0,0) -- (0,#2+0.6) node[above] {$V$ [ml]};
   \foreach \i in {0,...,#1} {\pgfmathtruncatemacro{\w}{\i*#3}\node[below,inner sep=1.5pt] at (\i,0) {$\w$};}
-  \foreach \j in {1,...,#2} {\pgfmathtruncatemacro{\w}{\j*#4}\node[left,inner sep=1.5pt] at (0,\j) {$\w$};}
+  \foreach \j in {1,...,#2} {\pgfmathtruncatemacro{\w}{\j*#4}\node[left,inner sep=3pt] at (0,\j) {$\w$};}
   #5
 \end{tikzpicture}}

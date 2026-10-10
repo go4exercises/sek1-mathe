@@ -369,15 +369,15 @@ clip('anfangswert', 1, 'Funktionen sehen: Anfangswert und Änderung',
          sz('Tank',
             'Ein Wassertank enthält am Anfang zweihundert Liter. Pro Minute fliessen fünfzehn Liter dazu. '
             'Wie viel Wasser ist nach x Minuten im Tank?',
-            n('am Anfang: @200 l@', 300, 'orange', 50, ein='@Anfang'),
-            n('pro Minute: @+ 15 l@', 420, 'blau', 50, ein='@Minute'),
+            n('am Anfang: @200@ Liter', 300, 'orange', 50, ein='@Anfang'),
+            n('pro Minute: @+15@ Liter', 420, 'blau', 50, ein='@Minute'),
             graf(W_TANK, **TANK),
             ueber(W_TANK, punkte=[pt(0, 200, 2, '(0 | 200)')], ein='@Anfang', **TANK)),
          sz('Tabelle',
             'Nach einer Minute sind es zweihundertfünfzehn Liter. Nach zwei Minuten zweihundertdreissig. '
             'Nach drei Minuten zweihundertfünfundvierzig. Bei jedem Schritt kommt gleich viel dazu: fünfzehn Liter. '
             'Darum liegen die Punkte auf einer Geraden.',
-            f(TAB, 300, 50, ein=0.3),
+            f(TAB, 300, 50, ein='@Bei'),
             graf(W_TANK, punkte=[pt(0, 200, 2)], **TANK),
             ueber(W_TANK, punkte=[pt(1, 215, 5)], ein='@Nach#1', **TANK),
             ueber(W_TANK, punkte=[pt(2, 230, 5)], ein='@Nach#2', **TANK),
@@ -406,7 +406,7 @@ clip('anfangswert', 1, 'Funktionen sehen: Anfangswert und Änderung',
             n('lineare Funktion: Graph ist eine Gerade', 420, 'blau', 42, ein='@lineare'),
             f(r'y = \fa{-20} \cdot x + \fb{200}', 560, 60, ein='@minus'),
             graf(W_TANK, [ger(15, 200)], **TANK),
-            ueber(W_TANK, [ger(-20, 200, 1)], ein='@abfliessen', **TANK)),
+            dict(ueber(W_TANK, ein='@abfliessen', **TANK), figuren=[S((0, 200), (10, 0), 1, 5)])),   # Strecke bis leer
          sz('Rückwärts',
             'Umgekehrt: Wann sind dreihundertfünfzig Liter im Tank? Setz y gleich dreihundertfünfzig und löse die Gleichung. '
             'Fünfzehn x ist hundertfünfzig, also x gleich zehn. Nach zehn Minuten.',
@@ -463,7 +463,7 @@ clip('kontrolle-anfangswert', 2, 'Funktionen sehen: Kontrollfragen zu Anfangswer
             'Die Kerze startet mit vierundzwanzig Zentimetern, das ist b. Sie wird pro Stunde zwei Zentimeter kürzer, '
             'also ist m minus zwei: y gleich minus zwei x plus vierundzwanzig.',
             f(r'\fc{y = -2x + 24}', 330, 62, ein=1.0),
-            graf(W_KERZE, [bew([[0, -2, 24]], yachse={'farbe': 2, 'beschriftung': False})], xname='x [h]', yname='y [cm]')),
+            dict(graf(W_KERZE, punkte=[pt(0, 24, 2)], xname='x [h]', yname='y [cm]'), figuren=[S((0, 24), (12, 0), 1, 5)])),   # Strecke: keine negative Höhe
          merke('Zum Mitnehmen: b ist der Wert am Anfang, bei x gleich null. m ist die Änderung pro Schritt, beim Abnehmen negativ. '
                'Ist y gegeben, löst du eine Gleichung.',
                'b: Wert bei x = 0|m: Änderung pro Schritt|y gegeben: Gleichung lösen'),
@@ -525,7 +525,7 @@ clip('steigung', 3, 'Funktionen sehen: Die Steigung',
             f(r'P(1 \mid 2), \quad Q(4 \mid 8)', 260, 54, ein=0.3),
             f(r'm = \dfrac{\fb{8} - 2}{\fb{4} - 1} = \dfrac{6}{3} = \fa{2}', 380, 60, ein='@Für+0.2'),
             n('oben und unten zuerst Q', 600, 'blau', 44, ein='@Oben'),
-            graf(W_ST, [ger(2, 0)], [pt(1, 2, 5, 'P(1 | 2)'), pt(4, 8, 2, 'Q(4 | 8)')])),
+            graf(W_ST, [ger(2, 0)], [pt(1, 2, 5, 'P(1 | 2)'), pt(4, 8, 5, 'Q(4 | 8)')])),
          sz('Vorzeichen',
             'Fällt die Gerade, geht es hinunter: Δy ist negativ, also auch m. Bei m gleich null ist die Gerade waagrecht. '
             'Und je grösser der Betrag von m, desto steiler ist sie.',
@@ -587,7 +587,7 @@ clip('kontrolle-steigung', 4, 'Funktionen sehen: Kontrollfragen zur Steigung',
             graf(W_MB, [bew([[0, -1.5, 3]], dreieck=dreieck(0, 2))])),
          merke('Zum Mitnehmen: m ist Δy durch Δx. Oben und unten zuerst denselben Punkt. Hinunter ist negativ, und bei m gleich null '
                'ist die Gerade waagrecht.',
-               'm = Δy / Δx|oben und unten dieselbe Reihenfolge|hinunter: negativ · m = 0: waagrecht'),
+               'm = Δy / Δx|oben und unten dieselbe Reihenfolge|hinunter: negativ|m = 0: waagrecht'),
      ], [
          wahl('Frage 1', 'Wie gross ist die Steigung der Geraden durch A(2 | 1) und B(5 | 7)?', ['2', '1/2', '−2'], 0,
               {0: 'Ja.', 1: 'Oben steht die Änderung in y, unten die in x.', 2: 'Von A nach B geht es hinauf. Ist m dann negativ?'},
@@ -606,14 +606,14 @@ clip('kontrolle-steigung', 4, 'Funktionen sehen: Kontrollfragen zur Steigung',
                             2: 'Der Betrag stimmt. Steigt die Gerade, oder fällt sie?'}),
          wahl('Frage 4', 'Eine Gerade hat die Steigung m = 0. Wie verläuft sie?', ['waagrecht', 'senkrecht', 'durch (0 | 0)'], 0,
               {0: 'Ja.', 1: 'Bei m = 0 ist Δy = 0: y ändert sich nicht. Ist das senkrecht?',
-               2: 'Ob eine Gerade durch (0 | 0) geht, sagt b, nicht m.'},
+               2: 'Ob eine Gerade durch den Ursprung geht, sagt b, nicht m.'},
               sprich='Eine Gerade hat die Steigung m gleich null. Wie verläuft sie?',
               rueck_sprich={1: 'Bei m gleich null ist delta y gleich null: y ändert sich nicht. Ist das senkrecht?',
                             2: 'Ob eine Gerade durch den Ursprung geht, sagt b, nicht m.'}),
          wahl('Frage 5', 'Eine Gerade geht pro 2 nach rechts 3 hinunter. Wie gross ist m?', ['−1.5', '−2/3', '1.5'], 0,
-              {0: 'Ja.', 1: 'Oben steht die Änderung in y: −3. Unten steht 2.', 2: 'Hinunter heisst: Δy ist negativ.'},
+              {0: 'Ja.', 1: 'Was steht oben im Bruch: der Schritt nach rechts oder die Änderung in y?', 2: 'Hinunter heisst: Δy ist negativ.'},
               sprich='Eine Gerade geht pro zwei nach rechts drei hinunter. Wie gross ist m?',
-              rueck_sprich={1: 'Oben steht die Änderung in y: minus drei. Unten steht zwei.', 2: 'Hinunter heisst: delta y ist negativ.'}),
+              rueck_sprich={1: 'Was steht oben im Bruch: der Schritt nach rechts oder die Änderung in y?', 2: 'Hinunter heisst: delta y ist negativ.'}),
      ], art='Kontrollclip')
 
 # ════════════════════════════════════════════════ Kapitel 3 · Einführung: Geraden zeichnen
@@ -645,7 +645,8 @@ clip('zeichnen', 5, 'Funktionen sehen: Geraden zeichnen',
             f(r'P(6 \mid 3)', 280, 56, ein='@Liegt'),
             f(r'\tfrac{2}{3} \cdot 6 - 1 = 4 - 1 = \fc{3}', 400, 56, ein='@Setz'),
             graf(W_Z, [ger(2 / 3, -1)]),
-            ueber(W_Z, punkte=[pt(6, 3, 3, 'P(6 | 3)', [5.8, 3.5], 'end')], ein='@Liegt')),
+            ueber(W_Z, punkte=[pt(6, 3, 5, 'P(6 | 3)', [5.8, 3.5], 'end')], ein='@Liegt'),
+            ueber(W_Z, punkte=[pt(6, 3, 3)], ein='@Ja')),
          sz('Nullstelle',
             'Wo schneidet die Gerade die x-Achse? Dort ist y gleich null. Zwei Drittel x minus eins gleich null, '
             'also zwei Drittel x gleich eins und x gleich eins Komma fünf. Das ist die Nullstelle.',
@@ -663,12 +664,12 @@ clip('zeichnen', 5, 'Funktionen sehen: Geraden zeichnen',
             ueber(W_Z, [ger(2 / 3, 0, 4, gestrichelt=True)], ein='@Ursprung')),
          merke('Zum Mitnehmen: Start bei b auf der y-Achse. Dann das Steigungsdreieck: nach rechts, und hinauf oder hinunter. '
                'Zwei Punkte verbinden. Die Punktprobe zeigt, ob ein Punkt darauf liegt.',
-               'Start: (0 ∣ b)|Steigungsdreieck: nach rechts, hinauf oder hinunter|verbinden und verlängern|Punktprobe: einsetzen'),
+               'Start: (0 ∣ b)|Steigungsdreieck: nach rechts, hinauf oder hinunter|verbinden und verlängern|Punktprobe: einsetzen; Nullstelle: y = 0'),
          jetzt_du(),
      ], [
          wahl('Dreieck', 'Von (0 | −1) aus mit der Steigung 2/3: Zu welchem Punkt kommst du?', ['(3 | 1)', '(2 | 2)', '(3 | 2)'], 0,
               {0: 'Ja.', 1: 'Du bist 2 nach rechts und 3 hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.',
-               2: '3 nach rechts und 2 hinauf stimmt, aber von (0 | −1) aus, nicht von (0 | 0).'},
+               2: '3 nach rechts und 2 hinauf stimmt, aber von (0 | −1) aus, nicht vom Ursprung.'},
               sprich='Von null, minus eins aus mit der Steigung zwei Drittel: Zu welchem Punkt kommst du?',
               rueck_sprich={1: 'Du bist zwei nach rechts und drei hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.',
                             2: 'Drei nach rechts und zwei hinauf stimmt, aber von null, minus eins aus, nicht vom Ursprung.'}),
@@ -743,9 +744,9 @@ clip('kontrolle-zeichnen', 6, 'Funktionen sehen: Kontrollfragen zum Zeichnen',
               rueck_sprich={1: 'A schneidet die y-Achse bei plus zwei. Gesucht ist b gleich minus zwei.',
                             2: 'C startet bei minus zwei, fällt aber. Bei m gleich eins steigt die Gerade.'}),
          wahl('Frage 5', 'y = −2x + 3: Start bei (0 | 3). Zu welchem Punkt führt das Steigungsdreieck?', ['(1 | 1)', '(1 | 5)', '(2 | 2)'], 0,
-              {0: 'Ja.', 1: 'm ist negativ: Es geht hinunter, nicht hinauf.', 2: 'm = −2 heisst 1 nach rechts und 2 hinunter.'},
+              {0: 'Ja.', 1: 'm ist negativ: Es geht hinunter, nicht hinauf.', 2: 'Wie weit gehst du nach rechts, wenn der Nenner von m gleich 1 ist?'},
               sprich='y gleich minus zwei x plus drei. Start bei null, drei. Zu welchem Punkt führt das Steigungsdreieck?',
-              rueck_sprich={1: 'm ist negativ: Es geht hinunter, nicht hinauf.', 2: 'm gleich minus zwei heisst eins nach rechts und zwei hinunter.'}),
+              rueck_sprich={1: 'm ist negativ: Es geht hinunter, nicht hinauf.', 2: 'Wie weit gehst du nach rechts, wenn der Nenner von m gleich eins ist?'}),
      ], art='Kontrollclip')
 
 # ════════════════════════════════════════════════ Kapitel 4 · Einführung: Die Gleichung finden
@@ -781,7 +782,7 @@ clip('gleichung', 7, 'Funktionen sehen: Die Gleichung finden',
          sz('Infusion',
             'Eine Infusion enthält fünfhundert Milliliter und läuft mit zwei Millilitern pro Minute. Der Inhalt nach t Minuten: '
             'V gleich minus zwei t plus fünfhundert. Leer ist sie bei V gleich null, nach zweihundertfünfzig Minuten.',
-            n('am Anfang: @500 ml@|pro Minute: @− 2 ml@', 240, 'blau', 42, ein='@enthält'),
+            n('am Anfang: @500@ ml|pro Minute: @−2@ ml', 240, 'blau', 42, ein='@enthält'),
             f(r'V = \fa{-2}t + \fb{500}', 420, 60, ein='@Inhalt'),
             f(r'-2t + 500 = 0 \qquad \fc{t = 250}', 540, 52, ein='@Leer'),
             graf(W_INF, **INF),
@@ -803,7 +804,7 @@ clip('gleichung', 7, 'Funktionen sehen: Die Gleichung finden',
             'Häufiger Fehler: b mit einem y-Wert verwechselt. Bei P mit zwei und fünf ist b nicht fünf. '
             'b ist der Wert bei x gleich null.',
             f(r'P(2 \mid 5): \quad \fd{b \neq 5}', 300, 58, ein='@verwechselt'),
-            n('b = Wert bei x = 0', 440, 'blau', 44, ein='@Wert')),
+            n('b = Wert bei x = 0', 440, 'blau', 44, ein='@Wert#2')),
          merke('Zum Mitnehmen: Aus dem Graphen liest du b ab und misst m mit einem Steigungsdreieck. Aus zwei Punkten berechnest du '
                'zuerst m und setzt dann einen Punkt ein. Ändert sich die Rate, knickt der Graph und springt nicht.',
                'Graph: b ablesen, m messen|zwei Punkte: zuerst m, dann einsetzen|neue Rate: Knick, kein Sprung'),
@@ -822,18 +823,18 @@ W_K4A = dict(xbereich=[-2, 7], ybereich=[-2, 7])
 W_K4B = dict(xbereich=[-3, 6], ybereich=[-1, 11], yteilung=teil(0, 5, 10))
 W_K4I = dict(xbereich=[-10, 110], ybereich=[-30, 450], xteilung=teil(0, 20, 40, 60, 80, 100), yteilung=teil(0, 100, 200, 300, 400))
 W_K4W = dict(xbereich=[-20, 220], ybereich=[-25, 340], xteilung=teil(0, 50, 100, 150, 200), yteilung=teil(0, 100, 200, 300))
-W_K4V = dict(xbereich=[-20, 220], ybereich=[-40, 680], xteilung=teil(0, 50, 100, 150, 200), yteilung=teil(0, 200, 400, 600))
+W_K4V = dict(xbereich=[-15, 170], ybereich=[-30, 500], xteilung=teil(0, 50, 100, 150), yteilung=teil(0, 100, 200, 300, 400))
 FRAGEBILD.update({
-    ('kontrolle-gleichung', 'Frage 1'): (W_K4A, [ger(2, 1)], [pt(0, 1, 5), pt(2, 5, 5)], {}),
+    ('kontrolle-gleichung', 'Frage 1'): (W_K4A, [ger(2 / 3, 2)], [pt(0, 2, 5), pt(3, 4, 5)], {}),
 })
 clip('kontrolle-gleichung', 8, 'Funktionen sehen: Kontrollfragen zur Gleichung',
-     'Fünf Fragen: Gleichung der Geraden durch (0 | 1) und (2 | 5) im Bild, Gerade durch (1 | 4) und (3 | 10), '
-     'Infusion 400 ml mit 5 ml/min leer, Ratenwechsel nach 50 min bei 300 ml und 3 ml/min, Gleichung für 600 ml und 3 ml/min.',
+     'Fünf Fragen: Gleichung der Geraden durch (0 | 2) und (3 | 4) im Bild, Gerade durch (1 | 4) und (3 | 10), '
+     'Infusion 400 ml mit 5 ml/min leer, Ratenwechsel nach 50 min bei 300 ml und 3 ml/min, Gleichung für 450 ml und 3 ml/min.',
      ['Geradengleichung', 'zwei Punkte', 'Infusion', 'Kontrollfragen'], [
          sz('Frage 1',
-            'Die Gerade schneidet die y-Achse bei eins: b ist eins. Zwei nach rechts, vier hinauf: m ist zwei. y gleich zwei x plus eins.',
-            f(r'\fc{y = 2x + 1}', 330, 62, ein=1.0),
-            graf(W_K4A, [bew([[0, 2, 1]], dreieck=dreieck(0, 2), yachse={'farbe': 2, 'beschriftung': False})])),
+            'Die Gerade schneidet die y-Achse bei zwei: b ist zwei. Drei nach rechts, zwei hinauf: m ist zwei Drittel. y gleich zwei Drittel x plus zwei.',
+            f(r'\fc{y = \tfrac{2}{3}x + 2}', 330, 62, ein=1.0),
+            graf(W_K4A, [bew([[0, 2 / 3, 2]], dreieck=dreieck(0, 3), yachse={'farbe': 2, 'beschriftung': False})])),
          sz('Frage 2',
             'Zuerst m: zehn minus vier durch drei minus eins, das gibt drei. Dann einen Punkt einsetzen: vier gleich drei plus b, '
             'also b gleich eins.',
@@ -851,23 +852,23 @@ clip('kontrolle-gleichung', 8, 'Funktionen sehen: Kontrollfragen zur Gleichung',
             dict(graf(W_K4W, punkte=[pt(50, 150, 3, '(50 | 150)', [62, 178], 'start')], **INF),
                  figuren=[S((0, 300), (50, 150), 1, 5), S((50, 150), (200, 0), 1, 5)])),
          sz('Frage 5',
-            'Am Anfang sechshundert, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus sechshundert.',
-            f(r'\fc{V = -3t + 600}', 330, 62, ein=1.0),
-            dict(graf(W_K4V, **INF), figuren=[S((0, 600), (200, 0), 1, 5)])),
+            'Am Anfang vierhundertfünfzig, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus vierhundertfünfzig.',
+            f(r'\fc{V = -3t + 450}', 330, 62, ein=1.0),
+            dict(graf(W_K4V, **INF), figuren=[S((0, 450), (150, 0), 1, 5)])),
          merke('Zum Mitnehmen: b liest du bei x gleich null ab, m misst du mit dem Steigungsdreieck. Aus zwei Punkten zuerst m, '
                'dann einsetzen. Bei einer neuen Rate geht es dort weiter, wo der Graph gerade ist.',
                'b bei x = 0, m mit dem Dreieck|zwei Punkte: zuerst m, dann einsetzen|neue Rate: weiter, wo der Graph ist'),
      ], [
-         wahl('Frage 1', 'Welche Gleichung hat die Gerade im Bild?', ['y = 2x + 1', 'y = ½x + 1', 'y = 2x + 5'], 0,
+         wahl('Frage 1', 'Welche Gleichung hat die Gerade im Bild?', ['y = ⅔x + 2', 'y = 3/2 x + 2', 'y = ⅔x + 4'], 0,
               {0: 'Ja.', 1: 'Oben steht, wie viel es hinaufgeht, unten der Schritt nach rechts.',
                2: 'b ist der Wert bei x = 0, nicht ein anderer y-Wert.'},
               rueck_sprich={1: 'Oben steht, wie viel es hinaufgeht, unten der Schritt nach rechts.',
                             2: 'b ist der Wert bei x gleich null, nicht ein anderer y-Wert.'}),
          wahl('Frage 2', 'Welche Gerade geht durch (1 | 4) und (3 | 10)?', ['y = 3x + 1', 'y = 3x + 4', 'y = 2x + 2'], 0,
               {0: 'Ja.', 1: 'm stimmt. Prüf mit (1 | 4): 3 · 1 + 4 ist nicht 4.', 2: 'Prüf mit (3 | 10): 2 · 3 + 2 ist nicht 10.'},
-              sprich='Welche Gerade geht durch eins, vier und drei, zehn?',
-              rueck_sprich={1: 'm stimmt. Prüf mit eins, vier: drei mal eins plus vier ist nicht vier.',
-                            2: 'Prüf mit drei, zehn: zwei mal drei plus zwei ist nicht zehn.'}),
+              sprich='Welche Gerade geht durch den Punkt eins, vier und den Punkt drei, zehn?',
+              rueck_sprich={1: 'm stimmt. Prüf mit dem Punkt eins, vier: drei mal eins plus vier ist nicht vier.',
+                            2: 'Prüf mit dem Punkt drei, zehn: zwei mal drei plus zwei ist nicht zehn.'}),
          wahl('Frage 3', 'Eine Infusion mit 400 ml läuft mit 5 ml pro Minute. Wann ist sie leer?', ['nach 80 min', 'nach 2000 min', 'nach 395 min'], 0,
               {0: 'Ja.', 1: 'Gesucht ist, wie oft 5 ml in 400 ml passen.', 2: 'Pro Minute laufen 5 ml, nicht insgesamt.'},
               sprich='Eine Infusion mit vierhundert Millilitern läuft mit fünf Millilitern pro Minute. Wann ist sie leer?',
@@ -880,10 +881,10 @@ clip('kontrolle-gleichung', 8, 'Funktionen sehen: Kontrollfragen zur Gleichung',
               sprich='Infusion mit dreihundert Millilitern, drei Milliliter pro Minute. Nach fünfzig Minuten wird auf einen Milliliter pro Minute gestellt. Wo beginnt das neue Stück des Graphen?',
               rueck_sprich={1: 'Beim Umstellen beginnt die Infusion nicht neu. Wie viel ist nach fünfzig Minuten noch drin?',
                             2: 'Umgestellt wird nach fünfzig Minuten, nicht am Anfang.'}),
-         wahl('Frage 5', 'Ein Beutel mit 600 ml läuft mit 3 ml pro Minute. Welche Gleichung passt?', ['V = −3t + 600', 'V = 3t + 600', 'V = −600t + 3'], 0,
-              {0: 'Ja.', 1: 'Der Beutel wird leerer: m ist negativ.', 2: 'Prüf mit t = 0: Am Anfang sind 600 ml drin.'},
-              sprich='Ein Beutel mit sechshundert Millilitern läuft mit drei Millilitern pro Minute. Welche Gleichung passt?',
-              rueck_sprich={1: 'Der Beutel wird leerer: m ist negativ.', 2: 'Prüf mit t gleich null: Am Anfang sind sechshundert Milliliter drin.'}),
+         wahl('Frage 5', 'Ein Beutel mit 450 ml läuft mit 3 ml pro Minute. Welche Gleichung passt?', ['V = −3t + 450', 'V = 3t + 450', 'V = −450t + 3'], 0,
+              {0: 'Ja.', 1: 'Der Beutel wird leerer: m ist negativ.', 2: 'Prüf mit t = 0: Am Anfang sind 450 ml drin.'},
+              sprich='Ein Beutel mit vierhundertfünfzig Millilitern läuft mit drei Millilitern pro Minute. Welche Gleichung passt?',
+              rueck_sprich={1: 'Der Beutel wird leerer: m ist negativ.', 2: 'Prüf mit t gleich null: Am Anfang sind vierhundertfünfzig Milliliter drin.'}),
      ], art='Kontrollclip')
 
 if FEHLT:

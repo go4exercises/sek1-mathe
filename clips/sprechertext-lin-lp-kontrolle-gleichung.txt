@@ -1,6 +1,6 @@
-0.40	Die Gerade schneidet die y-Achse bei eins: b ist eins. Zwei nach rechts, vier hinauf: m ist zwei. y gleich zwei x plus eins.
-10.19	Zuerst m: zehn minus vier durch drei minus eins, das gibt drei. Dann einen Punkt einsetzen: vier gleich drei plus b, also b gleich eins.
-19.89	V gleich minus fünf t plus vierhundert. Leer bei null: vierhundert durch fünf gibt achtzig Minuten.
-27.12	Nach fünfzig Minuten sind hundertfünfzig Milliliter weg. Es bleiben hundertfünfzig. Dort beginnt das neue Stück, bei fünfzig, hundertfünfzig.
-36.37	Am Anfang sechshundert, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus sechshundert.
-45.20	Zum Mitnehmen: b liest du bei x gleich null ab, m misst du mit dem Steigungsdreieck. Aus zwei Punkten zuerst m, dann einsetzen. Bei einer neuen Rate geht es dort weiter, wo der Graph gerade ist.
+0.40	Die Gerade schneidet die y-Achse bei zwei: b ist zwei. Drei nach rechts, zwei hinauf: m ist zwei Drittel. y gleich zwei Drittel x plus zwei.
+11.18	Zuerst m: zehn minus vier durch drei minus eins, das gibt drei. Dann einen Punkt einsetzen: vier gleich drei plus b, also b gleich eins.
+20.88	V gleich minus fünf t plus vierhundert. Leer bei null: vierhundert durch fünf gibt achtzig Minuten.
+28.11	Nach fünfzig Minuten sind hundertfünfzig Milliliter weg. Es bleiben hundertfünfzig. Dort beginnt das neue Stück, bei fünfzig, hundertfünfzig.
+37.36	Am Anfang vierhundertfünfzig, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus vierhundertfünfzig.
+47.37	Zum Mitnehmen: b liest du bei x gleich null ab, m misst du mit dem Steigungsdreieck. Aus zwei Punkten zuerst m, dann einsetzen. Bei einer neuen Rate geht es dort weiter, wo der Graph gerade ist.

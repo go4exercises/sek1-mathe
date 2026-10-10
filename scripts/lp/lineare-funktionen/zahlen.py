@@ -50,7 +50,7 @@ def leer(v0, rate):
 # ---- Vortest
 soll('0b', [y(4, -7, 3), y(4, -7, -2)], [5, -15])
 soll('0c', [F(-6, 3), F(11 + 4, 5)], [-2, 3])
-soll('0d', [F(7 - 1, 5 - 2), F(2 - 8, 4 - 1)], [2, -2])
+soll('0d', [F(9 - 1, 6 - 2), F(2 - 8, 4 - 1)], [2, -2]); soll('0f', [F(3, 4) * 8, F(6) / F(3, 4)], [6, 8]); soll('Kurz wiederholt', [F(2, 3) * 6, F(4) / F(2, 3)], [4, 6])
 soll('0e', [2 * k for k in range(4)], [0, 2, 4, 6])
 
 # ---- Kapitel 1
@@ -99,8 +99,8 @@ soll('Sim4.4', F(900, 300), 3); soll('Sim4.5', 100 + leer(800 - 4 * 100, 8), 150
 # Aufgaben 4
 soll('4a Bild', durch((0, -2), (4, 0)), (F(1, 2), -2))
 soll('4b', durch((1, 3), (3, 7)), (2, 1)); soll('4c', durch((-2, 6), (4, 3)), (F(-1, 2), 5))
-soll('4d Max', durch((2, 5), (4, 9)), (2, 1)); falsch('4d Max b=5', y(2, 5, 2), 5)
-soll('4e Tank', [leer(240, 6), 240 - 6 * 10, 10 + leer(180, 4)], [40, 180, 55])
+soll('4d Max', durch((3, 4), (5, 8)), (2, -2)); soll('4d Max b=4', y(2, 4, 3), 10)
+soll('4e Tank', [leer(240, 6), 240 - 6 * 10, 10 + leer(180, 4)], [40, 180, 55]); soll('4e Häuschen', [F(240, 40), F(10, 10), F(180, 40), F(55, 10)], [6, 1, F(9, 2), F(11, 2)])
 
 # ---- Clips: Kontrollfragen
 gerade('K1F1', 5, 80, [(0, 80), (1, 85)]); soll('K1F2', y(-3, 20, 4), 8); soll('K1F3', F(45 - 9, 6), 6)
@@ -109,8 +109,8 @@ soll('K2F1', steigung((2, 1), (5, 7)), 2); soll('K2F2', steigung((-1, 3), (1, -1
 soll('K3F1', y(F(3, 4), 1, 4), 4); falsch('K3F1 b', y(F(3, 4), 1, 3), 5)
 soll('K3F2', y(3, -1, 2), 5); soll('K3F3', F(8, 2), 4)
 gerade('K3F4 Bild', 1, -2, [(0, -2), (2, 0)])
-gerade('K4F1 Bild', 2, 1, [(0, 1), (2, 5)]); soll('K4F2', durch((1, 4), (3, 10)), (3, 1))
-soll('K4F3', leer(400, 5), 80); gerade('K4F5', -3, 600, [(0, 600), (200, 0)])
+gerade('K4F1 Bild', F(2, 3), 2, [(0, 2), (3, 4)]); falsch('K4F1 3/2x+2', y(F(3, 2), 2, 3), 4); falsch('K4F1 b=4', y(F(2, 3), 4, 0), 2); soll('K4F2', durch((1, 4), (3, 10)), (3, 1))
+soll('K4F3', leer(400, 5), 80); gerade('K4F5', -3, 450, [(0, 450), (150, 0)])
 
 soll('Clip1 abnehmend leer', F(200, 20), 10); gerade('K1F5 Kerze', -2, 24, [(0, 24), (12, 0)])
 falsch('K1F2 ohne Minus', 3 * 4 + 20, 8); falsch('K1F2 ohne x', -3 + 20, 8); soll('K1F3 Fallen', [6 * 45 + 9, F(45, 6)], [279, F(15, 2)])
@@ -123,28 +123,20 @@ falsch('K3F1 (4|3)', y(F(3, 4), 1, 4), 3); soll('K3F3 Fallen', [y(2, -8, 0), y(2
 gerade('K3F4 B', 1, -2, [(0, -2), (2, 0)]); soll('K3F4 Namen bei A(1.9|4.8), B(3.9|0.8), C(−1.6|−1) neben A, B, C', [y(1, 2, F(19, 10)) - F(48, 10), y(1, -2, F(39, 10)) - F(8, 10), y(-1, -2, F(-16, 10)) + 1], [F(-9, 10), F(11, 10), F(3, 5)])
 gerade('K3F5', -2, 3, [(0, 3), (1, 1)]); falsch('K3F5 (1|5)', y(-2, 3, 1), 5); falsch('K3F5 (2|2)', y(-2, 3, 2), 2)
 gerade('Clip4 Ablesen', F(-1, 2), 3, [(0, 3), (2, 2)])
-falsch('K4F1 1/2x+1', y(F(1, 2), 1, 2), 5); falsch('K4F2 3x+4', y(3, 4, 1), 4); falsch('K4F2 2x+2', y(2, 2, 3), 10)
+falsch('K4F2 3x+4', y(3, 4, 1), 4); falsch('K4F2 2x+2', y(2, 2, 3), 10)
 soll('K4F4', 300 - 3 * 50, 150); soll('K4F4 danach leer', 50 + leer(150, 1), 200)
 
-# ---- Gesamttest
-soll('G1', [y(-3, 12, F(5, 2)), F(-6 - 12, -3)], [F(9, 2), 6])
-gerade('G2 Akku', -6, 80, [(5, 50), (10, 20)])
-soll('G3', steigung((-1, 5), (3, -3)), -2)
-gerade('G4', F(3, 4), -2, [(0, -2), (4, 1), (8, 4)])
-soll('G5 Bild', durch((0, -2), (3, 0)), (F(2, 3), -2))
-gerade('G6 Infusion', -3, 750, [(0, 750), (250, 0)])
-soll('G7', durch((2, 1), (6, 7)), (F(3, 2), -2))
-soll('G8', [600 - 4 * 50, 50 + leer(400, 2)], [400, 250])
-# Bewertungspaket: Fehlerwerte
-soll('G1 Minus verloren', y(3, 12, F(5, 2)), F(39, 2)); soll('G1 −6 als x', y(-3, 12, -6), 30)
-soll('G2 b', y(-6, 80, 5), 50); soll('G2 Fehler', [y(80, -6, 5), y(6, 80, 5)], [394, 110]); soll('G2 c', F(80 - 20, 6), 10)
-soll('G3 gemischt', F(-3 - 5, -1 - 3), 2); soll('G3 umgedreht', F(3 - (-1), -3 - 5), F(-1, 2)); soll('G3 3−(−1)=2', F(-8, 2), -4)
-gerade('G4 Lösungsbild', F(3, 4), -2, [(-2, F(-7, 2)), (9, F(19, 4)), (4, 1)]); falsch('G4 Dreieck vertauscht', y(F(3, 4), -2, 3), 2)
-gerade('G5 Bild', F(2, 3), -2, [(-2, F(-10, 3)), (6, 2), (3, 0)])
-soll('G7 umgedreht', F(1) - F(2, 3) * 2, F(-1, 3)); soll('G7 Probe', y(F(3, 2), -2, 6), 7)
-soll('G8 neu angefangen', 50 + leer(600, 2), 350); soll('G8 Wechsel übersehen', leer(600, 4), 150)
-soll('G6 Bild in Zellen (50 min, 100 ml)', [F(750, 100), F(250, 50)], [F(15, 2), 5]); soll('G8 Bild in Zellen', [F(600, 100), F(50, 50), F(400, 100), F(250, 50)], [6, 1, 4, 5])
-soll('Punkte', 3 + 3 + 3 + 3 + 3 + 4 + 3 + 3, 25)
+# ---- Gesamttest (neue Zahlen nach der Prüfung vom 10.10.2026)
+soll('G1', [y(-3, 12, -2), F(-6 - 12, -3)], [18, 6]); soll('G1 Fehler', [F(-6 + 12), y(-3, 12, -6)], [6, 30])
+gerade('G2 Akku', -6, 80, [(0, 80), (1, 74), (2, 68), (5, 50), (10, 20)]); soll('G2 Fehler', [y(80, -6, 5), y(6, 80, 5)], [394, 110])
+soll('G3', steigung((-2, 1), (4, 4)), F(1, 2)); soll('G3 Fehler', [F(4 - 1, -2 - 4), F(4 - (-2), 4 - 1), F(3, 2)], [F(-1, 2), 2, F(3, 2)])
+gerade('G4', F(-2, 3), 3, [(0, 3), (3, 1), (6, -1), (F(9, 2), 0), (-2, F(13, 3)), (9, -3)]); falsch('G4 hinauf (3|5)', y(F(-2, 3), 3, 3), 5)
+gerade('G5 Bild', F(-3, 4), 1, [(0, 1), (4, -2), (-2, F(5, 2)), (6, F(-7, 2))])
+gerade('G6', -5, 800, [(0, 800), (160, 0)]); soll('G6 Zellen (40 min, 100 ml)', [F(160, 40), F(800, 100)], [4, 8])
+soll('G7', durch((2, -1), (6, 5)), (F(3, 2), -4)); soll('G7 Probe Q', y(F(3, 2), -4, 6), 5); soll('G7 umgedreht', F(-1) - F(2, 3) * 2, F(-7, 3))
+soll('G8', [700 - 6 * 50, 50 + leer(400, 2)], [400, 250]); soll('G8 Fehler', [50 + leer(700, 2), leer(700, 6)], [400, F(350, 3)])
+soll('G8 Zellen', [F(700, 100), F(50, 50), F(400, 100), F(250, 50)], [7, 1, 4, 5])
+soll('Punkte', 3 + 3 + 3 + 4 + 3 + 3 + 3 + 3, 25); soll('Teile', [3 + 3, 3 + 4 + 3, 3 + 3 + 3], [6, 10, 9])
 
 print('\n' + ('ALLE ZAHLEN STIMMEN' if not fehler else f'{fehler} ABWEICHUNG(EN)'))
 sys.exit(1 if fehler else 0)

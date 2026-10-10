@@ -23,3 +23,10 @@ Je Eintrag: was, wo, warum — nachgezählt.
       (10.10.2026): Gleichwertigkeit an Zufallsstellen mit Mindestzahl definierter Stellen, Lösungsweg mit dem echten Faktor,
       «geht auch»-Optionen, Erkundungen über das Ergebnis statt Reihenfolge prüfen, Probe nicht an einer Nullstelle.
       In TALS Mathe die Formel-Übungen (Formeln umstellen) auf `1/0` als Eingabe prüfen.
+
+## HOWTO §15: fünf Fehlerklassen aus der Prüfung «Lineare Funktionen» (Sek I, 10.10.2026)
+
+Was: In `HOWTO-leitprogramme.md` §15 nach «Probe nicht an einer Nullstelle eines Faktors» fünf Punkte ergänzen
+(Hilfsfunktion nur einmal definieren; Probe mit abweichendem Punkt; Sachgraphen enden bei 0; «Probe mit dem nicht
+eingesetzten Punkt»; `@…@` im Clip ist Mathematik, «|» trennt Notizzeilen). Wo: ~/tals-mathe/HOWTO-leitprogramme.md §15.
+Warum: Fehler, die im Sek-I-Leitprogramm auftraten und sich in TALS genauso einschleichen können. Nachgezählt: 5 Punkte.

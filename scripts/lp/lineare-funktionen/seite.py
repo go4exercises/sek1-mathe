@@ -142,8 +142,8 @@ fest1 = r'''      <div class="festhalten">
           <div class="titel">Anfangswert und Änderung</div>
           <p>Ein Wassertank enthält am Anfang \(200\) l, pro Minute fliessen \(15\) l dazu. Nach \(x\) Minuten sind es</p>
           <p>\[ y = 15 \cdot x + 200 \]</p>
-          <p>Allgemein: \(\;y = m \cdot x + b\;\) mit dem <b>Anfangswert</b> \(b\) (der Wert bei \(x = 0\)) und der <b>Änderung pro Einheit</b> \(m\). Nimmt der Wert ab, ist \(m\) negativ. So ein Zusammenhang heisst <b>lineare Funktion</b>, ihr Graph ist eine Gerade.</p>
-          <p>In der Wertetabelle wächst \(y\) bei jedem Schritt \(x \to x + 1\) um dasselbe \(m\): \(200,\ 215,\ 230,\ 245, \dots\)</p>
+          <p>Allgemein: \(\;y = m \cdot x + b\;\) mit dem <b>Anfangswert</b> \(b\) (der Wert bei \(x = 0\); im Graphen heisst er <b>\(y\)-Achsenabschnitt</b>) und der <b>Änderung pro Einheit</b> \(m\). Nimmt der Wert ab, ist \(m\) negativ. So ein Zusammenhang heisst <b>lineare Funktion</b>, ihr Graph ist eine Gerade.</p>
+          <p>In der Wertetabelle ändert sich \(y\) bei jedem Schritt \(x \to x + 1\) um dasselbe \(m\): \(200,\ 215,\ 230,\ 245, \dots\)</p>
           <ol class="weg">
             <li>\(y\) für \(x = 6\): \(15 \cdot 6 + 200 = 290\) <span class="warum">einsetzen</span></li>
             <li>Wann sind es \(350\) l? \(15x + 200 = 350\), \(15x = 150\), \(x = 10\) <span class="warum">Gleichung lösen</span></li>
@@ -155,11 +155,12 @@ fest1 = r'''      <div class="festhalten">
           <p><b>Probe nicht mit \(x = 1\):</b> Bei \(x = 1\) geben \(15x + 200\) und \(200x + 15\) beide \(215\). Nimm \(x = 0\) oder \(x = 2\).</p>
         </div>
       </div>'''
-auf1 = test('t1', 'Aufgaben · Kapitel 1', 14, [
-    ('1a', 3, r'Ein Velo kostet \(8\) Fr. Grundgebühr und \(3\) Fr. pro Stunde. Stelle die Gleichung auf. Was kosten \(5\) Stunden? Wie lange kannst du für \(32\) Fr. fahren?',
+auf1 = test('t1', 'Aufgaben · Kapitel 1', 15, [
+    ('1a', 3, r'Ein Velo kostet \(8\) Fr. Grundgebühr und \(3\) Fr. pro Stunde. Stelle die Gleichung auf (\(x\): Stunden, \(y\): Kosten in Fr.). Was kosten \(5\) Stunden? Wie lange kannst du für \(32\) Fr. fahren?',
      r'<p>\(y = 3x + 8\). Für \(x = 5\): \(23\) Fr. \(3x + 8 = 32\), \(3x = 24\), \(x = 8\) Stunden.</p>', ''),
-    ('1b', 2, r'Ergänze die Wertetabelle von \(y = -2x + 5\) für \(x = -1,\ 0,\ 1,\ 2,\ 3\).',
-     r'<p>\(7,\ 5,\ 3,\ 1,\ -1\). Bei jedem Schritt nach rechts wird \(y\) um \(2\) kleiner.</p>', ''),
+    ('1b', 3, r'Ergänze die Wertetabelle von \(y = -2x + 5\) für \(x = -1,\ 0,\ 1,\ 2,\ 3\) und trag die Punkte ins Koordinatensystem ein. Was fällt dir auf?',
+     r'<p>\(7,\ 5,\ 3,\ 1,\ -1\): die Punkte \((-1 \mid 7)\), \((0 \mid 5)\), \((1 \mid 3)\), \((2 \mid 1)\), \((3 \mid -1)\). Sie liegen auf einer fallenden Geraden; bei jedem Schritt nach rechts geht es \(2\) hinunter.</p>',
+     '\n            <div class=\"mini-reihe\"><svg class=\"leer-gitter\" aria-label=\"leeres Koordinatensystem zum Eintragen\"></svg></div>'),
     ('1c', 2, r'Ist der Zusammenhang linear? Tabelle 1: \(x = 0, 1, 2, 3\) und \(y = 4, 7, 10, 13\). Tabelle 2: \(x = 0, 1, 2, 3\) und \(y = 1, 2, 4, 8\).',
      r'<p>Tabelle 1: ja, immer \(+3\): \(y = 3x + 4\). Tabelle 2: nein, die Zunahme ist \(1, 2, 4\), nicht gleich.</p>', ''),
     ('1d', 2, r'Lea schreibt für «Ein Tank mit \(50\) l verliert pro Minute \(4\) l»: \(y = 50x - 4\). Prüfe mit \(x = 0\) und schreib die richtige Gleichung.',
@@ -182,8 +183,8 @@ sim2 = f'''      <figure class="sim sim-gross" id="sim2" aria-label="Steigung mi
         <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
         <svg role="img" aria-label="Gerade mit Steigungsdreieck"></svg>
         <div class="sl-row">
-          {regler('s2-dx', 'Δx nach rechts', 'orange', 1, 6, 1)}
-          {regler('s2-dy', 'Δy hinauf (+) oder hinunter (−)', 'orange', -6, 6, 1)}
+          {regler('s2-dx', 'Δx nach rechts', 'blau', 1, 6, 1)}
+          {regler('s2-dy', 'Δy hinauf (+) oder hinunter (−)', 'blau', -6, 6, 1)}
         </div>
       </figure>'''
 fest2 = r'''      <div class="festhalten">
@@ -248,7 +249,7 @@ fest3 = r'''      <div class="festhalten">
           </ol>
           <p>Ebenso gut: eine Wertetabelle mit zwei Werten von \(x\).</p>
           <p><b>Punktprobe:</b> Liegt \(P(6 \mid 3)\) auf der Geraden? \(\tfrac{2}{3} \cdot 6 - 1 = 3\): ja.</p>
-          <p><b>Nullstelle</b> (Schnitt mit der \(x\)-Achse): \(y = 0\) setzen, \(\tfrac{2}{3}x - 1 = 0\), \(x = 1.5\).</p>
+          <p><b>Nullstelle</b> (Schnitt mit der \(x\)-Achse): \(y = 0\) setzen, \(\tfrac{2}{3}x - 1 = 0\), also \(\tfrac{2}{3}x = 1\). Mal \(3\): \(2x = 3\), durch \(2\): \(x = 1.5\). Eine waagrechte Gerade (\(m = 0\), \(b \neq 0\)) hat keine Nullstelle.</p>
         </div>
         <div class="warn">
           <div class="titel">Häufiger Fehler</div>
@@ -289,7 +290,7 @@ sim4 = f'''      <figure class="sim sim-gross" id="sim4" aria-label="Infusion: I
         </div>
         <div class="sl-row">
           {regler('s4-T', 'Wechsel nach', 'grau', 0, 400, 400).replace('step="1"', 'step="10"')}
-          {regler('s4-r2', 'Rate danach', 'orange', 1, 10, 2)}
+          {regler('s4-r2', 'Rate danach', 'blau', 1, 10, 2)}
         </div>
         <div class="sl-row">
           {regler('s4-t', 'Zeit t', 'gruen', 0, 400, 0).replace('step="1"', 'step="10"')}
@@ -314,17 +315,17 @@ fest4 = r'''      <div class="festhalten">
           <p><b>Nach dem Wechsel neu angefangen:</b> Wer nach \(100\) Minuten wieder bei \(500\) ml beginnt, lässt den Graphen springen. Der Inhalt ändert sich beim Umstellen nicht.</p>
         </div>
       </div>'''
-auf4 = test('t4', 'Aufgaben · Kapitel 4', 15, [
+auf4 = test('t4', 'Aufgaben · Kapitel 4', 16, [
     ('4a', 3, r'Stelle die Gleichung der abgebildeten Geraden auf.',
      r'<p>Sie schneidet die \(y\)-Achse bei \(-2\), also \(b = -2\). Von \((0 \mid -2)\) nach \((4 \mid 0)\): \(m = \dfrac{2}{4} = \dfrac{1}{2}\). \(y = \tfrac{1}{2}x - 2\).</p>', bild('1/2,-2', '0,-2;4,0', 'Gerade durch (0 | −2) und (4 | 0)')),
     ('4b', 2, r'Gerade durch \(A(1 \mid 3)\) und \(B(3 \mid 7)\): Gleichung?',
      r'<p>\(m = \dfrac{7 - 3}{3 - 1} = 2\); \(3 = 2 \cdot 1 + b\), \(b = 1\). \(y = 2x + 1\).</p>', ''),
     ('4c', 3, r'Gerade durch \(C(-2 \mid 6)\) und \(D(4 \mid 3)\): Gleichung?',
      r'<p>\(m = \dfrac{3 - 6}{4 - (-2)} = \dfrac{-3}{6} = -\dfrac{1}{2}\); \(3 = -\tfrac{1}{2} \cdot 4 + b\), \(b = 5\). \(y = -\tfrac{1}{2}x + 5\).</p>', ''),
-    ('4d', 2, r'Max bestimmt die Gerade durch \(P(2 \mid 5)\) und \(Q(4 \mid 9)\): «\(m = 2\), \(b = 5\)». Prüfe mit \(P\) und korrigiere.',
-     r'<p>Mit \(x = 2\) gibt \(y = 2x + 5\) den Wert \(9\), nicht \(5\). Max hat den \(y\)-Wert von \(P\) als \(b\) genommen. Richtig: \(5 = 2 \cdot 2 + b\), \(b = 1\), \(y = 2x + 1\).</p>', ''),
-    ('4e', 3, r'Ein Gartentank enthält \(240\) l, die Pumpe fördert \(6\) l pro Minute. Gleichung? Wann ist er leer? Nach \(10\) Minuten wird auf \(4\) l pro Minute gedrosselt: Wann ist er jetzt leer?',
-     r'<p>\(V = -6t + 240\), leer nach \(40\) Minuten. Mit Drosselung: Nach \(10\) Minuten sind \(180\) l übrig, \(180 : 4 = 45\), leer nach \(55\) Minuten.</p>', ''),
+    ('4d', 2, r'Max bestimmt die Gerade durch \(P(3 \mid 4)\) und \(Q(5 \mid 8)\): «\(m = 2\), \(b = 4\)». Prüfe mit \(P\) und korrigiere.',
+     r'<p>Mit \(x = 3\) gibt \(y = 2x + 4\) den Wert \(10\), nicht \(4\). Max hat den \(y\)-Wert von \(P\) als \(b\) genommen. Richtig: \(4 = 2 \cdot 3 + b\), \(b = -2\), \(y = 2x - 2\).</p>', ''),
+    ('4e', 4, r'Ein Gartentank enthält \(240\) l, eine Pumpe pumpt \(6\) l pro Minute ab. (a) Gleichung? Was bedeuten \(-6\) und \(240\)? (b) Wann ist er leer? (c) Nach \(10\) Minuten wird auf \(4\) l pro Minute gedrosselt: Wann ist er jetzt leer? (d) Zeichne den Graphen von (c) auf Häuschenpapier: \(1\) Häuschen für \(10\) min nach rechts und für \(40\) l nach oben.',
+     r'<p>(a) \(V = -6t + 240\): \(240\) l sind am Anfang drin, \(-6\) heisst: pro Minute \(6\) l weniger. (b) \(-6t + 240 = 0\), leer nach \(40\) Minuten. (c) Nach \(10\) Minuten sind \(180\) l übrig, \(180 : 4 = 45\), leer nach \(55\) Minuten. (d) Strecke von \((0 \mid 240)\) bis \((10 \mid 180)\), dann flacher bis \((55 \mid 0)\): ein Knick bei \((10 \mid 180)\), kein Sprung. In Häuschen: von \((0 \mid 6)\) über \((1 \mid 4.5)\) nach \((5.5 \mid 0)\).</p>', ''),
     ('4f', 2, r'Warum springt der Graph beim Wechsel der Rate nicht?',
      r'<p>Beim Umstellen ändert sich nur, wie schnell es weiterläuft. Was im Beutel ist, bleibt im Moment des Wechsels gleich. Darum beginnt das neue Stück dort, wo das alte aufhört.</p>', ''),
 ])
@@ -340,7 +341,7 @@ k0 = f'''
     <section class="kap" id="k0">
       <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen</span><span class="zeit">≈ 10 min</span></div>
       <h2 id="vorwissen">Vorwissen</h2>
-      <p class="ziel">Koordinaten, Einsetzen, einfache Gleichungen, Brüche mit Minus. Zuerst kurz wiederholen, dann der Vortest.</p>
+      <p class="ziel">Koordinaten, Einsetzen, einfache Gleichungen, Brüche mit Minus, Bruch mal Zahl. Zuerst kurz wiederholen, dann der Vortest.</p>
 ''' + r'''      <details class="anleitung">
         <summary><h3>Kurz wiederholt</h3></summary>
         <ul class="kurz">
@@ -348,21 +349,24 @@ k0 = f'''
           <li><b>Einsetzen:</b> Für \(x = 2\) ist \(5x - 3 = 7\).</li>
           <li><b>Gleichung lösen:</b> \(2x + 3 = 11\) gibt \(2x = 8\), \(x = 4\).</li>
           <li><b>Brüche mit Minus:</b> \(\dfrac{-6}{3} = -2\) und \(\dfrac{-4}{-2} = 2\).</li>
+          <li><b>Bruch mal Zahl:</b> \(\tfrac{2}{3} \cdot 6 = \tfrac{12}{3} = 4\). Und \(\tfrac{2}{3}x = 4\) löst du mit «mal \(3\), durch \(2\)»: \(2x = 12\), \(x = 6\).</li>
         </ul>
       </details>
-''' + test('t0', 'Vortest', 10, [
+''' + test('t0', 'Vortest', 12, [
     ('0a', 2, r'Lies die Koordinaten der beiden Punkte ab.',
      r'<p>\((3 \mid 2)\) und \((-2 \mid -4)\).</p>', bild('', '3,2;-2,-4', 'Zwei Punkte im Koordinatensystem')),
     ('0b', 2, r'Setze ein: \(y = 4x - 7\) für \(x = 3\) und für \(x = -2\).',
      r'<p>\(5\) und \(-15\).</p>', ''),
     ('0c', 2, r'Löse: \(3x + 6 = 0\) und \(5x - 4 = 11\).',
      r'<p>\(x = -2\) und \(x = 3\).</p>', ''),
-    ('0d', 2, r'Berechne: \(\dfrac{7 - 1}{5 - 2}\) und \(\dfrac{2 - 8}{4 - 1}\).',
+    ('0d', 2, r'Berechne: \(\dfrac{9 - 1}{6 - 2}\) und \(\dfrac{2 - 8}{4 - 1}\).',
      r'<p>\(2\) und \(-2\).</p><p class="komm">So berechnest du in Kapitel 2 die Steigung.</p>', ''),
     ('0e', 2, r'Ein Liter kostet \(2\) Fr. Fülle die Tabelle: \(0, 1, 2, 3\) Liter kosten …',
      r'<p>\(0,\ 2,\ 4,\ 6\) Fr. Bei jedem Liter mehr kommen \(2\) Fr. dazu.</p>', ''),
+    ('0f', 2, r'Berechne \(\tfrac{3}{4} \cdot 8\) und löse \(\tfrac{3}{4}x = 6\).',
+     r'<p>\(6\) und \(x = 8\) (mal \(4\): \(3x = 24\), durch \(3\)).</p><p class=\"komm\">Das brauchst du ab Kapitel 3.</p>', ''),
 ]) + '''
-      <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen und die Lösungen nachrechnen; Gleichungen übst du im Leitprogramm «Bruchterme, Gleichungen und Formeln».</p>
+      <p class="komm">Weniger als 8 von 12 Punkten: «Kurz wiederholt» nochmals lesen und die Lösungen nachrechnen; Gleichungen übst du im Leitprogramm «Bruchterme, Gleichungen und Formeln».</p>
     </section>'''
 
 # ------------------------------------------------------------------ Gesamttest
@@ -385,7 +389,7 @@ gt = f'''
           <b>Selbsteinschätzung</b>
           <table>
             <tr><td>22 – 25 P</td><td>Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals (Zuordnung unten).</td></tr>
-            <tr><td>17 – 21 P</td><td>Den schwächsten Teil nochmals, gemessen am Anteil (Teil A 6, B 9, C 10 P): Tüfteln und Übungen der Kapitel dieses Teils.</td></tr>
+            <tr><td>17 – 21 P</td><td>Den schwächsten Teil nochmals, gemessen am Anteil (Teil A 6, B 10, C 9 P): Tüfteln und Übungen der Kapitel dieses Teils.</td></tr>
             <tr><td>11 – 16 P</td><td>Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.</td></tr>
             <tr><td>0 – 10 P</td><td>Zurück zu den Kapiteln jedes Teils, in dem du weniger als die Hälfte erreicht hast; sind es alle drei, zum Vortest und zu Kapitel 1.</td></tr>
           </table>

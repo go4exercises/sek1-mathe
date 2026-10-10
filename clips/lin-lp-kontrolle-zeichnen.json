@@ -720,12 +720,12 @@
    "rueck": {
     "0": "Ja.",
     "1": "m ist negativ: Es geht hinunter, nicht hinauf.",
-    "2": "m = −2 heisst 1 nach rechts und 2 hinunter."
+    "2": "Wie weit gehst du nach rechts, wenn der Nenner von m gleich 1 ist?"
    },
    "sprich": "y gleich minus zwei x plus drei. Start bei null, drei. Zu welchem Punkt führt das Steigungsdreieck?",
    "rueck_sprich": {
     "1": "m ist negativ: Es geht hinunter, nicht hinauf.",
-    "2": "m gleich minus zwei heisst eins nach rechts und zwei hinunter."
+    "2": "Wie weit gehst du nach rechts, wenn der Nenner von m gleich eins ist?"
    }
   }
  ]

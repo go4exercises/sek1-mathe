@@ -3,8 +3,8 @@
 `leitprogramme/lineare-funktionen.html`, gebaut mit `scripts/lp/lineare-funktionen/` (README dort), nach
 `~/TODO-BM-Vorkurs-LP03-15.md` §2 (Lineare Funktionen I).
 
-- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/lineare-funktionen.html` (Abschnitt unten).
-- [x] Registriert (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex).
+- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/lineare-funktionen.html` (Abschnitt unten, behoben).
+- [x] Freigeschaltet (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex, Sitemap).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Zeichnungen G4, G6, G8).
 - [ ] 🔑 Hörprobe der acht Clips `lin-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
       «m» (Whisper schreibt oft «n»), «Geraden» (Whisper: «Graben»), «y» als «Ypsilon», «delta y».
@@ -15,47 +15,55 @@
 Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `ae97ad1`. HOCH-Befunde
 an der Quelle nachgeprüft und bestätigt. Legende wie oben; Neuvertonung nötig: 🔊.
 
+**Behoben am 10.10.2026** (alles ausser der Hörprobe): `zeigeWert` einmal, Probe mit abweichendem Punkt, Sim 4 ohne Leerzeit,
+Farben vereinheitlicht (m und Raten blau, b orange, Dreieck neutral), Gesamttest mit neuen Zahlen (G1, G3–G8; G4 mit Nullstelle,
+Teile 6/10/9), Raster (Probe mit dem anderen Punkt, Folgezeilen, Prozentpunkte), 1b mit Gitter, 4d/4e neu (Deutung, Zeichnung),
+Bruch mal Zahl in «Kurz wiederholt» und Vortest 0f, y-Achsenabschnitt, Nullstelle mit Schritt und m ≠ 0, Minigraphen voll
+beschriftet, m = 0 in den Übungen, Kontrollfragen K4F1 und K4F5 neu vertont. HOWTO §15 um fünf Fehlerklassen ergänzt.
+Offen gelassen: Vertiefung Kapitel 4 bleibt der Link aufs lange TALS-Leitprogramm (Vorgabe §2); «Δx = 2» auf der y-Achse (K2F2)
+und der Dreiecksschenkel über der Achsenzahl (Clip zeichnen) — beide lesbar.
+
 Rechenfehler: keine — alle Zahlen von Seite, Clips und PDFs samt Fehlerwerten nachgerechnet.
 Als korrekt geprüft: Fragen aller acht Clips (`pruef-fragen`), Fragebilder, Geraden und Steigungsdreiecke gegen Formel und
 Ton, Knick der Infusion, Leistenziele (Raster, nicht im Start erfüllt), Zufallsübungen samt Sonderwerten, Punktesummen,
 TikZ-Koordinaten, Selbsteinschätzung, Datenschutz, Konventionen, TALS-Anker.
 
 ### HOCH
-- [ ] **`zeigeWert` doppelt** in seite.js (Z. 91 und 312): Die zweite Fassung gewinnt, alle Reglerwerte ohne Einheit (Sim 1, 4).
-- [ ] **Übung `zweipunkte`, Probe-Satz** prüft immer mit B: «gibt bei x = 3 den Wert 7, nicht 7». Mit dem abweichenden Punkt prüfen.
-- [ ] **Sim 4, Live-Zeile** zeigt «leer nach … min» und den grünen Leerpunkt: verrät Leiste 1, 3, 5. Aufgaben 3 und 5 nennen
+- [x] **`zeigeWert` doppelt** in seite.js (Z. 91 und 312): Die zweite Fassung gewinnt, alle Reglerwerte ohne Einheit (Sim 1, 4).
+- [x] **Übung `zweipunkte`, Probe-Satz** prüft immer mit B: «gibt bei x = 3 den Wert 7, nicht 7». Mit dem abweichenden Punkt prüfen.
+- [x] **Sim 4, Live-Zeile** zeigt «leer nach … min» und den grünen Leerpunkt: verrät Leiste 1, 3, 5. Aufgaben 3 und 5 nennen
       den Zeitregler nicht.
-- [ ] **Sim 2, Aufgabe 4** «Fallend und flach» bei m = −3/2 (steiler als −1).
-- [ ] **Gesamttest wiederholt Kapitelaufgaben:** G3 ≈ 2b (gleiches Δx, Δy, m = −2, gleiche Frage), G5 ≈ 4a (b = −2, Nullstelle),
+- [x] **Sim 2, Aufgabe 4** «Fallend und flach» bei m = −3/2 (steiler als −1).
+- [x] **Gesamttest wiederholt Kapitelaufgaben:** G3 ≈ 2b (gleiches Δx, Δy, m = −2, gleiche Frage), G5 ≈ 4a (b = −2, Nullstelle),
       G7 mit Q(6 | 7) aus Festhalten 4; G6, G8 und Festhalten 4 alle «leer nach 250».
-- [ ] 🔊 **Clip gleichung, Szene Fehler:** Anker `@Wert` trifft «y-Wert», Notiz 4 s zu früh.
-- [ ] 🔊 **Kontrolle-gleichung F1 = 4d** (y = 2x + 1, Fehler b = 5); 4d wiederholt Festhalten-Fehler bei P(2 | 5).
+- [x] 🔊 **Clip gleichung, Szene Fehler:** Anker `@Wert` trifft «y-Wert», Notiz 4 s zu früh.
+- [x] 🔊 **Kontrolle-gleichung F1 = 4d** (y = 2x + 1, Fehler b = 5); 4d wiederholt Festhalten-Fehler bei P(2 | 5).
 
 ### MITTEL
-- [ ] **G6c, G8c Sachgraph zeichnen** (skaliertes Gitter, Knick) nirgends geübt → 4e um eine Zeichnung ergänzen.
-- [ ] **Raster:** G4 «mit Steigungsdreieck» gegen «Wertetabelle zählt»; G7 «Probe mit Q» leer, wenn Q eingesetzt wurde;
+- [x] **G6c, G8c Sachgraph zeichnen** (skaliertes Gitter, Knick) nirgends geübt → 4e um eine Zeichnung ergänzen.
+- [x] **Raster:** G4 «mit Steigungsdreieck» gegen «Wertetabelle zählt»; G7 «Probe mit Q» leer, wenn Q eingesetzt wurde;
       G8(b) und G2(c) als (E) obwohl aus eigenem Zwischenwert; G2 «verliert 6 %» mehrdeutig (Prozentpunkte).
-- [ ] **Farben:** Sim 1 Punkt b grün, Differenzzeile orange (ist m); Δ-Regler Sim 2 orange, Sim 3 blau; Sim 4 «Rate danach»
+- [x] **Farben:** Sim 1 Punkt b grün, Differenzzeile orange (ist m); Δ-Regler Sim 2 orange, Sim 3 blau; Sim 4 «Rate danach»
       orange; `akz-grau` undefiniert; Steigungsdreieck Seite orange, Clips Tinte; Clip steigung Q orange.
-- [ ] **Bruchrechnen ab Kapitel 3** (⅔x = 1, ½ · 2 + b) weder in «Kurz wiederholt» noch im Vortest; Zwischenschritt fehlt.
-- [ ] **Kapitel 1 ohne Aufgabe am Graphen** (HOWTO §9).
-- [ ] **Minigraphen** beschriften nur ±2, ±4: Übung `gleichung` (b ungerade, keine Punkte), 0a, 2c schwer ablesbar.
-- [ ] **Sim 1 und Clips mit negativen Grössen:** Tabelle −20 l; Kerze und −20x + 200 als ganze Gerade unter 0.
-- [ ] **«y-Achsenabschnitt»** nie eingeführt; Nullstelle ohne «m ≠ 0».
-- [ ] **Deutung Gleichung → Sachverhalt** (Vorgabe §2 «erklären») nicht geübt → Teilfrage in 4e.
-- [ ] **m = 0** kommt in keiner Zufallsübung vor.
+- [x] **Bruchrechnen ab Kapitel 3** (⅔x = 1, ½ · 2 + b) weder in «Kurz wiederholt» noch im Vortest; Zwischenschritt fehlt.
+- [x] **Kapitel 1 ohne Aufgabe am Graphen** (HOWTO §9).
+- [x] **Minigraphen** beschriften nur ±2, ±4: Übung `gleichung` (b ungerade, keine Punkte), 0a, 2c schwer ablesbar.
+- [x] **Sim 1 und Clips mit negativen Grössen:** Tabelle −20 l; Kerze und −20x + 200 als ganze Gerade unter 0.
+- [x] **«y-Achsenabschnitt»** nie eingeführt; Nullstelle ohne «m ≠ 0».
+- [x] **Deutung Gleichung → Sachverhalt** (Vorgabe §2 «erklären») nicht geübt → Teilfrage in 4e.
+- [x] **m = 0** kommt in keiner Zufallsübung vor.
 
 ### NIEDRIG
-- [ ] Festhalten 1 «wächst um m» → «ändert sich um m»; 4e «fördert» → «pumpt ab»; 1a Variablen nennen.
-- [ ] Übung `wert`: Tipp «1x = …» bei m = ±1; `kontext` «(x: t [min])», tautologischer Rückfall; `zeichnen` gleicher Punkt
+- [x] Festhalten 1 «wächst um m» → «ändert sich um m»; 4e «fördert» → «pumpt ab»; 1a Variablen nennen.
+- [x] Übung `wert`: Tipp «1x = …» bei m = ±1; `kontext` «(x: t [min])», tautologischer Rückfall; `zeichnen` gleicher Punkt
       zweimal → «senkrecht»; Sperrliste ohne 4d-Paar (2 | 5), (4 | 9).
-- [ ] Sim 3, Aufgabe 3 «parallel» nicht eingeführt.
-- [ ] Clips: Merkbild Malpunkt als Trenner; angezeigt «(0 | 0)» gesprochen «Ursprung»; zwei Rückmeldungen nennen fast die Lösung;
+- [x] Sim 3, Aufgabe 3 «parallel» nicht eingeführt.
+- [x] Clips: Merkbild Malpunkt als Trenner; angezeigt «(0 | 0)» gesprochen «Ursprung»; zwei Rückmeldungen nennen fast die Lösung;
       P(6 | 3) schon grün vor der Rechnung; Tabelle in «Tabelle» ganz vor dem Sprechen; «200l» ohne Leerzeichen (`@…@`);
       Dreiecksschenkel über Achsenzahl, «Δx = 2» auf der y-Achse; Merkbild zeichnen ohne Nullstelle; gesprochene Punkte
       uneinheitlich («eins, vier und drei, zehn»); K2F1 = Vortest 0d; K4F5 ≈ Sim 4.2.
-- [ ] PDF: G5-Punkte verdecken Achsenzahlen; Dreieck im Paket grau; G1a Dezimalzahl nicht geübt; G6 Toleranz bei 750.
-- [ ] Vertiefung Kapitel 4 auf das lange LP statt auf eine Themenseite (Vorgabe §2 verlangt den LP-Link — bleibt, Themenseite dazu).
+- [x] PDF: G5-Punkte verdecken Achsenzahlen; Dreieck im Paket grau; G1a Dezimalzahl nicht geübt; G6 Toleranz bei 750.
+- [x] Vertiefung Kapitel 4 auf das lange LP statt auf eine Themenseite (Vorgabe §2 verlangt den LP-Link — bleibt, Themenseite dazu).
 
 ## Leitprogramm Bruchterme, Gleichungen und Formeln (10.10.2026)
 

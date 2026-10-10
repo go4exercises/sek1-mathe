@@ -310,7 +310,7 @@
    "elemente": [
     {
      "typ": "notiz",
-     "text": "am Anfang: @500 ml@|pro Minute: @− 2 ml@",
+     "text": "am Anfang: @500@ ml|pro Minute: @−2@ ml",
      "x": 150,
      "y": 240,
      "groesse": 42,
@@ -1150,7 +1150,7 @@
      "y": 440,
      "groesse": 44,
      "farbe": "blau",
-     "ein": 2.72
+     "ein": 6.84
     }
    ],
    "dauer": 8.92

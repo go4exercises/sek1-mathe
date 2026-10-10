@@ -297,7 +297,7 @@
       {
        "x": 4,
        "y": 8,
-       "farbe": 2,
+       "farbe": 5,
        "anker": "start",
        "beschriftung": "Q(4 | 8)",
        "beschriftung_bei": [

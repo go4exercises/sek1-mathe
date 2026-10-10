@@ -1,7 +1,8 @@
 % Gesamttest «Lineare Funktionen» — Quelle des PDFs (python3 scripts/build-lp-pdf.py lineare-funktionen).
 % Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/lineare-funktionen/zahlen.py).
 % Selbstcheck nach ~/TODO-BM-Vorkurs-LP03-15.md §2: zwei Wechsel Graph/Gleichung (G4 zeichnen, G5 ablesen) und
-% Sachaufgaben mit der Infusion als Prüfungsanker (G6, G8). 25 Punkte, rund 30 Minuten.
+% Sachaufgaben mit der Infusion als Prüfungsanker (G6, G8). 25 Punkte, rund 30 Minuten. Nach der Prüfung vom 10.10.2026:
+% neue Zahlen in G1, G3 bis G8 (keine Wiederholung von Kapitelaufgaben), G4 mit Nullstelle (K3), G2 in Prozentpunkten.
 \documentclass[11pt]{article}
 \usepackage{../lp-druck}
 \usepackage{lf-gitter}
@@ -26,14 +27,14 @@ Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt die
 \begin{lpaufgabe}{G1}{Werte}{3 P}
 Gegeben ist $\;y = -3x + 12$.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
-\item Berechne $y$ für $x = 2.5$.
+\item Berechne $y$ für $x = -2$.
 \item Für welches $x$ ist $y = -6$?
 \end{enumerate}
 \lpplatz{4}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G2}{Akku}{3 P}
-Ein Handyakku ist zu $80\,\%$ geladen. Pro Stunde Videoschauen verliert er $6\,\%$.
+Ein Handyakku zeigt $80\,\%$. Pro Stunde Videoschauen sinkt die Anzeige um $6$ Prozentpunkte (auf $74\,\%$, dann $68\,\%$, \dots).
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Schreib eine Gleichung für den Ladestand $y$ (in Prozent) nach $x$ Stunden.
 \item Wie voll ist der Akku nach $5$ Stunden?
@@ -42,15 +43,15 @@ Ein Handyakku ist zu $80\,\%$ geladen. Pro Stunde Videoschauen verliert er $6\,\
 \lpplatz{5}
 \end{lpaufgabe}
 
-\lpteil{Teil B · Steigung, Graph und Gleichung}{Kapitel 2 bis 4 · 9 Punkte}
+\lpteil{Teil B · Steigung, Graph und Gleichung}{Kapitel 2 bis 4 · 10 Punkte}
 
 \begin{lpaufgabe}{G3}{Steigung}{3 P}
-Berechne die Steigung der Geraden durch $A(-1 \mid 5)$ und $B(3 \mid -3)$. Steigt oder fällt die Gerade?
+Berechne die Steigung der Geraden durch $A(-2 \mid 1)$ und $B(4 \mid 4)$. Steigt oder fällt die Gerade?
 \lpplatz{3}
 \end{lpaufgabe}
 
-\begin{lpaufgabe}{G4}{Zeichnen}{3 P}
-Zeichne die Gerade $\;y = \tfrac{3}{4}x - 2\;$ mit dem Steigungsdreieck. Liegt $P(8 \mid 4)$ auf der Geraden? Rechne nach.
+\begin{lpaufgabe}{G4}{Zeichnen}{4 P}
+Zeichne die Gerade $\;y = -\tfrac{2}{3}x + 3$. Liegt $P(6 \mid -1)$ auf der Geraden? Wo schneidet die Gerade die $x$-Achse? Rechne beides nach.
 
 \smallskip
 \begin{minipage}[t]{0.55\linewidth}\vspace{0pt}
@@ -66,18 +67,18 @@ Stelle die Gleichung der abgebildeten Geraden auf. Die beiden Punkte liegen auf 
 
 \smallskip
 \begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
-\gitter{-2}{6}{-4}{4}{\draw[lpblau,line width=1.2pt] (-2,-10/3) -- (6,2);
-  \fill (0,-2) circle (2.2pt); \fill (3,0) circle (2.2pt);}
+\gitter{-2}{6}{-4}{4}{\draw[lpblau,line width=1.2pt] (-2,2.5) -- (6,-3.5);
+  \fill (0,1) circle (2.2pt); \fill (4,-2) circle (2.2pt);}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
 \lpplatz{6}
 \end{minipage}
 \end{lpaufgabe}
 
-\lpteil{Teil C · Gleichung aufstellen}{Kapitel 4 · 10 Punkte}
+\lpteil{Teil C · Gleichung aufstellen}{Kapitel 4 · 9 Punkte}
 
-\begin{lpaufgabe}{G6}{Infusion}{4 P}
-Ein Infusionsbeutel enthält $750$ ml. Die Infusion läuft mit $3$ ml pro Minute.
+\begin{lpaufgabe}{G6}{Infusion}{3 P}
+Ein Infusionsbeutel enthält $800$ ml. Die Infusion läuft mit $5$ ml pro Minute.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Schreib eine Gleichung für den Inhalt $V$ (in ml) nach $t$ Minuten.
 \item Nach wie vielen Minuten ist der Beutel leer?
@@ -86,7 +87,7 @@ Ein Infusionsbeutel enthält $750$ ml. Die Infusion läuft mit $3$ ml pro Minute
 
 \smallskip
 \begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
-\sachgitter{6}{8}{50}{100}{}
+\sachgitter{6}{8}{40}{100}{}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.47\linewidth}\vspace{0pt}
 \lpplatz{7}
@@ -94,12 +95,12 @@ Ein Infusionsbeutel enthält $750$ ml. Die Infusion läuft mit $3$ ml pro Minute
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G7}{Zwei Punkte}{3 P}
-Bestimme die Gleichung der Geraden durch $P(2 \mid 1)$ und $Q(6 \mid 7)$ und mach die Probe mit $Q$.
+Bestimme die Gleichung der Geraden durch $P(2 \mid -1)$ und $Q(6 \mid 5)$. Mach die Probe mit dem Punkt, den du nicht eingesetzt hast.
 \lpplatz{5}
 \end{lpaufgabe}
 
 \begin{lpaufgabe}{G8}{Neue Rate}{3 P}
-Ein Beutel enthält $600$ ml und läuft mit $4$ ml pro Minute. Nach $50$ Minuten wird auf $2$ ml pro Minute gestellt.
+Ein Beutel enthält $700$ ml und läuft mit $6$ ml pro Minute. Nach $50$ Minuten wird auf $2$ ml pro Minute gestellt.
 \begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
 \item Wie viel ist beim Umstellen noch im Beutel?
 \item Nach wie vielen Minuten (ab Beginn) ist er leer?

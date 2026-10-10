@@ -86,9 +86,9 @@
       zuWert: function(px, py){ return [x0 + px / W * (x1 - x0), y0 + (H - py) / H * (y1 - y0)]; }
     };
   }
-  var GITTER = { w: 280, h: 280, rl: 18, x0: -7, x1: 7, y0: -7, y1: 7, xm: [-6, -4, -2, 2, 4, 6], ym: [-6, -4, -2, 2, 4, 6] };
+  var GITTER = { w: 280, h: 280, rl: 18, x0: -7, x1: 7, y0: -7, y1: 7, xm: [-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6], ym: [-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6] };
   function wertR(fig, id){ return +fig.querySelector('#' + id).value; }
-  function zeigeWert(fig, id, txt){ var i = fig.querySelector('#' + id); var v = i.parentNode.querySelector('.sl-val'); if (v) v.textContent = txt != null ? txt : z(+i.value); }
+  function zeigeWert(fig, id, txt){ var i = fig.querySelector('#' + id); var v = i.parentNode.querySelector('.sl-val'); if (v) v.textContent = txt != null ? txt : mz(+i.value); }   /* einmal definiert: eine zweite Fassung ohne txt überschrieb die Einheiten (Prüfung 10.10.2026) */
   /* y = m·x + b als HTML-Text (Live-Anzeige ohne MathJax); m als Bruch [z, n] oder Zahl */
   function linTxt(m, b, xn, yn){
     xn = xn || 'x'; yn = yn || 'y';
@@ -123,10 +123,10 @@
       var Z = zustand(); zeigeWert(fig, 's1-b', Z.b + ' l'); zeigeWert(fig, 's1-m', z(Z.m) + ' l/min');
       var k = Achsen(svg, F1);
       k.gerade(Z.m, Z.b, 'linie blau', 0, 10);
-      for (var t = 0; t <= 5; t++) k.punkt(t, Z.m * t + Z.b, 'pkt orange');
-      k.punkt(0, Z.b, 'pkt gruen', 'b = ' + Z.b, 8, -8);
+      for (var t = 1; t <= 5; t++) if (Z.m * t + Z.b >= 0) k.punkt(t, Z.m * t + Z.b, 'pkt');
+      k.punkt(0, Z.b, 'pkt orange', 'b = ' + Z.b, 8, -8);
       var h = '<tr><th>t [min]</th>', w = '<tr><th>V [l]</th>';
-      for (t = 0; t <= 5; t++){ h += '<td>' + t + '</td>'; w += '<td>' + z(Z.m * t + Z.b) + '</td>'; }
+      for (t = 0; t <= 5; t++){ h += '<td>' + t + '</td>'; w += '<td>' + (Z.m * t + Z.b < 0 ? 'leer' : z(Z.m * t + Z.b)) + '</td>'; }   /* nie negative Liter (Prüfung 10.10.2026) */
       tab.innerHTML = h + '</tr>' + w + '</tr><tr><th></th>' + [1, 2, 3, 4, 5].map(function(){ return '<td class="dif">' + (Z.m >= 0 ? '+' : '−') + Math.abs(Z.m) + '</td>'; }).join('').replace(/^/, '<td></td>') + '</tr>';
       formel.innerHTML = linTxt(Z.m, Z.b, 't', 'V') + ' <span class="grau">(Anfangswert ' + Z.b + ' l, Änderung ' + z(Z.m) + ' l pro Minute)</span>';
       if (pr) pr();
@@ -157,15 +157,15 @@
       k.strecke(xa, ya, xa + Z.dx, ya, 'dreieck dx'); k.strecke(xa + Z.dx, ya, xa + Z.dx, ya + Z.dy, 'dreieck dy');
       k.strecke(xa, ya, xa + Z.dx, ya + Z.dy, 'dreieck hyp' + (trifft ? ' ok' : ''));
       k.punkt(xa, ya, 'pkt'); k.punkt(xa + Z.dx, ya + Z.dy, trifft ? 'pkt gruen' : 'pkt rot');
-      k.text(xa + Z.dx / 2, ya - (Z.dy >= 0 ? 0.55 : -0.95), 'Δx = ' + Z.dx, 'orange');
-      k.text(xa + Z.dx + 0.25, ya + Z.dy / 2, 'Δy = ' + z(Z.dy), 'orange', 'start');
+      k.text(xa + Z.dx / 2, ya - (Z.dy >= 0 ? 0.55 : -0.95), 'Δx = ' + Z.dx, '');
+      k.text(xa + Z.dx + 0.25, ya + Z.dy / 2, 'Δy = ' + z(Z.dy), '', 'start');
       formel.innerHTML = trifft ? 'Die Spitze liegt auf der Geraden: <span class="ok-text">m = Δy / Δx = ' + z(Z.dy) + ' / ' + Z.dx + ' = ' + z(Z.dy / Z.dx) + '</span>'
                                 : '<span class="grau">Die Spitze liegt noch nicht auf der Geraden.</span>';
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
     var texte = ['Miss die Steigung: Die Spitze des Dreiecks soll auf der Geraden liegen.', 'Diese Gerade fällt. Welches Vorzeichen bekommt Δy?',
-                 'Hier passt Δx = 1 nicht genau. Probier ein grösseres Δx.', 'Fallend und flach: Wie weit nach rechts für ganze Kästchen?', 'Eine waagrechte Gerade: Was ist Δy?'];
+                 'Hier passt Δx = 1 nicht genau. Probier ein grösseres Δx.', 'Wieder fallend, und Δx = 1 passt nicht: Wie weit nach rechts für ganze Kästchen?', 'Eine waagrechte Gerade: Was ist Δy?'];
     pr = Leiste(fig, ZIELE.map(function(g, i){
       return { text: texte[i], setup: function(){ G = g; }, ok: function(Z){ return Z.dy * g[0][1] === g[0][0] * Z.dx; } };
     }), sim);
@@ -181,7 +181,7 @@
     var AUFG = [
       { text: 'Lass die Gerade durch \\((0 \\mid 2)\\) laufen und steigen: pro Schritt nach rechts 3 nach oben.', p: [[0, 2]], ok: function(Z){ return Z.b === 2 && Z.m === 3; } },
       { text: 'Stell die Gerade durch \\((0 \\mid -1)\\) und \\((2 \\mid 3)\\) ein.', p: [[0, -1], [2, 3]], ok: function(Z){ return Z.b === -1 && Z.m === 2; } },
-      { text: 'Parallel zu \\(y = x\\), aber durch \\((0 \\mid 3)\\).', p: [[0, 3]], hilf: [1, 0], ok: function(Z){ return Z.b === 3 && Z.m === 1; } },
+      { text: 'Dieselbe Steigung wie \\(y = x\\), aber durch \\((0 \\mid 3)\\).', p: [[0, 3]], hilf: [1, 0], ok: function(Z){ return Z.b === 3 && Z.m === 1; } },
       { text: 'Eine fallende Gerade durch \\((2 \\mid 0)\\) und \\((0 \\mid 4)\\).', p: [[2, 0], [0, 4]], ok: function(Z){ return Z.b === 4 && Z.m === -2; } },
       { text: 'Eine Gerade durch \\((0 \\mid -3)\\) und \\((3 \\mid -1)\\). Wie gross ist \\(m\\) jetzt?', p: [[0, -3], [3, -1]], ok: function(Z){ return Z.b === -3 && Math.abs(Z.m - 2 / 3) < 1e-9; } }
     ], T = AUFG[0];
@@ -222,11 +222,10 @@
       var k = Achsen(svg, F4), te = leerZeit(Z.V0, Z.r1, Z.T, Z.r2), vT = infusion(Z.V0, Z.r1, Z.T, Z.r2, Z.T);
       var tw = Math.min(Z.T, te);
       k.strecke(0, Z.V0, tw, infusion(Z.V0, Z.r1, Z.T, Z.r2, tw), 'linie blau');
-      if (te > Z.T){ k.strecke(Z.T, vT, te, 0, 'linie orange'); k.punkt(Z.T, vT, 'pkt orange'); }
-      k.punkt(te, 0, 'pkt gruen');
+      if (te > Z.T){ k.strecke(Z.T, vT, te, 0, 'linie blau'); k.punkt(Z.T, vT, 'pkt'); }
       var vt = infusion(Z.V0, Z.r1, Z.T, Z.r2, Z.t);
       k.strecke(Z.t, 0, Z.t, vt, 'linie grau gestrichelt'); k.punkt(Z.t, vt, 'pkt');
-      formel.innerHTML = 'bei t = ' + Z.t + ' min: noch <b>' + z(vt) + ' ml</b> <span class="grau">· leer nach ' + z(te) + ' min' + (te > Z.T && Z.r2 !== Z.r1 ? ' · Wechsel bei ' + Z.T + ' min' : '') + '</span>';
+      formel.innerHTML = 'bei t = ' + Z.t + ' min: noch <b>' + z(vt) + ' ml</b>' + (te > Z.T && Z.r2 !== Z.r1 ? ' <span class="grau">· Wechsel bei ' + Z.T + ' min</span>' : '');   /* keine Leerzeit: sie war die Antwort der Leiste (Prüfung 10.10.2026) */
       if (pr) pr();
     }
     var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
@@ -236,11 +235,11 @@
         ok: function(Z){ return Z.V0 === 400 && Z.r1 === 4 && gleich(Z) && Z.t === 100; } },
       { text: '600 ml, 3 ml/min, ohne Wechsel. Wie viel ist nach 120 Minuten noch drin? Zieh den Zeitregler auf 120.',
         ok: function(Z){ return Z.V0 === 600 && Z.r1 === 3 && gleich(Z) && Z.t === 120; } },
-      { text: '500 ml, 5 ml/min; nach 60 Minuten wird auf 2 ml/min gestellt. Wann ist der Beutel leer?',
+      { text: '500 ml, 5 ml/min; nach 60 Minuten wird auf 2 ml/min gestellt. Wann ist der Beutel leer? Zieh den Zeitregler dorthin.',
         ok: function(Z){ return Z.V0 === 500 && Z.r1 === 5 && Z.T === 60 && Z.r2 === 2 && Z.t === 160; } },
       { text: '900 ml sollen ohne Wechsel genau 300 Minuten reichen. Welche Rate? Zieh den Zeitregler auf 300.',
         ok: function(Z){ return Z.V0 === 900 && Z.r1 === 3 && gleich(Z) && Z.t === 300; } },
-      { text: '800 ml, 4 ml/min; nach 100 Minuten schneller, 8 ml/min. Wann leer? Beachte: Beim Wechsel knickt der Graph, er springt nicht.',
+      { text: '800 ml, 4 ml/min; nach 100 Minuten schneller, 8 ml/min. Wann leer? Zieh den Zeitregler dorthin. Beachte: Beim Wechsel knickt der Graph, er springt nicht.',
         ok: function(Z){ return Z.V0 === 800 && Z.r1 === 4 && Z.T === 100 && Z.r2 === 8 && Z.t === 150; } }
     ], sim);
     fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
@@ -249,7 +248,7 @@
 
   /* ---------- Minibilder: <svg class="mini-gerade" data-geraden="m,b;m,b" data-punkte="x,y;x,y"> ---------- */
   function miniBild(svg, geraden, punkte){
-    var k = Achsen(svg, { w: 180, h: 180, rl: 14, x0: -6, x1: 6, y0: -6, y1: 6, xm: [-4, -2, 2, 4], ym: [-4, -2, 2, 4], r: 3.5 });
+    var k = Achsen(svg, { w: 180, h: 180, rl: 14, x0: -6, x1: 6, y0: -6, y1: 6, xm: [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5], ym: [-5, -4, -3, -2, -1, 1, 2, 3, 4, 5], r: 3.5 });   /* jede ganze Zahl beschriftet: abzulesende Werte (Prüfung 10.10.2026) */
     geraden.forEach(function(g, i){ k.gerade(g[0], g[1], 'linie ' + (i ? 'orange' : 'blau')); });
     punkte.forEach(function(p){ k.punkt(p[0], p[1], 'pkt'); });
     return k;
@@ -308,8 +307,6 @@
     setTimeout(zeigen, 0);
     return pruefen;
   }
-  function wertR(fig, id){ return +fig.querySelector('#' + id).value; }
-  function zeigeWert(fig, id){ var i = fig.querySelector('#' + id); var v = i.parentNode.querySelector('.sl-val'); if (v) v.textContent = mz(+i.value); }
 
   /* ════════ Übungen mit Rückmeldung ════════
      Zahlenfelder exakt als Bruch (2/3, −1.5, 4). Felder p1, p2: zwei Gitterpunkte, angeklickt im Koordinatensystem.
@@ -331,16 +328,17 @@
       'ln|1/2|-2/1', 'ln|2/3|-2/1', 'ln|1/1|-2/1', 'ln|2/1|1/1', 'ln|3/1|1/1', 'ln|2/3|1/1', 'ln|3/1|-6/1', 'ln|2/1|-8/1', 'ln|3/1|2/1',
       'ln|2/1|-1/1', 'ln|1/1|3/1', 'ln|-2/1|4/1', 'ln|2/3|-3/1', 'ln|-1/2|5/1', 'ln|3/2|-2/1', 'ln|-1/3|0/1',
       'ln|-2/1|24/1', 'ln|-1/3|2/1', 'ln|-2/1|3/1', 'ln|-1/2|3/1', 'ln|3/1|-1/1', 'ln|-3/2|3/1', 'ln|1/1|2/1', 'ln|-1/1|-2/1', 'ln|0/1|2/1',   /* Clips 10.10.2026 */
+      'ln|1/2|2/1', 'ln|-2/3|3/1', 'ln|-3/4|1/1', 'ln|-5/1|800/1', 'ln|3/2|-4/1', 'ln|-6/1|700/1', 'ln|2/1|-2/1', 'ln|2/3|2/1', 'ln|-3/1|450/1',   /* nach der Prüfung */
       'pp|1,2|4,8', 'pp|2,3|6,11', 'pp|-1,4|3,-4', 'pp|2,1|4,5', 'pp|2,1|5,7', 'pp|-1,3|1,-1', 'pp|-1,5|3,-3', 'pp|2,5|6,7', 'pp|1,3|3,7',
-      'pp|-2,6|4,3', 'pp|1,4|3,10', 'pp|2,1|6,7', 'pp|0,-1|2,3', 'pp|0,4|2,0', 'pp|0,-3|3,-1', 'pp|0,-2|4,0', 'pp|0,-2|3,0', 'pp|0,1|2,5', 'pp|0,1|4,4', 'pp|0,3|1,1'
+      'pp|-2,6|4,3', 'pp|1,4|3,10', 'pp|2,1|6,7', 'pp|0,-1|2,3', 'pp|0,4|2,0', 'pp|0,-3|3,-1', 'pp|0,-2|4,0', 'pp|0,-2|3,0', 'pp|0,1|2,5', 'pp|0,1|4,4', 'pp|0,3|1,1', 'pp|-2,1|4,4', 'pp|2,-1|6,5', 'pp|3,4|5,8', 'pp|2,5|4,9', 'pp|0,2|3,4', 'pp|0,1|4,-2', 'pp|0,3|3,1'
     ];
     function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
     function probeTxt(m, b, x, y){ var w = bAdd(bMul(m, B(x)), b);
       return 'Probe mit dem Punkt \\((' + x + ' \\mid ' + y + ')\\): Deine Gerade gibt bei \\(x = ' + x + '\\) den Wert \\(' + bTex(w) + '\\), nicht \\(' + y + '\\).'; }
 
     var KONTEXT = [
-      { t: 'Ein Wassertank enthält {b} l. Pro Minute fliessen {m} l dazu.', x: 't [min]', s: 1 },
-      { t: 'Ein Wassertank enthält {b} l. Pro Minute fliessen {m} l ab.', x: 't [min]', s: -1 },
+      { t: 'Ein Wassertank enthält {b} l. Pro Minute fliessen {m} l dazu.', x: 'Minuten', s: 1 },
+      { t: 'Ein Wassertank enthält {b} l. Pro Minute fliessen {m} l ab.', x: 'Minuten', s: -1 },
       { t: 'Auf dem Sparkonto liegen {b} Fr. Jede Woche kommen {m} Fr. dazu.', x: 'Wochen', s: 1 },
       { t: 'Eine Wanderung startet auf {b} m ü. M. Pro Stunde geht es {m} m hinauf.', x: 'Stunden', s: 1 },
       { t: 'Ein Ofen hat {b} °C. Pro Minute wird er {m} °C heisser.', x: 'Minuten', s: 1 },
@@ -366,8 +364,8 @@
           if (!bEq(e.y, B(A.y1))) t.push(bEq(e.y, B(A.b * A.x1 + A.m)) ? '\\(m\\) und \\(b\\) sind <b>vertauscht</b>: \\(m\\) wird mit \\(x\\) multipliziert, \\(b\\) dazugezählt.' : 'Setz \\(x = ' + A.x1 + '\\) ein: \\(' + A.m + ' \\cdot ' + (A.x1 < 0 ? '(' + A.x1 + ')' : A.x1) + ' + ' + (A.b < 0 ? '(' + A.b + ')' : A.b) + '\\).');
           if (!bEq(e.x, B(A.x2))) t.push(bEq(e.x, B(A.y2 + A.b, A.m)) ? '<b>Vorzeichen</b>: Rechne zuerst \\(' + (A.b < 0 ? '+ ' + (-A.b) : '- ' + A.b) + '\\) auf beiden Seiten, dann teile durch \\(' + A.m + '\\).' : 'Löse \\(' + linTex(B(A.m), A.b) + ' = ' + A.y2 + '\\) nach \\(x\\) auf.');
           return t.join(' '); },
-        tipps: function(A){ return ['Den Wert für \\(x\\) einsetzen. Für das zweite Feld eine Gleichung lösen.', '\\(' + linTex(B(A.m), A.b) + ' = ' + A.y2 + '\\) \\(\\;\\Rightarrow\\; ' + A.m + 'x = ' + (A.y2 - A.b) + '\\)']; },
-        loesung: function(A){ return 'y = ' + A.y1 + ', \\quad x = \\dfrac{' + A.y2 + ' - ' + (A.b < 0 ? '(' + A.b + ')' : A.b) + '}{' + A.m + '} = ' + A.x2; } },
+        tipps: function(A){ return ['Den Wert für \\(x\\) einsetzen. Für das zweite Feld eine Gleichung lösen.', '\\(' + linTex(B(A.m), A.b) + ' = ' + A.y2 + '\\) \\(\\;\\Rightarrow\\; ' + linTex(B(A.m), 0) + ' = ' + (A.y2 - A.b) + '\\)']; },
+        loesung: function(A){ return 'y = ' + A.y1 + ', \\quad x = ' + (A.m === 1 ? A.y2 + ' - ' + (A.b < 0 ? '(' + A.b + ')' : A.b) : '\\dfrac{' + A.y2 + ' - ' + (A.b < 0 ? '(' + A.b + ')' : A.b) + '}{' + A.m + '}') + ' = ' + A.x2; } },
 
       'kontext': { felder: ['m', 'b'],
         schl: function(A){ return lnSchl(B(A.m), B(A.b)); },
@@ -381,9 +379,9 @@
         richtig: function(A, e){ return bEq(e.m, B(A.m)) && bEq(e.b, B(A.b)); },
         fehler: function(A){ var f = [[{ m: String(A.b), b: String(A.m) }, 'vertauscht']]; if (A.m < 0) f.push([{ m: String(-A.m), b: String(A.b) }, 'Vorzeichen']); return f; },
         pruefen: function(A, e){
-          if (bEq(e.m, B(A.b)) && bEq(e.b, B(A.m))) return '\\(m\\) und \\(b\\) sind <b>vertauscht</b>: \\(b\\) ist der Wert am Anfang (\\(x = 0\\)), \\(m\\) die Änderung pro Einheit.';
+          if ((bEq(e.m, B(A.b)) || bEq(e.m, B(-A.b))) && (bEq(e.b, B(A.m)) || bEq(e.b, B(-A.m)))) return '\\(m\\) und \\(b\\) sind <b>vertauscht</b>: \\(b\\) ist der Wert am Anfang (\\(x = 0\\)), \\(m\\) die Änderung pro Einheit.';
           if (bEq(e.m, B(-A.m))) return '<b>Vorzeichen</b>: Nimmt der Wert ab, ist \\(m\\) negativ.';
-          return (bEq(e.b, B(A.b)) ? 'Der Anfangswert stimmt. ' : 'Der Anfangswert \\(b\\) ist der Wert bei \\(x = 0\\). ') + 'Die Änderung pro Einheit ist \\(m\\).'; },
+          return (bEq(e.b, B(A.b)) ? 'Der Anfangswert stimmt. ' : 'Der Anfangswert \\(b\\) ist der Wert bei \\(x = 0\\). ') + 'Um wie viel ändert sich der Wert pro ' + ({ Minuten: 'Minute', Wochen: 'Woche', Stunden: 'Stunde', Tage: 'Tag' })[A.K.x] + '? Das ist \\(m\\), beim Abnehmen negativ.'; },
         tipps: function(A){ return ['Was ist am Anfang? Das ist \\(b\\). Um wie viel ändert es sich pro Einheit? Das ist \\(m\\).', 'Anfang: \\(' + A.b + '\\). Pro Einheit: ' + (A.m < 0 ? 'weniger, also negativ.' : 'mehr, also positiv.')]; },
         loesung: function(A){ return 'y = ' + linTex(B(A.m), A.b); } },
 
@@ -393,7 +391,7 @@
         eingabe: function(A){ return { m: bTxt(A.mm).replace('−', '-') }; },
         neu: function(){
           var p, q, dx, dy, s = 0;
-          do { p = [nz(-5, 5), nz(-6, 6)]; dx = nz(-6, 6); dy = nz(-8, 8); q = [p[0] + dx, p[1] + dy]; s++; }
+          do { p = [nz(-5, 5), nz(-6, 6)]; dx = nz(-6, 6); dy = Math.random() < 0.08 ? 0 : nz(-8, 8); q = [p[0] + dx, p[1] + dy]; s++; }   /* gelegentlich waagrecht: m = 0 (Prüfung 10.10.2026) */
           while (s < 200 && (Math.abs(q[0]) > 7 || Math.abs(q[1]) > 9 || dx === dy || (Math.abs(dy) % Math.abs(dx) && Math.abs(dx) > 4)));
           return { p: p, q: q, mm: B(dy, dx), text: 'Berechne die Steigung der Geraden durch \\(P(' + p[0] + ' \\mid ' + p[1] + ')\\) und \\(Q(' + q[0] + ' \\mid ' + q[1] + ')\\).', muster: '\\(m = \\) {m}' }; },
         richtig: function(A, e){ return bEq(e.m, A.mm); },
@@ -434,7 +432,7 @@
           function malen(){
             var k = Achsen(svg, GITTER), p = [i1.value, i2.value].filter(Boolean).map(function(v){ return v.split('|').map(Number); });
             if (p.length === 2 && (p[0][0] !== p[1][0])) k.gerade((p[1][1] - p[0][1]) / (p[1][0] - p[0][0]), p[0][1] - (p[1][1] - p[0][1]) / (p[1][0] - p[0][0]) * p[0][0], 'linie blau');
-            p.forEach(function(q){ k.punkt(q[0], q[1], 'pkt orange', '(' + z(q[0]) + ' | ' + z(q[1]) + ')', 8, -8); });
+            p.forEach(function(q){ k.punkt(q[0], q[1], 'pkt', '(' + z(q[0]) + ' | ' + z(q[1]) + ')', 8, -8); });
             info.textContent = p.length < 2 ? 'Klicke ' + (p.length ? 'noch einen Punkt' : 'zwei Punkte') + ' an.' : 'Zwei Punkte gewählt. Nochmals klicken ersetzt den ersten.';
           }
           svg.addEventListener('click', function(ev){
@@ -442,6 +440,7 @@
             var w = Achsen(document.createElementNS(NS, 'svg'), GITTER).zuWert(px, py), x = Math.round(w[0]), y = Math.round(w[1]);
             if (Math.abs(x) > 7 || Math.abs(y) > 7) return;
             var v = x + '|' + y;
+            if (v === i1.value || v === i2.value) return;   /* derselbe Punkt zweimal zählt nicht */
             if (!i1.value) i1.value = v; else if (!i2.value) i2.value = v; else { i1.value = i2.value; i2.value = v; }
             malen();
           });
@@ -452,6 +451,7 @@
         gewaehlt: function(e){ var m = B(e.p2[1] - e.p1[1], e.p2[0] - e.p1[0]); return { m: m, b: bSub(B(e.p1[1]), bMul(m, B(e.p1[0]))) }; },
         fehler: function(A){ return [[{ p1: '0|' + A.b, p2: A.mm[1] + '|' + (A.b - A.mm[0]) }, 'Vorzeichen'], [{ p1: '0|0', p2: A.mm[1] + '|' + A.mm[0] }, 'y-Achse']]; },
         pruefen: function(A, e){
+          if (e.p1[0] === e.p2[0] && e.p1[1] === e.p2[1]) return 'Du hast zweimal denselben Punkt gewählt. Klicke einen zweiten Punkt der Geraden an.';
           if (e.p1[0] === e.p2[0]) return 'Die beiden Punkte liegen senkrecht übereinander. Wähle zwei Punkte mit verschiedenem \\(x\\).';
           var g = TYPEN.zeichnen.gewaehlt(e);
           if (bEq(g.b, B(A.b)) && bEq(g.m, B(-A.mm[0], A.mm[1]))) return 'Der Start auf der \\(y\\)-Achse stimmt. <b>Vorzeichen</b>: Bei \\(m ' + (A.mm[0] < 0 ? '\\lt' : '\\gt') + ' 0\\) geht das Dreieck ' + (A.mm[0] < 0 ? 'hinunter' : 'hinauf') + '.';
@@ -481,15 +481,16 @@
       'gleichung': { felder: ['m', 'b'],
         schl: function(A){ return lnSchl(A.mm, B(A.b)); },
         eingabe: function(A){ return { m: bTxt(A.mm).replace('−', '-'), b: String(A.b) }; },
-        neu: function(){ var m, b; do { m = steil(); b = nz(-4, 4); } while (!aufGitter(m, b));
-          return { mm: m, b: b, text: 'Stelle die Gleichung der Geraden auf: \\(y = m \\cdot x + b\\).' + bild(m, b), muster: '\\(m = \\) {m} &nbsp; \\(b = \\) {b}' }; },
+        neu: function(){ var m, b; do { m = Math.random() < 0.1 ? B(0) : steil(); b = nz(-4, 4); } while (!aufGitter(m, b));   /* gelegentlich waagrecht */
+          return { mm: m, b: b, text: 'Stelle die Gleichung der Geraden auf: \\(y = m \\cdot x + b\\).' + bild(m, b, '0,' + b + ';' + m[1] + ',' + (b + m[0])), muster: '\\(m = \\) {m} &nbsp; \\(b = \\) {b}' }; },
         richtig: function(A, e){ return bEq(e.m, A.mm) && bEq(e.b, B(A.b)); },
-        fehler: function(A){ var f = [[{ m: bTxt(B(-A.mm[0], A.mm[1])).replace('−', '-'), b: String(A.b) }, 'Vorzeichen']];
+        fehler: function(A){ var f = A.mm[0] ? [[{ m: bTxt(B(-A.mm[0], A.mm[1])).replace('−', '-'), b: String(A.b) }, 'Vorzeichen']] : [];
+          if (!A.mm[0]) return f;
           var x0 = bDiv(B(-A.b), A.mm); if (x0[1] === 1 && x0[0] !== A.b) f.push([{ m: bTxt(A.mm).replace('−', '-'), b: String(x0[0]) }, 'y-Achse']); return f; },
         pruefen: function(A, e){
           var t = [];
-          if (!bEq(e.b, B(A.b))) t.push(bEq(e.b, bDiv(B(-A.b), A.mm)) ? '\\(b\\) liest du auf der <b>y-Achse</b> ab, nicht auf der \\(x\\)-Achse.' : '\\(b\\) ist der Wert, wo die Gerade die \\(y\\)-Achse schneidet.');
-          if (!bEq(e.m, A.mm)) t.push(bEq(e.m, B(-A.mm[0], A.mm[1])) ? '<b>Vorzeichen</b> von \\(m\\): ' + (A.mm[0] < 0 ? 'Die Gerade fällt.' : 'Die Gerade steigt.') : 'Miss \\(m\\) mit einem Steigungsdreieck zwischen zwei Gitterpunkten.');
+          if (!bEq(e.b, B(A.b))) t.push(A.mm[0] && bEq(e.b, bDiv(B(-A.b), A.mm)) ? '\\(b\\) liest du auf der <b>y-Achse</b> ab, nicht auf der \\(x\\)-Achse.' : '\\(b\\) ist der Wert, wo die Gerade die \\(y\\)-Achse schneidet.');
+          if (!bEq(e.m, A.mm)) t.push(A.mm[0] && bEq(e.m, B(-A.mm[0], A.mm[1])) ? '<b>Vorzeichen</b> von \\(m\\): ' + (A.mm[0] < 0 ? 'Die Gerade fällt.' : 'Die Gerade steigt.') : 'Miss \\(m\\) mit einem Steigungsdreieck zwischen zwei Gitterpunkten.');
           return t.join(' '); },
         tipps: function(A){ return ['Zuerst \\(b\\): Wo schneidet die Gerade die \\(y\\)-Achse? Dann \\(m\\) mit einem Steigungsdreieck.', '\\(b = ' + A.b + '\\). Von \\((0 \\mid ' + A.b + ')\\) aus \\(' + A.mm[1] + '\\) nach rechts.']; },
         loesung: function(A){ return 'y = ' + linTex(A.mm, A.b); } },
@@ -511,7 +512,8 @@
           var t = [];
           if (!bEq(e.m, A.mm)) t.push(bEq(e.m, B(A.q[0] - A.p[0], A.q[1] - A.p[1])) ? 'Bruch <b>vertauscht</b>: \\(m = \\dfrac{\\Delta y}{\\Delta x}\\).' : 'Zuerst \\(m = \\dfrac{\\Delta y}{\\Delta x}\\) aus den beiden Punkten.');
           else if (!bEq(e.b, A.bb)) t.push(bEq(e.b, B(A.p[1])) ? '\\(b\\) ist der <b>Wert bei</b> \\(x = 0\\), nicht der \\(y\\)-Wert von \\(A\\). Setz \\(A\\) in \\(y = m x + b\\) ein und löse nach \\(b\\).' : 'Setz einen Punkt in \\(y = ' + bTex(A.mm) + ' \\cdot x + b\\) ein und löse nach \\(b\\).');
-          t.push(probeTxt(e.m, e.b, A.q[0], A.q[1]));
+          var auf = function(P){ return bEq(bAdd(bMul(e.m, B(P[0])), e.b), B(P[1])); };   /* Probe nur mit einem Punkt, der nicht passt (Prüfung 10.10.2026) */
+          if (!auf(A.p)) t.push(probeTxt(e.m, e.b, A.p[0], A.p[1])); else if (!auf(A.q)) t.push(probeTxt(e.m, e.b, A.q[0], A.q[1]));
           return t.join(' '); },
         tipps: function(A){ return ['1. \\(m = \\dfrac{y_B - y_A}{x_B - x_A}\\). 2. Einen Punkt einsetzen und \\(b\\) ausrechnen.', '\\(m = ' + bTex(A.mm) + '\\); \\(' + A.p[1] + ' = ' + bTex(A.mm) + ' \\cdot ' + (A.p[0] < 0 ? '(' + A.p[0] + ')' : A.p[0]) + ' + b\\)']; },
         loesung: function(A){ return 'm = ' + bTex(A.mm) + ', \\quad b = ' + bTex(A.bb) + ', \\quad y = ' + linTex(A.mm, bZahl(A.bb)); } }

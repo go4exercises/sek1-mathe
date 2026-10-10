@@ -511,7 +511,7 @@
     },
     {
      "typ": "notiz",
-     "text": "m = Δy / Δx|oben und unten dieselbe Reihenfolge|hinunter: negativ · m = 0: waagrecht",
+     "text": "m = Δy / Δx|oben und unten dieselbe Reihenfolge|hinunter: negativ|m = 0: waagrecht",
      "x": 150,
      "y": 400,
      "groesse": 44,
@@ -602,7 +602,7 @@
    "rueck": {
     "2": "Ja.",
     "0": "Bei m = 0 ist Δy = 0: y ändert sich nicht. Ist das senkrecht?",
-    "1": "Ob eine Gerade durch (0 | 0) geht, sagt b, nicht m."
+    "1": "Ob eine Gerade durch den Ursprung geht, sagt b, nicht m."
    },
    "sprich": "Eine Gerade hat die Steigung m gleich null. Wie verläuft sie?",
    "rueck_sprich": {
@@ -623,12 +623,12 @@
    "richtig": 0,
    "rueck": {
     "0": "Ja.",
-    "1": "Oben steht die Änderung in y: −3. Unten steht 2.",
+    "1": "Was steht oben im Bruch: der Schritt nach rechts oder die Änderung in y?",
     "2": "Hinunter heisst: Δy ist negativ."
    },
    "sprich": "Eine Gerade geht pro zwei nach rechts drei hinunter. Wie gross ist m?",
    "rueck_sprich": {
-    "1": "Oben steht die Änderung in y: minus drei. Unten steht zwei.",
+    "1": "Was steht oben im Bruch: der Schritt nach rechts oder die Änderung in y?",
     "2": "Hinunter heisst: delta y ist negativ."
    }
   }

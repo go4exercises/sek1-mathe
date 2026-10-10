@@ -35,7 +35,7 @@
    "elemente": [
     {
      "typ": "notiz",
-     "text": "am Anfang: @200 l@",
+     "text": "am Anfang: @200@ Liter",
      "x": 150,
      "y": 300,
      "groesse": 50,
@@ -44,7 +44,7 @@
     },
     {
      "typ": "notiz",
-     "text": "pro Minute: @+ 15 l@",
+     "text": "pro Minute: @+15@ Liter",
      "x": 150,
      "y": 420,
      "groesse": 50,
@@ -224,7 +224,7 @@
      "x": 150,
      "y": 300,
      "groesse": 50,
-     "ein": 0.3
+     "ein": 8.06
     },
     {
      "typ": "graf",
@@ -1164,13 +1164,7 @@
      "abstand": 0,
      "anim": "fade",
      "ein": 12.51,
-     "geraden": [
-      {
-       "m": -20,
-       "q": 200,
-       "farbe": 1
-      }
-     ],
+     "geraden": [],
      "punkte": [],
      "pfeile": true,
      "tippbar": true,
@@ -1233,7 +1227,22 @@
      "achsen": false,
      "raster": false,
      "xname": "x [min]",
-     "yname": "y [l]"
+     "yname": "y [l]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        200
+       ],
+       "bis": [
+        10,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
     }
    ],
    "dauer": 19.1

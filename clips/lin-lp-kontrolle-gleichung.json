@@ -1,7 +1,7 @@
 {
  "titel": "Funktionen sehen: Kontrollfragen zur Gleichung",
  "dateiname": "lin-lp-kontrolle-gleichung",
- "kurzbeschrieb": "Fünf Fragen: Gleichung der Geraden durch (0 | 1) und (2 | 5) im Bild, Gerade durch (1 | 4) und (3 | 10), Infusion 400 ml mit 5 ml/min leer, Ratenwechsel nach 50 min bei 300 ml und 3 ml/min, Gleichung für 600 ml und 3 ml/min.",
+ "kurzbeschrieb": "Fünf Fragen: Gleichung der Geraden durch (0 | 2) und (3 | 4) im Bild, Gerade durch (1 | 4) und (3 | 10), Infusion 400 ml mit 5 ml/min leer, Ratenwechsel nach 50 min bei 300 ml und 3 ml/min, Gleichung für 450 ml und 3 ml/min.",
  "schlagworte": [
   "Geradengleichung",
   "zwei Punkte",
@@ -30,7 +30,7 @@
    "name": "Frage 1",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Die Gerade schneidet die y-Achse bei eins: b ist eins. Zwei nach rechts, vier hinauf: m ist zwei. y gleich zwei x plus eins.",
+   "sprecher": "Die Gerade schneidet die y-Achse bei zwei: b ist zwei. Drei nach rechts, zwei hinauf: m ist zwei Drittel. y gleich zwei Drittel x plus zwei.",
    "elemente": [
     {
      "typ": "graf",
@@ -43,21 +43,21 @@
      "ein": 0.05,
      "geraden": [
       {
-       "m": 2,
-       "q": 1,
+       "m": 0.6666666666666666,
+       "q": 2,
        "farbe": 1
       }
      ],
      "punkte": [
       {
        "x": 0,
-       "y": 1,
+       "y": 2,
        "farbe": 5,
        "anker": "start"
       },
       {
-       "x": 2,
-       "y": 5,
+       "x": 3,
+       "y": 4,
        "farbe": 5,
        "anker": "start"
       }
@@ -75,7 +75,7 @@
     },
     {
      "typ": "formel",
-     "text": "\\fc{y = 2x + 1}",
+     "text": "\\fc{y = \\tfrac{2}{3}x + 2}",
      "x": 150,
      "y": 330,
      "groesse": 62,
@@ -95,8 +95,8 @@
        "bewegung": [
         [
          0,
-         2,
-         1
+         0.6666666666666666,
+         2
         ]
        ],
        "farbe": 1,
@@ -106,7 +106,7 @@
        },
        "dreieck": {
         "x": 0,
-        "dx": 2,
+        "dx": 3,
         "farbe": 5
        }
       }
@@ -124,7 +124,7 @@
      ]
     }
    ],
-   "dauer": 9.79
+   "dauer": 10.78
   },
   {
    "name": "Frage 2",
@@ -629,7 +629,7 @@
    "name": "Frage 5",
    "layout": "zentriert",
    "oben": 200,
-   "sprecher": "Am Anfang sechshundert, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus sechshundert.",
+   "sprecher": "Am Anfang vierhundertfünfzig, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus vierhundertfünfzig.",
    "elemente": [
     {
      "typ": "graf",
@@ -645,12 +645,12 @@
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
-      -20,
-      220
+      -15,
+      170
      ],
      "ybereich": [
-      -40,
-      680
+      -30,
+      500
      ],
      "xteilung": [
       [
@@ -668,10 +668,6 @@
       [
        150,
        "150"
-      ],
-      [
-       200,
-       "200"
       ]
      ],
      "yteilung": [
@@ -680,16 +676,20 @@
        "0"
       ],
       [
+       100,
+       "100"
+      ],
+      [
        200,
        "200"
       ],
       [
-       400,
-       "400"
+       300,
+       "300"
       ],
       [
-       600,
-       "600"
+       400,
+       "400"
       ]
      ],
      "xname": "t [min]",
@@ -697,7 +697,7 @@
     },
     {
      "typ": "formel",
-     "text": "\\fc{V = -3t + 600}",
+     "text": "\\fc{V = -3t + 450}",
      "x": 150,
      "y": 330,
      "groesse": 62,
@@ -717,12 +717,12 @@
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
-      -20,
-      220
+      -15,
+      170
      ],
      "ybereich": [
-      -40,
-      680
+      -30,
+      500
      ],
      "xteilung": [
       [
@@ -740,10 +740,6 @@
       [
        150,
        "150"
-      ],
-      [
-       200,
-       "200"
       ]
      ],
      "yteilung": [
@@ -752,16 +748,20 @@
        "0"
       ],
       [
+       100,
+       "100"
+      ],
+      [
        200,
        "200"
       ],
       [
-       400,
-       "400"
+       300,
+       "300"
       ],
       [
-       600,
-       "600"
+       400,
+       "400"
       ]
      ],
      "xname": "t [min]",
@@ -771,10 +771,10 @@
        "art": "strecke",
        "von": [
         0,
-        600
+        450
        ],
        "bis": [
-        200,
+        150,
         0
        ],
        "farbe": 1,
@@ -783,7 +783,7 @@
      ]
     }
    ],
-   "dauer": 8.83
+   "dauer": 10.01
   },
   {
    "name": "Merke",
@@ -818,9 +818,9 @@
    "typ": "wahl",
    "text": "Welche Gleichung hat die Gerade im Bild?",
    "optionen": [
-    "y = ½x + 1",
-    "y = 2x + 5",
-    "y = 2x + 1"
+    "y = 3/2 x + 2",
+    "y = ⅔x + 4",
+    "y = ⅔x + 2"
    ],
    "richtig": 2,
    "rueck": {
@@ -849,10 +849,10 @@
     "2": "m stimmt. Prüf mit (1 | 4): 3 · 1 + 4 ist nicht 4.",
     "0": "Prüf mit (3 | 10): 2 · 3 + 2 ist nicht 10."
    },
-   "sprich": "Welche Gerade geht durch eins, vier und drei, zehn?",
+   "sprich": "Welche Gerade geht durch den Punkt eins, vier und den Punkt drei, zehn?",
    "rueck_sprich": {
-    "2": "m stimmt. Prüf mit eins, vier: drei mal eins plus vier ist nicht vier.",
-    "0": "Prüf mit drei, zehn: zwei mal drei plus zwei ist nicht zehn."
+    "2": "m stimmt. Prüf mit dem Punkt eins, vier: drei mal eins plus vier ist nicht vier.",
+    "0": "Prüf mit dem Punkt drei, zehn: zwei mal drei plus zwei ist nicht zehn."
    }
   },
   {
@@ -903,22 +903,22 @@
    "szene": "Frage 5",
    "bei": 0.3,
    "typ": "wahl",
-   "text": "Ein Beutel mit 600 ml läuft mit 3 ml pro Minute. Welche Gleichung passt?",
+   "text": "Ein Beutel mit 450 ml läuft mit 3 ml pro Minute. Welche Gleichung passt?",
    "optionen": [
-    "V = 3t + 600",
-    "V = −600t + 3",
-    "V = −3t + 600"
+    "V = −450t + 3",
+    "V = −3t + 450",
+    "V = 3t + 450"
    ],
-   "richtig": 2,
+   "richtig": 1,
    "rueck": {
-    "2": "Ja.",
-    "0": "Der Beutel wird leerer: m ist negativ.",
-    "1": "Prüf mit t = 0: Am Anfang sind 600 ml drin."
+    "1": "Ja.",
+    "2": "Der Beutel wird leerer: m ist negativ.",
+    "0": "Prüf mit t = 0: Am Anfang sind 450 ml drin."
    },
-   "sprich": "Ein Beutel mit sechshundert Millilitern läuft mit drei Millilitern pro Minute. Welche Gleichung passt?",
+   "sprich": "Ein Beutel mit vierhundertfünfzig Millilitern läuft mit drei Millilitern pro Minute. Welche Gleichung passt?",
    "rueck_sprich": {
-    "0": "Der Beutel wird leerer: m ist negativ.",
-    "1": "Prüf mit t gleich null: Am Anfang sind sechshundert Milliliter drin."
+    "2": "Der Beutel wird leerer: m ist negativ.",
+    "0": "Prüf mit t gleich null: Am Anfang sind vierhundertfünfzig Milliliter drin."
    }
   }
  ]

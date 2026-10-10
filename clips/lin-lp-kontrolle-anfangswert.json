@@ -344,23 +344,15 @@
      "abstand": 0,
      "anim": "fade",
      "ein": 1.0,
-     "geraden": [
+     "geraden": [],
+     "punkte": [
       {
-       "bewegung": [
-        [
-         0,
-         -2,
-         24
-        ]
-       ],
-       "farbe": 1,
-       "yachse": {
-        "farbe": 2,
-        "beschriftung": false
-       }
+       "x": 0,
+       "y": 24,
+       "farbe": 2,
+       "anker": "start"
       }
      ],
-     "punkte": [],
      "pfeile": true,
      "tippbar": true,
      "xbereich": [
@@ -408,7 +400,22 @@
       ]
      ],
      "xname": "x [h]",
-     "yname": "y [cm]"
+     "yname": "y [cm]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        24
+       ],
+       "bis": [
+        12,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
     }
    ],
    "dauer": 11.66

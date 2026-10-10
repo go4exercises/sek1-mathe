@@ -806,6 +806,17 @@ gegen sie und darüber hinaus.
   ist so richtig wie «· 2, dann : b»; die Leiste entscheidet mit der Probe (zwei Zahlensätze), nicht mit einer Liste.
 - **Probe nicht an einer Nullstelle eines Faktors** (Gleichungen 10.10.2026): Bei \(\tfrac{x(x - 2)}{3x}\) zeigt \(x = 2\)
   «vorher 0, jetzt 0» und unterscheidet nichts.
+- **Eine Hilfsfunktion nur einmal definieren** (Lineare Funktionen 10.10.2026): Zwei `function zeigeWert` im selben
+  Bereich — die zweite (ohne Einheit) gewinnt durch Hoisting, alle Reglerwerte verloren ihre Einheit. Beim Zusammensetzen
+  aus Vorlagen nach doppelten `function`-Namen suchen.
+- **Die Probe in der Rückmeldung nimmt einen Punkt, der nicht passt** (Lineare Funktionen 10.10.2026): Eine feste Probe mit
+  B gab «… den Wert 7, nicht 7», wenn b aus B berechnet war. Mit dem abweichenden Punkt prüfen, sonst weglassen.
+- **Sachgraphen enden, wo die Grösse endet** (Lineare Funktionen 10.10.2026): Tank, Kerze, Beutel als Strecke bis 0 zeichnen,
+  nicht als ganze Gerade; Tabellen zeigen «leer» statt negativer Liter.
+- **«Probe mit Q» ist leer, wenn Q eingesetzt wurde** (Lineare Funktionen 10.10.2026): «Probe mit dem Punkt, den du nicht
+  eingesetzt hast» verlangen.
+- **Im Clip setzt `@…@` Mathematik**: Leerzeichen und Einheiten darin verschwinden («200l»); die Einheit ausserhalb setzen und
+  «l» in Handschrift als «Liter» ausschreiben (sieht sonst wie «/» aus). In Notizen trennt «|» die Zeilen: «(0 ∣ b)» mit ∣ (U+2223).
 - **Fragetexte eines Kontrollclips verschieden beginnen lassen**: `pruef-fragen` erkennt eine Frage
   an ihren ersten 20 Zeichen; zwei Fragen «Welche Nullstellen hat …» lassen den Durchlauf scheitern.
 - Live-Anzeigen runden nur mit «≈».
