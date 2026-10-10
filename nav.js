@@ -20,6 +20,7 @@ const SITE = {
     { id:'lp-gleichungen', nr:'3', titel:'Bruchterme, Gleichungen und Formeln', url:'leitprogramme/gleichungen-formeln.html' },
     { id:'lp-linear', nr:'4', titel:'Lineare Funktionen', url:'leitprogramme/lineare-funktionen.html' },
     { id:'lp-darstellungen', nr:'5', titel:'Darstellungen wechseln', url:'leitprogramme/darstellungen.html' },
+    { id:'lp-funktionstypen', nr:'6', titel:'Funktionstypen und Graphen', url:'leitprogramme/funktionstypen.html' },
   ]
 };
 
@@ -28,7 +29,7 @@ const GROUPS = {
   leitprogramme: [
     { nr:'1', titel:'Arithmetik/Algebra', ids:['lp-bruchrechnen', 'lp-terme'] },
     { nr:'2', titel:'Gleichungen', ids:['lp-gleichungen'] },
-    { nr:'3', titel:'Funktionen', ids:['lp-linear', 'lp-darstellungen'] }
+    { nr:'3', titel:'Funktionen', ids:['lp-linear', 'lp-darstellungen', 'lp-funktionstypen'] }
   ]
 };
 
@@ -103,12 +104,12 @@ function buildNav(cfg) {
     <div class="meta-titel">Ausblick</div>
     <div class="meta-sub">Erstellt</div>
     <ul>
-      <li>Fünf Leitprogramme: Bruchrechnen, Terme und Faktorisieren, Bruchterme, Gleichungen und Formeln, Lineare Funktionen, Darstellungen wechseln — je vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
+      <li>Sechs Leitprogramme: Bruchrechnen, Terme und Faktorisieren, Bruchterme, Gleichungen und Formeln, Lineare Funktionen, Darstellungen wechseln, Funktionstypen und Graphen — je vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
       <li>Schwesterprojekte: <a href="https://mathe.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Mathe begreifbar</a> (Berufsmaturität) und <a href="https://physik.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Physik begreifbar</a> — gleicher Aufbau</li>
     </ul>
     <div class="meta-sub">Im Aufbau</div>
     <ul>
-      <li>Weitere Leitprogramme zu Funktionen, Mathematisieren und Geometrie</li>
+      <li>Weitere Leitprogramme zu Mathematisieren und Geometrie</li>
       <li>Nachschlagen: Glossar, Formelsammlung und Clips</li>
     </ul>`;
 

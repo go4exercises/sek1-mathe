@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="de-CH"><head><meta charset="utf-8"><title>Funktionen sehen: Kontrollfragen zu den Familien</title><style>
+@import url("../schriften.css");
+:root{--papier:#f8f6f1;--tinte:#1c1a17;--blau:#1a4f8a;--rot:#9b1c1c;--gruen:#1f6b3a;--gold:#b85c00;--f1:#1a4f8a;--f1w:#ddeaf8;--f2:#b85c00;--f2w:#fdefd8;--f3:#1f6b3a;--f3w:#d8f0e2;--f4:#9b1c1c;--f4w:#fde8e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;background:#0d1418;overflow:hidden}
+#wrap{position:absolute;left:0;right:0;top:0;bottom:60px;overflow:hidden}
+:fullscreen #wrap{bottom:0} :fullscreen #ui{display:none}
+#stage{width:1920px;height:1080px;position:absolute;left:50%;top:50%;overflow:hidden;
+ background:var(--papier);color:var(--tinte);font-family:'Source Serif 4',Georgia,serif;transform-origin:center center}
+body.render #wrap{bottom:0} body.render #stage{left:0;top:0;transform:none!important}
+#stage::before{content:"";position:absolute;inset:0;pointer-events:none;}
+#stage::after{content:"";position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(120% 100% at 50% 40%,rgba(255,255,255,0) 55%,rgba(90,80,64,.09) 100%)}
+#rand{position:absolute;left:76px;top:0;bottom:0;width:3px}
+
+#kopf,#fuss{position:absolute;left:130px;right:100px;display:flex;justify-content:space-between;
+ align-items:baseline;font-family:'Source Sans 3',sans-serif;z-index:5}
+#kopf{top:46px;font-size:27px}
+#kopf .marke{font-weight:600;letter-spacing:.01em;color:var(--blau)}
+#kopf .bereich{color:var(--tinte);opacity:.55;letter-spacing:.07em;text-transform:uppercase;font-size:22px}
+#fuss{bottom:44px;font-size:21px;color:var(--tinte);opacity:.42}
+
+/* Bedingungsleiste: die Voraussetzung, auf der die Rechnung steht.
+   Sie liegt ausserhalb des Szenenflusses — darum kostet sie keine Zeile
+   und kann trotzdem stehen bleiben, solange sie gilt. Unterhalb des
+   Inhalts, oberhalb der Fusszeile. */
+#vorleiste{position:absolute;left:130px;right:100px;top:96px;
+ display:flex;justify-content:center;gap:14px;z-index:5;pointer-events:none}
+.vor{display:inline-flex;align-items:center;gap:.58em;
+ background:var(--f1w);border:1.5px solid var(--f1);border-radius:10px;
+ padding:7px 19px 8px;color:var(--tinte);font-size:30px;line-height:1.14;
+ box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.vor .vor-tag{font-family:'Source Sans 3',sans-serif;font-size:18px;font-weight:700;
+ letter-spacing:.13em;text-transform:uppercase;color:var(--f1);opacity:.95;
+ white-space:nowrap;align-self:center}
+.vor .vor-txt{white-space:nowrap}
+
+.l{position:absolute;will-change:opacity,transform}
+.l.flow{position:relative}
+.m{font-family:'Source Serif 4',Georgia,serif} .m i,i{font-style:italic}
+.hand{font-family:'Caveat',cursive;line-height:1.24}
+.sans{font-family:'Source Sans 3',system-ui,sans-serif}
+.huelle{display:flex;justify-content:flex-start}
+.mitte.huelle{justify-content:center}
+.huelle>span{white-space:nowrap}
+.f1,.f2,.f3,.f4{border-radius:7px;padding:0 .14em;margin:0 .02em}
+.f1{color:var(--f1);background:var(--f1w)}
+.f2{color:var(--f2);background:var(--f2w)}
+.f3{color:var(--f3);background:var(--f3w)}
+.f4{color:var(--f4);background:var(--f4w)}
+.dim{opacity:.62}
+.graf{line-height:0}
+.graf svg{display:inline-block;vertical-align:top}
+.ov{display:inline-block;line-height:1;padding-top:.07em;margin-top:.12em;border-top:3.5px solid currentColor}
+.row{display:flex;align-items:center;line-height:1.06;white-space:nowrap;gap:.26em}
+.mitte.row{justify-content:center}
+.fr{position:relative;z-index:1;display:inline-flex;flex-direction:column;align-items:center;
+ line-height:1.08;margin:0 .12em;vertical-align:middle}
+.fr>span:first-child{padding:0 .32em .07em}
+.fr>span:last-child{padding:.20em .32em 0;border-top:3.5px solid currentColor}
+.box{border:3.5px solid var(--tinte);border-radius:14px;padding:12px 30px;background:rgba(255,255,255,.62)}
+.boxg{border-color:var(--gruen);color:var(--gruen)}
+.karte{background:rgba(255,255,255,.70);border:2.5px solid rgba(128,128,128,.28);border-radius:16px;padding:14px 26px}
+.strich{height:5px;background:var(--rot);border-radius:3px;transform-origin:left center}
+.lz{display:flex;align-items:baseline;gap:22px;margin-bottom:26px}
+.ln{color:var(--blau);font-weight:600;min-width:34px}
+.step{display:flex;align-items:flex-start;gap:18px;margin-bottom:34px}
+.num{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--blau);color:var(--papier);
+ font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:31px;display:grid;place-items:center}
+.stxt{font-family:'Source Sans 3',sans-serif;font-size:31px;line-height:1.24;padding-top:7px}
+
+#ui{position:absolute;left:0;right:0;bottom:0;height:60px;display:flex;align-items:center;gap:18px;
+ padding:0 26px;background:rgba(13,20,24,.85);color:#e8eef2;font-family:system-ui,sans-serif;font-size:14px;z-index:99}
+body.render #ui{display:none}
+#bar{flex:1;height:8px;background:rgba(255,255,255,.18);border-radius:4px;overflow:hidden;cursor:pointer}
+#barf{height:100%;width:0;background:var(--gold)}
+#ui button{background:rgba(255,255,255,.12);color:#e8eef2;border:0;border-radius:7px;padding:7px 14px;
+ font-size:14px;cursor:pointer;white-space:nowrap}
+#tt{white-space:nowrap;font-variant-numeric:tabular-nums}
+#tip{opacity:.6;white-space:nowrap}
+/* Auf dem Telefon gibt es weder Leertaste noch Pfeiltasten — der Hinweis
+   waere dort nur Text, der die 60px hohe Leiste sprengt. */
+@media (max-width:700px){#ui{gap:11px;padding:0 12px} #tip{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[],macros:{fa:['\\bbox[##ddeaf8,3px]{\\textcolor{##1a4f8a}{#1}}',1],fb:['\\bbox[##fdefd8,3px]{\\textcolor{##b85c00}{#1}}',1],fc:['\\bbox[##d8f0e2,3px]{\\textcolor{##1f6b3a}{#1}}',1],fd:['\\bbox[##fde8e8,3px]{\\textcolor{##9b1c1c}{#1}}',1]}},svg:{fontCache:'global'},options:{enableMenu:false}};</script><script src="../vendor/mathjax/tex-svg.js"></script></head><body>
+<div id="wrap"><div id="stage">
+
+<div id="kopf"><span class="marke">begreifbar.ch</span><span class="bereich">Funktionen · Funktionstypen und Graphen</span></div>
+<div id="fuss"><span>Raphael Arnold Kohler</span><span>10.10.2026</span></div>
+<div class="l graf" data-at="0.05" data-out="7.56" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="8.0" y1="0" x2="8.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="90.7" y1="0" x2="90.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="173.3" y1="0" x2="173.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="256.0" y1="0" x2="256.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="338.7" y1="0" x2="338.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="421.3" y1="0" x2="421.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="504.0" y1="0" x2="504.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="586.7" y1="0" x2="586.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="669.3" y1="0" x2="669.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="752.0" y1="0" x2="752.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="752.0" x2="760" y2="752.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="669.3" x2="760" y2="669.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="586.7" x2="760" y2="586.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="421.3" x2="760" y2="421.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="338.7" x2="760" y2="338.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="256.0" x2="760" y2="256.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="173.3" x2="760" y2="173.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="90.7" x2="760" y2="90.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="8.0" x2="760" y2="8.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-width="3"/><line x1="338.7" y1="760" x2="338.7" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,504.0 742.0,495.0 742.0,513.0" fill="#1c1a17"/><polygon points="338.7,0 329.7,18 347.7,18" fill="#1c1a17"/><text x="734.0" y="490.0" font-size="26" font-style="italic" fill="#1c1a17">x</text><text x="352.7" y="26" font-size="26" font-style="italic" fill="#1c1a17">y</text><line x1="8.0" y1="497.0" x2="8.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="8.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−4</text><line x1="90.7" y1="497.0" x2="90.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="90.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="173.3" y1="497.0" x2="173.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="173.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="256.0" y1="497.0" x2="256.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="256.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="421.3" y1="497.0" x2="421.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="421.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="504.0" y1="497.0" x2="504.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="504.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="586.7" y1="497.0" x2="586.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="586.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="669.3" y1="497.0" x2="669.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="669.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="752.0" y1="497.0" x2="752.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="752.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="752.0" x2="345.7" y2="752.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="760.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="331.7" y1="669.3" x2="345.7" y2="669.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="677.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="331.7" y1="586.7" x2="345.7" y2="586.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="594.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="331.7" y1="421.3" x2="345.7" y2="421.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="429.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">1</text><line x1="331.7" y1="338.7" x2="345.7" y2="338.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="346.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">2</text><line x1="331.7" y1="256.0" x2="345.7" y2="256.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="264.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">3</text><line x1="331.7" y1="173.3" x2="345.7" y2="173.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="181.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">4</text><line x1="331.7" y1="90.7" x2="345.7" y2="90.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="98.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="8.0" x2="345.7" y2="8.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="16.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">6</text><polyline points="136.7,10.3 138.2,17.9 139.8,25.4 141.3,32.8 142.9,40.2 144.4,47.5 146.0,54.7 147.5,61.9 149.0,69.1 150.6,76.1 152.1,83.2 153.7,90.1 155.2,97.0 156.8,103.9 158.3,110.7 159.9,117.4 161.5,124.1 163.0,130.7 164.5,137.3 166.1,143.8 167.6,150.2 169.2,156.6 170.8,162.9 172.3,169.2 173.9,175.4 175.4,181.5 177.0,187.6 178.5,193.7 180.0,199.7 181.6,205.6 183.2,211.4 184.7,217.2 186.2,223.0 187.8,228.7 189.4,234.3 190.9,239.9 192.5,245.4 194.0,250.8 195.5,256.2 197.1,261.6 198.6,266.8 200.2,272.1 201.8,277.2 203.3,282.3 204.8,287.4 206.4,292.4 208.0,297.3 209.5,302.2 211.0,307.0 212.6,311.7 214.2,316.4 215.7,321.1 217.2,325.7 218.8,330.2 220.3,334.7 221.9,339.1 223.5,343.4 225.0,347.7 226.5,351.9 228.1,356.1 229.7,360.2 231.2,364.3 232.8,368.3 234.3,372.2 235.9,376.1 237.4,379.9 239.0,383.7 240.5,387.4 242.0,391.1 243.6,394.7 245.1,398.2 246.7,401.7 248.2,405.1 249.8,408.5 251.3,411.8 252.9,415.0 254.5,418.2 256.0,421.3 257.5,424.4 259.1,427.4 260.6,430.4 262.2,433.3 263.8,436.1 265.3,438.9 266.8,441.6 268.4,444.3 270.0,446.9 271.5,449.4 273.0,451.9 274.6,454.3 276.1,456.7 277.7,459.0 279.2,461.3 280.8,463.5 282.4,465.6 283.9,467.7 285.4,469.7 287.0,471.7 288.6,473.6 290.1,475.5 291.6,477.3 293.2,479.0 294.8,480.7 296.3,482.3 297.9,483.8 299.4,485.3 301.0,486.8 302.5,488.2 304.0,489.5 305.6,490.8 307.2,492.0 308.7,493.1 310.2,494.2 311.8,495.3 313.3,496.2 314.9,497.2 316.5,498.0 318.0,498.8 319.5,499.6 321.1,500.3 322.6,500.9 324.2,501.5 325.8,502.0 327.3,502.4 328.9,502.8 330.4,503.2 331.9,503.5 333.5,503.7 335.1,503.8 336.6,503.9 338.1,504.0 339.7,504.0 341.2,503.9 342.8,503.8 344.3,503.6 345.9,503.4 347.5,503.1 349.0,502.7 350.5,502.3 352.1,501.8 353.7,501.3 355.2,500.7 356.8,500.0 358.3,499.3 359.8,498.6 361.4,497.7 363.0,496.9 364.5,495.9 366.0,494.9 367.6,493.9 369.2,492.8 370.7,491.6 372.2,490.4 373.8,489.1 375.3,487.7 376.9,486.3 378.4,484.9 380.0,483.3 381.6,481.8 383.1,480.1 384.7,478.4 386.2,476.7 387.8,474.9 389.3,473.0 390.8,471.1 392.4,469.1 394.0,467.0 395.5,464.9 397.1,462.8 398.6,460.5 400.2,458.3 401.7,455.9 403.2,453.5 404.8,451.1 406.3,448.6 407.9,446.0 409.4,443.4 411.0,440.7 412.5,438.0 414.1,435.2 415.7,432.3 417.2,429.4 418.8,426.4 420.3,423.4 421.8,420.3 423.4,417.1 424.9,413.9 426.5,410.7 428.1,407.4 429.6,404.0 431.2,400.5 432.7,397.0 434.2,393.5 435.8,389.9 437.3,386.2 438.9,382.5 440.5,378.7 442.0,374.8 443.6,370.9 445.1,367.0 446.7,362.9 448.2,358.9 449.8,354.7 451.3,350.5 452.8,346.3 454.4,342.0 455.9,337.6 457.5,333.2 459.0,328.7 460.6,324.1 462.2,319.5 463.7,314.9 465.2,310.2 466.8,305.4 468.3,300.6 469.9,295.7 471.4,290.7 473.0,285.7 474.6,280.6 476.1,275.5 477.7,270.3 479.2,265.1 480.8,259.8 482.3,254.4 483.8,249.0 485.4,243.5 487.0,238.0 488.5,232.4 490.1,226.8 491.6,221.1 493.2,215.3 494.7,209.5 496.2,203.6 497.8,197.7 499.3,191.7 500.9,185.6 502.4,179.5 504.0,173.3 505.5,167.1 507.1,160.8 508.7,154.5 510.2,148.1 511.8,141.6 513.3,135.1 514.8,128.5 516.4,121.9 518.0,115.2 519.5,108.4 521.0,101.6 522.6,94.7 524.2,87.8 525.7,80.8 527.2,73.8 528.8,66.7 530.3,59.5 531.9,52.3 533.5,45.0 535.0,37.7 536.6,30.3 538.1,22.9 539.6,15.4" fill="none" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><circle cx="173.3" cy="173.3" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="173.3" cy="173.3" r="5" fill="#1c1a17"/><circle cx="338.7" cy="504.0" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="338.7" cy="504.0" r="5" fill="#1c1a17"/><circle cx="504.0" cy="173.3" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="504.0" cy="173.3" r="5" fill="#1c1a17"/><path data-fenster="-4,5,-3,6,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="1.00" data-out="7.56" data-anim="rise" style="left:150px;top:330px;font-size:66px"><span>\(\fc{y = x^2}\)</span></div>
+<div class="l graf" data-at="1.00" data-out="7.56" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="8.0" y1="0" x2="8.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="90.7" y1="0" x2="90.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="173.3" y1="0" x2="173.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="256.0" y1="0" x2="256.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="338.7" y1="0" x2="338.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="421.3" y1="0" x2="421.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="504.0" y1="0" x2="504.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="586.7" y1="0" x2="586.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="669.3" y1="0" x2="669.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="752.0" y1="0" x2="752.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="752.0" x2="760" y2="752.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="669.3" x2="760" y2="669.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="586.7" x2="760" y2="586.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="421.3" x2="760" y2="421.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="338.7" x2="760" y2="338.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="256.0" x2="760" y2="256.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="173.3" x2="760" y2="173.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="90.7" x2="760" y2="90.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="8.0" x2="760" y2="8.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-width="3"/><line x1="338.7" y1="760" x2="338.7" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,504.0 742.0,495.0 742.0,513.0" fill="#1c1a17"/><polygon points="338.7,0 329.7,18 347.7,18" fill="#1c1a17"/><text x="734.0" y="490.0" font-size="26" font-style="italic" fill="#1c1a17">x</text><text x="352.7" y="26" font-size="26" font-style="italic" fill="#1c1a17">y</text><line x1="8.0" y1="497.0" x2="8.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="8.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−4</text><line x1="90.7" y1="497.0" x2="90.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="90.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="173.3" y1="497.0" x2="173.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="173.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="256.0" y1="497.0" x2="256.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="256.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="421.3" y1="497.0" x2="421.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="421.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="504.0" y1="497.0" x2="504.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="504.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="586.7" y1="497.0" x2="586.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="586.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="669.3" y1="497.0" x2="669.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="669.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="752.0" y1="497.0" x2="752.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="752.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="752.0" x2="345.7" y2="752.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="760.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="331.7" y1="669.3" x2="345.7" y2="669.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="677.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="331.7" y1="586.7" x2="345.7" y2="586.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="594.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="331.7" y1="421.3" x2="345.7" y2="421.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="429.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">1</text><line x1="331.7" y1="338.7" x2="345.7" y2="338.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="346.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">2</text><line x1="331.7" y1="256.0" x2="345.7" y2="256.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="264.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">3</text><line x1="331.7" y1="173.3" x2="345.7" y2="173.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="181.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">4</text><line x1="331.7" y1="90.7" x2="345.7" y2="90.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="98.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="8.0" x2="345.7" y2="8.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="16.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">6</text><polyline points="136.7,10.3 138.2,17.9 139.8,25.4 141.3,32.8 142.9,40.2 144.4,47.5 146.0,54.7 147.5,61.9 149.0,69.1 150.6,76.1 152.1,83.2 153.7,90.1 155.2,97.0 156.8,103.9 158.3,110.7 159.9,117.4 161.5,124.1 163.0,130.7 164.5,137.3 166.1,143.8 167.6,150.2 169.2,156.6 170.8,162.9 172.3,169.2 173.9,175.4 175.4,181.5 177.0,187.6 178.5,193.7 180.0,199.7 181.6,205.6 183.2,211.4 184.7,217.2 186.2,223.0 187.8,228.7 189.4,234.3 190.9,239.9 192.5,245.4 194.0,250.8 195.5,256.2 197.1,261.6 198.6,266.8 200.2,272.1 201.8,277.2 203.3,282.3 204.8,287.4 206.4,292.4 208.0,297.3 209.5,302.2 211.0,307.0 212.6,311.7 214.2,316.4 215.7,321.1 217.2,325.7 218.8,330.2 220.3,334.7 221.9,339.1 223.5,343.4 225.0,347.7 226.5,351.9 228.1,356.1 229.7,360.2 231.2,364.3 232.8,368.3 234.3,372.2 235.9,376.1 237.4,379.9 239.0,383.7 240.5,387.4 242.0,391.1 243.6,394.7 245.1,398.2 246.7,401.7 248.2,405.1 249.8,408.5 251.3,411.8 252.9,415.0 254.5,418.2 256.0,421.3 257.5,424.4 259.1,427.4 260.6,430.4 262.2,433.3 263.8,436.1 265.3,438.9 266.8,441.6 268.4,444.3 270.0,446.9 271.5,449.4 273.0,451.9 274.6,454.3 276.1,456.7 277.7,459.0 279.2,461.3 280.8,463.5 282.4,465.6 283.9,467.7 285.4,469.7 287.0,471.7 288.6,473.6 290.1,475.5 291.6,477.3 293.2,479.0 294.8,480.7 296.3,482.3 297.9,483.8 299.4,485.3 301.0,486.8 302.5,488.2 304.0,489.5 305.6,490.8 307.2,492.0 308.7,493.1 310.2,494.2 311.8,495.3 313.3,496.2 314.9,497.2 316.5,498.0 318.0,498.8 319.5,499.6 321.1,500.3 322.6,500.9 324.2,501.5 325.8,502.0 327.3,502.4 328.9,502.8 330.4,503.2 331.9,503.5 333.5,503.7 335.1,503.8 336.6,503.9 338.1,504.0 339.7,504.0 341.2,503.9 342.8,503.8 344.3,503.6 345.9,503.4 347.5,503.1 349.0,502.7 350.5,502.3 352.1,501.8 353.7,501.3 355.2,500.7 356.8,500.0 358.3,499.3 359.8,498.6 361.4,497.7 363.0,496.9 364.5,495.9 366.0,494.9 367.6,493.9 369.2,492.8 370.7,491.6 372.2,490.4 373.8,489.1 375.3,487.7 376.9,486.3 378.4,484.9 380.0,483.3 381.6,481.8 383.1,480.1 384.7,478.4 386.2,476.7 387.8,474.9 389.3,473.0 390.8,471.1 392.4,469.1 394.0,467.0 395.5,464.9 397.1,462.8 398.6,460.5 400.2,458.3 401.7,455.9 403.2,453.5 404.8,451.1 406.3,448.6 407.9,446.0 409.4,443.4 411.0,440.7 412.5,438.0 414.1,435.2 415.7,432.3 417.2,429.4 418.8,426.4 420.3,423.4 421.8,420.3 423.4,417.1 424.9,413.9 426.5,410.7 428.1,407.4 429.6,404.0 431.2,400.5 432.7,397.0 434.2,393.5 435.8,389.9 437.3,386.2 438.9,382.5 440.5,378.7 442.0,374.8 443.6,370.9 445.1,367.0 446.7,362.9 448.2,358.9 449.8,354.7 451.3,350.5 452.8,346.3 454.4,342.0 455.9,337.6 457.5,333.2 459.0,328.7 460.6,324.1 462.2,319.5 463.7,314.9 465.2,310.2 466.8,305.4 468.3,300.6 469.9,295.7 471.4,290.7 473.0,285.7 474.6,280.6 476.1,275.5 477.7,270.3 479.2,265.1 480.8,259.8 482.3,254.4 483.8,249.0 485.4,243.5 487.0,238.0 488.5,232.4 490.1,226.8 491.6,221.1 493.2,215.3 494.7,209.5 496.2,203.6 497.8,197.7 499.3,191.7 500.9,185.6 502.4,179.5 504.0,173.3 505.5,167.1 507.1,160.8 508.7,154.5 510.2,148.1 511.8,141.6 513.3,135.1 514.8,128.5 516.4,121.9 518.0,115.2 519.5,108.4 521.0,101.6 522.6,94.7 524.2,87.8 525.7,80.8 527.2,73.8 528.8,66.7 530.3,59.5 531.9,52.3 533.5,45.0 535.0,37.7 536.6,30.3 538.1,22.9 539.6,15.4" fill="none" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><circle cx="173.3" cy="173.3" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="173.3" cy="173.3" r="5" fill="#1c1a17"/><circle cx="338.7" cy="504.0" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="338.7" cy="504.0" r="5" fill="#1c1a17"/><circle cx="504.0" cy="173.3" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="504.0" cy="173.3" r="5" fill="#1c1a17"/><path data-fenster="-4,5,-3,6,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="8.56" data-out="11.16" data-anim="rise" style="left:150px;top:330px;font-size:64px"><span>\(\dfrac{3}{6} = \fc{0.5}\)</span></div>
+<div class="l m row" data-at="12.16" data-out="18.64" data-anim="rise" style="left:150px;top:330px;font-size:58px"><span>\(\sqrt{-1}\; \text{gibt es nicht}\)</span></div>
+<div class="l m row" data-at="19.64" data-out="23.72" data-anim="rise" style="left:150px;top:330px;font-size:60px"><span>\(2 \cdot \sqrt{9} = 2 \cdot 3 = \fc{6}\)</span></div>
+<div class="l graf" data-at="23.77" data-out="29.92" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="8.0" y1="0" x2="8.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="90.7" y1="0" x2="90.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="173.3" y1="0" x2="173.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="256.0" y1="0" x2="256.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="338.7" y1="0" x2="338.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="421.3" y1="0" x2="421.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="504.0" y1="0" x2="504.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="586.7" y1="0" x2="586.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="669.3" y1="0" x2="669.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="752.0" y1="0" x2="752.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="752.0" x2="760" y2="752.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="669.3" x2="760" y2="669.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="586.7" x2="760" y2="586.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="421.3" x2="760" y2="421.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="338.7" x2="760" y2="338.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="256.0" x2="760" y2="256.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="173.3" x2="760" y2="173.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="90.7" x2="760" y2="90.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="8.0" x2="760" y2="8.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-width="3"/><line x1="338.7" y1="760" x2="338.7" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,504.0 742.0,495.0 742.0,513.0" fill="#1c1a17"/><polygon points="338.7,0 329.7,18 347.7,18" fill="#1c1a17"/><text x="734.0" y="490.0" font-size="26" font-style="italic" fill="#1c1a17">x</text><text x="352.7" y="26" font-size="26" font-style="italic" fill="#1c1a17">y</text><line x1="8.0" y1="497.0" x2="8.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="8.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−4</text><line x1="90.7" y1="497.0" x2="90.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="90.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="173.3" y1="497.0" x2="173.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="173.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="256.0" y1="497.0" x2="256.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="256.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="421.3" y1="497.0" x2="421.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="421.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="504.0" y1="497.0" x2="504.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="504.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="586.7" y1="497.0" x2="586.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="586.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="669.3" y1="497.0" x2="669.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="669.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="752.0" y1="497.0" x2="752.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="752.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="752.0" x2="345.7" y2="752.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="760.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="331.7" y1="669.3" x2="345.7" y2="669.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="677.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="331.7" y1="586.7" x2="345.7" y2="586.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="594.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="331.7" y1="421.3" x2="345.7" y2="421.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="429.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">1</text><line x1="331.7" y1="338.7" x2="345.7" y2="338.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="346.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">2</text><line x1="331.7" y1="256.0" x2="345.7" y2="256.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="264.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">3</text><line x1="331.7" y1="173.3" x2="345.7" y2="173.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="181.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">4</text><line x1="331.7" y1="90.7" x2="345.7" y2="90.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="98.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="8.0" x2="345.7" y2="8.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="16.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">6</text><path data-fenster="-4,5,-3,6,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="23.77" data-out="29.92" data-anim="rise" style="left:150px;top:300px;font-size:64px"><span>\(y = -x^2\)</span></div>
+<div class="l graf" data-at="24.72" data-out="29.92" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="8.0" y1="0" x2="8.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="90.7" y1="0" x2="90.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="173.3" y1="0" x2="173.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="256.0" y1="0" x2="256.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="338.7" y1="0" x2="338.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="421.3" y1="0" x2="421.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="504.0" y1="0" x2="504.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="586.7" y1="0" x2="586.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="669.3" y1="0" x2="669.3" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="752.0" y1="0" x2="752.0" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="752.0" x2="760" y2="752.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="669.3" x2="760" y2="669.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="586.7" x2="760" y2="586.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="421.3" x2="760" y2="421.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="338.7" x2="760" y2="338.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="256.0" x2="760" y2="256.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="173.3" x2="760" y2="173.3" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="90.7" x2="760" y2="90.7" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="8.0" x2="760" y2="8.0" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="504.0" x2="760" y2="504.0" stroke="#1c1a17" stroke-width="3"/><line x1="338.7" y1="760" x2="338.7" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,504.0 742.0,495.0 742.0,513.0" fill="#1c1a17"/><polygon points="338.7,0 329.7,18 347.7,18" fill="#1c1a17"/><text x="734.0" y="490.0" font-size="26" font-style="italic" fill="#1c1a17">x</text><text x="352.7" y="26" font-size="26" font-style="italic" fill="#1c1a17">y</text><line x1="8.0" y1="497.0" x2="8.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="8.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−4</text><line x1="90.7" y1="497.0" x2="90.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="90.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="173.3" y1="497.0" x2="173.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="173.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="256.0" y1="497.0" x2="256.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="256.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="421.3" y1="497.0" x2="421.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="421.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="504.0" y1="497.0" x2="504.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="504.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="586.7" y1="497.0" x2="586.7" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="586.7" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="669.3" y1="497.0" x2="669.3" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="669.3" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="752.0" y1="497.0" x2="752.0" y2="511.0" stroke="#1c1a17" stroke-width="2.5"/><text x="752.0" y="536.0" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="752.0" x2="345.7" y2="752.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="760.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−3</text><line x1="331.7" y1="669.3" x2="345.7" y2="669.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="677.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−2</text><line x1="331.7" y1="586.7" x2="345.7" y2="586.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="594.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">−1</text><line x1="331.7" y1="421.3" x2="345.7" y2="421.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="429.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">1</text><line x1="331.7" y1="338.7" x2="345.7" y2="338.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="346.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">2</text><line x1="331.7" y1="256.0" x2="345.7" y2="256.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="264.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">3</text><line x1="331.7" y1="173.3" x2="345.7" y2="173.3" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="181.3" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">4</text><line x1="331.7" y1="90.7" x2="345.7" y2="90.7" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="98.7" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">5</text><line x1="331.7" y1="8.0" x2="345.7" y2="8.0" stroke="#1c1a17" stroke-width="2.5"/><text x="325.7" y="16.0" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">6</text><polyline points="195.5,751.8 197.1,746.4 198.6,741.2 200.2,735.9 201.8,730.8 203.3,725.7 204.8,720.6 206.4,715.6 208.0,710.7 209.5,705.8 211.0,701.0 212.6,696.3 214.2,691.6 215.7,686.9 217.2,682.3 218.8,677.8 220.3,673.3 221.9,668.9 223.5,664.6 225.0,660.3 226.5,656.1 228.1,651.9 229.7,647.8 231.2,643.7 232.8,639.7 234.3,635.8 235.9,631.9 237.4,628.1 239.0,624.3 240.5,620.6 242.0,616.9 243.6,613.3 245.1,609.8 246.7,606.3 248.2,602.9 249.8,599.5 251.3,596.2 252.9,593.0 254.5,589.8 256.0,586.7 257.5,583.6 259.1,580.6 260.6,577.6 262.2,574.7 263.8,571.9 265.3,569.1 266.8,566.4 268.4,563.7 270.0,561.1 271.5,558.6 273.0,556.1 274.6,553.7 276.1,551.3 277.7,549.0 279.2,546.7 280.8,544.5 282.4,542.4 283.9,540.3 285.4,538.3 287.0,536.3 288.6,534.4 290.1,532.5 291.6,530.7 293.2,529.0 294.8,527.3 296.3,525.7 297.9,524.2 299.4,522.7 301.0,521.2 302.5,519.8 304.0,518.5 305.6,517.2 307.2,516.0 308.7,514.9 310.2,513.8 311.8,512.7 313.3,511.8 314.9,510.8 316.5,510.0 318.0,509.2 319.5,508.4 321.1,507.7 322.6,507.1 324.2,506.5 325.8,506.0 327.3,505.6 328.9,505.2 330.4,504.8 331.9,504.5 333.5,504.3 335.1,504.2 336.6,504.1 338.1,504.0 339.7,504.0 341.2,504.1 342.8,504.2 344.3,504.4 345.9,504.6 347.5,504.9 349.0,505.3 350.5,505.7 352.1,506.2 353.7,506.7 355.2,507.3 356.8,508.0 358.3,508.7 359.8,509.4 361.4,510.3 363.0,511.1 364.5,512.1 366.0,513.1 367.6,514.1 369.2,515.2 370.7,516.4 372.2,517.6 373.8,518.9 375.3,520.3 376.9,521.7 378.4,523.1 380.0,524.7 381.6,526.2 383.1,527.9 384.7,529.6 386.2,531.3 387.8,533.1 389.3,535.0 390.8,536.9 392.4,538.9 394.0,541.0 395.5,543.1 397.1,545.2 398.6,547.5 400.2,549.7 401.7,552.1 403.2,554.5 404.8,556.9 406.3,559.4 407.9,562.0 409.4,564.6 411.0,567.3 412.5,570.0 414.1,572.8 415.7,575.7 417.2,578.6 418.8,581.6 420.3,584.6 421.8,587.7 423.4,590.9 424.9,594.1 426.5,597.3 428.1,600.6 429.6,604.0 431.2,607.5 432.7,611.0 434.2,614.5 435.8,618.1 437.3,621.8 438.9,625.5 440.5,629.3 442.0,633.2 443.6,637.1 445.1,641.0 446.7,645.1 448.2,649.1 449.8,653.3 451.3,657.5 452.8,661.7 454.4,666.0 455.9,670.4 457.5,674.8 459.0,679.3 460.6,683.9 462.2,688.5 463.7,693.1 465.2,697.8 466.8,702.6 468.3,707.4 469.9,712.3 471.4,717.3 473.0,722.3 474.6,727.4 476.1,732.5 477.7,737.7 479.2,742.9 480.8,748.2" fill="none" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path data-fenster="-4,5,-3,6,760,760,8" d="" fill="none"/></svg></div>
+<div class="l hand mitte" data-at="30.32" data-out="39.28" data-anim="rise" style="left:150px;top:250px;font-size:76px;font-weight:600;color:var(--tinte)">Zum Mitnehmen</div>
+<div class="l hand" data-at="31.12" data-out="39.28" data-anim="rise" style="left:150px;top:400px;font-size:44px;color:var(--blau)">Form zuerst, dann Testpunkte<br>√x nur für x ≥ 0, 1/x nicht für 0<br>Minus davor: gespiegelt</div>
+</div></div>
+<audio id="ton" preload="auto" src="ton/typ-lp-kontrolle-familien.mp3"></audio>
+<div id="ui">
+  <button id="pp">Pause</button>
+  <button id="ts" hidden>🔇 Ton an</button>
+  <div id="bar"><div id="barf"></div></div>
+  <span id="tt">0.0 s</span>
+  <span id="tip">Leertaste = Pause &middot; &larr; &rarr; = 5 s &middot; R = Neustart &middot; F = Vollbild</span>
+</div>
+<script>
+const DUR = 39.28;
+const SPRECHER = [{"bei": 0.4, "text": "Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt vier: y gleich x Quadrat."}, {"bei": 7.96, "text": "Drei durch sechs gibt null Komma fünf."}, {"bei": 11.56, "text": "Aus minus eins gibt es keine Wurzel. Darum hat y gleich Wurzel aus x bei x gleich minus eins keinen Punkt."}, {"bei": 19.04, "text": "Zuerst die Wurzel: Wurzel aus neun ist drei. Dann mal zwei: sechs."}, {"bei": 24.12, "text": "Das Minus kippt die Parabel an der x-Achse: Sie ist nach unten offen, der Scheitel ist oben."}, {"bei": 30.32, "text": "Zum Mitnehmen: Form zuerst, dann Testpunkte. Wurzeln gibt es nur für x ab null, Kehrwerte nicht für null. Ein Minus davor spiegelt den Graphen."}];
+const stage = document.getElementById('stage');
+const layers = [...document.querySelectorAll('.l')].map(el => ({
+  el, at: parseFloat(el.dataset.at || '0'),
+  out: el.dataset.out ? parseFloat(el.dataset.out) : Infinity,
+  anim: el.dataset.anim || 'fade',
+  dim: el.dataset.dim ? el.dataset.dim.split(',').map(Number) : null
+}));
+const IN = 0.5, OUT = 0.4;
+// Teile eines Bildes mit eigenem "ein"/"aus" (g.zt): blenden fuer sich ein und aus.
+// Bewegte Figuren (g.fb): vorgerechnete Bilder, je eines zwischen data-fvon und data-fbis.
+const fbilder = [...document.querySelectorAll('g.fb')].map(el => ({
+  el, von: el.dataset.fvon ? parseFloat(el.dataset.fvon) : -Infinity,
+  bis: el.dataset.fbis ? parseFloat(el.dataset.fbis) : Infinity }));
+const zteile = [...document.querySelectorAll('g.zt')].map(el => ({
+  el, at: el.dataset.ein ? parseFloat(el.dataset.ein) : -Infinity,
+  out: el.dataset.aus ? parseFloat(el.dataset.aus) : Infinity }));
+const ease = p => 1 - Math.pow(1 - p, 3);
+const cl = p => p < 0 ? 0 : p > 1 ? 1 : p;
+function seek(t)  {
+  for (const L of layers) {
+    const pi = ease(cl((t - L.at) / IN));
+    const po = L.out === Infinity ? 0 : ease(cl((t - L.out) / OUT));
+    let o = pi * (1 - po), tr = '';
+    if (L.anim === 'rise') tr = 'translateY(' + ((1 - pi) * 26) + 'px)';
+    else if (L.anim === 'pop') tr = 'scale(' + (0.90 + 0.10 * pi) + ')';
+    else if (L.anim === 'wipe') { tr = 'scaleX(' + pi + ')'; o = (t >= L.at ? 1 : 0) * (1 - po); }
+    if (L.dim && !(t >= L.dim[0] && t < L.dim[1])) o *= 0.34;
+    L.el.style.transform = tr; L.el.style.opacity = o;
+  }
+  for (const Z of zteile) {
+    const pi = Z.at === -Infinity ? 1 : ease(cl((t - Z.at) / IN));
+    const po = Z.out === Infinity ? 0 : ease(cl((t - Z.out) / OUT));
+    Z.el.style.opacity = pi * (1 - po);
+  }
+  for (const F of fbilder) F.el.style.display = t >= F.von && t < F.bis ? '' : 'none';
+}
+const FRAGEN = [{"typ": "wahl", "text": "Welche Gleichung gehört zum Graphen im Bild?", "optionen": ["y = 2x", "y = √x", "y = x²"], "richtig": 2, "rueck": {"2": "Ja.", "0": "Eine Gerade wäre nicht symmetrisch zur y-Achse.", "1": "Ein Wurzelgraph hat links von der y-Achse keine Punkte."}, "t": 0.3, "ton": {"frage": "ton/typ-lp-kontrolle-familien-f0-frage.mp3", "r0": "ton/typ-lp-kontrolle-familien-f0-r0.mp3", "r1": "ton/typ-lp-kontrolle-familien-f0-r1.mp3"}}, {"typ": "wahl", "text": "y = 3/x. Wie gross ist y für x = 6?", "optionen": ["0.5", "2", "18"], "richtig": 0, "rueck": {"0": "Ja.", "1": "Das ist 6 durch 3. Im Bruch steht x unten.", "2": "Das ist 3 mal 6. Hier wird geteilt."}, "t": 7.86, "ton": {"frage": "ton/typ-lp-kontrolle-familien-f1-frage.mp3", "r1": "ton/typ-lp-kontrolle-familien-f1-r1.mp3", "r2": "ton/typ-lp-kontrolle-familien-f1-r2.mp3"}}, {"typ": "wahl", "text": "Welcher Graph hat bei x = −1 keinen Punkt?", "optionen": ["y = x²", "y = 1/x", "y = √x"], "richtig": 2, "rueck": {"2": "Ja.", "0": "(−1)² = 1: Den Punkt gibt es.", "1": "1 durch −1 ist −1: Den Punkt gibt es."}, "t": 11.46, "ton": {"frage": "ton/typ-lp-kontrolle-familien-f2-frage.mp3", "r0": "ton/typ-lp-kontrolle-familien-f2-r0.mp3", "r1": "ton/typ-lp-kontrolle-familien-f2-r1.mp3"}}, {"typ": "wahl", "text": "y = 2√x. Wie gross ist y für x = 9?", "optionen": ["3", "6", "18"], "richtig": 1, "rueck": {"1": "Ja.", "2": "Zuerst die Wurzel aus 9, dann mal 2.", "0": "Das ist nur die Wurzel. Was macht die 2 davor?"}, "t": 18.94, "ton": {"frage": "ton/typ-lp-kontrolle-familien-f3-frage.mp3", "r0": "ton/typ-lp-kontrolle-familien-f3-r0.mp3", "r2": "ton/typ-lp-kontrolle-familien-f3-r2.mp3"}}, {"typ": "wahl", "text": "Wie sieht der Graph von y = −x² aus?", "optionen": ["Parabel, nach oben offen", "fallende Gerade", "Parabel, nach unten offen"], "richtig": 2, "rueck": {"2": "Ja.", "0": "Setz x = 2 ein: −4. Liegt der Punkt oben oder unten?", "1": "Wegen x² ist es keine Gerade."}, "t": 24.02, "ton": {"frage": "ton/typ-lp-kontrolle-familien-f4-frage.mp3", "r0": "ton/typ-lp-kontrolle-familien-f4-r0.mp3", "r1": "ton/typ-lp-kontrolle-familien-f4-r1.mp3"}}];
+(() => {
+  if (location.search.includes('render')) return;
+  const pp = document.getElementById('pp');
+  const css = document.createElement('style');
+  css.textContent = `
+    #frage{position:absolute;left:110px;top:560px;width:820px;z-index:50;display:none;
+      background:rgba(255,255,255,.97);border:3px solid var(--f2);border-radius:22px;
+      padding:28px 34px;box-shadow:0 10px 40px rgba(0,0,0,.18);font-family:inherit;color:inherit}
+    #frage .fr-kopf{font-size:26px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--f2);margin-bottom:10px}
+    #frage .fr-text{font-size:38px;line-height:1.3;margin-bottom:22px}
+    #frage .fr-knoepfe{display:flex;flex-wrap:wrap;gap:14px}
+    #frage button{font:inherit;font-size:32px;padding:10px 26px;border-radius:999px;cursor:pointer;
+      border:2.5px solid var(--f2);background:var(--f2w);color:inherit}
+    #frage button.ok{border-color:var(--f3);background:var(--f3w)}
+    #frage button.nein{border-color:var(--f4);background:var(--f4w)}
+    #frage .fr-rueck{font-size:32px;line-height:1.35;margin-top:20px}
+    #frage .fr-weiter{margin-top:20px}
+    #frage .fr-eingabe{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:30px;margin-top:14px;width:100%}
+    #frage .fr-eingabe input{font:inherit;font-size:30px;width:4.2em;padding:4px 10px;border:2.5px solid var(--f2);border-radius:12px}
+    .fr-tippbar, .fr-tippbar svg{pointer-events:auto !important;cursor:crosshair}`;
+  document.head.appendChild(css);
+  const box = document.createElement('div'); box.id = 'frage'; stage.appendChild(box);
+  let letzt = 0, offen = null, tippen = null, stimme = null, sprung = false;
+  // Vorlesen mit derselben Stimme wie der Clip — nur wenn dessen Ton an ist.
+  const hauptton = document.getElementById('ton');
+  const vorlesen = src => {
+    if (stimme) { stimme.pause(); stimme = null; }
+    if (!src || !hauptton || hauptton.muted) return;
+    stimme = new Audio(src); stimme.play().catch(() => {});
+  };
+  const erledigt = new Set();     // beantwortete Fragen
+  const pause = () => { if (pp.textContent === 'Pause') pp.click(); };
+  const weiter = () => { if (pp.textContent === 'Play') pp.click(); };
+  function schliessen() {
+    vorlesen(null);
+    // Fokus zurueck auf Play/Pause — auch wenn er mit dem gesperrten Antwortknopf
+    // schon auf <body> gefallen ist
+    const fo = document.activeElement;
+    if (!fo || fo === document.body || box.contains(fo)) pp.focus({ preventScroll: true });
+    box.style.display = 'none'; box.innerHTML = '';
+    document.querySelectorAll('.fr-marke').forEach(m => m.remove());
+    document.querySelectorAll('.fr-tippbar').forEach(l => l.classList.remove('fr-tippbar'));
+    if (tippen) { stage.removeEventListener('click', tippen); tippen = null; }
+    offen = null;
+  }
+  function antwort(F, ok, text, schl) {
+    const o = offen; erledigt.add(o.i);
+    box.dataset.fertig = '1';
+    vorlesen((F.ton || {})[schl]);
+    if (F.typ === 'klick') box.querySelector('.fr-knoepfe').innerHTML = '';
+    const r = box.querySelector('.fr-rueck');
+    r.innerHTML = (ok ? '✓ ' : '') + text;
+    r.style.color = ok ? 'var(--f3)' : '';
+    if (ok) {                      // richtig: kurz bestaetigen, dann von selbst weiter
+      setTimeout(() => { if (offen === o) { schliessen(); weiter(); } }, 1300);
+      return;
+    }
+    const w = document.createElement('button'); w.className = 'fr-weiter'; w.textContent = 'Weiter ▶';
+    w.onclick = () => { schliessen(); weiter(); };
+    box.appendChild(w); w.focus();
+  }
+  function zeigen(i, F) {
+    offen = { i, t: F.t }; pause(); delete box.dataset.fertig;
+    box.innerHTML = '<div class="fr-kopf"></div><div class="fr-text"></div>'
+      + '<div class="fr-knoepfe"></div><div class="fr-rueck"></div>';
+    box.querySelector('.fr-kopf').textContent = F.kopf || 'Deine Vorhersage';  // "kopf": z. B. «Dein Vorgehen»
+    box.querySelector('.fr-text').textContent = F.text;
+    const kn = box.querySelector('.fr-knoepfe');
+    if (F.typ === 'wahl') {
+      F.optionen.forEach((o, j) => {
+        const b = document.createElement('button'); b.textContent = o;
+        b.onclick = () => {
+          kn.querySelectorAll('button').forEach(x => x.disabled = true);
+          b.classList.add(j === F.richtig ? 'ok' : 'nein');
+          antwort(F, j === F.richtig, (F.rueck || {})[j] || (j === F.richtig ? 'Richtig.' : 'Schau, was der Clip zeigt.'), 'r' + j);
+        };
+        kn.appendChild(b);
+      });
+    } else if (F.typ === 'klick') {
+      const L = [...document.querySelectorAll('.l')].find(l => +l.style.opacity > 0.5 && l.querySelector('[data-fenster]'));
+      if (!L) { schliessen(); weiter(); return; }
+      const svg = L.querySelector('svg'), fe = L.querySelector('[data-fenster]').dataset.fenster.split(',').map(Number);
+      const [x0, x1, y0, y1, b, h, rd] = fe;
+      L.classList.add('fr-tippbar');
+      // Toleranz: eine Zahl (Abstand in Dateneinheiten) oder [dx, dy] je Achse —
+      // Letzteres, wenn die Achsen verschiedene Grössen tragen (s und C).
+      const tol = F.toleranz || 0.5;
+      // Ziel und Fallen sind ein Punkt [x, y] oder eine Strecke [[x1, y1], [x2, y2]] (seit 08.10.2026):
+      // Bei einer Strecke zaehlt ihr naechster Punkt — gerechnet in Toleranz-Einheiten, wenn die Achsen
+      // verschiedene Toleranzen tragen.
+      const tx_ = Array.isArray(tol) ? tol[0] : 1, ty_ = Array.isArray(tol) ? tol[1] : 1;
+      const fuss = (x, y, z) => {
+        if (!Array.isArray(z[0])) return z;
+        const [[ax, ay], [bx, by]] = z, dx = (bx - ax) / tx_, dy = (by - ay) / ty_, l2 = dx * dx + dy * dy;
+        const q = l2 ? Math.max(0, Math.min(1, ((x - ax) / tx_ * dx + (y - ay) / ty_ * dy) / l2)) : 0;
+        return [ax + (bx - ax) * q, ay + (by - ay) * q];
+      };
+      const nah = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.abs(x - z[0]) <= tol[0] && Math.abs(y - z[1]) <= tol[1]
+                                  : Math.hypot(x - z[0], y - z[1]) <= tol; };
+      // Wie weit weg, in Toleranzen — liegt ein Tipp in zwei Fallen, gewinnt die naechste (seit 08.10.2026)
+      const weit = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.max(Math.abs(x - z[0]) / tol[0], Math.abs(y - z[1]) / tol[1])
+                                  : Math.hypot(x - z[0], y - z[1]) / tol; };
+      const px = (x, y) => [rd + (x - x0) / (x1 - x0) * (b - 2 * rd), h - rd - (y - y0) / (y1 - y0) * (h - 2 * rd)];
+      const mk = (cx, cy, farbe) => { const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', 16); c.setAttribute('class', 'fr-marke');
+        c.setAttribute('fill', 'none'); c.setAttribute('stroke', farbe); c.setAttribute('stroke-width', 6); svg.appendChild(c); };
+      const pruefePunkt = (x, y) => {
+        mk(...px(x, y), 'var(--f2)');
+        if (nah(x, y, F.ziel)) return antwort(F, true, F.richtig_text || 'Getroffen.', 'ok');
+        if (Array.isArray(F.ziel[0])) {        // Strecke als Ziel: grün nachgezogen
+          const [a, e] = [px(...F.ziel[0]), px(...F.ziel[1])], l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          l.setAttribute('x1', a[0]); l.setAttribute('y1', a[1]); l.setAttribute('x2', e[0]); l.setAttribute('y2', e[1]);
+          l.setAttribute('class', 'fr-marke'); l.setAttribute('stroke', 'var(--f3)'); l.setAttribute('stroke-width', 14);
+          l.setAttribute('stroke-linecap', 'round'); l.setAttribute('stroke-opacity', '.6'); svg.appendChild(l);
+        } else mk(...px(F.ziel[0], F.ziel[1]), 'var(--f3)');
+        let fk = -1;
+        (F.fallen || []).forEach((f, k) => { if (nah(x, y, f.bei) && (fk < 0 || weit(x, y, f.bei) < weit(x, y, F.fallen[fk].bei))) fk = k; });
+        antwort(F, false, fk >= 0 ? F.fallen[fk].text : (F.falsch_text || 'Nicht ganz — der grüne Kreis zeigt die Stelle.'),
+                fk >= 0 ? 'fall' + fk : 'falsch');
+      };
+      // Am Stage horchen, nicht am Layer: unsichtbare spaetere Layer (Deckkraft 0)
+      // liegen obenauf und wuerden den Tipp abfangen.
+      tippen = ev => {
+        if (!offen || box.dataset.fertig || box.contains(ev.target)) return;
+        const r = svg.getBoundingClientRect();
+        if (ev.clientX < r.left || ev.clientX > r.right || ev.clientY < r.top || ev.clientY > r.bottom) return;
+        const sx = (ev.clientX - r.left) / r.width * b, sy = (ev.clientY - r.top) / r.height * h;
+        pruefePunkt(x0 + (sx - rd) / (b - 2 * rd) * (x1 - x0), y0 + (h - rd - sy) / (h - 2 * rd) * (y1 - y0));
+      };
+      stage.addEventListener('click', tippen);
+      kn.innerHTML = '<span style="font-size:30px;color:var(--f2)">👉 Tipp ins Bild rechts.</span>';
+      // Ohne Zeigegeraet: dieselbe Antwort als zwei Zahlen ("eingabe": [Name x, Name y])
+      if (F.eingabe) {
+        const f = document.createElement('form'); f.className = 'fr-eingabe';
+        f.innerHTML = '<span>oder eingeben:</span>' + F.eingabe.map((n, k) =>
+          '<label>' + n + ' <input inputmode="decimal" autocomplete="off" data-k="' + k + '"></label>').join('')
+          + '<button type="submit">Prüfen</button>';
+        f.onsubmit = ev => {
+          ev.preventDefault();
+          if (box.dataset.fertig) return;
+          const w = [...f.querySelectorAll('input')].map(i => parseFloat(i.value.replace(',', '.')));
+          if (w.some(isNaN)) { f.querySelector('input').focus(); return; }
+          pruefePunkt(w[0], w[1]);
+        };
+        kn.appendChild(f);
+      }
+    }
+    box.style.display = 'block';
+    // Fokus auf die erste Antwort: Tab, Enter und Leertaste reichen dann
+    const erst = box.querySelector('.fr-knoepfe button, .fr-eingabe input');
+    if (erst) erst.focus({ preventScroll: true });
+    vorlesen((F.ton || {}).frage);
+  }
+  // Spulen wird ausdruecklich erkannt: Pfeiltasten und ein Klick auf die
+  // Zeitleiste setzen ein Zeichen, das das naechste Bild auswertet. Ein
+  // spaetes Bild (langsames Laden, Hintergrund-Tab) ist kein Spulen.
+  // Neustart (R) und ein Sprung vor die erste Frage stellen alle Fragen neu;
+  // nach R laeuft der Clip ab 0 wie beim ersten Abspielen.
+  document.addEventListener('keydown', e => {
+    if (e.target && e.target.closest && e.target.closest('input, select, textarea')) return;
+    if ((e.key || '').toLowerCase() === 'r') { schliessen(); erledigt.clear(); letzt = 0; }
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') sprung = true;
+  });
+  const bar = document.getElementById('bar');
+  bar.addEventListener('click', () => { sprung = true; });
+  // Die Abspielzeit ist im Abspieler lokal; zurueckgestellt wird sie ueber
+  // dessen Zeitleiste.
+  const zurueck = s => {
+    const r = bar.getBoundingClientRect();
+    if (r.width > 0 && bar.onclick) bar.onclick({ currentTarget: bar, clientX: r.left + s / DUR * r.width });
+  };
+  const vorFragen = seek;
+  seek = function (t) {
+    vorFragen(t);
+    if (sprung) {
+      // gespult: eine uebersprungene Frage wird nicht gestellt, eine
+      // beantwortete kommt nicht wieder — ausser zurueck an den Anfang
+      sprung = false;
+      if (FRAGEN.length && t < Math.min(...FRAGEN.map(F => F.t))) { schliessen(); erledigt.clear(); }
+    } else if (!offen && pp.textContent === 'Pause') {
+      // gewoehnliches Abspielen, auch wenn ein Bild weit springt: die erste
+      // ueberschrittene Frage wird gestellt, der Clip geht an ihre Stelle zurueck
+      let i = -1;
+      FRAGEN.forEach((F, j) => {
+        if (!erledigt.has(j) && letzt < F.t && t >= F.t && (i < 0 || F.t < FRAGEN[i].t)) i = j;
+      });
+      if (i >= 0) {
+        zeigen(i, FRAGEN[i]);
+        if (offen && t - offen.t > 0.1) { t = offen.t; zurueck(t); vorFragen(t); }
+      }
+    }
+    if (offen && Math.abs(t - offen.t) > 1.0) schliessen();
+    letzt = t;
+  };
+})();
+window.__seek = seek;
+window.__dauer = DUR;
+if (!location.search.includes('render')) {
+  let t0 = performance.now(), playing = true, t = 0;
+  const barf = document.getElementById('barf'), tt = document.getElementById('tt'),
+        pp = document.getElementById('pp'), wrap = document.getElementById('wrap');
+  const fit = () => { stage.style.transform = 'translate(-50%,-50%) scale('
+      + Math.min(wrap.clientWidth / 1920, wrap.clientHeight / 1080) + ')'; };
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', () => setTimeout(fit, 60));
+  fit();
+  // Der Ton laeuft von selbst und hoerbar los. Erlaubt ist das, weil der
+  // Klick auf die Clipkarte die noetige Nutzergeste war und das <iframe>
+  // sie ueber `allow="autoplay"` weitergereicht bekommt (clipRahmen in
+  // physiklib.js bzw. mathlib.js). Verweigert der Browser trotzdem — etwa wenn jemand die
+  // Clipdatei direkt aufruft, ohne vorher zu klicken —, faellt der Clip auf
+  // stumm zurueck und der Knopf «Ton an» holt ihn hervor. Sobald der Ton
+  // laeuft, fuehrt er die Uhr: Tondrift faellt auf, Bilddrift nicht.
+  const ton = document.getElementById('ton'), ts = document.getElementById('ts');
+  const tonBeschriften = () => {
+    if (ts) ts.textContent = (!ton || ton.muted) ? '🔇 Ton an' : '🔊 Ton aus';
+  };
+  if (ton) {
+    ts.hidden = false;
+    ton.muted = false;
+    ton.play().then(tonBeschriften).catch(() => {
+      ton.muted = true;
+      tonBeschriften();
+      ton.play().catch(() => {});
+    });
+    tonBeschriften();
+    ts.onclick = () => {
+      ton.muted = !ton.muted;
+      tonBeschriften();
+      if (!ton.muted) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); }
+    };
+  }
+  const tonLaeuft = () => ton && !ton.paused && !ton.ended;
+  function loop(now) {
+    if (playing) {
+      if (tonLaeuft()) t = ton.currentTime;
+      else { t += (now - t0) / 1000; if (t > DUR) t = DUR; }
+    }
+    t0 = now; seek(t);
+    barf.style.width = (t / DUR * 100) + '%'; tt.textContent = t.toFixed(1) + ' s';
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  const tonAn = () => { if (ton) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); } };
+  const toggle = () => {
+    playing = !playing;
+    pp.textContent = playing ? 'Pause' : 'Play';
+    if (ton) { if (playing) ton.play().catch(() => {}); else ton.pause(); }
+  };
+  pp.onclick = toggle;
+  // Tastenkuerzel nicht in Eingabefeldern; die Leertaste nicht auf Knoepfen —
+  // dort bestaetigt sie den Knopf (Antwort einer Frage, Play/Pause selbst).
+  document.addEventListener('keydown', e => {
+    const ziel = e.target && e.target.closest ? e.target : null;
+    if (ziel && ziel.closest('input, select, textarea')) return;
+    if (e.code === 'Space' && ziel && ziel.closest('button, a, summary')) return;
+    if (e.code === 'Space') { e.preventDefault(); toggle(); }
+    if (e.code === 'ArrowRight') { t = Math.min(DUR, t + 5); tonAn(); }
+    if (e.code === 'ArrowLeft') { t = Math.max(0, t - 5); tonAn(); }
+    const k = e.key.toLowerCase();
+    if (k === 'r') { t = 0; playing = true; pp.textContent = 'Pause'; tonAn(); }
+    if (k === 'f') document.documentElement.requestFullscreen?.();
+  });
+  document.getElementById('bar').onclick = e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    t = (e.clientX - r.left) / r.width * DUR; tonAn();
+  };
+} else { document.body.classList.add('render'); seek(0); }
+</script></body></html>

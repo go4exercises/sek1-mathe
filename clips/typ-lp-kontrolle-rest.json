@@ -1,0 +1,429 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zurückgelegt oder entfernt",
+ "dateiname": "typ-lp-kontrolle-rest",
+ "kurzbeschrieb": "Fünf Fragen: 30 km mit 20 km/h nach 0.5 h, welcher Graph fällt, Hälfte bei 30 km, zurückgelegter Weg auf dem Heimweg, Diagramm nach links.",
+ "schlagworte": [
+  "zurückgelegt",
+  "Entfernung",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nach einer halben Stunde sind zehn Kilometer gefahren. Bleiben zwanzig Kilometer.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "30 - 20 \\cdot 0.5 = \\fc{20}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.41
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Entfernung zum Ziel wird kleiner, ihr Graph fällt. Der zurückgelegte Weg wächst.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Entfernung zum Ziel fällt",
+     "x": 150,
+     "y": 330,
+     "groesse": 46,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.88
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Hälfte sind fünfzehn Kilometer. Fünfzehn durch zwanzig gibt null Komma sieben fünf Stunden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "15 : 20 = \\fc{0.75}\\ \\text{h}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.06
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Auch auf dem Heimweg fährst du weiter: Der zurückgelegte Weg wächst weiter. Nur die Entfernung von zu Hause wird kleiner.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "wächst weiter",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.18
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Stück läuft nach links: Die Zeit liefe rückwärts. Das ist unmöglich.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.8,
+      15
+     ],
+     "ybereich": [
+      -60,
+      1100
+     ],
+     "xteilung": [
+      [
+       4,
+       "4"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        8,
+        600
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8,
+        600
+       ],
+       "bis": [
+        6,
+        900
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        900
+       ],
+       "bis": [
+        12,
+        1000
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ],
+     "xname": "t [min]",
+     "yname": "zurückgelegt [m]"
+    },
+    {
+     "typ": "notiz",
+     "text": "Zeit läuft nie rückwärts",
+     "x": 150,
+     "y": 330,
+     "groesse": 46,
+     "farbe": "gruen",
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.8,
+      15
+     ],
+     "ybereich": [
+      -60,
+      1100
+     ],
+     "xteilung": [
+      [
+       4,
+       "4"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "zurückgelegt [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        8,
+        600
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8,
+        600
+       ],
+       "bis": [
+        6,
+        900
+       ],
+       "farbe": 4,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        900
+       ],
+       "bis": [
+        12,
+        1000
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 5.17
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zurückgelegt plus noch entfernt ist die ganze Strecke. Der zurückgelegte Weg wächst immer, und die Zeit läuft nur nach rechts.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zurückgelegt + entfernt = ganze Strecke|zurückgelegt wächst immer|Zeit nur nach rechts",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.43
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Tour ist 30 km lang, du fährst 20 km/h. Wie weit ist es nach 0.5 h noch?",
+   "optionen": [
+    "20 km",
+    "10 km",
+    "29.5 km"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das ist die gefahrene Strecke. Gefragt ist, was noch bleibt.",
+    "2": "Gefahren hast du 20 · 0.5 km, nicht 0.5 km."
+   },
+   "sprich": "Eine Tour ist dreissig Kilometer lang, du fährst zwanzig Kilometer pro Stunde. Wie weit ist es nach einer halben Stunde noch?",
+   "rueck_sprich": {
+    "1": "Das ist die gefahrene Strecke. Gefragt ist, was noch bleibt.",
+    "2": "Gefahren hast du zwanzig mal null Komma fünf Kilometer, nicht null Komma fünf."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welcher Graph fällt auf dem Weg zum Ziel?",
+   "optionen": [
+    "der zurückgelegte Weg",
+    "keiner",
+    "die Entfernung zum Ziel"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Je länger du fährst, desto mehr hast du zurückgelegt.",
+    "1": "Einer wird kleiner, je näher du dem Ziel kommst."
+   },
+   "rueck_sprich": {
+    "0": "Je länger du fährst, desto mehr hast du zurückgelegt.",
+    "1": "Einer wird kleiner, je näher du dem Ziel kommst."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "30 km mit 20 km/h: Nach welcher Zeit ist die Hälfte gefahren?",
+   "optionen": [
+    "1.5 h",
+    "15 h",
+    "0.75 h"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Nach 1.5 h bist du am Ziel.",
+    "1": "Die Hälfte sind 15 Kilometer, nicht 15 Stunden."
+   },
+   "sprich": "Dreissig Kilometer mit zwanzig Kilometern pro Stunde: Nach welcher Zeit ist die Hälfte gefahren?",
+   "rueck_sprich": {
+    "0": "Nach eins Komma fünf Stunden bist du am Ziel.",
+    "1": "Die Hälfte sind fünfzehn Kilometer, nicht fünfzehn Stunden."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Auf dem Heimweg: Was macht der zurückgelegte Weg?",
+   "optionen": [
+    "Er wächst weiter.",
+    "Er wird kleiner.",
+    "Er bleibt gleich."
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Kleiner wird die Entfernung von zu Hause. Gefahren hast du immer mehr.",
+    "2": "Du fährst ja weiter."
+   },
+   "rueck_sprich": {
+    "1": "Kleiner wird die Entfernung von zu Hause. Gefahren hast du immer mehr.",
+    "2": "Du fährst ja weiter."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Was ist an diesem Diagramm falsch?",
+   "optionen": [
+    "Ein Stück ist zu steil.",
+    "Nichts.",
+    "Ein Stück läuft nach links."
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Steil heisst nur schnell. Schau, in welche Richtung die Zeit läuft.",
+    "1": "Folge dem Graphen von links nach rechts."
+   },
+   "rueck_sprich": {
+    "0": "Steil heisst nur schnell. Schau, in welche Richtung die Zeit läuft.",
+    "1": "Folge dem Graphen von links nach rechts."
+   }
+  }
+ ]
+}

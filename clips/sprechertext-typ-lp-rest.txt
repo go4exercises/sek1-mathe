@@ -1,0 +1,8 @@
+0.40	Eine Velotour nach Bern ist vierundzwanzig Kilometer lang. Du fährst gleichmässig sechzehn Kilometer pro Stunde.
+7.64	Der zurückgelegte Weg wächst: s gleich sechzehn t. Nach einer halben Stunde acht Kilometer, nach einer Stunde sechzehn.
+15.25	Die Entfernung bis Bern nimmt ab: d gleich vierundzwanzig minus sechzehn t. Am Anfang vierundzwanzig, nach einer Stunde noch acht.
+23.56	Bei der Hälfte: zwölf Kilometer gefahren, zwölf noch vor dir. Sechzehn t gleich zwölf, t gleich null Komma sieben fünf Stunden, also fünfundvierzig Minuten.
+33.70	Zusammen sind es immer vierundzwanzig Kilometer. Beide Graphen enden bei der Ankunft, nach eins Komma fünf Stunden.
+41.30	Prüf jedes Bewegungsdiagramm. Der zurückgelegte Weg kann nie kleiner werden, eine Entfernung schon. Und kein Stück ist senkrecht oder läuft nach links.
+50.50	Zum Mitnehmen: Zurückgelegt wächst, noch entfernt nimmt ab, zusammen ergeben sie die ganze Strecke. Lies immer zuerst, was an der y-Achse steht.
+60.18	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

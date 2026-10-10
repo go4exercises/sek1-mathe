@@ -1,0 +1,255 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zu den Zusammenhängen",
+ "dateiname": "typ-lp-kontrolle-zusammenhaenge",
+ "kurzbeschrieb": "Fünf Fragen: Kinoeintritte, Pumpen und Zeit, Fitnessabo mit Grundgebühr, Tabelle 12, 6, 3 für x = 6, y = 4x + 3 beim Verdoppeln.",
+ "schlagworte": [
+  "proportional",
+  "antiproportional",
+  "linear",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Doppelt so viele Personen zahlen doppelt so viel, und null Personen zahlen nichts: proportional.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "proportional",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.42
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Doppelt so viele Pumpen brauchen halb so lange: antiproportional.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "antiproportional",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.04
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die dreissig Franken zahlst du auch ohne Besuch: ein Anfangswert. Linear mit Anfangswert.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "linear mit Anfangswert",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.38
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das Produkt ist immer vierundzwanzig. Bei x gleich sechs ist y also vier.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x \\cdot y = 24 \\;\\Rightarrow\\; y = \\dfrac{24}{6} = \\fc{4}",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.67
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei x gleich zwei ist y elf, bei x gleich vier ist y neunzehn. Nicht doppelt so viel, wegen des Anfangswerts drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x = 4: \\; 4 \\cdot 4 + 3 = \\fc{19}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.34
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Doppelt-Test und Anfangswert entscheiden. Bei antiproportional bleibt das Produkt gleich.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Doppelt-Test|Gibt es einen Anfangswert?|antiproportional: Produkt gleich",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 7.19
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Kinoeintritt kostet 15 Fr. Kosten für x Personen: welcher Zusammenhang?",
+   "optionen": [
+    "antiproportional",
+    "linear mit Anfangswert",
+    "proportional"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Mehr Personen zahlen mehr, nicht weniger.",
+    "1": "Gibt es Kosten, wenn niemand ins Kino geht?"
+   },
+   "sprich": "Ein Kinoeintritt kostet fünfzehn Franken. Kosten für x Personen: welcher Zusammenhang?",
+   "rueck_sprich": {
+    "0": "Mehr Personen zahlen mehr, nicht weniger.",
+    "1": "Gibt es Kosten, wenn niemand ins Kino geht?"
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Becken wird mit x gleichen Pumpen geleert. Dauer: welcher Zusammenhang?",
+   "optionen": [
+    "antiproportional",
+    "proportional",
+    "linear mit Anfangswert"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Mit mehr Pumpen dauert es weniger lang, nicht länger.",
+    "2": "Mach den Doppelt-Test: doppelt so viele Pumpen, wie lange?"
+   },
+   "sprich": "Ein Becken wird mit x gleichen Pumpen geleert. Dauer: welcher Zusammenhang?",
+   "rueck_sprich": {
+    "1": "Mit mehr Pumpen dauert es weniger lang, nicht länger.",
+    "2": "Mach den Doppelt-Test: doppelt so viele Pumpen, wie lange?"
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Fitnessabo kostet 30 Fr. und 5 Fr. pro Besuch. Welcher Zusammenhang?",
+   "optionen": [
+    "antiproportional",
+    "linear mit Anfangswert",
+    "proportional"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Kosten 2 Besuche doppelt so viel wie 1 Besuch?",
+    "0": "Mehr Besuche kosten mehr, nicht weniger."
+   },
+   "sprich": "Ein Fitnessabo kostet dreissig Franken und fünf Franken pro Besuch. Welcher Zusammenhang?",
+   "rueck_sprich": {
+    "2": "Kosten zwei Besuche doppelt so viel wie ein Besuch?",
+    "0": "Mehr Besuche kosten mehr, nicht weniger."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Tabelle: x: 2, 4, 8 und y: 12, 6, 3. Wie gross ist y bei x = 6?",
+   "optionen": [
+    "3",
+    "4",
+    "9"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Rechne das Produkt x · y. Es bleibt gleich.",
+    "0": "Zwischen 4 und 8 liegt y zwischen 6 und 3, nicht darunter."
+   },
+   "sprich": "Tabelle: x zwei, vier, acht und y zwölf, sechs, drei. Wie gross ist y bei x gleich sechs?",
+   "rueck_sprich": {
+    "2": "Rechne das Produkt x mal y. Es bleibt gleich.",
+    "0": "Zwischen vier und acht liegt y zwischen sechs und drei, nicht darunter."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = 4x + 3. Bei x = 2 ist y = 11. Wie gross ist y bei x = 4?",
+   "optionen": [
+    "22",
+    "14",
+    "19"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Der Anfangswert 3 zählt nur einmal.",
+    "1": "Setz x = 4 in die Gleichung ein."
+   },
+   "sprich": "y gleich vier x plus drei. Bei x gleich zwei ist y gleich elf. Wie gross ist y bei x gleich vier?",
+   "rueck_sprich": {
+    "0": "Der Anfangswert drei zählt nur einmal.",
+    "1": "Setz x gleich vier in die Gleichung ein."
+   }
+  }
+ ]
+}

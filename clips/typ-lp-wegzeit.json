@@ -1,0 +1,937 @@
+{
+ "titel": "Funktionen sehen: Weg-Zeit-Graphen lesen",
+ "dateiname": "typ-lp-wegzeit",
+ "kurzbeschrieb": "Annas Schulweg: 10 min mit 80 m/min, 5 min Pause (waagrecht), 5 min mit 120 m/min (steiler); Knick = Tempowechsel; fallend = zurück, senkrecht unmöglich; Fehler: Graph als Landschaft gelesen.",
+ "schlagworte": [
+  "Weg-Zeit-Graph",
+  "Geschwindigkeit",
+  "Steigung",
+  "Pause"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Graph",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Anna geht zur Schule. Der Graph zeigt, wie weit sie zu jeder Zeit von zu Hause entfernt ist. Nach rechts die Zeit in Minuten, nach oben die Entfernung in Metern.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "t: Zeit in min|s: Entfernung von zu Hause in m",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 3.72
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "s [m]"
+    }
+   ],
+   "dauer": 9.56
+  },
+  {
+   "name": "Gehen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "In den ersten zehn Minuten kommt sie achthundert Meter weit. Das sind achtzig Meter pro Minute: die Steigung des Graphen.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "v = \\dfrac{800}{10} = \\fa{80}\\ \\text{m/min}",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 6.04
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 800,
+       "farbe": 5,
+       "anker": "end",
+       "beschriftung": "(10 | 800)",
+       "beschriftung_bei": [
+        9.4,
+        920
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "s [m]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.8,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        10,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 9.61
+  },
+  {
+   "name": "Warten",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Dann wartet sie fünf Minuten an der Ampel. Die Entfernung bleibt gleich: Der Graph ist waagrecht.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "waagrecht: Pause",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 4.73
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        10,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.87,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        10,
+        800
+       ],
+       "bis": [
+        15,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 8.74
+  },
+  {
+   "name": "Rennen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Am Schluss rennt sie: sechshundert Meter in fünf Minuten, hundertzwanzig Meter pro Minute. Der steilste Abschnitt ist der schnellste. Wo das Tempo wechselt, hat der Graph einen Knick.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "v = \\dfrac{600}{5} = \\fa{120}\\ \\text{m/min}",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 2.45
+    },
+    {
+     "typ": "notiz",
+     "text": "steiler: schneller · Knick: neues Tempo",
+     "x": 150,
+     "y": 450,
+     "groesse": 40,
+     "farbe": "blau",
+     "ein": 9.89
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        10,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        10,
+        800
+       ],
+       "bis": [
+        15,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        15,
+        800
+       ],
+       "bis": [
+        20,
+        1400
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 13.83
+  },
+  {
+   "name": "Zurück",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Geht jemand zurück, wird die Entfernung von zu Hause kleiner: Der Graph fällt. Senkrecht kann er nie sein, denn Weg ohne Zeit gibt es nicht.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "fallend: zurück|senkrecht: unmöglich",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 4.02
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        8,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        8,
+        800
+       ],
+       "bis": [
+        12,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        12,
+        800
+       ],
+       "bis": [
+        20,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.48,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        14,
+        200
+       ],
+       "bis": [
+        14,
+        1200
+       ],
+       "farbe": 4,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        14.4,
+        1250
+       ],
+       "text": "unmöglich",
+       "farbe": 4,
+       "anker": "start",
+       "groesse": 26,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 8.64
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: den Graphen als Landschaft lesen. Steigt er, geht es nicht bergauf. Er zeigt die Entfernung, nicht die Höhe.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "kein Bild der Landschaft:|Entfernung, nicht Höhe",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 2.26
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2.6,
+      22
+     ],
+     "ybereich": [
+      -100,
+      1600
+     ],
+     "xteilung": [
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ],
+      [
+       15,
+       "15"
+      ],
+      [
+       20,
+       "20"
+      ]
+     ],
+     "yteilung": [
+      [
+       400,
+       "400"
+      ],
+      [
+       800,
+       "800"
+      ],
+      [
+       1200,
+       "1200"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "s [m]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        10,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        10,
+        800
+       ],
+       "bis": [
+        15,
+        800
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        15,
+        800
+       ],
+       "bis": [
+        20,
+        1400
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 8.54
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Im Weg-Zeit-Graphen ist die Steigung die Geschwindigkeit. Waagrecht ist eine Pause, fallend ein Rückweg, ein Knick ein neues Tempo.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Steigung = Geschwindigkeit|waagrecht: Pause · fallend: zurück|Knick: neues Tempo",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.18
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.08
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Rennen",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "In welchem Abschnitt ist Anna am schnellsten?",
+   "optionen": [
+    "im dritten",
+    "im ersten",
+    "im zweiten"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Vergleich die Steilheit: Welcher Abschnitt ist am steilsten?",
+    "2": "Im zweiten ist der Graph waagrecht. Was heisst das?"
+   },
+   "sprich": "In welchem Abschnitt ist Anna am schnellsten?",
+   "rueck_sprich": {
+    "1": "Vergleich die Steilheit: Welcher Abschnitt ist am steilsten?",
+    "2": "Im zweiten ist der Graph waagrecht. Was heisst das?"
+   }
+  }
+ ]
+}

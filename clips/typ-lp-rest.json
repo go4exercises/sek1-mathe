@@ -1,0 +1,759 @@
+{
+ "titel": "Funktionen sehen: Zurückgelegt oder noch entfernt",
+ "dateiname": "typ-lp-rest",
+ "kurzbeschrieb": "Velotour 24 km mit 16 km/h: zurückgelegt s = 16t (steigt), noch entfernt d = 24 − 16t (fällt); gleich gross nach 0.75 h; zusammen immer 24 km; Diagramme prüfen: zurückgelegter Weg fällt nie, keine senkrechten Stücke, keine nach links.",
+ "schlagworte": [
+  "zurückgelegt",
+  "Entfernung",
+  "Weg-Zeit-Graph",
+  "Diagramm prüfen"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Tour",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Velotour nach Bern ist vierundzwanzig Kilometer lang. Du fährst gleichmässig sechzehn Kilometer pro Stunde.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "24 km bis Bern|16 km pro Stunde",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 0.66
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "[km]"
+    }
+   ],
+   "dauer": 7.24
+  },
+  {
+   "name": "Gefahren",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der zurückgelegte Weg wächst: s gleich sechzehn t. Nach einer halben Stunde acht Kilometer, nach einer Stunde sechzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fa{s = 16t}",
+     "x": 150,
+     "y": 300,
+     "groesse": 64,
+     "ein": 1.64
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "[km]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.64,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "[km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        24
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 7.61
+  },
+  {
+   "name": "Rest",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Entfernung bis Bern nimmt ab: d gleich vierundzwanzig minus sechzehn t. Am Anfang vierundzwanzig, nach einer Stunde noch acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fa{s = 16t}",
+     "x": 150,
+     "y": 260,
+     "groesse": 54,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "\\fb{d = 24 - 16t}",
+     "x": 150,
+     "y": 380,
+     "groesse": 60,
+     "ein": 0.59
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "[km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        24
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.59,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "[km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        24
+       ],
+       "bis": [
+        1.5,
+        0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 8.31
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei der Hälfte: zwölf Kilometer gefahren, zwölf noch vor dir. Sechzehn t gleich zwölf, t gleich null Komma sieben fünf Stunden, also fünfundvierzig Minuten.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "16t = 12 \\;\\Rightarrow\\; t = \\fc{0.75}\\ \\text{h}",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 3.78
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "[km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        24
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        24
+       ],
+       "bis": [
+        1.5,
+        0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.7,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0.75,
+       "y": 12,
+       "farbe": 3,
+       "anker": "middle",
+       "beschriftung": "(0.75 | 12)",
+       "beschriftung_bei": [
+        0.75,
+        6.4
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [h]",
+     "yname": "[km]"
+    }
+   ],
+   "dauer": 10.14
+  },
+  {
+   "name": "Summe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zusammen sind es immer vierundzwanzig Kilometer. Beide Graphen enden bei der Ankunft, nach eins Komma fünf Stunden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "s + d = 24",
+     "x": 150,
+     "y": 300,
+     "groesse": 62,
+     "ein": 0.66
+    },
+    {
+     "typ": "formel",
+     "text": "\\text{Ankunft: } 24 : 16 = 1.5\\ \\text{h}",
+     "x": 150,
+     "y": 420,
+     "groesse": 50,
+     "ein": 4.66
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.1,
+      1.75
+     ],
+     "ybereich": [
+      -1.5,
+      27
+     ],
+     "xteilung": [
+      [
+       0.5,
+       "0.5"
+      ],
+      [
+       1,
+       "1"
+      ],
+      [
+       1.5,
+       "1.5"
+      ]
+     ],
+     "yteilung": [
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "t [h]",
+     "yname": "[km]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        1.5,
+        24
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        24
+       ],
+       "bis": [
+        1.5,
+        0
+       ],
+       "farbe": 2,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 7.6
+  },
+  {
+   "name": "Prüfen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Prüf jedes Bewegungsdiagramm. Der zurückgelegte Weg kann nie kleiner werden, eine Entfernung schon. Und kein Stück ist senkrecht oder läuft nach links.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "zurückgelegt: nie fallend|Entfernung: darf fallen|nie senkrecht, nie nach links",
+     "x": 150,
+     "y": 300,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 0.48
+    }
+   ],
+   "dauer": 9.2
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zurückgelegt wächst, noch entfernt nimmt ab, zusammen ergeben sie die ganze Strecke. Lies immer zuerst, was an der y-Achse steht.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zurückgelegt wächst · Rest nimmt ab|zusammen: ganze Strecke|zuerst die y-Achse lesen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.68
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.35
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "24 km mit 16 km/h: Wann sind zurückgelegter Weg und Rest gleich gross?",
+   "optionen": [
+    "nach 12 h",
+    "nach 0.75 h",
+    "nach 1.5 h"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Nach 1.5 h bist du schon in Bern.",
+    "0": "Die 12 sind Kilometer, nicht Stunden."
+   },
+   "sprich": "Vierundzwanzig Kilometer mit sechzehn Kilometern pro Stunde: Wann sind zurückgelegter Weg und Rest gleich gross?",
+   "rueck_sprich": {
+    "2": "Nach eins Komma fünf Stunden bist du schon in Bern.",
+    "0": "Die Zwölf sind Kilometer, nicht Stunden."
+   }
+  }
+ ]
+}

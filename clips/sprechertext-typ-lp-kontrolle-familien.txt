@@ -1,0 +1,6 @@
+0.40	Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt vier: y gleich x Quadrat.
+7.96	Drei durch sechs gibt null Komma fünf.
+11.56	Aus minus eins gibt es keine Wurzel. Darum hat y gleich Wurzel aus x bei x gleich minus eins keinen Punkt.
+19.04	Zuerst die Wurzel: Wurzel aus neun ist drei. Dann mal zwei: sechs.
+24.12	Das Minus kippt die Parabel an der x-Achse: Sie ist nach unten offen, der Scheitel ist oben.
+30.32	Zum Mitnehmen: Form zuerst, dann Testpunkte. Wurzeln gibt es nur für x ab null, Kehrwerte nicht für null. Ein Minus davor spiegelt den Graphen.

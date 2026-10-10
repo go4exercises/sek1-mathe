@@ -1,0 +1,10 @@
+0.40	Verschiedene Gleichungen geben verschiedene Graphen. Die einfachste kennst du: y gleich x, eine Gerade durch null, null. Wird x um eins grösser, wird auch y um eins grösser.
+11.82	y gleich x Quadrat. Für x gleich zwei kommt vier heraus, für minus zwei auch vier. Der Graph ist symmetrisch zur y-Achse, hat unten einen Scheitel und wird nach aussen immer steiler. Das ist eine Parabel.
+25.05	y gleich Wurzel aus x. Wurzel aus eins ist eins, Wurzel aus vier ist zwei. Der Graph beginnt bei null, null und wird immer flacher. Links von der y-Achse gibt es keine Punkte: Aus negativen Zahlen gibt es keine Wurzel.
+39.78	y gleich eins durch x. Für x gleich eins kommt eins heraus, für zwei null Komma fünf, für null Komma fünf zwei. Bei null gibt es keinen Wert. Der Graph hat zwei Äste und trifft keine Achse.
+52.27	Wurzel aus vier ist zwei, Wurzel aus neun ist drei: Das passt zu y gleich Wurzel aus x. Bei y gleich x Quadrat wären es sechzehn und einundachtzig.
+62.91	Mit Testpunkten ordnest du zu. Setz zum Beispiel x gleich vier ein: Die Gerade gibt vier, die Parabel sechzehn, die Wurzel zwei, der Kehrwert null Komma zwei fünf. Und x gleich null oder eine negative Zahl zeigt, wo es gar keinen Wert gibt.
+77.96	Eine Zahl davor streckt den Graphen. Zwei x Quadrat ist doppelt so hoch wie x Quadrat. Mit einem Minus davor kippt die Parabel nach unten.
+86.95	Häufiger Fehler: zu wenige Punkte. Null, null und eins, eins liegen auf der Geraden und auf der Parabel. Erst x gleich zwei trennt die beiden: zwei gegen vier.
+97.20	Zum Mitnehmen: Gerade, Parabel, Wurzel- und Kehrwertgraph erkennst du an der Form. Zum Zuordnen setzt du Testpunkte ein, auch x gleich null und eine negative Zahl.
+107.51	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de-CH"><head><meta charset="utf-8"><title>Funktionen sehen: Proportional, antiproportional, linear</title><style>
+@import url("../schriften.css");
+:root{--papier:#f8f6f1;--tinte:#1c1a17;--blau:#1a4f8a;--rot:#9b1c1c;--gruen:#1f6b3a;--gold:#b85c00;--f1:#1a4f8a;--f1w:#ddeaf8;--f2:#b85c00;--f2w:#fdefd8;--f3:#1f6b3a;--f3w:#d8f0e2;--f4:#9b1c1c;--f4w:#fde8e8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;background:#0d1418;overflow:hidden}
+#wrap{position:absolute;left:0;right:0;top:0;bottom:60px;overflow:hidden}
+:fullscreen #wrap{bottom:0} :fullscreen #ui{display:none}
+#stage{width:1920px;height:1080px;position:absolute;left:50%;top:50%;overflow:hidden;
+ background:var(--papier);color:var(--tinte);font-family:'Source Serif 4',Georgia,serif;transform-origin:center center}
+body.render #wrap{bottom:0} body.render #stage{left:0;top:0;transform:none!important}
+#stage::before{content:"";position:absolute;inset:0;pointer-events:none;}
+#stage::after{content:"";position:absolute;inset:0;pointer-events:none;
+ background:radial-gradient(120% 100% at 50% 40%,rgba(255,255,255,0) 55%,rgba(90,80,64,.09) 100%)}
+#rand{position:absolute;left:76px;top:0;bottom:0;width:3px}
+
+#kopf,#fuss{position:absolute;left:130px;right:100px;display:flex;justify-content:space-between;
+ align-items:baseline;font-family:'Source Sans 3',sans-serif;z-index:5}
+#kopf{top:46px;font-size:27px}
+#kopf .marke{font-weight:600;letter-spacing:.01em;color:var(--blau)}
+#kopf .bereich{color:var(--tinte);opacity:.55;letter-spacing:.07em;text-transform:uppercase;font-size:22px}
+#fuss{bottom:44px;font-size:21px;color:var(--tinte);opacity:.42}
+
+/* Bedingungsleiste: die Voraussetzung, auf der die Rechnung steht.
+   Sie liegt ausserhalb des Szenenflusses — darum kostet sie keine Zeile
+   und kann trotzdem stehen bleiben, solange sie gilt. Unterhalb des
+   Inhalts, oberhalb der Fusszeile. */
+#vorleiste{position:absolute;left:130px;right:100px;top:96px;
+ display:flex;justify-content:center;gap:14px;z-index:5;pointer-events:none}
+.vor{display:inline-flex;align-items:center;gap:.58em;
+ background:var(--f1w);border:1.5px solid var(--f1);border-radius:10px;
+ padding:7px 19px 8px;color:var(--tinte);font-size:30px;line-height:1.14;
+ box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.vor .vor-tag{font-family:'Source Sans 3',sans-serif;font-size:18px;font-weight:700;
+ letter-spacing:.13em;text-transform:uppercase;color:var(--f1);opacity:.95;
+ white-space:nowrap;align-self:center}
+.vor .vor-txt{white-space:nowrap}
+
+.l{position:absolute;will-change:opacity,transform}
+.l.flow{position:relative}
+.m{font-family:'Source Serif 4',Georgia,serif} .m i,i{font-style:italic}
+.hand{font-family:'Caveat',cursive;line-height:1.24}
+.sans{font-family:'Source Sans 3',system-ui,sans-serif}
+.huelle{display:flex;justify-content:flex-start}
+.mitte.huelle{justify-content:center}
+.huelle>span{white-space:nowrap}
+.f1,.f2,.f3,.f4{border-radius:7px;padding:0 .14em;margin:0 .02em}
+.f1{color:var(--f1);background:var(--f1w)}
+.f2{color:var(--f2);background:var(--f2w)}
+.f3{color:var(--f3);background:var(--f3w)}
+.f4{color:var(--f4);background:var(--f4w)}
+.dim{opacity:.62}
+.graf{line-height:0}
+.graf svg{display:inline-block;vertical-align:top}
+.ov{display:inline-block;line-height:1;padding-top:.07em;margin-top:.12em;border-top:3.5px solid currentColor}
+.row{display:flex;align-items:center;line-height:1.06;white-space:nowrap;gap:.26em}
+.mitte.row{justify-content:center}
+.fr{position:relative;z-index:1;display:inline-flex;flex-direction:column;align-items:center;
+ line-height:1.08;margin:0 .12em;vertical-align:middle}
+.fr>span:first-child{padding:0 .32em .07em}
+.fr>span:last-child{padding:.20em .32em 0;border-top:3.5px solid currentColor}
+.box{border:3.5px solid var(--tinte);border-radius:14px;padding:12px 30px;background:rgba(255,255,255,.62)}
+.boxg{border-color:var(--gruen);color:var(--gruen)}
+.karte{background:rgba(255,255,255,.70);border:2.5px solid rgba(128,128,128,.28);border-radius:16px;padding:14px 26px}
+.strich{height:5px;background:var(--rot);border-radius:3px;transform-origin:left center}
+.lz{display:flex;align-items:baseline;gap:22px;margin-bottom:26px}
+.ln{color:var(--blau);font-weight:600;min-width:34px}
+.step{display:flex;align-items:flex-start;gap:18px;margin-bottom:34px}
+.num{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--blau);color:var(--papier);
+ font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:31px;display:grid;place-items:center}
+.stxt{font-family:'Source Sans 3',sans-serif;font-size:31px;line-height:1.24;padding-top:7px}
+
+#ui{position:absolute;left:0;right:0;bottom:0;height:60px;display:flex;align-items:center;gap:18px;
+ padding:0 26px;background:rgba(13,20,24,.85);color:#e8eef2;font-family:system-ui,sans-serif;font-size:14px;z-index:99}
+body.render #ui{display:none}
+#bar{flex:1;height:8px;background:rgba(255,255,255,.18);border-radius:4px;overflow:hidden;cursor:pointer}
+#barf{height:100%;width:0;background:var(--gold)}
+#ui button{background:rgba(255,255,255,.12);color:#e8eef2;border:0;border-radius:7px;padding:7px 14px;
+ font-size:14px;cursor:pointer;white-space:nowrap}
+#tt{white-space:nowrap;font-variant-numeric:tabular-nums}
+#tip{opacity:.6;white-space:nowrap}
+/* Auf dem Telefon gibt es weder Leertaste noch Pfeiltasten — der Hinweis
+   waere dort nur Text, der die 60px hohe Leiste sprengt. */
+@media (max-width:700px){#ui{gap:11px;padding:0 12px} #tip{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[],macros:{fa:['\\bbox[##ddeaf8,3px]{\\textcolor{##1a4f8a}{#1}}',1],fb:['\\bbox[##fdefd8,3px]{\\textcolor{##b85c00}{#1}}',1],fc:['\\bbox[##d8f0e2,3px]{\\textcolor{##1f6b3a}{#1}}',1],fd:['\\bbox[##fde8e8,3px]{\\textcolor{##9b1c1c}{#1}}',1]}},svg:{fontCache:'global'},options:{enableMenu:false}};</script><script src="../vendor/mathjax/tex-svg.js"></script></head><body>
+<div id="wrap"><div id="stage">
+
+<div id="kopf"><span class="marke">begreifbar.ch</span><span class="bereich">Funktionen · Funktionstypen und Graphen</span></div>
+<div id="fuss"><span>Raphael Arnold Kohler</span><span>10.10.2026</span></div>
+<div class="l m row" data-at="0.30" data-out="15.51" data-anim="rise" style="left:150px;top:280px;font-size:62px"><span>\(y = 1.8x\)</span></div>
+<div class="l hand" data-at="7.74" data-out="15.51" data-anim="rise" style="left:150px;top:420px;font-size:44px;color:var(--blau)">proportional:<br>x doppelt, y doppelt</div>
+<div class="l graf" data-at="0.05" data-out="15.51" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="184.5" y1="0" x2="184.5" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="310.6" y1="0" x2="310.6" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="436.7" y1="0" x2="436.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="562.8" y1="0" x2="562.8" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="688.9" y1="0" x2="688.9" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="528.8" x2="760" y2="528.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="342.8" x2="760" y2="342.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="156.8" x2="760" y2="156.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="714.8" x2="760" y2="714.8" stroke="#1c1a17" stroke-width="3"/><line x1="58.4" y1="760" x2="58.4" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,714.8 742.0,705.8 742.0,723.8" fill="#1c1a17"/><polygon points="58.4,0 49.4,18 67.4,18" fill="#1c1a17"/><text x="734.0" y="700.8" font-size="26" font-style="italic" fill="#1c1a17">x</text><line x1="184.5" y1="707.8" x2="184.5" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="184.5" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="310.6" y1="707.8" x2="310.6" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="310.6" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="436.7" y1="707.8" x2="436.7" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="436.7" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="562.8" y1="707.8" x2="562.8" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="562.8" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="688.9" y1="707.8" x2="688.9" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="688.9" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="51.4" y1="528.8" x2="65.4" y2="528.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="536.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">10</text><line x1="51.4" y1="342.8" x2="65.4" y2="342.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="350.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">20</text><line x1="51.4" y1="156.8" x2="65.4" y2="156.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="164.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">30</text><circle cx="310.6" cy="647.8" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="310.6" cy="647.8" r="5" fill="#1c1a17"/><circle cx="562.8" cy="580.9" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="562.8" cy="580.9" r="5" fill="#1c1a17"/><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/><text x="72.4" y="26" font-size="26" font-style="italic" fill="#1c1a17" stroke="#f8f6f1" stroke-width="10" paint-order="stroke">y [Fr.]</text></svg></div>
+<div class="l graf" data-at="11.90" data-out="15.51" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><polyline points="58.4,714.8 59.9,714.4 61.3,714.0 62.8,713.6 64.2,713.3 65.7,712.9 67.1,712.5 68.6,712.1 70.0,711.7 71.4,711.3 72.9,711.0 74.3,710.6 75.8,710.2 77.2,709.8 78.7,709.4 80.1,709.0 81.6,708.7 83.0,708.3 84.4,707.9 85.9,707.5 87.3,707.1 88.8,706.7 90.2,706.4 91.7,706.0 93.1,705.6 94.6,705.2 96.0,704.8 97.5,704.4 98.9,704.1 100.3,703.7 101.8,703.3 103.2,702.9 104.7,702.5 106.1,702.1 107.6,701.8 109.0,701.4 110.5,701.0 111.9,700.6 113.3,700.2 114.8,699.8 116.2,699.5 117.7,699.1 119.1,698.7 120.6,698.3 122.0,697.9 123.5,697.5 124.9,697.2 126.4,696.8 127.8,696.4 129.2,696.0 130.7,695.6 132.1,695.2 133.6,694.9 135.0,694.5 136.5,694.1 137.9,693.7 139.4,693.3 140.8,692.9 142.2,692.5 143.7,692.2 145.1,691.8 146.6,691.4 148.0,691.0 149.5,690.6 150.9,690.2 152.4,689.9 153.8,689.5 155.2,689.1 156.7,688.7 158.1,688.3 159.6,687.9 161.0,687.6 162.5,687.2 163.9,686.8 165.4,686.4 166.8,686.0 168.3,685.6 169.7,685.3 171.1,684.9 172.6,684.5 174.0,684.1 175.5,683.7 176.9,683.3 178.4,683.0 179.8,682.6 181.3,682.2 182.7,681.8 184.1,681.4 185.6,681.0 187.0,680.7 188.5,680.3 189.9,679.9 191.4,679.5 192.8,679.1 194.3,678.7 195.7,678.4 197.2,678.0 198.6,677.6 200.0,677.2 201.5,676.8 202.9,676.4 204.4,676.1 205.8,675.7 207.3,675.3 208.7,674.9 210.2,674.5 211.6,674.1 213.0,673.8 214.5,673.4 215.9,673.0 217.4,672.6 218.8,672.2 220.3,671.8 221.7,671.5 223.2,671.1 224.6,670.7 226.1,670.3 227.5,669.9 228.9,669.5 230.4,669.1 231.8,668.8 233.3,668.4 234.7,668.0 236.2,667.6 237.6,667.2 239.1,666.8 240.5,666.5 241.9,666.1 243.4,665.7 244.8,665.3 246.3,664.9 247.7,664.5 249.2,664.2 250.6,663.8 252.1,663.4 253.5,663.0 254.9,662.6 256.4,662.2 257.8,661.9 259.3,661.5 260.7,661.1 262.2,660.7 263.6,660.3 265.1,659.9 266.5,659.6 268.0,659.2 269.4,658.8 270.8,658.4 272.3,658.0 273.7,657.6 275.2,657.3 276.6,656.9 278.1,656.5 279.5,656.1 281.0,655.7 282.4,655.3 283.8,655.0 285.3,654.6 286.7,654.2 288.2,653.8 289.6,653.4 291.1,653.0 292.5,652.7 294.0,652.3 295.4,651.9 296.9,651.5 298.3,651.1 299.7,650.7 301.2,650.4 302.6,650.0 304.1,649.6 305.5,649.2 307.0,648.8 308.4,648.4 309.9,648.0 311.3,647.7 312.7,647.3 314.2,646.9 315.6,646.5 317.1,646.1 318.5,645.7 320.0,645.4 321.4,645.0 322.9,644.6 324.3,644.2 325.7,643.8 327.2,643.4 328.6,643.1 330.1,642.7 331.5,642.3 333.0,641.9 334.4,641.5 335.9,641.1 337.3,640.8 338.8,640.4 340.2,640.0 341.6,639.6 343.1,639.2 344.5,638.8 346.0,638.5 347.4,638.1 348.9,637.7 350.3,637.3 351.8,636.9 353.2,636.5 354.6,636.2 356.1,635.8 357.5,635.4 359.0,635.0 360.4,634.6 361.9,634.2 363.3,633.9 364.8,633.5 366.2,633.1 367.7,632.7 369.1,632.3 370.5,631.9 372.0,631.6 373.4,631.2 374.9,630.8 376.3,630.4 377.8,630.0 379.2,629.6 380.7,629.3 382.1,628.9 383.5,628.5 385.0,628.1 386.4,627.7 387.9,627.3 389.3,626.9 390.8,626.6 392.2,626.2 393.7,625.8 395.1,625.4 396.6,625.0 398.0,624.6 399.4,624.3 400.9,623.9 402.3,623.5 403.8,623.1 405.2,622.7 406.7,622.3 408.1,622.0 409.6,621.6 411.0,621.2 412.4,620.8 413.9,620.4 415.3,620.0 416.8,619.7 418.2,619.3 419.7,618.9 421.1,618.5 422.6,618.1 424.0,617.7 425.4,617.4 426.9,617.0 428.3,616.6 429.8,616.2 431.2,615.8 432.7,615.4 434.1,615.1 435.6,614.7 437.0,614.3 438.5,613.9 439.9,613.5 441.3,613.1 442.8,612.8 444.2,612.4 445.7,612.0 447.1,611.6 448.6,611.2 450.0,610.8 451.5,610.5 452.9,610.1 454.3,609.7 455.8,609.3 457.2,608.9 458.7,608.5 460.1,608.2 461.6,607.8 463.0,607.4 464.5,607.0 465.9,606.6 467.4,606.2 468.8,605.9 470.2,605.5 471.7,605.1 473.1,604.7 474.6,604.3 476.0,603.9 477.5,603.5 478.9,603.2 480.4,602.8 481.8,602.4 483.2,602.0 484.7,601.6 486.1,601.2 487.6,600.9 489.0,600.5 490.5,600.1 491.9,599.7 493.4,599.3 494.8,598.9 496.2,598.6 497.7,598.2 499.1,597.8 500.6,597.4 502.0,597.0 503.5,596.6 504.9,596.3 506.4,595.9 507.8,595.5 509.3,595.1 510.7,594.7 512.1,594.3 513.6,594.0 515.0,593.6 516.5,593.2 517.9,592.8 519.4,592.4 520.8,592.0 522.3,591.7 523.7,591.3 525.1,590.9 526.6,590.5 528.0,590.1 529.5,589.7 530.9,589.4 532.4,589.0 533.8,588.6 535.3,588.2 536.7,587.8 538.2,587.4 539.6,587.1 541.0,586.7 542.5,586.3 543.9,585.9 545.4,585.5 546.8,585.1 548.3,584.8 549.7,584.4 551.2,584.0 552.6,583.6 554.0,583.2 555.5,582.8 556.9,582.4 558.4,582.1 559.8,581.7 561.3,581.3 562.7,580.9 564.2,580.5 565.6,580.1 567.1,579.8 568.5,579.4 569.9,579.0 571.4,578.6 572.8,578.2 574.3,577.8 575.7,577.5 577.2,577.1 578.6,576.7 580.1,576.3 581.5,575.9 582.9,575.5 584.4,575.2 585.8,574.8 587.3,574.4 588.7,574.0 590.2,573.6 591.6,573.2 593.1,572.9 594.5,572.5 595.9,572.1 597.4,571.7 598.8,571.3 600.3,570.9 601.7,570.6 603.2,570.2 604.6,569.8 606.1,569.4 607.5,569.0 609.0,568.6 610.4,568.3 611.8,567.9 613.3,567.5 614.7,567.1 616.2,566.7 617.6,566.3 619.1,566.0 620.5,565.6 622.0,565.2 623.4,564.8 624.8,564.4 626.3,564.0 627.7,563.7 629.2,563.3 630.6,562.9 632.1,562.5 633.5,562.1 635.0,561.7 636.4,561.4 637.9,561.0 639.3,560.6 640.7,560.2 642.2,559.8 643.6,559.4 645.1,559.0 646.5,558.7 648.0,558.3 649.4,557.9 650.9,557.5 652.3,557.1 653.7,556.7 655.2,556.4 656.6,556.0 658.1,555.6 659.5,555.2 661.0,554.8 662.4,554.4 663.9,554.1 665.3,553.7 666.8,553.3 668.2,552.9 669.6,552.5 671.1,552.1 672.5,551.8 674.0,551.4 675.4,551.0 676.9,550.6 678.3,550.2 679.8,549.8 681.2,549.5 682.6,549.1 684.1,548.7 685.5,548.3 687.0,547.9 688.4,547.5 689.9,547.2 691.3,546.8 692.8,546.4 694.2,546.0 695.6,545.6 697.1,545.2 698.5,544.9 700.0,544.5 701.4,544.1 702.9,543.7 704.3,543.3 705.8,542.9 707.2,542.6 708.7,542.2 710.1,541.8 711.5,541.4 713.0,541.0 714.4,540.6 715.9,540.3 717.3,539.9 718.8,539.5 720.2,539.1 721.7,538.7 723.1,538.3 724.5,537.9 726.0,537.6 727.4,537.2 728.9,536.8 730.3,536.4 731.8,536.0 733.2,535.6 734.7,535.3 736.1,534.9 737.6,534.5 739.0,534.1 740.4,533.7 741.9,533.3 743.3,533.0 744.8,532.6 746.2,532.2 747.7,531.8 749.1,531.4 750.6,531.0 752.0,530.7" fill="none" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="15.56" data-out="26.60" data-anim="rise" style="left:150px;top:280px;font-size:62px"><span>\(y = 2.5x + 6\)</span></div>
+<div class="l m row" data-at="18.36" data-out="26.60" data-anim="rise" style="left:150px;top:400px;font-size:50px"><span>\(x = 4: \; 2.5 \cdot 4 + 6 = \fc{16} \neq 22\)</span></div>
+<div class="l hand" data-at="22.08" data-out="26.60" data-anim="rise" style="left:150px;top:540px;font-size:42px;color:var(--blau)">linear mit Anfangswert:<br>weder doppelt noch halb</div>
+<div class="l graf" data-at="15.56" data-out="26.60" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="184.5" y1="0" x2="184.5" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="310.6" y1="0" x2="310.6" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="436.7" y1="0" x2="436.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="562.8" y1="0" x2="562.8" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="688.9" y1="0" x2="688.9" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="528.8" x2="760" y2="528.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="342.8" x2="760" y2="342.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="156.8" x2="760" y2="156.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="714.8" x2="760" y2="714.8" stroke="#1c1a17" stroke-width="3"/><line x1="58.4" y1="760" x2="58.4" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,714.8 742.0,705.8 742.0,723.8" fill="#1c1a17"/><polygon points="58.4,0 49.4,18 67.4,18" fill="#1c1a17"/><text x="734.0" y="700.8" font-size="26" font-style="italic" fill="#1c1a17">x</text><line x1="184.5" y1="707.8" x2="184.5" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="184.5" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="310.6" y1="707.8" x2="310.6" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="310.6" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="436.7" y1="707.8" x2="436.7" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="436.7" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="562.8" y1="707.8" x2="562.8" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="562.8" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="688.9" y1="707.8" x2="688.9" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="688.9" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="51.4" y1="528.8" x2="65.4" y2="528.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="536.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">10</text><line x1="51.4" y1="342.8" x2="65.4" y2="342.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="350.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">20</text><line x1="51.4" y1="156.8" x2="65.4" y2="156.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="164.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">30</text><circle cx="310.6" cy="510.2" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="310.6" cy="510.2" r="5" fill="#1c1a17"/><text x="332.1" y="551.5" font-size="29" font-weight="600" fill="#1c1a17" text-anchor="start">(2 | 11)</text><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/><text x="72.4" y="26" font-size="26" font-style="italic" fill="#1c1a17" stroke="#f8f6f1" stroke-width="10" paint-order="stroke">y [Fr.]</text></svg></div>
+<div class="l graf" data-at="22.08" data-out="26.60" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><polyline points="58.4,603.2 59.9,602.7 61.3,602.1 62.8,601.6 64.2,601.1 65.7,600.5 67.1,600.0 68.6,599.5 70.0,598.9 71.4,598.4 72.9,597.9 74.3,597.3 75.8,596.8 77.2,596.3 78.7,595.7 80.1,595.2 81.6,594.7 83.0,594.1 84.4,593.6 85.9,593.1 87.3,592.5 88.8,592.0 90.2,591.5 91.7,590.9 93.1,590.4 94.6,589.9 96.0,589.3 97.5,588.8 98.9,588.3 100.3,587.7 101.8,587.2 103.2,586.7 104.7,586.1 106.1,585.6 107.6,585.1 109.0,584.6 110.5,584.0 111.9,583.5 113.3,583.0 114.8,582.4 116.2,581.9 117.7,581.4 119.1,580.8 120.6,580.3 122.0,579.8 123.5,579.2 124.9,578.7 126.4,578.2 127.8,577.6 129.2,577.1 130.7,576.6 132.1,576.0 133.6,575.5 135.0,575.0 136.5,574.4 137.9,573.9 139.4,573.4 140.8,572.8 142.2,572.3 143.7,571.8 145.1,571.2 146.6,570.7 148.0,570.2 149.5,569.6 150.9,569.1 152.4,568.6 153.8,568.0 155.2,567.5 156.7,567.0 158.1,566.4 159.6,565.9 161.0,565.4 162.5,564.8 163.9,564.3 165.4,563.8 166.8,563.2 168.3,562.7 169.7,562.2 171.1,561.6 172.6,561.1 174.0,560.6 175.5,560.0 176.9,559.5 178.4,559.0 179.8,558.4 181.3,557.9 182.7,557.4 184.1,556.8 185.6,556.3 187.0,555.8 188.5,555.2 189.9,554.7 191.4,554.2 192.8,553.6 194.3,553.1 195.7,552.6 197.2,552.0 198.6,551.5 200.0,551.0 201.5,550.5 202.9,549.9 204.4,549.4 205.8,548.9 207.3,548.3 208.7,547.8 210.2,547.3 211.6,546.7 213.0,546.2 214.5,545.7 215.9,545.1 217.4,544.6 218.8,544.1 220.3,543.5 221.7,543.0 223.2,542.5 224.6,541.9 226.1,541.4 227.5,540.9 228.9,540.3 230.4,539.8 231.8,539.3 233.3,538.7 234.7,538.2 236.2,537.7 237.6,537.1 239.1,536.6 240.5,536.1 241.9,535.5 243.4,535.0 244.8,534.5 246.3,533.9 247.7,533.4 249.2,532.9 250.6,532.3 252.1,531.8 253.5,531.3 254.9,530.7 256.4,530.2 257.8,529.7 259.3,529.1 260.7,528.6 262.2,528.1 263.6,527.5 265.1,527.0 266.5,526.5 268.0,525.9 269.4,525.4 270.8,524.9 272.3,524.3 273.7,523.8 275.2,523.3 276.6,522.7 278.1,522.2 279.5,521.7 281.0,521.1 282.4,520.6 283.8,520.1 285.3,519.5 286.7,519.0 288.2,518.5 289.6,518.0 291.1,517.4 292.5,516.9 294.0,516.4 295.4,515.8 296.9,515.3 298.3,514.8 299.7,514.2 301.2,513.7 302.6,513.2 304.1,512.6 305.5,512.1 307.0,511.6 308.4,511.0 309.9,510.5 311.3,510.0 312.7,509.4 314.2,508.9 315.6,508.4 317.1,507.8 318.5,507.3 320.0,506.8 321.4,506.2 322.9,505.7 324.3,505.2 325.7,504.6 327.2,504.1 328.6,503.6 330.1,503.0 331.5,502.5 333.0,502.0 334.4,501.4 335.9,500.9 337.3,500.4 338.8,499.8 340.2,499.3 341.6,498.8 343.1,498.2 344.5,497.7 346.0,497.2 347.4,496.6 348.9,496.1 350.3,495.6 351.8,495.0 353.2,494.5 354.6,494.0 356.1,493.4 357.5,492.9 359.0,492.4 360.4,491.8 361.9,491.3 363.3,490.8 364.8,490.2 366.2,489.7 367.7,489.2 369.1,488.6 370.5,488.1 372.0,487.6 373.4,487.0 374.9,486.5 376.3,486.0 377.8,485.4 379.2,484.9 380.7,484.4 382.1,483.8 383.5,483.3 385.0,482.8 386.4,482.3 387.9,481.7 389.3,481.2 390.8,480.7 392.2,480.1 393.7,479.6 395.1,479.1 396.6,478.5 398.0,478.0 399.4,477.5 400.9,476.9 402.3,476.4 403.8,475.9 405.2,475.3 406.7,474.8 408.1,474.3 409.6,473.7 411.0,473.2 412.4,472.7 413.9,472.1 415.3,471.6 416.8,471.1 418.2,470.5 419.7,470.0 421.1,469.5 422.6,468.9 424.0,468.4 425.4,467.9 426.9,467.3 428.3,466.8 429.8,466.3 431.2,465.7 432.7,465.2 434.1,464.7 435.6,464.1 437.0,463.6 438.5,463.1 439.9,462.5 441.3,462.0 442.8,461.5 444.2,460.9 445.7,460.4 447.1,459.9 448.6,459.3 450.0,458.8 451.5,458.3 452.9,457.7 454.3,457.2 455.8,456.7 457.2,456.1 458.7,455.6 460.1,455.1 461.6,454.5 463.0,454.0 464.5,453.5 465.9,452.9 467.4,452.4 468.8,451.9 470.2,451.3 471.7,450.8 473.1,450.3 474.6,449.8 476.0,449.2 477.5,448.7 478.9,448.2 480.4,447.6 481.8,447.1 483.2,446.6 484.7,446.0 486.1,445.5 487.6,445.0 489.0,444.4 490.5,443.9 491.9,443.4 493.4,442.8 494.8,442.3 496.2,441.8 497.7,441.2 499.1,440.7 500.6,440.2 502.0,439.6 503.5,439.1 504.9,438.6 506.4,438.0 507.8,437.5 509.3,437.0 510.7,436.4 512.1,435.9 513.6,435.4 515.0,434.8 516.5,434.3 517.9,433.8 519.4,433.2 520.8,432.7 522.3,432.2 523.7,431.6 525.1,431.1 526.6,430.6 528.0,430.0 529.5,429.5 530.9,429.0 532.4,428.4 533.8,427.9 535.3,427.4 536.7,426.8 538.2,426.3 539.6,425.8 541.0,425.2 542.5,424.7 543.9,424.2 545.4,423.6 546.8,423.1 548.3,422.6 549.7,422.0 551.2,421.5 552.6,421.0 554.0,420.4 555.5,419.9 556.9,419.4 558.4,418.8 559.8,418.3 561.3,417.8 562.7,417.2 564.2,416.7 565.6,416.2 567.1,415.7 568.5,415.1 569.9,414.6 571.4,414.1 572.8,413.5 574.3,413.0 575.7,412.5 577.2,411.9 578.6,411.4 580.1,410.9 581.5,410.3 582.9,409.8 584.4,409.3 585.8,408.7 587.3,408.2 588.7,407.7 590.2,407.1 591.6,406.6 593.1,406.1 594.5,405.5 595.9,405.0 597.4,404.5 598.8,403.9 600.3,403.4 601.7,402.9 603.2,402.3 604.6,401.8 606.1,401.3 607.5,400.7 609.0,400.2 610.4,399.7 611.8,399.1 613.3,398.6 614.7,398.1 616.2,397.5 617.6,397.0 619.1,396.5 620.5,395.9 622.0,395.4 623.4,394.9 624.8,394.3 626.3,393.8 627.7,393.3 629.2,392.7 630.6,392.2 632.1,391.7 633.5,391.1 635.0,390.6 636.4,390.1 637.9,389.5 639.3,389.0 640.7,388.5 642.2,387.9 643.6,387.4 645.1,386.9 646.5,386.3 648.0,385.8 649.4,385.3 650.9,384.7 652.3,384.2 653.7,383.7 655.2,383.1 656.6,382.6 658.1,382.1 659.5,381.6 661.0,381.0 662.4,380.5 663.9,380.0 665.3,379.4 666.8,378.9 668.2,378.4 669.6,377.8 671.1,377.3 672.5,376.8 674.0,376.2 675.4,375.7 676.9,375.2 678.3,374.6 679.8,374.1 681.2,373.6 682.6,373.0 684.1,372.5 685.5,372.0 687.0,371.4 688.4,370.9 689.9,370.4 691.3,369.8 692.8,369.3 694.2,368.8 695.6,368.2 697.1,367.7 698.5,367.2 700.0,366.6 701.4,366.1 702.9,365.6 704.3,365.0 705.8,364.5 707.2,364.0 708.7,363.4 710.1,362.9 711.5,362.4 713.0,361.8 714.4,361.3 715.9,360.8 717.3,360.2 718.8,359.7 720.2,359.2 721.7,358.6 723.1,358.1 724.5,357.6 726.0,357.0 727.4,356.5 728.9,356.0 730.3,355.4 731.8,354.9 733.2,354.4 734.7,353.8 736.1,353.3 737.6,352.8 739.0,352.2 740.4,351.7 741.9,351.2 743.3,350.6 744.8,350.1 746.2,349.6 747.7,349.0 749.1,348.5 750.6,348.0 752.0,347.5" fill="none" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/></svg></div>
+<div class="l graf" data-at="18.36" data-out="26.60" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><circle cx="562.8" cy="417.2" r="11" fill="#f8f6f1" stroke="#1f6b3a" stroke-width="3.5"/><circle cx="562.8" cy="417.2" r="5" fill="#1f6b3a"/><text x="584.3" y="458.5" font-size="29" font-weight="600" fill="#1f6b3a" text-anchor="start">(4 | 16)</text><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/></svg></div>
+<div class="l m row" data-at="26.90" data-out="43.33" data-anim="rise" style="left:150px;top:280px;font-size:64px"><span>\(y = \dfrac{36}{x}\)</span></div>
+<div class="l hand" data-at="36.28" data-out="43.33" data-anim="rise" style="left:150px;top:450px;font-size:44px;color:var(--blau)">antiproportional:<br>x doppelt, y halb</div>
+<div class="l graf" data-at="26.65" data-out="43.33" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><line x1="184.5" y1="0" x2="184.5" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="310.6" y1="0" x2="310.6" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="436.7" y1="0" x2="436.7" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="562.8" y1="0" x2="562.8" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="688.9" y1="0" x2="688.9" y2="760" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="528.8" x2="760" y2="528.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="342.8" x2="760" y2="342.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="156.8" x2="760" y2="156.8" stroke="#1c1a17" stroke-opacity=".13" stroke-width="1.5"/><line x1="0" y1="714.8" x2="760" y2="714.8" stroke="#1c1a17" stroke-width="3"/><line x1="58.4" y1="760" x2="58.4" y2="0" stroke="#1c1a17" stroke-width="3"/><polygon points="760.0,714.8 742.0,705.8 742.0,723.8" fill="#1c1a17"/><polygon points="58.4,0 49.4,18 67.4,18" fill="#1c1a17"/><line x1="184.5" y1="707.8" x2="184.5" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="184.5" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">1</text><line x1="310.6" y1="707.8" x2="310.6" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="310.6" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">2</text><line x1="436.7" y1="707.8" x2="436.7" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="436.7" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">3</text><line x1="562.8" y1="707.8" x2="562.8" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="562.8" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">4</text><line x1="688.9" y1="707.8" x2="688.9" y2="721.8" stroke="#1c1a17" stroke-width="2.5"/><text x="688.9" y="746.8" font-size="22" text-anchor="middle" fill="#1c1a17" fill-opacity=".75">5</text><line x1="51.4" y1="528.8" x2="65.4" y2="528.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="536.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">10</text><line x1="51.4" y1="342.8" x2="65.4" y2="342.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="350.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">20</text><line x1="51.4" y1="156.8" x2="65.4" y2="156.8" stroke="#1c1a17" stroke-width="2.5"/><text x="45.4" y="164.8" font-size="22" text-anchor="end" fill="#1c1a17" fill-opacity=".75">30</text><circle cx="310.6" cy="380.0" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="310.6" cy="380.0" r="5" fill="#1c1a17"/><text x="332.1" y="421.3" font-size="29" font-weight="600" fill="#1c1a17" text-anchor="start">(2 | 18)</text><circle cx="562.8" cy="547.4" r="11" fill="#f8f6f1" stroke="#1c1a17" stroke-width="3.5"/><circle cx="562.8" cy="547.4" r="5" fill="#1c1a17"/><text x="584.3" y="588.7" font-size="29" font-weight="600" fill="#1c1a17" text-anchor="start">(4 | 9)</text><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/><text x="752.0" y="698.8" font-size="26" font-style="italic" fill="#1c1a17" stroke="#f8f6f1" stroke-width="10" paint-order="stroke" text-anchor="end">x [Personen]</text><text x="72.4" y="26" font-size="26" font-style="italic" fill="#1c1a17" stroke="#f8f6f1" stroke-width="10" paint-order="stroke">y [Fr.]</text></svg></div>
+<div class="l graf" data-at="39.10" data-out="43.33" data-anim="fade" style="left:1010px;top:175px"><svg width="760" height="760" viewBox="0 0 760 760"><polyline points="178.2,10.0 179.4,16.9 180.6,23.7 181.8,30.4 183.0,37.0 184.2,43.5 185.4,49.8 186.6,56.0 187.8,62.1 189.0,68.0 190.2,73.9 191.4,79.7 192.6,85.3 193.8,90.9 195.0,96.4 196.2,101.7 197.4,107.0 198.6,112.2 199.8,117.3 200.9,122.3 202.1,127.2 203.3,132.1 204.5,136.8 205.7,141.5 206.9,146.1 208.1,150.7 209.3,155.1 210.5,159.5 211.7,163.9 212.9,168.1 214.1,172.3 215.3,176.5 216.5,180.5 217.7,184.6 218.9,188.5 220.1,192.4 221.3,196.2 222.5,200.0 223.7,203.7 224.9,207.4 226.1,211.0 227.2,214.6 228.4,218.1 229.6,221.6 230.8,225.0 232.0,228.4 233.2,231.7 234.4,235.0 235.6,238.2 236.8,241.4 238.0,244.6 239.2,247.7 240.4,250.7 241.6,253.8 242.8,256.8 244.0,259.7 245.2,262.6 246.4,265.5 247.6,268.3 248.8,271.1 250.0,273.9 251.2,276.6 252.3,279.3 253.5,282.0 254.7,284.7 255.9,287.3 257.1,289.8 258.3,292.4 259.5,294.9 260.7,297.4 261.9,299.8 263.1,302.2 264.3,304.6 265.5,307.0 266.7,309.3 267.9,311.7 269.1,313.9 270.3,316.2 271.5,318.4 272.7,320.7 273.9,322.8 275.1,325.0 276.3,327.1 277.5,329.3 278.6,331.3 279.8,333.4 281.0,335.5 282.2,337.5 283.4,339.5 284.6,341.5 285.8,343.4 287.0,345.4 288.2,347.3 289.4,349.2 290.6,351.1 291.8,353.0 293.0,354.8 294.2,356.6 295.4,358.4 296.6,360.2 297.8,362.0 299.0,363.7 300.2,365.5 301.4,367.2 302.6,368.9 303.7,370.6 304.9,372.3 306.1,373.9 307.3,375.5 308.5,377.2 309.7,378.8 310.9,380.4 312.1,381.9 313.3,383.5 314.5,385.0 315.7,386.6 316.9,388.1 318.1,389.6 319.3,391.1 320.5,392.6 321.7,394.0 322.9,395.5 324.1,396.9 325.3,398.3 326.5,399.8 327.7,401.2 328.8,402.5 330.0,403.9 331.2,405.3 332.4,406.6 333.6,408.0 334.8,409.3 336.0,410.6 337.2,411.9 338.4,413.2 339.6,414.5 340.8,415.8 342.0,417.0 343.2,418.3 344.4,419.5 345.6,420.7 346.8,422.0 348.0,423.2 349.2,424.4 350.4,425.6 351.6,426.7 352.8,427.9 354.0,429.1 355.1,430.2 356.3,431.4 357.5,432.5 358.7,433.6 359.9,434.7 361.1,435.8 362.3,436.9 363.5,438.0 364.7,439.1 365.9,440.2 367.1,441.2 368.3,442.3 369.5,443.3 370.7,444.4 371.9,445.4 373.1,446.4 374.3,447.5 375.5,448.5 376.7,449.5 377.9,450.5 379.1,451.4 380.2,452.4 381.4,453.4 382.6,454.4 383.8,455.3 385.0,456.3 386.2,457.2 387.4,458.1 388.6,459.1 389.8,460.0 391.0,460.9 392.2,461.8 393.4,462.7 394.6,463.6 395.8,464.5 397.0,465.4 398.2,466.3 399.4,467.1 400.6,468.0 401.8,468.9 403.0,469.7 404.2,470.6 405.4,471.4 406.5,472.2 407.7,473.1 408.9,473.9 410.1,474.7 411.3,475.5 412.5,476.3 413.7,477.1 414.9,477.9 416.1,478.7 417.3,479.5 418.5,480.3 419.7,481.1 420.9,481.8 422.1,482.6 423.3,483.4 424.5,484.1 425.7,484.9 426.9,485.6 428.1,486.4 429.3,487.1 430.5,487.8 431.6,488.6 432.8,489.3 434.0,490.0 435.2,490.7 436.4,491.4 437.6,492.1 438.8,492.8 440.0,493.5 441.2,494.2 442.4,494.9 443.6,495.6 444.8,496.3 446.0,496.9 447.2,497.6 448.4,498.3 449.6,498.9 450.8,499.6 452.0,500.2 453.2,500.9 454.4,501.5 455.6,502.2 456.8,502.8 457.9,503.4 459.1,504.1 460.3,504.7 461.5,505.3 462.7,505.9 463.9,506.6 465.1,507.2 466.3,507.8 467.5,508.4 468.7,509.0 469.9,509.6 471.1,510.2 472.3,510.8 473.5,511.4 474.7,511.9 475.9,512.5 477.1,513.1 478.3,513.7 479.5,514.2 480.7,514.8 481.9,515.4 483.0,515.9 484.2,516.5 485.4,517.1 486.6,517.6 487.8,518.2 489.0,518.7 490.2,519.2 491.4,519.8 492.6,520.3 493.8,520.9 495.0,521.4 496.2,521.9 497.4,522.4 498.6,523.0 499.8,523.5 501.0,524.0 502.2,524.5 503.4,525.0 504.6,525.5 505.8,526.0 507.0,526.5 508.2,527.0 509.3,527.5 510.5,528.0 511.7,528.5 512.9,529.0 514.1,529.5 515.3,530.0 516.5,530.5 517.7,530.9 518.9,531.4 520.1,531.9 521.3,532.4 522.5,532.8 523.7,533.3 524.9,533.8 526.1,534.2 527.3,534.7 528.5,535.2 529.7,535.6 530.9,536.1 532.1,536.5 533.3,537.0 534.4,537.4 535.6,537.9 536.8,538.3 538.0,538.7 539.2,539.2 540.4,539.6 541.6,540.0 542.8,540.5 544.0,540.9 545.2,541.3 546.4,541.8 547.6,542.2 548.8,542.6 550.0,543.0 551.2,543.4 552.4,543.9 553.6,544.3 554.8,544.7 556.0,545.1 557.2,545.5 558.4,545.9 559.6,546.3 560.7,546.7 561.9,547.1 563.1,547.5 564.3,547.9 565.5,548.3 566.7,548.7 567.9,549.1 569.1,549.5 570.3,549.8 571.5,550.2 572.7,550.6 573.9,551.0 575.1,551.4 576.3,551.7 577.5,552.1 578.7,552.5 579.9,552.9 581.1,553.2 582.3,553.6 583.5,554.0 584.7,554.3 585.8,554.7 587.0,555.1 588.2,555.4 589.4,555.8 590.6,556.1 591.8,556.5 593.0,556.8 594.2,557.2 595.4,557.6 596.6,557.9 597.8,558.2 599.0,558.6 600.2,558.9 601.4,559.3 602.6,559.6 603.8,560.0 605.0,560.3 606.2,560.6 607.4,561.0 608.6,561.3 609.8,561.6 610.9,562.0 612.1,562.3 613.3,562.6 614.5,563.0 615.7,563.3 616.9,563.6 618.1,563.9 619.3,564.3 620.5,564.6 621.7,564.9 622.9,565.2 624.1,565.5 625.3,565.8 626.5,566.2 627.7,566.5 628.9,566.8 630.1,567.1 631.3,567.4 632.5,567.7 633.7,568.0 634.9,568.3 636.1,568.6 637.2,568.9 638.4,569.2 639.6,569.5 640.8,569.8 642.0,570.1 643.2,570.4 644.4,570.7 645.6,571.0 646.8,571.3 648.0,571.6 649.2,571.9 650.4,572.2 651.6,572.4 652.8,572.7 654.0,573.0 655.2,573.3 656.4,573.6 657.6,573.9 658.8,574.1 660.0,574.4 661.2,574.7 662.3,575.0 663.5,575.3 664.7,575.5 665.9,575.8 667.1,576.1 668.3,576.4 669.5,576.6 670.7,576.9 671.9,577.2 673.1,577.4 674.3,577.7 675.5,578.0 676.7,578.2 677.9,578.5 679.1,578.8 680.3,579.0 681.5,579.3 682.7,579.5 683.9,579.8 685.1,580.0 686.3,580.3 687.5,580.6 688.6,580.8 689.8,581.1 691.0,581.3 692.2,581.6 693.4,581.8 694.6,582.1 695.8,582.3 697.0,582.6 698.2,582.8 699.4,583.1 700.6,583.3 701.8,583.6 703.0,583.8 704.2,584.0 705.4,584.3 706.6,584.5 707.8,584.8 709.0,585.0 710.2,585.2 711.4,585.5 712.6,585.7 713.7,585.9 714.9,586.2 716.1,586.4 717.3,586.6 718.5,586.9 719.7,587.1 720.9,587.3 722.1,587.6 723.3,587.8 724.5,588.0 725.7,588.3 726.9,588.5 728.1,588.7 729.3,588.9 730.5,589.2 731.7,589.4 732.9,589.6 734.1,589.8 735.3,590.0 736.5,590.3 737.7,590.5 738.9,590.7 740.0,590.9 741.2,591.1 742.4,591.4 743.6,591.6 744.8,591.8 746.0,592.0 747.2,592.2 748.4,592.4 749.6,592.6 750.8,592.8 752.0,593.1" fill="none" stroke="#1a4f8a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path data-fenster="-0.4,5.5,-2,38,760,760,8" d="" fill="none"/></svg></div>
+<div class="l hand" data-at="45.50" data-out="56.44" data-anim="rise" style="left:150px;top:300px;font-size:42px;color:var(--blau)">y doppelt: proportional<br>y halb: antiproportional<br>weder noch, Gerade: linear mit Anfangswert</div>
+<div class="l hand" data-at="58.32" data-out="67.72" data-anim="rise" style="left:150px;top:300px;font-size:42px;color:var(--rot)">steigt: nicht automatisch proportional</div>
+<div class="l hand" data-at="62.30" data-out="67.72" data-anim="rise" style="left:150px;top:420px;font-size:42px;color:var(--rot)">fällt: nicht automatisch antiproportional</div>
+<div class="l hand mitte" data-at="68.12" data-out="81.21" data-anim="rise" style="left:150px;top:250px;font-size:76px;font-weight:600;color:var(--tinte)">Zum Mitnehmen</div>
+<div class="l hand" data-at="68.92" data-out="81.21" data-anim="rise" style="left:150px;top:400px;font-size:44px;color:var(--blau)">proportional: Gerade durch (0 ∣ 0)<br>linear: Gerade mit Anfangswert<br>antiproportional: Kehrwertgraph</div>
+<div class="l hand mitte" data-at="81.61" data-out="87.70" data-anim="rise" style="left:150px;top:280px;font-size:86px;font-weight:600;color:var(--tinte)">Jetzt du</div>
+<div class="l hand" data-at="81.81" data-out="87.70" data-anim="rise" style="left:150px;top:430px;font-size:50px;color:var(--blau)">Erkunde diese Zusammenhänge<br>in der Animation unter dem Clip<br>und löse die Aufgaben.</div>
+</div></div>
+<audio id="ton" preload="auto" src="ton/typ-lp-zusammenhaenge.mp3"></audio>
+<div id="ui">
+  <button id="pp">Pause</button>
+  <button id="ts" hidden>🔇 Ton an</button>
+  <div id="bar"><div id="barf"></div></div>
+  <span id="tt">0.0 s</span>
+  <span id="tip">Leertaste = Pause &middot; &larr; &rarr; = 5 s &middot; R = Neustart &middot; F = Vollbild</span>
+</div>
+<script>
+const DUR = 87.7;
+const SPRECHER = [{"bei": 0.4, "text": "Ein Liter Benzin kostet eins Komma achtzig Franken. Zwei Liter kosten drei Franken sechzig, vier Liter sieben Franken zwanzig. Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch null, null."}, {"bei": 15.91, "text": "Vier Kilometer kosten sechzehn Franken, nicht zweiundzwanzig. Die Grundtaxe zählt nur einmal. Das ist linear mit Anfangswert: eine Gerade, die nicht durch null, null geht."}, {"bei": 27.0, "text": "Eine Pizza-Bestellung kostet sechsunddreissig Franken. Bei zwei Personen zahlt jede achtzehn Franken, bei vier Personen neun. Doppelt so viele Personen, halb so viel pro Person: antiproportional. Das Produkt bleibt sechsunddreissig, der Graph ist ein Kehrwertgraph."}, {"bei": 43.73, "text": "So unterscheidest du: Mach den Doppelt-Test. Wird y doppelt so gross, ist es proportional. Wird y halb so gross, antiproportional. Weder noch, und der Graph ist eine Gerade: linear mit Anfangswert."}, {"bei": 56.84, "text": "Häufiger Fehler: Was steigt, ist nicht automatisch proportional, das Taxi zeigt es. Und was fällt, ist nicht automatisch antiproportional: Eine fallende Gerade ist linear."}, {"bei": 68.12, "text": "Zum Mitnehmen: Proportional ist eine Gerade durch null, null. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich."}, {"bei": 81.61, "text": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben."}];
+const stage = document.getElementById('stage');
+const layers = [...document.querySelectorAll('.l')].map(el => ({
+  el, at: parseFloat(el.dataset.at || '0'),
+  out: el.dataset.out ? parseFloat(el.dataset.out) : Infinity,
+  anim: el.dataset.anim || 'fade',
+  dim: el.dataset.dim ? el.dataset.dim.split(',').map(Number) : null
+}));
+const IN = 0.5, OUT = 0.4;
+// Teile eines Bildes mit eigenem "ein"/"aus" (g.zt): blenden fuer sich ein und aus.
+// Bewegte Figuren (g.fb): vorgerechnete Bilder, je eines zwischen data-fvon und data-fbis.
+const fbilder = [...document.querySelectorAll('g.fb')].map(el => ({
+  el, von: el.dataset.fvon ? parseFloat(el.dataset.fvon) : -Infinity,
+  bis: el.dataset.fbis ? parseFloat(el.dataset.fbis) : Infinity }));
+const zteile = [...document.querySelectorAll('g.zt')].map(el => ({
+  el, at: el.dataset.ein ? parseFloat(el.dataset.ein) : -Infinity,
+  out: el.dataset.aus ? parseFloat(el.dataset.aus) : Infinity }));
+const ease = p => 1 - Math.pow(1 - p, 3);
+const cl = p => p < 0 ? 0 : p > 1 ? 1 : p;
+function seek(t)  {
+  for (const L of layers) {
+    const pi = ease(cl((t - L.at) / IN));
+    const po = L.out === Infinity ? 0 : ease(cl((t - L.out) / OUT));
+    let o = pi * (1 - po), tr = '';
+    if (L.anim === 'rise') tr = 'translateY(' + ((1 - pi) * 26) + 'px)';
+    else if (L.anim === 'pop') tr = 'scale(' + (0.90 + 0.10 * pi) + ')';
+    else if (L.anim === 'wipe') { tr = 'scaleX(' + pi + ')'; o = (t >= L.at ? 1 : 0) * (1 - po); }
+    if (L.dim && !(t >= L.dim[0] && t < L.dim[1])) o *= 0.34;
+    L.el.style.transform = tr; L.el.style.opacity = o;
+  }
+  for (const Z of zteile) {
+    const pi = Z.at === -Infinity ? 1 : ease(cl((t - Z.at) / IN));
+    const po = Z.out === Infinity ? 0 : ease(cl((t - Z.out) / OUT));
+    Z.el.style.opacity = pi * (1 - po);
+  }
+  for (const F of fbilder) F.el.style.display = t >= F.von && t < F.bis ? '' : 'none';
+}
+const FRAGEN = [{"typ": "wahl", "text": "Ein Taxi kostet 6 Fr. Grundtaxe und 2.50 Fr. pro km. 2 km kosten 11 Fr. Was kosten 4 km?", "optionen": ["22 Fr.", "11 Fr.", "16 Fr."], "richtig": 2, "rueck": {"2": "Ja.", "0": "Die Grundtaxe bezahlst du nur einmal, nicht doppelt.", "1": "Pro Kilometer kommen 2.50 Fr. dazu."}, "t": 15.81, "ton": {"frage": "ton/typ-lp-zusammenhaenge-f0-frage.mp3", "r0": "ton/typ-lp-zusammenhaenge-f0-r0.mp3", "r1": "ton/typ-lp-zusammenhaenge-f0-r1.mp3"}}];
+(() => {
+  if (location.search.includes('render')) return;
+  const pp = document.getElementById('pp');
+  const css = document.createElement('style');
+  css.textContent = `
+    #frage{position:absolute;left:110px;top:560px;width:820px;z-index:50;display:none;
+      background:rgba(255,255,255,.97);border:3px solid var(--f2);border-radius:22px;
+      padding:28px 34px;box-shadow:0 10px 40px rgba(0,0,0,.18);font-family:inherit;color:inherit}
+    #frage .fr-kopf{font-size:26px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--f2);margin-bottom:10px}
+    #frage .fr-text{font-size:38px;line-height:1.3;margin-bottom:22px}
+    #frage .fr-knoepfe{display:flex;flex-wrap:wrap;gap:14px}
+    #frage button{font:inherit;font-size:32px;padding:10px 26px;border-radius:999px;cursor:pointer;
+      border:2.5px solid var(--f2);background:var(--f2w);color:inherit}
+    #frage button.ok{border-color:var(--f3);background:var(--f3w)}
+    #frage button.nein{border-color:var(--f4);background:var(--f4w)}
+    #frage .fr-rueck{font-size:32px;line-height:1.35;margin-top:20px}
+    #frage .fr-weiter{margin-top:20px}
+    #frage .fr-eingabe{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:30px;margin-top:14px;width:100%}
+    #frage .fr-eingabe input{font:inherit;font-size:30px;width:4.2em;padding:4px 10px;border:2.5px solid var(--f2);border-radius:12px}
+    .fr-tippbar, .fr-tippbar svg{pointer-events:auto !important;cursor:crosshair}`;
+  document.head.appendChild(css);
+  const box = document.createElement('div'); box.id = 'frage'; stage.appendChild(box);
+  let letzt = 0, offen = null, tippen = null, stimme = null, sprung = false;
+  // Vorlesen mit derselben Stimme wie der Clip — nur wenn dessen Ton an ist.
+  const hauptton = document.getElementById('ton');
+  const vorlesen = src => {
+    if (stimme) { stimme.pause(); stimme = null; }
+    if (!src || !hauptton || hauptton.muted) return;
+    stimme = new Audio(src); stimme.play().catch(() => {});
+  };
+  const erledigt = new Set();     // beantwortete Fragen
+  const pause = () => { if (pp.textContent === 'Pause') pp.click(); };
+  const weiter = () => { if (pp.textContent === 'Play') pp.click(); };
+  function schliessen() {
+    vorlesen(null);
+    // Fokus zurueck auf Play/Pause — auch wenn er mit dem gesperrten Antwortknopf
+    // schon auf <body> gefallen ist
+    const fo = document.activeElement;
+    if (!fo || fo === document.body || box.contains(fo)) pp.focus({ preventScroll: true });
+    box.style.display = 'none'; box.innerHTML = '';
+    document.querySelectorAll('.fr-marke').forEach(m => m.remove());
+    document.querySelectorAll('.fr-tippbar').forEach(l => l.classList.remove('fr-tippbar'));
+    if (tippen) { stage.removeEventListener('click', tippen); tippen = null; }
+    offen = null;
+  }
+  function antwort(F, ok, text, schl) {
+    const o = offen; erledigt.add(o.i);
+    box.dataset.fertig = '1';
+    vorlesen((F.ton || {})[schl]);
+    if (F.typ === 'klick') box.querySelector('.fr-knoepfe').innerHTML = '';
+    const r = box.querySelector('.fr-rueck');
+    r.innerHTML = (ok ? '✓ ' : '') + text;
+    r.style.color = ok ? 'var(--f3)' : '';
+    if (ok) {                      // richtig: kurz bestaetigen, dann von selbst weiter
+      setTimeout(() => { if (offen === o) { schliessen(); weiter(); } }, 1300);
+      return;
+    }
+    const w = document.createElement('button'); w.className = 'fr-weiter'; w.textContent = 'Weiter ▶';
+    w.onclick = () => { schliessen(); weiter(); };
+    box.appendChild(w); w.focus();
+  }
+  function zeigen(i, F) {
+    offen = { i, t: F.t }; pause(); delete box.dataset.fertig;
+    box.innerHTML = '<div class="fr-kopf"></div><div class="fr-text"></div>'
+      + '<div class="fr-knoepfe"></div><div class="fr-rueck"></div>';
+    box.querySelector('.fr-kopf').textContent = F.kopf || 'Deine Vorhersage';  // "kopf": z. B. «Dein Vorgehen»
+    box.querySelector('.fr-text').textContent = F.text;
+    const kn = box.querySelector('.fr-knoepfe');
+    if (F.typ === 'wahl') {
+      F.optionen.forEach((o, j) => {
+        const b = document.createElement('button'); b.textContent = o;
+        b.onclick = () => {
+          kn.querySelectorAll('button').forEach(x => x.disabled = true);
+          b.classList.add(j === F.richtig ? 'ok' : 'nein');
+          antwort(F, j === F.richtig, (F.rueck || {})[j] || (j === F.richtig ? 'Richtig.' : 'Schau, was der Clip zeigt.'), 'r' + j);
+        };
+        kn.appendChild(b);
+      });
+    } else if (F.typ === 'klick') {
+      const L = [...document.querySelectorAll('.l')].find(l => +l.style.opacity > 0.5 && l.querySelector('[data-fenster]'));
+      if (!L) { schliessen(); weiter(); return; }
+      const svg = L.querySelector('svg'), fe = L.querySelector('[data-fenster]').dataset.fenster.split(',').map(Number);
+      const [x0, x1, y0, y1, b, h, rd] = fe;
+      L.classList.add('fr-tippbar');
+      // Toleranz: eine Zahl (Abstand in Dateneinheiten) oder [dx, dy] je Achse —
+      // Letzteres, wenn die Achsen verschiedene Grössen tragen (s und C).
+      const tol = F.toleranz || 0.5;
+      // Ziel und Fallen sind ein Punkt [x, y] oder eine Strecke [[x1, y1], [x2, y2]] (seit 08.10.2026):
+      // Bei einer Strecke zaehlt ihr naechster Punkt — gerechnet in Toleranz-Einheiten, wenn die Achsen
+      // verschiedene Toleranzen tragen.
+      const tx_ = Array.isArray(tol) ? tol[0] : 1, ty_ = Array.isArray(tol) ? tol[1] : 1;
+      const fuss = (x, y, z) => {
+        if (!Array.isArray(z[0])) return z;
+        const [[ax, ay], [bx, by]] = z, dx = (bx - ax) / tx_, dy = (by - ay) / ty_, l2 = dx * dx + dy * dy;
+        const q = l2 ? Math.max(0, Math.min(1, ((x - ax) / tx_ * dx + (y - ay) / ty_ * dy) / l2)) : 0;
+        return [ax + (bx - ax) * q, ay + (by - ay) * q];
+      };
+      const nah = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.abs(x - z[0]) <= tol[0] && Math.abs(y - z[1]) <= tol[1]
+                                  : Math.hypot(x - z[0], y - z[1]) <= tol; };
+      // Wie weit weg, in Toleranzen — liegt ein Tipp in zwei Fallen, gewinnt die naechste (seit 08.10.2026)
+      const weit = (x, y, z) => { z = fuss(x, y, z);
+        return Array.isArray(tol) ? Math.max(Math.abs(x - z[0]) / tol[0], Math.abs(y - z[1]) / tol[1])
+                                  : Math.hypot(x - z[0], y - z[1]) / tol; };
+      const px = (x, y) => [rd + (x - x0) / (x1 - x0) * (b - 2 * rd), h - rd - (y - y0) / (y1 - y0) * (h - 2 * rd)];
+      const mk = (cx, cy, farbe) => { const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', 16); c.setAttribute('class', 'fr-marke');
+        c.setAttribute('fill', 'none'); c.setAttribute('stroke', farbe); c.setAttribute('stroke-width', 6); svg.appendChild(c); };
+      const pruefePunkt = (x, y) => {
+        mk(...px(x, y), 'var(--f2)');
+        if (nah(x, y, F.ziel)) return antwort(F, true, F.richtig_text || 'Getroffen.', 'ok');
+        if (Array.isArray(F.ziel[0])) {        // Strecke als Ziel: grün nachgezogen
+          const [a, e] = [px(...F.ziel[0]), px(...F.ziel[1])], l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          l.setAttribute('x1', a[0]); l.setAttribute('y1', a[1]); l.setAttribute('x2', e[0]); l.setAttribute('y2', e[1]);
+          l.setAttribute('class', 'fr-marke'); l.setAttribute('stroke', 'var(--f3)'); l.setAttribute('stroke-width', 14);
+          l.setAttribute('stroke-linecap', 'round'); l.setAttribute('stroke-opacity', '.6'); svg.appendChild(l);
+        } else mk(...px(F.ziel[0], F.ziel[1]), 'var(--f3)');
+        let fk = -1;
+        (F.fallen || []).forEach((f, k) => { if (nah(x, y, f.bei) && (fk < 0 || weit(x, y, f.bei) < weit(x, y, F.fallen[fk].bei))) fk = k; });
+        antwort(F, false, fk >= 0 ? F.fallen[fk].text : (F.falsch_text || 'Nicht ganz — der grüne Kreis zeigt die Stelle.'),
+                fk >= 0 ? 'fall' + fk : 'falsch');
+      };
+      // Am Stage horchen, nicht am Layer: unsichtbare spaetere Layer (Deckkraft 0)
+      // liegen obenauf und wuerden den Tipp abfangen.
+      tippen = ev => {
+        if (!offen || box.dataset.fertig || box.contains(ev.target)) return;
+        const r = svg.getBoundingClientRect();
+        if (ev.clientX < r.left || ev.clientX > r.right || ev.clientY < r.top || ev.clientY > r.bottom) return;
+        const sx = (ev.clientX - r.left) / r.width * b, sy = (ev.clientY - r.top) / r.height * h;
+        pruefePunkt(x0 + (sx - rd) / (b - 2 * rd) * (x1 - x0), y0 + (h - rd - sy) / (h - 2 * rd) * (y1 - y0));
+      };
+      stage.addEventListener('click', tippen);
+      kn.innerHTML = '<span style="font-size:30px;color:var(--f2)">👉 Tipp ins Bild rechts.</span>';
+      // Ohne Zeigegeraet: dieselbe Antwort als zwei Zahlen ("eingabe": [Name x, Name y])
+      if (F.eingabe) {
+        const f = document.createElement('form'); f.className = 'fr-eingabe';
+        f.innerHTML = '<span>oder eingeben:</span>' + F.eingabe.map((n, k) =>
+          '<label>' + n + ' <input inputmode="decimal" autocomplete="off" data-k="' + k + '"></label>').join('')
+          + '<button type="submit">Prüfen</button>';
+        f.onsubmit = ev => {
+          ev.preventDefault();
+          if (box.dataset.fertig) return;
+          const w = [...f.querySelectorAll('input')].map(i => parseFloat(i.value.replace(',', '.')));
+          if (w.some(isNaN)) { f.querySelector('input').focus(); return; }
+          pruefePunkt(w[0], w[1]);
+        };
+        kn.appendChild(f);
+      }
+    }
+    box.style.display = 'block';
+    // Fokus auf die erste Antwort: Tab, Enter und Leertaste reichen dann
+    const erst = box.querySelector('.fr-knoepfe button, .fr-eingabe input');
+    if (erst) erst.focus({ preventScroll: true });
+    vorlesen((F.ton || {}).frage);
+  }
+  // Spulen wird ausdruecklich erkannt: Pfeiltasten und ein Klick auf die
+  // Zeitleiste setzen ein Zeichen, das das naechste Bild auswertet. Ein
+  // spaetes Bild (langsames Laden, Hintergrund-Tab) ist kein Spulen.
+  // Neustart (R) und ein Sprung vor die erste Frage stellen alle Fragen neu;
+  // nach R laeuft der Clip ab 0 wie beim ersten Abspielen.
+  document.addEventListener('keydown', e => {
+    if (e.target && e.target.closest && e.target.closest('input, select, textarea')) return;
+    if ((e.key || '').toLowerCase() === 'r') { schliessen(); erledigt.clear(); letzt = 0; }
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') sprung = true;
+  });
+  const bar = document.getElementById('bar');
+  bar.addEventListener('click', () => { sprung = true; });
+  // Die Abspielzeit ist im Abspieler lokal; zurueckgestellt wird sie ueber
+  // dessen Zeitleiste.
+  const zurueck = s => {
+    const r = bar.getBoundingClientRect();
+    if (r.width > 0 && bar.onclick) bar.onclick({ currentTarget: bar, clientX: r.left + s / DUR * r.width });
+  };
+  const vorFragen = seek;
+  seek = function (t) {
+    vorFragen(t);
+    if (sprung) {
+      // gespult: eine uebersprungene Frage wird nicht gestellt, eine
+      // beantwortete kommt nicht wieder — ausser zurueck an den Anfang
+      sprung = false;
+      if (FRAGEN.length && t < Math.min(...FRAGEN.map(F => F.t))) { schliessen(); erledigt.clear(); }
+    } else if (!offen && pp.textContent === 'Pause') {
+      // gewoehnliches Abspielen, auch wenn ein Bild weit springt: die erste
+      // ueberschrittene Frage wird gestellt, der Clip geht an ihre Stelle zurueck
+      let i = -1;
+      FRAGEN.forEach((F, j) => {
+        if (!erledigt.has(j) && letzt < F.t && t >= F.t && (i < 0 || F.t < FRAGEN[i].t)) i = j;
+      });
+      if (i >= 0) {
+        zeigen(i, FRAGEN[i]);
+        if (offen && t - offen.t > 0.1) { t = offen.t; zurueck(t); vorFragen(t); }
+      }
+    }
+    if (offen && Math.abs(t - offen.t) > 1.0) schliessen();
+    letzt = t;
+  };
+})();
+window.__seek = seek;
+window.__dauer = DUR;
+if (!location.search.includes('render')) {
+  let t0 = performance.now(), playing = true, t = 0;
+  const barf = document.getElementById('barf'), tt = document.getElementById('tt'),
+        pp = document.getElementById('pp'), wrap = document.getElementById('wrap');
+  const fit = () => { stage.style.transform = 'translate(-50%,-50%) scale('
+      + Math.min(wrap.clientWidth / 1920, wrap.clientHeight / 1080) + ')'; };
+  window.addEventListener('resize', fit);
+  document.addEventListener('fullscreenchange', () => setTimeout(fit, 60));
+  fit();
+  // Der Ton laeuft von selbst und hoerbar los. Erlaubt ist das, weil der
+  // Klick auf die Clipkarte die noetige Nutzergeste war und das <iframe>
+  // sie ueber `allow="autoplay"` weitergereicht bekommt (clipRahmen in
+  // physiklib.js bzw. mathlib.js). Verweigert der Browser trotzdem — etwa wenn jemand die
+  // Clipdatei direkt aufruft, ohne vorher zu klicken —, faellt der Clip auf
+  // stumm zurueck und der Knopf «Ton an» holt ihn hervor. Sobald der Ton
+  // laeuft, fuehrt er die Uhr: Tondrift faellt auf, Bilddrift nicht.
+  const ton = document.getElementById('ton'), ts = document.getElementById('ts');
+  const tonBeschriften = () => {
+    if (ts) ts.textContent = (!ton || ton.muted) ? '🔇 Ton an' : '🔊 Ton aus';
+  };
+  if (ton) {
+    ts.hidden = false;
+    ton.muted = false;
+    ton.play().then(tonBeschriften).catch(() => {
+      ton.muted = true;
+      tonBeschriften();
+      ton.play().catch(() => {});
+    });
+    tonBeschriften();
+    ts.onclick = () => {
+      ton.muted = !ton.muted;
+      tonBeschriften();
+      if (!ton.muted) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); }
+    };
+  }
+  const tonLaeuft = () => ton && !ton.paused && !ton.ended;
+  function loop(now) {
+    if (playing) {
+      if (tonLaeuft()) t = ton.currentTime;
+      else { t += (now - t0) / 1000; if (t > DUR) t = DUR; }
+    }
+    t0 = now; seek(t);
+    barf.style.width = (t / DUR * 100) + '%'; tt.textContent = t.toFixed(1) + ' s';
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+  const tonAn = () => { if (ton) { ton.currentTime = t; if (playing) ton.play().catch(() => {}); } };
+  const toggle = () => {
+    playing = !playing;
+    pp.textContent = playing ? 'Pause' : 'Play';
+    if (ton) { if (playing) ton.play().catch(() => {}); else ton.pause(); }
+  };
+  pp.onclick = toggle;
+  // Tastenkuerzel nicht in Eingabefeldern; die Leertaste nicht auf Knoepfen —
+  // dort bestaetigt sie den Knopf (Antwort einer Frage, Play/Pause selbst).
+  document.addEventListener('keydown', e => {
+    const ziel = e.target && e.target.closest ? e.target : null;
+    if (ziel && ziel.closest('input, select, textarea')) return;
+    if (e.code === 'Space' && ziel && ziel.closest('button, a, summary')) return;
+    if (e.code === 'Space') { e.preventDefault(); toggle(); }
+    if (e.code === 'ArrowRight') { t = Math.min(DUR, t + 5); tonAn(); }
+    if (e.code === 'ArrowLeft') { t = Math.max(0, t - 5); tonAn(); }
+    const k = e.key.toLowerCase();
+    if (k === 'r') { t = 0; playing = true; pp.textContent = 'Pause'; tonAn(); }
+    if (k === 'f') document.documentElement.requestFullscreen?.();
+  });
+  document.getElementById('bar').onclick = e => {
+    const r = e.currentTarget.getBoundingClientRect();
+    t = (e.clientX - r.left) / r.width * DUR; tonAn();
+  };
+} else { document.body.classList.add('render'); seek(0); }
+</script></body></html>

@@ -1,0 +1,748 @@
+{
+ "titel": "Funktionen sehen: Proportional, antiproportional, linear",
+ "dateiname": "typ-lp-zusammenhaenge",
+ "kurzbeschrieb": "Benzin 1.80 Fr./l: proportional, Gerade durch (0 | 0); Taxi 6 Fr. + 2.50 Fr./km: linear mit Anfangswert, 4 km kosten 16 statt 22 Fr.; Pizza 36 Fr. geteilt: antiproportional, Kehrwertgraph; Doppelt-Test; Fehler «steigt, also proportional».",
+ "schlagworte": [
+  "proportional",
+  "antiproportional",
+  "linear",
+  "Anfangswert",
+  "Doppelt-Test"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 3,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Benzin",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Liter Benzin kostet eins Komma achtzig Franken. Zwei Liter kosten drei Franken sechzig, vier Liter sieben Franken zwanzig. Doppelt so viel Benzin, doppelt so teuer: proportional. Der Graph ist eine Gerade durch null, null.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = 1.8x",
+     "x": 150,
+     "y": 280,
+     "groesse": 62,
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "proportional:|x doppelt, y doppelt",
+     "x": 150,
+     "y": 420,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 7.74
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 3.6,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 7.2,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "xname": "x",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 11.9,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "1.8*x",
+       "farbe": 1,
+       "von": 0,
+       "bis": 5.5
+      }
+     ],
+     "xname": "x",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 15.51
+  },
+  {
+   "name": "Taxi",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vier Kilometer kosten sechzehn Franken, nicht zweiundzwanzig. Die Grundtaxe zählt nur einmal. Das ist linear mit Anfangswert: eine Gerade, die nicht durch null, null geht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = 2.5x + 6",
+     "x": 150,
+     "y": 280,
+     "groesse": 62,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "x = 4: \\; 2.5 \\cdot 4 + 6 = \\fc{16} \\neq 22",
+     "x": 150,
+     "y": 400,
+     "groesse": 50,
+     "ein": 2.85
+    },
+    {
+     "typ": "notiz",
+     "text": "linear mit Anfangswert:|weder doppelt noch halb",
+     "x": 150,
+     "y": 540,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 6.57
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 11,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(2 | 11)",
+       "beschriftung_bei": [
+        2.17,
+        8.778
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "xname": "x",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.57,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "2.5*x+6",
+       "farbe": 1,
+       "von": 0,
+       "bis": 5.5
+      }
+     ],
+     "xname": "x",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.85,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 4,
+       "y": 16,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(4 | 16)",
+       "beschriftung_bei": [
+        4.17,
+        13.778
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 11.09
+  },
+  {
+   "name": "Pizza",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Pizza-Bestellung kostet sechsunddreissig Franken. Bei zwei Personen zahlt jede achtzehn Franken, bei vier Personen neun. Doppelt so viele Personen, halb so viel pro Person: antiproportional. Das Produkt bleibt sechsunddreissig, der Graph ist ein Kehrwertgraph.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\dfrac{36}{x}",
+     "x": 150,
+     "y": 280,
+     "groesse": 64,
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "antiproportional:|x doppelt, y halb",
+     "x": 150,
+     "y": 450,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 9.68
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 18,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(2 | 18)",
+       "beschriftung_bei": [
+        2.17,
+        15.778
+       ]
+      },
+      {
+       "x": 4,
+       "y": 9,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(4 | 9)",
+       "beschriftung_bei": [
+        4.17,
+        6.778
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "xname": "x [Personen]",
+     "yname": "y [Fr.]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 12.5,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -0.4,
+      5.5
+     ],
+     "ybereich": [
+      -2,
+      38
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       5,
+       "5"
+      ]
+     ],
+     "yteilung": [
+      [
+       10,
+       "10"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       30,
+       "30"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "36/x",
+       "farbe": 1,
+       "von": 0.95,
+       "bis": 5.5
+      }
+     ],
+     "xname": "x [Personen]",
+     "yname": "y [Fr.]"
+    }
+   ],
+   "dauer": 16.73
+  },
+  {
+   "name": "Test",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "So unterscheidest du: Mach den Doppelt-Test. Wird y doppelt so gross, ist es proportional. Wird y halb so gross, antiproportional. Weder noch, und der Graph ist eine Gerade: linear mit Anfangswert.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "y doppelt: proportional|y halb: antiproportional|weder noch, Gerade: linear mit Anfangswert",
+     "x": 150,
+     "y": 300,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 2.17
+    }
+   ],
+   "dauer": 13.11
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: Was steigt, ist nicht automatisch proportional, das Taxi zeigt es. Und was fällt, ist nicht automatisch antiproportional: Eine fallende Gerade ist linear.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "steigt: nicht automatisch proportional",
+     "x": 150,
+     "y": 300,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 1.88
+    },
+    {
+     "typ": "notiz",
+     "text": "fällt: nicht automatisch antiproportional",
+     "x": 150,
+     "y": 420,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 5.86
+    }
+   ],
+   "dauer": 11.28
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Proportional ist eine Gerade durch null, null. Linear mit Anfangswert ist eine Gerade, die die y-Achse weiter oben oder unten trifft. Antiproportional ist ein Kehrwertgraph, das Produkt bleibt gleich.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "proportional: Gerade durch (0 ∣ 0)|linear: Gerade mit Anfangswert|antiproportional: Kehrwertgraph",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 13.49
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.49
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Taxi",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Taxi kostet 6 Fr. Grundtaxe und 2.50 Fr. pro km. 2 km kosten 11 Fr. Was kosten 4 km?",
+   "optionen": [
+    "22 Fr.",
+    "11 Fr.",
+    "16 Fr."
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Die Grundtaxe bezahlst du nur einmal, nicht doppelt.",
+    "1": "Pro Kilometer kommen 2.50 Fr. dazu."
+   },
+   "sprich": "Ein Taxi kostet sechs Franken Grundtaxe und zwei Franken fünfzig pro Kilometer. Zwei Kilometer kosten elf Franken. Was kosten vier Kilometer?",
+   "rueck_sprich": {
+    "0": "Die Grundtaxe bezahlst du nur einmal, nicht doppelt.",
+    "1": "Pro Kilometer kommen zwei Franken fünfzig dazu."
+   }
+  }
+ ]
+}

@@ -1,0 +1,908 @@
+{
+ "titel": "Funktionen sehen: Vier Graphen-Familien",
+ "dateiname": "typ-lp-familien",
+ "kurzbeschrieb": "Gerade y = x, Parabel y = x² (symmetrisch, Scheitel), Wurzelgraph y = √x (ab 0, immer flacher), Kehrwertgraph y = 1/x (zwei Äste, keine Achse); Vorhersage (4 | 2), (9 | 3); Testpunkt x = 4; Strecken mit a; Fehler: zu wenige Punkte.",
+ "schlagworte": [
+  "Parabel",
+  "Wurzel",
+  "Kehrwert",
+  "Gerade",
+  "Graph"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 1,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Gerade",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Verschiedene Gleichungen geben verschiedene Graphen. Die einfachste kennst du: y gleich x, eine Gerade durch null, null. Wird x um eins grösser, wird auch y um eins grösser.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = x",
+     "x": 150,
+     "y": 300,
+     "groesse": 72,
+     "ein": 3.36
+    },
+    {
+     "typ": "notiz",
+     "text": "Gerade: gleich viel mehr|bei jedem Schritt",
+     "x": 150,
+     "y": 450,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 8.24
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.16,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 11.42
+  },
+  {
+   "name": "Parabel",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "y gleich x Quadrat. Für x gleich zwei kommt vier heraus, für minus zwei auch vier. Der Graph ist symmetrisch zur y-Achse, hat unten einen Scheitel und wird nach aussen immer steiler. Das ist eine Parabel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = x^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 72,
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "Parabel: symmetrisch,|Scheitel, immer steiler",
+     "x": 150,
+     "y": 450,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 6.54
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 4,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(2 | 4)",
+       "beschriftung_bei": [
+        2.26,
+        3.5
+       ]
+      },
+      {
+       "x": -2,
+       "y": 4,
+       "farbe": 5,
+       "anker": "end",
+       "beschriftung": "(−2 | 4)",
+       "beschriftung_bei": [
+        -2.3,
+        4.6
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.54,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "x*x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 13.23
+  },
+  {
+   "name": "Wurzel",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "y gleich Wurzel aus x. Wurzel aus eins ist eins, Wurzel aus vier ist zwei. Der Graph beginnt bei null, null und wird immer flacher. Links von der y-Achse gibt es keine Punkte: Aus negativen Zahlen gibt es keine Wurzel.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\sqrt{x}",
+     "x": 150,
+     "y": 300,
+     "groesse": 72,
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "Wurzelgraph: ab (0 ∣ 0),|immer flacher, nur x ≥ 0",
+     "x": 150,
+     "y": 450,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 6.25
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 1,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(1 | 1)",
+       "beschriftung_bei": [
+        1.347,
+        0.667
+       ]
+      },
+      {
+       "x": 4,
+       "y": 2,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(4 | 2)",
+       "beschriftung_bei": [
+        4.347,
+        1.667
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      10.5
+     ],
+     "ybereich": [
+      -1,
+      5
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       9,
+       "9"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.25,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      10.5
+     ],
+     "ybereich": [
+      -1,
+      5
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       9,
+       "9"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "sqrt(x)",
+       "farbe": 1,
+       "von": 0,
+       "bis": 10.5
+      }
+     ]
+    }
+   ],
+   "dauer": 14.73
+  },
+  {
+   "name": "Kehrwert",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "y gleich eins durch x. Für x gleich eins kommt eins heraus, für zwei null Komma fünf, für null Komma fünf zwei. Bei null gibt es keinen Wert. Der Graph hat zwei Äste und trifft keine Achse.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\dfrac{1}{x}",
+     "x": 150,
+     "y": 300,
+     "groesse": 72,
+     "ein": 0.3
+    },
+    {
+     "typ": "notiz",
+     "text": "Kehrwertgraph: zwei Äste,|trifft keine Achse, x ≠ 0",
+     "x": 150,
+     "y": 488,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 9.22
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 1,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 0.5,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 0.5,
+       "y": 2,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.22,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "1/x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 12.49
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Wurzel aus vier ist zwei, Wurzel aus neun ist drei: Das passt zu y gleich Wurzel aus x. Bei y gleich x Quadrat wären es sechzehn und einundachtzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\sqrt{4} = 2, \\quad \\sqrt{9} = 3",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 3.75
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 4,
+       "y": 2,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(4 | 2)",
+       "beschriftung_bei": [
+        4.347,
+        1.667
+       ]
+      },
+      {
+       "x": 9,
+       "y": 3,
+       "farbe": 5,
+       "anker": "end",
+       "beschriftung": "(9 | 3)",
+       "beschriftung_bei": [
+        8.7,
+        3.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      10.5
+     ],
+     "ybereich": [
+      -1,
+      5
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       9,
+       "9"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.75,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      10.5
+     ],
+     "ybereich": [
+      -1,
+      5
+     ],
+     "xteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       9,
+       "9"
+      ]
+     ],
+     "yteilung": [
+      [
+       1,
+       "1"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       3,
+       "3"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "sqrt(x)",
+       "farbe": 3,
+       "von": 0,
+       "bis": 10.5
+      }
+     ]
+    }
+   ],
+   "dauer": 10.64
+  },
+  {
+   "name": "Testpunkt",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Mit Testpunkten ordnest du zu. Setz zum Beispiel x gleich vier ein: Die Gerade gibt vier, die Parabel sechzehn, die Wurzel zwei, der Kehrwert null Komma zwei fünf. Und x gleich null oder eine negative Zahl zeigt, wo es gar keinen Wert gibt.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x = 4: \\quad 4, \\;\\; 16, \\;\\; 2, \\;\\; 0.25",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 2.29
+    },
+    {
+     "typ": "notiz",
+     "text": "x = 0 und negative x:|Wo gibt es keinen Wert?",
+     "x": 150,
+     "y": 450,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 11.51
+    }
+   ],
+   "dauer": 15.05
+  },
+  {
+   "name": "Strecken",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Zahl davor streckt den Graphen. Zwei x Quadrat ist doppelt so hoch wie x Quadrat. Mit einem Minus davor kippt die Parabel nach unten.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = 2x^2 \\qquad y = -x^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 3.1
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "kurven": [
+      {
+       "formel": "x*x",
+       "farbe": 5,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.1,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "2*x*x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.12,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false,
+     "kurven": [
+      {
+       "formel": "-x*x",
+       "farbe": 2,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 8.99
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: zu wenige Punkte. Null, null und eins, eins liegen auf der Geraden und auf der Parabel. Erst x gleich zwei trennt die beiden: zwei gegen vier.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "(0 ∣ 0) und (1 ∣ 1) reichen nicht",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 1.63
+    },
+    {
+     "typ": "formel",
+     "text": "x = 2: \\quad 2 \\neq 4",
+     "x": 150,
+     "y": 430,
+     "groesse": 58,
+     "ein": 7.57
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 0,
+       "farbe": 4,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "farbe": 4,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "kurven": [
+      {
+       "formel": "x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      },
+      {
+       "formel": "x*x",
+       "farbe": 5,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 10.25
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Gerade, Parabel, Wurzel- und Kehrwertgraph erkennst du an der Form. Zum Zuordnen setzt du Testpunkte ein, auch x gleich null und eine negative Zahl.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Gerade · Parabel · Wurzel · Kehrwert|an der Form erkennen|mit Testpunkten zuordnen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.31
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.3
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gleichung passt zu einem Graphen durch (4 | 2) und (9 | 3)?",
+   "optionen": [
+    "y = √x",
+    "y = x²",
+    "y = 0.5 · x"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Setz x = 4 ein: 4² = 16, nicht 2.",
+    "2": "Bei x = 4 stimmt es, bei x = 9 gäbe es 4.5, nicht 3."
+   },
+   "sprich": "Welche Gleichung passt zu einem Graphen durch vier, zwei und neun, drei?",
+   "rueck_sprich": {
+    "1": "Setz x gleich vier ein: vier Quadrat ist sechzehn, nicht zwei.",
+    "2": "Bei x gleich vier stimmt es, bei x gleich neun gäbe es vier Komma fünf, nicht drei."
+   }
+  }
+ ]
+}

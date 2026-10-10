@@ -117,6 +117,11 @@ SEITEN = {
    titel='Leitprogramm Bruchterme, Gleichungen und Formeln — kürzen, Hauptnenner, Gleichungen lösen, Formeln umstellen',
    beschreibung='Leitprogramm Sekundarstufe I: Bruchterme kürzen und berechnen, lineare Gleichungen mit Klammern und Brüchen lösen, Lösungsmenge und Probe, Formeln umstellen — mit Übungen.',
    themen=['Mathematik', 'Bruchterme', 'Kürzen', 'Hauptnenner', 'Lineare Gleichungen', 'Lösungsmenge', 'Formeln umstellen', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/funktionstypen.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Funktionstypen und Graphen — Parabel, Wurzel, Kehrwert, proportional, Weg-Zeit-Graphen',
+   beschreibung='Leitprogramm Sekundarstufe I: Gerade, Parabel, Wurzel- und Kehrwertgraph erkennen, proportional, antiproportional oder linear mit Anfangswert, Weg-Zeit-Graphen lesen, zurückgelegter Weg und Restweg — mit Übungen.',
+   themen=['Mathematik', 'Funktionen', 'Parabel', 'Wurzelfunktion', 'Kehrwertfunktion', 'Proportionalität', 'Antiproportional', 'Weg-Zeit-Diagramm', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/darstellungen.html': dict(
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Darstellungen wechseln — Text, Gleichung, Tabelle und Graph, Definitionsbereich, antiproportional',

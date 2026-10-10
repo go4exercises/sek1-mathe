@@ -10,6 +10,18 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
       in `scripts/lp/terme-faktorisieren/clips.py`, «y-Glieder» bleibt), «Nun stelle …» in den Fragetönen 1–4 von gleich-lp-kontrolle-formeln.
       Whisper medium schreibt «Ypsilon» weiterhin als «Epsilon» und «Kacheln» einmal als «Karre» — massgebend ist die Hörprobe.
 
+## Leitprogramm Funktionstypen und Graphen (10.10.2026)
+
+`leitprogramme/funktionstypen.html`, gebaut mit `scripts/lp/funktionstypen/` (README dort), nach
+`~/TODO-BM-Vorkurs-LP03-15.md` §4 (LP 06, Funktionstypen und Graphen interpretieren).
+
+- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/funktionstypen.html`.
+- [x] Eingetragen (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex, Sitemap).
+- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Graph G6 und Skizze G8).
+- [ ] 🔑 Hörprobe der acht Clips `typ-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+      «y» (Whisper: «Epsilon»), «Graph» (Whisper: «Graf»), «Kehrwertgraph», «Grundtaxe» (Whisper: «Grundachse»), «null, null».
+- [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
 ## Leitprogramm Darstellungen wechseln (10.10.2026)
 
 `leitprogramme/darstellungen.html`, gebaut mit `scripts/lp/darstellungen/` (README dort), nach

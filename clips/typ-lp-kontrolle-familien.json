@@ -1,0 +1,401 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zu den Familien",
+ "dateiname": "typ-lp-kontrolle-familien",
+ "kurzbeschrieb": "Fünf Fragen: Parabel im Bild, y = 3/x für x = 6, kein Punkt bei x = −1, y = 2√x für x = 9, Form von y = −x².",
+ "schlagworte": [
+  "Parabel",
+  "Wurzel",
+  "Kehrwert",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Funktionstypen und Graphen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-funktionstypen"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 2,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms funktionstypen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Symmetrisch zur y-Achse, Scheitel bei null, null, und zwei gibt vier: y gleich x Quadrat.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": -2,
+       "y": 4,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 0,
+       "y": 0,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 4,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "kurven": [
+      {
+       "formel": "x*x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = x^2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 66,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": -2,
+       "y": 4,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 0,
+       "y": 0,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 4,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "kurven": [
+      {
+       "formel": "x*x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 7.56
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Drei durch sechs gibt null Komma fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{3}{6} = \\fc{0.5}",
+     "x": 150,
+     "y": 330,
+     "groesse": 64,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 3.6
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Aus minus eins gibt es keine Wurzel. Darum hat y gleich Wurzel aus x bei x gleich minus eins keinen Punkt.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\sqrt{-1}\\; \\text{gibt es nicht}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.48
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zuerst die Wurzel: Wurzel aus neun ist drei. Dann mal zwei: sechs.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2 \\cdot \\sqrt{9} = 2 \\cdot 3 = \\fc{6}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.08
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das Minus kippt die Parabel an der x-Achse: Sie ist nach unten offen, der Scheitel ist oben.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "y = -x^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 64,
+     "ein": 0.05
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "kurven": [
+      {
+       "formel": "-x*x",
+       "farbe": 1,
+       "von": -4,
+       "bis": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 6.2
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Form zuerst, dann Testpunkte. Wurzeln gibt es nur für x ab null, Kehrwerte nicht für null. Ein Minus davor spiegelt den Graphen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Form zuerst, dann Testpunkte|√x nur für x ≥ 0, 1/x nicht für 0|Minus davor: gespiegelt",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.36
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gleichung gehört zum Graphen im Bild?",
+   "optionen": [
+    "y = 2x",
+    "y = √x",
+    "y = x²"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Eine Gerade wäre nicht symmetrisch zur y-Achse.",
+    "1": "Ein Wurzelgraph hat links von der y-Achse keine Punkte."
+   },
+   "rueck_sprich": {
+    "0": "Eine Gerade wäre nicht symmetrisch zur y-Achse.",
+    "1": "Ein Wurzelgraph hat links von der y-Achse keine Punkte."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = 3/x. Wie gross ist y für x = 6?",
+   "optionen": [
+    "0.5",
+    "2",
+    "18"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das ist 6 durch 3. Im Bruch steht x unten.",
+    "2": "Das ist 3 mal 6. Hier wird geteilt."
+   },
+   "sprich": "y gleich drei durch x. Wie gross ist y für x gleich sechs?",
+   "rueck_sprich": {
+    "1": "Das ist sechs durch drei. Im Bruch steht x unten.",
+    "2": "Das ist drei mal sechs. Hier wird geteilt."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welcher Graph hat bei x = −1 keinen Punkt?",
+   "optionen": [
+    "y = x²",
+    "y = 1/x",
+    "y = √x"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "(−1)² = 1: Den Punkt gibt es.",
+    "1": "1 durch −1 ist −1: Den Punkt gibt es."
+   },
+   "sprich": "Welcher Graph hat bei x gleich minus eins keinen Punkt?",
+   "rueck_sprich": {
+    "0": "Minus eins im Quadrat ist eins: Den Punkt gibt es.",
+    "1": "Eins durch minus eins ist minus eins: Den Punkt gibt es."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = 2√x. Wie gross ist y für x = 9?",
+   "optionen": [
+    "3",
+    "6",
+    "18"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Zuerst die Wurzel aus 9, dann mal 2.",
+    "0": "Das ist nur die Wurzel. Was macht die 2 davor?"
+   },
+   "sprich": "y gleich zwei mal Wurzel aus x. Wie gross ist y für x gleich neun?",
+   "rueck_sprich": {
+    "2": "Zuerst die Wurzel aus neun, dann mal zwei.",
+    "0": "Das ist nur die Wurzel. Was macht die Zwei davor?"
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie sieht der Graph von y = −x² aus?",
+   "optionen": [
+    "Parabel, nach oben offen",
+    "fallende Gerade",
+    "Parabel, nach unten offen"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Setz x = 2 ein: −4. Liegt der Punkt oben oder unten?",
+    "1": "Wegen x² ist es keine Gerade."
+   },
+   "sprich": "Wie sieht der Graph von y gleich minus x Quadrat aus?",
+   "rueck_sprich": {
+    "0": "Setz x gleich zwei ein: minus vier. Liegt der Punkt oben oder unten?",
+    "1": "Wegen x Quadrat ist es keine Gerade."
+   }
+  }
+ ]
+}

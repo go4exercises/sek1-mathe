@@ -1,0 +1,6 @@
+0.40	Doppelt so viele Personen zahlen doppelt so viel, und null Personen zahlen nichts: proportional.
+6.82	Doppelt so viele Pumpen brauchen halb so lange: antiproportional.
+11.86	Die dreissig Franken zahlst du auch ohne Besuch: ein Anfangswert. Linear mit Anfangswert.
+18.24	Das Produkt ist immer vierundzwanzig. Bei x gleich sechs ist y also vier.
+23.91	Bei x gleich zwei ist y elf, bei x gleich vier ist y neunzehn. Nicht doppelt so viel, wegen des Anfangswerts drei.
+32.25	Zum Mitnehmen: Doppelt-Test und Anfangswert entscheiden. Bei antiproportional bleibt das Produkt gleich.

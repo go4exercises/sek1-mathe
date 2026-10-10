@@ -1,0 +1,6 @@
+0.40	Fünfhundert Meter in fünf Minuten: hundert Meter pro Minute.
+5.26	Waagrecht heisst: Die Entfernung bleibt gleich. Die Person steht still.
+10.54	B ist steiler: In derselben Zeit kommt B weiter. B ist schneller.
+15.56	Die Entfernung von zu Hause wird kleiner: Die Person geht nach Hause zurück.
+20.71	Senkrecht hiesse: Weg ohne Zeit. Das ist unmöglich.
+25.07	Zum Mitnehmen: Steigung ist Geschwindigkeit. Waagrecht steht man still, fallend geht es zurück, und senkrecht gibt es nicht.
