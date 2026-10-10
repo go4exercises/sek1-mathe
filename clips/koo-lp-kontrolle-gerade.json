@@ -1,0 +1,251 @@
+{
+ "titel": "Geometrie: Kontrollfragen zu Geraden",
+ "dateiname": "koo-lp-kontrolle-gerade",
+ "kurzbeschrieb": "Fünf Fragen: m aus (0 | 1) und (2 | 7), b bei m = 2 durch (3 | 4), Punktprobe (10 | 25) auf y = 3x − 5, (20 | 50) auf y = 2x + 5, Fehler Δx : Δy.",
+ "schlagworte": [
+  "Gerade",
+  "Punktprobe",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Geometrie · Abbildungen und Geraden im Koordinatensystem",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-koordinaten"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms koordinaten; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sieben minus eins durch zwei minus null gibt sechs durch zwei, also drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{6}{2} = \\fc{3}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.19
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Vier gleich zwei mal drei plus b, also ist b minus zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4 = 6 + b \\;\\Rightarrow\\; b = \\fc{-2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 4.94
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Drei mal zehn minus fünf gibt fünfundzwanzig. Der Punkt liegt darauf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3 \\cdot 10 - 5 = 25 \\;\\Rightarrow\\; \\fc{\\text{ja}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.23
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwei mal zwanzig plus fünf gibt fünfundvierzig, nicht fünfzig. Der Punkt liegt nicht darauf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 20 + 5 = 45 \\neq 50",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.45
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ben hat den Bruch auf den Kopf gestellt. Richtig ist vier durch eins, also vier.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{5 - 1}{2 - 1} = \\fc{4}",
+     "x": 150,
+     "y": 330,
+     "groesse": 52,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.48
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied, dann b durch Einsetzen. Die Punktprobe macht das Einsetzen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "m = Δy : Δx, dann b|Punktprobe: einsetzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.26
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Steigung hat die Gerade durch (0 | 1) und (2 | 7)?",
+   "optionen": [
+    "6",
+    "3",
+    "1/3"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Der Bruch steht auf dem Kopf: Δy durch Δx.",
+    "0": "Das ist nur Δy. Teile noch durch Δx."
+   },
+   "sprich": "Welche Steigung hat die Gerade durch null und eins und zwei und sieben?",
+   "rueck_sprich": {
+    "2": "Der Bruch steht auf dem Kopf: delta y durch delta x.",
+    "0": "Das ist nur delta y. Teile noch durch delta x."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Gerade mit m = 2 geht durch (3 | 4). Wie gross ist b?",
+   "optionen": [
+    "10",
+    "−2",
+    "2"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Setz ein: 4 = 2 · 3 + b.",
+    "0": "b ist das, was zu 2 · 3 noch dazukommt, um 4 zu erhalten."
+   },
+   "sprich": "Eine Gerade mit m gleich zwei geht durch drei und vier. Wie gross ist b?",
+   "rueck_sprich": {
+    "2": "Setz ein: vier gleich zwei mal drei plus b.",
+    "0": "b ist das, was zu zwei mal drei noch dazukommt, um vier zu erhalten."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Liegt (10 | 25) auf y = 3x − 5?",
+   "optionen": [
+    "nein",
+    "kann man ohne Zeichnung nicht sagen",
+    "ja"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Setz x = 10 ein und vergleiche mit 25.",
+    "1": "Einsetzen genügt."
+   },
+   "sprich": "Liegt der Punkt zehn und fünfundzwanzig auf y gleich drei x minus fünf?",
+   "rueck_sprich": {
+    "0": "Setz x gleich zehn ein und vergleiche.",
+    "1": "Einsetzen genügt."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Punktprobe: (20 | 50) und y = 2x + 5. Liegt der Punkt darauf?",
+   "optionen": [
+    "kann man ohne Zeichnung nicht sagen",
+    "nein",
+    "ja"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Rechne 2 · 20 + 5 nach.",
+    "0": "Einsetzen genügt."
+   },
+   "sprich": "Punktprobe: zwanzig und fünfzig und y gleich zwei x plus fünf. Liegt der Punkt darauf?",
+   "rueck_sprich": {
+    "2": "Rechne zwei mal zwanzig plus fünf nach.",
+    "0": "Einsetzen genügt."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ben rechnet für A(1 | 1) und B(2 | 5): m = 1/4. Stimmt das?",
+   "optionen": [
+    "ja",
+    "nein, m = 5",
+    "nein, m = 4"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Welcher Unterschied steht oben im Bruch?",
+    "1": "Das ist nur der y-Wert von B. Rechne die Unterschiede."
+   },
+   "sprich": "Ben rechnet für A mit eins und eins und B mit zwei und fünf: m gleich ein Viertel. Stimmt das?",
+   "rueck_sprich": {
+    "0": "Welcher Unterschied steht oben im Bruch?",
+    "1": "Das ist nur der y-Wert von B. Rechne die Unterschiede."
+   }
+  }
+ ]
+}

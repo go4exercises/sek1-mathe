@@ -127,6 +127,11 @@ SEITEN = {
    titel='Leitprogramm Flächen, Pythagoras und Ähnlichkeit — Grundseite und Höhe, Satz des Pythagoras, Sehne im Kreis, Streckfaktor',
    beschreibung='Leitprogramm Sekundarstufe I, Geometrie: Flächen von Dreieck, Parallelogramm und Trapez, Satz des Pythagoras, Hilfsdreieck in Rechteck, gleichschenkligem Dreieck und Kreis, ähnliche Figuren mit Längen- und Flächenfaktor — mit Übungen.',
    themen=['Mathematik', 'Geometrie', 'Fläche', 'Dreieck', 'Satz des Pythagoras', 'Hypotenuse', 'Kreis', 'Sehne', 'Ähnlichkeit', 'Streckfaktor', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/koordinaten.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Abbildungen und Geraden im Koordinatensystem — Punkt- und Achsenspiegelung, zentrische Streckung, Gerade durch zwei Punkte',
+   beschreibung='Leitprogramm Sekundarstufe I, Geometrie: Punkte im Koordinatensystem an einem Punkt oder einer Achse spiegeln, zentrisch strecken, Flächen aus Koordinaten berechnen, Geradengleichung aus zwei Punkten und Punktprobe — mit Übungen.',
+   themen=['Mathematik', 'Geometrie', 'Koordinatensystem', 'Punktspiegelung', 'Achsenspiegelung', 'Zentrische Streckung', 'Flächenfaktor', 'Geradengleichung', 'Punktprobe', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/bewegung.html': dict(
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Texte, Geschwindigkeit und Begegnung — Textaufgaben, s = v · t, Durchschnitt, Begegnung und Einholen',

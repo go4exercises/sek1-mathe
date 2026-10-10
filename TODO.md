@@ -10,6 +10,18 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
       in `scripts/lp/terme-faktorisieren/clips.py`, «y-Glieder» bleibt), «Nun stelle …» in den Fragetönen 1–4 von gleich-lp-kontrolle-formeln.
       Whisper medium schreibt «Ypsilon» weiterhin als «Epsilon» und «Kacheln» einmal als «Karre» — massgebend ist die Hörprobe.
 
+## Leitprogramm Abbildungen und Geraden im Koordinatensystem (10.10.2026)
+
+`leitprogramme/koordinaten.html`, gebaut mit `scripts/lp/koordinaten/` (README dort), nach
+`~/TODO-BM-Vorkurs-LP03-15.md` §7 (LP 09, Koordinatengeometrie: Abbildungen und Geraden). Bereich «Geometrie».
+
+- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/koordinaten.html`.
+- [x] Eingetragen (nav.js, index.html Bereich «Geometrie», build-seo, Suchindex, Sitemap).
+- [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (G1 mit P + Z, G5 vom Ursprung aus gestreckt).
+- [ ] 🔑 Hörprobe der acht Clips `koo-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
+      «P Strich», «x gleich zwei», «Ursprung», «hunderteins» und «zweihunderteins» (Whisper schreibt Ziffern).
+- [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
 ## Leitprogramm Flächen, Pythagoras und Ähnlichkeit (10.10.2026)
 
 `leitprogramme/pythagoras.html`, gebaut mit `scripts/lp/pythagoras/` (README dort), nach

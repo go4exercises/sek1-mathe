@@ -1,0 +1,458 @@
+{
+ "titel": "Geometrie: Kontrollfragen zur Achsenspiegelung",
+ "dateiname": "koo-lp-kontrolle-achsenspiegelung",
+ "kurzbeschrieb": "Fünf Fragen: P(−4 | 1) an der y-Achse, P(2 | 3) an x = 5, P(6 | −1) an y = x, P(0 | 4) an y = 1, Achse aus (2 | 7) und (2 | −1).",
+ "schlagworte": [
+  "Achsenspiegelung",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Geometrie · Abbildungen und Geraden im Koordinatensystem",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-koordinaten"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms koordinaten; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "An der y-Achse wechselt nur das Vorzeichen von x: vier und eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "P' = \\fc{(4 \\mid 1)}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.44
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "P ist drei links der Achse, das Bild drei rechts: acht und drei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "x' = 2 \\cdot 5 - 2 = \\fc{8}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.1
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "An y gleich x tauschen die Koordinaten: minus eins und sechs.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "P' = \\fc{(-1 \\mid 6)}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.41
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "P ist drei über der Achse y gleich eins, das Bild drei darunter: null und minus zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y' = 2 \\cdot 1 - 4 = \\fc{-2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.74
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nur y ändert sich, die Achse ist waagrecht. Sie liegt in der Mitte von sieben und minus eins: y gleich drei.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 6.4,
+       "farbe": 1,
+       "anker": "start",
+       "beschriftung": "P(2 | 7)",
+       "beschriftung_bei": [
+        2.4,
+        6.0
+       ]
+      },
+      {
+       "x": 2,
+       "y": -1,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "P'(2 | −1)",
+       "beschriftung_bei": [
+        2.4,
+        -1.7
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "y = \\dfrac{7 + (-1)}{2} = \\fc{3}",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 6.4,
+       "farbe": 1,
+       "anker": "start",
+       "beschriftung": "P(2 | 7)",
+       "beschriftung_bei": [
+        2.4,
+        6.0
+       ]
+      },
+      {
+       "x": 2,
+       "y": -1,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "P'(2 | −1)",
+       "beschriftung_bei": [
+        2.4,
+        -1.7
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        -7,
+        3
+       ],
+       "bis": [
+        7,
+        3
+       ],
+       "farbe": 3,
+       "dicke": 6
+      }
+     ]
+    }
+   ],
+   "dauer": 8.03
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Gleich weit von der Achse, Verbindung senkrecht. Die Achse liegt in der Mitte zwischen Punkt und Bild.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "gleich weit, senkrecht|Achse in der Mitte",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 7.32
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "P(−4 | 1) wird an der y-Achse gespiegelt. Wo liegt P'?",
+   "optionen": [
+    "(4 | 1)",
+    "(−4 | −1)",
+    "(4 | −1)"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das wäre an der x-Achse.",
+    "2": "Beide Vorzeichen gewechselt: Das wäre am Ursprung."
+   },
+   "sprich": "P mit minus vier und eins wird an der y-Achse gespiegelt. Wo liegt P Strich?",
+   "rueck_sprich": {
+    "1": "Das wäre an der x-Achse.",
+    "2": "Beide Vorzeichen gewechselt: Das wäre am Ursprung."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Spiegle P(2 | 3) an der Geraden x = 5.",
+   "optionen": [
+    "(2 | 7)",
+    "(8 | 3)",
+    "(−2 | 3)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das wäre an der y-Achse. Die Achse liegt bei x = 5.",
+    "0": "Die Achse x = 5 ist senkrecht: y bleibt gleich."
+   },
+   "sprich": "Spiegle P mit zwei und drei an der Geraden x gleich fünf.",
+   "rueck_sprich": {
+    "2": "Das wäre an der y-Achse. Die Achse liegt bei x gleich fünf.",
+    "0": "Die Achse x gleich fünf ist senkrecht: y bleibt gleich."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Bild von P(6 | −1) an der Geraden y = x?",
+   "optionen": [
+    "(−6 | 1)",
+    "(−1 | 6)",
+    "(1 | −6)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Tauschen, ohne die Vorzeichen zu ändern.",
+    "0": "Tauschen heisst: x wird y und y wird x."
+   },
+   "sprich": "Was ist das Bild von P mit sechs und minus eins an der Geraden y gleich x?",
+   "rueck_sprich": {
+    "2": "Tauschen, ohne die Vorzeichen zu ändern.",
+    "0": "Tauschen heisst: x wird y und y wird x."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wohin kommt P(0 | 4) an der Geraden y = 1?",
+   "optionen": [
+    "(0 | 2)",
+    "(0 | −2)",
+    "(0 | −4)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das wäre an der x-Achse. Die Achse liegt bei y = 1.",
+    "0": "P ist 3 über der Achse. Das Bild liegt 3 darunter."
+   },
+   "sprich": "Wohin kommt P mit null und vier an der Geraden y gleich eins?",
+   "rueck_sprich": {
+    "2": "Das wäre an der x-Achse. Die Achse liegt bei y gleich eins.",
+    "0": "P ist drei über der Achse. Das Bild liegt drei darunter."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gerade ist die Spiegelachse für P und P' im Bild?",
+   "optionen": [
+    "x = 2",
+    "y = 4",
+    "y = 3"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "P und P' liegen beide auf x = 2. Die Achse steht senkrecht auf ihrer Verbindung.",
+    "1": "Die Achse liegt in der Mitte von 7 und −1."
+   },
+   "rueck_sprich": {
+    "0": "P und P Strich liegen beide auf x gleich zwei. Die Achse steht senkrecht auf ihrer Verbindung.",
+    "1": "Die Achse liegt in der Mitte von sieben und minus eins."
+   }
+  }
+ ]
+}

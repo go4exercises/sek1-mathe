@@ -1,0 +1,6 @@
+0.40	Am Ursprung wechseln beide Vorzeichen: minus drei und vier.
+5.23	Zwei mal eins minus vier gibt minus zwei, zwei mal zwei minus sechs gibt minus zwei.
+11.78	Das Zentrum ist die Mitte: zwei plus sechs durch zwei gibt vier, fünf plus eins durch zwei gibt drei.
+18.97	Die Punktspiegelung dreht die Figur nur. Die Fläche bleibt sechs.
+23.58	Nein. Zwei mal eins minus drei gibt minus eins, zwei mal null minus eins gibt minus eins. Richtig ist minus eins und minus eins.
+33.23	Zum Mitnehmen: Das Zentrum ist die Mitte. Bildpunkt gleich zwei mal Z minus P, Zentrum gleich Mittelpunkt von P und P Strich.

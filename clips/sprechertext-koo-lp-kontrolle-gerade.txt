@@ -1,0 +1,6 @@
+0.40	Sieben minus eins durch zwei minus null gibt sechs durch zwei, also drei.
+5.59	Vier gleich zwei mal drei plus b, also ist b minus zwei.
+10.53	Drei mal zehn minus fünf gibt fünfundzwanzig. Der Punkt liegt darauf.
+15.76	Zwei mal zwanzig plus fünf gibt fünfundvierzig, nicht fünfzig. Der Punkt liegt nicht darauf.
+22.21	Ben hat den Bruch auf den Kopf gestellt. Richtig ist vier durch eins, also vier.
+27.69	Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied, dann b durch Einsetzen. Die Punktprobe macht das Einsetzen.

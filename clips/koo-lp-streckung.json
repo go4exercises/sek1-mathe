@@ -1,0 +1,1280 @@
+{
+ "titel": "Geometrie: Zentrische Streckung und Flächen",
+ "dateiname": "koo-lp-streckung",
+ "kurzbeschrieb": "Dreieck (1 | 1), (3 | 1), (1 | 2) mit Z(0 | 0), k = 2: Koordinaten mal 2; Vorhersage Fläche 1 → 4; Zentrum Z(1 | 1), k = 3: P(2 | 3) → (4 | 7); Fläche aus Koordinaten: Rechteck minus Randdreiecke, 5.5; Fehler: Zentrum vergessen.",
+ "schlagworte": [
+  "zentrische Streckung",
+  "Streckfaktor",
+  "Fläche",
+  "Koordinaten"
+ ],
+ "themenbereich": "Geometrie · Abbildungen und Geraden im Koordinatensystem",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-koordinaten"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms koordinaten; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Ursprung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Strecke das Dreieck vom Ursprung aus mit dem Faktor zwei. Jeder Weg vom Ursprung zu einer Ecke wird doppelt so lang. Ist der Ursprung das Zentrum, heisst das einfach: alle Koordinaten mal zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "Z(0 \\mid 0),\\ k = 2: \\;\\; (x \\mid y) \\to (2x \\mid 2y)",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "ein": 9.22
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 0,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "Z",
+       "beschriftung_bei": [
+        -0.4,
+        -0.8
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         3,
+         1
+        ],
+        [
+         1,
+         2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.2
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.34,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2,
+         2
+        ],
+        [
+         6,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.12
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        6,
+        2
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        2,
+        4
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 14.76
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das kleine Dreieck hat die Fläche eins, das Bild die Fläche vier. Breite und Höhe sind beide doppelt so gross, die Fläche also viermal: k Quadrat.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "1 \\cdot 2^2 = \\fb{4}",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 6.94
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 0,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "Z",
+       "beschriftung_bei": [
+        -0.4,
+        -0.8
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2,
+         2
+        ],
+        [
+         6,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.12
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         3,
+         1
+        ],
+        [
+         1,
+         2
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.3
+      }
+     ]
+    }
+   ],
+   "dauer": 12.05
+  },
+  {
+   "name": "Zentrum",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Liegt das Zentrum nicht im Ursprung, streckst du den Weg ab Z. Z mit eins und eins, k gleich drei, P mit zwei und drei: Der Weg ist eins und zwei, mal drei gibt drei und sechs. Ab Z abgetragen: vier und sieben.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "P' = Z + k \\cdot (P - Z)",
+     "x": 150,
+     "y": 280,
+     "groesse": 52,
+     "ein": 3.13
+    },
+    {
+     "typ": "formel",
+     "text": "(1 + 3 \\mid 1 + 6) = \\fb{(4 \\mid 7)}",
+     "x": 150,
+     "y": 400,
+     "groesse": 52,
+     "ein": 11.05
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 1,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "Z",
+       "beschriftung_bei": [
+        1.3,
+        0.4
+       ]
+      },
+      {
+       "x": 2,
+       "y": 3,
+       "farbe": 1,
+       "anker": "end",
+       "beschriftung": "P",
+       "beschriftung_bei": [
+        1.7,
+        3.3
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -2,
+      10
+     ],
+     "xteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "yteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        1
+       ],
+       "bis": [
+        2,
+        3
+       ],
+       "farbe": 1,
+       "dicke": 4
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 11.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 4,
+       "y": 7,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "P'",
+       "beschriftung_bei": [
+        4.3,
+        6.4
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -2,
+      10
+     ],
+     "xteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "yteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        3
+       ],
+       "bis": [
+        4,
+        7
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 17.91
+  },
+  {
+   "name": "Flaeche",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Fläche eines Dreiecks aus Koordinaten: Zeichne das kleinste Rechteck darum, hier vier mal drei. Zieh die drei rechtwinkligen Randdreiecke ab: zwei, eins Komma fünf und drei. Es bleiben fünf Komma fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "4 \\cdot 3 - 2 - 1.5 - 3 = \\fc{5.5}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 10.46
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         5,
+         2
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.25
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.86,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         5,
+         1
+        ],
+        [
+         5,
+         4
+        ],
+        [
+         1,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.0,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.46,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -7,
+      7
+     ],
+     "ybereich": [
+      -7,
+      7
+     ],
+     "xteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "yteilung": [
+      [
+       -6,
+       "−6"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       -2,
+       "−2"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         5,
+         1
+        ],
+        [
+         5,
+         2
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.2,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         5,
+         2
+        ],
+        [
+         5,
+         4
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.2,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         2,
+         4
+        ],
+        [
+         1,
+         4
+        ],
+        [
+         1,
+         1
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.2,
+       "dicke": 2
+      }
+     ]
+    }
+   ],
+   "dauer": 14.3
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: das Zentrum vergessen und einfach mal drei rechnen. Zwei mal drei und drei mal drei gibt sechs und neun. Das stimmt nur, wenn das Zentrum im Ursprung liegt.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{(6 \\mid 9)}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 2.26
+    },
+    {
+     "typ": "notiz",
+     "text": "Weg ab Z strecken, nicht die Koordinaten",
+     "x": 150,
+     "y": 430,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 9.44
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 1,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "Z",
+       "beschriftung_bei": [
+        1.3,
+        0.4
+       ]
+      },
+      {
+       "x": 2,
+       "y": 3,
+       "farbe": 1,
+       "anker": "end",
+       "beschriftung": "P",
+       "beschriftung_bei": [
+        1.7,
+        3.3
+       ]
+      },
+      {
+       "x": 4,
+       "y": 7,
+       "farbe": 2,
+       "anker": "end",
+       "beschriftung": "P'",
+       "beschriftung_bei": [
+        3.7,
+        7.4
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -2,
+      10
+     ],
+     "xteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "yteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        1
+       ],
+       "bis": [
+        4,
+        7
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.36,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 6,
+       "y": 9,
+       "farbe": 4,
+       "anker": "start",
+       "beschriftung": "(6 | 9)",
+       "beschriftung_bei": [
+        6.3,
+        8.4
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -2,
+      10
+     ],
+     "xteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "yteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        6,
+        9
+       ],
+       "farbe": 4,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 13.96
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Bei einer Streckung wird der Weg vom Zentrum zu jedem Punkt mit k multipliziert. Längen werden mal k, Flächen mal k Quadrat. Flächen aus Koordinaten: Rechteck darum, Randdreiecke abziehen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "P' = Z + k · (P − Z)|Längen · k, Flächen · k²|Rechteck minus Randdreiecke",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.57
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.17
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Das kleine Dreieck hat die Fläche 1. Wie gross ist die Fläche des Bildes bei k = 2?",
+   "optionen": [
+    "2",
+    "8",
+    "4"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Breite und Höhe werden beide verdoppelt.",
+    "1": "Die Fläche hat zwei Richtungen, nicht drei."
+   },
+   "sprich": "Das kleine Dreieck hat die Fläche eins. Wie gross ist die Fläche des Bildes bei k gleich zwei?",
+   "rueck_sprich": {
+    "0": "Breite und Höhe werden beide verdoppelt.",
+    "1": "Die Fläche hat zwei Richtungen, nicht drei."
+   }
+  }
+ ]
+}

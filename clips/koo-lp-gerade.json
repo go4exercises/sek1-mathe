@@ -1,0 +1,469 @@
+{
+ "titel": "Geometrie: Gerade durch zwei Punkte",
+ "dateiname": "koo-lp-gerade",
+ "kurzbeschrieb": "A(1 | 3), B(4 | 9): Steigungsdreieck Δx = 3, Δy = 6, m = 2; A einsetzen: b = 1, y = 2x + 1; Vorhersage: Q(100 | 201) liegt darauf; D(50 | 102) knapp daneben; Fehler: Δx : Δy.",
+ "schlagworte": [
+  "Gerade",
+  "Steigung",
+  "Punktprobe",
+  "Geradengleichung"
+ ],
+ "themenbereich": "Geometrie · Abbildungen und Geraden im Koordinatensystem",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-koordinaten"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms koordinaten; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Steigung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Gerade geht durch A mit eins und drei und B mit vier und neun. Von A nach B geht es drei nach rechts und sechs nach oben. Die Steigung ist sechs durch drei, also zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{\\Delta y}{\\Delta x} = \\dfrac{6}{3} = \\fc{2}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 7.78
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 3,
+       "farbe": 1,
+       "anker": "end",
+       "beschriftung": "A",
+       "beschriftung_bei": [
+        0.7,
+        3.5
+       ]
+      },
+      {
+       "x": 4,
+       "y": 9,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "B",
+       "beschriftung_bei": [
+        4.3,
+        9.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -1,
+      11
+     ],
+     "xteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "yteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.02,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -1,
+      11
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        1,
+        3
+       ],
+       "bis": [
+        4,
+        3
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4,
+        3
+       ],
+       "bis": [
+        4,
+        9
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.5,
+        2.2
+       ],
+       "text": "3",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.4,
+        6
+       ],
+       "text": "6",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 13.97
+  },
+  {
+   "name": "Achsenabschnitt",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Für b setzt du einen Punkt ein, zum Beispiel A: drei gleich zwei mal eins plus b, also ist b gleich eins. Die Gleichung heisst y gleich zwei x plus eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "3 = 2 \\cdot 1 + b \\;\\Rightarrow\\; b = 1",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 1.01
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = 2x + 1}",
+     "x": 150,
+     "y": 400,
+     "groesse": 60,
+     "ein": 6.91
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 2,
+       "q": 1,
+       "farbe": 3
+      }
+     ],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 3,
+       "farbe": 1,
+       "anker": "end",
+       "beschriftung": "A",
+       "beschriftung_bei": [
+        0.6,
+        3.6
+       ]
+      },
+      {
+       "x": 4,
+       "y": 9,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "B",
+       "beschriftung_bei": [
+        4.5,
+        9.1
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      10
+     ],
+     "ybereich": [
+      -1,
+      11
+     ],
+     "xteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ]
+     ],
+     "yteilung": [
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ]
+    }
+   ],
+   "dauer": 11.92
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Liegt Q mit hundert und zweihunderteins auf der Geraden? Einsetzen: zwei mal hundert plus eins gibt zweihunderteins. Die Gleichung stimmt, Q liegt darauf, auch wenn er weit ausserhalb jeder Zeichnung ist.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 100 + 1 = 201 \\;\\Rightarrow\\; \\fc{\\text{ja}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 3.47
+    }
+   ],
+   "dauer": 12.07
+  },
+  {
+   "name": "Knapp",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Und D mit fünfzig und hundertzwei? Zwei mal fünfzig plus eins gibt hunderteins, nicht hundertzwei. D liegt knapp daneben. Ablesen hätte das nie gezeigt, nur das Einsetzen.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "2 \\cdot 50 + 1 = 101 \\neq 102",
+     "x": 150,
+     "y": 300,
+     "groesse": 52,
+     "ein": 4.5
+    },
+    {
+     "typ": "notiz",
+     "text": "nur Einsetzen entscheidet",
+     "x": 150,
+     "y": 430,
+     "groesse": 46,
+     "farbe": "blau",
+     "ein": 10.14
+    }
+   ],
+   "dauer": 13.17
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: den Bruch auf den Kopf stellen. Drei durch sechs gibt ein Halb, nicht zwei. Die Steigung ist immer y-Unterschied durch x-Unterschied.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{\\Delta x}{\\Delta y} = \\dfrac{3}{6}}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 2.51
+    },
+    {
+     "typ": "notiz",
+     "text": "m = Δy : Δx",
+     "x": 150,
+     "y": 440,
+     "groesse": 46,
+     "farbe": "rot",
+     "ein": 6.85
+    }
+   ],
+   "dauer": 9.79
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Steigung gleich y-Unterschied durch x-Unterschied. Dann einen Punkt einsetzen und b bestimmen. Ob ein Punkt auf der Geraden liegt, entscheidet das Einsetzen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "m = Δy : Δx|einen Punkt einsetzen: b|Punktprobe durch Einsetzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.48
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.17
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Liegt Q(100 | 201) auf der Geraden y = 2x + 1?",
+   "optionen": [
+    "ja",
+    "nein",
+    "nur mit einer Zeichnung zu entscheiden"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Setz x = 100 ein und vergleiche.",
+    "2": "Einsetzen entscheidet auch ohne Zeichnung."
+   },
+   "sprich": "Liegt Q mit hundert und zweihunderteins auf der Geraden y gleich zwei x plus eins?",
+   "rueck_sprich": {
+    "1": "Setz x gleich hundert ein und vergleiche.",
+    "2": "Einsetzen entscheidet auch ohne Zeichnung."
+   }
+  }
+ ]
+}

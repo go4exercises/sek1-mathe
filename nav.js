@@ -23,6 +23,7 @@ const SITE = {
     { id:'lp-funktionstypen', nr:'6', titel:'Funktionstypen und Graphen', url:'leitprogramme/funktionstypen.html' },
     { id:'lp-bewegung', nr:'7', titel:'Texte, Geschwindigkeit und Begegnung', url:'leitprogramme/bewegung.html' },
     { id:'lp-pythagoras', nr:'8', titel:'Flächen, Pythagoras und Ähnlichkeit', url:'leitprogramme/pythagoras.html' },
+    { id:'lp-koordinaten', nr:'9', titel:'Abbildungen und Geraden im Koordinatensystem', url:'leitprogramme/koordinaten.html' },
   ]
 };
 
@@ -33,7 +34,7 @@ const GROUPS = {
     { nr:'2', titel:'Gleichungen', ids:['lp-gleichungen'] },
     { nr:'3', titel:'Funktionen', ids:['lp-linear', 'lp-darstellungen', 'lp-funktionstypen'] },
     { nr:'4', titel:'Mathematisieren', ids:['lp-bewegung'] },
-    { nr:'5', titel:'Geometrie', ids:['lp-pythagoras'] }
+    { nr:'5', titel:'Geometrie', ids:['lp-pythagoras', 'lp-koordinaten'] }
   ]
 };
 
@@ -108,7 +109,7 @@ function buildNav(cfg) {
     <div class="meta-titel">Ausblick</div>
     <div class="meta-sub">Erstellt</div>
     <ul>
-      <li>Acht Leitprogramme: Bruchrechnen, Terme und Faktorisieren, Bruchterme, Gleichungen und Formeln, Lineare Funktionen, Darstellungen wechseln, Funktionstypen und Graphen, Texte, Geschwindigkeit und Begegnung, Flächen, Pythagoras und Ähnlichkeit — je vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
+      <li>Neun Leitprogramme: Bruchrechnen, Terme und Faktorisieren, Bruchterme, Gleichungen und Formeln, Lineare Funktionen, Darstellungen wechseln, Funktionstypen und Graphen, Texte, Geschwindigkeit und Begegnung, Flächen, Pythagoras und Ähnlichkeit, Abbildungen und Geraden im Koordinatensystem — je vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
       <li>Schwesterprojekte: <a href="https://mathe.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Mathe begreifbar</a> (Berufsmaturität) und <a href="https://physik.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Physik begreifbar</a> — gleicher Aufbau</li>
     </ul>
     <div class="meta-sub">Im Aufbau</div>

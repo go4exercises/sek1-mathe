@@ -1,0 +1,6 @@
+0.40	Zentrum im Ursprung: beide Koordinaten mal drei, sechs und minus drei.
+6.19	Weg von Z nach P: zwei und eins. Mal zwei gibt vier und zwei, ab Z: fünf und vier.
+13.79	Sieben mal zwei Quadrat gibt achtundzwanzig.
+17.63	Grundseite vier, Höhe drei: Die Fläche ist sechs.
+21.80	Drei durch eins und sechs durch zwei geben je drei. Der Faktor ist drei.
+27.26	Zum Mitnehmen: Weg ab Z mal k. Längen mal k, Flächen mal k Quadrat.

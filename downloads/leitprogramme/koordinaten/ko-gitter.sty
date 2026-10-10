@@ -1,0 +1,11 @@
+% Gitter für Gesamttest und Bewertungspaket «Abbildungen und Geraden im Koordinatensystem» (\usepackage{ko-gitter} nach lp-druck), aus lf-gitter.sty (Lineare Funktionen, Darstellungen).
+% \gitter{xmin}{xmax}{ymin}{ymax}{Inhalt}: Karo 6 mm, Achsen mit Pfeil, jede ganze Zahl beschriftet.
+\newcommand{\gitter}[5]{\begin{tikzpicture}[x=6mm,y=6mm,font=\scriptsize]
+  \draw[lplinie,line width=0.3pt,step=1] (#1,#3) grid (#2,#4);
+  \draw[->,line width=0.6pt] (#1,0) -- (#2+0.5,0) node[right] {$x$};
+  \draw[->,line width=0.6pt] (0,#3) -- (0,#4+0.5) node[above] {$y$};
+  \foreach \i in {#1,...,#2} {\ifnum\i=0\else\node[below,inner sep=1.5pt] at (\i,0) {$\i$};\fi}
+  \foreach \j in {#3,...,#4} {\ifnum\j=0\else\node[left,inner sep=3pt] at (0,\j) {$\j$};\fi}
+  \node[below left,inner sep=1.5pt] at (0,0) {$0$};
+  #5
+\end{tikzpicture}}

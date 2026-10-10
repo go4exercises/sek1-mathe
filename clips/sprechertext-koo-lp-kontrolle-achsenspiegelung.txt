@@ -1,0 +1,6 @@
+0.40	An der y-Achse wechselt nur das Vorzeichen von x: vier und eins.
+5.84	P ist drei links der Achse, das Bild drei rechts: acht und drei.
+10.94	An y gleich x tauschen die Koordinaten: minus eins und sechs.
+16.35	P ist drei über der Achse y gleich eins, das Bild drei darunter: null und minus zwei.
+23.09	Nur y ändert sich, die Achse ist waagrecht. Sie liegt in der Mitte von sieben und minus eins: y gleich drei.
+31.12	Zum Mitnehmen: Gleich weit von der Achse, Verbindung senkrecht. Die Achse liegt in der Mitte zwischen Punkt und Bild.

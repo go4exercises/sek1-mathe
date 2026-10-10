@@ -1,0 +1,124 @@
+% Gesamttest «Abbildungen und Geraden im Koordinatensystem» — Quelle des PDFs (python3 scripts/build-lp-pdf.py koordinaten).
+% Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/koordinaten/zahlen.py).
+% Vorgabe ~/TODO-BM-Vorkurs-LP03-15.md §7: Punktspiegelung (G1, G2), Achsenspiegelung mit Achse finden (G3, G4),
+% zentrische Streckung mit Flächenfaktor und Fläche aus Koordinaten (G5, G6), Gerade aus zwei Punkten und Punktprobe (G7, G8).
+% Rechenweg und Zeichnung getrennt bewertbar. 25 Punkte, rund 30 Minuten, ohne Taschenrechner.
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\usepackage{ko-gitter}
+\renewcommand{\lpname}{Abbildungen und Geraden im Koordinatensystem}
+\renewcommand{\lpteilgebiet}{}
+\renewcommand{\lpfuss}{Gesamttest · 25 Punkte}
+\begin{document}
+\lpkopf{Gesamttest}{%
+  \vspace{4pt}\noindent\begin{tabularx}{\linewidth}{@{}X X@{}}
+  Code (kein Name): \hrulefill & Punkte: \hrulefill\ / 25
+  \end{tabularx}}
+
+\begin{lpinfo}{Anleitung}
+\textbf{Zeit:} rund 30 Minuten. \textbf{Hilfsmittel:} Lineal und Geodreieck, kein Taschenrechner.
+Schreib zu jeder Aufgabe den \textbf{Rechenweg} auf und zeichne, wo verlangt, ins Gitter; Rechnung und Zeichnung werden getrennt bewertet.
+Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt diesem Blatt scannen bzw.\ fotografieren
+(ohne Namen und Standort) und mit dem Bewertungspaket einer KI geben.
+\end{lpinfo}
+
+\lpteil{Teil A · Punktspiegelung}{Kapitel 1 · 6 Punkte}
+
+\begin{lpaufgabe}{G1}{Dreieck am Punkt spiegeln}{3 P}
+Das Dreieck $A(2 \mid 1)$, $B(5 \mid 2)$, $C(3 \mid 4)$ wird am Punkt $Z(1 \mid 0)$ gespiegelt.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Berechne die Koordinaten von $A'$, $B'$ und $C'$.
+\item Zeichne das Bilddreieck ins Gitter.
+\end{enumerate}
+\begin{center}
+\gitter{-5}{6}{-5}{5}{%
+  \draw[lpblau,line width=1pt,fill=lpblau!10] (2,1) -- (5,2) -- (3,4) -- cycle;
+  \foreach \p/\n/\a in {{(2,1)}/A/below right, {(5,2)}/B/right, {(3,4)}/C/above} {\fill[lpblau] \p circle (2pt); \node[\a,lpblau] at \p {$\n$};}
+  \fill[lpgruen] (1,0) circle (2.4pt); \node[above left,lpgruen] at (1,0) {$Z$};}
+\end{center}
+\lpplatz{3}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Zentrum gesucht}{3 P}
+Bei einer Punktspiegelung wird $P(-3 \mid 4)$ auf $P'(5 \mid 0)$ abgebildet.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Berechne das Zentrum $Z$.
+\item Wohin wird bei derselben Spiegelung der Punkt $Q(4 \mid 5)$ abgebildet?
+\end{enumerate}
+\lpplatz{5}
+\end{lpaufgabe}
+
+\lpteil{Teil B · Achsenspiegelung}{Kapitel 2 · 6 Punkte}
+
+\begin{lpaufgabe}{G3}{Drei Achsen}{3 P}
+Spiegle den Punkt $P(4 \mid -1)$ (a) an der $x$-Achse, (b) an der $y$-Achse, (c) an der Geraden $y = x$.
+Gib jeweils die Koordinaten des Bildpunkts an. Du darfst das Gitter benützen.
+\begin{center}
+\gitter{-5}{5}{-5}{5}{%
+  \draw[lpgruen,line width=0.8pt,dashed] (-5,-5) -- (5,5) node[above right] {$y = x$};
+  \fill[lpblau] (4,-1) circle (2pt); \node[below right,lpblau] at (4,-1) {$P$};}
+\end{center}
+\lpplatz{2}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G4}{Achse gesucht}{3 P}
+Bei einer Achsenspiegelung wird $A(-2 \mid 3)$ auf $A'(6 \mid 3)$ abgebildet.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Gib die Gleichung der Spiegelachse an und begründe kurz.
+\item Berechne das Bild des Punkts $Q(1 \mid -1)$ bei derselben Spiegelung.
+\item Zeichne die Achse, $Q$ und $Q'$ ins Gitter.
+\end{enumerate}
+\begin{center}
+\gitter{-3}{7}{-3}{4}{%
+  \foreach \p/\n in {{(-2,3)}/A, {(6,3)}/A'} {\fill[lpblau] \p circle (2pt); \node[above,lpblau] at \p {$\n$};}}
+\end{center}
+\lpplatz{3}
+\end{lpaufgabe}
+
+\needspace{24\baselineskip}
+\lpteil{Teil C · Zentrische Streckung}{Kapitel 3 · 7 Punkte}
+
+\begin{lpaufgabe}{G5}{Dreieck strecken}{4 P}
+Das Dreieck $A(2 \mid 1)$, $B(4 \mid 1)$, $C(2 \mid 3)$ wird vom Zentrum $Z(1 \mid 1)$ aus mit dem Faktor $k = 2$ gestreckt.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Berechne die Koordinaten von $A'$, $B'$ und $C'$.
+\item Zeichne das Bilddreieck ins Gitter.
+\item Berechne die Flächen beider Dreiecke. Mit welcher Zahl wurde die Fläche multipliziert?
+\end{enumerate}
+\begin{center}
+\gitter{0}{8}{0}{6}{%
+  \draw[lpblau,line width=1pt,fill=lpblau!10] (2,1) -- (4,1) -- (2,3) -- cycle;
+  \foreach \p/\n/\a in {{(2,1)}/A/below, {(4,1)}/B/below, {(2,3)}/C/left} {\fill[lpblau] \p circle (2pt); \node[\a,lpblau] at \p {$\n$};}
+  \fill[lpgruen] (1,1) circle (2.4pt); \node[left,lpgruen] at (1,1) {$Z$};}
+\end{center}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G6}{Fläche aus Koordinaten}{3 P}
+Berechne die Fläche des Dreiecks $D(0 \mid 0)$, $E(8 \mid 2)$, $F(3 \mid 6)$ (Einheit cm). Zeig deinen Weg in der Zeichnung.
+\begin{center}
+\gitter{0}{8}{0}{6}{%
+  \draw[lpblau,line width=1pt,fill=lpblau!10] (0,0) -- (8,2) -- (3,6) -- cycle;
+  \foreach \p/\n/\a in {{(0,0)}/D/above left, {(8,2)}/E/right, {(3,6)}/F/above} {\fill[lpblau] \p circle (2pt); \node[\a,lpblau] at \p {$\n$};}}
+\end{center}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\lpteil{Teil D · Geraden durch zwei Punkte}{Kapitel 4 · 6 Punkte}
+
+\begin{lpaufgabe}{G7}{Geradengleichung}{3 P}
+Eine Gerade geht durch $A(-1 \mid -5)$ und $B(3 \mid 7)$. Bestimme ihre Gleichung in der Form $y = m \cdot x + b$.
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Punktprobe}{3 P}
+Gegeben ist die Gerade $y = 3 \cdot x - 2$.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Liegt der Punkt $P(50 \mid 148)$ auf der Geraden? Begründe mit einer Rechnung.
+\item Liegt der Punkt $Q(-20 \mid -61)$ auf der Geraden? Begründe mit einer Rechnung.
+\item Welcher Punkt der Geraden hat die $x$-Koordinate $-20$?
+\end{enumerate}
+\lpplatz{5}
+\end{lpaufgabe}
+
+\end{document}
