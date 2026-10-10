@@ -418,7 +418,7 @@ clip('zusammenfassen', 1, 'Terme sehen: Terme vereinfachen',
             f(r'\fb{3}(2x - 4)', 300, 76, ein=0.4),
             f(r'= \fa{6x} \fd{- 12}', 430, 70, ein='@also'),
             n('die Zahl vor der Klammer|mal jedes Glied', 570, 'blau', 42, ein='@jedem'),
-            graf(gruppen[0], ein='@dreimal'), graf(gruppen[1], ein='@dreimal+0.4'), graf(gruppen[2], ein='@dreimal+0.8')),
+            graf(gruppen[0], ein='@kommt+0.3'), graf(gruppen[1], ein='@kommt+0.7'), graf(gruppen[2], ein='@kommt+1.1')),
          sz('Minus vor der Klammer',
             'Sieben x minus die Klammer zwei x minus fünf. Das Minus gilt für die ganze Klammer: Jede Kachel darin wird '
             'umgedreht. Aus zwei x wird minus zwei x, aus minus fünf wird plus fünf. Zwei rote Streifen heben zwei blaue auf. '

@@ -1,3 +1,12 @@
+## Abgleich mit TALS Mathe (10.10.2026)
+
+Gemeinsame Dateien gegen ~/tals-mathe verglichen (TALS-`scripts/abgleich.py` passt nicht auf Sek1: erwartet Physik-Dateien).
+Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, build-clip-fragen-ton.py, build-lp-pdf.py, alle
+.claude/tools ausser build-bilder.mjs. Projekteigen: style.css (Petrol), build-bilder.mjs, build-seo.py, build-suchindex.py, preflight.py.
+- [x] `build-clip-ton.py`: neue `TAUSCH`-Einträge aus der TALS-Hörprobe vom 10.10.2026 übernommen (eigene «kürz», «Bruchterm» bleiben).
+- [x] Davon betroffen: «Kacheln» in `terme-lp-zusammenfassen`, Szenen 2, 4, 5 neu vertont.
+- [ ] 🔑 Hörprobe `terme-lp-zusammenfassen` Szene «Zusammenfassen»: Whisper hört «Kacheln» dort noch als «Karre».
+
 ## Leitprogramm Darstellungen wechseln (10.10.2026)
 
 `leitprogramme/darstellungen.html`, gebaut mit `scripts/lp/darstellungen/` (README dort), nach

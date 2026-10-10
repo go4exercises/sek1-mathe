@@ -40,7 +40,7 @@
      "x": 150,
      "y": 330,
      "groesse": 86,
-     "ein": 5.08
+     "ein": 5.06
     },
     {
      "typ": "notiz",
@@ -185,7 +185,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 5.08,
+     "ein": 5.06,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -383,7 +383,7 @@
      "x": 150,
      "y": 430,
      "groesse": 66,
-     "ein": 11.11
+     "ein": 11.21
     },
     {
      "typ": "notiz",
@@ -392,7 +392,7 @@
      "y": 560,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 2.37
+     "ein": 2.25
     },
     {
      "typ": "graf",
@@ -550,7 +550,7 @@
        "farbe": 2,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 10.09
+       "aus": 10.23
       },
       {
        "art": "text",
@@ -686,7 +686,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 10.09
+       "aus": 10.23
       },
       {
        "art": "text",
@@ -722,7 +722,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 8.23,
+     "ein": 8.39,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -737,7 +737,7 @@
        "farbe": 4,
        "fuellung": 0,
        "dicke": 3,
-       "aus": 10.09
+       "aus": 10.23
       },
       {
        "art": "kreis",
@@ -749,7 +749,7 @@
        "farbe": 4,
        "fuellung": 0,
        "dicke": 3,
-       "aus": 10.09
+       "aus": 10.23
       },
       {
        "art": "strecke",
@@ -763,7 +763,7 @@
        ],
        "farbe": 4,
        "dicke": 3,
-       "aus": 10.09,
+       "aus": 10.23,
        "gestrichelt": true
       }
      ],
@@ -788,7 +788,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 4.63,
+     "ein": 4.75,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -935,7 +935,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 10.09,
+     "ein": 10.23,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1034,7 +1034,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 11.11,
+     "ein": 11.21,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1066,7 +1066,7 @@
      "achsen": false
     }
    ],
-   "dauer": 16.31
+   "dauer": 13.95
   },
   {
    "name": "Nicht gleichartig",
@@ -1452,7 +1452,7 @@
      "x": 150,
      "y": 430,
      "groesse": 70,
-     "ein": 7.86
+     "ein": 7.68
     },
     {
      "typ": "notiz",
@@ -1461,7 +1461,7 @@
      "y": 570,
      "groesse": 42,
      "farbe": "blau",
-     "ein": 10.38
+     "ein": 10.36
     },
     {
      "typ": "graf",
@@ -1471,7 +1471,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 0.54,
+     "ein": 3.8,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1678,7 +1678,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 0.94,
+     "ein": 4.2,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -1885,7 +1885,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 1.34,
+     "ein": 4.6,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2085,7 +2085,7 @@
      "achsen": false
     }
    ],
-   "dauer": 14.92
+   "dauer": 13.11
   },
   {
    "name": "Minus vor der Klammer",
@@ -2107,7 +2107,7 @@
      "x": 150,
      "y": 430,
      "groesse": 66,
-     "ein": 7.1
+     "ein": 7.37
     },
     {
      "typ": "formel",
@@ -2115,7 +2115,7 @@
      "x": 150,
      "y": 560,
      "groesse": 66,
-     "ein": 13.96
+     "ein": 14.09
     },
     {
      "typ": "graf",
@@ -2153,7 +2153,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 13.96
+       "aus": 14.09
       },
       {
        "art": "vieleck",
@@ -2178,7 +2178,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 13.96
+       "aus": 14.09
       },
       {
        "art": "vieleck",
@@ -2311,7 +2311,7 @@
        "anker": "middle",
        "groesse": 34,
        "kursiv": false,
-       "aus": 13.96
+       "aus": 14.09
       }
      ],
      "pfeile": false,
@@ -2351,7 +2351,7 @@
        "anker": "middle",
        "groesse": 64,
        "kursiv": false,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2377,7 +2377,7 @@
        "fuellung": 0,
        "dicke": 3,
        "gestrichelt": true,
-       "aus": 6.56
+       "aus": 6.89
       }
      ],
      "pfeile": false,
@@ -2429,7 +2429,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2454,7 +2454,7 @@
        "farbe": 1,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2479,7 +2479,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2504,7 +2504,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2529,7 +2529,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2554,7 +2554,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       },
       {
        "art": "vieleck",
@@ -2579,7 +2579,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 6.56
+       "aus": 6.89
       }
      ],
      "pfeile": false,
@@ -2603,7 +2603,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 6.56,
+     "ein": 6.89,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2631,7 +2631,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 13.96
+       "aus": 14.09
       },
       {
        "art": "vieleck",
@@ -2656,7 +2656,7 @@
        "farbe": 4,
        "fuellung": 0.35,
        "dicke": 2,
-       "aus": 13.96
+       "aus": 14.09
       },
       {
        "art": "vieleck",
@@ -2800,7 +2800,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 13.96,
+     "ein": 14.09,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -2832,7 +2832,7 @@
      "achsen": false
     }
    ],
-   "dauer": 19.97
+   "dauer": 16.56
   },
   {
    "name": "Verschachtelt",
@@ -2854,7 +2854,7 @@
      "x": 150,
      "y": 390,
      "groesse": 58,
-     "ein": 6.27
+     "ein": 6.33
     },
     {
      "typ": "formel",
@@ -2880,7 +2880,7 @@
      "hoehe": 760,
      "abstand": 0,
      "anim": "fade",
-     "ein": 2.01,
+     "ein": 2.03,
      "kurven": [],
      "geraden": [],
      "punkte": [],
@@ -3076,7 +3076,7 @@
      "x": 150,
      "y": 280,
      "groesse": 64,
-     "ein": 3.3
+     "ein": 3.28
     },
     {
      "typ": "formel",

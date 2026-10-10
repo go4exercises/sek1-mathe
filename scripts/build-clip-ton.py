@@ -135,13 +135,24 @@ AUSSPRACHE = [
     ("cäsium", "tsˈɛːziʊm"),
     ("granit", "ɡɾanˈiːt"),                # bisher kurzes i
     ("candela", "kandˈeːla"),              # bisher «KAN-dela»
+    # Nach Hoerprobe 10.10.2026 (drei Runden, Woerter aus Mathe, Sek1, Physik)
+    ("amontons", "amɔ̃tˈɔ̃"),               # franzoesisch nasal; bisher «A-mon-tons»
+    ("isochor", "iːzoːxˈoːɐ"),             # Schweizer ch, Betonung hinten; bisher «I-so-kor»
+    ("glycerin", "ɡlytsəʁˈiːn"),           # «Glyzerin»; bisher «Glygerin»
+    ("stimulierte", "ʃtiːmuːlˈiːɐtə"),     # «scht» deutlich; bisher kaum hoerbar
+    ("kacheln", "kˈaxːəln"),               # langes Schweizer ch; Whisper hoerte «Karren»
+    ("kachel", "kˈaxːəl"),
+    ("parts per million", "pˈaːɐts pœːɐ mˈɪljən"),  # Erklaerung zu «ppm» (Physik)
 ]
 # Nicht geaendert, weil die bisherige Lesart besser klang: Archimedes,
 # Perihel, Parabel, MathPrint, Asymptote, Mikrometer, Mikro; Volumen, linear
 # und Erdbeschleunigung (28.09.2026 in Saetzen aus beiden Repos angehoert);
 # Transversal, Niveau, Photon; Gneis, Basalt, Lumen, Milliarden, Elementar-
 # ladung, Einholzeit, Gegenrechnung, Sonnenstunde, Marktstand, Kohlenstoff,
-# Stickstoff (alle 28.09.2026).
+# Stickstoff (alle 28.09.2026). Nach Hoerprobe 10.10.2026 ebenfalls wie bisher: x s,
+# y s, Symmetrieachse, Kathete, subtrahiert, Ueberstand, Hauptnenner, Fuenftel,
+# Zweiklammersatz, rueckwaerts, Anomalie, Davos, Anders, UKW, Lambda, Neon, Helium,
+# Phasengeschwindigkeit, Laserstrahl; «Komma» in Dezimalzahlen bleibt «Komma».
 #
 # 2. Abkuerzungen, die buchstabiert werden: nur in exakt dieser Schreibung
 #    als ganzes Wort (sonst traefe «SI» auch «si» in anderen Woertern).
@@ -176,6 +187,9 @@ TAUSCH = [
     ("Tabellendichte", "Tabellen-dichte"),     # bisher «Tabellen-digge»
     ("Normdichte", "Norm-dichte"),
     ("Kommastelle", "Komma-stelle"),           # auch «…stellen»; «Nachkommastelle» steht oben
+    # Nach Hoerprobe 10.10.2026: Betonung auf dem zweiten Teil hoerbar machen
+    ("Korrekturglied", "Korrektur-Glied"),     # bisher «-tur» verschluckt
+    ("Arkussinus", "Arkus-Sinus"),             # bisher «Sinus» verschluckt; Arkustangens bleibt (Tabelle oben)
     ("kürz", "kührz"),
     ("Bruchterm", "Bruch-Term"),                # sonst «Bruchdämm» (Whisper medium, 10.10.2026); auch «Bruchterme»                         # kürzen, gekürzt, kürzbar: sonst «kratzen», «kerzen» (Whisper medium, 09.10.2026)
 ]

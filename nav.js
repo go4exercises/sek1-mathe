@@ -103,12 +103,12 @@ function buildNav(cfg) {
     <div class="meta-titel">Ausblick</div>
     <div class="meta-sub">Erstellt</div>
     <ul>
-      <li>Leitprogramm Bruchrechnen: vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
+      <li>Fünf Leitprogramme: Bruchrechnen, Terme und Faktorisieren, Bruchterme, Gleichungen und Formeln, Lineare Funktionen, Darstellungen wechseln — je vier Kapitel mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest</li>
       <li>Schwesterprojekte: <a href="https://mathe.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Mathe begreifbar</a> (Berufsmaturität) und <a href="https://physik.begreifbar.ch/" target="_blank" rel="noopener" class="meta-link">Physik begreifbar</a> — gleicher Aufbau</li>
     </ul>
     <div class="meta-sub">Im Aufbau</div>
     <ul>
-      <li>Weitere Leitprogramme zu Arithmetik/Algebra, Gleichungen und Geometrie</li>
+      <li>Weitere Leitprogramme zu Funktionen, Mathematisieren und Geometrie</li>
       <li>Nachschlagen: Glossar, Formelsammlung und Clips</li>
     </ul>`;
 
