@@ -1,0 +1,963 @@
+{
+ "titel": "Geometrie: Der Satz des Pythagoras",
+ "dateiname": "pyt-lp-pythagoras",
+ "kurzbeschrieb": "Rechtwinkliges Dreieck 3, 4, 5 im Karo: Katheten, Hypotenuse; Quadrate 9 + 16 = 25; a² + b² = c²; Vorhersage 6 und 8 gibt 10; Kathete c = 10, a = 6 gibt b = 8; Fehler: bei der Kathete addiert.",
+ "schlagworte": [
+  "Pythagoras",
+  "Hypotenuse",
+  "Kathete",
+  "rechtwinklig"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 3,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Dreieck",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein rechtwinkliges Dreieck. Die Seite gegenüber dem rechten Winkel heisst Hypotenuse, sie ist die längste. Die beiden anderen Seiten heissen Katheten.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Hypotenuse: gegenüber dem rechten Winkel|Katheten: die beiden anderen",
+     "x": 150,
+     "y": 300,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 4.06
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.06
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.5,
+        -0.8
+       ],
+       "text": "a",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.6,
+        2
+       ],
+       "text": "b",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.06,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        0,
+        4
+       ],
+       "farbe": 3,
+       "dicke": 7
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.9,
+        2.5
+       ],
+       "text": "c",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 9.19
+  },
+  {
+   "name": "Quadrate",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zeichne über jeder Seite ein Quadrat und zähle die Kästchen. Über der Kathete drei liegen neun, über der Kathete vier sechzehn. Über der Hypotenuse liegen fünfundzwanzig: genau neun plus sechzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fa{9} + \\fb{16} = \\fc{25}",
+     "x": 150,
+     "y": 300,
+     "groesse": 62,
+     "ein": 10.05
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.06
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.13,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         -3
+        ],
+        [
+         0,
+         -3
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.2
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.5,
+        -1.9
+       ],
+       "text": "9",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.71,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         4
+        ],
+        [
+         -4,
+         4
+        ],
+        [
+         -4,
+         0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.2
+      },
+      {
+       "art": "text",
+       "bei": [
+        -2,
+        1.7
+       ],
+       "text": "16",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.71,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         4
+        ],
+        [
+         4,
+         7
+        ],
+        [
+         7,
+         3
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.2
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.5,
+        3.3
+       ],
+       "text": "25",
+       "farbe": 3,
+       "anker": "middle",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 13.47
+  },
+  {
+   "name": "Satz",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Das gilt in jedem rechtwinkligen Dreieck: a Quadrat plus b Quadrat gleich c Quadrat. Die Quadrate der Katheten ergeben zusammen das Quadrat der Hypotenuse.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fa{a^2} + \\fb{b^2} = \\fc{c^2}",
+     "x": 150,
+     "y": 300,
+     "groesse": 72,
+     "ein": 1.38
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5.5,
+      8.5
+     ],
+     "ybereich": [
+      -4.5,
+      9.5
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.06
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         -3
+        ],
+        [
+         0,
+         -3
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         4
+        ],
+        [
+         -4,
+         4
+        ],
+        [
+         -4,
+         0
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         3,
+         0
+        ],
+        [
+         0,
+         4
+        ],
+        [
+         4,
+         7
+        ],
+        [
+         7,
+         3
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.2
+      }
+     ]
+    }
+   ],
+   "dauer": 10.04
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sechs Quadrat plus acht Quadrat gibt sechsunddreissig plus vierundsechzig, also hundert. Die Wurzel aus hundert ist zehn: Die Hypotenuse ist zehn Zentimeter lang.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "c^2 = 36 + 64 = 100",
+     "x": 150,
+     "y": 280,
+     "groesse": 56,
+     "ein": 1.32
+    },
+    {
+     "typ": "formel",
+     "text": "c = \\sqrt{100} = \\fc{10}\\ \\text{cm}",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 6.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      11.5
+     ],
+     "ybereich": [
+      -1.5,
+      11.5
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         0,
+         8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.12
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -0.8
+       ],
+       "text": "6",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.5,
+        4
+       ],
+       "text": "8",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.78,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      11.5
+     ],
+     "ybereich": [
+      -1.5,
+      11.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        0
+       ],
+       "bis": [
+        0,
+        8
+       ],
+       "farbe": 3,
+       "dicke": 7
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.4,
+        4.6
+       ],
+       "text": "10",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 10.7
+  },
+  {
+   "name": "Kathete",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ist eine Kathete gesucht, subtrahierst du. Hypotenuse zehn, Kathete sechs: b Quadrat gleich hundert minus sechsunddreissig, gleich vierundsechzig. b ist acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "b^2 = c^2 - a^2 = 100 - 36 = 64",
+     "x": 150,
+     "y": 280,
+     "groesse": 48,
+     "ein": 1.98
+    },
+    {
+     "typ": "formel",
+     "text": "b = \\sqrt{64} = \\fc{8}\\ \\text{cm}",
+     "x": 150,
+     "y": 400,
+     "groesse": 54,
+     "ein": 8.12
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      11.5
+     ],
+     "ybereich": [
+      -1.5,
+      11.5
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         0,
+         8
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.12
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        0
+       ],
+       "bis": [
+        0,
+        8
+       ],
+       "farbe": 3,
+       "dicke": 7
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -0.8
+       ],
+       "text": "6",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.4,
+        4.6
+       ],
+       "text": "10",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.5,
+        4
+       ],
+       "text": "b",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 10.83
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: bei der Kathete addieren. Hundert plus sechsunddreissig gibt mehr als hundert, die Kathete wäre länger als die Hypotenuse. Das ist unmöglich.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{b^2 = 100 + 36}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 2.19
+    },
+    {
+     "typ": "notiz",
+     "text": "Kathete: minus · Hypotenuse: plus",
+     "x": 150,
+     "y": 430,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 8.35
+    }
+   ],
+   "dauer": 11.62
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Im rechtwinkligen Dreieck gilt a Quadrat plus b Quadrat gleich c Quadrat. Für die Hypotenuse addierst du die Quadrate, für eine Kathete subtrahierst du. Am Schluss die Wurzel ziehen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "a² + b² = c²|Hypotenuse: plus · Kathete: minus|am Schluss die Wurzel",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 11.54
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.03
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Die Katheten sind 6 cm und 8 cm lang. Wie lang ist die Hypotenuse?",
+   "optionen": [
+    "100 cm",
+    "10 cm",
+    "14 cm"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die Seiten werden nicht einfach addiert. Was gilt für die Quadrate?",
+    "0": "100 ist c², nicht c."
+   },
+   "sprich": "Die Katheten sind sechs und acht Zentimeter lang. Wie lang ist die Hypotenuse?",
+   "rueck_sprich": {
+    "2": "Die Seiten werden nicht einfach addiert. Was gilt für die Quadrate?",
+    "0": "Hundert ist c Quadrat, nicht c."
+   }
+  }
+ ]
+}

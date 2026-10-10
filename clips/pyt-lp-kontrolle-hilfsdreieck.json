@@ -1,0 +1,495 @@
+{
+ "titel": "Geometrie: Kontrollfragen zu Hilfsdreiecken",
+ "dateiname": "pyt-lp-kontrolle-hilfsdreieck",
+ "kurzbeschrieb": "Fünf Fragen: Diagonale Rechteck 35 × 12, Höhe Basis 18 Schenkel 15, Sehne bei r = 13 und Abstand 12, Hypotenuse im Kreis, Wassertiefe bei r = 10 und Breite 12.",
+ "schlagworte": [
+  "Hilfsdreieck",
+  "Kreis",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zwölfhundertfünfundzwanzig plus hundertvierundvierzig gibt dreizehnhundertneunundsechzig. Die Wurzel ist siebenunddreissig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\sqrt{35^2 + 12^2} = \\sqrt{1369} = \\fc{37}",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.93
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Halbe Basis neun, Schenkel fünfzehn: zweihundertfünfundzwanzig minus einundachtzig gibt hundertvierundvierzig, die Höhe ist zwölf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "h = \\sqrt{15^2 - 9^2} = \\fc{12}",
+     "x": 150,
+     "y": 330,
+     "groesse": 52,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 9.14
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Hundertneunundsechzig minus hundertvierundvierzig gibt fünfundzwanzig. Die halbe Sehne ist fünf, die ganze zehn Zentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\tfrac{s}{2} = \\sqrt{13^2 - 12^2} = 5, \\;\\; s = \\fc{10}",
+     "x": 150,
+     "y": 330,
+     "groesse": 46,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.89
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der Radius liegt gegenüber dem rechten Winkel. Er ist die Hypotenuse des Hilfsdreiecks.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -12.5,
+      12.5
+     ],
+     "ybereich": [
+      -12.5,
+      12.5
+     ],
+     "figuren": [
+      {
+       "art": "kreis",
+       "m": [
+        0,
+        0
+       ],
+       "r": 10,
+       "farbe": 5,
+       "fuellung": 0.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        -8,
+        -6
+       ],
+       "bis": [
+        8,
+        -6
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        0,
+        -6
+       ],
+       "farbe": 2,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        8,
+        -6
+       ],
+       "farbe": 3,
+       "dicke": 5
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        -6
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        0,
+        -8
+       ],
+       "text": "Sehne",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.6,
+        -3
+       ],
+       "text": "Abstand",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.6,
+        -2
+       ],
+       "text": "Radius",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ],
+     "achsen": false,
+     "raster": false
+    },
+    {
+     "typ": "notiz",
+     "text": "der Radius",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "farbe": "gruen",
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -12.5,
+      12.5
+     ],
+     "ybereich": [
+      -12.5,
+      12.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "kreis",
+       "m": [
+        0,
+        0
+       ],
+       "r": 10,
+       "farbe": 5,
+       "fuellung": 0.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        -8,
+        -6
+       ],
+       "bis": [
+        8,
+        -6
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        0,
+        -6
+       ],
+       "farbe": 2,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        8,
+        -6
+       ],
+       "farbe": 3,
+       "dicke": 5
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        -6
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        0,
+        -8
+       ],
+       "text": "Sehne",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.6,
+        -3
+       ],
+       "text": "Abstand",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.6,
+        -2
+       ],
+       "text": "Radius",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 5.9
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Halbe Breite sechs, Radius zehn: Der Abstand ist acht. Das Wasser ist zehn minus acht, also zwei Zentimeter tief.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "d = \\sqrt{100 - 36} = 8, \\;\\; 10 - 8 = \\fc{2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 46,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.33
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zuerst das Hilfsdreieck finden. Im Kreis ist der Radius die Hypotenuse, und die Sehne geht nur zur Hälfte hinein.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zuerst das Hilfsdreieck|im Kreis: Radius = Hypotenuse|halbe Sehne",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.24
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie lang ist die Diagonale eines Rechtecks 35 cm × 12 cm?",
+   "optionen": [
+    "37 cm",
+    "47 cm",
+    "33 cm"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
+    "2": "Die Diagonale ist die Hypotenuse. Addieren statt subtrahieren."
+   },
+   "sprich": "Wie lang ist die Diagonale eines Rechtecks fünfunddreissig mal zwölf Zentimeter?",
+   "rueck_sprich": {
+    "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
+    "2": "Die Diagonale ist die Hypotenuse. Addieren statt subtrahieren."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein gleichschenkliges Dreieck hat die Basis 18 cm und Schenkel von 15 cm. Wie hoch ist es?",
+   "optionen": [
+    "12 cm",
+    "6 cm",
+    "9 cm"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Nicht die Seiten subtrahieren. Welches Hilfsdreieck entsteht?",
+    "2": "Das ist die halbe Basis. Gesucht ist die andere Kathete."
+   },
+   "sprich": "Ein gleichschenkliges Dreieck hat die Basis achtzehn und Schenkel von fünfzehn Zentimetern. Wie hoch ist es?",
+   "rueck_sprich": {
+    "1": "Nicht die Seiten subtrahieren. Welches Hilfsdreieck entsteht?",
+    "2": "Das ist die halbe Basis. Gesucht ist die andere Kathete."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Kreis hat den Radius 13 cm. Eine Sehne hat den Abstand 12 cm vom Mittelpunkt. Wie lang ist sie?",
+   "optionen": [
+    "5 cm",
+    "1 cm",
+    "10 cm"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Das ist die halbe Sehne.",
+    "1": "Nicht die Längen subtrahieren, sondern ihre Quadrate."
+   },
+   "sprich": "Ein Kreis hat den Radius dreizehn Zentimeter. Eine Sehne hat den Abstand zwölf vom Mittelpunkt. Wie lang ist sie?",
+   "rueck_sprich": {
+    "0": "Das ist die halbe Sehne.",
+    "1": "Nicht die Längen subtrahieren, sondern ihre Quadrate."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Strecke im Bild ist die Hypotenuse des Hilfsdreiecks?",
+   "optionen": [
+    "der Radius",
+    "die Sehne",
+    "der Abstand"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Nur die halbe Sehne gehört ins Hilfsdreieck, und sie liegt am rechten Winkel.",
+    "2": "Der Abstand liegt am rechten Winkel an."
+   },
+   "rueck_sprich": {
+    "1": "Nur die halbe Sehne gehört ins Hilfsdreieck, und sie liegt am rechten Winkel.",
+    "2": "Der Abstand liegt am rechten Winkel an."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Rohr hat den Radius 10 cm, der Wasserspiegel ist 12 cm breit, das Wasser steht unter der Mitte. Wie tief ist es?",
+   "optionen": [
+    "2 cm",
+    "8 cm",
+    "18 cm"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das ist der Abstand zur Mitte. Wie tief ist das Wasser darunter?",
+    "2": "So tief wäre es, wenn der Spiegel über der Mitte läge."
+   },
+   "sprich": "Ein Rohr hat den Radius zehn Zentimeter, der Wasserspiegel ist zwölf Zentimeter breit, das Wasser steht unter der Mitte. Wie tief ist es?",
+   "rueck_sprich": {
+    "1": "Das ist der Abstand zur Mitte. Wie tief ist das Wasser darunter?",
+    "2": "So tief wäre es, wenn der Spiegel über der Mitte läge."
+   }
+  }
+ ]
+}

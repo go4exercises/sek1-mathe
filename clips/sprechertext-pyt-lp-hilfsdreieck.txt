@@ -1,0 +1,8 @@
+0.40	Wie lang ist die Diagonale eines Rechtecks einundzwanzig mal zwanzig? Such zuerst das Hilfsdreieck: Die Diagonale schneidet das Rechteck in zwei rechtwinklige Dreiecke. Die Diagonale ist ihre Hypotenuse.
+13.99	Einundzwanzig Quadrat plus zwanzig Quadrat gibt vierhunderteinundvierzig plus vierhundert, also achthunderteinundvierzig. Die Wurzel ist neunundzwanzig.
+23.75	Ein gleichschenkliges Dreieck mit Basis sechzehn und Schenkeln von siebzehn. Die Höhe halbiert die Basis. Das Hilfsdreieck hat die Katheten acht und h und die Hypotenuse siebzehn: h ist fünfzehn.
+36.53	Im Kreis verbindet eine Sehne zwei Punkte des Kreises. Der Abstand zum Mittelpunkt steht senkrecht auf ihr und halbiert sie. Radius zehn, Sehne sechzehn: Das Hilfsdreieck hat die Hypotenuse zehn und die Kathete acht, der Abstand ist sechs.
+50.94	Ein Rohr mit fünfzig Zentimetern Durchmesser, der Wasserspiegel ist achtundvierzig Zentimeter breit. Radius fünfundzwanzig, halbe Breite vierundzwanzig: Der Abstand ist sieben. Das Wasser ist fünfundzwanzig minus sieben, also achtzehn Zentimeter tief.
+67.14	Häufiger Fehler: die ganze Basis oder die ganze Sehne ins Hilfsdreieck setzen. Hinein gehört immer die Hälfte, denn Höhe und Abstand halbieren sie.
+78.46	Zum Mitnehmen: Such zuerst das rechtwinklige Hilfsdreieck und seine Hypotenuse. Trag die bekannten Längen ein, oft die Hälfte. Dann rechnest du mit Pythagoras.
+88.90	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

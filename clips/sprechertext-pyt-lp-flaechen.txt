@@ -1,0 +1,8 @@
+0.40	Ein Dreieck mit der Grundseite sechs Zentimeter. Die Höhe steht senkrecht auf der Grundseite: vier Zentimeter. Die schrägen Seiten sind je fünf Zentimeter lang.
+9.89	Ergänze das Dreieck zum Rechteck sechs mal vier. Das Dreieck ist genau die Hälfte davon: sechs mal vier durch zwei, zwölf Quadratzentimeter.
+18.81	Schiebst du die Spitze parallel zur Grundseite, ändern sich die schrägen Seiten. Grundseite und Höhe bleiben, also bleibt auch die Fläche: zwölf Quadratzentimeter.
+28.82	Beim Parallelogramm schneidest du links ein Dreieck ab und setzt es rechts an. Es entsteht ein Rechteck: Grundseite mal Höhe, sechs mal vier gleich vierundzwanzig.
+38.59	Zusammengesetzte Figuren zerlegst du. Das Haus besteht aus einem Rechteck sechs mal vier und einem Dreieck mit Grundseite sechs und Höhe drei: vierundzwanzig plus neun gleich dreiunddreissig.
+50.40	Häufiger Fehler: die schräge Seite statt der Höhe nehmen. Sechs mal fünf durch zwei gibt fünfzehn, das Dreieck hat aber nur zwölf Quadratzentimeter.
+59.69	Zum Mitnehmen: Dreieck gleich Grundseite mal Höhe durch zwei, Parallelogramm Grundseite mal Höhe. Die Höhe steht senkrecht auf der Grundseite. Zusammengesetzte Figuren zerlegst oder ergänzt du.
+71.52	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

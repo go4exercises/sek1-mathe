@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leitprogramm Flächen, Pythagoras und Ähnlichkeit</title>
+<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->
+<meta name="description" content="Leitprogramm Sekundarstufe I, Geometrie: Flächen von Dreieck, Parallelogramm und Trapez, Satz des Pythagoras, Hilfsdreieck in Rechteck, gleichschenkligem Dreieck und Kreis, ähnliche Figuren mit Längen- und Flächenfaktor — mit Übungen.">
+<meta name="author" content="Raphael Arnold Kohler">
+<link rel="canonical" href="https://sek1-mathe.begreifbar.ch/leitprogramme/pythagoras.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sek1-Mathe begreifbar">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Leitprogramm Flächen, Pythagoras und Ähnlichkeit — Grundseite und Höhe, Satz des Pythagoras, Sehne im Kreis, Streckfaktor">
+<meta property="og:description" content="Leitprogramm Sekundarstufe I, Geometrie: Flächen von Dreieck, Parallelogramm und Trapez, Satz des Pythagoras, Hilfsdreieck in Rechteck, gleichschenkligem Dreieck und Kreis, ähnliche Figuren mit Längen- und Flächenfaktor — mit Übungen.">
+<meta property="og:url" content="https://sek1-mathe.begreifbar.ch/leitprogramme/pythagoras.html">
+<meta property="og:image" content="https://sek1-mathe.begreifbar.ch/og-bild.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://sek1-mathe.begreifbar.ch/leitprogramme/pythagoras.html#inhalt",
+   "url": "https://sek1-mathe.begreifbar.ch/leitprogramme/pythagoras.html",
+   "name": "Leitprogramm Flächen, Pythagoras und Ähnlichkeit — Grundseite und Höhe, Satz des Pythagoras, Sehne im Kreis, Streckfaktor",
+   "description": "Leitprogramm Sekundarstufe I, Geometrie: Flächen von Dreieck, Parallelogramm und Trapez, Satz des Pythagoras, Hilfsdreieck in Rechteck, gleichschenkligem Dreieck und Kreis, ähnliche Figuren mit Längen- und Flächenfaktor — mit Übungen.",
+   "inLanguage": "de-CH",
+   "isAccessibleForFree": true,
+   "license": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
+   "creator": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "publisher": {
+    "@type": "Person",
+    "name": "Raphael Arnold Kohler"
+   },
+   "dateModified": "2026-10-09",
+   "isPartOf": {
+    "@id": "https://sek1-mathe.begreifbar.ch/#website"
+   },
+   "about": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Mathematik"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Geometrie"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Fläche"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Dreieck"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Satz des Pythagoras"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Hypotenuse"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Kreis"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Sehne"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Ähnlichkeit"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Streckfaktor"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Leitprogramm"
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Sekundarstufe I"
+    }
+   ],
+   "keywords": "Mathematik, Geometrie, Fläche, Dreieck, Satz des Pythagoras, Hypotenuse, Kreis, Sehne, Ähnlichkeit, Streckfaktor, Leitprogramm, Sekundarstufe I",
+   "learningResourceType": "Leitprogramm",
+   "educationalLevel": "Sekundarstufe I (Schweiz)",
+   "typicalAgeRange": "12-16",
+   "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": [
+     "student",
+     "teacher"
+    ]
+   },
+   "interactivityType": "active"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sek1-mathe.begreifbar.ch/#website",
+   "url": "https://sek1-mathe.begreifbar.ch/",
+   "name": "Sek1-Mathe begreifbar"
+  }
+ ]
+}
+</script>
+<!-- SEO:ENDE -->
+<link rel="stylesheet" href="../schriften.css">
+<!-- Die Seite erbt Farben, Karten und Kopf von der Site. Reihenfolge zählt: der eigene <style> unten
+     gewinnt bei gleichem Gewicht, das Leitprogramm behält also sein Layout. -->
+<link rel="stylesheet" href="../style.css">
+<style>
+:root{
+  /* Die Palette kommt aus ../style.css — 20 Tokens, Wert fuer Wert dieselben.
+     Hier steht nur, was dort anders heisst oder fehlt. Damit kann sie nicht
+     mehr auseinanderlaufen. */
+  --karte:var(--weiss);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+    --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+    --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+    --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+    --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+    --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+    --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+    --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+    --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#171512; --papier-2:#1f1c17; --karte:#211e19; --weiss:#211e19;
+  --tinte:#f1ece1; --tinte-2:#b6ab97; --linie:#3a342a;
+  --blau:#8ab6e8; --blau-hell:#1b2a3d; --blau-rand:#3f6da3;
+  --petrol:#6cc9c4; --petrol-hell:#132e2d; --petrol-rand:#3a8a86;
+  --gruen:#79c894; --gruen-hell:#162c1f; --gruen-rand:#3f8058;
+  --lila:#c3a0ec; --lila-hell:#251b33; --lila-rand:#7d5cae;
+  --orange:#e9a25e; --orange-hell:#33240f; --orange-rand:#9c6a2c;
+  --rot:#ef9393; --rot-hell:#331a1a; --rot-rand:#a35050;
+  --s:0 2px 10px rgba(0,0,0,.35); --sl:0 4px 22px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);
+  font-family:var(--serif);font-size:17px;line-height:1.62;
+  -webkit-text-size-adjust:100%}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.22;margin:0}
+a{color:var(--petrol)}   /* Bereichsfarbe Sek I (CLAUDE.md) */
+:focus-visible{outline:2.5px solid var(--lila-rand);outline-offset:2px;border-radius:3px}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+
+/* ---------- Gerüst ---------- */
+.huelle{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+.raster{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:1000px){
+  .raster{grid-template-columns:236px minmax(0,1fr);gap:52px;align-items:start}
+}
+.inhalt{min-width:0;max-width:70ch}
+
+/* ---------- Kopf ---------- */
+.kopf{border-bottom:1px solid var(--linie);background:var(--papier-2);
+  margin-bottom:44px;padding:0 20px}
+.kopf-innen{max-width:1180px;margin:0 auto;padding:30px 0 34px;
+  display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
+.marke{font-family:var(--sans);font-size:.76rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinte-2);margin:0 0 10px}
+.kopf h1{font-size:clamp(2rem,5.2vw,2.9rem);font-weight:700;letter-spacing:-.015em}
+.kopf .unter{font-family:var(--sans);color:var(--tinte-2);margin:10px 0 0;font-size:1rem;max-width:52ch}
+.kopf-rechts{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);text-align:right;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.themenschalter{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--tinte-2);
+  background:var(--karte);border:1px solid var(--linie);border-radius:999px;
+  padding:6px 13px;cursor:pointer}
+.themenschalter:hover{color:var(--tinte);border-color:var(--tinte-2)}
+
+/* ---------- Seitenschiene ---------- */
+.schiene{font-family:var(--sans);font-size:.87rem;margin-bottom:40px}
+@media(min-width:1000px){.schiene{position:sticky;top:22px;margin-bottom:0}}
+.schiene h2{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin-bottom:12px}
+.schiene ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.schiene a{display:flex;gap:9px;align-items:baseline;padding:6px 8px;border-radius:5px;
+  text-decoration:none;color:var(--tinte);border-left:2.5px solid transparent}
+.schiene a:hover{background:var(--papier-2)}
+.schiene a.aktiv{border-left-color:var(--petrol-rand);background:var(--papier-2);font-weight:600}
+.schiene .nr{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);min-width:1.6em}
+.schiene .lekt{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--tinte-2);margin:16px 0 5px;padding-left:8px}
+.fortschritt{margin-top:22px;padding-top:16px;border-top:1px solid var(--linie)}
+.balken{height:6px;background:var(--papier-2);border:1px solid var(--linie);border-radius:99px;overflow:hidden}
+.balken i{display:block;height:100%;background:var(--gruen-rand);width:0;transition:width .35s ease}
+.fortschritt p{margin:9px 0 0;font-size:.79rem;color:var(--tinte-2)}
+.fortschritt button{margin-top:10px;font-family:var(--sans);font-size:.75rem;color:var(--tinte-2);
+  background:none;border:none;padding:0;cursor:pointer;text-decoration:underline}
+
+/* ---------- Anleitung ---------- */
+.anleitung{background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:22px 26px;margin-bottom:46px;box-shadow:var(--s)}
+.anleitung summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px}
+.anleitung summary::-webkit-details-marker{display:none}
+.anleitung summary::after{content:"";flex:none;margin-left:auto;width:.5em;height:.5em;
+  border-right:2px solid var(--tinte-2);border-bottom:2px solid var(--tinte-2);
+  transform:translateY(-.15em) rotate(45deg);transition:transform .2s}
+.anleitung[open] summary::after{transform:translateY(.1em) rotate(-135deg)}
+.anleitung h2{font-size:1.12rem}
+.anleitung ol{margin:12px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.94rem;color:var(--tinte-2)}
+.anleitung li{margin:6px 0}
+.anleitung li b{color:var(--tinte)}
+
+/* ---------- Lektionsband ---------- */
+.band{display:flex;align-items:center;gap:14px;margin:56px 0 30px}
+.band:first-of-type{margin-top:8px}
+.band .strich{flex:1;height:1px;background:var(--linie)}
+.band span{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--tinte-2);white-space:nowrap}
+
+/* ---------- Kapitel ---------- */
+.kap{margin-bottom:52px;scroll-margin-top:20px}
+.kap-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.marker{font-family:var(--mono);font-size:.74rem;font-weight:700;letter-spacing:.04em;
+  padding:3px 8px;border-radius:4px;background:var(--papier-2);color:var(--tinte-2)}
+.abz{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.05em;
+  padding:3px 9px;border-radius:999px;border:1px solid}
+.abz-th{color:var(--petrol);border-color:var(--petrol-rand);background:var(--petrol-hell)}
+.abz-sf{color:var(--lila);border-color:var(--lila-rand);background:var(--lila-hell)}
+.zeit{font-family:var(--sans);font-size:.78rem;color:var(--tinte-2)}
+.kap h2{font-size:1.62rem;font-weight:700;letter-spacing:-.01em}
+.ziel{font-family:var(--sans);font-size:.95rem;color:var(--tinte-2);
+  border-left:2.5px solid var(--linie);padding-left:13px;margin:12px 0 22px}
+.kap h3{font-family:var(--sans);font-size:1rem;font-weight:700;margin:30px 0 10px}
+.kap p{margin:0 0 14px}
+
+/* ---------- Clipkarte ---------- */
+.clipkarte{margin:22px 0 26px}
+.clip-start{display:flex;width:100%;align-items:center;gap:15px;text-align:left;cursor:pointer;
+  background:var(--lila-hell);border:1px solid var(--lila-rand);border-radius:10px;
+  padding:14px 17px;font-family:var(--sans);color:var(--tinte)}
+.clip-start:hover{box-shadow:var(--sl)}
+.clip-play{flex:none;width:38px;height:38px;border-radius:50%;background:var(--lila);color:#fff;
+  display:grid;place-items:center;font-size:.9rem;padding-left:3px}
+:root[data-theme="dark"] .clip-play,
+:root:not([data-theme="light"]) .clip-play{color:#171512}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .clip-play{color:#fff}}
+.clip-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.clip-titel{font-weight:600;font-size:.97rem;line-height:1.32}
+.clip-quelle{font-size:.75rem;color:var(--tinte-2);letter-spacing:.03em}
+.clip-zeit{font-family:var(--mono);font-size:.8rem;color:var(--tinte-2);flex:none}
+@media(max-width:720px){
+}
+
+/* ---------- Merkkasten, Beispiele, Warnung ---------- */
+.merk{background:var(--blau-hell);border:1px solid var(--blau-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.merk .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--blau);margin-bottom:8px}
+.merk p:last-child{margin-bottom:0}
+.warn{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.warn .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.warn p:last-child{margin-bottom:0}
+
+table.gesetze{width:100%;border-collapse:collapse;margin:18px 0;font-size:.97rem}
+.tabhuelle{overflow-x:auto}
+table.gesetze th,table.gesetze td{border-bottom:1px solid var(--linie);padding:9px 10px;text-align:left;vertical-align:middle}
+table.gesetze th{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tinte-2)}
+table.gesetze td:first-child{font-family:var(--mono);font-size:.82rem;color:var(--tinte-2);white-space:nowrap;width:1%}
+table.gesetze td.wort{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+
+.beisp{margin:18px 0;border:1px solid var(--linie);border-radius:8px;background:var(--karte);overflow:hidden}
+.beisp .kopfz{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--tinte-2);background:var(--papier-2);
+  padding:7px 16px;border-bottom:1px solid var(--linie)}
+.beisp ul{list-style:none;margin:0;padding:12px 16px;display:flex;flex-direction:column;gap:9px}
+.beisp li{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.beisp .schritt{font-family:var(--sans);font-size:.82rem;color:var(--tinte-2)}
+
+/* ---------- Selbsttest ---------- */
+.test{border:1.5px solid var(--gruen-rand);border-radius:11px;background:var(--karte);
+  margin:30px 0 0;overflow:hidden}
+.test-kopf{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
+  background:var(--gruen-hell);padding:11px 18px;border-bottom:1px solid var(--gruen-rand)}
+.test-kopf h3{font-family:var(--sans);font-size:.94rem;font-weight:700;color:var(--gruen);margin:0}
+.test-kopf .werkz{display:flex;gap:14px;align-items:center;font-family:var(--sans);font-size:.78rem}
+.test-kopf button{font-family:var(--sans);font-size:.78rem;background:none;border:none;
+  color:var(--gruen);cursor:pointer;text-decoration:underline;padding:0}
+.test-kopf label{display:flex;gap:6px;align-items:center;color:var(--tinte-2);cursor:pointer}
+.aufg{list-style:none;margin:0;padding:6px 18px 18px}
+.aufg>li{border-bottom:1px dotted var(--linie);padding:11px 0}
+.aufg>li:last-child{border-bottom:none;padding-bottom:2px}
+.frage{display:flex;gap:11px;align-items:baseline}
+.frage .nr{font-family:var(--mono);font-size:.83rem;font-weight:700;color:var(--gruen);
+  flex:none;min-width:2.4em}
+.frage .pkt{font-family:var(--mono);font-size:.72rem;color:var(--tinte-2);
+  flex:none;min-width:3.4em;margin-left:-4px}
+.frage .txt{flex:1;min-width:0}
+details.loes{margin:7px 0 0 calc(5.8em + 11px)}
+details.loes summary{font-family:var(--sans);font-size:.79rem;color:var(--tinte-2);
+  cursor:pointer;list-style:none;display:inline-flex;gap:6px;align-items:center;
+  border:1px solid var(--linie);border-radius:999px;padding:2px 11px}
+details.loes summary::-webkit-details-marker{display:none}
+details.loes summary:hover{border-color:var(--gruen-rand);color:var(--gruen)}
+details.loes[open] summary{color:var(--gruen);border-color:var(--gruen-rand)}
+details.loes .inhaltbox{border-left:2.5px solid var(--gruen-rand);padding:6px 0 2px 13px;margin-top:9px}
+details.loes .inhaltbox p{margin:0 0 7px}
+details.loes .inhaltbox p:last-child{margin-bottom:0}
+.komm{font-family:var(--sans);font-size:.87rem;color:var(--tinte-2)}
+
+/* ---------- Gesamttest ---------- */
+.gesamt{border:2px solid var(--tinte-2);border-radius:12px;background:var(--karte);
+  padding:0;overflow:hidden;margin-top:20px}
+.gesamt-kopf{background:var(--papier-2);padding:16px 20px;border-bottom:1px solid var(--linie)}
+.gesamt-kopf h2{font-size:1.4rem}
+.gesamt-kopf p{font-family:var(--sans);font-size:.88rem;color:var(--tinte-2);margin:7px 0 0}
+.gesamt-teil{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinte-2);padding:18px 20px 0}
+.gesamt .aufg{padding:6px 20px 16px}
+.summe{font-family:var(--mono);font-size:.76rem;color:var(--tinte-2);white-space:nowrap}
+.bewertung{margin:0;padding:16px 20px 20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.88rem;color:var(--tinte-2)}
+.bewertung table{width:100%;border-collapse:collapse;margin-top:8px}
+.bewertung td{padding:5px 8px;border-bottom:1px solid var(--linie)}
+.bewertung td:first-child{font-family:var(--mono);white-space:nowrap;width:1%;color:var(--tinte)}
+
+/* ---------- Fuss ---------- */
+.fuss{margin-top:64px;padding-top:20px;border-top:1px solid var(--linie);
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .huelle{padding:0 15px 70px}
+  details.loes{margin-left:0}
+}
+@media print{
+  .schiene,.themenschalter,.clip-buehne,.test-kopf .werkz{display:none}
+  .kap{break-inside:avoid}
+  details.loes{display:none}
+  body{background:#fff}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* ── Fuss im Dunkelmodus ─────────────────────────────────────────
+   Kopf und Menue kommen ohne Nachhilfe aus: style.css faerbt seine
+   Flaechen mit --weiss, und das ist oben dunkel gesetzt. Nur der Fuss
+   braucht eine Regel — er benutzt --tinte als *Flaeche*, und die kippt
+   im Dunkelmodus mit dem Text nach hell. */
+:root[data-theme="dark"] .site-footer{
+  background:var(--papier-2); color:var(--tinte-2);
+  border-top:1px solid var(--linie);
+}
+:root[data-theme="dark"] .site-footer a{ color:var(--petrol); }
+
+/* Das Lektionsband traegt `white-space:nowrap`. Auf schmalen Schirmen
+   laeuft ein laengerer Untertitel damit ueber den Rand hinaus — in der
+   Uebungspruefung derselbe Fall, dort mit derselben Zeile behoben. */
+@media(max-width:600px){ .band span{white-space:normal} }
+/* ════════ HOWTO-leitprogramme.md §6 — Fliesstext schmal, Arbeitsflaechen breit ════════
+   Vorher: .inhalt max-width 70ch (~620 px), .huelle 1180 px. Auf 1280 px blieben
+   rechts ~230 px leer. Jetzt begrenzen die Textelemente sich selbst, Beispiele,
+   Tabellen, Tests und Erkundungen nehmen die ganze Spalte, und .duo stellt zwei
+   zusammengehoerige Teile ab 1180 px nebeneinander. Quelltextreihenfolge =
+   Lesereihenfolge auf dem Handy. */
+.huelle,.kopf-innen{max-width:1440px}
+.inhalt{max-width:none}
+.kap>p,.kap>h2,.kap>h3,.ziel,.duo>div>p,.erkunden p,.erkunden ol{max-width:68ch}
+.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px;align-items:start}
+.duo>*{min-width:0}
+@media(min-width:1180px){
+  .duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .aufg.zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:34px}
+  .aufg.zwei>li:nth-last-child(2):nth-child(odd){border-bottom:none}
+}
+.duo>.anleitung{margin-bottom:24px}
+.duo>.rlp-kompetenzen{margin:0 0 24px}
+.rlp-kompetenzen .rlp-fuss{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin:8px 0 0}
+
+/* Didaktische Farben nach STYLEGUIDE §5: Rot = Fehler/Achtung, Orange = Aufgabe.
+   Die Vorlage faerbte den Haeufigen Fehler orange; hier rot, damit das Orange
+   frei ist fuer den Erkundungsauftrag. */
+.warn{background:var(--rot-hell);border-color:var(--rot-rand)}
+.warn .titel{color:var(--rot)}
+.erkunden{background:var(--orange-hell);border:1px solid var(--orange-rand);border-left-width:4px;
+  border-radius:8px;padding:16px 20px;margin:20px 0}
+.erkunden .titel{font-family:var(--sans);font-size:.73rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px}
+.erkunden ol{margin:6px 0 10px;padding-left:1.3em}
+.erkunden li{margin:4px 0}
+.erkunden p:last-child{margin-bottom:0}
+.notiz{font-family:var(--sans);font-size:.9rem;color:var(--tinte-2)}
+.ausf{font-family:var(--sans);font-size:.92rem;border-top:1px solid var(--linie);padding-top:12px;margin-top:26px}
+.knopf-link{font-family:var(--sans);font-size:.8rem;background:none;border:none;padding:0;
+  color:var(--tinte-2);text-decoration:underline;cursor:pointer}
+table.gesetze.formen td:first-child{font-family:var(--sans);font-size:.86rem;color:var(--tinte);
+  white-space:normal;width:auto;font-weight:600}
+table.gesetze.formen td:first-child .wort{font-weight:400}
+.weiter{margin-top:30px}
+.beisp .wert{flex:1;min-width:0}
+
+/* ---------- eingebettete Simulation (§8b) ---------- */
+.sim{margin:20px 0;background:var(--karte);border:1px solid var(--linie);border-radius:10px;
+  padding:14px 16px 12px}
+.sim > svg{display:block;width:100%;max-width:420px;height:auto;margin:6px auto 10px}
+.sim-formel{font-family:var(--mono);font-size:1rem;text-align:center;padding:6px 8px;
+  background:var(--papier-2);border-radius:6px}
+.sim figcaption{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);text-align:center;margin-top:8px}
+.sl-row{display:flex;gap:10px;align-items:center;font-family:var(--sans);font-size:.9rem}
+.sl-row input[type=range]{flex:1}
+.sl-val{font-family:var(--mono);font-size:.86rem;min-width:2.6em}
+.sim .gitter{stroke:var(--linie);stroke-width:.6}
+.sim .achse{stroke:var(--tinte-2);stroke-width:1.2}
+.sim .skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+.sim .normal{fill:none;stroke:var(--tinte-2);stroke-width:1.4;stroke-dasharray:5 4;opacity:.7}
+.sim .kurve{fill:none;stroke:var(--blau);stroke-width:2.6}
+.sim .scheitel{fill:var(--tinte)}
+.sim .s-text{fill:var(--tinte);font-family:var(--sans);font-size:12px;font-weight:600}
+
+/* ════════ Fassung 2 — «zuerst sehen» (HOWTO-leitprogramme.md §4, §8) ════════ */
+.phase{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tinte-2);margin:34px 0 8px;display:flex;align-items:center;gap:8px}
+.phase span{display:inline-grid;place-items:center;width:1.7em;height:1.7em;border-radius:50%;
+  background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte);font-size:.9rem;letter-spacing:0}
+.sim-knoepfe{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;margin:8px 0 2px;
+  font-family:var(--sans);font-size:.8rem;color:var(--tinte-2)}
+.sim-knoepfe button,.formen-live button{font-family:var(--sans);font-size:.8rem;cursor:pointer;
+  background:var(--karte);color:var(--tinte);border:1px solid var(--linie);border-radius:999px;padding:4px 12px}
+.sim-knoepfe button.aktiv{background:var(--gruen-hell);border-color:var(--gruen-rand);color:var(--gruen);font-weight:700}
+.formen-live{display:flex;flex-direction:column;gap:5px}
+.formen-live button{border-radius:7px;display:flex;gap:10px;align-items:baseline;text-align:left;padding:6px 10px;
+  font-family:var(--mono);font-size:.86rem}
+.formen-live .fl-name{font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;min-width:8.5em;color:var(--tinte-2)}
+.formen-live button[data-form="g"].aktiv{border-color:var(--blau-rand);background:var(--blau-hell)}
+.formen-live button[data-form="s"].aktiv{border-color:var(--gruen-rand);background:var(--gruen-hell)}
+.formen-live button[data-form="p"].aktiv{border-color:var(--orange-rand);background:var(--orange-hell)}
+.sim.treffer{border-color:var(--gruen-rand);box-shadow:0 0 0 2px var(--gruen-hell)}
+.sim .zielkurve{fill:none;stroke:var(--gruen);stroke-width:3;stroke-dasharray:7 5;opacity:.85}
+.sim .symachse{stroke:var(--tinte-2);stroke-width:1.3;stroke-dasharray:6 5}
+.p-s{fill:var(--gruen)} .p-g{fill:var(--blau)} .p-n{fill:var(--orange)} .p-geist{fill:var(--orange);opacity:.35}
+text.p-text{font-family:var(--sans);font-size:11.5px;font-weight:700}
+.sim .feld-rahmen{fill:none;stroke:var(--linie);stroke-dasharray:4 4}
+.sim .feld{fill:var(--gruen-hell);stroke:var(--gruen);stroke-width:2}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px calc(5.8em + 11px)}
+.beisp .mini-reihe{margin:10px 16px 0}
+svg.mini{width:128px;height:auto;background:var(--karte);border:1px solid var(--linie);border-radius:6px}
+svg.mini.gross{width:190px}
+svg.mini .kurve{fill:none;stroke:var(--blau);stroke-width:2.2}
+svg.mini .gitter{stroke:var(--linie);stroke-width:.5}
+svg.mini .achse{stroke:var(--tinte-2);stroke-width:1}
+svg.mini .skala{font-size:8px}
+svg.mini .mini-titel{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--tinte)}
+@media(max-width:600px){ .mini-reihe{margin-left:0} svg.mini{width:110px} }
+
+/* ---------- Üben mit Rückmeldung (Prototyp) ---------- */
+.uebung{border:1.5px solid var(--orange-rand);border-radius:11px;background:var(--karte);padding:12px 16px 14px;margin:14px 0}
+.ue-kopf{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-family:var(--sans);font-size:.8rem;margin-bottom:6px}
+.ue-titel{font-weight:700;color:var(--orange)}
+.ue-serie{color:var(--tinte-2)}
+.ue-aufgabe{margin:6px 0 10px}
+.ue-zeile{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--mono);font-size:.95rem}
+.ue-eingabe input{width:4.2em;font-family:var(--mono);font-size:.95rem;padding:4px 6px;margin:0 3px;border:1.5px solid var(--linie);
+  border-radius:6px;background:var(--papier);color:var(--tinte);text-align:center}
+.ue-eingabe input:focus{outline:none;border-color:var(--orange-rand)}
+.ue-eingabe input.falsch{border-color:var(--rot-rand)}
+.ue-zeile button,.ue-weiter{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--orange-rand);background:var(--orange-hell);color:var(--tinte)}
+.ue-zeile .ue-neu{background:none;border-color:var(--linie);color:var(--tinte-2)}
+.ue-rueck{font-family:var(--sans);font-size:.9rem;margin-top:10px;border-radius:7px}
+.ue-rueck:empty{display:none}
+.ue-rueck.richtig{background:var(--gruen-hell);border-left:4px solid var(--gruen-rand);padding:8px 12px}
+.ue-rueck.falsch{background:var(--rot-hell);border-left:4px solid var(--rot-rand);padding:8px 12px}
+.ue-rueck.hinweis{background:var(--papier-2);padding:8px 12px}
+.ue-loes{margin-top:6px} .ue-loes summary{cursor:pointer;color:var(--tinte-2)}
+.uebung .ue-bild{display:block;margin:4px 0 6px}
+
+.fahrplan{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px;font-family:var(--sans);font-size:.78rem}
+.fahrplan span{padding:3px 10px;border-radius:999px;background:var(--papier-2);border:1px solid var(--linie);color:var(--tinte-2)}
+
+.pdf-weg{margin:14px 0 4px;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:.92rem}
+.pdf-schritt{display:flex;gap:12px;align-items:flex-start}
+.pdf-schritt .nr{flex:none;width:1.8em;height:1.8em;border-radius:50%;display:grid;place-items:center;
+  background:var(--karte);border:1px solid var(--linie);font-weight:700}
+.pdf-knoepfe{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.pdf-knopf{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--petrol-hell);border:1px solid var(--petrol-rand);
+  color:var(--tinte);text-decoration:none;font-weight:600}
+.pdf-knopf:hover{box-shadow:var(--sl)}
+.pdf-link{font-size:.85rem}
+
+
+/* ════════ Bewegung und Begegnung (10.10.2026) — Kapitelmuster wie Bruchrechnen, Gerüst aus Funktionstypen und Graphen ════════
+   Grundgerüst (Leiste, Übungen, Festhalten, PDF-Weg) wie in den Leitprogrammen von TALS Mathe.
+   Neu: Hilfekarte (Skizze → Variable → Beziehung → Gleichung → Prüfung), Bahn mit zwei Fahrzeugen (Sim 4).
+   Farben: A und erster Abschnitt blau, B und zweiter Abschnitt orange, Treffer grün, Fehler rot. */
+.sim-gross{max-width:680px;margin:10px auto 6px}
+.sim-gross > svg{max-width:520px}
+.leiste{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 10px;padding:9px 12px;border-radius:9px;
+  background:var(--orange-hell);border:1px solid var(--orange-rand);font-family:var(--sans);font-size:.92rem}
+.leiste .ls-nr{font-family:var(--mono);font-size:.78rem;color:var(--orange);font-weight:700}
+.leiste .ls-text{flex:1 1 260px;min-width:0}
+.leiste .ls-ok{color:var(--gruen);font-weight:700;font-size:1.1rem;min-width:1em}
+.leiste .ls-weiter,.leiste .ls-neu{font-family:var(--sans);font-size:.8rem;cursor:pointer;border-radius:999px;padding:4px 12px;
+  border:1px solid var(--linie);background:var(--karte);color:var(--tinte-2)}
+.leiste.geloest{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.leiste.geloest .ls-weiter{border-color:var(--gruen-rand);color:var(--tinte);font-weight:700}
+.leiste.fertig{background:var(--gruen-hell);border-color:var(--gruen-rand)}
+.kompetenzen ul{margin:10px 0 0;padding-left:1.25em;font-family:var(--sans);font-size:.92rem}
+.kompetenzen li{margin:5px 0}
+.kompetenzen .rlp-quelle{font-family:var(--sans);font-size:.8rem;color:var(--tinte-2);margin:8px 0 0}
+.kompetenzen .ohm{font-size:.72rem;padding:1px 7px;border-radius:999px;background:var(--orange-hell);border:1px solid var(--orange-rand);white-space:nowrap}
+.sim-schalter{display:flex;gap:7px;align-items:center;justify-content:center;font-family:var(--sans);font-size:.82rem;color:var(--tinte-2);margin:2px 0 8px;cursor:pointer}
+.festhalten{display:grid;grid-template-columns:minmax(0,1fr);gap:0 26px}
+@media(min-width:1180px){.festhalten{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.sim-formel{line-height:1.9;font-family:var(--sans);font-size:.95rem}
+.sim-wahl{font-family:var(--sans);font-size:.88rem;padding:4px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte)}
+.sl-row{flex-wrap:wrap;gap:8px 18px;justify-content:center}
+.sl-grp{display:flex;gap:8px;align-items:center;flex:1 1 200px;min-width:0}
+.sl-grp input[type=range]{flex:1;min-width:90px}
+.sl-grp.akz-blau input{accent-color:var(--blau)} .sl-grp.akz-orange input{accent-color:var(--orange)} .sl-grp.akz-gruen input{accent-color:var(--gruen)} .sl-grp.akz-grau input{accent-color:var(--tinte-2)}
+.sl-grp .var{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2);white-space:nowrap}
+
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+
+/* Koordinatensystem */
+.sim svg,.uebung svg,svg.mini-gerade,svg.leer-gitter{overflow:visible}
+.gitter{stroke:var(--linie);stroke-width:.6}
+.achse{stroke:var(--tinte-2);stroke-width:1.2}
+.pfeil{fill:var(--tinte-2)}
+.skala{fill:var(--tinte-2);font-family:var(--sans);font-size:10px}
+.achsname{fill:var(--tinte);font-family:var(--serif);font-style:italic;font-size:12px;stroke:var(--karte);stroke-width:4px;paint-order:stroke}
+.linie{fill:none;stroke-width:2.6;stroke-linecap:round}
+.linie.blau{stroke:var(--blau)} .linie.orange{stroke:var(--orange)} .linie.grau{stroke:var(--tinte-2);stroke-width:1.4}
+.linie.gestrichelt{stroke-dasharray:5 4} .linie.tinte{stroke:var(--tinte)}
+.pkt{fill:var(--tinte);stroke:var(--karte);stroke-width:1.5}
+.pkt.orange{fill:var(--orange)} .pkt.gruen{fill:var(--gruen)} .pkt.rot{fill:var(--rot)}
+.pkt.ziel{fill:var(--karte);stroke:var(--gruen);stroke-width:2.2}
+.p-text{font-family:var(--sans);font-size:11px;font-weight:700;fill:var(--tinte);stroke:var(--karte);stroke-width:3px;paint-order:stroke}
+.p-text.orange{fill:var(--orange)} .p-text.gruen{fill:var(--gruen)} .p-text.pkt{fill:var(--tinte)} .p-text.rot{fill:var(--rot)}
+.dreieck{stroke:var(--tinte-2);stroke-width:2.2;stroke-dasharray:4 3}
+.dreieck.hyp{stroke:var(--rot);stroke-dasharray:2 3;stroke-width:1.6} .dreieck.hyp.ok{stroke:var(--gruen);stroke-dasharray:none}
+.sim-gross > svg{max-width:440px}
+.ok-text{color:var(--gruen);font-weight:700} .nein-text{color:var(--rot);font-weight:600} .grau{color:var(--tinte-2);font-size:.88em}
+table.wt{border-collapse:collapse;margin:8px auto;font-family:var(--sans);font-size:.92rem;font-variant-numeric:tabular-nums}
+table.wt th,table.wt td{border:1px solid var(--linie);padding:4px 10px;text-align:center}
+table.wt th{background:var(--papier-2);color:var(--tinte-2)}
+table.wt td.dif{border:none;color:var(--blau);font-size:.8rem;transform:translateX(-50%)}
+svg.mini-gerade{width:200px;max-width:100%;height:auto;display:block;background:var(--karte);border:1px solid var(--linie);border-radius:6px;margin:6px 0}
+svg.leer-gitter{width:280px;max-width:100%;height:auto;display:block;background:var(--karte);border:1px solid var(--linie);border-radius:6px}
+.mini-reihe{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px}
+.klick-feld{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+svg.klick-gitter{width:300px;max-width:100%;height:auto;cursor:crosshair;background:var(--karte);border:1px solid var(--linie);border-radius:6px;touch-action:manipulation}
+.klick-info{font-family:var(--sans);font-size:.85rem;color:var(--tinte-2)}
+.sl-grp .sl-val{min-width:5.2em}
+
+/* Übungen: Termfeld breit, Tipps in Stufen */
+.ue-eingabe input.term{width:13em;max-width:100%;font-family:var(--mono)}
+.ue-zeile .ue-tipp{background:none;border-color:var(--blau-rand);color:var(--blau)}
+.ue-zeile .ue-tipp:disabled{opacity:.5;cursor:default}
+.ue-tipps:empty{display:none}
+.ue-tipps{margin-top:8px;padding:6px 12px;border-left:3px solid var(--blau-rand);background:var(--blau-hell);border-radius:0 6px 6px 0;font-family:var(--sans);font-size:.88rem}
+.ue-stufe{margin:4px 0}
+
+/* Beispiel mit Rechenweg */
+.weg{margin:10px 0 4px;padding-left:0;list-style:none;font-size:1rem}
+.weg li{margin:4px 0}
+.weg .warum{font-family:var(--sans);font-size:.84rem;color:var(--tinte-2);margin-left:.6em}
+.merk ol{padding-left:1.4em;margin:6px 0 10px}
+.merk ol.weg{padding-left:0}
+.merk h4{font-family:var(--sans);font-size:.9rem;margin:12px 0 4px}
+.vertiefung{border:1.5px dashed var(--lila-rand);border-radius:11px;padding:4px 18px 14px;margin-top:30px;background:var(--karte)}
+.vertiefung h2{font-size:1.25rem;margin:14px 0 4px}
+.vertiefung .aufg{padding:6px 0 0}
+/* Vorwissen: «Kurz wiederholt» (Prüfung 09.10.2026: statt Verweis auf noch leere Themenseiten) */
+.kap > details.anleitung{margin:6px 0 18px;padding:14px 20px}
+.kap > details.anleitung h3{margin:0;font-size:1rem}
+.kurz{margin:10px 0 0;padding-left:1.2em;font-size:.95rem}
+.kurz li{margin:6px 0}
+/* Darstellungen wechseln */
+.linie.tinte{stroke:var(--tinte)} .pkt.blau{fill:var(--blau)}
+table.wt td.an{background:var(--gruen-hell);font-weight:700}
+b.orange{color:var(--orange)} b.blau{color:var(--blau)} span.blau{color:var(--blau)}
+.sim-paar{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:flex-end}
+.sim-paar svg.rechteck-bild{width:200px;max-width:45%;height:auto}
+.sim-paar svg.graf{width:300px;max-width:100%;height:auto}
+.rechteck{fill:var(--blau-hell);stroke:var(--blau);stroke-width:2}
+.sim-satz{font-family:var(--sans);font-size:.9rem;text-align:center;margin:4px 0 8px}
+select.ue-wahl{font-family:var(--sans);font-size:.9rem;padding:5px 8px;border:1.5px solid var(--linie);border-radius:6px;background:var(--papier);color:var(--tinte);max-width:100%;white-space:normal}
+.ue-zeile .ue-eingabe{min-width:0;max-width:100%}
+.sl-grp.akz-grau input[type=range]{accent-color:var(--tinte-2)}
+.pkt.leer{fill:var(--karte);stroke:var(--blau);stroke-width:1.6}
+span.orange{color:var(--orange)}
+.hilfekarte{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--sans);font-size:.88rem;margin:6px 0}
+.hilfekarte span{padding:3px 10px;border-radius:999px;background:var(--blau-hell);border:1px solid var(--blau-rand)}
+.hilfekarte i{font-style:normal;color:var(--tinte-2)}
+.sim-paar svg.bahn{width:340px;max-width:100%;height:auto}
+@media (max-width:480px){table.wt{font-size:.84rem}table.wt th,table.wt td{padding:4px 4px}}
+/* Geometrie: Flächen, Figuren in Festhalten und Übungen */
+.flaeche{stroke-width:2.2;fill-opacity:.16;stroke-linejoin:round}
+.flaeche.blau{fill:var(--blau);stroke:var(--blau)} .flaeche.orange{fill:var(--orange);stroke:var(--orange)}
+.flaeche.gruen{fill:var(--gruen);stroke:var(--gruen)} .flaeche.tinte{fill:none;stroke:var(--tinte)}
+.flaeche.wasser{fill:var(--blau);fill-opacity:.22;stroke:none}
+.p-text.blau{fill:var(--blau)} .p-text.grau{fill:var(--tinte-2);font-weight:400}
+.linie.gruen{stroke:var(--gruen)}
+svg.mini-figur,svg.fest-figur{max-width:100%;height:auto;vertical-align:middle;margin:4px 0}
+svg.mini-figur line,svg.fest-figur line{stroke-linecap:round}
+</style>
+</head>
+<body>
+<div id="nav-root"></div>
+<!-- Leitprogramm Flächen, Pythagoras und Ähnlichkeit, Version 1.0 (10.10.2026). Gebaut aus scripts/lp/pythagoras/seite.py —
+     Änderungen dort, nicht in dieser Datei. Grundlagen: HOWTO-leitprogramme.md (Kapitelmuster) und
+     ~/TODO-BM-Vorkurs-LP03-15.md, Abschnitt 6 (LP 08, Ebene Geometrie: Flächen, Pythagoras, Ähnlichkeit), für die Sek I umgesetzt.
+
+     Sek1-Mathe hat keine Themenseiten (Entscheid 09.10.2026): Das Leitprogramm ist selbst die fachliche Quelle;
+     Vertiefung bei Mathe begreifbar. Ohne Taschenrechner: alle Wurzeln gehen auf (pythagoreische Tripel).
+     Notation: Grundseite g, Höhe h, Katheten a, b, Hypotenuse c, Radius r, Sehne s, Abstand d, Streckfaktor k, Dezimalpunkt.
+
+     Kompetenzen — eigene Formulierung, ohne Lehrplan-Nummern (CLAUDE.md: keine erfundenen Lehrplan-Stellen):
+       K1  Flächen von Dreieck, Parallelogramm und Trapez mit Grundseite und Höhe; zusammengesetzte Figuren zerlegen oder ergänzen
+       K2  Satz des Pythagoras: Hypotenuse und Katheten erkennen, fehlende Seite berechnen, Rechtwinkligkeit prüfen
+       K3  Hilfsdreieck finden (Diagonale, Höhe, Leiter, Sehne im Kreis, Wasser im Rohr) und Pythagoras anwenden
+       K4  Ähnliche Figuren: Streckfaktor, fehlende Längen, Verhältnisse; Längenfaktor k gegen Flächenfaktor k²
+
+     Kompetenzmatrix (Kompetenz | Kapitel | Simulation | Übungen | Kapitelaufgaben | Gesamttest):
+       K1 | 1 | Sim 1 Grundseite, Höhe | flaeche, zusammen       | 1a–1f | G1, G2
+       K2 | 2 | Sim 2 Quadrate          | hypotenuse, kathete     | 2a–2f | G3, G4
+       K3 | 3 | Sim 3 Sehne im Kreis    | hilfsdreieck, sehne     | 3a–3f | G5, G6
+       K4 | 4 | Sim 4 Streckfaktor      | aehnlich, flaechenfaktor| 4a–4f | G7, G8
+
+     Planung (Kapitel | Lernziel | Erkundung | Beispiel | Häufiger Fehler | min):
+       0 | Vorwissen     | –                 | –                               | –                                 | 10
+       1 | Flächen       | Spitze verschieben| Dreieck 6/4, Haus, L-Form       | schräge Seite statt Höhe; halbieren| 40
+       2 | Pythagoras    | Quadrate          | 3-4-5, 6-8-10, Kathete 10/6     | Kathete addiert; Seiten statt Quadrate| 40
+       3 | Hilfsdreieck  | Sehne verschieben | Rechteck 20×21, 16/17, Rohr     | ganze statt halbe Strecke         | 40
+       4 | Ähnlichkeit   | k einstellen      | 3-4-5 × 2, Schatten, Regal      | Flächenfaktor = Längenfaktor      | 40
+       Gesamttest (PDF) 30 · Summe 200 min ≈ 4.4 Lektionen. Vertiefung V1–V3 freiwillig, nicht eingerechnet.
+
+     Aus der Vorlage umgesetzt: Grundseite und Höhe, Zerlegen (Kapitel 1, G1, G2), Pythagoras mit «Hilfsdreieck zuerst finden»
+     (Kapitel 2 und 3, schrittweise im Clip eingeblendet), Kreisgrundlagen Radius, Durchmesser, Sehne mit Wasserspiegel im Rohr
+     (Kapitel 3, G6), ähnliche Dreiecke, Verhältnisse, k gegen k² und Regal mit Differenzfläche (Kapitel 4, G7, G8).
+     Fehlermodule «Höhe ≠ schräge Seite» (Kapitel 1, Übung flaeche) und «Flächenfaktor ≠ Längenfaktor» (Kapitel 4, Übung flaechenfaktor).
+     Bewusst nicht übernommen: Teams-Ablauf, Lehrpersonenteil, Prüfungsnummern, Kreissektoren (kommen später).
+
+     Clips: je Kapitel ein Einführungsclip (mit einer Vorhersagefrage) und ein Kontrollclip mit fünf Fragen,
+     Reihe «Geometrie», pyt-lp-*.json, erzeugt mit scripts/lp/pythagoras/clips.py.
+
+     Farben: Figur und Grundseite blau, Höhe, Abstand und Bildfigur orange, Hypotenuse, Radius und Ergebnis grün, Fehler rot; Bereichsfarbe Petrol.
+     Gesamttest und Bewertungspaket nur als PDF (downloads/leitprogramme/pythagoras/*.tex). -->
+<header class="kopf">
+  <div class="kopf-innen">
+    <div>
+      <p class="marke">Sek1-Mathe begreifbar · Leitprogramm</p>
+      <h1>Flächen, Pythagoras und Ähnlichkeit</h1>
+      <p class="unter">Flächen mit Grundseite und Höhe, Satz des Pythagoras, Hilfsdreiecke im Kreis und ähnliche Figuren. Vier Kapitel zu je einer Lektion, dazu Vorwissen und Gesamttest.</p>
+    </div>
+    <div class="kopf-rechts">
+      <button class="themenschalter" type="button" id="themenschalter">Dunkel / Hell</button>
+      <span>Geometrie</span>
+    </div>
+  </div>
+</header>
+
+<div class="huelle">
+<div class="raster">
+
+  <nav class="schiene" aria-label="Kapitelnavigation">
+    <h2 id="ablauf">Ablauf</h2>
+    <p class="lekt">Vorab</p>
+    <ol>
+      <li><a href="#k0"><span class="nr">0</span><span>Vorwissen</span></a></li>
+    </ol>
+    <p class="lekt">Kapitel</p>
+    <ol>
+      <li><a href="#k1"><span class="nr">1</span><span>Flächen</span></a></li>
+      <li><a href="#k2"><span class="nr">2</span><span>Pythagoras</span></a></li>
+      <li><a href="#k3"><span class="nr">3</span><span>Hilfsdreieck</span></a></li>
+      <li><a href="#k4"><span class="nr">4</span><span>Ähnlichkeit</span></a></li>
+    </ol>
+    <p class="lekt">Abschluss</p>
+    <ol>
+      <li><a href="#gesamttest"><span class="nr">✓</span><span>Gesamttest</span></a></li>
+      <li><a href="#vertiefung"><span class="nr">★</span><span>Vertiefung</span></a></li>
+    </ol>
+    <div class="fortschritt">
+      <div class="balken"><i id="balken-fuellung"></i></div>
+      <p id="fortschritt-text">0 von 5 Aufgabenblöcken bearbeitet</p>
+      <button type="button" id="fortschritt-reset">zurücksetzen</button>
+    </div>
+  </nav>
+
+  <main class="inhalt">
+
+    <div class="duo">
+      <details class="anleitung">
+        <summary><h2 id="so-arbeitest-du">So arbeitest du</h2></summary>
+        <ol>
+          <li><b>① Clip</b> anschauen. Er hält einmal an und fragt nach deiner Vorhersage.</li>
+          <li><b>② Tüfteln:</b> Löse die Aufgaben in der orangen Leiste über dem Bild. Sie zeigt ✓, sobald es stimmt. Überspringen geht immer.</li>
+          <li><b>③ Kontrollfragen:</b> Der Clip hält an. Erst antworten. Danach <b>Festhalten</b>: Regel und häufigen Fehler ins Heft.</li>
+          <li><b>④ Üben</b> mit Rückmeldung, bis drei in Folge sitzen. Mit <b>💡 Tipp</b> bekommst du Hilfe in drei Stufen. Zahlen tippst du als <code>2</code>, <code>-1.5</code> oder Bruch <code>2/3</code>; bei Aussagen wählst du aus einer Liste.</li>
+          <li><b>⑤ Aufgaben</b> auf Papier mit Rechenweg, dann Lösung aufklappen und abhaken.</li>
+          <li>Zum Schluss der <b>Gesamttest</b> auf Papier, mit Lineal. Alles ohne Taschenrechner: Die Wurzeln gehen auf.</li>
+        </ol>
+      </details>
+      <details class="anleitung kompetenzen">
+        <summary><h2 id="kompetenzen">Kompetenzen</h2></summary>
+        <p class="rlp-quelle">Das kannst du danach, alles <span class="ohm">ohne Taschenrechner</span>:</p>
+        <ul>
+          <li><b>K1</b> Flächen von Dreieck, Parallelogramm und Trapez mit Grundseite und Höhe berechnen und zusammengesetzte Figuren zerlegen oder ergänzen (Kapitel 1)</li>
+          <li><b>K2</b> im rechtwinkligen Dreieck mit dem Satz des Pythagoras eine fehlende Seite berechnen und prüfen, ob ein Dreieck rechtwinklig ist (Kapitel 2)</li>
+          <li><b>K3</b> in Figuren und im Kreis das rechtwinklige Hilfsdreieck finden und damit Diagonalen, Höhen und Sehnen berechnen (Kapitel 3)</li>
+          <li><b>K4</b> ähnliche Figuren erkennen, fehlende Längen mit dem Streckfaktor berechnen und den Flächenfaktor \(k^2\) anwenden (Kapitel 4)</li>
+        </ul>
+        <p class="rlp-quelle">Baut auf Rechteck, Quadratzahlen und Verhältnissen auf (Vorwissen) und auf dem Leitprogramm «Bruchterme, Gleichungen und Formeln». Nicht in diesem Leitprogramm: Kreisumfang, Kreissektoren, Trigonometrie. Zum Vertiefen bei Mathe begreifbar: <a href="https://mathe.begreifbar.ch/grundlagen/g5-2a-dreiecke.html" target="_blank" rel="noopener">Dreiecke und Pythagoras ↗</a>.</p>
+      </details>
+
+    </div>
+
+    <section class="kap" id="k0">
+      <div class="kap-meta"><span class="marker">Kapitel 0</span><span class="abz abz-th">Vorwissen</span><span class="zeit">≈ 10 min</span></div>
+      <h2 id="vorwissen">Vorwissen</h2>
+      <p class="ziel">Rechteck, Quadratzahlen und Wurzeln, Einheiten, Verhältnisse. Zuerst kurz wiederholen, dann der Vortest.</p>
+      <details class="anleitung">
+        <summary><h3>Kurz wiederholt</h3></summary>
+        <ul class="kurz">
+          <li><b>Rechteck:</b> Fläche Länge mal Breite, Umfang zweimal Länge plus Breite: \(5 \times 3\) cm hat \(15\) cm² und \(16\) cm.</li>
+          <li><b>Quadratzahlen und Wurzeln:</b> \(1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225\). \(\sqrt{49} = 7\), weil \(7^2 = 49\).</li>
+          <li><b>Flächeneinheiten:</b> \(1\) m² \(= 100 \cdot 100\) cm² \(= 10\,000\) cm².</li>
+          <li><b>Verhältnisse:</b> \(2 : 5 = 4 : 10\), beide Zahlen mal \(2\).</li>
+        </ul>
+      </details>
+<div class="test" data-test="t0">
+        <div class="test-kopf">
+          <h3>Vortest <span class="summe">· 10 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">0a</span><span class="pkt">(2 P)</span><span class="txt">Ein Rechteck ist \(7\) cm lang und \(4\) cm breit. Wie gross sind Fläche und Umfang?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(28\) cm² und \(22\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0b</span><span class="pkt">(2 P)</span><span class="txt">Berechne \(7^2\), \(12^2\), \(\sqrt{81}\) und \(\sqrt{144}\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(49\), \(144\), \(9\), \(12\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0c</span><span class="pkt">(2 P)</span><span class="txt">Welche positive Zahl \(x\) erfüllt \(x^2 = 64\)?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(x = 8\).</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0d</span><span class="pkt">(2 P)</span><span class="txt">Wie viele cm² sind \(1\) m²? Wie viele cm sind \(3.5\) m?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(10\,000\) cm² und \(350\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">0e</span><span class="pkt">(2 P)</span><span class="txt">Ergänze: \(6 : 4 = 9 : \ ?\)</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(6\), denn beide Zahlen werden mit \(1.5\) multipliziert.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="komm">Weniger als 7 von 10 Punkten: «Kurz wiederholt» nochmals lesen und die Lösungen nachrechnen.</p>
+    </section>
+    <section class="kap" id="k1">
+      <div class="kap-meta"><span class="marker">Kapitel 1</span><span class="abz abz-th">K1</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="flaechen">Grundseite und Höhe</h2>
+      <p class="ziel">Du berechnest Flächen von Dreieck, Parallelogramm und Trapez mit Grundseite und Höhe und zerlegst oder ergänzt zusammengesetzte Figuren.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-flaechen.html" data-titel="Grundseite und Höhe">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Grundseite und Höhe</span></span>
+          <span class="clip-zeit">1:17</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim1" aria-label="Dreieck oder Parallelogramm mit Grundseite, Höhe und verschiebbarer Spitze">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg role="img" aria-label="Figur mit Grundseite g und gestrichelter Höhe h"></svg>
+        <div class="sl-row">
+          <label class="sim-schalter" for="s1-typ">Figur
+            <select id="s1-typ" class="sim-wahl"><option value="d" selected>Dreieck</option><option value="p">Parallelogramm</option></select></label>
+        </div>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s1-g"><span class="var">Grundseite g</span></label><input type="range" id="s1-g" min="2" max="12" step="1" value="6"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s1-h"><span class="var">Höhe h</span></label><input type="range" id="s1-h" min="1" max="8" step="1" value="3"><span class="sl-val"></span></div>
+        </div>
+        <div class="sl-row">
+          <div class="sl-grp akz-grau"><label for="s1-s"><span class="var">Spitze verschieben</span></label><input type="range" id="s1-s" min="-4" max="14" step="1" value="2"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-kontrolle-flaechen.html" data-titel="Kontrollfragen zu Flächen">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zu Flächen</span></span>
+          <span class="clip-zeit">0:38</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Fläche aus Grundseite und Höhe</div>
+          <p class="mini-reihe"><svg class="fest-figur" viewBox="0 0 240 150" width="240" role="img" aria-label="Dreieck mit Grundseite g, Höhe h und schräger Seite"><polygon points="20,120 140,120 70,40" class="flaeche blau"/><line x1="70" y1="120" x2="70" y2="40" class="linie orange gestrichelt"/><polyline points="79,120 79,111 70,111" class="linie grau" fill="none"/><text x="80" y="138" class="p-text blau" text-anchor="middle">g</text><text x="80" y="85" class="p-text orange">h</text><text x="34" y="75" class="p-text grau">schräg</text></svg></p>
+          <ul class="kurz">
+            <li><b>Dreieck:</b> \(A = \dfrac{g \cdot h}{2}\), zum Beispiel \(g = 8\) cm, \(h = 5\) cm: \(A = 20\) cm².</li>
+            <li><b>Parallelogramm:</b> \(A = g \cdot h\), zum Beispiel \(7 \cdot 4 = 28\) cm².</li>
+            <li><b>Trapez:</b> \(A = \dfrac{a + c}{2} \cdot h\) mit den parallelen Seiten \(a\) und \(c\): \(\dfrac{9 + 5}{2} \cdot 4 = 28\) cm².</li>
+            <li><b>Zusammengesetzte Figuren:</b> zerlegen (Rechteck plus Dreieck) oder ergänzen (ganzes Rechteck minus Ecke): \(8 \cdot 6 - 3 \cdot 2 = 42\) cm².</li>
+          </ul>
+          <p>Die <b>Höhe</b> steht senkrecht auf der Grundseite, notfalls auf ihrer Verlängerung. Verschiebst du die Spitze parallel zur Grundseite, bleibt die Fläche gleich.</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Schräge Seite statt Höhe:</b> Die schräge Seite ist länger als die Höhe. Mit ihr wird die Fläche zu gross.</p>
+          <p><b>Halbieren vergessen:</b> Ein Dreieck ist halb so gross wie das Parallelogramm mit gleicher Grundseite und Höhe.</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="flaeche">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Fläche berechnen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="zusammen">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Zusammengesetzte Figuren</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t1">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 1 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">1a</span><span class="pkt">(3 P)</span><span class="txt">Berechne die Fläche: (a) Dreieck mit \(g = 9\) cm, \(h = 6\) cm. (b) Parallelogramm mit \(g = 12\) cm, Höhe \(5\) cm und schräger Seite \(7\) cm.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>(a) \(\dfrac{9 \cdot 6}{2} = 27\) cm². (b) \(12 \cdot 5 = 60\) cm². Die schräge Seite \(7\) cm brauchst du nicht.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1b</span><span class="pkt">(2 P)</span><span class="txt">Ein Trapez hat die parallelen Seiten \(11\) cm und \(7\) cm und die Höhe \(6\) cm. Wie gross ist seine Fläche?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{11 + 7}{2} \cdot 6 = 9 \cdot 6 = 54\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1c</span><span class="pkt">(3 P)</span><span class="txt">Aus einem Rechteck \(10\) cm \(\times\) \(8\) cm wird ein rechtwinkliges Dreieck mit den Katheten \(4\) cm und \(3\) cm ausgeschnitten. Wie gross ist die Restfläche?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(10 \cdot 8 - \dfrac{4 \cdot 3}{2} = 80 - 6 = 74\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1d</span><span class="pkt">(2 P)</span><span class="txt">Mia berechnet ein Dreieck mit Grundseite \(12\) cm, Höhe \(8\) cm und schräger Seite \(10\) cm so: \(\dfrac{12 \cdot 10}{2} = 60\) cm². Was ist falsch?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Sie hat die schräge Seite statt der Höhe genommen. Richtig: \(\dfrac{12 \cdot 8}{2} = 48\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1e</span><span class="pkt">(2 P)</span><span class="txt">Ein Dreieck hat die Fläche \(30\) cm² und die Grundseite \(12\) cm. Wie hoch ist es?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{12 \cdot h}{2} = 30\), also \(6h = 30\), \(h = 5\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">1f</span><span class="pkt">(2 P)</span><span class="txt">Warum ändert sich die Fläche eines Dreiecks nicht, wenn du die Spitze parallel zur Grundseite verschiebst?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Grundseite und Höhe bleiben gleich, und nur sie stehen in der Formel \(A = \dfrac{g \cdot h}{2}\). Die schrägen Seiten ändern sich, zählen aber nicht.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g5-2b-vierecke.html" target="_blank" rel="noopener">Vierecke ↗</a></p>
+    </section>
+    <section class="kap" id="k2">
+      <div class="kap-meta"><span class="marker">Kapitel 2</span><span class="abz abz-th">K2</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="pythagoras">Der Satz des Pythagoras</h2>
+      <p class="ziel">Du erkennst Hypotenuse und Katheten, berechnest mit \(a^2 + b^2 = c^2\) eine fehlende Seite und prüfst, ob ein Dreieck rechtwinklig ist.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-pythagoras.html" data-titel="Der Satz des Pythagoras">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Der Satz des Pythagoras</span></span>
+          <span class="clip-zeit">1:23</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim2" aria-label="Rechtwinkliges Dreieck mit Quadraten über allen Seiten">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg role="img" aria-label="Quadrate über den Katheten a und b und über der Hypotenuse c"></svg>
+        <div class="sl-row">
+          <div class="sl-grp akz-blau"><label for="s2-a"><span class="var">Kathete a</span></label><input type="range" id="s2-a" min="1" max="24" step="1" value="3"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s2-b"><span class="var">Kathete b</span></label><input type="range" id="s2-b" min="1" max="24" step="1" value="4"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-kontrolle-pythagoras.html" data-titel="Kontrollfragen zu Pythagoras">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zu Pythagoras</span></span>
+          <span class="clip-zeit">0:42</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Satz des Pythagoras</div>
+          <p class="mini-reihe"><svg class="fest-figur" viewBox="0 0 260 150" width="260" role="img" aria-label="rechtwinkliges Dreieck mit Katheten a und b und Hypotenuse c"><polygon points="30,120 150,120 30,40" class="flaeche blau"/><polyline points="39,120 39,111 30,111" class="linie grau" fill="none"/><text x="90" y="138" class="p-text blau" text-anchor="middle">a (Kathete)</text><text x="24" y="84" class="p-text orange" text-anchor="end">b</text><text x="100" y="72" class="p-text gruen">c (Hypotenuse)</text></svg></p>
+          <p>Im rechtwinkligen Dreieck liegt die <b>Hypotenuse</b> \(c\) gegenüber dem rechten Winkel, sie ist die längste Seite. Die beiden anderen Seiten sind die <b>Katheten</b>.</p>
+          <p>\[ a^2 + b^2 = c^2 \]</p>
+          <ul class="kurz">
+            <li>Hypotenuse gesucht: \(a = 6\), \(b = 8\): \(c^2 = 36 + 64 = 100\), \(c = 10\).</li>
+            <li>Kathete gesucht: \(c = 10\), \(a = 6\): \(b^2 = 100 - 36 = 64\), \(b = 8\).</li>
+            <li>Rechtwinklig? Gilt für die Seiten \(a^2 + b^2 = c^2\) (mit \(c\) der längsten Seite), dann ja.</li>
+          </ul>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Bei der Kathete addiert:</b> Für eine Kathete rechnest du \(c^2 - a^2\), nicht \(c^2 + a^2\). Das Ergebnis muss kürzer als die Hypotenuse sein.</p>
+          <p><b>Seiten statt Quadrate:</b> \(6 + 8 = 14\) ist nicht die Hypotenuse. Und \(c^2 = 100\) ist erst \(c^2\): Wurzel ziehen.</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="hypotenuse">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Hypotenuse berechnen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="kathete">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Kathete berechnen</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t2">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 2 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">2a</span><span class="pkt">(2 P)</span><span class="txt">Die Katheten eines rechtwinkligen Dreiecks sind \(15\) cm und \(20\) cm lang. Wie lang ist die Hypotenuse?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(c^2 = 225 + 400 = 625\), \(c = 25\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2b</span><span class="pkt">(3 P)</span><span class="txt">Die Hypotenuse ist \(26\) cm, eine Kathete \(10\) cm lang. Wie lang ist die andere Kathete?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(b^2 = 676 - 100 = 576\), \(b = 24\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2c</span><span class="pkt">(2 P)</span><span class="txt">Sind die Dreiecke rechtwinklig? (a) Seiten \(7\), \(24\), \(25\) cm. (b) Seiten \(6\), \(7\), \(9\) cm.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>(a) \(49 + 576 = 625 = 25^2\): ja. (b) \(36 + 49 = 85 \neq 81\): nein.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2d</span><span class="pkt">(2 P)</span><span class="txt">Ben rechnet für \(c = 13\) cm und \(a = 5\) cm: \(b^2 = 169 + 25 = 194\). Was ist falsch?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Für eine Kathete wird subtrahiert: \(b^2 = 169 - 25 = 144\), \(b = 12\) cm. Mit \(+\) wäre \(b\) länger als die Hypotenuse.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2e</span><span class="pkt">(3 P)</span><span class="txt">Ein rechtwinkliges Dreieck hat die Seiten \(x\), \(40\) cm und \(41\) cm. Der rechte Winkel liegt zwischen \(x\) und der Seite \(40\) cm. Welche Seite ist die Hypotenuse? Berechne \(x\).</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Die Hypotenuse liegt gegenüber dem rechten Winkel: die Seite \(41\) cm. \(x^2 = 1681 - 1600 = 81\), \(x = 9\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">2f</span><span class="pkt">(2 P)</span><span class="txt">Warum ist die Hypotenuse immer die längste Seite eines rechtwinkligen Dreiecks?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(c^2 = a^2 + b^2\) ist grösser als \(a^2\) und grösser als \(b^2\). Darum ist auch \(c\) länger als \(a\) und als \(b\).</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g5-2a-dreiecke.html" target="_blank" rel="noopener">Dreiecke und Pythagoras ↗</a></p>
+    </section>
+    <section class="kap" id="k3">
+      <div class="kap-meta"><span class="marker">Kapitel 3</span><span class="abz abz-th">K3</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="hilfsdreieck">Hilfsdreiecke und Kreis</h2>
+      <p class="ziel">Du findest in Rechteck, gleichschenkligem Dreieck und Kreis das rechtwinklige Hilfsdreieck und berechnest Diagonalen, Höhen, Sehnen und die Wassertiefe in einem Rohr.</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-hilfsdreieck.html" data-titel="Hilfsdreiecke und Kreis">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Hilfsdreiecke und Kreis</span></span>
+          <span class="clip-zeit">1:34</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim3" aria-label="Kreis mit Sehne und Hilfsdreieck">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg role="img" aria-label="Kreis mit waagrechter Sehne, darunter Wasser, Hilfsdreieck aus Abstand, halber Sehne und Radius"></svg>
+        <div class="sl-row">
+          <div class="sl-grp akz-gruen"><label for="s3-r"><span class="var">Radius r</span></label><input type="range" id="s3-r" min="2" max="15" step="1" value="10"><span class="sl-val"></span></div>
+          <div class="sl-grp akz-orange"><label for="s3-d"><span class="var">Abstand d</span></label><input type="range" id="s3-d" min="0" max="15" step="1" value="6"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-kontrolle-hilfsdreieck.html" data-titel="Kontrollfragen zu Hilfsdreiecken">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zu Hilfsdreiecken</span></span>
+          <span class="clip-zeit">0:47</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Das Hilfsdreieck finden</div>
+          <ol class="weg">
+            <li>Rechten Winkel suchen oder einzeichnen (Höhe, Diagonale, Abstand). <span class="warum">wo ist 90°?</span></li>
+            <li>Hilfsdreieck markieren, Hypotenuse bestimmen. <span class="warum">gegenüber dem rechten Winkel</span></li>
+            <li>Bekannte Längen eintragen, oft halbiert. <span class="warum">halbe Grundseite, halbe Sehne</span></li>
+            <li>Pythagoras anwenden. <span class="warum">plus für c, minus für eine Kathete</span></li>
+          </ol>
+          <ul class="kurz">
+            <li>Rechteck \(20 \times 21\) cm: Diagonale \(\sqrt{400 + 441} = \sqrt{841} = 29\) cm.</li>
+            <li>Gleichschenkliges Dreieck, Basis \(16\), Schenkel \(17\): Höhe \(\sqrt{17^2 - 8^2} = 15\).</li>
+          </ul>
+          <p class="mini-reihe"><svg class="fest-figur" viewBox="0 0 170 150" width="170" role="img" aria-label="Kreis mit Sehne s, Abstand d und Radius r"><circle cx="80" cy="75" r="60" class="linie tinte"/><line x1="32" y1="111" x2="128" y2="111" class="linie blau"/><line x1="80" y1="75" x2="80" y2="111" class="linie orange"/><line x1="80" y1="75" x2="128" y2="111" class="linie gruen"/><polyline points="89,111 89,102 80,102" class="linie grau" fill="none"/><circle cx="80" cy="75" r="3" class="pkt"/><text x="104" y="126" class="p-text blau" text-anchor="middle">s/2</text><text x="74" y="96" class="p-text orange" text-anchor="end">d</text><text x="108" y="88" class="p-text gruen">r</text></svg></p>
+          <p><b>Kreis:</b> Radius \(r\), Durchmesser \(2r\). Eine <b>Sehne</b> verbindet zwei Punkte des Kreises. Der Abstand \(d\) vom Mittelpunkt steht senkrecht auf ihr und halbiert sie: \(\left(\tfrac{s}{2}\right)^2 + d^2 = r^2\). Beispiel \(r = 10\), \(s = 16\): \(d = \sqrt{100 - 64} = 6\).</p>
+          <p><b>Rohr:</b> Durchmesser \(50\) cm, Wasserspiegel \(48\) cm breit: \(d = \sqrt{625 - 576} = 7\) cm, Wassertiefe \(25 - 7 = 18\) cm (Wasser unter der Mitte).</p>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Ganze statt halbe Strecke:</b> Die Höhe halbiert die Basis, der Abstand halbiert die Sehne. Ins Hilfsdreieck gehört die Hälfte.</p>
+          <p><b>Falsche Hypotenuse:</b> Im Kreis ist der Radius die Hypotenuse, nicht die Sehne.</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="hilfsdreieck">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Hilfsdreieck finden</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="sehne">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Sehne und Abstand</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t3">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 3 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">3a</span><span class="pkt">(2 P)</span><span class="txt">Ein Rechteck ist \(15\) cm lang und \(8\) cm breit. Wie lang ist seine Diagonale?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\sqrt{225 + 64} = \sqrt{289} = 17\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3b</span><span class="pkt">(3 P)</span><span class="txt">Ein gleichschenkliges Dreieck hat die Basis \(30\) cm und Schenkel von \(25\) cm. Berechne die Höhe und die Fläche.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Halbe Basis \(15\) cm: \(h = \sqrt{625 - 225} = \sqrt{400} = 20\) cm. Fläche \(\dfrac{30 \cdot 20}{2} = 300\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3c</span><span class="pkt">(2 P)</span><span class="txt">Eine \(5\) m lange Leiter lehnt an einer senkrechten Wand. Ihr Fuss steht \(1.4\) m von der Wand entfernt. Wie hoch reicht sie?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(h^2 = 25 - 1.96 = 23.04\), \(h = 4.8\) m.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3d</span><span class="pkt">(2 P)</span><span class="txt">Ein Kreis hat den Radius \(26\) cm. Eine Sehne ist \(48\) cm lang. Wie weit ist sie vom Mittelpunkt entfernt?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Halbe Sehne \(24\) cm: \(d = \sqrt{676 - 576} = \sqrt{100} = 10\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3e</span><span class="pkt">(3 P)</span><span class="txt">Ein Rohr hat den Innendurchmesser \(34\) cm. Der Wasserspiegel ist \(30\) cm breit, das Wasser steht weniger als halb hoch. Wie tief ist das Wasser?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(r = 17\), halbe Breite \(15\): \(d = \sqrt{289 - 225} = 8\) cm. Wassertiefe \(17 - 8 = 9\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">3f</span><span class="pkt">(2 P)</span><span class="txt">Wie weit sind die Punkte \(A(1 \mid 2)\) und \(B(7 \mid 10)\) im Koordinatensystem voneinander entfernt (Einheit cm)?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Hilfsdreieck mit den Katheten \(7 - 1 = 6\) und \(10 - 2 = 8\): \(\sqrt{36 + 64} = 10\) cm.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g5-2c-kreis-und-kreisteile.html" target="_blank" rel="noopener">Kreis und Kreisteile ↗</a></p>
+    </section>
+    <section class="kap" id="k4">
+      <div class="kap-meta"><span class="marker">Kapitel 4</span><span class="abz abz-th">K4</span><span class="zeit">≈ 40 min</span></div>
+      <h2 id="aehnlichkeit">Ähnliche Figuren</h2>
+      <p class="ziel">Du erkennst ähnliche Figuren, berechnest Streckfaktor und fehlende Längen, nutzt Verhältnisse (Strahlensatz) und unterscheidest den Längenfaktor \(k\) vom Flächenfaktor \(k^2\).</p>
+
+      <p class="phase"><span>①</span> Clip</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-aehnlichkeit.html" data-titel="Ähnliche Figuren">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Ähnliche Figuren</span></span>
+          <span class="clip-zeit">1:28</span>
+        </button>
+      </div>
+
+      <p class="phase"><span>②</span> Tüfteln</p>
+      <figure class="sim sim-gross" id="sim4" aria-label="Rechtwinkliges Dreieck und ähnliches Bilddreieck mit Streckfaktor k">
+        <div class="leiste" aria-live="polite"></div>
+        <div class="sim-formel" data-rolle="formel" aria-live="polite"></div>
+        <svg role="img" aria-label="Original blau mit Katheten 4 und 3, Bild orange mit k-fachen Seiten"></svg>
+        <div class="sl-row">
+          <div class="sl-grp akz-orange"><label for="s4-k"><span class="var">Streckfaktor k</span></label><input type="range" id="s4-k" min="0.5" max="3" step="0.25" value="1"><span class="sl-val"></span></div>
+        </div>
+      </figure>
+
+      <p class="phase"><span>③</span> Kontrollfragen</p>
+      <div class="clipkarte kap-clip" data-clip="clips/pyt-lp-kontrolle-aehnlichkeit.html" data-titel="Kontrollfragen zur Ähnlichkeit">
+        <button class="clip-start" type="button">
+          <span class="clip-play" aria-hidden="true">▶</span>
+          <span class="clip-txt"><span class="clip-titel">Kontrollfragen zur Ähnlichkeit</span></span>
+          <span class="clip-zeit">0:34</span>
+        </button>
+      </div>
+
+      <h3>Festhalten</h3>
+      <div class="festhalten">
+        <div class="merk">
+          <div class="titel">Ähnliche Figuren</div>
+          <p>Zwei Figuren sind <b>ähnlich</b>, wenn alle Winkel gleich sind und alle Längen mit demselben <b>Streckfaktor</b> \(k\) multipliziert werden: \(k = \dfrac{\text{Bildlänge}}{\text{Originallänge}}\).</p>
+          <ul class="kurz">
+            <li>Dreieck \(3, 4, 5\) mit \(k = 2\): \(6, 8, 10\).</li>
+            <li><b>Flächen</b> wachsen mit \(k^2\): Fläche \(6\) cm² wird \(6 \cdot 2^2 = 24\) cm².</li>
+            <li><b>Verhältnisse</b> (Strahlensatz): Stab \(2\) m wirft \(3\) m Schatten, der Baum \(15\) m: Baum \(\dfrac{2}{3} \cdot 15 = 10\) m.</li>
+            <li><b>Regal:</b> grosses Dreieck \(60 \times 40\) (Fläche \(1200\)), darin ein ähnliches mit \(k = \tfrac{1}{2}\): Fläche \(1200 \cdot \tfrac{1}{4} = 300\). Differenz \(900\).</li>
+          </ul>
+        </div>
+        <div class="warn">
+          <div class="titel">Häufiger Fehler</div>
+          <p><b>Flächenfaktor = Längenfaktor:</b> Bei \(k = 3\) wird die Fläche nicht dreimal, sondern \(9\)-mal so gross.</p>
+          <p><b>Gleich viel addiert:</b> Ähnlich heisst «mal \(k\)», nicht «überall gleich viel länger».</p>
+        </div>
+      </div>
+
+      <p class="phase"><span>④</span> Üben mit Rückmeldung</p>
+      <div class="duo">
+        <div class="uebung" data-typ="aehnlich">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Fehlende Seite</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+        <div class="uebung" data-typ="flaechenfaktor">
+          <div class="ue-kopf"><span class="ue-titel">🔁 Längen- und Flächenfaktor</span><span class="ue-serie">0 in Folge</span></div>
+          <p class="ue-aufgabe"></p>
+          <div class="ue-zeile"><span class="ue-eingabe"></span><button type="button" class="ue-pruefen">Prüfen</button><button type="button" class="ue-tipp">💡 Tipp</button><button type="button" class="ue-neu">Neue Zahlen</button></div>
+          <div class="ue-tipps" aria-live="polite"></div>
+          <div class="ue-rueck" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <p class="phase"><span>⑤</span> Aufgaben mit Lösungen</p>
+<div class="test" data-test="t4">
+        <div class="test-kopf">
+          <h3>Aufgaben · Kapitel 4 <span class="summe">· 14 P</span></h3>
+          <span class="werkz"><button type="button" class="alle-loesungen">alle Lösungen</button><label title="Aufgaben auf Papier gelöst und mit den Lösungen verglichen — ob alles sitzt, zeigt der Gesamttest."><input type="checkbox" class="erledigt" aria-label="Aufgaben dieses Kapitels bearbeitet"> bearbeitet</label></span>
+        </div>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">4a</span><span class="pkt">(3 P)</span><span class="txt">Ein Dreieck hat die Seiten \(4\), \(6\) und \(8\) cm. Im ähnlichen Bilddreieck ist die längste Seite \(12\) cm. Berechne \(k\) und die anderen Seiten.</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(k = \dfrac{12}{8} = 1.5\). Seiten \(4 \cdot 1.5 = 6\) cm und \(6 \cdot 1.5 = 9\) cm.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4b</span><span class="pkt">(2 P)</span><span class="txt">Eine Figur mit \(10\) cm² wird mit \(k = 3\) gestreckt. Wie gross ist die Bildfläche?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(10 \cdot 3^2 = 90\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4c</span><span class="pkt">(3 P)</span><span class="txt">Ein \(1.5\) m langer Stab wirft einen \(2\) m langen Schatten. Ein Haus wirft gleichzeitig einen \(12\) m langen Schatten. Wie hoch ist das Haus?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Die Dreiecke aus Gegenstand und Schatten sind ähnlich: \(\dfrac{1.5}{2} = \dfrac{x}{12}\), \(x = 9\) m.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4d</span><span class="pkt">(2 P)</span><span class="txt">Lea verdreifacht alle Seiten eines Dreiecks mit \(15\) cm² Fläche und sagt: «Die Fläche ist jetzt \(45\) cm².» Stimmt das?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Nein. Die Fläche wird mit \(k^2 = 9\) multipliziert: \(135\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4e</span><span class="pkt">(2 P)</span><span class="txt">Ein rechtwinkliges Brett hat die Katheten \(80\) cm und \(60\) cm. In einer Ecke wird ein ähnliches Dreieck mit \(k = \tfrac{1}{4}\) ausgesägt. Wie gross ist die Restfläche?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\dfrac{80 \cdot 60}{2} = 2400\) cm². Ausgesägt: \(2400 \cdot \tfrac{1}{16} = 150\) cm² (Katheten \(20\) und \(15\)). Rest \(2250\) cm².</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">4f</span><span class="pkt">(2 P)</span><span class="txt">Eine Figur wird mit \(k = 0.5\) verkleinert. Warum ist die neue Fläche nur ein Viertel so gross?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Länge und Breite werden beide halbiert: \(0.5 \cdot 0.5 = 0.25\), also ein Viertel.</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf">Vertiefung bei Mathe begreifbar (Berufsmaturität): <a href="https://mathe.begreifbar.ch/grundlagen/g5-2d-zentrische-streckung-aehnlichkeit.html" target="_blank" rel="noopener">Zentrische Streckung und Ähnlichkeit ↗</a></p>
+    </section>
+    <section class="kap" id="gesamttest">
+      <div class="gesamt">
+        <div class="gesamt-kopf">
+          <div class="kap-meta"><span class="marker">Abschluss</span><span class="abz abz-th">Kapitel 1–4</span><span class="zeit">≈ 30 min · 25 Punkte</span></div>
+          <h2 id="gesamttest-titel">Gesamttest</h2>
+          <div class="pdf-weg">
+            <div class="pdf-schritt"><span class="nr">1</span><div><b>Lösen</b> — auf Papier, mit Skizze und Rechenweg, ohne Taschenrechner.<br>
+              <a class="pdf-knopf" href="../downloads/leitprogramme/pythagoras/gesamttest.pdf" download>⬇ Gesamttest (PDF)</a></div></div>
+            <div class="pdf-schritt"><span class="nr">2</span><div><b>Bewerten</b> — selbst mit dem Punkteraster oder mit einer KI: Lösung scannen oder fotografieren (ohne Namen und Standort). Das Paket enthält die Musterlösung: erst danach öffnen.<br>
+              <a class="pdf-knopf" href="../downloads/leitprogramme/pythagoras/bewertungspaket.pdf" download>⬇ Bewertungspaket (PDF)</a></div></div>
+            <div class="pdf-schritt"><span class="nr">3</span><div><b>Gezielt wiederholen</b> — nach der Tabelle unten.</div></div>
+          </div>
+        </div>
+        <div class="bewertung">
+          <b>Selbsteinschätzung</b>
+          <table>
+            <tr><td>22 – 25 P</td><td>Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals (Zuordnung unten).</td></tr>
+            <tr><td>17 – 21 P</td><td>Den schwächsten Teil nochmals, gemessen am Anteil (Teil A 6, B 6, C 7, D 6 P): Tüfteln und Übungen des Kapitels dieses Teils.</td></tr>
+            <tr><td>11 – 16 P</td><td>Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.</td></tr>
+            <tr><td>0 – 10 P</td><td>Zurück zu den Kapiteln jedes Teils, in dem du weniger als die Hälfte erreicht hast; sind es alle vier, zum Vortest und zu Kapitel 1.</td></tr>
+          </table>
+          <p>Aufgabe → Kapitel: G1, G2 → 1; G3, G4 → 2; G5, G6 → 3; G7, G8 → 4</p>
+        </div>
+      </div>
+    </section>
+    <section class="kap" id="vertiefung">
+      <div class="vertiefung">
+        <h2 id="vertiefung-titel">Vertiefung — zum Knobeln</h2>
+        <p class="komm">Freiwillig, ohne Punkte. Für alle, die nach dem Gesamttest weiterdenken möchten.</p>
+        <ol class="aufg">
+          <li>
+            <div class="frage"><span class="nr">V1</span><span class="txt">Eine Schachtel ist \(4\) cm lang, \(3\) cm breit und \(12\) cm hoch. Wie lang ist ein Stab, der genau von einer unteren Ecke zur gegenüberliegenden oberen Ecke passt?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Bodendiagonale \(\sqrt{16 + 9} = 5\) cm, dann \(\sqrt{25 + 144} = 13\) cm. Zweimal Pythagoras, zweimal ein Hilfsdreieck.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">V2</span><span class="txt">Ein Quadrat liegt so in einem Kreis mit Radius \(5\) cm, dass alle vier Ecken auf dem Kreis liegen. Wie gross ist die Fläche des Quadrats?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>Die Diagonale ist ein Durchmesser, \(10\) cm. Für die Seite \(a\): \(a^2 + a^2 = 100\), also \(a^2 = 50\). Die Fläche ist \(a^2 = 50\) cm², ohne dass du \(a\) kennen musst.</p></div></details>
+          </li>
+          <li>
+            <div class="frage"><span class="nr">V3</span><span class="txt">Auf Karopapier (Kästchen \(1\) cm) verbindest du zwei Gitterpunkte, die \(5\) Kästchen nach rechts und \(12\) nach oben auseinander liegen. Wie lang ist die Strecke? Findest du zwei Gitterpunkte mit genau \(25\) cm Abstand, die nicht auf einer Gitterlinie liegen?</span></div>
+            <details class="loes"><summary>Lösung</summary><div class="inhaltbox"><p>\(\sqrt{25 + 144} = 13\) cm. Für \(25\) cm: \(7\) und \(24\) Kästchen (\(49 + 576 = 625\)) oder \(15\) und \(20\).</p></div></details>
+          </li>
+        </ol>
+      </div>
+      <p class="ausf weiter">Weiter: Dreiecke und Pythagoras bei Mathe begreifbar: <a href="https://mathe.begreifbar.ch/grundlagen/g5-2a-dreiecke.html" target="_blank" rel="noopener">Dreiecke und Pythagoras ↗</a>.</p>
+    </section>
+    <div class="fuss">
+      <span>Leitprogramm Flächen, Pythagoras und Ähnlichkeit · Sek1-Mathe begreifbar</span>
+      <span>Raphael Arnold Kohler</span>
+    </div>
+
+  </main>
+</div>
+</div>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+    svg: { fontCache: 'global' },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+  };
+</script>
+<script src="../vendor/mathjax/tex-svg.js"></script>
+
+<script>
+(function(){
+  'use strict';
+  // Relativ, nicht absolut: Im Repo liegt die Datei eine Ebene tief, und die
+  // Clips sollen von hier kommen — sonst zeigt eine lokale Vorschau den Stand
+  // der Live-Site und ohne Netz gar nichts.
+  var BASIS = '../';
+
+  /* ---- Theme ---- */
+  var schalter = document.getElementById('themenschalter');
+  function themaLesen(){ try { return localStorage.getItem('lp-pyt-thema'); } catch(e){ return null; } }
+  var gespeichert = themaLesen();
+  if (gespeichert === 'dark' || gespeichert === 'light') document.documentElement.setAttribute('data-theme', gespeichert);
+  schalter.addEventListener('click', function(){
+    var jetzt = document.documentElement.getAttribute('data-theme');
+    if (!jetzt) jetzt = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var neu = jetzt === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', neu);
+    try { localStorage.setItem('lp-pyt-thema', neu); } catch(e){}
+  });
+
+  /* ---- Clip-Buehne (nach clipBuehne/clipZu von mathe.begreifbar.ch) ---- */
+
+  /* Clip-Buehne kommt aus ../mathlib.js — clipBuehne(quelle, titel).
+     Vorher stand hier eine Kopie; Scrollsperre und Fokusrueckgabe
+     sind dabei nach mathlib.js gewandert und gelten jetzt ueberall. */
+
+  document.querySelectorAll('.clipkarte').forEach(function(karte){
+    var knopf = karte.querySelector('.clip-start');
+    knopf.addEventListener('click', function(){
+      if (document.querySelector('.clip-buehne')) return;
+      clipBuehne(BASIS + karte.dataset.clip, karte.dataset.titel || 'Clip');
+    });
+  });
+
+  /* ---- Lösungen: alle auf/zu ---- */
+  document.querySelectorAll('.alle-loesungen').forEach(function(knopf){
+    knopf.addEventListener('click', function(){
+      var test = knopf.closest('.test') || knopf.closest('.gesamt');
+      var alle = test.querySelectorAll('details.loes');
+      var oeffnen = Array.prototype.some.call(alle, function(d){ return !d.open; });
+      alle.forEach(function(d){ d.open = oeffnen; });
+      knopf.textContent = oeffnen ? 'Lösungen zuklappen' : 'alle Lösungen';
+    });
+  });
+
+  /* ---- Fortschritt ---- */
+  var tests = Array.prototype.slice.call(document.querySelectorAll('.test'));
+  var fuellung = document.getElementById('balken-fuellung');
+  var text = document.getElementById('fortschritt-text');
+  function standLesen(){
+    try { return JSON.parse(localStorage.getItem('lp-pyt-stand') || '{}'); } catch(e){ return {}; }
+  }
+  function standSchreiben(s){ try { localStorage.setItem('lp-pyt-stand', JSON.stringify(s)); } catch(e){} }
+  function zeichnen(){
+    var fertig = tests.filter(function(t){ return t.querySelector('.erledigt').checked; }).length;
+    fuellung.style.width = (fertig / tests.length * 100) + '%';
+    text.textContent = fertig + ' von ' + tests.length + ' Aufgabenblöcken bearbeitet';
+  }
+  var stand = standLesen();
+  tests.forEach(function(t){
+    var box = t.querySelector('.erledigt');
+    if (stand[t.dataset.test]) box.checked = true;
+    box.addEventListener('change', function(){
+      var s = standLesen();
+      s[t.dataset.test] = box.checked;
+      standSchreiben(s);
+      zeichnen();
+    });
+  });
+  zeichnen();
+  document.getElementById('fortschritt-reset').addEventListener('click', function(){
+    tests.forEach(function(t){ t.querySelector('.erledigt').checked = false; });
+    standSchreiben({});
+    zeichnen();
+  });
+
+  /* ---- aktives Kapitel in der Schiene ---- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('.schiene a'));
+  var ziele = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if ('IntersectionObserver' in window && ziele.length){
+    var beobachter = new IntersectionObserver(function(eintraege){
+      eintraege.forEach(function(e){
+        if (!e.isIntersecting) return;
+        links.forEach(function(a){ a.classList.toggle('aktiv', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-15% 0px -70% 0px' });
+    ziele.forEach(function(z){ beobachter.observe(z); });
+  }
+})();
+
+</script>
+<script>
+/* Leitprogramm Flächen, Pythagoras und Ähnlichkeit (Geometrie) — Grundseite und Höhe (Sim 1), Satz des Pythagoras (Sim 2),
+   Sehne im Kreis (Sim 3), ähnliche Dreiecke (Sim 4), Übungen mit Rückmeldung und Figuren.
+   Notation: Längen in cm oder m, Flächen in cm², Zahlen mit Dezimalpunkt und echtem Minus.
+   Farben: blau = Figur und Grundseite, orange = Höhe bzw. Bildfigur, grün = Hypotenuse und Ergebnis, rot = Fehler.
+   Gerüst: scripts/lp/bewegung/seite.js. */
+(function(){
+  'use strict';
+  function setzen(e){ if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([e]).catch(function(){}); }
+  function zufall(l){ return l[Math.floor(Math.random() * l.length)]; }
+  function zufallG(a, b){ return a + Math.floor(Math.random() * (b - a + 1)); }
+  function nz(a, b){ var r; do { r = zufallG(a, b); } while (!r); return r; }
+  function ggT(a, b){ a = Math.abs(a); b = Math.abs(b); while (b){ var t = a % b; a = b; b = t; } return a; }
+  function kgV(a, b){ return Math.abs(a * b) / ggT(a, b); }
+  function mz(n){ return (n < 0 ? '−' : '') + Math.abs(n); }
+
+  /* ---------- Brüche exakt: [z, n], n > 0, gekürzt ---------- */
+  function B(z, n){ n = n == null ? 1 : n; if (n < 0){ z = -z; n = -n; } var g = ggT(z, n) || 1; return [z / g, n / g]; }
+  function bAdd(a, b){ return B(a[0] * b[1] + b[0] * a[1], a[1] * b[1]); }
+  function bSub(a, b){ return B(a[0] * b[1] - b[0] * a[1], a[1] * b[1]); }
+  function bMul(a, b){ return B(a[0] * b[0], a[1] * b[1]); }
+  function bDiv(a, b){ return B(a[0] * b[1], a[1] * b[0]); }
+  function bEq(a, b){ return a[0] * b[1] === b[0] * a[1]; }
+  function bDez(x){ var s = String(x), k = s.indexOf('.') < 0 ? 0 : s.length - s.indexOf('.') - 1, f = Math.pow(10, k); return B(Math.round(x * f), f); }
+  function bTex(a){ return a[1] === 1 ? String(a[0]) : (a[0] < 0 ? '-' : '') + '\\tfrac{' + Math.abs(a[0]) + '}{' + a[1] + '}'; }
+  function bTxt(a){ return a[1] === 1 ? mz(a[0]) : mz(a[0]) + '/' + a[1]; }
+  function bZahl(a){ return a[0] / a[1]; }
+  /* Zahl als Dezimalzahl, wenn sie abbricht (Grössen), sonst als Bruch */
+  function bWert(a){ var n = a[1]; while (n % 2 === 0) n /= 2; while (n % 5 === 0) n /= 5; return n === 1 ? String(+(a[0] / a[1]).toFixed(6)).replace('-', '−') : bTxt(a); }
+  function bWertTex(a){ var n = a[1]; while (n % 2 === 0) n /= 2; while (n % 5 === 0) n /= 5; return n === 1 ? String(+(a[0] / a[1]).toFixed(6)) : bTex(a); }
+
+  /* Zahleingabe: −4, 2.5, 7/3, −7/3, (−7)/3. Dezimalkomma abgelehnt. */
+  function zahlLesen(s){
+    s = String(s).trim().replace(/[−–]/g, '-').replace(/\s+/g, '').replace(/^\((-?\d+)\)/, '$1');
+    if (/\d,\d/.test(s)) return { kaputt: 'Dezimalpunkt statt Komma: 2.5' };
+    var m = s.match(/^([+-]?\d+(?:\.\d+)?)(?:\/(\d+))?$/);
+    if (!m) return { kaputt: 'Gib eine Zahl ein, zum Beispiel 4, −2.5 oder 7/3.' };
+    var a = bDez(parseFloat(m[1]));
+    if (m[2]){ if (+m[2] === 0) return { kaputt: 'Durch 0 teilen geht nicht.' }; a = bDiv(a, B(+m[2])); }
+    return { w: a };
+  }
+
+
+  /* ---------- Koordinatensystem (aus dem Leitprogramm Lineare Funktionen von TALS Mathe, gekürzt) ---------- */
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(eltern, name, attr, text){
+    var e = document.createElementNS(NS, name);
+    for (var k in attr) e.setAttribute(k, attr[k]);
+    if (text != null) e.textContent = text;
+    eltern.appendChild(e); return e;
+  }
+  function fr(v){ return Math.abs(v % 1) > 1e-9 ? v.toFixed(2) : String(Math.round(v)); }
+  function z(n){ var r = Math.round(n * 100) / 100; if (Object.is(r, -0)) r = 0; return (r < 0 ? '−' : '') + String(Math.abs(r)); }
+  function Achsen(svg, o){
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = o.w, H = o.h, x0 = o.x0, x1 = o.x1, y0 = o.y0, y1 = o.y1;
+    svg.setAttribute('viewBox', (-o.rl) + ' ' + (-12) + ' ' + (W + o.rl + 12) + ' ' + (H + 34));
+    var id = 'k' + Math.random().toString(36).slice(2, 8);
+    function X(x){ return (x - x0) / (x1 - x0) * W; }
+    function Y(y){ return H - (y - y0) / (y1 - y0) * H; }
+    var g = el(svg, 'g', {});
+    var cp = el(g, 'clipPath', { id: id }); el(cp, 'rect', { x: 0, y: 0, width: W, height: H });
+    var sx = o.sx || 1, sy = o.sy || 1, i;
+    if (!o.ohneGitter){
+      for (i = Math.ceil(x0 / sx) * sx; i <= x1 + 1e-9; i += sx) el(g, 'line', { x1: X(i), y1: 0, x2: X(i), y2: H, 'class': 'gitter' });
+      for (i = Math.ceil(y0 / sy) * sy; i <= y1 + 1e-9; i += sy) el(g, 'line', { x1: 0, y1: Y(i), x2: W, y2: Y(i), 'class': 'gitter' });
+    }
+    var ax = Math.max(y0, Math.min(y1, 0)), ay = Math.max(x0, Math.min(x1, 0));
+    if (!o.ohneAchsen){
+      el(g, 'line', { x1: 0, y1: Y(ax), x2: W, y2: Y(ax), 'class': 'achse' });
+      el(g, 'line', { x1: X(ay), y1: 0, x2: X(ay), y2: H, 'class': 'achse' });
+      el(g, 'polygon', { points: W + ',' + Y(ax) + ' ' + (W - 7) + ',' + (Y(ax) - 3.5) + ' ' + (W - 7) + ',' + (Y(ax) + 3.5), 'class': 'pfeil' });
+      el(g, 'polygon', { points: X(ay) + ',0 ' + (X(ay) - 3.5) + ',7 ' + (X(ay) + 3.5) + ',7', 'class': 'pfeil' });
+      (o.xm || []).forEach(function(t){ el(g, 'text', { x: X(t), y: Y(ax) + 14, 'text-anchor': 'middle', 'class': 'skala' }, z(t)); });
+      (o.ym || []).forEach(function(t){ el(g, 'text', { x: X(ay) - 5, y: Y(t) + 4, 'text-anchor': 'end', 'class': 'skala' }, z(t)); });
+    }
+    var ebene = el(svg, 'g', {});
+    if (!o.ohneAchsen){
+      el(svg, 'text', { x: W - 2, y: Y(ax) - 7, 'text-anchor': 'end', 'class': 'achsname' }, o.xname || 'x');
+      el(svg, 'text', { x: X(ay) + 7, y: 10, 'text-anchor': 'start', 'class': 'achsname' }, o.yname != null ? o.yname : 'y');
+    }
+    return {
+      X: X, Y: Y, o: o, ebene: ebene,
+      gerade: function(m, b, cls, a, c){ var A = a == null ? x0 : a, C = c == null ? x1 : c;
+        return el(ebene, 'line', { x1: X(A), y1: Y(m * A + b), x2: X(C), y2: Y(m * C + b), 'class': cls, 'clip-path': 'url(#' + id + ')' }); },
+      strecke: function(xa, ya, xb, yb, cls){ return el(ebene, 'line', { x1: X(xa), y1: Y(ya), x2: X(xb), y2: Y(yb), 'class': cls, 'clip-path': 'url(#' + id + ')' }); },
+      punkt: function(x, y, cls, text, dx, dy, anker){
+        if (x < x0 || x > x1 || y < y0 || y > y1) return;
+        el(ebene, 'circle', { cx: X(x), cy: Y(y), r: o.r || 4.5, 'class': cls });
+        if (text) el(ebene, 'text', { x: X(x) + (dx == null ? 8 : dx), y: Y(y) + (dy == null ? -8 : dy), 'text-anchor': anker || 'start', 'class': 'p-text ' + cls }, text);
+      },
+      kurve: function(f, a, c, cls){ var pk = [], n = 160; for (var k = 0; k <= n; k++){ var x = a + (c - a) * k / n, w = f(x); if (isFinite(w)) pk.push(X(x).toFixed(1) + ',' + Y(Math.max(y0 - 1, Math.min(y1 + 1, w))).toFixed(1)); }
+        return el(ebene, 'polyline', { points: pk.join(' '), 'class': cls, fill: 'none', 'clip-path': 'url(#' + id + ')' }); },
+      text: function(x, y, s, cls, anker){ el(ebene, 'text', { x: X(x), y: Y(y), 'text-anchor': anker || 'middle', 'class': 'p-text ' + cls }, s); },
+      zuWert: function(px, py){ return [x0 + px / W * (x1 - x0), y0 + (H - py) / H * (y1 - y0)]; }
+    };
+  }
+  var GITTER = { w: 280, h: 280, rl: 18, x0: -7, x1: 7, y0: -7, y1: 7, xm: [-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6], ym: [-6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6] };
+  function wertR(fig, id){ return +fig.querySelector('#' + id).value; }
+  function zeigeWert(fig, id, txt){ var i = fig.querySelector('#' + id); var v = i.parentNode.querySelector('.sl-val'); if (v) v.textContent = txt != null ? txt : mz(+i.value); }   /* einmal definiert: eine zweite Fassung ohne txt überschrieb die Einheiten (Prüfung 10.10.2026) */
+  /* y = m·x + b als HTML-Text (Live-Anzeige ohne MathJax); m als Bruch [z, n] oder Zahl */
+  function linTxt(m, b, xn, yn){
+    xn = xn || 'x'; yn = yn || 'y';
+    var mm = Array.isArray(m) ? m : bDez(m), s;
+    var mt = mm[1] === 1 ? z(mm[0]) : (mm[0] < 0 ? '−' : '') + Math.abs(mm[0]) + '/' + mm[1];
+    if (!mm[0]) s = z(b);
+    else {
+      s = (mt === '1' ? '' : mt === '−1' ? '−' : mt + ' · ') + xn;
+      if (b) s += (b > 0 ? ' + ' : ' − ') + z(Math.abs(b));
+    }
+    return yn + ' = ' + s;
+  }
+  /* y = m x + b als LaTeX; m als Bruch [z, n] */
+  function linTex(m, b, xn){
+    xn = xn || 'x';
+    var s;
+    if (!m[0]) return String(b);
+    s = m[1] === 1 ? (m[0] === 1 ? '' : m[0] === -1 ? '-' : m[0]) : (m[0] < 0 ? '-' : '') + '\\tfrac{' + Math.abs(m[0]) + '}{' + m[1] + '}';
+    s += xn;
+    if (b) s += (b > 0 ? ' + ' : ' - ') + Math.abs(b);
+    return s;
+  }
+
+  /* ---------- Geometrie-Helfer: Vieleck, Kreis, rechter Winkel, Beschriftung (in Fensterkoordinaten) ---------- */
+  function Geo(svg, o){
+    o.ohneAchsen = true;
+    var k = Achsen(svg, o), ebene = k.ebene;
+    function pt(p){ return k.X(p[0]).toFixed(1) + ',' + k.Y(p[1]).toFixed(1); }
+    k.vieleck = function(pk, cls){ return el(ebene, 'polygon', { points: pk.map(pt).join(' '), 'class': cls }); };
+    k.kreis = function(m, r, cls){ return el(ebene, 'circle', { cx: k.X(m[0]), cy: k.Y(m[1]), r: Math.abs(k.X(r) - k.X(0)), 'class': cls }); };
+    k.rechts = function(p, u, v, q){            /* Zeichen für den rechten Winkel an p, Richtungen u, v (Einheitsvektoren), q in Einheiten */
+      var a = [p[0] + u[0] * q, p[1] + u[1] * q], b = [a[0] + v[0] * q, a[1] + v[1] * q], c = [p[0] + v[0] * q, p[1] + v[1] * q];
+      el(ebene, 'polyline', { points: [a, b, c].map(pt).join(' '), 'class': 'linie grau', fill: 'none' }); };
+    k.marke = function(p, s, cls, dx, dy){ el(ebene, 'text', { x: k.X(p[0]) + (dx || 0), y: k.Y(p[1]) + (dy || 0), 'text-anchor': 'middle', 'class': 'p-text ' + (cls || '') }, s); };
+    return k;
+  }
+  function lang(p, q){ return Math.hypot(q[0] - p[0], q[1] - p[1]); }
+  function mitte(p, q){ return [(p[0] + q[0]) / 2, (p[1] + q[1]) / 2]; }
+  /* Zahl für die Live-Anzeige: ganz oder auf eine Stelle mit ≈ */
+  function ca(v){ return Math.abs(v - Math.round(v)) < 1e-9 ? '= ' + z(v) : '≈ ' + z(Math.round(v * 10) / 10); }
+
+  /* ════════ Sim 1 — Grundseite und Höhe ════════
+     Dreieck A(0|0), B(g|0), C(s|h) oder Parallelogramm A, B, B + (s|h), (s|h). Die Spitze verschieben ändert die
+     schrägen Seiten, nicht die Fläche. Höhe gestrichelt, notfalls auf der verlängerten Grundseite. */
+  (function(){
+    var fig = document.getElementById('sim1'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]'), wahl = fig.querySelector('#s1-typ');
+    var O = { w: 320, h: 176, rl: 4, x0: -5, x1: 15, y0: -1, y1: 10, sx: 1, sy: 1 };
+    function zustand(){ return { typ: wahl.value, g: wertR(fig, 's1-g'), h: wertR(fig, 's1-h'), s: wertR(fig, 's1-s') }; }
+    function zeichnen(){
+      var Z = zustand(); zeigeWert(fig, 's1-g', Z.g + ' cm'); zeigeWert(fig, 's1-h', Z.h + ' cm'); zeigeWert(fig, 's1-s', Z.s + ' cm');
+      var k = Geo(svg, O), A = [0, 0], Bp = [Z.g, 0], C = [Z.s, Z.h], D = [Z.g + Z.s, Z.h];
+      var pk = Z.typ === 'd' ? [A, Bp, C] : [A, Bp, D, C];
+      k.vieleck(pk, 'flaeche blau');
+      var fuss = [Z.s, 0];
+      if (Z.s < 0 || Z.s > Z.g) k.strecke(Math.min(0, Z.s), 0, Math.max(Z.g, Z.s), 0, 'linie grau gestrichelt');
+      k.strecke(Z.s, 0, Z.s, Z.h, 'linie orange gestrichelt'); k.rechts(fuss, [Z.s > Z.g / 2 ? -1 : 1, 0], [0, 1], 0.45);
+      k.marke(mitte(A, Bp), 'g = ' + Z.g, 'blau', 0, 15);
+      k.marke(mitte(fuss, C), 'h = ' + Z.h, 'orange', Z.s < Z.g / 2 ? 24 : -24, 4);
+      var sl = lang(A, C);
+      k.marke(mitte(A, C), z(Math.round(sl * 10) / 10), 'grau', Z.s < Z.g / 2 ? -20 : 0, Z.s < Z.g / 2 ? -2 : -10);
+      var F = Z.typ === 'd' ? Z.g * Z.h / 2 : Z.g * Z.h;
+      formel.innerHTML = (Z.typ === 'd' ? 'Dreieck: A = g · h : 2 = ' + Z.g + ' · ' + Z.h + ' : 2' : 'Parallelogramm: A = g · h = ' + Z.g + ' · ' + Z.h) + ' = <b>' + z(F) + ' cm²</b>'
+        + ' <span class="grau">(schräge Seite links ≈ ' + z(Math.round(sl * 10) / 10) + ' cm)</span>';
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    pr = Leiste(fig, [
+      { text: 'Dreieck mit Grundseite 8 cm und Fläche 16 cm². Stell die passende Höhe ein.', ok: function(Z){ return Z.typ === 'd' && Z.g === 8 && Z.h === 4; } },
+      { text: 'Dreieck, g = 6 cm, h = 4 cm. Schieb die Spitze, bis die rechte Seite senkrecht steht. Wie gross ist die Fläche jetzt?', ok: function(Z){ return Z.typ === 'd' && Z.g === 6 && Z.h === 4 && Z.s === 6; } },
+      { text: 'Parallelogramm mit Grundseite 5 cm und Fläche 20 cm². Stell es ein.', ok: function(Z){ return Z.typ === 'p' && Z.g === 5 && Z.h === 4; } },
+      { text: 'Dreieck, g = 10 cm, h = 3 cm, die Spitze liegt <b>neben</b> der Grundseite. Wo steht die Höhe jetzt?', ok: function(Z){ return Z.typ === 'd' && Z.g === 10 && Z.h === 3 && (Z.s < 0 || Z.s > 10); } },
+      { text: 'Parallelogramm mit g = 4 cm, Fläche 24 cm² und um 3 cm verschobener Oberseite.', ok: function(Z){ return Z.typ === 'p' && Z.g === 4 && Z.h === 6 && Z.s === 3; } }
+    ], sim);
+    fig.querySelectorAll('input, select').forEach(function(i){ i.addEventListener('input', zeichnen); i.addEventListener('change', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 2 — Satz des Pythagoras ════════
+     Katheten a (waagrecht) und b (senkrecht), Quadrate über allen drei Seiten. Massstab passt sich an. */
+  (function(){
+    var fig = document.getElementById('sim2'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
+    function zustand(){ return { a: wertR(fig, 's2-a'), b: wertR(fig, 's2-b') }; }
+    function zeichnen(){
+      var Z = zustand(); zeigeWert(fig, 's2-a', Z.a + ' cm'); zeigeWert(fig, 's2-b', Z.b + ' cm');
+      var a = Z.a, b = Z.b, c2 = a * a + b * b, c = Math.sqrt(c2);
+      var L = -b - 1, R = a + b + 1, U = -a - 1, Ob = a + b + 1, sp = Math.max(R - L, Ob - U);
+      var k = Geo(svg, { w: 300, h: 300, rl: 4, x0: L, x1: L + sp, y0: U, y1: U + sp, ohneGitter: true });
+      var C = [0, 0], A = [a, 0], Bq = [0, b];
+      k.vieleck([C, A, [a, -a], [0, -a]], 'flaeche blau');
+      k.vieleck([C, Bq, [-b, b], [-b, 0]], 'flaeche orange');
+      k.vieleck([A, Bq, [b, a + b], [a + b, a]], 'flaeche gruen');
+      k.vieleck([C, A, Bq], 'flaeche tinte');
+      k.rechts(C, [1, 0], [0, 1], Math.max(0.6, sp / 30));
+      k.marke([a / 2, -a / 2], 'a² = ' + a * a, 'blau', 0, 4);
+      k.marke([-b / 2, b / 2], 'b² = ' + b * b, 'orange', 0, 4);
+      k.marke([(a + b) / 2 + a / 4, (a + b) / 2 + b / 4], 'c² = ' + c2, 'gruen', 0, 4);
+      formel.innerHTML = 'a² + b² = ' + a * a + ' + ' + b * b + ' = ' + c2 + ' &nbsp;→&nbsp; <b>c ' + ca(c) + ' cm</b>';
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    function paar(x, y){ return function(Z){ return (Z.a === x && Z.b === y) || (Z.a === y && Z.b === x); }; }
+    pr = Leiste(fig, [
+      { text: 'Eine Kathete ist 9 cm lang. Wie lang muss die andere sein, damit c = 15 cm wird?', ok: paar(9, 12) },
+      { text: 'c = 17 cm, eine Kathete 8 cm. Stell die andere ein.', ok: paar(8, 15) },
+      { text: 'c = 20 cm, eine Kathete 12 cm. Stell die andere ein.', ok: paar(12, 16) },
+      { text: 'c = 25 cm, eine Kathete 7 cm. Stell die andere ein.', ok: paar(7, 24) },
+      { text: 'Finde ein rechtwinkliges Dreieck mit ganzzahligen Katheten und c = 29 cm.', ok: paar(20, 21) }
+    ], sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 3 — Sehne im Kreis ════════
+     Kreis mit Radius r, waagrechte Sehne im Abstand d unter dem Mittelpunkt, darunter Wasser. Hilfsdreieck: d, s/2, r. */
+  (function(){
+    var fig = document.getElementById('sim3'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
+    function zustand(){ var r = wertR(fig, 's3-r'), d = Math.min(wertR(fig, 's3-d'), r); return { r: r, d: d }; }
+    function zeichnen(){
+      var Z = zustand(), r = Z.r, d = Z.d, hs = Math.sqrt(r * r - d * d), s = 2 * hs;
+      zeigeWert(fig, 's3-r', r + ' cm'); zeigeWert(fig, 's3-d', d + ' cm');
+      var k = Geo(svg, { w: 300, h: 300, rl: 4, x0: -16, x1: 16, y0: -16, y1: 16, ohneGitter: true });
+      /* Wasser: Kreissegment unter der Sehne */
+      var w0 = Math.atan2(-d, hs), w1 = Math.PI - w0, seg = [];
+      for (var i = 0; i <= 80; i++){ var t = w1 + (2 * Math.PI - (w1 - w0)) * i / 80; seg.push([r * Math.cos(t), r * Math.sin(t)]); }
+      k.vieleck(seg, 'flaeche wasser');
+      k.kreis([0, 0], r, 'linie tinte');
+      k.strecke(-hs, -d, hs, -d, 'linie blau');
+      k.strecke(0, 0, 0, -d, 'linie orange'); k.strecke(0, 0, hs, -d, 'linie gruen');
+      if (d > 0.5 && hs > 0.5) k.rechts([0, -d], [1, 0], [0, 1], 0.9);
+      k.punkt(0, 0, 'pkt');
+      k.marke([hs / 2, -d], 's/2', 'blau', 0, 16); k.marke([0, -d / 2], 'd', 'orange', -10, 4); k.marke([hs / 2, -d / 2], 'r', 'gruen', 10, -6);
+      formel.innerHTML = '(s/2)² = r² − d² = ' + r * r + ' − ' + d * d + ' = ' + (r * r - d * d) + ' &nbsp;→&nbsp; s/2 ' + ca(hs) + ', <b>Sehne s ' + ca(s) + ' cm</b>'
+        + ' &nbsp;·&nbsp; <span class="grau">Wassertiefe r − d = ' + (r - d) + ' cm</span>';
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    pr = Leiste(fig, [
+      { text: 'Kreis mit r = 13 cm. Schieb die Sehne, bis sie 24 cm lang ist.', ok: function(Z){ return Z.r === 13 && Z.d === 5; } },
+      { text: 'r = 5 cm, Sehne 8 cm. Wie weit ist sie vom Mittelpunkt entfernt?', ok: function(Z){ return Z.r === 5 && Z.d === 3; } },
+      { text: 'r = 15 cm, Sehne 18 cm. Stell den Abstand ein.', ok: function(Z){ return Z.r === 15 && Z.d === 12; } },
+      { text: 'r = 10 cm, Abstand 8 cm. Wie lang ist die Sehne?', ok: function(Z){ return Z.r === 10 && Z.d === 8; } },
+      { text: 'Ein Rohr mit r = 13 cm, der Wasserspiegel ist 10 cm breit. Wie tief ist das Wasser?', ok: function(Z){ return Z.r === 13 && Z.d === 12; } }
+    ], sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ════════ Sim 4 — Ähnliche Dreiecke ════════
+     Rechtwinkliges Dreieck mit Katheten 4 und 3, gestreckt von der Ecke A mit Faktor k. Längen × k, Fläche × k². */
+  (function(){
+    var fig = document.getElementById('sim4'); if (!fig) return;
+    var svg = fig.querySelector('svg'), formel = fig.querySelector('[data-rolle="formel"]');
+    function zustand(){ return { k: wertR(fig, 's4-k') }; }
+    function zeichnen(){
+      var Z = zustand(), q = Z.k; zeigeWert(fig, 's4-k', z(q));
+      var k = Geo(svg, { w: 320, h: 240, rl: 4, x0: -0.5, x1: 12.83, y0: -0.5, y1: 9.5, sx: 1, sy: 1 });
+      k.vieleck([[0, 0], [4 * q, 0], [4 * q, 3 * q]], 'flaeche orange');
+      k.vieleck([[0, 0], [4, 0], [4, 3]], 'flaeche blau');
+      k.marke([2 * q, 0], z(4 * q), 'orange', 0, 15); k.marke([4 * q, 1.5 * q], z(3 * q), 'orange', 14, 4); k.marke([2 * q, 1.5 * q], z(5 * q), 'orange', -14, -6);
+      k.marke([2, 0], '4', 'blau', 0, -4);
+      formel.innerHTML = 'k = ' + z(q) + ': Seiten 4, 3, 5 → <b>' + z(4 * q) + ', ' + z(3 * q) + ', ' + z(5 * q) + '</b> &nbsp;·&nbsp; Fläche 6 cm² → <b>' + z(6 * q * q) + ' cm²</b> (mal ' + z(q * q) + ' = k²)';
+      if (pr) pr();
+    }
+    var pr = null, sim = { zustand: zustand, zeichnen: zeichnen };
+    pr = Leiste(fig, [
+      { text: 'Bei welchem Streckfaktor k wird die Fläche 24 cm²?', ok: function(Z){ return Z.k === 2; } },
+      { text: 'Die Fläche soll 9-mal so gross werden. Welches k?', ok: function(Z){ return Z.k === 3; } },
+      { text: 'Die Kathete 3 cm soll 4.5 cm lang werden.', ok: function(Z){ return Z.k === 1.5; } },
+      { text: 'Die Fläche soll ein Viertel so gross werden.', ok: function(Z){ return Z.k === 0.5; } },
+      { text: 'Die Hypotenuse soll 12.5 cm lang werden.', ok: function(Z){ return Z.k === 2.5; } }
+    ], sim);
+    fig.querySelectorAll('input').forEach(function(i){ i.addEventListener('input', zeichnen); });
+    zeichnen();
+  })();
+
+  /* ---------- Minibilder (wie in den anderen Leitprogrammen) ---------- */
+  document.querySelectorAll('svg.leer-gitter').forEach(function(svg){ svg.setAttribute('role', 'img'); Achsen(svg, GITTER); });
+
+  /* ---------- Aufgabenleiste (wie in den anderen Leitprogrammen) ---------- */
+  /* ---------- Aufgabenleiste (wie in den anderen Leitprogrammen) ---------- */
+  function Leiste(fig, aufgaben, sim){
+    var box = fig.querySelector('.leiste'); if (!box) return function(){};
+    var n = aufgaben.length, i = 0, erledigt = {};
+    box.innerHTML = '<span class="ls-nr"></span><span class="ls-text"></span><span class="ls-ok" aria-live="polite"></span><button type="button" class="ls-weiter"></button><button type="button" class="ls-neu" hidden>von vorn</button>';
+    var nr = box.querySelector('.ls-nr'), tx = box.querySelector('.ls-text'), ok = box.querySelector('.ls-ok'),
+        bt = box.querySelector('.ls-weiter'), bv = box.querySelector('.ls-neu');
+    function anzahl(){ var k = 0; for (var j = 0; j < n; j++) if (erledigt[j]) k++; return k; }
+    function offen(ab){ for (var j = ab; j < n; j++) if (!erledigt[j]) return j; return n; }
+    function zeigen(){
+      if (i >= n){
+        var k = anzahl();
+        ok.textContent = ''; box.classList.remove('geloest');
+        if (k === n){ nr.textContent = '✓'; tx.innerHTML = 'Alle ' + n + ' Aufgaben gelöst — weiter mit dem Kontrollclip.'; bt.textContent = 'nochmals'; bv.hidden = true; box.classList.add('fertig'); }
+        else { nr.textContent = k + '/' + n; tx.innerHTML = k + ' von ' + n + ' gelöst, ' + (n - k) + ' übersprungen.'; bt.textContent = 'zu den offenen ▶'; bv.hidden = false; box.classList.remove('fertig'); }
+        return;
+      }
+      box.classList.remove('fertig'); bv.hidden = true;
+      nr.textContent = (i + 1) + '/' + n; tx.innerHTML = aufgaben[i].text; setzen(tx);
+      if (aufgaben[i].setup) aufgaben[i].setup(sim);
+      if (sim.zeichnen) sim.zeichnen();
+      pruefen();
+    }
+    function pruefen(){
+      if (i >= n) return;
+      var gut = !!aufgaben[i].ok(sim.zustand());
+      if (gut) erledigt[i] = true;
+      ok.textContent = erledigt[i] ? '✓' : '';
+      bt.textContent = erledigt[i] ? 'Nächste ▶' : 'überspringen';
+      box.classList.toggle('geloest', !!erledigt[i]);
+    }
+    function gehe(j){
+      i = j;
+      fig.querySelectorAll('input[type=range]').forEach(function(inp){ inp.value = inp.defaultValue; });
+      fig.querySelectorAll('.sim-schalter input').forEach(function(inp){ inp.checked = inp.defaultChecked; });
+      fig.querySelectorAll('select.sim-wahl').forEach(function(s){ s.value = s.querySelector('option[selected]').value; });
+      zeigen(); if (sim.zeichnen) sim.zeichnen();
+    }
+    bt.addEventListener('click', function(){
+      if (i >= n){ if (anzahl() === n){ erledigt = {}; gehe(0); } else gehe(offen(0)); }
+      else gehe(offen(i + 1));
+    });
+    bv.addEventListener('click', function(){ erledigt = {}; gehe(0); });
+    setTimeout(zeigen, 0);
+    return pruefen;
+  }
+
+
+  /* ════════ Übungen mit Rückmeldung ════════
+     Zahlenfelder exakt (2/3, −1.5, 4). Feld w: Auswahl (select). Fehlversuch → gezielte Diagnose. Tipps in drei Stufen.
+     Testhaken: box.__aufgabe, box.__typ. Figuren stehen als fertiges SVG im Aufgabentext (figur()). */
+  (function(){
+    var ALLE = document.querySelectorAll('.uebung[data-typ]'); if (!ALLE.length) return;
+
+    /* Figur als SVG-Text: Bereich aus allen Punkten, gleicher Massstab in x und y, Breite höchstens 230 px. */
+    function figur(o, label){
+      var alle = [];
+      (o.vl || []).forEach(function(v){ alle = alle.concat(v[0]); });
+      (o.st || []).forEach(function(s){ alle.push(s[0], s[1]); });
+      (o.kr || []).forEach(function(c){ alle.push([c[0][0] - c[1], c[0][1] - c[1]], [c[0][0] + c[1], c[0][1] + c[1]]); });
+      var xs = alle.map(function(p){ return p[0]; }), ys = alle.map(function(p){ return p[1]; });
+      var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs), y0 = Math.min.apply(null, ys), y1 = Math.max.apply(null, ys);
+      var m = 160 / Math.max(x1 - x0, (y1 - y0) * 1.35, 1e-9), R = 26, W = (x1 - x0) * m + 2 * R, H = (y1 - y0) * m + 2 * R;
+      function X(x){ return (R + (x - x0) * m).toFixed(1); } function Y(y){ return (R + (y1 - y) * m).toFixed(1); }
+      var s = '<svg class="mini-figur" viewBox="0 0 ' + W.toFixed(0) + ' ' + H.toFixed(0) + '" width="' + W.toFixed(0) + '" role="img" aria-label="' + label + '">';
+      (o.vl || []).forEach(function(v){ s += '<polygon points="' + v[0].map(function(p){ return X(p[0]) + ',' + Y(p[1]); }).join(' ') + '" class="' + v[1] + '"/>'; });
+      (o.kr || []).forEach(function(c){ s += '<circle cx="' + X(c[0][0]) + '" cy="' + Y(c[0][1]) + '" r="' + (c[1] * m).toFixed(1) + '" class="' + c[2] + '"/>'; });
+      (o.st || []).forEach(function(t){ s += '<line x1="' + X(t[0][0]) + '" y1="' + Y(t[0][1]) + '" x2="' + X(t[1][0]) + '" y2="' + Y(t[1][1]) + '" class="' + t[2] + '"/>'; });
+      (o.re || []).forEach(function(r){ var p = r[0], u = r[1], v = r[2], q = 9 / m;
+        var a = [p[0] + u[0] * q, p[1] + u[1] * q], b = [a[0] + v[0] * q, a[1] + v[1] * q], c = [p[0] + v[0] * q, p[1] + v[1] * q];
+        s += '<polyline points="' + [a, b, c].map(function(t){ return X(t[0]) + ',' + Y(t[1]); }).join(' ') + '" class="linie grau" fill="none"/>'; });
+      (o.tx || []).forEach(function(t){ s += '<text x="' + (+X(t[0][0]) + (t[3] || 0)).toFixed(1) + '" y="' + (+Y(t[0][1]) + (t[4] || 0)).toFixed(1) + '" text-anchor="middle" class="p-text ' + (t[2] || '') + '">' + t[1] + '</text>'; });
+      return '<span class="mini-reihe">' + s + '</svg></span>';
+    }
+
+    /* Feste Aufgaben (Clips, Festhalten, Erkundungen, Kapitelaufgaben, Gesamttest): nie als Zufallsübung. */
+    var SPERRE = [
+      'fl|d|6|4', 'fl|d|8|5', 'fl|p|7|4', 'fl|t|9|5|4', 'fl|d|10|3', 'fl|d|9|6', 'fl|p|12|5', 'fl|t|11|7|6', 'fl|d|12|8', 'fl|d|10|7', 'fl|p|9|4', 'fl|t|8|4|5',
+      'fl|p|6|4', 'fl|t|14|8|5', 'fl|p|9|6',
+      'zu|h|6|4|3', 'zu|l|8|6|3|2', 'zu|l|6|5|2|2', 'zu|h|10|6|4',
+      'hy|6|8', 'hy|3|4', 'hy|9|12', 'hy|12|16', 'hy|20|21', 'hy|15|20', 'hy|5|12', 'hy|16|30', 'hy|8|15', 'hy|7|24',
+      'ka|10|6', 'ka|17|8', 'ka|25|7', 'ka|26|10', 'ka|13|5', 'ka|41|9', 'ka|20|12', 'ka|15|9',
+      'hd|r|20|21', 'hd|r|8|15', 'hd|r|12|35', 'hd|g|16|17', 'hd|g|30|25', 'hd|g|18|15', 'hd|g|42|29', 'hd|l|6.5|2.5', 'hd|l|5|1.4',
+      'se|d|10|16', 'se|s|13|5', 'se|d|5|8', 'se|d|15|18', 'se|s|10|8', 'se|d|13|10', 'se|d|26|48', 'se|d|17|30', 'se|s|13|12', 'se|d|10|12', 'se|d|25|48', 'se|d|15|24',
+      'ae|3|4|5|2', 'ae|4|6|8|12', 'ae|5|7|9|10',
+      'ff|A|6|2', 'ff|A|10|3', 'ff|A|8|3', 'ff|k|16', 'ff|A|15|3'
+    ];
+    function gesperrt(T, A){ return !!T.schl && SPERRE.indexOf(T.schl(A)) >= 0; }
+    function d(v){ return bWert(bDez(v)); }
+    function eing(a){ return bWert(a).replace('−', '-'); }
+    var TRIPEL = [[3, 4, 5], [5, 12, 13], [8, 15, 17], [7, 24, 25], [20, 21, 29], [9, 40, 41], [12, 35, 37]];
+    function tripel(max){
+      var l = [];
+      TRIPEL.forEach(function(t){ for (var f = 0.5; f * t[2] <= max; f += 0.5) if (f % 1 === 0 || t[2] <= 13) l.push([t[0] * f, t[1] * f, t[2] * f]); });
+      return zufall(l);
+    }
+
+    var TYPEN = {
+      /* ── Kapitel 1 ── */
+      'flaeche': { felder: ['A'],
+        schl: function(A){ return 'fl|' + A.art + '|' + A.g + '|' + (A.art === 't' ? A.c + '|' : '') + A.h; },
+        eingabe: function(A){ return { A: eing(A.F) }; },
+        neu: function(){
+          var art = zufall(['d', 'd', 'p', 't']), g = zufallG(4, 14), h = zufallG(3, Math.max(4, Math.min(10, g))), c = art === 't' ? zufallG(2, g - 2) : 0, s = zufallG(1, 4);
+          var F = art === 'd' ? B(g * h, 2) : art === 'p' ? B(g * h) : B((g + c) * h, 2), schraeg = Math.round(Math.hypot(s, h) * 10) / 10;
+          if (F[1] > 2 || schraeg === h) return TYPEN.flaeche.neu();
+          var pk = art === 'd' ? [[0, 0], [g, 0], [s, h]] : art === 'p' ? [[0, 0], [g, 0], [g + s, h], [s, h]] : [[0, 0], [g, 0], [s + c, h], [s, h]];
+          var o = { vl: [[pk, 'flaeche blau']], st: [[[s, 0], [s, h], 'linie orange gestrichelt']], re: [[[s, 0], [1, 0], [0, 1]]],
+                    tx: [[[g / 2, 0], g + ' cm', 'blau', 0, 15], [[s, h / 2], h + ' cm', 'orange', 22, 4], [[s / 2, h / 2], schraeg + ' cm', 'grau', -24, 0]] };
+          if (art === 't') o.tx.push([[s + c / 2, h], c + ' cm', 'blau', 0, -7]);
+          var name = { d: 'Dreieck', p: 'Parallelogramm', t: 'Trapez' }[art], gen = { d: 'Dreiecks', p: 'Parallelogramms', t: 'Trapezes' }[art];
+          return { art: art, g: g, h: h, c: c, s: s, schraeg: schraeg, F: F, text: 'Wie gross ist die Fläche dieses ' + gen + ' (in cm²)?' + figur(o, name + ' mit Grundseite ' + g + ' cm, Höhe ' + h + ' cm, schräger Seite ' + schraeg + ' cm'), muster: 'A = {A} cm²' }; },
+        richtig: function(A, e){ return bEq(e.A, A.F); },
+        fehler: function(A){
+          var f = [], mit = A.art === 'd' ? bDez(A.g * A.schraeg / 2) : A.art === 'p' ? bDez(A.g * A.schraeg) : bDez((A.g + A.c) * A.schraeg / 2);
+          f.push([{ A: eing(mit) }, 'Höhe']);
+          if (A.art === 'd') f.push([{ A: String(A.g * A.h) }, 'halb']);
+          if (A.art === 't') f.push([{ A: String((A.g + A.c) * A.h) }, 'Mittel']);
+          return f; },
+        pruefen: function(A, e){
+          if (bEq(e.A, bDez(A.art === 'd' ? A.g * A.schraeg / 2 : A.art === 'p' ? A.g * A.schraeg : (A.g + A.c) * A.schraeg / 2))) return 'Du hast mit der schrägen Seite gerechnet. Die <b>Höhe</b> steht senkrecht auf der Grundseite (gestrichelt).';
+          if (A.art === 'd' && bEq(e.A, B(A.g * A.h))) return 'Das ist die Fläche eines Parallelogramms. Ein Dreieck ist nur <b>halb</b> so gross.';
+          if (A.art === 't' && bEq(e.A, B((A.g + A.c) * A.h))) return 'Beim Trapez nimmst du das <b>Mittel</b> der beiden parallelen Seiten, also die Summe durch 2.';
+          return 'Welche Formel gehört zu dieser Figur, und welche Strecke ist die Höhe?'; },
+        tipps: function(A){ return [A.art === 'd' ? '\\(A = \\dfrac{g \\cdot h}{2}\\)' : A.art === 'p' ? '\\(A = g \\cdot h\\)' : '\\(A = \\dfrac{a + c}{2} \\cdot h\\)', 'Die Höhe ist \\(' + A.h + '\\) cm, nicht die schräge Seite.']; },
+        loesung: function(A){ return A.art === 'd' ? '\\dfrac{' + A.g + ' \\cdot ' + A.h + '}{2} = ' + bWertTex(A.F) : A.art === 'p' ? A.g + ' \\cdot ' + A.h + ' = ' + bWertTex(A.F) : '\\dfrac{' + A.g + ' + ' + A.c + '}{2} \\cdot ' + A.h + ' = ' + bWertTex(A.F); } },
+
+      'zusammen': { felder: ['A'],
+        schl: function(A){ return 'zu|' + A.art + '|' + A.p.join('|'); },
+        eingabe: function(A){ return { A: eing(A.F) }; },
+        neu: function(){
+          var art = zufall(['h', 'l']), o, F, p, text, f2;
+          if (art === 'h'){
+            var b = zufallG(4, 12), hr = zufallG(3, 8), hd = zufallG(2, 6); p = [b, hr, hd]; F = B(b * hr * 2 + b * hd, 2); f2 = B(b * hr + b * hd);
+            if (F[1] > 2) return TYPEN.zusammen.neu();
+            o = { vl: [[[[0, 0], [b, 0], [b, hr], [0, hr]], 'flaeche blau'], [[[0, hr], [b, hr], [b / 2, hr + hd]], 'flaeche orange']], st: [[[b / 2, hr], [b / 2, hr + hd], 'linie orange gestrichelt']],
+                  tx: [[[b / 2, 0], b + ' cm', 'blau', 0, 15], [[b, hr / 2], hr + ' cm', 'blau', 20, 4], [[b / 2, hr + hd / 2], hd + ' cm', 'orange', 16, 4]] };
+            text = 'Ein Haus aus Rechteck und Giebeldreieck. Wie gross ist die ganze Fläche (in cm²)?';
+          } else {
+            var a = zufallG(6, 12), bb = zufallG(5, 10), x = zufallG(2, a - 3), y = zufallG(2, bb - 2); p = [a, bb, x, y]; F = B(a * bb - x * y); f2 = B(a * bb + x * y);
+            o = { vl: [[[[0, 0], [a, 0], [a, bb - y], [a - x, bb - y], [a - x, bb], [0, bb]], 'flaeche blau']], st: [[[a - x, bb], [a, bb], 'linie grau gestrichelt'], [[a, bb - y], [a, bb], 'linie grau gestrichelt']],
+                  tx: [[[a / 2, 0], a + ' cm', 'blau', 0, 15], [[0, bb / 2], bb + ' cm', 'blau', -22, 4], [[a - x / 2, bb], x + ' cm', 'grau', 0, -7], [[a, bb - y / 2], y + ' cm', 'grau', 20, 4]] };
+            text = 'Aus einem Rechteck ist eine Ecke ausgeschnitten. Wie gross ist die Fläche der Figur (in cm²)?';
+          }
+          return { art: art, p: p, F: F, f2: f2, text: text + figur(o, art === 'h' ? 'Haus aus Rechteck und Dreieck' : 'Rechteck mit ausgeschnittener Ecke'), muster: 'A = {A} cm²' }; },
+        richtig: function(A, e){ return bEq(e.A, A.F); },
+        fehler: function(A){ return [[{ A: eing(A.f2) }, A.art === 'h' ? 'Dreieck' : 'abziehen']]; },
+        pruefen: function(A, e){
+          if (bEq(e.A, A.f2)) return A.art === 'h' ? 'Das <b>Dreieck</b> ist nur halb so gross wie ein Rechteck mit gleicher Grundseite und Höhe.' : 'Die ausgeschnittene Ecke fehlt: Du musst sie <b>abziehen</b>, nicht dazuzählen.';
+          return A.art === 'h' ? 'Zerlege: Rechteck plus Dreieck. Welche Masse gehören zu welchem Teil?' : 'Ergänze zum ganzen Rechteck und zieh die Ecke ab, oder zerlege in zwei Rechtecke.'; },
+        tipps: function(A){ return A.art === 'h' ? ['Rechteck: \\(' + A.p[0] + ' \\cdot ' + A.p[1] + '\\)', 'Dreieck: \\(\\dfrac{' + A.p[0] + ' \\cdot ' + A.p[2] + '}{2}\\)'] : ['Ganzes Rechteck: \\(' + A.p[0] + ' \\cdot ' + A.p[1] + '\\)', 'Ecke: \\(' + A.p[2] + ' \\cdot ' + A.p[3] + '\\)']; },
+        loesung: function(A){ return A.art === 'h' ? A.p[0] + ' \\cdot ' + A.p[1] + ' + \\dfrac{' + A.p[0] + ' \\cdot ' + A.p[2] + '}{2} = ' + bWertTex(A.F) : A.p[0] + ' \\cdot ' + A.p[1] + ' - ' + A.p[2] + ' \\cdot ' + A.p[3] + ' = ' + bWertTex(A.F); } },
+
+      /* ── Kapitel 2 ── */
+      'hypotenuse': { felder: ['c'],
+        schl: function(A){ return 'hy|' + Math.min(A.a, A.b) + '|' + Math.max(A.a, A.b); },
+        eingabe: function(A){ return { c: String(A.c) }; },
+        neu: function(){
+          var t = tripel(60), dreh = Math.random() < 0.5, a = dreh ? t[1] : t[0], b = dreh ? t[0] : t[1];
+          var o = { vl: [[[[0, 0], [a, 0], [0, b]], 'flaeche blau']], re: [[[0, 0], [1, 0], [0, 1]]], tx: [[[a / 2, 0], a + ' cm', 'blau', 0, 15], [[0, b / 2], b + ' cm', 'blau', -22, 4], [[a / 2, b / 2], 'c', 'gruen', 10, -6]] };
+          return { a: a, b: b, c: t[2], text: 'Wie lang ist die Hypotenuse c?' + figur(o, 'rechtwinkliges Dreieck mit Katheten ' + a + ' cm und ' + b + ' cm'), muster: 'c = {c} cm' }; },
+        richtig: function(A, e){ return bEq(e.c, bDez(A.c)); },
+        fehler: function(A){ return [[{ c: String(A.a + A.b) }, 'Quadrate'], [{ c: String(A.a * A.a + A.b * A.b) }, 'Wurzel']]; },
+        pruefen: function(A, e){
+          if (bEq(e.c, bDez(A.a + A.b))) return 'Die Seiten addieren sich nicht. Die <b>Quadrate</b> der Katheten ergeben das Quadrat der Hypotenuse.';
+          if (bEq(e.c, bDez(A.a * A.a + A.b * A.b))) return 'Das ist \\(c^2\\). Zieh noch die <b>Wurzel</b>.';
+          return 'Rechne \\(a^2 + b^2\\) und zieh dann die Wurzel.'; },
+        tipps: function(A){ return ['\\(c^2 = ' + A.a + '^2 + ' + A.b + '^2\\)', '\\(c^2 = ' + (A.a * A.a + A.b * A.b) + '\\)']; },
+        loesung: function(A){ return 'c = \\sqrt{' + A.a + '^2 + ' + A.b + '^2} = \\sqrt{' + (A.a * A.a + A.b * A.b) + '} = ' + A.c; } },
+
+      'kathete': { felder: ['b'],
+        schl: function(A){ return 'ka|' + A.c + '|' + Math.min(A.a, A.b); },
+        eingabe: function(A){ return { b: String(A.b) }; },
+        neu: function(){
+          var t = tripel(60), dreh = Math.random() < 0.5, a = dreh ? t[1] : t[0], b = dreh ? t[0] : t[1], c = t[2];
+          var o = { vl: [[[[0, 0], [b, 0], [0, a]], 'flaeche blau']], re: [[[0, 0], [1, 0], [0, 1]]], tx: [[[b / 2, 0], 'b', 'orange', 0, 15], [[0, a / 2], a + ' cm', 'blau', -22, 4], [[b / 2, a / 2], c + ' cm', 'gruen', 18, -6]] };
+          return { a: a, b: b, c: c, text: 'Wie lang ist die Kathete b?' + figur(o, 'rechtwinkliges Dreieck mit Hypotenuse ' + c + ' cm und Kathete ' + a + ' cm'), muster: 'b = {b} cm' }; },
+        richtig: function(A, e){ return bEq(e.b, bDez(A.b)); },
+        fehler: function(A){ return [[{ b: String(A.c - A.a) }, 'Quadrate'], [{ b: String(A.c * A.c - A.a * A.a) }, 'Wurzel']]; },
+        pruefen: function(A, e){
+          if (bEq(e.b, bDez(A.c - A.a))) return 'Die Seiten subtrahieren sich nicht. Rechne mit den <b>Quadrate</b>n: \\(b^2 = c^2 - a^2\\).';
+          if (bEq(e.b, bDez(A.c * A.c - A.a * A.a))) return 'Das ist \\(b^2\\). Zieh noch die <b>Wurzel</b>.';
+          return 'Die Hypotenuse liegt gegenüber dem rechten Winkel. Für eine Kathete rechnest du \\(c^2 - a^2\\), nicht plus.'; },
+        tipps: function(A){ return ['\\(b^2 = c^2 - a^2\\)', '\\(b^2 = ' + A.c + '^2 - ' + A.a + '^2 = ' + (A.c * A.c - A.a * A.a) + '\\)']; },
+        loesung: function(A){ return 'b = \\sqrt{' + A.c + '^2 - ' + A.a + '^2} = \\sqrt{' + (A.c * A.c - A.a * A.a) + '} = ' + A.b; } },
+
+      /* ── Kapitel 3 ── */
+      'hilfsdreieck': { felder: ['x'],
+        schl: function(A){ return 'hd|' + A.art + '|' + A.p.join('|'); },
+        eingabe: function(A){ return { x: eing(A.x) }; },
+        neu: function(){
+          var art = zufall(['r', 'g', 'l']), t = tripel(50), o, text, x, p, f;
+          if (art === 'r'){ p = [t[0], t[1]]; x = bDez(t[2]); f = bDez(t[0] + t[1]);
+            o = { vl: [[[[0, 0], [t[0], 0], [t[0], t[1]], [0, t[1]]], 'flaeche blau']], st: [[[0, 0], [t[0], t[1]], 'linie gruen']], tx: [[[t[0] / 2, 0], t[0] + ' cm', 'blau', 0, 15], [[t[0], t[1] / 2], t[1] + ' cm', 'blau', 22, 4], [[t[0] / 2, t[1] / 2], 'd', 'gruen', -10, -6]] };
+            text = 'Wie lang ist die Diagonale d des Rechtecks?'; }
+          else if (art === 'g'){ p = [2 * t[0], t[2]]; x = bDez(t[1]); var ww = Math.sqrt(t[2] * t[2] - 4 * t[0] * t[0]); f = ww > 0 && (ww * 10) % 1 === 0 ? bDez(ww) : B(-1);
+            o = { vl: [[[[0, 0], [2 * t[0], 0], [t[0], t[1]]], 'flaeche blau']], st: [[[t[0], 0], [t[0], t[1]], 'linie orange gestrichelt']], re: [[[t[0], 0], [1, 0], [0, 1]]],
+                  tx: [[[t[0], 0], 2 * t[0] + ' cm', 'blau', 0, 15], [[t[0] / 2, t[1] / 2], t[2] + ' cm', 'blau', -22, 0], [[t[0], t[1] / 2], 'h', 'orange', 10, 4]] };
+            text = 'Ein gleichschenkliges Dreieck. Wie lang ist die Höhe h?'; }
+          else { var q = zufall([[1.5, 2, 2.5], [3, 4, 5], [1.2, 3.5, 3.7], [2.1, 2.8, 3.5], [1.8, 2.4, 3], [2.5, 6, 6.5], [0.7, 2.4, 2.5]]); p = [q[2], q[0]]; x = bDez(q[1]); f = bDez(q[2] - q[0]);
+            o = { st: [[[0, 0], [0, q[1] * 1.15], 'linie tinte'], [[0, 0], [q[0] * 1.6, 0], 'linie tinte'], [[q[0], 0], [0, q[1]], 'linie blau']], re: [[[0, 0], [1, 0], [0, 1]]],
+                  tx: [[[q[0] / 2, 0], d(q[0]) + ' m', 'blau', 0, 15], [[q[0] / 2, q[1] / 2], d(q[2]) + ' m', 'blau', 18, 0], [[0, q[1] / 2], 'h', 'orange', -10, 4]] };
+            text = 'Eine Leiter lehnt an einer senkrechten Wand. Wie hoch reicht sie (h in m)?'; }
+          return { art: art, p: p, x: x, f: f, text: text + figur(o, { r: 'Rechteck', g: 'gleichschenkliges Dreieck', l: 'Leiter an der Wand' }[art]), muster: (art === 'r' ? 'd' : 'h') + ' = {x} ' + (art === 'l' ? 'm' : 'cm') }; },
+        richtig: function(A, e){ return bEq(e.x, A.x); },
+        fehler: function(A){ return A.f[0] > 0 && !bEq(A.f, A.x) ? [[{ x: eing(A.f) }, A.art === 'r' ? 'Quadrate' : A.art === 'g' ? 'Hälfte' : 'Quadrate']] : []; },
+        pruefen: function(A, e){
+          if (A.art === 'g' && A.f[0] > 0 && bEq(e.x, A.f)) return 'Im Hilfsdreieck liegt nur die <b>Hälfte</b> der Grundseite, denn die Höhe teilt sie in der Mitte.';
+          if (A.art !== 'g' && bEq(e.x, A.f)) return 'Längen addieren oder subtrahieren sich nicht. Rechne mit den <b>Quadrate</b>n.';
+          return 'Such zuerst das rechtwinklige Hilfsdreieck: Wo ist der rechte Winkel, welche Seite ist die Hypotenuse?'; },
+        tipps: function(A){ return A.art === 'r' ? ['Die Diagonale ist die Hypotenuse des halben Rechtecks.', '\\(d^2 = ' + A.p[0] + '^2 + ' + A.p[1] + '^2\\)'] : A.art === 'g' ? ['Die Höhe teilt die Grundseite in zwei Hälften von je \\(' + A.p[0] / 2 + '\\) cm.', '\\(h^2 = ' + A.p[1] + '^2 - ' + A.p[0] / 2 + '^2\\)'] : ['Die Leiter ist die Hypotenuse.', '\\(h^2 = ' + d(A.p[0]) + '^2 - ' + d(A.p[1]) + '^2\\)']; },
+        loesung: function(A){ return A.art === 'r' ? 'd = \\sqrt{' + A.p[0] + '^2 + ' + A.p[1] + '^2} = ' + bWertTex(A.x) : A.art === 'g' ? 'h = \\sqrt{' + A.p[1] + '^2 - ' + A.p[0] / 2 + '^2} = ' + bWertTex(A.x) : 'h = \\sqrt{' + d(A.p[0]) + '^2 - ' + d(A.p[1]) + '^2} = ' + bWertTex(A.x); } },
+
+      'sehne': { felder: ['x'],
+        schl: function(A){ return 'se|' + A.ges + '|' + A.r + '|' + (A.ges === 's' ? A.dd : A.s); },
+        eingabe: function(A){ return { x: String(A.x) }; },
+        neu: function(){
+          var t = tripel(40), r = t[2], dd = t[0], hs = t[1]; if (Math.random() < 0.5){ dd = t[1]; hs = t[0]; }
+          var ges = zufall(['s', 'd']), x = ges === 's' ? 2 * hs : dd;
+          var o = { kr: [[[0, 0], r, 'linie tinte']], st: [[[-hs, -dd], [hs, -dd], 'linie blau'], [[0, 0], [0, -dd], 'linie orange'], [[0, 0], [hs, -dd], 'linie gruen']], re: [[[0, -dd], [1, 0], [0, 1]]],
+                    tx: [[[hs / 2, -dd / 2], 'r = ' + r, 'gruen', 18, -4], [[0, -dd / 2], ges === 'd' ? 'd' : 'd = ' + dd, 'orange', -24, 4], [[0, -dd], ges === 's' ? 's' : 's = ' + 2 * hs, 'blau', 0, 16]] };
+          return { ges: ges, r: r, dd: dd, s: 2 * hs, x: x, text: (ges === 's' ? 'Kreis mit r = ' + r + ' cm, die Sehne hat den Abstand ' + dd + ' cm vom Mittelpunkt. Wie lang ist die Sehne s?' : 'Kreis mit r = ' + r + ' cm, die Sehne ist ' + 2 * hs + ' cm lang. Wie weit ist sie vom Mittelpunkt entfernt (d)?')
+                   + figur(o, 'Kreis mit Sehne und Hilfsdreieck'), muster: (ges === 's' ? 's' : 'd') + ' = {x} cm' }; },
+        richtig: function(A, e){ return bEq(e.x, bDez(A.x)); },
+        fehler: function(A){ return A.ges === 's' ? [[{ x: String(A.s / 2) }, 'Hälfte']] : []; },
+        pruefen: function(A, e){
+          if (A.ges === 's' && bEq(e.x, bDez(A.s / 2))) return 'Das ist die <b>Hälfte</b> der Sehne. Das Hilfsdreieck enthält nur die halbe Sehne.';
+          return A.ges === 's' ? 'Hilfsdreieck: Radius als Hypotenuse, Abstand und halbe Sehne als Katheten.' : 'Im Hilfsdreieck steht nur die <b>halbe</b> Sehne, \\(' + A.s / 2 + '\\) cm. Der Radius ist die Hypotenuse.'; },
+        tipps: function(A){ return A.ges === 's' ? ['\\(\\left(\\tfrac{s}{2}\\right)^2 = r^2 - d^2\\)', '\\(' + A.r + '^2 - ' + A.dd + '^2 = ' + (A.r * A.r - A.dd * A.dd) + '\\)'] : ['halbe Sehne: \\(' + A.s / 2 + '\\) cm', '\\(d^2 = ' + A.r + '^2 - ' + A.s / 2 + '^2\\)']; },
+        loesung: function(A){ return A.ges === 's' ? '\\tfrac{s}{2} = \\sqrt{' + A.r + '^2 - ' + A.dd + '^2} = ' + A.s / 2 + ', \\; s = ' + A.s : 'd = \\sqrt{' + A.r + '^2 - ' + A.s / 2 + '^2} = ' + A.dd; } },
+
+      /* ── Kapitel 4 ── */
+      'aehnlich': { felder: ['x'],
+        schl: function(A){ return 'ae|' + A.s.join('|') + '|' + A.bild; },
+        eingabe: function(A){ return { x: eing(A.x) }; },
+        neu: function(){
+          var s = zufall([[3, 4, 5], [4, 6, 8], [5, 7, 9], [6, 8, 9], [4, 5, 7], [2, 3, 4], [6, 9, 12]]), k = zufall([[3, 2], [2, 1], [5, 2], [3, 1], [1, 2], [4, 3]]);
+          var i = zufallG(0, 2), j = (i + zufallG(1, 2)) % 3, bild = s[i] * k[0] / k[1], x = bMul(B(s[j]), B(k[0], k[1]));
+          if (bild % 1 && (bild * 2) % 1) return TYPEN.aehnlich.neu();
+          if (x[1] > 2) return TYPEN.aehnlich.neu();
+          return { s: s, i: i, j: j, bild: bild, k: k, x: x, text: 'Ein Dreieck hat die Seiten ' + s.join(' cm, ') + ' cm. In einem dazu ähnlichen Dreieck ist die Seite, die zu ' + s[i] + ' cm gehört, ' + d(bild) + ' cm lang. Wie lang ist dort die Seite, die zu ' + s[j] + ' cm gehört?', muster: '{x} cm' }; },
+        richtig: function(A, e){ return bEq(e.x, A.x); },
+        fehler: function(A){ var f = bDez(A.s[A.j] + A.bild - A.s[A.i]); return bEq(f, A.x) ? [] : [[{ x: eing(f) }, 'Faktor']]; },
+        pruefen: function(A, e){
+          if (bEq(e.x, bDez(A.s[A.j] + A.bild - A.s[A.i]))) return 'Bei ähnlichen Figuren kommt nicht überall gleich viel dazu. Alle Längen werden mit demselben <b>Faktor</b> k multipliziert.';
+          return 'Berechne zuerst den Streckfaktor \\(k = \\dfrac{\\text{Bild}}{\\text{Original}}\\).'; },
+        tipps: function(A){ return ['\\(k = \\dfrac{' + d(A.bild) + '}{' + A.s[A.i] + '}\\)', 'Die gesuchte Seite: \\(' + A.s[A.j] + ' \\cdot k\\)']; },
+        loesung: function(A){ return 'k = \\dfrac{' + d(A.bild) + '}{' + A.s[A.i] + '} = ' + bWertTex(B(A.k[0], A.k[1])) + ', \\quad ' + A.s[A.j] + ' \\cdot ' + bWertTex(B(A.k[0], A.k[1])) + ' = ' + bWertTex(A.x); } },
+
+      'flaechenfaktor': { felder: ['y'],
+        schl: function(A){ return 'ff|' + A.ges + '|' + (A.ges === 'A' ? A.A + '|' + A.k : A.q); },
+        eingabe: function(A){ return { y: eing(A.y) }; },
+        neu: function(){
+          var ges = zufall(['A', 'A', 'k']), k = zufall([2, 3, 4, 5, 0.5, 1.5, 2.5, 10]), A = zufall([4, 6, 8, 10, 12, 15, 20, 24]);
+          if (ges === 'A'){ var y = bMul(B(A), bMul(bDez(k), bDez(k))); if (y[1] > 2) return TYPEN.flaechenfaktor.neu();
+            return { ges: 'A', A: A, k: k, y: y, text: 'Eine Figur hat die Fläche ' + A + ' cm². Sie wird mit dem Faktor k = ' + d(k) + ' gestreckt. Wie gross ist die Fläche der Bildfigur?', muster: '{y} cm²' }; }
+          var kk = zufall([2, 3, 4, 5, 6, 10]);
+          return { ges: 'k', q: kk * kk, k: kk, y: B(kk), text: 'Eine Figur wird gestreckt, ihre Fläche wird dabei ' + kk * kk + '-mal so gross. Mit welchem Faktor k werden die Längen gestreckt?', muster: 'k = {y}' }; },
+        richtig: function(A, e){ return bEq(e.y, A.y); },
+        fehler: function(A){ return A.ges === 'A' ? [[{ y: eing(bMul(B(A.A), bDez(A.k))) }, 'Quadrat']] : [[{ y: String(A.q) }, 'Wurzel']]; },
+        pruefen: function(A, e){
+          if (A.ges === 'A' && bEq(e.y, bMul(B(A.A), bDez(A.k)))) return 'Die Längen werden mal k gerechnet, die Fläche aber mal \\(k^2\\): Länge und Breite wachsen beide. Nimm k im <b>Quadrat</b>.';
+          if (A.ges === 'k' && bEq(e.y, B(A.q))) return 'Das ist der Flächenfaktor \\(k^2\\). Für k ziehst du die <b>Wurzel</b>.';
+          return A.ges === 'A' ? 'Flächenfaktor: \\(k^2\\).' : 'Welche Zahl gibt im Quadrat \\(' + A.q + '\\)?'; },
+        tipps: function(A){ return A.ges === 'A' ? ['Flächen werden mit \\(k^2\\) multipliziert.', '\\(k^2 = ' + d(A.k * A.k) + '\\)'] : ['Die Fläche wächst mit \\(k^2\\).', '\\(k^2 = ' + A.q + '\\)']; },
+        loesung: function(A){ return A.ges === 'A' ? A.A + ' \\cdot ' + d(A.k) + '^2 = ' + bWertTex(A.y) : 'k = \\sqrt{' + A.q + '} = ' + A.k; } }
+    };
+    window.__TYPEN = TYPEN; window.__SPERRE = SPERRE; window.__gesperrt = gesperrt;
+    /* Rohe Eingaben selbst einlesen (für .claude/tools/pruef-formelsatz.mjs, das pruefen() mit den Werten aus fehler() ruft). */
+    Object.keys(TYPEN).forEach(function(n){ var T = TYPEN[n], roh = T.pruefen; T.pruefen = function(A, e){
+      var aus = {}; for (var f in e){ var w = e[f]; aus[f] = (w && typeof w === 'object') || f === 'w' ? w : zahlLesen(String(w)).w; }
+      return roh(A, aus); }; });
+
+    ALLE.forEach(function(box){
+      var T = TYPEN[box.dataset.typ]; if (!T) return;
+      var A, serie = 0, versuche = 0, geloest = false, stufe = 0;
+      var auf = box.querySelector('.ue-aufgabe'), ein = box.querySelector('.ue-eingabe'), rueck = box.querySelector('.ue-rueck'),
+          zaehler = box.querySelector('.ue-serie'), tippK = box.querySelector('.ue-tipp'), tippBox = box.querySelector('.ue-tipps');
+      function neu(){
+        A = T.neu();
+        for (var v = 0; v < 60 && gesperrt(T, A); v++) A = T.neu();
+        versuche = 0; geloest = false; stufe = 0; box.__aufgabe = A; box.__typ = T;   // Testhaken (.claude/tools/pruef-uebungen.mjs)
+        auf.innerHTML = A.text;
+        auf.querySelectorAll('svg.mini-gerade').forEach(function(svg){ svg.setAttribute('role', 'img'); miniBild(svg, [], []); });
+        var html = A.muster;
+        T.felder.forEach(function(f){
+          html = html.replace('{' + f + '}', f === 'w'
+            ? '<select class="ue-wahl" data-f="w" aria-label="Auswahl"><option value="">– wählen –</option>' + A.optionen.map(function(o){ return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join('') + '</select>'
+            : '<input type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Zahl" data-f="' + f + '" placeholder="z. B. 2/3">');
+        });
+        ein.innerHTML = html; rueck.className = 'ue-rueck'; rueck.innerHTML = '';
+        tippBox.innerHTML = ''; tippK.textContent = '💡 Tipp'; tippK.disabled = false;
+        setzen(auf); setzen(ein);
+      }
+      function tipp(){
+        var t = T.tipps(A);
+        if (stufe < t.length) tippBox.innerHTML += '<p class="ue-stufe"><b>' + (stufe === 0 ? 'Impuls' : 'Nächster Schritt') + ':</b> ' + t[stufe] + '</p>';
+        else tippBox.innerHTML += '<p class="ue-stufe"><b>Lösungsweg:</b> \\(' + T.loesung(A) + '\\)</p>';
+        stufe++;
+        if (stufe > t.length){ tippK.disabled = true; tippK.textContent = '💡 alle Tipps'; } else tippK.textContent = '💡 Tipp ' + (stufe + 1) + '/' + (t.length + 1);
+        setzen(tippBox);
+      }
+      function hinweis(h){ rueck.className = 'ue-rueck hinweis'; rueck.innerHTML = h; setzen(rueck); }
+      function pruefen(){
+        if (geloest) return;
+        var e = {}, felder = ein.querySelectorAll('[data-f]');
+        for (var i = 0; i < felder.length; i++){
+          var inp = felder[i], f = inp.dataset.f, roh = inp.value.trim();
+          inp.classList.remove('falsch');
+          if (!roh) return hinweis(f === 'w' ? 'Wähle eine Aussage.' : 'Fülle das Feld aus.');
+          if (f === 'w'){ e[f] = roh; continue; }
+          var zl = zahlLesen(roh);
+          if (zl.kaputt){ inp.classList.add('falsch'); return hinweis(zl.kaputt); }
+          e[f] = zl.w;
+        }
+        var gleichwertig = T.richtig(A, e);
+        versuche++;
+        if (gleichwertig){
+          serie = versuche === 1 && stufe === 0 ? serie + 1 : 0; geloest = true;
+          rueck.className = 'ue-rueck richtig';
+          rueck.innerHTML = '✓ Richtig <button type="button" class="ue-weiter">Nächste</button>';
+          rueck.querySelector('.ue-weiter').addEventListener('click', neu);
+        } else {
+          serie = 0; rueck.className = 'ue-rueck falsch';
+          rueck.innerHTML = T.pruefen(A, e) + (versuche >= 2 ? ' <details class="ue-loes"><summary>Lösung</summary>\\(' + T.loesung(A) + '\\)</details>' : '');
+        }
+        zaehler.textContent = serie + ' in Folge' + (serie >= 3 ? ' ✓' : '');
+        setzen(rueck);
+      }
+      box.querySelector('.ue-pruefen').addEventListener('click', pruefen);
+      box.querySelector('.ue-neu').addEventListener('click', neu);
+      tippK.addEventListener('click', tipp);
+      ein.addEventListener('keydown', function(ev){ if (ev.key === 'Enter') pruefen(); });
+      neu();
+    });
+  })();
+})();
+</script>
+
+
+<footer class="site-footer">
+  <p><strong>Sek1-Mathe begreifbar</strong> — Lernmaterial Mathematik für die Sekundarstufe I</p>
+  <p>Leitprogramm · Flächen, Pythagoras und Ähnlichkeit</p>
+  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+  <p><a href="../feedback.html">Kontakt &amp; Feedback</a> · <a href="../rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
+  <p>Keine Cookies · Kein Tracking · Version 1.0 · Stand 10. Oktober 2026</p>
+</footer>
+
+<script src="../mathlib.js"></script>
+<script src="../nav.js"></script>
+<script src="../suche.js"></script>
+<script>buildNav({ bereich: 'lp', id: 'lp-pythagoras' });</script>
+</body>
+</html>

@@ -122,6 +122,11 @@ SEITEN = {
    titel='Leitprogramm Funktionstypen und Graphen — Parabel, Wurzel, Kehrwert, proportional, Weg-Zeit-Graphen',
    beschreibung='Leitprogramm Sekundarstufe I: Gerade, Parabel, Wurzel- und Kehrwertgraph erkennen, proportional, antiproportional oder linear mit Anfangswert, Weg-Zeit-Graphen lesen, zurückgelegter Weg und Restweg — mit Übungen.',
    themen=['Mathematik', 'Funktionen', 'Parabel', 'Wurzelfunktion', 'Kehrwertfunktion', 'Proportionalität', 'Antiproportional', 'Weg-Zeit-Diagramm', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/pythagoras.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Flächen, Pythagoras und Ähnlichkeit — Grundseite und Höhe, Satz des Pythagoras, Sehne im Kreis, Streckfaktor',
+   beschreibung='Leitprogramm Sekundarstufe I, Geometrie: Flächen von Dreieck, Parallelogramm und Trapez, Satz des Pythagoras, Hilfsdreieck in Rechteck, gleichschenkligem Dreieck und Kreis, ähnliche Figuren mit Längen- und Flächenfaktor — mit Übungen.',
+   themen=['Mathematik', 'Geometrie', 'Fläche', 'Dreieck', 'Satz des Pythagoras', 'Hypotenuse', 'Kreis', 'Sehne', 'Ähnlichkeit', 'Streckfaktor', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/bewegung.html': dict(
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Texte, Geschwindigkeit und Begegnung — Textaufgaben, s = v · t, Durchschnitt, Begegnung und Einholen',

@@ -1,0 +1,1002 @@
+{
+ "titel": "Geometrie: Grundseite und Höhe",
+ "dateiname": "pyt-lp-flaechen",
+ "kurzbeschrieb": "Dreieck g = 6, h = 4, schräge Seiten 5: Vorhersage Fläche 12 (Hälfte des Rechtecks 6 × 4); Spitze parallel verschieben, Fläche bleibt; Parallelogramm 6 · 4 = 24; Haus aus Rechteck und Dreieck 24 + 9 = 33; Fehler: schräge Seite statt Höhe.",
+ "schlagworte": [
+  "Fläche",
+  "Dreieck",
+  "Parallelogramm",
+  "Höhe",
+  "Grundseite",
+  "zusammengesetzte Figur"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 1,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Dreieck",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Dreieck mit der Grundseite sechs Zentimeter. Die Höhe steht senkrecht auf der Grundseite: vier Zentimeter. Die schrägen Seiten sind je fünf Zentimeter lang.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Grundseite g = 6 cm|Höhe h = 4 cm (senkrecht)|schräge Seiten 5 cm",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.28
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -1
+       ],
+       "text": "g = 6",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.2,
+        2.3
+       ],
+       "text": "5",
+       "farbe": 5,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.2,
+        2.3
+       ],
+       "text": "5",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.16,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        3,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.3,
+        1.6
+       ],
+       "text": "h = 4",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 9.49
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ergänze das Dreieck zum Rechteck sechs mal vier. Das Dreieck ist genau die Hälfte davon: sechs mal vier durch zwei, zwölf Quadratzentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "A = \\dfrac{6 \\cdot 4}{2} = \\fc{12}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 4.33
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        3,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.67,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 5,
+       "fuellung": 0.0,
+       "gestrichelt": true,
+       "dicke": 3
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.12,
+       "dicke": 2
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.12,
+       "dicke": 2
+      }
+     ]
+    }
+   ],
+   "dauer": 8.92
+  },
+  {
+   "name": "Scheren",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Schiebst du die Spitze parallel zur Grundseite, ändern sich die schrägen Seiten. Grundseite und Höhe bleiben, also bleibt auch die Fläche: zwölf Quadratzentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "A = \\dfrac{g \\cdot h}{2}",
+     "x": 150,
+     "y": 300,
+     "groesse": 60,
+     "ein": 5.75
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        -1,
+        4
+       ],
+       "bis": [
+        12,
+        4
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15,
+       "bewegung": [
+        [
+         1.0,
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            6,
+            0
+           ],
+           [
+            3,
+            4
+           ]
+          ]
+         }
+        ],
+        [
+         4.5,
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            6,
+            0
+           ],
+           [
+            10,
+            4
+           ]
+          ]
+         }
+        ],
+        [
+         6.5,
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            6,
+            0
+           ],
+           [
+            10,
+            4
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "dauer": 10.01
+  },
+  {
+   "name": "Parallelogramm",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Beim Parallelogramm schneidest du links ein Dreieck ab und setzt es rechts an. Es entsteht ein Rechteck: Grundseite mal Höhe, sechs mal vier gleich vierundzwanzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "A = g \\cdot h = 6 \\cdot 4 = \\fc{24}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 54,
+     "ein": 5.32
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         8,
+         4
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        0
+       ],
+       "bis": [
+        2,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        2,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.54,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         2,
+         0
+        ],
+        [
+         2,
+         4
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.3,
+       "dicke": 2,
+       "bewegung": [
+        [
+         2.5,
+         {
+          "punkte": [
+           [
+            0,
+            0
+           ],
+           [
+            2,
+            0
+           ],
+           [
+            2,
+            4
+           ]
+          ]
+         }
+        ],
+        [
+         5.0,
+         {
+          "punkte": [
+           [
+            6,
+            0
+           ],
+           [
+            8,
+            0
+           ],
+           [
+            8,
+            4
+           ]
+          ]
+         }
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "dauer": 9.77
+  },
+  {
+   "name": "Haus",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zusammengesetzte Figuren zerlegst du. Das Haus besteht aus einem Rechteck sechs mal vier und einem Dreieck mit Grundseite sechs und Höhe drei: vierundzwanzig plus neun gleich dreiunddreissig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "6 \\cdot 4 + \\dfrac{6 \\cdot 3}{2} = 24 + 9 = \\fc{33}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "ein": 8.53
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         0,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         4
+        ],
+        [
+         6,
+         4
+        ],
+        [
+         3,
+         7
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        4
+       ],
+       "bis": [
+        3,
+        7
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -1
+       ],
+       "text": "6",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.3,
+        2
+       ],
+       "text": "4",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.3,
+        5.3
+       ],
+       "text": "3",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 11.81
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: die schräge Seite statt der Höhe nehmen. Sechs mal fünf durch zwei gibt fünfzehn, das Dreieck hat aber nur zwölf Quadratzentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{\\dfrac{6 \\cdot 5}{2} = 15}",
+     "x": 150,
+     "y": 300,
+     "groesse": 56,
+     "ein": 1.02
+    },
+    {
+     "typ": "notiz",
+     "text": "Höhe: senkrecht zur Grundseite",
+     "x": 150,
+     "y": 452,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 2.92
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        3,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 4,
+       "dicke": 7
+      }
+     ]
+    }
+   ],
+   "dauer": 9.29
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Dreieck gleich Grundseite mal Höhe durch zwei, Parallelogramm Grundseite mal Höhe. Die Höhe steht senkrecht auf der Grundseite. Zusammengesetzte Figuren zerlegst oder ergänzt du.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Dreieck: g · h : 2 · Parallelogramm: g · h|Höhe senkrecht zur Grundseite|zerlegen oder ergänzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 11.83
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.54
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie gross ist die Fläche des Dreiecks (g = 6 cm, h = 4 cm, schräge Seiten 5 cm)?",
+   "optionen": [
+    "24 cm²",
+    "12 cm²",
+    "15 cm²"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Das gibt die schräge Seite. Welche Strecke steht senkrecht auf der Grundseite?",
+    "0": "Das wäre das ganze Rechteck. Welcher Teil davon ist das Dreieck?"
+   },
+   "sprich": "Wie gross ist die Fläche des Dreiecks mit Grundseite sechs, Höhe vier und schrägen Seiten von fünf Zentimetern?",
+   "rueck_sprich": {
+    "2": "Das gibt die schräge Seite. Welche Strecke steht senkrecht auf der Grundseite?",
+    "0": "Das wäre das ganze Rechteck. Welcher Teil davon ist das Dreieck?"
+   }
+  }
+ ]
+}

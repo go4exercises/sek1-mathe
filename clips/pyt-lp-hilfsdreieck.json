@@ -1,0 +1,1383 @@
+{
+ "titel": "Geometrie: Hilfsdreiecke und Kreis",
+ "dateiname": "pyt-lp-hilfsdreieck",
+ "kurzbeschrieb": "Hilfsdreieck Schritt für Schritt: Rechteck 21 × 20, Diagonale 29 (Vorhersage); gleichschenkliges Dreieck Basis 16, Schenkel 17, Höhe 15; Kreis r = 10, Sehne 16, Abstand 6; Rohr Ø 50, Wasserspiegel 48, Tiefe 18; Fehler: ganze statt halbe Strecke.",
+ "schlagworte": [
+  "Hilfsdreieck",
+  "Pythagoras",
+  "Diagonale",
+  "Kreis",
+  "Sehne",
+  "Radius"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Rechteck",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Wie lang ist die Diagonale eines Rechtecks einundzwanzig mal zwanzig? Such zuerst das Hilfsdreieck: Die Diagonale schneidet das Rechteck in zwei rechtwinklige Dreiecke. Die Diagonale ist ihre Hypotenuse.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "① rechten Winkel suchen|② Hilfsdreieck markieren|③ Seiten eintragen|④ Pythagoras",
+     "x": 150,
+     "y": 290,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 5.46
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      25
+     ],
+     "ybereich": [
+      -3,
+      24
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         21,
+         0
+        ],
+        [
+         21,
+         20
+        ],
+        [
+         0,
+         20
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.06
+      },
+      {
+       "art": "text",
+       "bei": [
+        10.5,
+        -1.6
+       ],
+       "text": "21",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.8,
+        10
+       ],
+       "text": "20",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.64,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      25
+     ],
+     "ybereich": [
+      -3,
+      24
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        21,
+        20
+       ],
+       "farbe": 3,
+       "dicke": 6
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 8.28,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      25
+     ],
+     "ybereich": [
+      -3,
+      24
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         21,
+         0
+        ],
+        [
+         21,
+         20
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        21,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 10.78,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      25
+     ],
+     "ybereich": [
+      -3,
+      24
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        9.4,
+        11.4
+       ],
+       "text": "d",
+       "farbe": 3,
+       "anker": "end",
+       "groesse": 38,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 13.59
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Einundzwanzig Quadrat plus zwanzig Quadrat gibt vierhunderteinundvierzig plus vierhundert, also achthunderteinundvierzig. Die Wurzel ist neunundzwanzig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "d^2 = 441 + 400 = 841",
+     "x": 150,
+     "y": 280,
+     "groesse": 52,
+     "ein": 1.55
+    },
+    {
+     "typ": "formel",
+     "text": "d = \\sqrt{841} = \\fc{29}",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 7.47
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      25
+     ],
+     "ybereich": [
+      -3,
+      24
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         21,
+         0
+        ],
+        [
+         21,
+         20
+        ],
+        [
+         0,
+         20
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.06
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         21,
+         0
+        ],
+        [
+         21,
+         20
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        21,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        21,
+        20
+       ],
+       "farbe": 3,
+       "dicke": 6
+      },
+      {
+       "art": "text",
+       "bei": [
+        10.5,
+        -1.6
+       ],
+       "text": "21",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        22,
+        10
+       ],
+       "text": "20",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 9.76
+  },
+  {
+   "name": "Gleichschenklig",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein gleichschenkliges Dreieck mit Basis sechzehn und Schenkeln von siebzehn. Die Höhe halbiert die Basis. Das Hilfsdreieck hat die Katheten acht und h und die Hypotenuse siebzehn: h ist fünfzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "h = \\sqrt{17^2 - 8^2} = \\sqrt{225} = \\fc{15}",
+     "x": 150,
+     "y": 300,
+     "groesse": 46,
+     "ein": 9.39
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      18
+     ],
+     "ybereich": [
+      -2,
+      18
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         16,
+         0
+        ],
+        [
+         8,
+         15
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.08
+      },
+      {
+       "art": "text",
+       "bei": [
+        8,
+        -1.3
+       ],
+       "text": "16",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.2,
+        8.4
+       ],
+       "text": "17",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 34,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.09,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      18
+     ],
+     "ybereich": [
+      -2,
+      18
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        8,
+        0
+       ],
+       "bis": [
+        8,
+        15
+       ],
+       "farbe": 2,
+       "dicke": 4,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        8,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.37,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      18
+     ],
+     "ybereich": [
+      -2,
+      18
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         8,
+         0
+        ],
+        [
+         16,
+         0
+        ],
+        [
+         8,
+         15
+        ]
+       ],
+       "farbe": 2,
+       "fuellung": 0.25,
+       "dicke": 2
+      },
+      {
+       "art": "text",
+       "bei": [
+        12,
+        -1.3
+       ],
+       "text": "8",
+       "farbe": 2,
+       "anker": "middle",
+       "groesse": 34,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        8.5,
+        6
+       ],
+       "text": "h",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 12.78
+  },
+  {
+   "name": "Kreis",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Im Kreis verbindet eine Sehne zwei Punkte des Kreises. Der Abstand zum Mittelpunkt steht senkrecht auf ihr und halbiert sie. Radius zehn, Sehne sechzehn: Das Hilfsdreieck hat die Hypotenuse zehn und die Kathete acht, der Abstand ist sechs.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "d = \\sqrt{10^2 - 8^2} = \\fc{6}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 4.79
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -12.5,
+      12.5
+     ],
+     "ybereich": [
+      -12.5,
+      12.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "kreis",
+       "m": [
+        0,
+        0
+       ],
+       "r": 10,
+       "farbe": 5,
+       "fuellung": 0.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        -8,
+        -6
+       ],
+       "bis": [
+        8,
+        -6
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "text",
+       "bei": [
+        0,
+        -8
+       ],
+       "text": "s = 16",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.79,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -12.5,
+      12.5
+     ],
+     "ybereich": [
+      -12.5,
+      12.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        0,
+        -6
+       ],
+       "farbe": 2,
+       "dicke": 5
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        -6
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.6,
+        -3
+       ],
+       "text": "d",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 36,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 9.39,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -12.5,
+      12.5
+     ],
+     "ybereich": [
+      -12.5,
+      12.5
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        8,
+        -6
+       ],
+       "farbe": 3,
+       "dicke": 5
+      },
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         -6
+        ],
+        [
+         8,
+         -6
+        ]
+       ],
+       "farbe": 3,
+       "fuellung": 0.18,
+       "dicke": 1
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.6,
+        -2.2
+       ],
+       "text": "r = 10",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 14.41
+  },
+  {
+   "name": "Rohr",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Rohr mit fünfzig Zentimetern Durchmesser, der Wasserspiegel ist achtundvierzig Zentimeter breit. Radius fünfundzwanzig, halbe Breite vierundzwanzig: Der Abstand ist sieben. Das Wasser ist fünfundzwanzig minus sieben, also achtzehn Zentimeter tief.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "d = \\sqrt{25^2 - 24^2} = 7",
+     "x": 150,
+     "y": 280,
+     "groesse": 48,
+     "ein": 9.72
+    },
+    {
+     "typ": "formel",
+     "text": "\\text{Tiefe } 25 - 7 = \\fc{18}\\ \\text{cm}",
+     "x": 150,
+     "y": 400,
+     "groesse": 48,
+     "ein": 14.92
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      30
+     ],
+     "ybereich": [
+      -30,
+      30
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         -24.0,
+         -7.0
+        ],
+        [
+         -23.678,
+         -8.023
+        ],
+        [
+         -23.312,
+         -9.031
+        ],
+        [
+         -22.903,
+         -10.022
+        ],
+        [
+         -22.452,
+         -10.995
+        ],
+        [
+         -21.96,
+         -11.948
+        ],
+        [
+         -21.427,
+         -12.879
+        ],
+        [
+         -20.855,
+         -13.786
+        ],
+        [
+         -20.245,
+         -14.668
+        ],
+        [
+         -19.597,
+         -15.523
+        ],
+        [
+         -18.913,
+         -16.349
+        ],
+        [
+         -18.195,
+         -17.145
+        ],
+        [
+         -17.443,
+         -17.909
+        ],
+        [
+         -16.659,
+         -18.641
+        ],
+        [
+         -15.844,
+         -19.338
+        ],
+        [
+         -15.0,
+         -20.0
+        ],
+        [
+         -14.128,
+         -20.625
+        ],
+        [
+         -13.231,
+         -21.212
+        ],
+        [
+         -12.309,
+         -21.76
+        ],
+        [
+         -11.365,
+         -22.268
+        ],
+        [
+         -10.399,
+         -22.735
+        ],
+        [
+         -9.414,
+         -23.16
+        ],
+        [
+         -8.413,
+         -23.542
+        ],
+        [
+         -7.395,
+         -23.881
+        ],
+        [
+         -6.364,
+         -24.176
+        ],
+        [
+         -5.321,
+         -24.427
+        ],
+        [
+         -4.269,
+         -24.633
+        ],
+        [
+         -3.209,
+         -24.793
+        ],
+        [
+         -2.142,
+         -24.908
+        ],
+        [
+         -1.072,
+         -24.977
+        ],
+        [
+         -0.0,
+         -25.0
+        ],
+        [
+         1.072,
+         -24.977
+        ],
+        [
+         2.142,
+         -24.908
+        ],
+        [
+         3.209,
+         -24.793
+        ],
+        [
+         4.269,
+         -24.633
+        ],
+        [
+         5.321,
+         -24.427
+        ],
+        [
+         6.364,
+         -24.176
+        ],
+        [
+         7.395,
+         -23.881
+        ],
+        [
+         8.413,
+         -23.542
+        ],
+        [
+         9.414,
+         -23.16
+        ],
+        [
+         10.399,
+         -22.735
+        ],
+        [
+         11.365,
+         -22.268
+        ],
+        [
+         12.309,
+         -21.76
+        ],
+        [
+         13.231,
+         -21.212
+        ],
+        [
+         14.128,
+         -20.625
+        ],
+        [
+         15.0,
+         -20.0
+        ],
+        [
+         15.844,
+         -19.338
+        ],
+        [
+         16.659,
+         -18.641
+        ],
+        [
+         17.443,
+         -17.909
+        ],
+        [
+         18.195,
+         -17.145
+        ],
+        [
+         18.913,
+         -16.349
+        ],
+        [
+         19.597,
+         -15.523
+        ],
+        [
+         20.245,
+         -14.668
+        ],
+        [
+         20.855,
+         -13.786
+        ],
+        [
+         21.427,
+         -12.879
+        ],
+        [
+         21.96,
+         -11.948
+        ],
+        [
+         22.452,
+         -10.995
+        ],
+        [
+         22.903,
+         -10.022
+        ],
+        [
+         23.312,
+         -9.031
+        ],
+        [
+         23.678,
+         -8.023
+        ],
+        [
+         24.0,
+         -7.0
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.25,
+       "dicke": 0
+      },
+      {
+       "art": "kreis",
+       "m": [
+        0,
+        0
+       ],
+       "r": 25,
+       "farbe": 5,
+       "fuellung": 0.0
+      },
+      {
+       "art": "strecke",
+       "von": [
+        -24,
+        -7
+       ],
+       "bis": [
+        24,
+        -7
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 6.24,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      30
+     ],
+     "ybereich": [
+      -30,
+      30
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        0,
+        -7
+       ],
+       "farbe": 2,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        0
+       ],
+       "bis": [
+        24,
+        -7
+       ],
+       "farbe": 3,
+       "dicke": 5
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        0,
+        -7
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        -1,
+        -3.5
+       ],
+       "text": "7",
+       "farbe": 2,
+       "anker": "end",
+       "groesse": 32,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        12,
+        -2
+       ],
+       "text": "25",
+       "farbe": 3,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 14.92,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      30
+     ],
+     "ybereich": [
+      -30,
+      30
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        -7
+       ],
+       "bis": [
+        0,
+        -25
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.5,
+        -17
+       ],
+       "text": "18",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 32,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 16.2
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: die ganze Basis oder die ganze Sehne ins Hilfsdreieck setzen. Hinein gehört immer die Hälfte, denn Höhe und Abstand halbieren sie.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "ganze statt halbe Strecke",
+     "x": 150,
+     "y": 300,
+     "groesse": 44,
+     "farbe": "rot",
+     "ein": 1.14
+    },
+    {
+     "typ": "notiz",
+     "text": "Höhe und Abstand halbieren",
+     "x": 150,
+     "y": 420,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 7.92
+    }
+   ],
+   "dauer": 11.32
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Such zuerst das rechtwinklige Hilfsdreieck und seine Hypotenuse. Trag die bekannten Längen ein, oft die Hälfte. Dann rechnest du mit Pythagoras.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "zuerst das Hilfsdreieck|Hypotenuse bestimmen|oft die Hälfte eintragen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.44
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.38
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie lang ist die Diagonale des Rechtecks 21 × 20?",
+   "optionen": [
+    "29",
+    "41",
+    "841"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
+    "2": "841 ist d². Zieh die Wurzel."
+   },
+   "sprich": "Wie lang ist die Diagonale des Rechtecks einundzwanzig mal zwanzig?",
+   "rueck_sprich": {
+    "1": "Die Seiten werden nicht addiert. Rechne mit den Quadraten.",
+    "2": "Achthunderteinundvierzig ist d Quadrat. Zieh die Wurzel."
+   }
+  }
+ ]
+}

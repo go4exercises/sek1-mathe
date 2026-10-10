@@ -1,0 +1,6 @@
+0.40	Zwölfhundertfünfundzwanzig plus hundertvierundvierzig gibt dreizehnhundertneunundsechzig. Die Wurzel ist siebenunddreissig.
+8.33	Halbe Basis neun, Schenkel fünfzehn: zweihundertfünfundzwanzig minus einundachtzig gibt hundertvierundvierzig, die Höhe ist zwölf.
+17.47	Hundertneunundsechzig minus hundertvierundvierzig gibt fünfundzwanzig. Die halbe Sehne ist fünf, die ganze zehn Zentimeter.
+25.36	Der Radius liegt gegenüber dem rechten Winkel. Er ist die Hypotenuse des Hilfsdreiecks.
+31.26	Halbe Breite sechs, Radius zehn: Der Abstand ist acht. Das Wasser ist zehn minus acht, also zwei Zentimeter tief.
+39.59	Zum Mitnehmen: Zuerst das Hilfsdreieck finden. Im Kreis ist der Radius die Hypotenuse, und die Sehne geht nur zur Hälfte hinein.

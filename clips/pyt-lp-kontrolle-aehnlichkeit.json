@@ -1,0 +1,252 @@
+{
+ "titel": "Geometrie: Kontrollfragen zur Ähnlichkeit",
+ "dateiname": "pyt-lp-kontrolle-aehnlichkeit",
+ "kurzbeschrieb": "Fünf Fragen: Seiten 5, 7, 9 mit k = 2, Fläche 8 cm² mit k = 3, Fläche mal 16, Turm aus Schatten 1.6 m und 24 m, Streckfaktor 3 → 7.5.",
+ "schlagworte": [
+  "ähnlich",
+  "Streckfaktor",
+  "Flächenfaktor",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die längste Seite neun wird mal zwei gerechnet: achtzehn Zentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "9 \\cdot 2 = \\fc{18}\\ \\text{cm}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.41
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Fläche wird mal k Quadrat gerechnet, also mal neun: zweiundsiebzig Quadratzentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "8 \\cdot 3^2 = \\fc{72}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.29
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "k Quadrat gleich sechzehn, also ist k gleich vier.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "k^2 = 16 \\;\\Rightarrow\\; k = \\fc{4}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 4.14
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Der Turmschatten ist fünfzehnmal so lang wie der Stabschatten. Also ist auch der Turm fünfzehnmal so hoch: dreissig Meter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\dfrac{24}{1.6} = 15, \\;\\; 2 \\cdot 15 = \\fc{30}\\ \\text{m}",
+     "x": 150,
+     "y": 330,
+     "groesse": 48,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.5
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Sieben Komma fünf durch drei gibt zwei Komma fünf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "k = \\dfrac{7.5}{3} = \\fc{2.5}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 4.0
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Längen mal k, Flächen mal k Quadrat. Den Streckfaktor findest du als Bild durch Original.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Längen · k · Flächen · k²|k = Bild : Original",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 7.39
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Dreieck hat die Seiten 5, 7 und 9 cm. Es wird mit k = 2 gestreckt. Wie lang ist die längste Seite des Bildes?",
+   "optionen": [
+    "81 cm",
+    "18 cm",
+    "11 cm"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Ähnlich heisst mal k, nicht plus.",
+    "0": "Längen werden mal k gerechnet, nicht quadriert."
+   },
+   "sprich": "Ein Dreieck hat die Seiten fünf, sieben und neun Zentimeter. Es wird mit k gleich zwei gestreckt. Wie lang ist die längste Seite des Bildes?",
+   "rueck_sprich": {
+    "2": "Ähnlich heisst mal k, nicht plus.",
+    "0": "Längen werden mal k gerechnet, nicht quadriert."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Figur hat 8 cm² Fläche und wird mit k = 3 gestreckt. Wie gross ist die Bildfläche?",
+   "optionen": [
+    "72 cm²",
+    "24 cm²",
+    "11 cm²"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Länge und Breite wachsen beide. Die Fläche wächst mit k².",
+    "2": "Ähnlich heisst mal, nicht plus."
+   },
+   "sprich": "Eine Figur hat acht Quadratzentimeter Fläche und wird mit k gleich drei gestreckt. Wie gross ist die Bildfläche?",
+   "rueck_sprich": {
+    "1": "Länge und Breite wachsen beide. Die Fläche wächst mit k Quadrat.",
+    "2": "Ähnlich heisst mal, nicht plus."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Bei einer Streckung wird die Fläche 16-mal so gross. Wie gross ist der Streckfaktor k?",
+   "optionen": [
+    "8",
+    "4",
+    "16"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "16 ist der Flächenfaktor k². Gesucht ist k.",
+    "0": "Welche Zahl gibt im Quadrat 16?"
+   },
+   "sprich": "Bei einer Streckung wird die Fläche sechzehnmal so gross. Wie gross ist der Streckfaktor k?",
+   "rueck_sprich": {
+    "2": "Sechzehn ist der Flächenfaktor k Quadrat. Gesucht ist k.",
+    "0": "Welche Zahl gibt im Quadrat sechzehn?"
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein 2 m langer Stab wirft 1.6 m Schatten, ein Turm gleichzeitig 24 m. Wie hoch ist der Turm?",
+   "optionen": [
+    "19.2 m",
+    "24.4 m",
+    "30 m"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Der Turm ist höher, als sein Schatten lang ist, wie beim Stab. Prüf das Verhältnis.",
+    "1": "Ähnlich heisst gleiches Verhältnis, nicht gleicher Unterschied."
+   },
+   "sprich": "Ein zwei Meter langer Stab wirft eins Komma sechs Meter Schatten, ein Turm gleichzeitig vierundzwanzig Meter. Wie hoch ist der Turm?",
+   "rueck_sprich": {
+    "0": "Der Turm ist höher, als sein Schatten lang ist, wie beim Stab. Prüf das Verhältnis.",
+    "1": "Ähnlich heisst gleiches Verhältnis, nicht gleicher Unterschied."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Seite von 3 cm ist im ähnlichen Bild 7.5 cm lang. Wie gross ist k?",
+   "optionen": [
+    "2.5",
+    "4.5",
+    "0.4"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das ist der Unterschied. k ist ein Faktor: Bild durch Original.",
+    "2": "Das ist Original durch Bild. Umgekehrt."
+   },
+   "sprich": "Eine Seite von drei Zentimetern ist im ähnlichen Bild sieben Komma fünf Zentimeter lang. Wie gross ist k?",
+   "rueck_sprich": {
+    "1": "Das ist der Unterschied. k ist ein Faktor: Bild durch Original.",
+    "2": "Das ist Original durch Bild. Umgekehrt."
+   }
+  }
+ ]
+}

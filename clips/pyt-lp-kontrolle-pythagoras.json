@@ -1,0 +1,449 @@
+{
+ "titel": "Geometrie: Kontrollfragen zu Pythagoras",
+ "dateiname": "pyt-lp-kontrolle-pythagoras",
+ "kurzbeschrieb": "Fünf Fragen: Katheten 5 und 12, Hypotenuse 17 mit Kathete 15, welche Seite ist die Hypotenuse, ist 9, 12, 15 rechtwinklig, Kathete aus 10 und 8.",
+ "schlagworte": [
+  "Pythagoras",
+  "Hypotenuse",
+  "Kathete",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Fünfundzwanzig plus hundertvierundvierzig gibt hundertneunundsechzig. Die Wurzel daraus ist dreizehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\sqrt{25 + 144} = \\sqrt{169} = \\fc{13}",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.65
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zweihundertneunundachtzig minus zweihundertfünfundzwanzig gibt vierundsechzig, die Wurzel ist acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\sqrt{289 - 225} = \\sqrt{64} = \\fc{8}",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.85
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Hypotenuse liegt gegenüber dem rechten Winkel: die Seite r.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      11.5
+     ],
+     "ybereich": [
+      -1.5,
+      11.5
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         1
+        ],
+        [
+         1,
+         7
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.12
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        1,
+        1
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        0.2
+       ],
+       "text": "p",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.4,
+        4
+       ],
+       "text": "q",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.4,
+        4.6
+       ],
+       "text": "r",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 38,
+       "kursiv": false
+      }
+     ],
+     "achsen": false,
+     "raster": true
+    },
+    {
+     "typ": "notiz",
+     "text": "r: gegenüber dem rechten Winkel",
+     "x": 150,
+     "y": 330,
+     "groesse": 44,
+     "farbe": "gruen",
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      11.5
+     ],
+     "ybereich": [
+      -1.5,
+      11.5
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         1
+        ],
+        [
+         1,
+         7
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.12
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        1,
+        1
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        0.2
+       ],
+       "text": "p",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        0.4,
+        4
+       ],
+       "text": "q",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5.4,
+        4.6
+       ],
+       "text": "r",
+       "farbe": 1,
+       "anker": "start",
+       "groesse": 38,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        9,
+        1
+       ],
+       "bis": [
+        1,
+        7
+       ],
+       "farbe": 3,
+       "dicke": 7
+      }
+     ]
+    }
+   ],
+   "dauer": 4.66
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Einundachtzig plus hundertvierundvierzig gibt zweihundertfünfundzwanzig, und das ist fünfzehn Quadrat. Das Dreieck ist rechtwinklig.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "81 + 144 = 225 = 15^2",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 8.12
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Für eine Kathete subtrahierst du: hundert minus vierundsechzig gibt sechsunddreissig, die Kathete ist sechs Zentimeter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\sqrt{100 - 64} = \\fc{6}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 7.62
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Zuerst die Hypotenuse finden, gegenüber dem rechten Winkel. Für sie addierst du die Quadrate, für eine Kathete subtrahierst du.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Hypotenuse gegenüber dem rechten Winkel|plus für c, minus für eine Kathete",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 8.27
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Die Katheten sind 5 cm und 12 cm lang. Wie lang ist die Hypotenuse?",
+   "optionen": [
+    "13 cm",
+    "17 cm",
+    "169 cm"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Nicht die Seiten addieren, sondern ihre Quadrate.",
+    "2": "169 ist c². Zieh noch die Wurzel."
+   },
+   "sprich": "Die Katheten sind fünf und zwölf Zentimeter lang. Wie lang ist die Hypotenuse?",
+   "rueck_sprich": {
+    "1": "Nicht die Seiten addieren, sondern ihre Quadrate.",
+    "2": "Hundertneunundsechzig ist c Quadrat. Zieh noch die Wurzel."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Die Hypotenuse ist 17 cm, eine Kathete 15 cm. Wie lang ist die andere Kathete?",
+   "optionen": [
+    "8 cm",
+    "2 cm",
+    "22.6 cm"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Nicht die Seiten subtrahieren, sondern ihre Quadrate.",
+    "2": "Eine Kathete ist kürzer als die Hypotenuse. Subtrahieren statt addieren."
+   },
+   "sprich": "Die Hypotenuse ist siebzehn, eine Kathete fünfzehn Zentimeter lang. Wie lang ist die andere Kathete?",
+   "rueck_sprich": {
+    "1": "Nicht die Seiten subtrahieren, sondern ihre Quadrate.",
+    "2": "Eine Kathete ist kürzer als die Hypotenuse. Subtrahieren statt addieren."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Seite im Bild ist die Hypotenuse?",
+   "optionen": [
+    "q",
+    "r",
+    "p"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "p liegt am rechten Winkel an. Welche Seite liegt ihm gegenüber?",
+    "0": "q liegt am rechten Winkel an. Welche Seite liegt ihm gegenüber?"
+   },
+   "rueck_sprich": {
+    "2": "p liegt am rechten Winkel an. Welche Seite liegt ihm gegenüber?",
+    "0": "q liegt am rechten Winkel an. Welche Seite liegt ihm gegenüber?"
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Dreieck hat die Seiten 9 cm, 12 cm und 15 cm. Ist es rechtwinklig?",
+   "optionen": [
+    "ja",
+    "nein",
+    "kann man nicht sagen"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Rechne 9² + 12² und vergleiche mit 15².",
+    "2": "Mit den drei Seiten kannst du es prüfen."
+   },
+   "sprich": "Ein Dreieck hat die Seiten neun, zwölf und fünfzehn Zentimeter. Ist es rechtwinklig?",
+   "rueck_sprich": {
+    "1": "Rechne neun Quadrat plus zwölf Quadrat und vergleiche mit fünfzehn Quadrat.",
+    "2": "Mit den drei Seiten kannst du es prüfen."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Hypotenuse 10 cm, eine Kathete 8 cm: Wie lang ist die andere Kathete?",
+   "optionen": [
+    "2 cm",
+    "6 cm",
+    "12.8 cm"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die Kathete wäre länger als die Hypotenuse. Subtrahieren statt addieren.",
+    "0": "Nicht die Seiten subtrahieren, sondern ihre Quadrate."
+   },
+   "sprich": "Hypotenuse zehn, eine Kathete acht Zentimeter: Wie lang ist die andere Kathete?",
+   "rueck_sprich": {
+    "2": "Die Kathete wäre länger als die Hypotenuse. Subtrahieren statt addieren.",
+    "0": "Nicht die Seiten subtrahieren, sondern ihre Quadrate."
+   }
+  }
+ ]
+}

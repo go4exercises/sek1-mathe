@@ -1,0 +1,6 @@
+0.40	Die längste Seite neun wird mal zwei gerechnet: achtzehn Zentimeter.
+5.81	Die Fläche wird mal k Quadrat gerechnet, also mal neun: zweiundsiebzig Quadratzentimeter.
+12.10	k Quadrat gleich sechzehn, also ist k gleich vier.
+16.24	Der Turmschatten ist fünfzehnmal so lang wie der Stabschatten. Also ist auch der Turm fünfzehnmal so hoch: dreissig Meter.
+23.74	Sieben Komma fünf durch drei gibt zwei Komma fünf.
+27.74	Zum Mitnehmen: Längen mal k, Flächen mal k Quadrat. Den Streckfaktor findest du als Bild durch Original.

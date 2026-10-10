@@ -1,0 +1,6 @@
+0.40	Zehn mal sieben durch zwei gibt fünfunddreissig Quadratzentimeter.
+5.30	Grundseite neun mal Höhe vier gibt sechsunddreissig. Die schräge Seite brauchst du nicht.
+11.10	Acht plus vier durch zwei gibt sechs, mal die Höhe fünf: dreissig Quadratzentimeter.
+17.23	Ergänze zum Rechteck sechs mal fünf, also dreissig, und zieh die Ecke zwei mal zwei ab: sechsundzwanzig.
+24.53	Grundseite und Höhe bleiben gleich, also bleibt auch die Fläche gleich.
+29.57	Zum Mitnehmen: Grundseite und Höhe bestimmen die Fläche. Die schräge Seite zählt nicht. Zusammengesetzte Figuren zerlegen oder ergänzen.

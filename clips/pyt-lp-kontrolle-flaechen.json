@@ -1,0 +1,1141 @@
+{
+ "titel": "Geometrie: Kontrollfragen zu Flächen",
+ "dateiname": "pyt-lp-kontrolle-flaechen",
+ "kurzbeschrieb": "Fünf Fragen: Dreieck 10 und 7, Parallelogramm 9 · 4 mit Seite 5, Trapez 8, 4, Höhe 5, ausgeschnittene Ecke 6 · 5 − 2 · 2, Spitze verschieben.",
+ "schlagworte": [
+  "Fläche",
+  "Höhe",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Geometrie · Flächen, Pythagoras und Ähnlichkeit",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "5 · Geometrie",
+ "lektion": [
+  "lp-pythagoras"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Geometrie",
+ "folge": 2,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms pythagoras; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zehn mal sieben durch zwei gibt fünfunddreissig Quadratzentimeter.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         10,
+         0
+        ],
+        [
+         7,
+         7
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7,
+        0
+       ],
+       "bis": [
+        7,
+        7
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        7,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        -1
+       ],
+       "text": "10 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.3,
+        3.2
+       ],
+       "text": "7 cm",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ],
+     "achsen": false,
+     "raster": true
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{10 \\cdot 7}{2} = \\fc{35}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         10,
+         0
+        ],
+        [
+         7,
+         7
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        7,
+        0
+       ],
+       "bis": [
+        7,
+        7
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        7,
+        0
+       ],
+       "r1": 90,
+       "r2": 180,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        -1
+       ],
+       "text": "10 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        7.3,
+        3.2
+       ],
+       "text": "7 cm",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 4.9
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Grundseite neun mal Höhe vier gibt sechsunddreissig. Die schräge Seite brauchst du nicht.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         9,
+         0
+        ],
+        [
+         12,
+         4
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        3,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.5,
+        -1
+       ],
+       "text": "9 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.3,
+        1.8
+       ],
+       "text": "4 cm",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.1,
+        2.6
+       ],
+       "text": "5 cm",
+       "farbe": 5,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ],
+     "achsen": false,
+     "raster": true
+    },
+    {
+     "typ": "formel",
+     "text": "9 \\cdot 4 = \\fc{36}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         9,
+         0
+        ],
+        [
+         12,
+         4
+        ],
+        [
+         3,
+         4
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        0
+       ],
+       "bis": [
+        3,
+        4
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        3,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        4.5,
+        -1
+       ],
+       "text": "9 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.3,
+        1.8
+       ],
+       "text": "4 cm",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.1,
+        2.6
+       ],
+       "text": "5 cm",
+       "farbe": 5,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 5.8
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Acht plus vier durch zwei gibt sechs, mal die Höhe fünf: dreissig Quadratzentimeter.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         8,
+         0
+        ],
+        [
+         6,
+         5
+        ],
+        [
+         2,
+         5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        0
+       ],
+       "bis": [
+        2,
+        5
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        2,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        4,
+        -1
+       ],
+       "text": "8 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4,
+        5.6
+       ],
+       "text": "4 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.3,
+        2.3
+       ],
+       "text": "5 cm",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ],
+     "achsen": false,
+     "raster": true
+    },
+    {
+     "typ": "formel",
+     "text": "\\dfrac{8 + 4}{2} \\cdot 5 = \\fc{30}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         8,
+         0
+        ],
+        [
+         6,
+         5
+        ],
+        [
+         2,
+         5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "strecke",
+       "von": [
+        2,
+        0
+       ],
+       "bis": [
+        2,
+        5
+       ],
+       "farbe": 2,
+       "dicke": 3,
+       "gestrichelt": true
+      },
+      {
+       "art": "rechts",
+       "bei": [
+        2,
+        0
+       ],
+       "r1": 0,
+       "r2": 90,
+       "farbe": 5,
+       "px": 22
+      },
+      {
+       "art": "text",
+       "bei": [
+        4,
+        -1
+       ],
+       "text": "8 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        4,
+        5.6
+       ],
+       "text": "4 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        2.3,
+        2.3
+       ],
+       "text": "5 cm",
+       "farbe": 2,
+       "anker": "start",
+       "groesse": 30,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 6.13
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ergänze zum Rechteck sechs mal fünf, also dreissig, und zieh die Ecke zwei mal zwei ab: sechsundzwanzig.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         3
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         4,
+         5
+        ],
+        [
+         0,
+         5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -1
+       ],
+       "text": "6 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.3,
+        2.5
+       ],
+       "text": "5 cm",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.3
+       ],
+       "text": "2 cm",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.3,
+        4
+       ],
+       "text": "2 cm",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4,
+        5
+       ],
+       "bis": [
+        6,
+        5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        3
+       ],
+       "bis": [
+        6,
+        5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      }
+     ],
+     "achsen": false,
+     "raster": true
+    },
+    {
+     "typ": "formel",
+     "text": "6 \\cdot 5 - 2 \\cdot 2 = \\fc{26}\\ \\text{cm}^2",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1.5,
+      12.5
+     ],
+     "ybereich": [
+      -2,
+      12
+     ],
+     "achsen": false,
+     "raster": true,
+     "figuren": [
+      {
+       "art": "vieleck",
+       "punkte": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         0
+        ],
+        [
+         6,
+         3
+        ],
+        [
+         4,
+         3
+        ],
+        [
+         4,
+         5
+        ],
+        [
+         0,
+         5
+        ]
+       ],
+       "farbe": 1,
+       "fuellung": 0.15
+      },
+      {
+       "art": "text",
+       "bei": [
+        3,
+        -1
+       ],
+       "text": "6 cm",
+       "farbe": 1,
+       "anker": "middle",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -0.3,
+        2.5
+       ],
+       "text": "5 cm",
+       "farbe": 1,
+       "anker": "end",
+       "groesse": 30,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        5,
+        5.3
+       ],
+       "text": "2 cm",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        6.3,
+        4
+       ],
+       "text": "2 cm",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "strecke",
+       "von": [
+        4,
+        5
+       ],
+       "bis": [
+        6,
+        5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      },
+      {
+       "art": "strecke",
+       "von": [
+        6,
+        3
+       ],
+       "bis": [
+        6,
+        5
+       ],
+       "farbe": 5,
+       "dicke": 2,
+       "gestrichelt": true
+      }
+     ]
+    }
+   ],
+   "dauer": 7.3
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Grundseite und Höhe bleiben gleich, also bleibt auch die Fläche gleich.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "Die Fläche bleibt gleich.",
+     "x": 150,
+     "y": 330,
+     "groesse": 48,
+     "farbe": "gruen",
+     "ein": 1.0
+    }
+   ],
+   "dauer": 5.04
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Grundseite und Höhe bestimmen die Fläche. Die schräge Seite zählt nicht. Zusammengesetzte Figuren zerlegen oder ergänzen.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Grundseite und Höhe|schräge Seite zählt nicht|zerlegen oder ergänzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.06
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie gross ist die Fläche des Dreiecks im Bild?",
+   "optionen": [
+    "35 cm²",
+    "70 cm²",
+    "17 cm²"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Das ist ein Rechteck mit denselben Massen. Ein Dreieck ist halb so gross.",
+    "2": "Multipliziere zuerst Grundseite und Höhe."
+   },
+   "rueck_sprich": {
+    "1": "Das ist ein Rechteck mit denselben Massen. Ein Dreieck ist halb so gross.",
+    "2": "Multipliziere zuerst Grundseite und Höhe."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Parallelogramm im Bild: Wie gross ist seine Fläche?",
+   "optionen": [
+    "18 cm²",
+    "36 cm²",
+    "45 cm²"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Du hast die schräge Seite genommen. Welche Strecke steht senkrecht?",
+    "0": "Beim Parallelogramm wird nicht halbiert."
+   },
+   "rueck_sprich": {
+    "2": "Du hast die schräge Seite genommen. Welche Strecke steht senkrecht?",
+    "0": "Beim Parallelogramm wird nicht halbiert."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Trapez im Bild: Wie gross ist seine Fläche?",
+   "optionen": [
+    "160 cm²",
+    "30 cm²",
+    "60 cm²"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Von den parallelen Seiten nimmst du das Mittel, also die Summe durch 2.",
+    "0": "Die parallelen Seiten werden addiert, nicht multipliziert."
+   },
+   "rueck_sprich": {
+    "2": "Von den parallelen Seiten nimmst du das Mittel, also die Summe durch zwei.",
+    "0": "Die parallelen Seiten werden addiert, nicht multipliziert."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Rechteck mit ausgeschnittener Ecke im Bild: Wie gross ist die Fläche?",
+   "optionen": [
+    "30 cm²",
+    "26 cm²",
+    "34 cm²"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Die Ecke fehlt in der Figur. Abziehen, nicht dazuzählen.",
+    "0": "Das ist das ganze Rechteck. Was fehlt?"
+   },
+   "rueck_sprich": {
+    "2": "Die Ecke fehlt in der Figur. Abziehen, nicht dazuzählen.",
+    "0": "Das ist das ganze Rechteck. Was fehlt?"
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Die Spitze eines Dreiecks wird parallel zur Grundseite verschoben. Was passiert mit der Fläche?",
+   "optionen": [
+    "Sie wird grösser.",
+    "Sie wird kleiner.",
+    "Sie bleibt gleich."
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Die schrägen Seiten werden länger, aber zählen sie für die Fläche?",
+    "1": "Ändert sich die Höhe beim Verschieben?"
+   },
+   "rueck_sprich": {
+    "0": "Die schrägen Seiten werden länger, aber zählen sie für die Fläche?",
+    "1": "Ändert sich die Höhe beim Verschieben?"
+   }
+  }
+ ]
+}
