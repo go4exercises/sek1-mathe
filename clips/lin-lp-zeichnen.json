@@ -1,0 +1,705 @@
+{
+ "titel": "Funktionen sehen: Geraden zeichnen",
+ "dateiname": "lin-lp-zeichnen",
+ "kurzbeschrieb": "y = 2/3 x − 1 zeichnen: Start (0 | −1) auf der y-Achse, Steigungsdreieck 3 nach rechts, 2 hinauf, Punkt (3 | 1), verbinden; Punktprobe (6 | 3); Nullstelle x = 1.5; Fehler: Dreieck im Ursprung, bei negativem m hinauf.",
+ "schlagworte": [
+  "Gerade zeichnen",
+  "Steigungsdreieck",
+  "Punktprobe",
+  "Nullstelle"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 5,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Start",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zeichne y gleich zwei Drittel x minus eins. Starte auf der y-Achse bei b. Hier ist b minus eins: der Punkt null, minus eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{\\tfrac{2}{3}}x \\fb{- 1}",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.3
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.62,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": -1,
+       "farbe": 2,
+       "anker": "end",
+       "beschriftung": "(0 | −1)",
+       "beschriftung_bei": [
+        -0.25,
+        -1.75
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 10.82
+  },
+  {
+   "name": "Dreieck",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Steigung zwei Drittel heisst: drei nach rechts, zwei hinauf. So kommst du zum Punkt drei, eins.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{\\tfrac{2}{3}}x \\fb{- 1}",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "\\fa{\\tfrac{2}{3}} = \\dfrac{2 \\text{ hinauf}}{3 \\text{ nach rechts}}",
+     "x": 150,
+     "y": 440,
+     "groesse": 54,
+     "ein": 0.8
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": -1,
+       "farbe": 2,
+       "anker": "end",
+       "beschriftung": "(0 | −1)",
+       "beschriftung_bei": [
+        -0.25,
+        -1.75
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.28,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false,
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        -1
+       ],
+       "bis": [
+        3,
+        -1
+       ],
+       "farbe": 5,
+       "dicke": 4
+      },
+      {
+       "art": "strecke",
+       "von": [
+        3,
+        -1
+       ],
+       "bis": [
+        3,
+        1
+       ],
+       "farbe": 5,
+       "dicke": 4
+      },
+      {
+       "art": "text",
+       "bei": [
+        1.5,
+        -1.75
+       ],
+       "text": "3 nach rechts",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 28,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.25,
+        -0.65
+       ],
+       "text": "2 hinauf",
+       "farbe": 5,
+       "anker": "start",
+       "groesse": 28,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.88,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 3,
+       "y": 1,
+       "farbe": 1,
+       "anker": "start",
+       "beschriftung": "(3 | 1)",
+       "beschriftung_bei": [
+        3.26,
+        0.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 8.63
+  },
+  {
+   "name": "Verbinden",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Verbinde die beiden Punkte und verlängere die Linie über beide hinaus. Das ist die Gerade.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{\\tfrac{2}{3}}x \\fb{- 1}",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 0.05
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": -1,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 1,
+       "farbe": 1,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.47,
+     "geraden": [
+      {
+       "m": 0.6666666666666666,
+       "q": -1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 5.86
+  },
+  {
+   "name": "Probe",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Liegt der Punkt sechs, drei auf der Geraden? Setz x gleich sechs ein: zwei Drittel mal sechs ist vier, minus eins gibt drei. Ja, er liegt darauf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "P(6 \\mid 3)",
+     "x": 150,
+     "y": 280,
+     "groesse": 56,
+     "ein": 0.3
+    },
+    {
+     "typ": "formel",
+     "text": "\\tfrac{2}{3} \\cdot 6 - 1 = 4 - 1 = \\fc{3}",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 2.99
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 0.6666666666666666,
+       "q": -1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.3,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 6,
+       "y": 3,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "P(6 | 3)",
+       "beschriftung_bei": [
+        5.8,
+        3.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 9.65
+  },
+  {
+   "name": "Nullstelle",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Wo schneidet die Gerade die x-Achse? Dort ist y gleich null. Zwei Drittel x minus eins gleich null, also zwei Drittel x gleich eins und x gleich eins Komma fünf. Das ist die Nullstelle.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\tfrac{2}{3}x - 1 = 0",
+     "x": 150,
+     "y": 280,
+     "groesse": 56,
+     "ein": 3.46
+    },
+    {
+     "typ": "formel",
+     "text": "\\tfrac{2}{3}x = 1 \\qquad \\fc{x = 1.5}",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 6.44
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 0.6666666666666666,
+       "q": -1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 10.74,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1.5,
+       "y": 0,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(1.5 | 0)",
+       "beschriftung_bei": [
+        1.8,
+        -0.7
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 15.79
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: Das Dreieck im Ursprung begonnen. Dann entsteht y gleich zwei Drittel x, eine verschobene Gerade. Und bei negativem m geht es hinunter, nicht hinauf.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{y = \\tfrac{2}{3}x}",
+     "x": 150,
+     "y": 280,
+     "groesse": 62,
+     "ein": 2.21
+    },
+    {
+     "typ": "notiz",
+     "text": "Start bei (0 ∣ b), nicht bei (0 ∣ 0)",
+     "x": 150,
+     "y": 420,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 6.23
+    },
+    {
+     "typ": "notiz",
+     "text": "m negativ: hinunter",
+     "x": 150,
+     "y": 540,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 7.71
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 0.6666666666666666,
+       "q": -1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 2.21,
+     "geraden": [
+      {
+       "m": 0.6666666666666666,
+       "q": 0,
+       "farbe": 4,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -3,
+      6
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 10.98
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Start bei b auf der y-Achse. Dann das Steigungsdreieck: nach rechts, und hinauf oder hinunter. Zwei Punkte verbinden. Die Punktprobe zeigt, ob ein Punkt darauf liegt.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Start: (0 ∣ b)|Steigungsdreieck: nach rechts, hinauf oder hinunter|verbinden und verlängern|Punktprobe: einsetzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 11.54
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.35
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Dreieck",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Von (0 | −1) aus mit der Steigung 2/3: Zu welchem Punkt kommst du?",
+   "optionen": [
+    "(3 | 2)",
+    "(3 | 1)",
+    "(2 | 2)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Du bist 2 nach rechts und 3 hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.",
+    "0": "3 nach rechts und 2 hinauf stimmt, aber von (0 | −1) aus, nicht von (0 | 0)."
+   },
+   "sprich": "Von null, minus eins aus mit der Steigung zwei Drittel: Zu welchem Punkt kommst du?",
+   "rueck_sprich": {
+    "2": "Du bist zwei nach rechts und drei hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.",
+    "0": "Drei nach rechts und zwei hinauf stimmt, aber von null, minus eins aus, nicht vom Ursprung."
+   }
+  }
+ ]
+}

@@ -1,0 +1,636 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zur Steigung",
+ "dateiname": "lin-lp-kontrolle-steigung",
+ "kurzbeschrieb": "Fünf Fragen: m durch (2 | 1) und (5 | 7), m durch (−1 | 3) und (1 | −1), m einer fallenden Geraden im Bild (−1/3), Bedeutung von m = 0, m bei 2 nach rechts und 3 hinunter.",
+ "schlagworte": [
+  "Steigung",
+  "Steigungsdreieck",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 4,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "delta y ist sieben minus eins, also sechs. delta x ist fünf minus zwei, also drei. Sechs durch drei gibt zwei.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 1,
+       "farbe": 5,
+       "anker": "end",
+       "beschriftung": "A(2 | 1)",
+       "beschriftung_bei": [
+        1.8,
+        1.4
+       ]
+      },
+      {
+       "x": 5,
+       "y": 7,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "B(5 | 7)",
+       "beschriftung_bei": [
+        5.26,
+        6.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{7 - 1}{5 - 2} = \\dfrac{6}{3} = \\fc{2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         2,
+         -3
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 2,
+        "dx": 3,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 1,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 5,
+       "y": 7,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    }
+   ],
+   "dauer": 8.7
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Von P nach Q: delta y ist minus eins minus drei, also minus vier. delta x ist eins minus minus eins, also zwei. Minus vier durch zwei gibt minus zwei. Die Gerade fällt.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": -1,
+       "y": 3,
+       "farbe": 5,
+       "anker": "end",
+       "beschriftung": "P(−1 | 3)",
+       "beschriftung_bei": [
+        -1.3,
+        3.4
+       ]
+      },
+      {
+       "x": 1,
+       "y": -1,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "Q(1 | −1)",
+       "beschriftung_bei": [
+        1.26,
+        -1.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{-1 - 3}{1 - (-1)} = \\dfrac{-4}{2} = \\fc{-2}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -2,
+         1
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": -1,
+        "dx": 2,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [
+      {
+       "x": -1,
+       "y": 3,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": -1,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ]
+    }
+   ],
+   "dauer": 12.19
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Von einem Gitterpunkt zum nächsten: drei nach rechts, eins hinunter. Die Steigung ist minus eins durch drei.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": -0.3333333333333333,
+       "q": 2,
+       "farbe": 1
+      }
+     ],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 2,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 1,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -2,
+      7
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{-1}{3} = \\fc{-\\tfrac{1}{3}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -0.3333333333333333,
+         2
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 0,
+        "dx": 3,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -2,
+      7
+     ]
+    }
+   ],
+   "dauer": 6.49
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei m gleich null ändert sich y nicht, wenn du nach rechts gehst. Die Gerade ist waagrecht.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "m = 0: \\quad \\Delta y = 0",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "m": 0,
+       "q": 2,
+       "farbe": 1
+      },
+      {
+       "m": 0,
+       "q": -1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ]
+    }
+   ],
+   "dauer": 6.11
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Hinunter heisst delta y negativ: minus drei. Nach rechts zwei. Die Steigung ist minus drei durch zwei, minus eins Komma fünf.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{-3}{2} = \\fc{-1.5}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -1.5,
+         3
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 0,
+        "dx": 2,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ]
+    }
+   ],
+   "dauer": 9.39
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: m ist delta y durch delta x. Oben und unten zuerst denselben Punkt. Hinunter ist negativ, und bei m gleich null ist die Gerade waagrecht.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "m = Δy / Δx|oben und unten dieselbe Reihenfolge|hinunter: negativ · m = 0: waagrecht",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.4
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie gross ist die Steigung der Geraden durch A(2 | 1) und B(5 | 7)?",
+   "optionen": [
+    "1/2",
+    "−2",
+    "2"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Oben steht die Änderung in y, unten die in x.",
+    "1": "Von A nach B geht es hinauf. Ist m dann negativ?"
+   },
+   "sprich": "Wie gross ist die Steigung der Geraden durch A mit zwei und eins und B mit fünf und sieben?",
+   "rueck_sprich": {
+    "0": "Oben steht die Änderung in y, unten die in x.",
+    "1": "Von A nach B geht es hinauf. Ist m dann negativ?"
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie gross ist die Steigung der Geraden durch P(−1 | 3) und Q(1 | −1)?",
+   "optionen": [
+    "2",
+    "−1/2",
+    "−2"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Der Betrag stimmt. Aber geht es von P nach Q hinauf oder hinunter?",
+    "1": "Oben steht Δy, unten Δx. Vertauscht?"
+   },
+   "sprich": "Wie gross ist die Steigung der Geraden durch P mit minus eins und drei und Q mit eins und minus eins?",
+   "rueck_sprich": {
+    "0": "Der Betrag stimmt. Aber geht es von P nach Q hinauf oder hinunter?",
+    "1": "Oben steht delta y, unten delta x. Vertauscht?"
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie gross ist die Steigung der Geraden im Bild?",
+   "optionen": [
+    "−3",
+    "1/3",
+    "−1/3"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Zähl noch einmal: Was kommt in den Nenner, «nach rechts» oder «hinunter»?",
+    "1": "Der Betrag stimmt. Steigt die Gerade, oder fällt sie?"
+   },
+   "rueck_sprich": {
+    "0": "Zähl noch einmal: Was kommt in den Nenner, nach rechts oder hinunter?",
+    "1": "Der Betrag stimmt. Steigt die Gerade, oder fällt sie?"
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Gerade hat die Steigung m = 0. Wie verläuft sie?",
+   "optionen": [
+    "senkrecht",
+    "durch (0 | 0)",
+    "waagrecht"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Bei m = 0 ist Δy = 0: y ändert sich nicht. Ist das senkrecht?",
+    "1": "Ob eine Gerade durch (0 | 0) geht, sagt b, nicht m."
+   },
+   "sprich": "Eine Gerade hat die Steigung m gleich null. Wie verläuft sie?",
+   "rueck_sprich": {
+    "0": "Bei m gleich null ist delta y gleich null: y ändert sich nicht. Ist das senkrecht?",
+    "1": "Ob eine Gerade durch den Ursprung geht, sagt b, nicht m."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Gerade geht pro 2 nach rechts 3 hinunter. Wie gross ist m?",
+   "optionen": [
+    "−1.5",
+    "−2/3",
+    "1.5"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "Oben steht die Änderung in y: −3. Unten steht 2.",
+    "2": "Hinunter heisst: Δy ist negativ."
+   },
+   "sprich": "Eine Gerade geht pro zwei nach rechts drei hinunter. Wie gross ist m?",
+   "rueck_sprich": {
+    "1": "Oben steht die Änderung in y: minus drei. Unten steht zwei.",
+    "2": "Hinunter heisst: delta y ist negativ."
+   }
+  }
+ ]
+}

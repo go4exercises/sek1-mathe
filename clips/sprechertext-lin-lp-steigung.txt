@@ -1,0 +1,8 @@
+0.40	Diese zwei Geraden steigen beide, aber verschieden steil. Wie steil, sagt die Steigung m: um wie viel y zunimmt, wenn x um eins zunimmt.
+9.92	Geh auf der Geraden von P nach Q: zuerst nach rechts, dann hinauf. Das ist ein Steigungsdreieck. Drei nach rechts, sechs hinauf. Pro Schritt nach rechts also zwei hinauf: Die Steigung ist sechs durch drei, gleich zwei.
+24.80	Nimm ein kleineres Dreieck auf derselben Geraden: eins nach rechts, zwei hinauf. Wieder zwei. Jedes Steigungsdreieck einer Geraden gibt dieselbe Steigung.
+33.74	Ohne Bild rechnest du mit den Koordinaten. Für delta y rechnest du acht minus zwei, für delta x vier minus eins. Oben und unten nimmst du zuerst denselben Punkt, hier Q.
+45.03	Fällt die Gerade, geht es hinunter: delta y ist negativ, also auch m. Bei m gleich null ist die Gerade waagrecht. Und je grösser der Betrag von m, desto steiler ist sie.
+59.62	Häufiger Fehler: den Bruch umgedreht. delta x durch delta y, also drei durch sechs, ist nicht die Steigung. Oben steht immer die Änderung in y.
+70.17	Zum Mitnehmen: Die Steigung m ist delta y durch delta x, hinauf geteilt durch nach rechts. Jedes Steigungsdreieck gibt dasselbe m. Positiv steigt, negativ fällt, null ist waagrecht.
+82.28	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

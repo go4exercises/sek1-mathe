@@ -1,0 +1,925 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zur Gleichung",
+ "dateiname": "lin-lp-kontrolle-gleichung",
+ "kurzbeschrieb": "Fünf Fragen: Gleichung der Geraden durch (0 | 1) und (2 | 5) im Bild, Gerade durch (1 | 4) und (3 | 10), Infusion 400 ml mit 5 ml/min leer, Ratenwechsel nach 50 min bei 300 ml und 3 ml/min, Gleichung für 600 ml und 3 ml/min.",
+ "schlagworte": [
+  "Geradengleichung",
+  "zwei Punkte",
+  "Infusion",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 8,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Gerade schneidet die y-Achse bei eins: b ist eins. Zwei nach rechts, vier hinauf: m ist zwei. y gleich zwei x plus eins.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 2,
+       "q": 1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 1,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 5,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -2,
+      7
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = 2x + 1}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         2,
+         1
+        ]
+       ],
+       "farbe": 1,
+       "yachse": {
+        "farbe": 2,
+        "beschriftung": false
+       },
+       "dreieck": {
+        "x": 0,
+        "dx": 2,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -2,
+      7
+     ]
+    }
+   ],
+   "dauer": 9.79
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zuerst m: zehn minus vier durch drei minus eins, das gibt drei. Dann einen Punkt einsetzen: vier gleich drei plus b, also b gleich eins.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -3,
+      6
+     ],
+     "ybereich": [
+      -1,
+      11
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{10 - 4}{3 - 1} = 3",
+     "x": 150,
+     "y": 280,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "4 = 3 \\cdot 1 + b \\qquad \\fc{y = 3x + 1}",
+     "x": 150,
+     "y": 440,
+     "groesse": 52,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "m": 3,
+       "q": 1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 4,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(1 | 4)",
+       "beschriftung_bei": [
+        1.26,
+        3.333
+       ]
+      },
+      {
+       "x": 3,
+       "y": 10,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "(3 | 10)",
+       "beschriftung_bei": [
+        3.26,
+        9.333
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -3,
+      6
+     ],
+     "ybereich": [
+      -1,
+      11
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       5,
+       "5"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ]
+    }
+   ],
+   "dauer": 9.7
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "V gleich minus fünf t plus vierhundert. Leer bei null: vierhundert durch fünf gibt achtzig Minuten.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -10,
+      110
+     ],
+     "ybereich": [
+      -30,
+      450
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    },
+    {
+     "typ": "formel",
+     "text": "-5t + 400 = 0 \\qquad \\fc{t = 80}",
+     "x": 150,
+     "y": 330,
+     "groesse": 54,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 80,
+       "y": 0,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(80 | 0)",
+       "beschriftung_bei": [
+        83.467,
+        26.667
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -10,
+      110
+     ],
+     "ybereich": [
+      -30,
+      450
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       20,
+       "20"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       60,
+       "60"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       100,
+       "100"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        400
+       ],
+       "bis": [
+        80,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 7.23
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nach fünfzig Minuten sind hundertfünfzig Milliliter weg. Es bleiben hundertfünfzig. Dort beginnt das neue Stück, bei fünfzig, hundertfünfzig.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -20,
+      220
+     ],
+     "ybereich": [
+      -25,
+      340
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       50,
+       "50"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       150,
+       "150"
+      ],
+      [
+       200,
+       "200"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    },
+    {
+     "typ": "formel",
+     "text": "300 - 3 \\cdot 50 = \\fc{150}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 50,
+       "y": 150,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(50 | 150)",
+       "beschriftung_bei": [
+        62,
+        178
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -20,
+      220
+     ],
+     "ybereich": [
+      -25,
+      340
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       50,
+       "50"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       150,
+       "150"
+      ],
+      [
+       200,
+       "200"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        300
+       ],
+       "bis": [
+        50,
+        150
+       ],
+       "farbe": 1,
+       "dicke": 5
+      },
+      {
+       "art": "strecke",
+       "von": [
+        50,
+        150
+       ],
+       "bis": [
+        200,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 9.25
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Am Anfang sechshundert, das ist b. Pro Minute drei weniger, also m gleich minus drei: V gleich minus drei t plus sechshundert.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -20,
+      220
+     ],
+     "ybereich": [
+      -40,
+      680
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       50,
+       "50"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       150,
+       "150"
+      ],
+      [
+       200,
+       "200"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       600,
+       "600"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{V = -3t + 600}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -20,
+      220
+     ],
+     "ybereich": [
+      -40,
+      680
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       50,
+       "50"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       150,
+       "150"
+      ],
+      [
+       200,
+       "200"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       600,
+       "600"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        600
+       ],
+       "bis": [
+        200,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    }
+   ],
+   "dauer": 8.83
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: b liest du bei x gleich null ab, m misst du mit dem Steigungsdreieck. Aus zwei Punkten zuerst m, dann einsetzen. Bei einer neuen Rate geht es dort weiter, wo der Graph gerade ist.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "b bei x = 0, m mit dem Dreieck|zwei Punkte: zuerst m, dann einsetzen|neue Rate: weiter, wo der Graph ist",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 11.74
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gleichung hat die Gerade im Bild?",
+   "optionen": [
+    "y = ½x + 1",
+    "y = 2x + 5",
+    "y = 2x + 1"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Oben steht, wie viel es hinaufgeht, unten der Schritt nach rechts.",
+    "1": "b ist der Wert bei x = 0, nicht ein anderer y-Wert."
+   },
+   "rueck_sprich": {
+    "0": "Oben steht, wie viel es hinaufgeht, unten der Schritt nach rechts.",
+    "1": "b ist der Wert bei x gleich null, nicht ein anderer y-Wert."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gerade geht durch (1 | 4) und (3 | 10)?",
+   "optionen": [
+    "y = 2x + 2",
+    "y = 3x + 1",
+    "y = 3x + 4"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "m stimmt. Prüf mit (1 | 4): 3 · 1 + 4 ist nicht 4.",
+    "0": "Prüf mit (3 | 10): 2 · 3 + 2 ist nicht 10."
+   },
+   "sprich": "Welche Gerade geht durch eins, vier und drei, zehn?",
+   "rueck_sprich": {
+    "2": "m stimmt. Prüf mit eins, vier: drei mal eins plus vier ist nicht vier.",
+    "0": "Prüf mit drei, zehn: zwei mal drei plus zwei ist nicht zehn."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Infusion mit 400 ml läuft mit 5 ml pro Minute. Wann ist sie leer?",
+   "optionen": [
+    "nach 395 min",
+    "nach 80 min",
+    "nach 2000 min"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Gesucht ist, wie oft 5 ml in 400 ml passen.",
+    "0": "Pro Minute laufen 5 ml, nicht insgesamt."
+   },
+   "sprich": "Eine Infusion mit vierhundert Millilitern läuft mit fünf Millilitern pro Minute. Wann ist sie leer?",
+   "rueck_sprich": {
+    "2": "Gesucht ist, wie oft fünf Milliliter in vierhundert Milliliter passen.",
+    "0": "Pro Minute laufen fünf Milliliter, nicht insgesamt."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Infusion mit 300 ml, 3 ml pro Minute. Nach 50 min wird auf 1 ml pro Minute gestellt. Wo beginnt das neue Stück des Graphen?",
+   "optionen": [
+    "(0 | 150)",
+    "(50 | 150)",
+    "(50 | 300)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Beim Umstellen beginnt die Infusion nicht neu. Wie viel ist nach 50 min noch drin?",
+    "0": "Umgestellt wird nach 50 min, nicht am Anfang."
+   },
+   "sprich": "Infusion mit dreihundert Millilitern, drei Milliliter pro Minute. Nach fünfzig Minuten wird auf einen Milliliter pro Minute gestellt. Wo beginnt das neue Stück des Graphen?",
+   "rueck_sprich": {
+    "2": "Beim Umstellen beginnt die Infusion nicht neu. Wie viel ist nach fünfzig Minuten noch drin?",
+    "0": "Umgestellt wird nach fünfzig Minuten, nicht am Anfang."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Beutel mit 600 ml läuft mit 3 ml pro Minute. Welche Gleichung passt?",
+   "optionen": [
+    "V = 3t + 600",
+    "V = −600t + 3",
+    "V = −3t + 600"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Der Beutel wird leerer: m ist negativ.",
+    "1": "Prüf mit t = 0: Am Anfang sind 600 ml drin."
+   },
+   "sprich": "Ein Beutel mit sechshundert Millilitern läuft mit drei Millilitern pro Minute. Welche Gleichung passt?",
+   "rueck_sprich": {
+    "0": "Der Beutel wird leerer: m ist negativ.",
+    "1": "Prüf mit t gleich null: Am Anfang sind sechshundert Milliliter drin."
+   }
+  }
+ ]
+}

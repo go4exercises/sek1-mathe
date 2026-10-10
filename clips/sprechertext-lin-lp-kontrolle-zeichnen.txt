@@ -1,0 +1,6 @@
+0.40	Start bei null, eins. Drei Viertel heisst vier nach rechts und drei hinauf: Du kommst zu vier, vier.
+7.27	Setz zwei ein: drei mal zwei minus eins gibt fünf. Das ist die y-Koordinate von P. P liegt auf der Geraden.
+14.90	Setz y gleich null: zwei x minus acht gleich null, also x gleich vier. Die Nullstelle ist vier, null.
+22.69	y gleich x minus zwei startet bei minus zwei und steigt: eins nach rechts, eins hinauf. Das ist die Gerade B.
+30.61	Start bei null, drei. m gleich minus zwei heisst eins nach rechts und zwei hinunter: Du kommst zu eins, eins.
+38.04	Zum Mitnehmen: Start bei b, dann nach rechts und hinauf oder hinunter. Die Punktprobe ist Einsetzen. Für die Nullstelle setzt du y gleich null.

@@ -1,0 +1,8 @@
+0.40	Zeichne y gleich zwei Drittel x minus eins. Starte auf der y-Achse bei b. Hier ist b minus eins: der Punkt null, minus eins.
+11.22	Die Steigung zwei Drittel heisst: drei nach rechts, zwei hinauf. So kommst du zum Punkt drei, eins.
+19.85	Verbinde die beiden Punkte und verlängere die Linie über beide hinaus. Das ist die Gerade.
+25.71	Liegt der Punkt sechs, drei auf der Geraden? Setz x gleich sechs ein: zwei Drittel mal sechs ist vier, minus eins gibt drei. Ja, er liegt darauf.
+35.36	Wo schneidet die Gerade die x-Achse? Dort ist y gleich null. Zwei Drittel x minus eins gleich null, also zwei Drittel x gleich eins und x gleich eins Komma fünf. Das ist die Nullstelle.
+51.15	Häufiger Fehler: Das Dreieck im Ursprung begonnen. Dann entsteht y gleich zwei Drittel x, eine verschobene Gerade. Und bei negativem m geht es hinunter, nicht hinauf.
+62.13	Zum Mitnehmen: Start bei b auf der y-Achse. Dann das Steigungsdreieck: nach rechts, und hinauf oder hinunter. Zwei Punkte verbinden. Die Punktprobe zeigt, ob ein Punkt darauf liegt.
+73.67	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

@@ -1,0 +1,6 @@
+0.40	Am Anfang achtzig, das ist b. Pro Minute fünf dazu, das ist m. Also y gleich fünf x plus achtzig.
+8.31	Setz vier ein: minus drei mal vier ist minus zwölf, plus zwanzig gibt acht.
+14.33	Hier ist y gegeben. Sechs x plus neun gleich fünfundvierzig. Minus neun: sechs x gleich sechsunddreissig, also x gleich sechs.
+23.44	Bei x gleich null steht zwei: b ist zwei. Bei jedem Schritt kommt drei dazu: m ist drei. Also y gleich drei x plus zwei.
+32.57	Die Kerze startet mit vierundzwanzig Zentimetern, das ist b. Sie wird pro Stunde zwei Zentimeter kürzer, also ist m minus zwei: y gleich minus zwei x plus vierundzwanzig.
+44.23	Zum Mitnehmen: b ist der Wert am Anfang, bei x gleich null. m ist die Änderung pro Schritt, beim Abnehmen negativ. Ist y gegeben, löst du eine Gleichung.

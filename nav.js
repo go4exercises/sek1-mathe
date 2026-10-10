@@ -18,6 +18,7 @@ const SITE = {
     { id:'lp-bruchrechnen', nr:'1', titel:'Bruchrechnen', url:'leitprogramme/bruchrechnen.html' },
     { id:'lp-terme', nr:'2', titel:'Terme und Faktorisieren', url:'leitprogramme/terme-faktorisieren.html' },
     { id:'lp-gleichungen', nr:'3', titel:'Bruchterme, Gleichungen und Formeln', url:'leitprogramme/gleichungen-formeln.html' },
+    { id:'lp-linear', nr:'4', titel:'Lineare Funktionen', url:'leitprogramme/lineare-funktionen.html' },
   ]
 };
 
@@ -25,7 +26,8 @@ const SITE = {
 const GROUPS = {
   leitprogramme: [
     { nr:'1', titel:'Arithmetik/Algebra', ids:['lp-bruchrechnen', 'lp-terme'] },
-    { nr:'2', titel:'Gleichungen', ids:['lp-gleichungen'] }
+    { nr:'2', titel:'Gleichungen', ids:['lp-gleichungen'] },
+    { nr:'3', titel:'Funktionen', ids:['lp-linear'] }
   ]
 };
 

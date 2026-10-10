@@ -1,0 +1,8 @@
+0.40	Welche Gleichung gehört zu dieser Geraden? Lies zuerst b ab. Die Gerade schneidet die y-Achse bei drei: b ist drei.
+10.77	Dann das Steigungsdreieck von null, drei aus: zwei nach rechts und eins hinunter. m ist minus eins durch zwei. Die Gleichung heisst y gleich minus eins durch zwei x plus drei.
+21.99	Ohne Bild, nur zwei Punkte: P mit zwei und fünf, Q mit sechs und sieben. Zuerst m: sieben minus fünf durch sechs minus zwei, das gibt eins durch zwei. Dann setzt du P ein: fünf gleich eins durch zwei mal zwei plus b, also b gleich vier. Probe mit Q: drei plus vier gibt sieben.
+43.81	Eine Infusion enthält fünfhundert Milliliter und läuft mit zwei Millilitern pro Minute. Der Inhalt nach t Minuten: V gleich minus zwei t plus fünfhundert. Leer ist sie bei V gleich null, nach zweihundertfünfzig Minuten.
+59.91	Nach hundert Minuten wird auf einen Milliliter pro Minute gestellt. Jetzt sind noch dreihundert Milliliter drin. Von dort läuft der Graph flacher weiter: Er knickt, er springt nicht. Leer ist die Infusion nach vierhundert Minuten.
+74.84	Häufiger Fehler: b mit einem y-Wert verwechselt. Bei P mit zwei und fünf ist b nicht fünf. b ist der Wert bei x gleich null.
+83.76	Zum Mitnehmen: Aus dem Graphen liest du b ab und misst m mit einem Steigungsdreieck. Aus zwei Punkten berechnest du zuerst m und setzt dann einen Punkt ein. Ändert sich die Rate, knickt der Graph und springt nicht.
+96.55	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

@@ -1,0 +1,732 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zum Zeichnen",
+ "dateiname": "lin-lp-kontrolle-zeichnen",
+ "kurzbeschrieb": "Fünf Fragen: zweiter Punkt von y = 3/4 x + 1, Punktprobe P(2 | 5) auf y = 3x − 1, Nullstelle von y = 2x − 8 tippen, welche von drei Geraden y = x − 2 ist, zweiter Punkt bei m = −2 und b = 3.",
+ "schlagworte": [
+  "Gerade zeichnen",
+  "Punktprobe",
+  "Nullstelle",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 6,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Start bei null, eins. Drei Viertel heisst vier nach rechts und drei hinauf: Du kommst zu vier, vier.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "(0 \\mid 1) \\;\\to\\; \\fc{(4 \\mid 4)}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         0.75,
+         1
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 0,
+        "dx": 4,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 1,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 4,
+       "y": 4,
+       "farbe": 3,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    }
+   ],
+   "dauer": 6.87
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Setz zwei ein: drei mal zwei minus eins gibt fünf. Das ist die y-Koordinate von P. P liegt auf der Geraden.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 5,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "P(2 | 5)",
+       "beschriftung_bei": [
+        2.26,
+        4.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -2,
+      7
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "3 \\cdot 2 - 1 = \\fc{5}",
+     "x": 150,
+     "y": 330,
+     "groesse": 60,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "m": 3,
+       "q": -1,
+       "farbe": 1
+      }
+     ],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 5,
+       "farbe": 3,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -2,
+      7
+     ],
+     "ybereich": [
+      -2,
+      7
+     ]
+    }
+   ],
+   "dauer": 7.63
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Setz y gleich null: zwei x minus acht gleich null, also x gleich vier. Die Nullstelle ist vier, null.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5,
+      6
+     ],
+     "ybereich": [
+      -9,
+      2
+     ],
+     "yteilung": [
+      [
+       -8,
+       "−8"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       0,
+       "0"
+      ]
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "2x - 8 = 0 \\qquad \\fc{x = 4}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "m": 2,
+       "q": -8,
+       "farbe": 1
+      }
+     ],
+     "punkte": [
+      {
+       "x": 4,
+       "y": 0,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "(4 | 0)",
+       "beschriftung_bei": [
+        3.682,
+        0.611
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -5,
+      6
+     ],
+     "ybereich": [
+      -9,
+      2
+     ],
+     "yteilung": [
+      [
+       -8,
+       "−8"
+      ],
+      [
+       -4,
+       "−4"
+      ],
+      [
+       0,
+       "0"
+      ]
+     ]
+    }
+   ],
+   "dauer": 7.79
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "y gleich x minus zwei startet bei minus zwei und steigt: eins nach rechts, eins hinauf. Das ist die Gerade B.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 1,
+       "q": 2,
+       "farbe": 5
+      },
+      {
+       "m": 1,
+       "q": -2,
+       "farbe": 5
+      },
+      {
+       "m": -1,
+       "q": -2,
+       "farbe": 5
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        1.9,
+        4.8
+       ],
+       "text": "A",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.9,
+        0.8
+       ],
+       "text": "B",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -1.6,
+        -1.0
+       ],
+       "text": "C",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{B}: \\; y = x - 2",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "m": 1,
+       "q": 2,
+       "farbe": 5
+      },
+      {
+       "m": 1,
+       "q": -2,
+       "farbe": 3
+      },
+      {
+       "m": -1,
+       "q": -2,
+       "farbe": 5
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -4,
+      5
+     ],
+     "ybereich": [
+      -4,
+      5
+     ],
+     "figuren": [
+      {
+       "art": "text",
+       "bei": [
+        1.9,
+        4.8
+       ],
+       "text": "A",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        3.9,
+        0.8
+       ],
+       "text": "B",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      },
+      {
+       "art": "text",
+       "bei": [
+        -1.6,
+        -1.0
+       ],
+       "text": "C",
+       "farbe": 5,
+       "anker": "middle",
+       "groesse": 40,
+       "kursiv": false
+      }
+     ]
+    }
+   ],
+   "dauer": 7.92
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Start bei null, drei. m gleich minus zwei heisst eins nach rechts und zwei hinunter: Du kommst zu eins, eins.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -3,
+      6
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "(0 \\mid 3) \\;\\to\\; \\fc{(1 \\mid 1)}",
+     "x": 150,
+     "y": 330,
+     "groesse": 58,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -2,
+         3
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 0,
+        "dx": 1,
+        "farbe": 5
+       }
+      }
+     ],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 3,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "farbe": 3,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -3,
+      6
+     ],
+     "ybereich": [
+      -3,
+      6
+     ]
+    }
+   ],
+   "dauer": 7.43
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Start bei b, dann nach rechts und hinauf oder hinunter. Die Punktprobe ist Einsetzen. Für die Nullstelle setzt du y gleich null.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Start bei (0 ∣ b)|Punktprobe: einsetzen|Nullstelle: y = 0 setzen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 9.76
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = ¾x + 1: Start bei (0 | 1). Zu welchem Punkt führt das Steigungsdreieck?",
+   "optionen": [
+    "(4 | 3)",
+    "(4 | 4)",
+    "(3 | 5)"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Du bist 3 nach rechts und 4 hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.",
+    "0": "4 nach rechts und 3 hinauf stimmt, aber von (0 | 1) aus."
+   },
+   "sprich": "y gleich drei Viertel x plus eins. Start bei null, eins. Zu welchem Punkt führt das Steigungsdreieck?",
+   "rueck_sprich": {
+    "2": "Du bist drei nach rechts und vier hinauf gegangen. Unten im Bruch steht der Schritt nach rechts.",
+    "0": "Vier nach rechts und drei hinauf stimmt, aber von null, eins aus."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Liegt P(2 | 5) auf der Geraden y = 3x − 1?",
+   "optionen": [
+    "Das sieht man erst im Bild.",
+    "Ja",
+    "Nein"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Setz x = 2 ein und vergleich mit der y-Koordinate von P.",
+    "0": "Ohne Bild geht es genauer: Setz x = 2 ein."
+   },
+   "sprich": "Liegt P mit zwei und fünf auf der Geraden y gleich drei x minus eins?",
+   "rueck_sprich": {
+    "2": "Setz x gleich zwei ein und vergleich mit der y-Koordinate von P.",
+    "0": "Ohne Bild geht es genauer: Setz x gleich zwei ein."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "klick",
+   "text": "y = 2x − 8: Tipp die Nullstelle ins Bild.",
+   "ziel": [
+    4,
+    0
+   ],
+   "toleranz": 0.6,
+   "richtig_text": "Getroffen: (4 | 0).",
+   "fallen": [
+    {
+     "bei": [
+      0,
+      -8
+     ],
+     "text": "Das ist der Punkt auf der y-Achse. Die Nullstelle liegt auf der x-Achse.",
+     "sprich": "Das ist der Punkt auf der y-Achse. Die Nullstelle liegt auf der x-Achse."
+    },
+    {
+     "bei": [
+      -4,
+      0
+     ],
+     "text": "Achte auf das Vorzeichen: 2x − 8 = 0 gibt 2x = 8.",
+     "sprich": "Achte auf das Vorzeichen: zwei x minus acht gleich null gibt zwei x gleich acht."
+    },
+    {
+     "bei": [
+      2,
+      0
+     ],
+     "text": "Das ist die Steigung. Setz y = 0 und löse nach x auf.",
+     "sprich": "Das ist die Steigung. Setz y gleich null und löse nach x auf."
+    }
+   ],
+   "falsch_text": "Nicht ganz. Setz y = 0 und löse nach x auf.",
+   "eingabe": [
+    "x",
+    "y"
+   ],
+   "sprich": "y gleich zwei x minus acht: Tipp die Nullstelle ins Bild.",
+   "falsch_sprich": "Nicht ganz. Setz y gleich null und löse nach x auf."
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gerade im Bild ist y = x − 2?",
+   "optionen": [
+    "A",
+    "C",
+    "B"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "A schneidet die y-Achse bei +2. Gesucht ist b = −2.",
+    "1": "C startet bei −2, fällt aber. Bei m = 1 steigt die Gerade."
+   },
+   "sprich": "Welche Gerade im Bild ist y gleich x minus zwei?",
+   "rueck_sprich": {
+    "0": "A schneidet die y-Achse bei plus zwei. Gesucht ist b gleich minus zwei.",
+    "1": "C startet bei minus zwei, fällt aber. Bei m gleich eins steigt die Gerade."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = −2x + 3: Start bei (0 | 3). Zu welchem Punkt führt das Steigungsdreieck?",
+   "optionen": [
+    "(1 | 1)",
+    "(1 | 5)",
+    "(2 | 2)"
+   ],
+   "richtig": 0,
+   "rueck": {
+    "0": "Ja.",
+    "1": "m ist negativ: Es geht hinunter, nicht hinauf.",
+    "2": "m = −2 heisst 1 nach rechts und 2 hinunter."
+   },
+   "sprich": "y gleich minus zwei x plus drei. Start bei null, drei. Zu welchem Punkt führt das Steigungsdreieck?",
+   "rueck_sprich": {
+    "1": "m ist negativ: Es geht hinunter, nicht hinauf.",
+    "2": "m gleich minus zwei heisst eins nach rechts und zwei hinunter."
+   }
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+% Bewertungspaket zum Gesamttest «Lineare Funktionen» — Quelle des PDFs (python3 scripts/build-lp-pdf.py lineare-funktionen).
+% Ganze Punkte je Teilschritt; Werte und Fehlerwerte mit python3 nachgerechnet (scripts/lp/lineare-funktionen/zahlen.py).
+% Gerüst aus dem Bewertungspaket von LP 3 (gleichungen-formeln): Auftrag an die KI, Folgefehler, (E)-Zeilen.
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\usepackage{lf-gitter}
+\renewcommand{\lpname}{Lineare Funktionen}
+\renewcommand{\lpteilgebiet}{Funktionen ·}
+\renewcommand{\lpfuss}{Bewertungspaket}
+\newcolumntype{P}{>{\centering\arraybackslash}p{10mm}}
+\newenvironment{raster}{\par\smallskip\noindent\renewcommand{\arraystretch}{1.6}\linespread{1.35}\selectfont\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}p{38mm}P X@{}}\toprule
+  \small\textsc{Teilschritt} & \small\textsc{P} & \small\textsc{Musterlösung}\\\midrule}{\bottomrule\endtabularx\par}
+\newcommand{\fehler}[1]{\par\smallskip{\small\textcolor{lprot}{\bfseries Typische Fehler:} #1}}
+\newcommand{\E}{\,{\footnotesize\bfseries\color{lpgruen}(E)}}
+\begin{document}
+\lpkopf{Bewertungspaket zum Gesamttest}{}
+
+\begin{lpachtung}{Erst lösen, dann öffnen}
+Dieses Paket enthält die Musterlösung. Wer es vor dem Lösen liest, misst am Ende nur, wie gut das Abschreiben gelingt.
+\end{lpachtung}
+
+\section*{1 · So gehst du vor}
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \textbf{Gesamttest lösen} — vollständig, mit Rechenweg, ohne dieses Paket und ohne Taschenrechner, mit Lineal.
+\item \textbf{Selbst bewerten} mit Abschnitt~3: Zeile für Zeile vergleichen und die Punkte eintragen. Das geht ohne Hilfsmittel
+  und ist der Normalfall.
+\item \textbf{Oder bewerten lassen.} Ob du dafür eine KI nutzt und welche, entscheidest du selbst und in eigener Verantwortung —
+  je nachdem, was dir aufgrund deines Alters und deiner persönlichen Situation erlaubt ist (Altersgrenzen und
+  Nutzungsbedingungen des Anbieters, allenfalls Einverständnis deiner Eltern). Fotografiere oder scanne deine Lösung gut lesbar,
+  \textbf{ohne Namen}. Handyfotos tragen oft unsichtbar Standort, Zeit und Gerät mit (Metadaten) — lade lieber einen Scan oder ein
+  Bildschirmfoto des Fotos hoch. Lade nur deine Lösung, das Testblatt und dieses PDF hoch, keine persönlichen Daten, und füge den Auftrag aus
+  Abschnitt~2 ein.
+\item \textbf{Rückmeldung prüfen.} Stimmt, was die KI aus deiner Handschrift gelesen hat? Eine KI kann sich irren —
+  im Zweifel gilt das Raster in Abschnitt~3.
+\item \textbf{Gezielt wiederholen} nach Abschnitt~4.
+\end{enumerate}
+
+\section*{2 · Auftrag an die KI}
+\begin{tcolorbox}[colback=lplinie!25,colframe=lplinie,boxrule=0.5pt,arc=1mm,fontupper=\small]
+Du bist Korrektorin oder Korrektor für Mathematik auf der Sekundarstufe I in der Schweiz. Im Anhang findest du (1)~das Testblatt mit den Aufgaben, (2)~das Bewertungspaket zum Gesamttest «Lineare Funktionen» mit Musterlösung und Punkteraster und (3)~Fotos meiner handschriftlichen Lösung.\par\medskip
+Geh so vor:\par
+1. Schreib zu jeder Aufgabe G1 bis G8 zuerst ab, was du in meiner Lösung liest — Rechenweg und Ergebnis; bei den Zeichnungen (G4, G6, G8), durch welche Punkte meine Gerade oder meine Strecken gehen. Was du nicht sicher lesen kannst, markierst du mit [unsicher]. Nicht raten. Achte besonders auf Minuszeichen und Brüche.\par
+2. Vergib die Punkte genau nach dem Raster im Bewertungspaket (Abschnitt 3), ganze Punkte je Zeile. Ziehe einen Fehler nur einmal ab: Rechne ich mit einem falschen Zwischenergebnis richtig weiter, gibt es die Folgepunkte. Ausnahme: Zeilen mit \textbf{(E)} gibt es nur für das richtige Ergebnis, nie als Folgepunkt. Die Zeilen «Typische Fehler» sagen, welche Rasterzeile bei diesem Fehler 0 Punkte gibt — sie sind kein zusätzlicher Abzug.\par
+3. Andere richtige Lösungswege zählen voll, zum Beispiel eine Wertetabelle statt des Steigungsdreiecks oder bei G7 der andere Punkt zum Einsetzen — \textbf{ausser} die Aufgabe verlangt etwas ausdrücklich: G4 das Nachrechnen der Punktprobe (Ablesen allein genügt nicht), G7 die Probe mit $Q$. Gleichwertig: $y = 1.5x - 2$ und $y = \tfrac{3}{2}x - 2$; $y = -6x + 80$ und $y = 80 - 6x$; Brüche und Dezimalzahlen mit gleichem Wert. Eine Zeichnung zählt, wenn die verlangten Punkte auf etwa ein halbes Häuschen genau getroffen sind.\par
+4. Begründe jeden Abzug in einem Satz und nenne die Fehlerart (zum Beispiel «m und b vertauscht», «Bruch der Steigung umgedreht», «Reihenfolge gemischt», «b mit einem y-Wert verwechselt», «nach dem Wechsel neu angefangen»). Schreib die Musterlösung nicht ab — zeig mir, wo mein Fehler liegt.\par
+5. Gib zum Schluss eine Tabelle «Aufgabe | Punkte | Begründung», die Gesamtpunktzahl (von 25) und — nach der Selbsteinschätzung in Abschnitt 4 — welches Kapitel des Leitprogramms ich wiederholen soll. Keine Note.\par
+6. Fehlt ein Foto oder ist eine Aufgabe unlesbar, sag es, statt sie zu bewerten.
+\end{tcolorbox}
+
+\needspace{16\baselineskip}
+\section*{3 · Musterlösung und Punkteraster}
+\textbf{Allgemein:} Ganze Punkte je Zeile. Ein Fehler wird nur einmal abgezogen (Folgefehler). Gleichwertige Wege zählen voll.
+In der Spalte P: \textbf{(E)}~= Ergebnispunkt, Ergebnis richtig \emph{und} Weg erkennbar; ohne Zeichen = die
+Zeile bewertet den Weg, die Zeichnung oder die Begründung. Der ganze Test ist ohne Taschenrechner gestellt.
+«Typische Fehler» nennt, welche Zeile 0 Punkte gibt, und die Punkte, die bleiben.
+\textbf{Teilrichtige Zeilen:} Verlangt eine Zeile mehrere Angaben und stimmt nur ein Teil, gibt die Zeile 0 Punkte,
+ausser die Zeile nennt ausdrücklich eine Aufteilung.
+\textbf{Zahlen:} Dezimalzahl oder Bruch, wenn gleich ($4.5 = \tfrac{9}{2}$). Einheiten sind nicht verlangt.
+
+\begin{lpaufgabe}{G1}{Werte}{3 P}
+\begin{raster}
+(a) Einsetzen & 1 & $-3 \cdot 2.5 + 12 = -7.5 + 12$\\
+(a) Ergebnis & 1\E & $y = 4.5$\\
+(b) & 1\E & $-3x + 12 = -6$, $-3x = -18$, $x = 6$\\
+\end{raster}
+\fehler{(a) Minus verloren ($3 \cdot 2.5 + 12 = 19.5$): beide Zeilen (a) 0 $\to$ höchstens 1 von 3\,P.
+(b) $-6$ für $x$ eingesetzt ($y = 30$): Zeile (b) 0.
+(b) $-3x = -18$ richtig, dann $x = -6$: Zeile (b) 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Akku}{3 P}
+\begin{raster}
+(a) Gleichung & 1 & $y = -6x + 80$ (Anfangswert $b = 80$, Änderung $m = -6$ pro Stunde)\\
+(b) & 1 & $-6 \cdot 5 + 80 = 50$, also $50\,\%$. Auch als Folgepunkt mit der eigenen Gleichung, wenn richtig eingesetzt.\\
+(c) & 1\E & $-6x + 80 = 20$, $-6x = -60$, $x = 10$ Stunden (auch ohne Gleichung: $80 - 20 = 60$, $60 : 6 = 10$)\\
+\end{raster}
+\fehler{$m$ und $b$ vertauscht ($y = 80x - 6$) oder Vorzeichen falsch ($y = 6x + 80$): Zeile (a) 0; (b) als Folgepunkt ($394$ bzw.\ $110$) 1 $\to$ höchstens 2 von 3\,P.
+(c) $20 : 6$ gerechnet: Zeile (c) 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G3}{Steigung}{3 P}
+\begin{raster}
+Ansatz & 1 & $m = \dfrac{-3 - 5}{3 - (-1)}$: oben und unten dieselbe Reihenfolge ($B$ minus $A$ oder $A$ minus $B$)\\
+Ergebnis & 1\E & $m = \dfrac{-8}{4} = -2$\\
+Deutung & 1 & Die Gerade fällt (weil $m < 0$). Auch als Folgepunkt passend zum eigenen Vorzeichen.\\
+\end{raster}
+\fehler{Reihenfolge gemischt ($\tfrac{-3 - 5}{-1 - 3} = 2$): Ansatz- und Ergebniszeile 0; «steigt» als Folgepunkt 1 $\to$ 1 von 3\,P.
+Bruch umgedreht ($\tfrac{4}{-8} = -\tfrac{1}{2}$): Ansatz- und Ergebniszeile 0; «fällt» 1 $\to$ 1 von 3\,P.
+$3 - (-1) = 2$: Ergebniszeile 0 ($m = -4$) $\to$ 2 von 3\,P.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G4}{Zeichnen}{3 P}
+\begin{center}
+\gitter{-2}{9}{-4}{6}{\draw[lpblau,line width=1.2pt] (-2,-3.5) -- (9,4.75);
+  \draw[lpgrau,line width=0.8pt] (0,-2) -- (4,-2) -- (4,1);
+  \fill[lporange] (0,-2) circle (2.4pt); \fill (4,1) circle (2.2pt); \fill[lpgruen] (8,4) circle (2.4pt);}
+\end{center}
+\begin{raster}
+Start & 1 & Punkt $(0 \mid -2)$ auf der $y$-Achse\\
+Dreieck, Gerade & 1 & $4$ nach rechts, $3$ hinauf: $(4 \mid 1)$; Gerade durch beide Punkte (auch über Wertetabelle)\\
+Punktprobe & 1\E & $\tfrac{3}{4} \cdot 8 - 2 = 6 - 2 = 4$: ja, $P$ liegt darauf\\
+\end{raster}
+\fehler{Start bei $(0 \mid 0)$ (Gerade $y = \tfrac{3}{4}x$): Startzeile 0; das Dreieck gibt seinen Punkt, wenn es $4$ nach rechts und $3$ hinauf geht $\to$ 2 von 3\,P.
+Dreieck vertauscht ($3$ nach rechts, $4$ hinauf, zweiter Punkt $(3 \mid 2)$): Zeile «Dreieck, Gerade» 0.
+Punktprobe nur abgelesen, ohne Rechnung: Zeile «Punktprobe» 0.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G5}{Ablesen}{3 P}
+\begin{raster}
+$b$ & 1 & $b = -2$ (Schnitt mit der $y$-Achse bei $(0 \mid -2)$)\\
+$m$ & 1 & Von $(0 \mid -2)$ nach $(3 \mid 0)$: $3$ nach rechts, $2$ hinauf, $m = \tfrac{2}{3}$\\
+Gleichung & 1\E & $y = \tfrac{2}{3}x - 2$\\
+\end{raster}
+\fehler{Bruch umgedreht ($m = \tfrac{3}{2}$): $m$-Zeile und Gleichungszeile 0 $\to$ 1 von 3\,P.
+Nullstelle als $b$ genommen ($b = 3$): $b$-Zeile und Gleichungszeile 0 $\to$ 1 von 3\,P.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G6}{Infusion}{4 P}
+\begin{center}
+\sachgitter{6}{8}{50}{100}{\draw[lpblau,line width=1.2pt] (0,7.5) -- (5,0);
+  \fill[lporange] (0,7.5) circle (2.4pt); \fill[lpgruen] (5,0) circle (2.4pt);}
+\end{center}
+\begin{raster}
+(a) & 1 & $V = -3t + 750$\\
+(b) & 1\E & $-3t + 750 = 0$, $t = 250$ Minuten\\
+(c) Punkte & 1 & Start $(0 \mid 750)$ und Ende $(250 \mid 0)$ eingetragen; das Ende als Folgepunkt mit dem eigenen Wert aus (b)\\
+(c) Strecke & 1 & gerade Strecke dazwischen, endet auf der $t$-Achse (nicht darunter weiter)\\
+\end{raster}
+\fehler{$V = 3t + 750$ oder $V = 750t - 3$: Zeile (a) 0; (b) gibt den Ergebnispunkt nur für $250$ mit erkennbarem Weg.
+Gerade über $(250 \mid 0)$ hinaus ins Negative gezogen: Zeile «Strecke» 0 (ein Beutel enthält nie weniger als $0$ ml).}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G7}{Zwei Punkte}{3 P}
+\begin{raster}
+$m$ & 1 & $m = \dfrac{7 - 1}{6 - 2} = \dfrac{6}{4} = \dfrac{3}{2}$\\
+$b$ & 1 & $P$ eingesetzt: $1 = \tfrac{3}{2} \cdot 2 + b = 3 + b$, $b = -2$. Auch als Folgepunkt mit dem eigenen $m$.\\
+Gleichung, Probe & 1\E & $y = \tfrac{3}{2}x - 2$; Probe mit $Q$: $\tfrac{3}{2} \cdot 6 - 2 = 9 - 2 = 7$. Beides verlangt.\\
+\end{raster}
+\fehler{$b$ mit einem $y$-Wert verwechselt ($b = 1$): $b$-Zeile und letzte Zeile 0 $\to$ 1 von 3\,P.
+Bruch umgedreht ($m = \tfrac{2}{3}$, dann $b = -\tfrac{1}{3}$): $m$-Zeile 0, $b$-Zeile als Folgepunkt 1, letzte Zeile 0 $\to$ 1 von 3\,P.
+Probe fehlt: letzte Zeile 0 $\to$ höchstens 2 von 3\,P.}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Neue Rate}{3 P}
+\begin{center}
+\sachgitter{6}{7}{50}{100}{\draw[lpblau,line width=1.2pt] (0,6) -- (1,4) -- (5,0);
+  \fill[lporange] (1,4) circle (2.4pt); \fill[lpgruen] (5,0) circle (2.4pt);}
+\end{center}
+\begin{raster}
+(a) & 1 & $600 - 4 \cdot 50 = 400$ ml\\
+(b) & 1\E & $400 : 2 = 200$ Minuten nach dem Umstellen, ab Beginn $50 + 200 = 250$ Minuten\\
+(c) & 1 & Strecke $(0 \mid 600)$ bis $(50 \mid 400)$, dann flacher bis zum Ende aus (b): Knick bei $(50 \mid 400)$, kein Sprung. Das Ende als Folgepunkt mit dem eigenen Wert aus (b).\\
+\end{raster}
+\fehler{Nach dem Wechsel neu angefangen ($600 : 2 = 300$, leer nach $350$ Minuten, Graph springt auf $600$): Zeilen (b) und (c) 0 $\to$ 1 von 3\,P.
+Wechsel übersehen ($600 : 4 = 150$ Minuten): Zeile (b) 0; (c) 0, wenn kein Knick gezeichnet ist.
+Nur $200$ Minuten als Antwort (b), ohne die ersten $50$: Zeile (b) 0.}
+\end{lpaufgabe}
+
+\needspace{12\baselineskip}
+\section*{4 · Selbsteinschätzung}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+\textbf{22 – 25 P} & Die geprüften Teile sitzen. Wo du Punkte verloren hast: das Kapitel dieser Aufgabe nochmals.\\
+\textbf{17 – 21 P} & Den schwächsten Teil nochmals, gemessen am Anteil (Teil A 6, B 9, C 10 P): Tüfteln und Übungen der Kapitel dieses Teils.\\
+\textbf{11 – 16 P} & Zurück zu den Kapiteln aller Aufgaben, in denen du Punkte verloren hast.\\
+\textbf{0 – 10 P} & Zurück zu den Kapiteln jedes Teils, in dem du weniger als die Hälfte erreicht hast; sind es alle drei, zum Vortest und zu Kapitel 1.\\
+\bottomrule
+\end{tabularx}
+
+\smallskip
+\textbf{Aufgabe $\to$ Kapitel:} G1, G2 $\to$ 1; G3 $\to$ 2; G4 $\to$ 3; G5 bis G8 $\to$ 4.
+\end{document}

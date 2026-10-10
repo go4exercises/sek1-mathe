@@ -1,0 +1,6 @@
+0.40	delta y ist sieben minus eins, also sechs. delta x ist fünf minus zwei, also drei. Sechs durch drei gibt zwei.
+9.10	Von P nach Q: delta y ist minus eins minus drei, also minus vier. delta x ist eins minus minus eins, also zwei. Minus vier durch zwei gibt minus zwei. Die Gerade fällt.
+21.29	Von einem Gitterpunkt zum nächsten: drei nach rechts, eins hinunter. Die Steigung ist minus eins durch drei.
+27.78	Bei m gleich null ändert sich y nicht, wenn du nach rechts gehst. Die Gerade ist waagrecht.
+33.89	Hinunter heisst delta y negativ: minus drei. Nach rechts zwei. Die Steigung ist minus drei durch zwei, minus eins Komma fünf.
+43.28	Zum Mitnehmen: m ist delta y durch delta x. Oben und unten zuerst denselben Punkt. Hinunter ist negativ, und bei m gleich null ist die Gerade waagrecht.

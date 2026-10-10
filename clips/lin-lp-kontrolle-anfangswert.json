@@ -1,0 +1,553 @@
+{
+ "titel": "Funktionen sehen: Kontrollfragen zu Anfangswert und Änderung",
+ "dateiname": "lin-lp-kontrolle-anfangswert",
+ "kurzbeschrieb": "Fünf Fragen: Tank 80 l + 5 l/min als Gleichung, y = −3x + 20 für x = 4, y = 6x + 9 rückwärts für y = 45, Gleichung aus der Tabelle 2, 5, 8, 11, Kerze 24 cm − 2 cm pro Stunde.",
+ "schlagworte": [
+  "Anfangswert",
+  "Änderung",
+  "lineare Funktion",
+  "Kontrollfragen"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 2,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Kontrollclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Frage 1",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Am Anfang achtzig, das ist b. Pro Minute fünf dazu, das ist m. Also y gleich fünf x plus achtzig.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -10,
+      150
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       120,
+       "120"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "formel",
+     "text": "y = \\fa{5}x + \\fb{80}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         5,
+         80
+        ]
+       ],
+       "farbe": 1,
+       "yachse": {
+        "farbe": 2,
+        "beschriftung": false
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -10,
+      150
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       40,
+       "40"
+      ],
+      [
+       80,
+       "80"
+      ],
+      [
+       120,
+       "120"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 7.91
+  },
+  {
+   "name": "Frage 2",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Setz vier ein: minus drei mal vier ist minus zwölf, plus zwanzig gibt acht.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "-3 \\cdot 4 + 20 = -12 + 20 = \\fc{8}",
+     "x": 150,
+     "y": 330,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 6.02
+  },
+  {
+   "name": "Frage 3",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Hier ist y gegeben. Sechs x plus neun gleich fünfundvierzig. Minus neun: sechs x gleich sechsunddreissig, also x gleich sechs.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "6x + 9 = 45",
+     "x": 150,
+     "y": 280,
+     "groesse": 56,
+     "ein": 1.0
+    },
+    {
+     "typ": "formel",
+     "text": "6x = 36 \\qquad \\fc{x = 6}",
+     "x": 150,
+     "y": 400,
+     "groesse": 56,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 9.11
+  },
+  {
+   "name": "Frage 4",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Bei x gleich null steht zwei: b ist zwei. Bei jedem Schritt kommt drei dazu: m ist drei. Also y gleich drei x plus zwei.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{c|cccc} x & 0 & 1 & 2 & 3 \\\\ \\hline y & 2 & 5 & 8 & 11 \\end{array}",
+     "x": 150,
+     "y": 280,
+     "groesse": 50,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = 3x + 2}",
+     "x": 150,
+     "y": 470,
+     "groesse": 62,
+     "ein": 1.0
+    }
+   ],
+   "dauer": 9.13
+  },
+  {
+   "name": "Frage 5",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Die Kerze startet mit vierundzwanzig Zentimetern, das ist b. Sie wird pro Stunde zwei Zentimeter kürzer, also ist m minus zwei: y gleich minus zwei x plus vierundzwanzig.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -2,
+      28
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "x [h]",
+     "yname": "y [cm]"
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{y = -2x + 24}",
+     "x": 150,
+     "y": 330,
+     "groesse": 62,
+     "ein": 1.0
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.0,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -2,
+         24
+        ]
+       ],
+       "farbe": 1,
+       "yachse": {
+        "farbe": 2,
+        "beschriftung": false
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      14
+     ],
+     "ybereich": [
+      -2,
+      28
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       12,
+       "12"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       16,
+       "16"
+      ],
+      [
+       24,
+       "24"
+      ]
+     ],
+     "xname": "x [h]",
+     "yname": "y [cm]"
+    }
+   ],
+   "dauer": 11.66
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: b ist der Wert am Anfang, bei x gleich null. m ist die Änderung pro Schritt, beim Abnehmen negativ. Ist y gegeben, löst du eine Gleichung.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "b: Wert bei x = 0|m: Änderung pro Schritt|y gegeben: Gleichung lösen",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 10.05
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Frage 1",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Ein Tank enthält am Anfang 80 l, pro Minute kommen 5 l dazu. Welche Gleichung passt?",
+   "optionen": [
+    "y = 80x + 5",
+    "y = 5x − 80",
+    "y = 5x + 80"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Prüf mit x = 0: Am Anfang müssen 80 l drin sein.",
+    "1": "Am Anfang sind 80 l drin, nicht −80 l."
+   },
+   "sprich": "Ein Tank enthält am Anfang achtzig Liter, pro Minute kommen fünf Liter dazu. Welche Gleichung passt?",
+   "rueck_sprich": {
+    "0": "Prüf mit x gleich null: Am Anfang müssen achtzig Liter drin sein.",
+    "1": "Am Anfang sind achtzig Liter drin, nicht minus achtzig."
+   }
+  },
+  {
+   "szene": "Frage 2",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = −3x + 20. Wie gross ist y für x = 4?",
+   "optionen": [
+    "17",
+    "8",
+    "32"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Achte auf das Minus: −3 · 4 = −12.",
+    "0": "Du hast x vergessen: −3 wird mit 4 multipliziert."
+   },
+   "sprich": "y gleich minus drei x plus zwanzig. Wie gross ist y für x gleich vier?",
+   "rueck_sprich": {
+    "2": "Achte auf das Minus: minus drei mal vier ist minus zwölf.",
+    "0": "Du hast x vergessen: Minus drei wird mit vier multipliziert."
+   }
+  },
+  {
+   "szene": "Frage 3",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "y = 6x + 9. Für welches x ist y = 45?",
+   "optionen": [
+    "x = 7.5",
+    "x = 6",
+    "x = 279"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Du hast 45 für x eingesetzt. Gegeben ist hier y.",
+    "0": "Zuerst die 9 abziehen, dann durch 6 teilen."
+   },
+   "sprich": "y gleich sechs x plus neun. Für welches x ist y gleich fünfundvierzig?",
+   "rueck_sprich": {
+    "2": "Du hast fünfundvierzig für x eingesetzt. Gegeben ist hier y.",
+    "0": "Zuerst die Neun abziehen, dann durch sechs teilen."
+   }
+  },
+  {
+   "szene": "Frage 4",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Welche Gleichung passt zur Tabelle?",
+   "optionen": [
+    "y = 2x + 3",
+    "y = 3x + 5",
+    "y = 3x + 2"
+   ],
+   "richtig": 2,
+   "rueck": {
+    "2": "Ja.",
+    "0": "Prüf mit x = 0: Die Tabelle zeigt dort 2.",
+    "1": "b ist der Wert bei x = 0, nicht bei x = 1."
+   },
+   "rueck_sprich": {
+    "0": "Prüf mit x gleich null: Die Tabelle zeigt dort zwei.",
+    "1": "b ist der Wert bei x gleich null, nicht bei x gleich eins."
+   }
+  },
+  {
+   "szene": "Frage 5",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Eine Kerze ist 24 cm hoch und brennt pro Stunde 2 cm ab. Welche Gleichung passt?",
+   "optionen": [
+    "y = 24x − 2",
+    "y = −2x + 24",
+    "y = 2x + 24"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "So würde die Kerze wachsen. Sie wird kürzer: m ist negativ.",
+    "0": "Prüf mit x = 0: Am Anfang ist die Kerze 24 cm hoch."
+   },
+   "sprich": "Eine Kerze ist vierundzwanzig Zentimeter hoch und brennt pro Stunde zwei Zentimeter ab. Welche Gleichung passt?",
+   "rueck_sprich": {
+    "2": "So würde die Kerze wachsen. Sie wird kürzer: m ist negativ.",
+    "0": "Prüf mit x gleich null: Am Anfang ist die Kerze vierundzwanzig Zentimeter hoch."
+   }
+  }
+ ]
+}

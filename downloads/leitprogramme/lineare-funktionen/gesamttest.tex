@@ -1,0 +1,117 @@
+% Gesamttest «Lineare Funktionen» — Quelle des PDFs (python3 scripts/build-lp-pdf.py lineare-funktionen).
+% Musterlösung und Raster: bewertungspaket.tex. Alle Werte mit python3 nachgerechnet (scripts/lp/lineare-funktionen/zahlen.py).
+% Selbstcheck nach ~/TODO-BM-Vorkurs-LP03-15.md §2: zwei Wechsel Graph/Gleichung (G4 zeichnen, G5 ablesen) und
+% Sachaufgaben mit der Infusion als Prüfungsanker (G6, G8). 25 Punkte, rund 30 Minuten.
+\documentclass[11pt]{article}
+\usepackage{../lp-druck}
+\usepackage{lf-gitter}
+\renewcommand{\lpname}{Lineare Funktionen}
+\renewcommand{\lpteilgebiet}{Funktionen ·}
+\renewcommand{\lpfuss}{Gesamttest · 25 Punkte}
+\begin{document}
+\lpkopf{Gesamttest}{%
+  \vspace{4pt}\noindent\begin{tabularx}{\linewidth}{@{}X X@{}}
+  Code (kein Name): \hrulefill & Punkte: \hrulefill\ / 25
+  \end{tabularx}}
+
+\begin{lpinfo}{Anleitung}
+\textbf{Zeit:} rund 30 Minuten. \textbf{Hilfsmittel:} Lineal, kein Taschenrechner.
+Schreib zu jeder Aufgabe den \textbf{Rechenweg} auf; bewertet wird der Weg. Zeichne direkt in die Gitter.
+Danach: selbst mit dem \emph{Bewertungspaket} bewerten oder die Lösung samt diesem Blatt scannen bzw.\ fotografieren
+(ohne Namen und Standort) und mit dem Bewertungspaket einer KI geben.
+\end{lpinfo}
+
+\lpteil{Teil A · Anfangswert und Änderung}{Kapitel 1 · 6 Punkte}
+
+\begin{lpaufgabe}{G1}{Werte}{3 P}
+Gegeben ist $\;y = -3x + 12$.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Berechne $y$ für $x = 2.5$.
+\item Für welches $x$ ist $y = -6$?
+\end{enumerate}
+\lpplatz{4}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G2}{Akku}{3 P}
+Ein Handyakku ist zu $80\,\%$ geladen. Pro Stunde Videoschauen verliert er $6\,\%$.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Schreib eine Gleichung für den Ladestand $y$ (in Prozent) nach $x$ Stunden.
+\item Wie voll ist der Akku nach $5$ Stunden?
+\item Nach wie vielen Stunden sind nur noch $20\,\%$ übrig?
+\end{enumerate}
+\lpplatz{5}
+\end{lpaufgabe}
+
+\lpteil{Teil B · Steigung, Graph und Gleichung}{Kapitel 2 bis 4 · 9 Punkte}
+
+\begin{lpaufgabe}{G3}{Steigung}{3 P}
+Berechne die Steigung der Geraden durch $A(-1 \mid 5)$ und $B(3 \mid -3)$. Steigt oder fällt die Gerade?
+\lpplatz{3}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G4}{Zeichnen}{3 P}
+Zeichne die Gerade $\;y = \tfrac{3}{4}x - 2\;$ mit dem Steigungsdreieck. Liegt $P(8 \mid 4)$ auf der Geraden? Rechne nach.
+
+\smallskip
+\begin{minipage}[t]{0.55\linewidth}\vspace{0pt}
+\gitter{-2}{9}{-4}{6}{}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}
+\lpplatz{6}
+\end{minipage}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G5}{Ablesen}{3 P}
+Stelle die Gleichung der abgebildeten Geraden auf. Die beiden Punkte liegen auf Gitterpunkten.
+
+\smallskip
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+\gitter{-2}{6}{-4}{4}{\draw[lpblau,line width=1.2pt] (-2,-10/3) -- (6,2);
+  \fill (0,-2) circle (2.2pt); \fill (3,0) circle (2.2pt);}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+\lpplatz{6}
+\end{minipage}
+\end{lpaufgabe}
+
+\lpteil{Teil C · Gleichung aufstellen}{Kapitel 4 · 10 Punkte}
+
+\begin{lpaufgabe}{G6}{Infusion}{4 P}
+Ein Infusionsbeutel enthält $750$ ml. Die Infusion läuft mit $3$ ml pro Minute.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Schreib eine Gleichung für den Inhalt $V$ (in ml) nach $t$ Minuten.
+\item Nach wie vielen Minuten ist der Beutel leer?
+\item Zeichne den Graphen von $t = 0$ bis zum Zeitpunkt, an dem der Beutel leer ist.
+\end{enumerate}
+
+\smallskip
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
+\sachgitter{6}{8}{50}{100}{}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}
+\lpplatz{7}
+\end{minipage}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G7}{Zwei Punkte}{3 P}
+Bestimme die Gleichung der Geraden durch $P(2 \mid 1)$ und $Q(6 \mid 7)$ und mach die Probe mit $Q$.
+\lpplatz{5}
+\end{lpaufgabe}
+
+\begin{lpaufgabe}{G8}{Neue Rate}{3 P}
+Ein Beutel enthält $600$ ml und läuft mit $4$ ml pro Minute. Nach $50$ Minuten wird auf $2$ ml pro Minute gestellt.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=3pt]
+\item Wie viel ist beim Umstellen noch im Beutel?
+\item Nach wie vielen Minuten (ab Beginn) ist er leer?
+\item Zeichne den Graphen für den ganzen Ablauf.
+\end{enumerate}
+
+\smallskip
+\begin{minipage}[t]{0.5\linewidth}\vspace{0pt}
+\sachgitter{6}{7}{50}{100}{}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\linewidth}\vspace{0pt}
+\lpplatz{6}
+\end{minipage}
+\end{lpaufgabe}
+\end{document}

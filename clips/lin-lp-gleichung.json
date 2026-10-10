@@ -1,0 +1,1233 @@
+{
+ "titel": "Funktionen sehen: Die Gleichung finden",
+ "dateiname": "lin-lp-gleichung",
+ "kurzbeschrieb": "Aus dem Graphen: b = 3 ablesen, Steigungsdreieck 2 nach rechts, 1 hinunter, y = −1/2 x + 3; aus zwei Punkten P(2 | 5), Q(6 | 7): m = 1/2, b = 4; Infusion 500 ml, 2 ml/min, leer nach 250 min; Wechsel nach 100 min auf 1 ml/min: Knick bei (100 | 300), leer nach 400 min; Fehler b mit y-Wert verwechselt.",
+ "schlagworte": [
+  "Geradengleichung",
+  "zwei Punkte",
+  "Sachverhalt",
+  "Infusion"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 7,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Ablesen",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Welche Gleichung gehört zu dieser Geraden? Lies zuerst b ab. Die Gerade schneidet die y-Achse bei drei: b ist drei.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": -0.5,
+       "q": 3,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.36,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 3,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "(0 | 3)",
+       "beschriftung_bei": [
+        0.3,
+        3.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ],
+     "achsen": false,
+     "raster": false
+    },
+    {
+     "typ": "formel",
+     "text": "b = \\fb{3}",
+     "x": 150,
+     "y": 300,
+     "groesse": 62,
+     "ein": 6.6
+    }
+   ],
+   "dauer": 10.37
+  },
+  {
+   "name": "Steigung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Dann das Steigungsdreieck von null, drei aus: zwei nach rechts und eins hinunter. m ist minus eins durch zwei. Die Gleichung heisst y gleich minus eins durch zwei x plus drei.",
+   "elemente": [
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         -0.5,
+         3
+        ]
+       ],
+       "farbe": 1,
+       "dreieck": {
+        "x": 0,
+        "dx": 2,
+        "farbe": 5,
+        "ein": 0.99
+       }
+      }
+     ],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 3,
+       "farbe": 2,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    },
+    {
+     "typ": "formel",
+     "text": "b = \\fb{3}",
+     "x": 150,
+     "y": 260,
+     "groesse": 56,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{-1}{2} = \\fa{-\\tfrac{1}{2}}",
+     "x": 150,
+     "y": 370,
+     "groesse": 56,
+     "ein": 4.91
+    },
+    {
+     "typ": "formel",
+     "text": "y = \\fa{-\\tfrac{1}{2}}x + \\fb{3}",
+     "x": 150,
+     "y": 560,
+     "groesse": 62,
+     "ein": 7.07
+    }
+   ],
+   "dauer": 11.22
+  },
+  {
+   "name": "Zweipunkte",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ohne Bild, nur zwei Punkte: P mit zwei und fünf, Q mit sechs und sieben. Zuerst m: sieben minus fünf durch sechs minus zwei, das gibt eins durch zwei. Dann setzt du P ein: fünf gleich eins durch zwei mal zwei plus b, also b gleich vier. Probe mit Q: drei plus vier gibt sieben.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "P(2 \\mid 5), \\quad Q(6 \\mid 7)",
+     "x": 150,
+     "y": 230,
+     "groesse": 50,
+     "ein": 1.79
+    },
+    {
+     "typ": "formel",
+     "text": "m = \\dfrac{7 - 5}{6 - 2} = \\fa{\\tfrac{1}{2}}",
+     "x": 150,
+     "y": 330,
+     "groesse": 50,
+     "ein": 5.47
+    },
+    {
+     "typ": "formel",
+     "text": "5 = \\tfrac{1}{2} \\cdot 2 + b \\quad \\Rightarrow \\quad \\fb{b = 4}",
+     "x": 150,
+     "y": 490,
+     "groesse": 50,
+     "ein": 10.13
+    },
+    {
+     "typ": "formel",
+     "text": "y = \\tfrac{1}{2}x + 4: \\quad \\tfrac{1}{2} \\cdot 6 + 4 = \\fc{7}",
+     "x": 150,
+     "y": 610,
+     "groesse": 50,
+     "ein": 15.25
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 5,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "P(2 | 5)",
+       "beschriftung_bei": [
+        2.26,
+        4.5
+       ]
+      },
+      {
+       "x": 6,
+       "y": 7,
+       "farbe": 5,
+       "anker": "start",
+       "beschriftung": "Q(6 | 7)",
+       "beschriftung_bei": [
+        6.26,
+        6.5
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 15.25,
+     "geraden": [
+      {
+       "m": 0.5,
+       "q": 4,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      8
+     ],
+     "ybereich": [
+      -1,
+      8
+     ],
+     "achsen": false,
+     "raster": false
+    }
+   ],
+   "dauer": 21.82
+  },
+  {
+   "name": "Infusion",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Eine Infusion enthält fünfhundert Milliliter und läuft mit zwei Millilitern pro Minute. Der Inhalt nach t Minuten: V gleich minus zwei t plus fünfhundert. Leer ist sie bei V gleich null, nach zweihundertfünfzig Minuten.",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "am Anfang: @500 ml@|pro Minute: @− 2 ml@",
+     "x": 150,
+     "y": 240,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 1.37
+    },
+    {
+     "typ": "formel",
+     "text": "V = \\fa{-2}t + \\fb{500}",
+     "x": 150,
+     "y": 420,
+     "groesse": 60,
+     "ein": 5.57
+    },
+    {
+     "typ": "formel",
+     "text": "-2t + 500 = 0 \\qquad \\fc{t = 250}",
+     "x": 150,
+     "y": 540,
+     "groesse": 52,
+     "ein": 9.51
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.57,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        500
+       ],
+       "bis": [
+        250,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 12.27,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 250,
+       "y": 0,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(250 | 0)",
+       "beschriftung_bei": [
+        265.022,
+        33.333
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    }
+   ],
+   "dauer": 16.1
+  },
+  {
+   "name": "Wechsel",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nach hundert Minuten wird auf einen Milliliter pro Minute gestellt. Jetzt sind noch dreihundert Milliliter drin. Von dort läuft der Graph flacher weiter: Er knickt, er springt nicht. Leer ist die Infusion nach vierhundert Minuten.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "500 - 2 \\cdot 100 = \\fb{300}",
+     "x": 150,
+     "y": 260,
+     "groesse": 52,
+     "ein": 3.89
+    },
+    {
+     "typ": "formel",
+     "text": "300 : 1 = 300 \\qquad 100 + 300 = \\fc{400}",
+     "x": 150,
+     "y": 380,
+     "groesse": 50,
+     "ein": 9.93
+    },
+    {
+     "typ": "notiz",
+     "text": "Knick, kein Sprung",
+     "x": 150,
+     "y": 520,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 8.35
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        500
+       ],
+       "bis": [
+        250,
+        0
+       ],
+       "farbe": 5,
+       "dicke": 3,
+       "gestrichelt": true
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.89,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        0,
+        500
+       ],
+       "bis": [
+        100,
+        300
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.89,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 100,
+       "y": 300,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "(100 | 300)",
+       "beschriftung_bei": [
+        118,
+        345
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 7.39,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]",
+     "figuren": [
+      {
+       "art": "strecke",
+       "von": [
+        100,
+        300
+       ],
+       "bis": [
+        400,
+        0
+       ],
+       "farbe": 1,
+       "dicke": 5
+      }
+     ]
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 10.49,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 400,
+       "y": 0,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(400 | 0)",
+       "beschriftung_bei": [
+        395,
+        45
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -30,
+      490
+     ],
+     "ybereich": [
+      -40,
+      560
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ],
+      [
+       500,
+       "500"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "t [min]",
+     "yname": "V [ml]"
+    }
+   ],
+   "dauer": 14.93
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: b mit einem y-Wert verwechselt. Bei P mit zwei und fünf ist b nicht fünf. b ist der Wert bei x gleich null.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "P(2 \\mid 5): \\quad \\fd{b \\neq 5}",
+     "x": 150,
+     "y": 300,
+     "groesse": 58,
+     "ein": 2.92
+    },
+    {
+     "typ": "notiz",
+     "text": "b = Wert bei x = 0",
+     "x": 150,
+     "y": 440,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 2.72
+    }
+   ],
+   "dauer": 8.92
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: Aus dem Graphen liest du b ab und misst m mit einem Steigungsdreieck. Aus zwei Punkten berechnest du zuerst m und setzt dann einen Punkt ein. Ändert sich die Rate, knickt der Graph und springt nicht.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "Graph: b ablesen, m messen|zwei Punkte: zuerst m, dann einsetzen|neue Rate: Knick, kein Sprung",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.79
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.29
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Steigung",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "b = 3. Wie gross ist die Steigung m dieser Geraden?",
+   "optionen": [
+    "1/2",
+    "−1/2",
+    "−2"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "Zähl nach: Was kommt in den Nenner, «nach rechts» oder «hinunter»?",
+    "0": "Der Betrag stimmt. Steigt die Gerade, oder fällt sie?"
+   },
+   "sprich": "b ist drei. Wie gross ist die Steigung m dieser Geraden?",
+   "rueck_sprich": {
+    "2": "Zähl nach: Was kommt in den Nenner, nach rechts oder hinunter?",
+    "0": "Der Betrag stimmt. Steigt die Gerade, oder fällt sie?"
+   }
+  }
+ ]
+}

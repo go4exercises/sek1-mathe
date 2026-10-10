@@ -1,0 +1,9 @@
+0.40	Ein Wassertank enthält am Anfang zweihundert Liter. Pro Minute fliessen fünfzehn Liter dazu. Wie viel Wasser ist nach x Minuten im Tank?
+9.36	Nach einer Minute sind es zweihundertfünfzehn Liter. Nach zwei Minuten zweihundertdreissig. Nach drei Minuten zweihundertfünfundvierzig. Bei jedem Schritt kommt gleich viel dazu: fünfzehn Liter. Darum liegen die Punkte auf einer Geraden.
+24.34	Nach vier Minuten kommen vier mal fünfzehn Liter dazu, also sechzig. Im Tank sind dann zweihundertsechzig Liter.
+31.86	Nach x Minuten kommen x mal fünfzehn Liter dazu. Also y gleich fünfzehn x plus zweihundert. Die zweihundert ist der Anfangswert b: der Wert bei x gleich null. Die fünfzehn ist die Änderung pro Minute: m.
+47.63	Allgemein schreibst du y gleich m mal x plus b. Ihr Graph ist eine Gerade, darum heisst sie lineare Funktion. Nimmt der Wert ab, ist m negativ. Ein Tank mit zweihundert Litern, aus dem pro Minute zwanzig Liter abfliessen: y gleich minus zwanzig x plus zweihundert.
+66.73	Umgekehrt: Wann sind dreihundertfünfzig Liter im Tank? Setz y gleich dreihundertfünfzig und löse die Gleichung. Fünfzehn x ist hundertfünfzig, also x gleich zehn. Nach zehn Minuten.
+79.37	Häufiger Fehler: m und b vertauscht. y gleich zweihundert x plus fünfzehn startet mit fünfzehn Litern. Prüf mit x gleich null: Am Anfang müssen zweihundert Liter drin sein. Mit x gleich eins merkst du nichts, denn beide Gleichungen geben dort zweihundertfünfzehn.
+95.99	Zum Mitnehmen: y gleich m mal x plus b. b ist der Anfangswert bei x gleich null, m die Änderung pro Schritt. Nimmt der Wert ab, ist m negativ. Und die Probe machst du mit x gleich null.
+108.41	Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.

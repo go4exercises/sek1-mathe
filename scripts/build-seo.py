@@ -117,6 +117,11 @@ SEITEN = {
    titel='Leitprogramm Bruchterme, Gleichungen und Formeln — kürzen, Hauptnenner, Gleichungen lösen, Formeln umstellen',
    beschreibung='Leitprogramm Sekundarstufe I: Bruchterme kürzen und berechnen, lineare Gleichungen mit Klammern und Brüchen lösen, Lösungsmenge und Probe, Formeln umstellen — mit Übungen.',
    themen=['Mathematik', 'Bruchterme', 'Kürzen', 'Hauptnenner', 'Lineare Gleichungen', 'Lösungsmenge', 'Formeln umstellen', 'Leitprogramm', 'Sekundarstufe I']),
+ 'leitprogramme/lineare-funktionen.html': dict(
+   typ='article', lrt='Leitprogramm',
+   titel='Leitprogramm Lineare Funktionen — Anfangswert, Steigung, Geraden zeichnen, Gleichung aufstellen',
+   beschreibung='Leitprogramm Sekundarstufe I: lineare Funktionen y = m·x + b mit Anfangswert und Änderung, Steigungsdreieck, Geraden zeichnen, Nullstelle, Gleichung aus Graph, zwei Punkten und Sachverhalt — mit Übungen.',
+   themen=['Mathematik', 'Lineare Funktionen', 'Steigung', 'Steigungsdreieck', 'Gerade', 'Nullstelle', 'Geradengleichung', 'Leitprogramm', 'Sekundarstufe I']),
 
 }
 

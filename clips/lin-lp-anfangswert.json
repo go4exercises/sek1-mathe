@@ -1,0 +1,1637 @@
+{
+ "titel": "Funktionen sehen: Anfangswert und Änderung",
+ "dateiname": "lin-lp-anfangswert",
+ "kurzbeschrieb": "Tank mit 200 l, pro Minute 15 l dazu: Wertetabelle, Punkte auf einer Geraden, y = 15x + 200; b = Anfangswert, m = Änderung pro Minute; abnehmend: y = −20x + 200; rückwärts: 350 l nach 10 Minuten; Fehler m und b vertauscht.",
+ "schlagworte": [
+  "lineare Funktion",
+  "Anfangswert",
+  "Änderung",
+  "Wertetabelle",
+  "Gerade"
+ ],
+ "themenbereich": "Funktionen · Lineare Funktionen",
+ "fach": "Sekundarstufe I",
+ "lerngebiet": "3 · Funktionen",
+ "lektion": [
+  "lp-linear"
+ ],
+ "stufe": [
+  "Sek I"
+ ],
+ "datum": "2026-10-10",
+ "theme": "begreifbar-schlicht",
+ "latex": true,
+ "reihe": "Funktionen sehen",
+ "folge": 1,
+ "nachlauf": 2.6,
+ "probe": true,
+ "_probe": "Einfuehrungsclip des Leitprogramms lineare-funktionen; gehoert dorthin, nicht in die Clip-Bibliothek.",
+ "szenen": [
+  {
+   "name": "Tank",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Ein Wassertank enthält am Anfang zweihundert Liter. Pro Minute fliessen fünfzehn Liter dazu. Wie viel Wasser ist nach x Minuten im Tank?",
+   "elemente": [
+    {
+     "typ": "notiz",
+     "text": "am Anfang: @200 l@",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "farbe": "orange",
+     "ein": 1.86
+    },
+    {
+     "typ": "notiz",
+     "text": "pro Minute: @+ 15 l@",
+     "x": 150,
+     "y": 420,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 3.6
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.86,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 200,
+       "farbe": 2,
+       "anker": "start",
+       "beschriftung": "(0 | 200)",
+       "beschriftung_bei": [
+        0.347,
+        174.444
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 8.96
+  },
+  {
+   "name": "Tabelle",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nach einer Minute sind es zweihundertfünfzehn Liter. Nach zwei Minuten zweihundertdreissig. Nach drei Minuten zweihundertfünfundvierzig. Bei jedem Schritt kommt gleich viel dazu: fünfzehn Liter. Darum liegen die Punkte auf einer Geraden.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{c|cccc} x & 0 & 1 & 2 & 3 \\\\ \\hline y & 200 & 215 & 230 & 245 \\end{array}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 0.3
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 200,
+       "farbe": 2,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.48,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 1,
+       "y": 215,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.36,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 2,
+       "y": 230,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 5.6,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 3,
+       "y": 245,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "notiz",
+     "text": "+ 15 bei jedem Schritt",
+     "x": 150,
+     "y": 520,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 8.54
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 13.02,
+     "geraden": [
+      {
+       "m": 15,
+       "q": 200,
+       "farbe": 1,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 14.98
+  },
+  {
+   "name": "Vorhersage",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nach vier Minuten kommen vier mal fünfzehn Liter dazu, also sechzig. Im Tank sind dann zweihundertsechzig Liter.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\begin{array}{c|cccc} x & 0 & 1 & 2 & 3 \\\\ \\hline y & 200 & 215 & 230 & 245 \\end{array}",
+     "x": 150,
+     "y": 300,
+     "groesse": 50,
+     "ein": 0.05
+    },
+    {
+     "typ": "formel",
+     "text": "200 + 4 \\cdot \\fa{15} = \\fc{260}",
+     "x": 150,
+     "y": 520,
+     "groesse": 56,
+     "ein": 1.88
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 0,
+       "y": 200,
+       "farbe": 2,
+       "anker": "start"
+      },
+      {
+       "x": 1,
+       "y": 215,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 2,
+       "y": 230,
+       "farbe": 5,
+       "anker": "start"
+      },
+      {
+       "x": 3,
+       "y": 245,
+       "farbe": 5,
+       "anker": "start"
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 4.66,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 4,
+       "y": 260,
+       "farbe": 3,
+       "anker": "start",
+       "beschriftung": "(4 | 260)",
+       "beschriftung_bei": [
+        4.347,
+        234.444
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 7.52
+  },
+  {
+   "name": "Gleichung",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Nach x Minuten kommen x mal fünfzehn Liter dazu. Also y gleich fünfzehn x plus zweihundert. Die zweihundert ist der Anfangswert b: der Wert bei x gleich null. Die fünfzehn ist die Änderung pro Minute: m.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{15} \\cdot x + \\fb{200}",
+     "x": 150,
+     "y": 300,
+     "groesse": 66,
+     "ein": 3.48
+    },
+    {
+     "typ": "notiz",
+     "text": "@b = 200@: Anfangswert, bei x = 0",
+     "x": 150,
+     "y": 450,
+     "groesse": 42,
+     "farbe": "orange",
+     "ein": 7.52
+    },
+    {
+     "typ": "notiz",
+     "text": "@m = 15@: Änderung pro Minute",
+     "x": 150,
+     "y": 540,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 11.06
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 3.48,
+     "geraden": [
+      {
+       "bewegung": [
+        [
+         0,
+         15,
+         200
+        ]
+       ],
+       "farbe": 1,
+       "yachse": {
+        "farbe": 2,
+        "beschriftung": false
+       }
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 15.77
+  },
+  {
+   "name": "Allgemein",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Allgemein schreibst du y gleich m mal x plus b. Ihr Graph ist eine Gerade, darum heisst sie lineare Funktion. Nimmt der Wert ab, ist m negativ. Ein Tank mit zweihundert Litern, aus dem pro Minute zwanzig Liter abfliessen: y gleich minus zwanzig x plus zweihundert.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "y = \\fa{m} \\cdot x + \\fb{b}",
+     "x": 150,
+     "y": 280,
+     "groesse": 72,
+     "ein": 0.45
+    },
+    {
+     "typ": "notiz",
+     "text": "lineare Funktion: Graph ist eine Gerade",
+     "x": 150,
+     "y": 420,
+     "groesse": 42,
+     "farbe": "blau",
+     "ein": 5.69
+    },
+    {
+     "typ": "formel",
+     "text": "y = \\fa{-20} \\cdot x + \\fb{200}",
+     "x": 150,
+     "y": 560,
+     "groesse": 60,
+     "ein": 14.27
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 15,
+       "q": 200,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 12.51,
+     "geraden": [
+      {
+       "m": -20,
+       "q": 200,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 19.1
+  },
+  {
+   "name": "Rückwärts",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Umgekehrt: Wann sind dreihundertfünfzig Liter im Tank? Setz y gleich dreihundertfünfzig und löse die Gleichung. Fünfzehn x ist hundertfünfzig, also x gleich zehn. Nach zehn Minuten.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "15x + 200 = 350",
+     "x": 150,
+     "y": 280,
+     "groesse": 58,
+     "ein": 3.73
+    },
+    {
+     "typ": "formel",
+     "text": "15x = 150",
+     "x": 150,
+     "y": 400,
+     "groesse": 58,
+     "ein": 7.43
+    },
+    {
+     "typ": "formel",
+     "text": "\\fc{x = 10}",
+     "x": 150,
+     "y": 520,
+     "groesse": 62,
+     "ein": 10.07
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 0.05,
+     "geraden": [
+      {
+       "m": 15,
+       "q": 200,
+       "farbe": 1
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 1.47,
+     "geraden": [
+      {
+       "m": 0,
+       "q": 350,
+       "farbe": 5,
+       "gestrichelt": true,
+       "dicke": 3
+      }
+     ],
+     "punkte": [],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    },
+    {
+     "typ": "graf",
+     "x": 1010,
+     "y": 175,
+     "breite": 760,
+     "hoehe": 760,
+     "abstand": 0,
+     "anim": "fade",
+     "ein": 10.07,
+     "geraden": [],
+     "punkte": [
+      {
+       "x": 10,
+       "y": 350,
+       "farbe": 3,
+       "anker": "end",
+       "beschriftung": "(10 | 350)",
+       "beschriftung_bei": [
+        9.6,
+        390
+       ]
+      }
+     ],
+     "pfeile": true,
+     "tippbar": true,
+     "xbereich": [
+      -1,
+      11
+     ],
+     "ybereich": [
+      -30,
+      430
+     ],
+     "xteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       2,
+       "2"
+      ],
+      [
+       4,
+       "4"
+      ],
+      [
+       6,
+       "6"
+      ],
+      [
+       8,
+       "8"
+      ],
+      [
+       10,
+       "10"
+      ]
+     ],
+     "yteilung": [
+      [
+       0,
+       "0"
+      ],
+      [
+       100,
+       "100"
+      ],
+      [
+       200,
+       "200"
+      ],
+      [
+       300,
+       "300"
+      ],
+      [
+       400,
+       "400"
+      ]
+     ],
+     "achsen": false,
+     "raster": false,
+     "xname": "x [min]",
+     "yname": "y [l]"
+    }
+   ],
+   "dauer": 12.64
+  },
+  {
+   "name": "Fehler",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Häufiger Fehler: m und b vertauscht. y gleich zweihundert x plus fünfzehn startet mit fünfzehn Litern. Prüf mit x gleich null: Am Anfang müssen zweihundert Liter drin sein. Mit x gleich eins merkst du nichts, denn beide Gleichungen geben dort zweihundertfünfzehn.",
+   "elemente": [
+    {
+     "typ": "formel",
+     "text": "\\fd{y = 200x + 15}",
+     "x": 150,
+     "y": 280,
+     "groesse": 62,
+     "ein": 2.37
+    },
+    {
+     "typ": "formel",
+     "text": "x = 0: \\quad \\fd{15} \\neq 200",
+     "x": 150,
+     "y": 420,
+     "groesse": 54,
+     "ein": 6.99
+    },
+    {
+     "typ": "formel",
+     "text": "x = 1: \\quad 215 = 215",
+     "x": 150,
+     "y": 540,
+     "groesse": 54,
+     "ein": 12.43
+    },
+    {
+     "typ": "notiz",
+     "text": "Probe mit x = 0, nicht mit x = 1",
+     "x": 150,
+     "y": 680,
+     "groesse": 42,
+     "farbe": "rot",
+     "ein": 13.15
+    }
+   ],
+   "dauer": 16.62
+  },
+  {
+   "name": "Merke",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Zum Mitnehmen: y gleich m mal x plus b. b ist der Anfangswert bei x gleich null, m die Änderung pro Schritt. Nimmt der Wert ab, ist m negativ. Und die Probe machst du mit x gleich null.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Zum Mitnehmen",
+     "x": 150,
+     "y": 250,
+     "groesse": 76
+    },
+    {
+     "typ": "notiz",
+     "text": "y = m · x + b|b: Anfangswert (bei x = 0)|m: Änderung pro Schritt, abnehmend negativ|Probe mit x = 0",
+     "x": 150,
+     "y": 400,
+     "groesse": 44,
+     "farbe": "blau",
+     "ein": 1.2
+    }
+   ],
+   "dauer": 12.42
+  },
+  {
+   "name": "Jetzt du",
+   "layout": "zentriert",
+   "oben": 200,
+   "sprecher": "Jetzt du: Erkunde diese Zusammenhänge in der Animation unter dem Clip und löse die Aufgaben.",
+   "elemente": [
+    {
+     "typ": "titel",
+     "text": "Jetzt du",
+     "x": 150,
+     "y": 280,
+     "groesse": 86
+    },
+    {
+     "typ": "notiz",
+     "text": "Erkunde diese Zusammenhänge|in der Animation unter dem Clip|und löse die Aufgaben.",
+     "x": 150,
+     "y": 430,
+     "groesse": 50,
+     "farbe": "blau",
+     "ein": 0.6
+    }
+   ],
+   "dauer": 6.51
+  }
+ ],
+ "fragen": [
+  {
+   "szene": "Vorhersage",
+   "bei": 0.3,
+   "typ": "wahl",
+   "text": "Wie viel Wasser ist nach 4 Minuten im Tank?",
+   "optionen": [
+    "800 l",
+    "260 l",
+    "215 l"
+   ],
+   "richtig": 1,
+   "rueck": {
+    "1": "Ja.",
+    "2": "So viel ist es nach 1 Minute. Bis 4 Minuten kommen viermal 15 l dazu.",
+    "0": "Die 200 l sind nur einmal da, am Anfang. Vervielfacht wird, was pro Minute dazukommt."
+   },
+   "sprich": "Wie viel Wasser ist nach vier Minuten im Tank?",
+   "rueck_sprich": {
+    "2": "So viel ist es nach einer Minute. Bis vier Minuten kommen viermal fünfzehn Liter dazu.",
+    "0": "Die zweihundert Liter sind nur einmal da, am Anfang. Vervielfacht wird, was pro Minute dazukommt."
+   }
+  }
+ ]
+}
