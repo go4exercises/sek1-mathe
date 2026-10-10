@@ -107,9 +107,10 @@
 
   /* ── Leitprogramme im Zentrum (Entscheid Auftraggeber 09.10.2026): keine Themenseiten,
      die Startseite zeigt nur fertige Leitprogramme, gruppiert nach Bereich. ── */
-  .lp-intro { max-width: 68ch; margin: 6px auto 26px; text-align: center; font-family: var(--sans); font-size: 0.98rem; color: var(--tinte-2); line-height: 1.55; }
+  .lp-intro { max-width: 112ch; margin: 10px auto 0; text-align: center; font-family: var(--sans); font-size: 0.98rem; color: var(--tinte-2); line-height: 1.55; }
   .lp-bereich { display: flex; align-items: center; gap: 10px; margin: 28px 0 12px; font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--petrol); }
-  .lp-bereich .lp-nr { font-family: var(--mono); font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: var(--petrol-hell); color: var(--petrol); }
+  .lp-titel .lp-nr { display: inline-block; min-width: 1.6em; margin-right: 6px; padding: 1px 7px; border-radius: 6px; background: var(--petrol); color: var(--weiss);
+    font-family: var(--mono); font-size: 0.85rem; font-weight: 700; text-align: center; vertical-align: 0.2em; }
   .lp-raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .lp-karte { position: relative; display: flex; flex-direction: column; gap: 10px; background: var(--weiss); border: 1.5px solid var(--petrol-rand);
     border-radius: 12px; padding: 18px 20px 16px 24px; overflow: hidden; }
@@ -196,23 +197,22 @@
 <div class="hero">
   <div class="hero-ew"><span>Mathematik für die <strong>Sekundarstufe I</strong></span></div>
   <h1>Mathematik <span>Sek I</span></h1>
+  <p class="lp-intro">Ein Leitprogramm führt dich selbstständig durch ein Thema: Clips zum Zuschauen, Animationen zum Tüfteln, Kontrollfragen, Übungen mit sofortiger Rückmeldung und Aufgaben auf Papier — am Schluss ein Gesamttest, der dir zeigt, wo du stehst.</p>
 </div>
 
 <main class="page">
 
-  <p class="lp-intro">Ein Leitprogramm führt dich selbstständig durch ein Thema: Clips zum Zuschauen, Animationen zum
-     Tüfteln, Kontrollfragen, Übungen mit sofortiger Rückmeldung und Aufgaben auf Papier — am Schluss ein Gesamttest,
-     der dir zeigt, wo du stehst.</p>
 
 <!-- LEITPROGRAMME:ANFANG — von Hand gepflegt, nur fertige Leitprogramme. Neues Leitprogramm: Karte hier
      (unter seinem Bereich), Eintrag in nav.js (SITE.leitprogramme, GROUPS) und in scripts/build-seo.py.
      Karte (Entscheid Auftraggeber 10.10.2026): Titel als Link, Kapitel als Direktlinks (#k1 …), ein Vertiefungslink
-     auf die passende Themenseite von Mathe begreifbar (neuer Tab). Kein «Starten», keine Kennzahlen. -->
+     auf die passende Themenseite von Mathe begreifbar (neuer Tab). Kein «Starten», keine Kennzahlen.
+     Die Nummer vor dem Titel ist die didaktische Reihenfolge (= nr in nav.js); Bereiche ohne Nummer. -->
   <section id="leitprogramme" aria-label="Leitprogramme">
-    <h2 class="lp-bereich"><span class="lp-nr">1</span> Arithmetik/Algebra</h2>
+    <h2 class="lp-bereich">Arithmetik/Algebra</h2>
     <div class="lp-raster">
       <div class="lp-karte">
-        <a class="lp-titel" href="leitprogramme/bruchrechnen.html">Bruchrechnen</a>
+        <a class="lp-titel" href="leitprogramme/bruchrechnen.html"><span class="lp-nr" title="Reihenfolge">1</span>Bruchrechnen</a>
         <ol class="lp-kapitel">
           <li><a href="leitprogramme/bruchrechnen.html#k1">Erweitern, Kürzen, Vergleichen</a></li>
           <li><a href="leitprogramme/bruchrechnen.html#k2">Addieren und Subtrahieren</a></li>
@@ -222,7 +222,7 @@
         <a class="lp-vertiefung" href="https://mathe.begreifbar.ch/grundlagen/g1-2-zahlen-grundoperationen.html" target="_blank" rel="noopener">Vertiefung: Zahlen und Grundoperationen ↗</a>
       </div>
       <div class="lp-karte">
-        <a class="lp-titel" href="leitprogramme/terme-faktorisieren.html">Terme und Faktorisieren</a>
+        <a class="lp-titel" href="leitprogramme/terme-faktorisieren.html"><span class="lp-nr" title="Reihenfolge">2</span>Terme und Faktorisieren</a>
         <ol class="lp-kapitel">
           <li><a href="leitprogramme/terme-faktorisieren.html#k1">Terme vereinfachen</a></li>
           <li><a href="leitprogramme/terme-faktorisieren.html#k2">Klammer mal Klammer</a></li>
@@ -232,10 +232,10 @@
         <a class="lp-vertiefung" href="https://mathe.begreifbar.ch/grundlagen/g1-3-algebraische-terme.html" target="_blank" rel="noopener">Vertiefung: Algebraische Terme ↗</a>
       </div>
     </div>
-    <h2 class="lp-bereich"><span class="lp-nr">2</span> Gleichungen</h2>
+    <h2 class="lp-bereich">Gleichungen</h2>
     <div class="lp-raster">
       <div class="lp-karte">
-        <a class="lp-titel" href="leitprogramme/gleichungen-formeln.html">Bruchterme, Gleichungen und Formeln</a>
+        <a class="lp-titel" href="leitprogramme/gleichungen-formeln.html"><span class="lp-nr" title="Reihenfolge">3</span>Bruchterme, Gleichungen und Formeln</a>
         <ol class="lp-kapitel">
           <li><a href="leitprogramme/gleichungen-formeln.html#k1">Bruchterme kürzen</a></li>
           <li><a href="leitprogramme/gleichungen-formeln.html#k2">Rechnen mit Bruchtermen</a></li>

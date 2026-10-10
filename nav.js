@@ -10,7 +10,8 @@
 //  Aufruf:     buildNav({ bereich, id, homepage })   — Leitprogramm: bereich 'lp'
 // ─────────────────────────────────────────────────────────────
 
-// Einzige Quelle der Leitprogramm-Liste (Menü, Suchindex, Clip-Zuordnung).
+// Einzige Quelle der Leitprogramm-Liste (Menü, Suchindex, Clip-Zuordnung). nr = didaktische Reihenfolge
+// (Menü und Startseite zeigen sie; Bereiche ohne Nummer, Entscheid Auftraggeber 10.10.2026).
 // Neues Leitprogramm: Eintrag hier, Karte in index.html, Eintrag in scripts/build-seo.py.
 const SITE = {
   leitprogramme: [
@@ -45,12 +46,12 @@ function buildNav(cfg) {
       const items = g.ids.map(id => {
         const p = pageById[id];
         return `<a href="${prefix}${p.url}" class="${p.id===cfg.id?'dd-aktiv':''}">
-          <span class="dd-nr">▤</span>
+          <span class="dd-nr">${p.nr}</span>
           <span class="dd-tit">${p.titel}</span>
         </a>`;
       }).join('');
       return `<div class="dd-gruppe">
-        <div class="dd-gruppe-titel">${g.nr} · ${g.titel}</div>
+        <div class="dd-gruppe-titel">${g.titel}</div>
         ${items}
       </div>`;
     }).join('');
@@ -63,10 +64,10 @@ function buildNav(cfg) {
     return groups.map(g => {
       const items = g.ids.map(id => {
         const p = pageById[id];
-        return `<a href="${prefix}${p.url}" class="${p.id===cfg.id?'mn-aktiv':''}">▤ · ${p.titel}</a>`;
+        return `<a href="${prefix}${p.url}" class="${p.id===cfg.id?'mn-aktiv':''}">${p.nr} · ${p.titel}</a>`;
       }).join('');
       return `<details class="mn-lg"${g.ids.indexOf(cfg.id) !== -1 ? ' open' : ''}>
-        <summary>${g.nr} · ${g.titel}</summary>
+        <summary>${g.titel}</summary>
         <div class="mn-lg-body">${items}</div>
       </details>`;
     }).join('');
