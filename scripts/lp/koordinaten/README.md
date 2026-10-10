@@ -13,7 +13,7 @@ Figuren aus Koordinaten (nur Dreiecke, deren Ecken auf dem umschliessenden Recht
 
 | Datei | Zweck | laufen lassen? |
 |---|---|---|
-| `seite.py` | baut `leitprogramme/koordinaten.html` vollständig aus diesem Ordner (nur der SEO-Block kommt aus der bestehenden Seite) | **ja**, nach jeder Änderung hier |
+| `seite.py` | baut `leitprogramme/koordinaten.html` vollständig aus diesem Ordner (nur SEO-Block und Footer kommen aus der bestehenden Seite, beide schreibt `build-seo.py`) | **ja**, nach jeder Änderung hier |
 | `kopf.css` | Grundgerüst der Leitprogramme (wie Bruchrechnen) | wird eingebunden |
 | `seite.css` | wie Pythagoras | wird eingebunden |
 | `basis.js` | Thema hell/dunkel, Fortschritt (`lp-koo-*`), Schiene, «alle Lösungen» | wird eingebunden |

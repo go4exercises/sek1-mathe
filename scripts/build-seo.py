@@ -52,6 +52,13 @@ AUTOR = 'Raphael Arnold Kohler'
 LIZENZ = 'https://creativecommons.org/licenses/by-nc/4.0/deed.de'
 STAND = '2026-10-09'
 
+# Footer jeder Seite (seit 10.10.2026 erzeugt wie der SEO-Kopf, aus TALS Mathe übernommen). Eine Version
+# fuer das ganze Lehrmittel, dieselbe wie in TALS Mathe und Physik (Entscheid Auftraggeber 10.10.2026);
+# Korrekturen aendern nur VERSION_STAND, eine Gruppe neuer Leitprogramme die Nummer (2.1, 2.2 …).
+VERSION = '2.0'
+VERSION_STAND = '10. Oktober 2026'          # Anzeigeform, nicht ISO
+FUSS_UNTERTITEL = 'Lernmaterial Mathematik für die Sekundarstufe I'
+
 # Bereiche — Quelle: nav.js (GROUPS)
 BEREICHE = {'1': 'Bereich 1 Arithmetik/Algebra',
             '2': 'Bereich 2 Gleichungen',
@@ -62,6 +69,8 @@ BEREICHE = {'1': 'Bereich 1 Arithmetik/Algebra',
 #               die jemand tatsaechlich eingibt.
 # themen:       Stichworte fuer schema.org/about
 # titel:        nur setzen, wo der <title> der Seite mehrdeutig ist.
+# ort:          zweite Footerzeile («Leitprogramm · Bruchrechnen»); fehlt sie, entfaellt die Zeile.
+# fuss:         False fuer Seiten ohne Footer (mit Kommentar warum).
 # Die Beschreibungen der Themenseiten sind Platzhalter, bis die Seite steht.
 SEITEN = {
  'index.html': dict(
@@ -70,31 +79,37 @@ SEITEN = {
    beschreibung='Kostenlose Leitprogramme Mathematik für die Sekundarstufe I: selbstständig lernen mit Clips, Animationen, Übungen mit Rückmeldung und Gesamttest — zuerst Bruchrechnen.',
    themen=['Mathematik', 'Sekundarstufe I', 'Leitprogramm', 'Bruchrechnen', 'Selbststudium']),
  'glossar.html': dict(
+   ort='Nachschlagen · Glossar',
    typ='article', lrt='Glossar',
    titel='Glossar — mathematische Begriffe von A bis Z',
    beschreibung='Mathematik-Glossar für die Sekundarstufe I: die zentralen Begriffe von A bis Z kurz erklärt, jeweils mit Formel und Verweis auf das passende Leitprogramm.',
    themen=['Mathematik', 'Glossar', 'Fachbegriffe', 'Sekundarstufe I']),
  'clips.html': dict(
+   ort='Nachschlagen · Clips',
    typ='article', lrt='Erklärclip',
    titel='Clips — kurze Animationen zu den Rechenwegen',
    beschreibung='Kurze Animationen zur Mathematik der Sekundarstufe I: Ein Clip baut einen Rechenweg Zeile für Zeile auf, mit Farbführung und Text zum Mitlesen.',
    themen=['Mathematik', 'Erklärclip', 'Animation', 'Sekundarstufe I', 'Rechenweg']),
  'leitprogramme.html': dict(
+   ort='Nachschlagen · Leitprogramme',
    typ='article', lrt='Leitprogramm', noindex=True,       # seit 09.10.2026 Weiterleitung auf die Startseite
    titel='Leitprogramme — selbstständig durch ein Thema',
    beschreibung='Leitprogramme zur Mathematik der Sekundarstufe I: Ein Thema in Kapiteln zum selbstständigen Durcharbeiten, mit Vorwissenstest, Beispielen, Aufgaben und Gesamttest.',
    themen=['Mathematik', 'Leitprogramm', 'Selbststudium', 'Sekundarstufe I']),
  'formelsammlung.html': dict(
+   ort='Nachschlagen · Formelsammlung',
    typ='article', lrt='Formelsammlung',
    titel='Formelsammlung Mathematik Sek I — alle Formeln nach Bereichen',
    beschreibung='Alle Formeln der Mathematik für die Sekundarstufe I auf einer Seite: Arithmetik und Algebra, Gleichungen und Geometrie, geordnet nach den Bereichen.',
    themen=['Mathematik', 'Formelsammlung', 'Formeln', 'Sekundarstufe I']),
  'rechtliches.html': dict(
+   ort='Nachschlagen · Rechtliches &amp; Datenschutz',
    typ='website',
    titel='Rechtliches & Datenschutz',
    beschreibung='Verantwortlichkeit, Haftung, Lizenz und Datenschutz von Sek1-Mathe begreifbar — ohne Cookies, ohne Tracking, alle Inhalte unter CC BY-NC 4.0.',
    themen=['Impressum', 'Datenschutz', 'Lizenz']),
  'feedback.html': dict(
+   fuss=False,  # eigener kleiner Fuss in der Formularkarte; Datei aus TALS Mathe (KERN)
    typ='website',
    titel='Kontakt & Feedback',
    beschreibung='Fehler melden, Verbesserungen vorschlagen oder Rückmeldung geben zu Sek1-Mathe begreifbar — ohne Anmeldung, Name und E-Mail freiwillig.',
@@ -103,46 +118,55 @@ SEITEN = {
  # ── Leitprogramme ─────────────────────────────────────────────────
  # Freigeschaltet am 09.10.2026 (Entscheid Auftraggeber; Hörprobe und KI-Test nach §15 folgen).
  'leitprogramme/bruchrechnen.html': dict(
+   ort='Leitprogramm · Bruchrechnen',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Bruchrechnen — erweitern, kürzen, addieren, multiplizieren, dividieren',
    beschreibung='Leitprogramm Bruchrechnen, Sekundarstufe I: erweitern und kürzen, Hauptnenner, mal und durch mit dem Kehrwert, Rechenreihenfolge, negative Brüche — mit Übungen.',
    themen=['Mathematik', 'Bruchrechnen', 'Brüche', 'Kürzen', 'Hauptnenner', 'Kehrwert', 'Rechenreihenfolge', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/terme-faktorisieren.html': dict(
+   ort='Leitprogramm · Terme und Faktorisieren',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Terme und Faktorisieren — vereinfachen, ausmultiplizieren, binomische Formeln',
    beschreibung='Leitprogramm Terme und Faktorisieren, Sekundarstufe I: zusammenfassen, Klammern auflösen, Klammer mal Klammer, binomische Formeln, ausklammern, Zweiklammersatz — mit Übungen.',
    themen=['Mathematik', 'Terme', 'Klammern', 'Ausmultiplizieren', 'Binomische Formeln', 'Faktorisieren', 'Ausklammern', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/gleichungen-formeln.html': dict(
+   ort='Leitprogramm · Bruchterme, Gleichungen und Formeln',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Bruchterme, Gleichungen und Formeln — kürzen, Hauptnenner, Gleichungen lösen, Formeln umstellen',
    beschreibung='Leitprogramm Sekundarstufe I: Bruchterme kürzen und berechnen, lineare Gleichungen mit Klammern und Brüchen lösen, Lösungsmenge und Probe, Formeln umstellen — mit Übungen.',
    themen=['Mathematik', 'Bruchterme', 'Kürzen', 'Hauptnenner', 'Lineare Gleichungen', 'Lösungsmenge', 'Formeln umstellen', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/funktionstypen.html': dict(
+   ort='Leitprogramm · Funktionstypen und Graphen',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Funktionstypen und Graphen — Parabel, Wurzel, Kehrwert, proportional, Weg-Zeit-Graphen',
    beschreibung='Leitprogramm Sekundarstufe I: Gerade, Parabel, Wurzel- und Kehrwertgraph erkennen, proportional, antiproportional oder linear mit Anfangswert, Weg-Zeit-Graphen lesen, zurückgelegter Weg und Restweg — mit Übungen.',
    themen=['Mathematik', 'Funktionen', 'Parabel', 'Wurzelfunktion', 'Kehrwertfunktion', 'Proportionalität', 'Antiproportional', 'Weg-Zeit-Diagramm', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/pythagoras.html': dict(
+   ort='Leitprogramm · Flächen, Pythagoras und Ähnlichkeit',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Flächen, Pythagoras und Ähnlichkeit — Grundseite und Höhe, Satz des Pythagoras, Sehne im Kreis, Streckfaktor',
    beschreibung='Leitprogramm Sekundarstufe I, Geometrie: Flächen von Dreieck, Parallelogramm und Trapez, Satz des Pythagoras, Hilfsdreieck in Rechteck, gleichschenkligem Dreieck und Kreis, ähnliche Figuren mit Längen- und Flächenfaktor — mit Übungen.',
    themen=['Mathematik', 'Geometrie', 'Fläche', 'Dreieck', 'Satz des Pythagoras', 'Hypotenuse', 'Kreis', 'Sehne', 'Ähnlichkeit', 'Streckfaktor', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/koordinaten.html': dict(
+   ort='Leitprogramm · Abbildungen und Geraden im Koordinatensystem',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Abbildungen und Geraden im Koordinatensystem — Punkt- und Achsenspiegelung, zentrische Streckung, Gerade durch zwei Punkte',
    beschreibung='Leitprogramm Sekundarstufe I, Geometrie: Punkte im Koordinatensystem an einem Punkt oder einer Achse spiegeln, zentrisch strecken, Flächen aus Koordinaten berechnen, Geradengleichung aus zwei Punkten und Punktprobe — mit Übungen.',
    themen=['Mathematik', 'Geometrie', 'Koordinatensystem', 'Punktspiegelung', 'Achsenspiegelung', 'Zentrische Streckung', 'Flächenfaktor', 'Geradengleichung', 'Punktprobe', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/bewegung.html': dict(
+   ort='Leitprogramm · Texte, Geschwindigkeit und Begegnung',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Texte, Geschwindigkeit und Begegnung — Textaufgaben, s = v · t, Durchschnitt, Begegnung und Einholen',
    beschreibung='Leitprogramm Sekundarstufe I, Mathematisieren: Textaufgaben in Gleichungen übersetzen, mit Weg, Geschwindigkeit und Zeit rechnen, Durchschnittsgeschwindigkeit, Begegnung, Einholen und Rolltreppe — mit Übungen.',
    themen=['Mathematik', 'Textaufgaben', 'Mathematisieren', 'Geschwindigkeit', 'Weg-Zeit', 'Durchschnittsgeschwindigkeit', 'Begegnung', 'Einholen', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/darstellungen.html': dict(
+   ort='Leitprogramm · Darstellungen wechseln',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Darstellungen wechseln — Text, Gleichung, Tabelle und Graph, Definitionsbereich, antiproportional',
    beschreibung='Leitprogramm Sekundarstufe I, lineare Funktionen II: zwischen Text, Gleichung, Wertetabelle und Graph wechseln, konstanter Umfang, Definitionsbereich und Achsen, linear fallend oder antiproportional — mit Übungen.',
    themen=['Mathematik', 'Lineare Funktionen', 'Darstellungswechsel', 'Wertetabelle', 'Definitionsbereich', 'Achsen', 'Antiproportional', 'Leitprogramm', 'Sekundarstufe I']),
  'leitprogramme/lineare-funktionen.html': dict(
+   ort='Leitprogramm · Lineare Funktionen',
    typ='article', lrt='Leitprogramm',
    titel='Leitprogramm Lineare Funktionen — Anfangswert, Steigung, Geraden zeichnen, Gleichung aufstellen',
    beschreibung='Leitprogramm Sekundarstufe I: lineare Funktionen y = m·x + b mit Anfangswert und Änderung, Steigungsdreieck, Geraden zeichnen, Nullstelle, Gleichung aus Graph, zwei Punkten und Sachverhalt — mit Übungen.',
@@ -152,6 +176,8 @@ SEITEN = {
 
 MARKE_AUF = '<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
 MARKE_ZU = '<!-- SEO:ENDE -->'
+FUSS_AUF = '<!-- FUSS:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
+FUSS_ZU = '<!-- FUSS:ENDE -->'
 
 MAKROS = {'cdot': '·', 'Delta': 'Δ', 'delta': 'δ', 'lambda': 'λ', 'alpha': 'α',
           'beta': 'β', 'gamma': 'γ', 'rho': 'ρ', 'omega': 'ω', 'pi': 'π', 'mu': 'µ',
@@ -328,6 +354,36 @@ def block(datei, cfg, seite_html):
     return '\n'.join(z)
 
 
+def fuss(datei, cfg):
+    """Footer der Seite, samt Marken. Fachneutral: was je Fach anders ist, steht in
+    SEITENNAME, FUSS_UNTERTITEL und in SEITEN (ort)."""
+    auf = '../' * datei.count('/')
+    z = [FUSS_AUF, '<footer class="site-footer">',
+         f'  <p><strong>{SEITENNAME}</strong> — {FUSS_UNTERTITEL}</p>']
+    if cfg.get('ort'):
+        z.append(f"  <p>{cfg['ort']}</p>")
+    z.append('  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" '
+             'target="_blank" rel="noopener">CC BY-NC 4.0</a></p>')
+    # Sek1: keine eigene Leitprogramm-Liste (leitprogramme.html leitet weiter), die Clips der
+    # Leitprogramme stehen nicht in clips.html — darum nur der Weg zurück zur Startseite.
+    extra = (f'<a href="{auf}index.html#leitprogramme">Alle Leitprogramme</a> · '
+             if datei.startswith('leitprogramme/') else '')
+    z.append(f'  <p>{extra}<a href="{auf}feedback.html">Kontakt &amp; Feedback</a> · '
+             f'<a href="{auf}rechtliches.html">Rechtliches &amp; Datenschutz</a></p>')
+    z.append(f'  <p>Keine Cookies · Kein Tracking · Version {VERSION} · Stand {VERSION_STAND}</p>')
+    z += ['</footer>', FUSS_ZU]
+    return '\n'.join(z)
+
+
+FUSS_MARKEN = re.compile(re.escape(FUSS_AUF) + r'.*?' + re.escape(FUSS_ZU), re.S)
+FUSS_ALT = re.compile(r'<footer class="site-footer">.*?</footer>', re.S)
+
+
+def fuss_ausserhalb(s):
+    """site-footer, der nicht zwischen den FUSS-Marken steht (fuer --check)."""
+    return bool(FUSS_ALT.search(FUSS_MARKEN.sub('', s)))
+
+
 def einsetzen(datei, cfg):
     pfad = os.path.join(ROOT, datei)
     s = open(pfad, encoding='utf-8').read()
@@ -338,6 +394,12 @@ def einsetzen(datei, cfg):
         m = re.search(r'</title>\n?', s)
         assert m, f'{datei}: kein <title>'
         s2 = s[:m.end()] + neu + '\n' + s[m.end():]
+    if cfg.get('fuss', True):
+        f = fuss(datei, cfg)
+        if FUSS_AUF in s2:
+            s2 = FUSS_MARKEN.sub(lambda _: f, s2, count=1)
+        elif FUSS_ALT.search(s2):                       # einmalige Umstellung
+            s2 = FUSS_ALT.sub(lambda _: f, s2, count=1)
     return s, s2
 
 
@@ -380,13 +442,14 @@ Sitemap: {BASIS}sitemap.xml
 def main(argv):
     ap = argparse.ArgumentParser(
         prog='build-seo.py',
-        description='Setzt die generierten Kopfbloecke in die Seiten und schreibt '
+        description='Setzt die generierten Kopfbloecke und Footer in die Seiten und schreibt '
                     'sitemap.xml und robots.txt. Gepflegt wird die Tabelle SEITEN '
                     'im Skript, nie der Block in der Seite.',
         epilog='Ohne Schalter wird geschrieben.')
     modus = ap.add_mutually_exclusive_group()
     modus.add_argument('--check', action='store_true',
-                       help='nur pruefen, nichts schreiben; Exit 1, wenn etwas veraltet ist '
+                       help='nur pruefen, nichts schreiben; Exit 1, wenn etwas veraltet ist, '
+                            'Exit 2 bei einem Footer ausserhalb der FUSS-Marken '
                             '(so ruft der Pre-Flight das Skript auf)')
     modus.add_argument('--dry-run', action='store_true',
                        help='Trockenlauf: zeigt, was sich aendern wuerde, und schreibt nichts')
@@ -416,9 +479,15 @@ def main(argv):
 
     namen = [n for n, _, _ in aenderungen]
 
+    ausserhalb = [d for d, c in SEITEN.items() if c.get('fuss', True)
+                  and fuss_ausserhalb(open(os.path.join(ROOT, d), encoding='utf-8').read())]
+    if a.check and ausserhalb:
+        print('FEHLER: site-footer ausserhalb der FUSS-Marken:', ', '.join(ausserhalb))
+        return 2                           # Pre-Flight: Fehler, nicht nur Warnung
+
     if a.check:
         if aenderungen:
-            print('SEO-Metadaten VERALTET:', ', '.join(namen))
+            print('SEO-Metadaten/Footer VERALTET:', ', '.join(namen))
             return 1
         print(f'SEO-Metadaten aktuell ({len(SEITEN)} Seiten).')
         return 0

@@ -12,10 +12,11 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 - [x] Zweiter Abgleich nach LP 8 und LP 9 (gegen TALS `0cc0a9f`): Code-Dateien und alle `.claude/tools` weiter gleich,
       `build-clip-ton.py` nur mit den zwei eigenen Einträgen anders. `HOWTO-clips.md`: Abschnitt «Hörprobe über alle drei Repos»
       übernommen, jetzt deckungsgleich.
-- [ ] 🔑 Entscheid: TALS erzeugt den Footer seit 10.10.2026 aus `build-seo.py` (FUSS-Marken, Ortszeile `ort=`, eine Version
-      für das ganze Lehrmittel, dort 2.0; STYLEGUIDE 1.16 §7, HOWTO §5). Sek1 schreibt den Footer weiter aus `seite.py`
-      (Version 1.0). Übernehmen, und wenn ja mit eigener oder gemeinsamer Version? Ebenfalls nicht übernommen:
-      STYLEGUIDE §6.6 «Simulationen und Werkzeuge» (in Sek1 keine solchen Seiten).
+- [x] Footer aus `build-seo.py` übernommen (Entscheid Auftraggeber 10.10.2026: gemeinsame Version **2.0**, Stand 10. Oktober 2026):
+      FUSS-Marken, `ort=` in `SEITEN`, `fuss=False` für `feedback.html` (Versionszeile von Hand auf 2.0), `--check` Exit 2 bei
+      Footer ausserhalb der Marken (Pre-Flight: Fehler). Neun `seite.py` übernehmen den Footer aus der Seite (Neubau byte-gleich).
+      Behoben dabei: `rechtliches.html` trug den TALS-Untertitel «Berufsmaturität … RLP-BM 2030», die Versionen waren
+      gemischt (0.1 / 1.0). Leitprogramme mit «Alle Leitprogramme» → `index.html#leitprogramme`. STYLEGUIDE = TALS 1.16.
 
 ## Leitprogramm Abbildungen und Geraden im Koordinatensystem (10.10.2026)
 

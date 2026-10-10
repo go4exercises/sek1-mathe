@@ -9,7 +9,7 @@ Kontrollfragen und Gesamttest wiederholen keine Beispiele aus Clip und Festhalte
 
 | Datei | Zweck | laufen lassen? |
 |---|---|---|
-| `seite.py` | baut `leitprogramme/terme-faktorisieren.html` vollständig aus diesem Ordner (nur der SEO-Block kommt aus der bestehenden Seite) | **ja**, nach jeder Änderung hier |
+| `seite.py` | baut `leitprogramme/terme-faktorisieren.html` vollständig aus diesem Ordner (nur SEO-Block und Footer kommen aus der bestehenden Seite, beide schreibt `build-seo.py`) | **ja**, nach jeder Änderung hier |
 | `kopf.css` | Grundgerüst der Leitprogramme (wie Bruchrechnen) | wird eingebunden |
 | `seite.css` | Termkacheln, Flächenmodell, Rechteckschema, Quadrat, Termfeld, Tipps in Stufen | wird eingebunden |
 | `basis.js` | Thema hell/dunkel, Fortschritt (`lp-terme-*`), Schiene, «alle Lösungen» | wird eingebunden |

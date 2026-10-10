@@ -1,6 +1,6 @@
 # TALS-Mathematik · Styleguide
 
-**Version 1.15 · Stand: 27. August 2026** · (1.15: §2.1 `·` nur als Multiplikationszeichen, nie als Trennzeichen; 1.14: Zusatzmaterial ohne Formelauszug, Animations-Hinweise ohne Vorlese-Knopf, neuer Beschriftungs-Helfer `beschriftung()` und `drawGrid`-Optionen §2.9; 1.13: §11 Nachschlagen-Seiten Glossar/Formelsammlung; 1.12: §10.4 verbindliche Färbe-Regel präzisiert)
+**Version 1.16 · Stand: 10. Oktober 2026** · (1.16: §7 Footer wird von `scripts/build-seo.py` erzeugt, eine Version für das ganze Lehrmittel; 1.15: §2.1 `·` nur als Multiplikationszeichen, nie als Trennzeichen; 1.14: Zusatzmaterial ohne Formelauszug, Animations-Hinweise ohne Vorlese-Knopf, neuer Beschriftungs-Helfer `beschriftung()` und `drawGrid`-Optionen §2.9; 1.13: §11 Nachschlagen-Seiten Glossar/Formelsammlung; 1.12: §10.4 verbindliche Färbe-Regel präzisiert)
 
 Dieser Styleguide ist die verbindliche Referenz für alle Themenseiten des Lehrmittels „TALS-Mathematik". Er sichert Konsistenz in Notation, Aufbau, Sprache und visuellem Design — kapitelübergreifend und chatübergreifend.
 
@@ -498,7 +498,7 @@ g2-2b-quadratische-gleichungen.html  ← Teil 2 von 2
 - Im **RLP-Header** wird auf die Aufteilung hingewiesen: „Teil 1 von 2" bzw. „Teil 2 von 2". Die genannten RLP-Kompetenzen sind diejenigen, die auf der jeweiligen Sub-Seite tatsächlich abgedeckt werden (anteilig, nicht das ganze Bündel).
 - **Zusatzmaterial getrennt pro Sub-Seite**: jede Sub-Seite hat ihren eigenen Ordner unter `downloads/<bereich>/<id>/` mit den vier Standard-Dateien (Handout, Anki-Deck, Teste dich selbst, Aufgabenserie). Damit bleibt jede Sub-Seite als eigene Lerneinheit selbsttragend.
 - **Externe Ressourcen ebenfalls getrennt** und auf den Inhalt der Sub-Seite zugeschnitten.
-- **Footer pro Sub-Seite** nennt den Sub-Themennamen (nicht den RLP-Sammeltitel): „Grundlagenfach 2.2a Lineare Gleichungen" für `g2-2a`, „Grundlagenfach 2.2b Quadratische Gleichungen" für `g2-2b` (Format gemäss §7).
+- **Footer pro Sub-Seite** nennt den Sub-Themennamen (nicht den RLP-Sammeltitel): Ortszeile `ort='Grundlagenfach · 2.2a Lineare Gleichungen'` für `g2-2a`, `ort='Grundlagenfach · 2.2b Quadratische Gleichungen'` für `g2-2b` (Format gemäss §7).
 - **Hinweis im RLP-Header (zwischen Themen-Titel und RLP-Kompetenz-Box)** explizit setzen: „RLP 2.2 · Teil 1 von 2" bzw. „RLP 2.2 · Teil 2 von 2". Bei nicht-gesplitteten Themenseiten erscheint dieser Hinweis **nicht**.
 - Die **Lektionenangabe** im RLP-Header gibt die Lektionen des gesamten **Lerngebiets** an (z.B. „35 Lektionen" für alle Sub-Seiten in Lerngebiet 2, „50 Lektionen" für alle in Lerngebiet 5). Sie steht in der `<div class="pt-bereich">`-Zeile (Format: „Grundlagenfach · Lerngebiet X · &lt;Name&gt; · N Lektionen") und ist über alle Sub-Seiten desselben Lerngebiets identisch — auch für nicht gesplittete Themenseiten dieses Lerngebiets. Der Sub-Indikator („Teil 1 von 2" etc.) erscheint **getrennt** in der `<div class="pt-untertitel">`-Zeile darunter (Format: „RLP 2.2 · Teil 1 von 2"); siehe vorherige Regel. Diese Trennung wurde gewählt, weil die Lerngebiet-Lektionen für den Lernenden die nützlichere Orientierungsangabe sind (Gesamtgewicht des Lerngebiets im RLP) und sich der Sub-Split-Hinweis auf die RLP-Punkt-Ebene bezieht — die zwei Aussagen sind separierbar und lesen sich übersichtlicher in zwei Zeilen.
 - **Praxisbeispiel-Seiten** (Dateiname-Präfix `gN-0-…` oder `sN-0-…`) sind Sonderfälle: sie tragen ein zusätzliches Suffix `· Praxisbeispiel` in der `pt-bereich`-Zeile (Beispiel: „Grundlagenfach · Lerngebiet 4 · Datenanalyse · 20 Lektionen · Praxisbeispiel"). Praxisbeispiel-Seiten sind keine RLP-Teilgebiete, sondern thematische Hüllen — siehe §6.1.1.
@@ -828,10 +828,9 @@ Jede Themenseite verwendet **exakt** die folgende Body-Struktur. Abweichungen (e
 <aside class="toc-wrap"><div id="toc"></div></aside>
 </div>
 
-<footer class="site-footer">
-  <p><strong>Mathe begreifbar</strong> — Lernmaterial für die Berufsmaturität Technik, Architektur, Life Sciences</p>
-  <p>⟪Bereich⟫ ⟪RLP-Nr⟫ ⟪Themenname⟫</p>
-</footer>
+<!-- FUSS:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->
+<!-- FUSS:ENDE -->
+<!-- Footer: wird von scripts/build-seo.py erzeugt — Ortszeile über ort= in SEITEN (§7) -->
 
 <script src="../nav.js"></script>
 <script src="../mathlib.js"></script>
@@ -859,7 +858,7 @@ buildNav({
 | **`<script src="../nav.js"></script>` ohne `defer`** — direkt vor dem `buildNav()`-Inline-Script am Ende des Body. | Mit `defer` läuft nav.js *nach* dem Inline-Aufruf. `buildNav` ist dann undefined, Navigation und TOC fehlen komplett. |
 | **`<script src="../mathlib.js"></script>` direkt nach `nav.js`** — auch wenn die Seite (scheinbar) keine mathlib-Funktion nutzt. | `toggleL` (Lösungs-Aufklapp-Mechanismus) lebt in `mathlib.js`. Fehlt das Skript, klappen die Lösungen ohne Konsole-Hinweis nicht auf — der User sieht nur, dass der Klick nichts tut. Auch `fmt`, `parseL` u.a. werden gerne ad-hoc gebraucht. |
 | **`buildNav()`-Signatur:** `{ bereich, id, kapitelNr, kapitelTitel, prev, next }`. | Die einzige API von nav.js. Falsche Signaturen (`{current: {…}}` o.ä.) führen zu stillen Fehlern. |
-| **Footer:** `<footer class="site-footer">` mit zwei `<p>` (siehe § 7). | Konsistente Fusszeile über alle Seiten. |
+| **Footer:** leere FUSS-Marken; `scripts/build-seo.py` erzeugt den `<footer class="site-footer">` (siehe § 7). | Konsistente Fusszeile und eine Version über alle Seiten. |
 
 **Zusatzmaterial-Sektion (Pflicht-Konvention):**
 
@@ -1271,7 +1270,7 @@ Hier nur, was für beide nicht verhandelbar ist.
   `<meta charset="UTF-8">`, Viewport. Ohne Zeichensatz rät der Browser falsch, und die
   Umlaute zerfallen — sichtbar erst im Browser, in keiner Prüfung.
 - **Kopf und Fuss der Site gehören dazu.** `<div id="nav-root">` mit
-  `buildNav({ id: 'leitprogramme' })` und ein `.site-footer` nach §7. Ohne sie ist die
+  `buildNav({ id: 'leitprogramme' })` und die FUSS-Marken nach §7. Ohne sie ist die
   Seite eine Sackgasse.
 - **Geerbt wird, nicht kopiert.** `../style.css` **vor** dem eigenen `<style>` einbinden
   (dann gewinnt das eigene Layout bei gleichem Gewicht), Farbtokens aus `style.css`
@@ -1312,14 +1311,47 @@ Hier nur, was für beide nicht verhandelbar ist.
   „Aufgabe/Übung": Sie sagt, was in der Prüfung zählt. Sie kommt aus der Musterlösung —
   steht dort keine Aufteilung, wird keine erfunden.
 
+## 6.6 Simulationen und Werkzeuge (verbindlich seit 10.10.2026)
+
+Eigene Seiten neben den Themenseiten, in zwei getrennten Ordnern. Wie Leitprogramme sind sie
+**keine Themenseiten** und folgen nicht dem Skelett aus §6.1.
+
+| | was man tut | Ordner | Übersicht | Anleitung |
+|---|---|---|---|---|
+| **Simulation** | ein Modell beobachten und seine Grössen verändern | `simulationen/` | `simulationen.html` | `HOWTO-simulationen.md` |
+| **Werkzeug** | eigene Aufgaben oder Daten eingeben, üben (Trainer, Rechner) | `werkzeuge/` | `werkzeuge.html` | `HOWTO-werkzeuge.md` |
+
+- **Abgrenzung zur Animation (§2.10):** eigene Seite nur, wenn sie mehr als einen Bildschirm
+  braucht, eine eigene Abfolge hat oder auch ohne die Themenseite benutzt wird.
+- **Simulation oder Werkzeug:** Gibt man eigene Daten oder Aufgaben ein → Werkzeug.
+- **Verlinkt im Abschnitt**, zu dem sie gehören, mit dem Baustein `.block-tipp` und dem Titel
+  «🧪 Simulation: …» bzw. «🛠 Werkzeug: …» — nicht am Seitenanfang, nicht auf den Kacheln
+  von `index.html`. Die Seite verweist umgekehrt per Anker auf diesen Abschnitt.
+- Dateinamen ohne Nummer; alte Adressen leitet `404.html` weiter (Tabelle `WEITERLEITUNGEN`).
+
 ## 7. Footer-Konvention
 
-| Seite | Footer-Inhalt |
-|---|---|
-| **`index.html`** | Zeile 1: „**Mathe begreifbar** — Lernmaterial für die Berufsmaturität Technik, Architektur, Life Sciences"<br>Zeile 2: GitHub Pages-Link zum Repo (`https://github.com/go4exercises/tals-mathe`) |
-| **Themenseiten** | Zeile 1: „**Mathe begreifbar** — Lernmaterial für die Berufsmaturität Technik, Architektur, Life Sciences"<br>Zeile 2: „⟪Bereich⟫ ⟪RLP-Nr⟫ ⟪Themenname⟫" — z.B. „Grundlagenfach 3.2 Lineare Funktionen", „Schwerpunktfach 3.4 Exponential- und Logarithmusfunktionen" |
+Der Footer wird **erzeugt, nicht kopiert** (seit 10.10.2026): `scripts/build-seo.py` schreibt ihn
+zwischen `<!-- FUSS:ANFANG … -->` und `<!-- FUSS:ENDE -->`, genau wie den SEO-Kopf. Eine neue Seite
+bekommt nur die leeren Marken (nach `</div>` von `.page-wrap`, vor den `<script>`-Einbindungen), dann
+`python3 scripts/build-seo.py`. Ein `site-footer` ausserhalb der Marken ist ein Pre-Flight-Fehler.
 
-**Format Bereich/Nr/Thema:** Vollständige Bereichsbezeichnung („Grundlagenfach" oder „Schwerpunktfach", **mit** „-fach"-Suffix), Leerzeichen, RLP-Teilgebiet-Nummer (z.B. `3.2`, bei Sub-Split mit Suffix `2.2a`), Leerzeichen, Themenname (= Sub-Themenname bei Sub-Split, also „Lineare Gleichungen", nicht „Lineare und quadratische Gleichungen"). Keine zusätzlichen Wörter, kein Lerngebiets-Name.
+| Zeile | Inhalt | Quelle |
+|---|---|---|
+| 1 | „**Mathe begreifbar** — Lernmaterial für die Berufsmaturität Technik, Architektur, Life Sciences · RLP-BM 2030" | `SEITENNAME`, `FUSS_UNTERTITEL` |
+| 2 | Ortszeile, z.B. „Grundlagenfach · 3.2 Lineare Funktionen", „Leitprogramm · Dreiecke", „Nachschlagen · Glossar" — fehlt auf `index.html` | Feld `ort=` in `SEITEN` |
+| 3 | © und Lizenz | fest |
+| 4 | Kontakt & Feedback · Rechtliches; unter `leitprogramme/` zusätzlich «Alle Leitprogramme · Clips» | fest |
+| 5 | „Keine Cookies · Kein Tracking · Version ⟪VERSION⟫ · Stand ⟪VERSION_STAND⟫" | Konstanten im Skript |
+
+**Eine Version für das ganze Lehrmittel:** Alle Seiten tragen dieselbe Versionszeile, auch Leitprogramme,
+Simulationen und Werkzeuge. Neue Nummer (2.1, 2.2 …) bei einer Gruppe neuer Leitprogramme, Simulationen
+oder Werkzeuge; Korrekturen ändern nur das Datum. Eigene Versionen einzelner Leitprogramme stehen im
+HTML-Kommentar der Seite, im README des Bauskripts und in Git, nicht im Footer.
+
+**Format der Ortszeile auf Themenseiten:** „⟪Grundlagenfach|Schwerpunktfach⟫ · ⟪RLP-Nr⟫ ⟪Themenname⟫"
+(bei Sub-Split der Sub-Themenname, z.B. „Grundlagenfach · 2.2a Lineare Gleichungen"). Seiten ohne Footer
+(`feedback.html`, `leitprogramme/trigo2.html`) tragen `fuss=False` mit Begründung.
 
 ---
 
@@ -1355,7 +1387,7 @@ Bevor eine Themenseite live geht, prüfe:
 - [ ] Alle 4 Einträge in fester Reihenfolge: Handout · Teste dich selbst · Aufgabenserie · Anki-Deck (optionale Zusatz-Karte am Ende)
 - [ ] Druckseiten öffnen in neuem Tab (`target="_blank" rel="noopener"`)
 - [ ] Anki-Deck als Download verlinkt (`.apkg`), die anderen drei als HTML-Druckseiten
-- [ ] **Footer korrekt im Format „⟪Bereich⟫ ⟪RLP-Nr⟫ ⟪Themenname⟫"** — z.B. „Grundlagenfach 3.2 Lineare Funktionen" (siehe §7)
+- [ ] **Footer:** FUSS-Marken gesetzt, `ort=` in `SEITEN` im Format „⟪Bereich⟫ · ⟪RLP-Nr⟫ ⟪Themenname⟫", `build-seo.py` gelaufen (siehe §7)
 - [ ] **Titel-Präfix in `<h1 class="pt-h1">`** enthält die RLP-Nummer — z.B. „3.2 Lineare Funktionen", bei Sub-Split „2.2a Lineare Gleichungen"
 - [ ] **Externe-Ressourcen-Sektion: `<h2 id="ressourcen">Externe Videos &amp; Aufgabensammlungen</h2>`** (genauer Wortlaut, siehe §4)
 - [ ] **YouTube-Links sind stabile Watch-/Playlist-URLs** — keine `youtube.com/results?…`-Suchen

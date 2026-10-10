@@ -11,7 +11,7 @@ Zwei Stufen:
    - verify_mathjax.js        (echte MathJax-Render-Prüfung; braucht node_modules/mathjax-full)
    - verify_js_runtime.js     (JS-Laufzeit in jsdom; braucht node_modules/jsdom)
    - build-suchindex.py --check (Suchindex aktuell? veraltet = WARN, kein Blocker)
-   - build-seo.py --check      (Metadaten/sitemap aktuell? veraltet = WARN, kein Blocker)
+   - build-seo.py --check      (Metadaten/Footer/sitemap aktuell? veraltet = WARN, Footer ausserhalb der Marken = FEHLER)
    - check_identifier_collisions.py (Symbol-Kollisionen mit mathlib/nav; ohne npm)
    - abgleich.py --check      (Drift gegen das Schwesterrepo; WARN, kein Blocker)
    - check_todo_schwester (offene Eintraege in TODO-schwesterprojekt.md des
@@ -336,8 +336,10 @@ def run_deep(file_args, rep):
     seo = scripts / "build-seo.py"
     if seo.is_file():
         r = subprocess.run(["python3", str(seo), "--check"], capture_output=True, text=True)
-        if r.returncode != 0:
-            rep.warn("seo", "Metadaten/sitemap veraltet — `python3 scripts/build-seo.py`")
+        if r.returncode == 2:
+            rep.err("seo", (r.stdout or "").strip() or "Footer ausserhalb der FUSS-Marken")
+        elif r.returncode != 0:
+            rep.warn("seo", "Metadaten/Footer/sitemap veraltet — `python3 scripts/build-seo.py`")
 
     check_clips(scripts.parent, rep)
 

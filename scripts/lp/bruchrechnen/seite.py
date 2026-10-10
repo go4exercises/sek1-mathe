@@ -6,7 +6,7 @@ Leitprogramm Bruchrechnen (Bereich Arithmetik/Algebra). Sek1-Mathe hat keine The
 vertieft wird auf den Themenseiten von Mathe begreifbar (TALS). Alles kommt aus diesem
 Ordner: kopf.css (Grundgerüst der Leitprogramme, aus TALS Mathe übernommen und auf Petrol
 umgestellt), seite.css, basis.js (Thema, Fortschritt, Schiene), seite.js (Simulationen, Übungen).
-Nur der SEO-Block wird aus der bestehenden Seite übernommen — ihn schreibt scripts/build-seo.py.
+Nur SEO-Block und Footer werden aus der bestehenden Seite übernommen — beide schreibt scripts/build-seo.py.
 Wiederholbar: zweimal laufen lassen ergibt dieselbe Datei. Danach Pre-Flight und build-seo.py.
 """
 import json
@@ -16,15 +16,21 @@ SP = os.path.dirname(os.path.abspath(__file__)) + '/'
 R = os.path.abspath(os.path.join(SP, '..', '..', '..')) + '/'
 ZIEL = R + 'leitprogramme/bruchrechnen.html'
 NAME = 'Bruchrechnen'
-STAND = 'Stand 9. Oktober 2026'
 
 SEO_AUF = '<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
 SEO_ZU = '<!-- SEO:ENDE -->'
+FUSS_AUF = '<!-- FUSS:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
+FUSS_ZU = '<!-- FUSS:ENDE -->'
+# Den Footer schreibt scripts/build-seo.py (seit 10.10.2026, eine Version für das ganze Lehrmittel);
+# SEO-Kopf und Footer werden aus der bestehenden Seite übernommen, neu gebaut nur leere Marken.
 seo = SEO_AUF + '\n' + SEO_ZU
+fussblock = FUSS_AUF + '\n' + FUSS_ZU
 if os.path.exists(ZIEL):
     alt = open(ZIEL).read()
     if SEO_AUF in alt:
         seo = alt[alt.index(SEO_AUF):alt.index(SEO_ZU) + len(SEO_ZU)]
+    if FUSS_AUF in alt:
+        fussblock = alt[alt.index(FUSS_AUF):alt.index(FUSS_ZU) + len(FUSS_ZU)]
 
 # Vertiefung: Themenseiten von Mathe begreifbar (Berufsmaturität), in neuem Tab
 TALS = 'https://mathe.begreifbar.ch/grundlagen/'
@@ -569,13 +575,7 @@ mathjax = r'''<script>
 <script>
 '''
 fuss = f'''
-<footer class="site-footer">
-  <p><strong>Sek1-Mathe begreifbar</strong> — Lernmaterial Mathematik für die Sekundarstufe I</p>
-  <p>Leitprogramm · {NAME}</p>
-  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-  <p><a href="../feedback.html">Kontakt &amp; Feedback</a> · <a href="../rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
-  <p>Keine Cookies · Kein Tracking · Version 1.0 · {STAND}</p>
-</footer>
+{fussblock}
 
 <script src="../mathlib.js"></script>
 <script src="../nav.js"></script>

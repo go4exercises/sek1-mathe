@@ -11,7 +11,7 @@ Beschreibung, zurückgelegt gegen verbleibend, fehlerhaftes Bewegungsdiagramm kr
 
 | Datei | Zweck | laufen lassen? |
 |---|---|---|
-| `seite.py` | baut `leitprogramme/funktionstypen.html` vollständig aus diesem Ordner (nur der SEO-Block kommt aus der bestehenden Seite) | **ja**, nach jeder Änderung hier |
+| `seite.py` | baut `leitprogramme/funktionstypen.html` vollständig aus diesem Ordner (nur SEO-Block und Footer kommen aus der bestehenden Seite, beide schreibt `build-seo.py`) | **ja**, nach jeder Änderung hier |
 | `kopf.css` | Grundgerüst der Leitprogramme (wie Bruchrechnen) | wird eingebunden |
 | `seite.css` | wie Darstellungen wechseln, dazu Punkt «leer» | wird eingebunden |
 | `basis.js` | Thema hell/dunkel, Fortschritt (`lp-typ-*`), Schiene, «alle Lösungen» | wird eingebunden |

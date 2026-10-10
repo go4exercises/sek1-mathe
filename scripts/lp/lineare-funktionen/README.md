@@ -12,7 +12,7 @@ Graph/Gleichung (G4, G5) und Sachaufgaben. Nicht umgesetzt: Teams-Ablauf, Lehrpe
 
 | Datei | Zweck | laufen lassen? |
 |---|---|---|
-| `seite.py` | baut `leitprogramme/lineare-funktionen.html` vollständig aus diesem Ordner (nur der SEO-Block kommt aus der bestehenden Seite) | **ja**, nach jeder Änderung hier |
+| `seite.py` | baut `leitprogramme/lineare-funktionen.html` vollständig aus diesem Ordner (nur SEO-Block und Footer kommen aus der bestehenden Seite, beide schreibt `build-seo.py`) | **ja**, nach jeder Änderung hier |
 | `kopf.css` | Grundgerüst der Leitprogramme (wie Bruchrechnen) | wird eingebunden |
 | `seite.css` | Achsen, Geraden, Punkte, Steigungsdreieck, Wertetabelle, Mini-Graphen, Klickgitter | wird eingebunden |
 | `basis.js` | Thema hell/dunkel, Fortschritt (`lp-linear-*`), Schiene, «alle Lösungen» | wird eingebunden |

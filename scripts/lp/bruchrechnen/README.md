@@ -10,7 +10,7 @@ Die Erkundungen benutzen andere Zahlen als Clip und Festhalten. Die Seite steht 
 
 | Datei | Zweck | laufen lassen? |
 |---|---|---|
-| `seite.py` | baut `leitprogramme/bruchrechnen.html` vollständig aus diesem Ordner (nur der SEO-Block kommt aus der bestehenden Seite) | **ja**, nach jeder Änderung hier |
+| `seite.py` | baut `leitprogramme/bruchrechnen.html` vollständig aus diesem Ordner (nur SEO-Block und Footer kommen aus der bestehenden Seite, beide schreibt `build-seo.py`) | **ja**, nach jeder Änderung hier |
 | `kopf.css` | Grundgerüst der Leitprogramme (aus TALS Mathe, Bereichsfarbe auf Petrol, Dunkelmodus mit Petrol) | wird eingebunden |
 | `seite.css` | Streifen, Flächenmodell, Schrittwähler, HTML-Brüche, Tipps in Stufen | wird eingebunden |
 | `basis.js` | Thema hell/dunkel, Fortschritt (`lp-bruch-*`), Schiene, «alle Lösungen» | wird eingebunden |

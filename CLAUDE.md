@@ -49,7 +49,9 @@ Begriffe nach STYLEGUIDE; Vertiefung über TALS-Links statt Verweis auf eine eig
   `GROUPS.leitprogramme`); Menü und Suchindex lesen sie von dort, Clips verweisen mit
   `lektion` auf die `id`. Neues Leitprogramm = Eintrag in `nav.js`, Karte in `index.html`
   (Block `LEITPROGRAMME:ANFANG`, unter seinem Bereich), Eintrag in `scripts/build-seo.py`
-  (`SEITEN`). Nur **fertige** Leitprogramme erscheinen; geplante nicht.
+  (`SEITEN`, mit `ort='Leitprogramm · …'`). Nur **fertige** Leitprogramme erscheinen; geplante nicht.
+- **Footer** schreibt `scripts/build-seo.py` zwischen den FUSS-Marken (seit 10.10.2026, wie TALS Mathe):
+  eine Version für das ganze Lehrmittel, dieselbe wie in TALS Mathe und Physik (`VERSION`, `VERSION_STAND`).
 - Bereiche (Gruppierung): 1 Arithmetik/Algebra · 2 Gleichungen · 3 Funktionen · 4 Mathematisieren · 5 Geometrie.
 - `index.html` — Startseite mit den Leitprogramm-Karten. `leitprogramme.html` ist nur noch
   Weiterleitung auf `index.html#leitprogramme` (noindex).

@@ -5,8 +5,8 @@
 Leitprogramm Texte, Geschwindigkeit und Begegnung (Bereich Mathematisieren), Gerüst aus scripts/lp/funktionstypen/.
 Sek1-Mathe hat keine Themenseiten (Entscheid 09.10.2026); vertieft wird auf den Themenseiten von
 Mathe begreifbar (TALS). Alles kommt aus diesem Ordner: kopf.css, seite.css, basis.js (Thema, Fortschritt,
-Schiene), seite.js (Koordinatensystem, Simulationen, Übungen). Nur der SEO-Block wird aus der bestehenden Seite
-übernommen — ihn schreibt scripts/build-seo.py. Wiederholbar. Danach Pre-Flight und build-seo.py.
+Schiene), seite.js (Koordinatensystem, Simulationen, Übungen). Nur SEO-Block und Footer werden aus der bestehenden Seite
+übernommen — beide schreibt scripts/build-seo.py. Wiederholbar. Danach Pre-Flight und build-seo.py.
 """
 import json
 import os
@@ -15,16 +15,22 @@ SP = os.path.dirname(os.path.abspath(__file__)) + '/'
 R = os.path.abspath(os.path.join(SP, '..', '..', '..')) + '/'
 ZIEL = R + 'leitprogramme/bewegung.html'
 NAME = 'Texte, Geschwindigkeit und Begegnung'
-STAND = 'Stand 10. Oktober 2026'
 CLIP = 'bew-lp-'
 
 SEO_AUF = '<!-- SEO:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
 SEO_ZU = '<!-- SEO:ENDE -->'
+FUSS_AUF = '<!-- FUSS:ANFANG — generiert von scripts/build-seo.py, nicht von Hand ändern -->'
+FUSS_ZU = '<!-- FUSS:ENDE -->'
+# Den Footer schreibt scripts/build-seo.py (seit 10.10.2026, eine Version für das ganze Lehrmittel);
+# SEO-Kopf und Footer werden aus der bestehenden Seite übernommen, neu gebaut nur leere Marken.
 seo = SEO_AUF + '\n' + SEO_ZU
+fussblock = FUSS_AUF + '\n' + FUSS_ZU
 if os.path.exists(ZIEL):
     alt = open(ZIEL).read()
     if SEO_AUF in alt:
         seo = alt[alt.index(SEO_AUF):alt.index(SEO_ZU) + len(SEO_ZU)]
+    if FUSS_AUF in alt:
+        fussblock = alt[alt.index(FUSS_AUF):alt.index(FUSS_ZU) + len(FUSS_ZU)]
 
 def uebung(typ, titel):
     return f'''<div class="uebung" data-typ="{typ}">
@@ -563,13 +569,7 @@ mathjax = r'''<script>
 <script>
 '''
 fuss = f'''
-<footer class="site-footer">
-  <p><strong>Sek1-Mathe begreifbar</strong> — Lernmaterial Mathematik für die Sekundarstufe I</p>
-  <p>Leitprogramm · {NAME}</p>
-  <p>© 2026 Raphael Arnold Kohler · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.de" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-  <p><a href="../feedback.html">Kontakt &amp; Feedback</a> · <a href="../rechtliches.html">Rechtliches &amp; Datenschutz</a></p>
-  <p>Keine Cookies · Kein Tracking · Version 1.0 · {STAND}</p>
-</footer>
+{fussblock}
 
 <script src="../mathlib.js"></script>
 <script src="../nav.js"></script>
