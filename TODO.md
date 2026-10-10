@@ -15,12 +15,46 @@ Gleich: mathlib.js, minicheck.js, anim-hinweise.js, suche.js, build-clips.py, bu
 `leitprogramme/funktionstypen.html`, gebaut mit `scripts/lp/funktionstypen/` (README dort), nach
 `~/TODO-BM-Vorkurs-LP03-15.md` §4 (LP 06, Funktionstypen und Graphen interpretieren).
 
-- [ ] Unabhängige Prüfung: `/lp-pruefung leitprogramme/funktionstypen.html`.
+- [x] Unabhängige Prüfung: `/lp-pruefung leitprogramme/funktionstypen.html` (Abschnitt unten).
 - [x] Eingetragen (nav.js, index.html Bereich «Funktionen», build-seo, Suchindex, Sitemap).
 - [ ] 🔑 Abnahme: Bewertungspaket mit einer absichtlich fehlerhaften Lösung einer KI geben (mit Graph G6 und Skizze G8).
 - [ ] 🔑 Hörprobe der acht Clips `typ-lp-*`, je eine Frage absichtlich falsch beantworten. Besonders hinhören:
       «y» (Whisper: «Epsilon»), «Graph» (Whisper: «Graf»), «Kehrwertgraph», «Grundtaxe» (Whisper: «Grundachse»), «null, null».
 - [ ] Bearbeitungszeit mit 2–3 Lernenden messen (geschätzt 200 min).
+
+## Prüfung `funktionstypen` (10.10.2026)
+
+Drei unabhängige Prüfagenten (Seite, Clips, PDFs) nach HOWTO §15, nur lesend; geprüft Stand `5baa2b8`. HOCH-Befunde
+an der Quelle nachgeprüft und bestätigt. Rechenfehler: keine (alle Zahlen nachgerechnet). Neuvertonung nötig: 🔊.
+Als korrekt geprüft: alle Zahlen, Punktsummen, Leisten auf dem Reglerraster, Zufallsübungen lösbar, Fragebilder, Datenschutz.
+
+### HOCH
+- [ ] Doppelt-Test ohne Bedingung (Clip zusammenhaenge «Test», kontrolle-zusammenhaenge Merke, Festhalten 2, Sim 2 mit b < 0):
+      fallende Gerade kann beim Verdoppeln halbieren (y = −x + 6, x = 2 → 4). Bedingung «immer, an mehreren Stellen» und Form zuerst. 🔊
+- [ ] Festhalten 4: «fallender Graph der Entfernung zeigt Zurückfahren» widerspricht d = 24 − 16t: «von zu Hause» ergänzen.
+- [ ] kontrolle-rest Merke «zurückgelegt wächst immer» falsch (Pause): «nimmt nie ab». 🔊
+- [ ] Vorhersagen mit sichtbarer Antwort: rest (Schnittpunkt 0.75 im Bild), familien ((4 | 2) schon in der Wurzel-Szene). 🔊
+- [ ] Bewertungspaket G1: Testpunkt (2 | 2) trennt B und C nicht; G7 Folgepunkt-Regel widersprüchlich.
+- [ ] Übung `kritik`: Achsenname verrät die Antwort, Rückmeldung «ok» nennt die Lösung; `situation`: Rückmeldung nach Lösung statt Wahl.
+
+### MITTEL
+- [ ] Wiederholungen (HOWTO §9): 1a, 1d, 1e, 1f, 3e, 4d; Sim 4 Aufgabe 1 (= Clip rest); kontrolle-familien F1/F5, kontrolle-zusammenhaenge F5,
+      kontrolle-rest F3/F4; G4 (= 2c, Produkt 60), G5 (= Anna), G3(b) (= Übung situation k = 120); `situation` mit Kontexten des Kontrollclips.
+- [ ] Merkmale der Familien gelten nur ohne +b (Sim 1 erlaubt b); «nach oben» auch bei b < 0; Sim 1 bei a = 0.
+- [ ] s in Kapitel 3 Entfernung von zu Hause, in Kapitel 4 zurückgelegter Weg: Achsen nach der Grösse benennen; Minus-Geschwindigkeit in Sim 3 erklären.
+- [ ] K3 «Graph zu einer Beschreibung» nur in Gegenrichtung geübt; Hin- gegen Rücktempo nie verglichen (G6).
+- [ ] Kehrwertgraph wird nie skizziert (G2 verlangt es); G2 ohne Gitter, G8 ohne Platz für die Skizze.
+- [ ] Buchstaben a, k, m für die Steigung gemischt.
+- [ ] Raster: «Typische Fehler» ohne Restpunkte bei G2–G8; (E) uneinheitlich; Kommalisten wie Dezimalkomma.
+- [ ] Clip-Ton: «für null Komma fünf zwei» mehrdeutig (familien Kehrwert); «Steigt er, geht es nicht bergauf» (wegzeit Fehler). 🔊
+
+### NIEDRIG
+- [ ] Pizza als durchgezogene Kurve (Personen ganzzahlig); Endpunkt (5 | 500) in kontrolle-wegzeit F1 unbeschriftet; Benzin/Taxi x ohne Einheit;
+      −x² orange; Achsnamen überlagert (Kehrwert, wegzeit Zurück); Punkte im Fehlerbild nicht markiert; «Steigung = Geschwindigkeit» → «Steilheit».
+- [ ] Sperrliste unvollständig (zu|g|1|0, we|q|0.5|±2, we|k|12|…); Velo mit 4 km/h in `restweg`; Tipp `neuwert` mit 10 : 3.
+- [ ] Rückmeldung kontrolle-zusammenhaenge F4 «nicht darunter»; kontrolle-rest F1 «Kilometer» fehlt im Ton; Fragepunkte «vier, zwei und neun, drei».
+- [ ] G6 «gleiches Tempo» → «gleichbleibendes»; G6-Buchstabe auf Graph C; KI-Auftrag «Fotos» → «Bilder»; G7 ohne Bereich; 2f ohne Kontext.
+- [ ] Hörprobe (Vermutung Whisper): «Grundtaxe», «hundertzwanzig», «zurückgelegt plus noch entfernt».
 
 ## Leitprogramm Darstellungen wechseln (10.10.2026)
 
